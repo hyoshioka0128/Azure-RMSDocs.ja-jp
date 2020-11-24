@@ -1,10 +1,10 @@
 ---
 title: カスタム構成-Azure Information Protection クライアント
 description: Windows 用 Azure Information Protection クライアントのカスタマイズに関する情報。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 58d96afe47d6d3fc993c7c7e213e64097777b21e
-ms.sourcegitcommit: edd0614ef6f687ff2745f56e4171cd72e03edc9c
+ms.openlocfilehash: 3b81566a0853776a2b06e9a731e0cb3cf11fa5ff
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438190"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95570910"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -27,7 +27,7 @@ ms.locfileid: "87438190"
 > *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 以下の情報を使用して、詳細構成を行います。これらの構成は、Azure Information Protection クライアントを管理する際に、特定のシナリオまたはユーザーのサブセットで必要となる場合があります。
 
@@ -35,7 +35,7 @@ ms.locfileid: "87438190"
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>ポータルでクライアントの詳細構成設定を構成する方法
 
-1. まだ行っていない場合は、新しいブラウザーウィンドウで[Azure portal にサインイン](../configure-policy.md#signing-in-to-the-azure-portal)し、 **Azure Information Protection** ] ウィンドウに移動します。
+1. まだ行っていない場合は、新しいブラウザーウィンドウで [Azure portal にサインイン](../configure-policy.md#signing-in-to-the-azure-portal)し、 **Azure Information Protection** ] ウィンドウに移動します。
 
 2. [**分類**  >  **ラベル**] メニューオプションから [**ポリシー**] を選択します。
 
@@ -43,11 +43,11 @@ ms.locfileid: "87438190"
     
     スコープ付きポリシーだけでなく、グローバル ポリシーの詳細設定も構成できます。
 
-4. [**詳細設定**] ウィンドウで、詳細設定の名前と値を入力し、[**保存して閉じる**] を選択します。
+4. [ **詳細設定** ] ウィンドウで、詳細設定の名前と値を入力し、[ **保存して閉じる**] を選択します。
 
 5. このポリシーのユーザーが開いていたすべての Office アプリケーションを再起動するようにしてください。
 
-6. 設定が不要になり、既定の動作に戻す場合は、[**詳細設定**] ウィンドウで、不要になった設定の横にあるコンテキストメニュー (**...**) を選択し、[**削除**] を選択します。 次に、**[保存して閉じる]** をクリックします。
+6. 設定が不要になり、既定の動作に戻す場合は、[ **詳細設定** ] ウィンドウで、不要になった設定の横にあるコンテキストメニュー (**...**) を選択し、[ **削除**] を選択します。 次に、**[保存して閉じる]** をクリックします。
 
 #### <a name="available-advanced-client-settings"></a>使用可能なクライアントの詳細設定
 
@@ -124,11 +124,11 @@ ms.locfileid: "87438190"
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>組織が種類の異なるライセンスを保有している場合の保護のみモードの適用
 
-組織が Azure Information Protection のライセンスを保有せず、データ保護のために Azure Rights Management サービスを含む Office 365 のライセンスを保有している場合、Azure Information Protection クライアント (Windows 用) は自動的に[保護のみモード](client-protection-only-mode.md)で実行されます。
+組織に Azure Information Protection のライセンスがなくても、データを保護するための Azure Rights Management サービスを含む Microsoft 365 のライセンスがある場合、Windows 用の Azure Information Protection クライアントは自動的に [保護のみモード](client-protection-only-mode.md)で実行されます。
 
 ただし、組織が Azure Information Protection のサブスクリプションを保有している場合は、既定で、すべての Windows コンピューターで Azure Information Protection ポリシーをダウンロードできます。 Azure Information Protection クライアントはライセンスのチェックと適用を行いません。 
 
-Azure Information Protection のライセンスを保有せず、Azure Rights Management サービスを含む Office 365 のライセンスを保有しているユーザーがいる場合には、対象ユーザーのコンピューター上のレジストリを編集して、ライセンス付与されていない Azure Information Protection の分類とラベル付け機能が実行されないようにします。
+Azure Information Protection のライセンスを持たないが、Azure Rights Management サービスを含む Microsoft 365 のライセンスを持っているユーザーがいる場合は、これらのユーザーのコンピューター上のレジストリを編集して、ユーザーがライセンスのない分類およびラベル付け機能を Azure Information Protection から実行できないようにします。
 
 次の値の名前を検索し、値を **0** に設定します。
 
@@ -146,7 +146,7 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 - キー: **ReportAnIssueLink**
 
-- 数値**\<HTTP string>**
+- 数値 **\<HTTP string>**
 
 Web サイトの値の例: `https://support.contoso.com`
 
@@ -198,9 +198,9 @@ Azure Portal からポリシーをエクスポートすると、ポリシーの�
     |Policy1.3.msip |バージョン 1.8 - 1.29|
     |Policy1.4.msip |バージョン 1.32 以降|
     
-2. 識別されたファイルの名前を**Policy.msip**に変更し、Azure Information Protection クライアントがインストールされているコンピューターの **%LocalAppData%\Microsoft\MSIP**フォルダーにコピーします。 
+2. 識別されたファイルの名前を **Policy.msip** に変更し、Azure Information Protection クライアントがインストールされているコンピューターの **%LocalAppData%\Microsoft\MSIP** フォルダーにコピーします。 
 
-接続が切断されたコンピューターが Azure Information Protection スキャナーの現在の GA バージョンを実行している場合は、追加の構成手順を実行する必要があります。 詳細については、「制限: スキャナーサーバーがスキャナーの展開の前提条件で[インターネットに接続できない](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity)」を参照してください。
+接続が切断されたコンピューターが Azure Information Protection スキャナーの現在の GA バージョンを実行している場合は、追加の構成手順を実行する必要があります。 詳細については、「制限: スキャナーサーバーがスキャナーの展開の前提条件で [インターネットに接続できない](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) 」を参照してください。
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを表示または非表示にする
 
@@ -216,7 +216,7 @@ Azure Portal からポリシーをエクスポートすると、ポリシーの�
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする
 
-このオプションを構成するには、[ポリシー設定の ](../configure-policy-settings.md) **[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** を使用することをお勧めします。 ただし、Azure Portal で構成する[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用して、このオプションを構成することもできます。 
+このオプションを構成するには、[ポリシー設定の](../configure-policy-settings.md) **[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** を使用することをお勧めします。 ただし、Azure Portal で構成する[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用して、このオプションを構成することもできます。 
 
 この設定を構成して、ユーザーにポリシーを公開した場合、ユーザーが独自の保護設定を選択できるように、カスタムのアクセス許可オプションが表示されるか、または、確認メッセージが表示されない限り、ユーザーが独自の保護設定を選択できないように非表示になります。
 
@@ -228,9 +228,9 @@ Azure Portal からポリシーをエクスポートすると、ポリシーの�
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、変更される可能性があります。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
-[ポリシー設定の ](../configure-policy-settings.md) **[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)**、または前のセクションの同等のクライアント詳細設定を構成した場合、ユーザーは、保護されたドキュメントで既に設定されているカスタム アクセス許可を表示または変更できません。 
+[ポリシー設定の](../configure-policy-settings.md) **[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)**、または前のセクションの同等のクライアント詳細設定を構成した場合、ユーザーは、保護されたドキュメントで既に設定されているカスタム アクセス許可を表示または変更できません。 
 
 このクライアント詳細設定を作成して構成した場合、ユーザーはファイル エクスプローラーを使用してファイルを右クリックすることで、保護されたドキュメントのカスタム アクセス許可を表示および変更できます。 Office リボンの **[保護]** ボタンからの **[カスタム アクセス許可]** オプションは、非表示のままです。
 
@@ -240,9 +240,13 @@ Azure Portal からポリシーをエクスポートすると、ポリシーの�
 
 - 値: **True**
 
+> [!NOTE]
+> 現在、この機能はプレビュー段階にあります。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
+
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection バーを完全に非表示にする
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 これは、[ポリシー設定の ](../configure-policy-settings.md) **[Display the Information Protection bar in Office apps]\(Office アプリで Information Protection バーを表示する\)** を **[オン]** に設定している場合にのみ使用します。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 これは、[ポリシー設定の](../configure-policy-settings.md) **[Display the Information Protection bar in Office apps]\(Office アプリで Information Protection バーを表示する\)** を **[オン]** に設定している場合にのみ使用します。
 
 既定では、ユーザーが **[ホーム]** タブ、**[保護]** グループ、**[保護]** ボタンから **[バーの表示]** オプションをクリアすると、その Office アプリに Information Protection バーが表示されなくなります。 ただし、バーは、次に Office アプリを開いたときに自動的に再表示されます。
 
@@ -278,7 +282,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
-既定では、[ポリシー設定](../configure-policy-settings.md)を有効にすると、**すべてのドキュメントと電子メールにラベル**が設定され、保存されたすべてのドキュメントと送信された電子メールにラベルが適用されます。 次の詳細設定を構成すると、ポリシー設定は Office ドキュメントにのみ適用され、Outlook メッセージには適用されません。
+既定では、 [ポリシー設定](../configure-policy-settings.md)を有効にすると、 **すべてのドキュメントと電子メールにラベル** が設定され、保存されたすべてのドキュメントと送信された電子メールにラベルが適用されます。 次の詳細設定を構成すると、ポリシー設定は Office ドキュメントにのみ適用され、Outlook メッセージには適用されません。
 
 この詳細設定を構成するには、次の文字列を入力します。
 
@@ -288,7 +292,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Outlook で推奨分類を有効にする
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、変更される可能性があります。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
 推奨分類のラベルを設定すると、Word、Excel、PowerPoint では、推奨ラベルを受け入れるか、却下するように求められます。 また、このラベル推奨が Outlook でも表示されます。
 
@@ -298,6 +302,9 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 - 値: **True**
 
+> [!NOTE]
+> 現在、この機能はプレビュー段階にあります。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する
 
@@ -321,13 +328,13 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 ポップアップメッセージが特定のラベルに対して実行されている場合は、ドメイン名を使用して受信者の例外を構成できます。
 
-ポップアップメッセージの結果のアクションは、ローカルの Windows イベントログの **[アプリケーションとサービスログ**Azure Information Protection に記録され  >  **Azure Information Protection**ます。
+ポップアップメッセージの結果のアクションは、ローカルの Windows イベントログの **[アプリケーションとサービスログ** Azure Information Protection に記録され  >  **Azure Information Protection** ます。
 
 - 警告メッセージ: 情報 ID 301
 
-- メッセージの配置: 情報 ID 302
+- 理由メッセージ: 情報 ID 302
 
-- ブロックメッセージ: 情報 ID 303
+- ブロック メッセージ: 情報 ID 303
 
 理由メッセージからのイベント エントリの例: 
 
@@ -347,7 +354,7 @@ User Response: Confirmed
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>特定のラベルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
 
-特定のラベルに対するポップアップ メッセージを実装するには、それらのラベルのラベル ID が必要です。 ラベル ID の値は、Azure portal で Azure Information Protection ポリシーを表示または構成するときに、**ラベル**ウィンドウに表示されます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行してラベル ID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの ID だけを常に指定してください。
+特定のラベルに対するポップアップ メッセージを実装するには、それらのラベルのラベル ID が必要です。 ラベル ID の値は、Azure portal で Azure Information Protection ポリシーを表示または構成するときに、 **ラベル** ウィンドウに表示されます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行してラベル ID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの ID だけを常に指定してください。
 
 次のキーを使用して、次の 1 つまたは複数のクライアント詳細設定を作成します。 値については、1 つまたは複数のラベルの ID をそれぞれコンマで区切って指定します。
 
@@ -386,21 +393,21 @@ User Response: Confirmed
     
     - キー: **OutlookWarnTrustedDomains**
     
-    - 数値**\<**domain names, comma separated**>**
+    - 数値 **\<**domain names, comma separated**>**
 
 - 理由の入力メッセージ: 
     
     - キー: **Outlookジャスト Ifytrusteddomains**
     
-    - 数値**\<**domain names, comma separated**>**
+    - 数値 **\<**domain names, comma separated**>**
 
 - ブロック メッセージ: 
     
     - キー: **Outlookblocktrusteddomains**
     
-    - 数値**\<**domain names, comma separated**>**
+    - 数値 **\<**domain names, comma separated**>**
 
-たとえば、[**社外秘 \ すべての従業員**] ラベルに対して**OutlookBlockUntrustedCollaborationLabel**アドバンストクライアント設定を指定したとします。 ここで、 **Outlookblocktrusteddomains**と**contoso.com**の追加のアドバンストクライアント設定を指定します。 その結果、ユーザーは、" john@sales.contoso.com **社外秘 \ すべての従業員**" というラベルが付いたときに電子メールをに送信できますが、Gmail アカウントに同じラベルの電子メールを送信することは禁止されます。
+たとえば、[**社外秘 \ すべての従業員**] ラベルに対して **OutlookBlockUntrustedCollaborationLabel** アドバンストクライアント設定を指定したとします。 ここで、 **Outlookblocktrusteddomains** と **contoso.com** の追加のアドバンストクライアント設定を指定します。 その結果、ユーザーは、" john@sales.contoso.com **社外秘 \ すべての従業員** " というラベルが付いたときに電子メールをに送信できますが、Gmail アカウントに同じラベルの電子メールを送信することは禁止されます。
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>ラベルのない電子メールまたは添付ファイルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
 
@@ -416,32 +423,32 @@ User Response: Confirmed
     
     - キー: **OutlookUnlabeledCollaborationAction**
     
-    - 値:**均等**配置
+    - 値:**均等** 配置
 
 - ブロック メッセージ: 
     
     - キー: **OutlookUnlabeledCollaborationAction**
     
-    - 値:**ブロック**
+    - 値: **ブロック**
 
 - これらのメッセージをオフにする: 
     
     - キー: **OutlookUnlabeledCollaborationAction**
     
-    - 値:**オフ**
+    - 値: **オフ**
 
 #### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>ラベルのない電子メールの添付ファイルのポップアップメッセージに対して、警告、配置、またはブロックを行うための特定のファイル名拡張子を定義するには
 
 既定では、すべての Office ドキュメントおよび PDF ドキュメントに対して、ポップアップメッセージの警告、位置揃え、またはブロックが適用されます。 この一覧を調整するには、追加のアドバンストクライアントプロパティとファイル名拡張子のコンマ区切りの一覧を使用して、メッセージを表示するファイル名拡張子を指定します。
 
-コンマ区切りの文字列として定義する複数のファイル名拡張子の値の例を次に示します。`.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+コンマ区切りの文字列として定義する複数のファイル名拡張子の値の例を次に示します。 `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 この例では、ラベル付けされていない PDF ドキュメントは、ポップアップメッセージの警告、配置、またはブロックにはなりません。
 
 
 - キー: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- 数値**\<**file name extensions to display messages, comma separated**>**
+- 数値 **\<**file name extensions to display messages, comma separated**>**
 
 #### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>添付ファイルのない電子メールメッセージに対して別のアクションを指定するには
 
@@ -459,19 +466,19 @@ User Response: Confirmed
     
     - キー: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - 値:**均等**配置
+    - 値:**均等** 配置
 
 - ブロック メッセージ: 
     
     - キー: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - 値:**ブロック**
+    - 値: **ブロック**
 
 - これらのメッセージをオフにする: 
     
     - キー: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - 値:**オフ**
+    - 値: **オフ**
 
 このクライアント設定を指定しない場合は、OutlookUnlabeledCollaborationAction に指定した値が、添付ファイルのない電子メールメッセージと、添付ファイルを含むラベルなしの電子メールメッセージに使用されます。
 
@@ -482,7 +489,7 @@ User Response: Confirmed
 
 この設定を構成すると、Outlook では、Azure Information Protection ポリシーで **[既定のラベルを選択]** 設定に構成した既定のラベルが適用されません。 別の既定のラベルを適用できるか、ラベルがありません。
 
-別のラベルを適用するには、ラベル ID を指定する必要があります。 ラベル ID の値は、Azure portal で Azure Information Protection ポリシーを表示または構成するときに、**ラベル**ウィンドウに表示されます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行してラベル ID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの ID だけを常に指定してください。
+別のラベルを適用するには、ラベル ID を指定する必要があります。 ラベル ID の値は、Azure portal で Azure Information Protection ポリシーを表示または構成するときに、 **ラベル** ウィンドウに表示されます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行してラベル ID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの ID だけを常に指定してください。
 
 Outlook で既定のラベルが適用されないように、**[なし]** を指定します。
 
@@ -490,19 +497,19 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 - キー: **OutlookDefaultLabel**
 
-- 値: \<**label ID**> または**None**
+- 値: \<**label ID**> または **None**
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>ラベルを構成して Outlook で S/MIME 保護を適用する
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
-動作中の [S/MIME の展開](https://docs.microsoft.com/exchange/s-mime-for-message-signing-and-encryption)があり、Azure Information Protection の Rights Management 保護ではなくこの保護方法をラベルが電子メールに対して自動的に適用するようにしたい場合にのみ、この設定を使用します。 結果として得られる保護は、ユーザーが Outlook から手動で S/MIME オプションを選択した場合と同じものです。
+動作中の [S/MIME の展開](/exchange/s-mime-for-message-signing-and-encryption)があり、Azure Information Protection の Rights Management 保護ではなくこの保護方法をラベルが電子メールに対して自動的に適用するようにしたい場合にのみ、この設定を使用します。 結果として得られる保護は、ユーザーが Outlook から手動で S/MIME オプションを選択した場合と同じものです。
 
 この構成では、S/MIME 保護を適用したい Azure Information Protection ラベルごとに、**LabelToSMIME** という名前のクライアントの詳細設定を指定する必要があります。 次に、各エントリに対して、次の構文を使用して値を設定します。
 
 `[Azure Information Protection label ID];[S/MIME action]`
 
-ラベル ID の値は、Azure portal で Azure Information Protection ポリシーを表示または構成するときに、**ラベル**ウィンドウに表示されます。 サブラベルと共に S/MIME を使うには、親ラベルではなく、サブラベルの ID だけを常に指定します。 サブラベルを指定する場合、親ラベルが同じスコープまたはグローバル ポリシー内にある必要があります。
+ラベル ID の値は、Azure portal で Azure Information Protection ポリシーを表示または構成するときに、 **ラベル** ウィンドウに表示されます。 サブラベルと共に S/MIME を使うには、親ラベルではなく、サブラベルの ID だけを常に指定します。 サブラベルを指定する場合、親ラベルが同じスコープまたはグローバル ポリシー内にある必要があります。
 
 次のような S/MIME アクションが可能です。
 
@@ -536,7 +543,7 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
-**[すべてのドキュメントとメールにラベルを付ける]** の[ポリシー設定](../configure-policy-settings.md)を使うと、ユーザーが Office ドキュメントを初めて保存するとき、およびメールを送信するときに、ラベルの選択を求めるメッセージが表示されます。 ドキュメントの場合、ユーザーは **[後で]** を選択して一時的にメッセージを無視し、ラベルを選んで、ドキュメントに戻ることができます。 ただし、ラベルを付けないと、保したドキュメントを閉じることはできません。 
+**[すべてのドキュメントとメールにラベルを付ける]** の [ポリシー設定](../configure-policy-settings.md)を使うと、ユーザーが Office ドキュメントを初めて保存するとき、およびメールを送信するときに、ラベルの選択を求めるメッセージが表示されます。 ドキュメントの場合、ユーザーは **[後で]** を選択して一時的にメッセージを無視し、ラベルを選んで、ドキュメントに戻ることができます。 ただし、ラベルを付けないと、保したドキュメントを閉じることはできません。 
 
 この設定を構成すると、**[後で]** オプションが削除され、ユーザーはドキュメントを初めて保存するときにラベルを選択する必要があります。
 
@@ -548,13 +555,13 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>バックグラウンドでの分類の継続的実行をオンにする
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、変更される可能性があります。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。  
 
 この設定を構成すると、Azure Information Protection クライアントが推奨ラベルを自動的にドキュメントに適用する[既定の動作](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied)が次のように変わります。 
 
 - Word、Excel、PowerPoint に対して、自動分類はバックグラウンドで継続的に実行されます。  
 
-この動作は Outlook でも変わりません。
+- この動作は Outlook でも変わりません。
 
 Azure Information Protection クライアントが指定した条件規則のドキュメントを定期的にチェックする場合、この動作により、Microsoft SharePoint に格納されているドキュメントの自動および推奨の分類と保護が有効になります。 条件規則が既に実行されているため、大きなファイルもすばやく保存されます。 
 
@@ -565,6 +572,10 @@ Azure Information Protection クライアントが指定した条件規則のド
 - キー: **RunPolicyInBackground**
 
 - 値: **True**
+
+> [!NOTE]
+> 現在、この機能はプレビュー段階にあります。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
 
 ## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>PDF 暗号化の ISO 標準を使用して PDF ファイルを保護しない
 
@@ -580,7 +591,7 @@ Azure Information Protection クライアントが指定した条件規則のド
 
 たとえば、PDF 暗号化の ISO 標準をサポートしていない PDF リーダーを使用している場合は、すべてのユーザーに対してこの設定が必要です。 または、新しい形式をサポートする PDF リーダーを段階的に導入する場合は、一部のユーザーに対してその設定を構成する必要があります。 この設定を使用する別の理由としては、署名された PDF ドキュメントに保護を追加することが必要な場合が挙げられます。 署名された PDF ドキュメントを .ppdf 形式を使用してさらに保護することができます。これは、この保護がファイルのラッパーとして実装されるために可能になります。 
 
-Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。 また、スキャナーでは既定で PDF ドキュメントが保護されなくなります。 **EnablePDFv2Protection**が False に設定されている場合に PDF ドキュメントをスキャナーで保護するには **、** [レジストリを編集](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect)する必要があります。
+Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。 また、スキャナーでは既定で PDF ドキュメントが保護されなくなります。 **EnablePDFv2Protection** が False に設定されている場合に PDF ドキュメントをスキャナーで保護するには **、** [レジストリを編集](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect)する必要があります。
 
 新しい PDF の暗号化について詳しくは、ブログ投稿「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」 (Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。
 
@@ -596,7 +607,7 @@ Azure Information Protection クライアントに新しい設定のクライア
 
 PowerShell コマンドを使用して既存の .ppdf ファイルを保護された .pdf ファイルに変換するには、PDF の暗号化に ISO 標準を使用します。
 
-1. .ppdf ファイルに [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) を使用します。 次に例を示します。
+1. .ppdf ファイルに [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) を使用します。 例:
     
     ```ps
     Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
@@ -610,13 +621,13 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
     
    - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** に表示される値) に対してラベルを削除し、元のカスタム アクセス許可と共にそれを再適用することを依頼するかどうかを決定します。
 
-3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の[ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 次に例を示します。 
+3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の [ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 例: 
 
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
     ```
 
-4. 手順 1 で指定したラベルの値を指定して、元のラベルを最適用します。 次に例を示します。
+4. 手順 1 で指定したラベルの値を指定して、元のラベルを最適用します。 例:
     
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
@@ -625,8 +636,6 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
 ファイルは .pdf ファイル名拡張子を維持しますが、以前と同様に分類され、PDF の暗号化のための ISO 標準を使用して保護されます。
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Secure Islands によって保護されたファイルのサポート
-
-この構成オプションはプレビュー段階であり、変更される可能性があります。
 
 ドキュメントを保護するために Secure Islands を使用した場合、この保護の結果、テキスト ファイル、画像ファイル、一般的に保護対象となるファイルが保護される可能性があります。 たとえば、ファイル名の拡張子が .ptxt、.pjpeg、または .pfile のファイルです。 以下のようにレジストリを編集すると、Azure Information Protection はこれらのファイルを復号化できます。
 
@@ -646,6 +655,10 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
 - エクスプローラー、PowerShell、Azure Information Protection スキャナーで、これらのファイルにラベルを付けることができます。 その結果、Azure Information Protection の新しい保護を適用する Azure Information Protection ラベルや、Secure Islands から既存の保護を削除する Azure Information Protection ラベルを適用することができます。
 
 - [ラベル付け移行クライアントのカスタマイズ](#migrate-labels-from-secure-islands-and-other-labeling-solutions)を使用して、これらの保護されたファイルの Secure Islands ラベルを Azure Information Protection ラベルに自動的に変換することができます。
+
+> [!NOTE]
+> 現在、この機能はプレビュー段階にあります。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
 
@@ -672,7 +685,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 `[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
-ラベル ID の値は、Azure portal で Azure Information Protection ポリシーを表示または構成するときに、**ラベル**ウィンドウに表示されます。 サブラベルを指定するには、親ラベルが同じスコープまたはグローバル ポリシー内にある必要があります。
+ラベル ID の値は、Azure portal で Azure Information Protection ポリシーを表示または構成するときに、 **ラベル** ウィンドウに表示されます。 サブラベルを指定するには、親ラベルが同じスコープまたはグローバル ポリシー内にある必要があります。
 
 任意の移行規則名を指定します。 以前のラベル付けソリューションから Azure Information Protection のラベルに、1 つまたは複数のラベルをマッピングする方法を特定するのに役立つ、わかりやすい名前を使用します。 名前は、スキャナー レポートおよびイベント ビューアーに表示されます。 この設定では、ドキュメントから元のラベルが削除されたり、元のラベルが適用された可能性がある視覚的マーキングが削除されたりすることはありません。 ヘッダーおよびフッターを削除するには、次のセクションの「[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)」を参照してください。
 
@@ -680,7 +693,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 要件: "社外秘" というセキュリティ保護された島ラベルを持つドキュメントは、Azure Information Protection によって "社外秘" というラベルが付けられます。
 
-次の点に注意してください。
+この例では、次のように記述されています。
 
 - 使用する Azure Information Protection のラベルは **Confidential** という名前が付けられ、ラベル ID は **1ace2cc3-14bc-4142-9125-bf946a70542c** です。 
 
@@ -697,7 +710,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 要件: セキュリティで保護されたアイランドによって "機微な" というラベルが付けられたドキュメントは、Azure Information Protection によって "機密性の高い" というラベルに再設定する
 
-次の点に注意してください。
+この例では、次のように記述されています。
 
 - 使用する Azure Information Protection のラベルは **Highly Confidential** という名前が付けられ、ラベル ID は **3e9df74d-3168-48af-8b11-037e3021813f** です。
 
@@ -715,7 +728,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 要件: "Internal" という語を含む2つのセキュリティ保護された島々ラベルがあり、これらのセキュリティ保護された島々ラベルのいずれかを持つドキュメントを、Azure Information Protection によって "General" というラベルに書き換えます。
 
-次の点に注意してください。
+この例では、次のように記述されています。
 
 - 使用する Azure Information Protection のラベルは **General** という名前が付けられ、ラベル ID は **2beb8fe7-8293-444c-9768-7fdc6f75014d** です。
 
@@ -731,7 +744,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>他のラベル付けソリューションからヘッダーとフッターを削除する
 
-この構成では、Azure Portal で構成する必要のある、複数の[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 これらの設定はプレビュー段階であり、変更される可能性があります。
+この構成では、Azure Portal で構成する必要のある、複数の[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
 この設定では、その視覚的マーキングが別のラベル付けソリューションによって適用されている場合に、テキスト ベースのヘッダーまたはフッターをドキュメントから削除したり置き換えたりできるようになります。 たとえば、古いフッターに古いラベルの名前が含まれていますが、これを新しいラベル名と独自のフッターで Azure Information Protection に移行したとします。
 
@@ -739,19 +752,23 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 この構成は Outlook ではサポートされていません。そのため、この構成を Word、Excel、PowerPoint で使用すると、ユーザーのこれらのアプリのパフォーマンスに悪影響が生じる場合があります。 この構成ではアプリケーションごとの設定を定義することができます。たとえば、Word 文書のヘッダーとフッターのテキストは検索し、Excel のスプレッドシートや PowerPoint のプレゼンテーションのテキストは検索しないようにできます。
 
-パターンマッチングはユーザーのパフォーマンスに影響するため、Office アプリケーションの種類 (**W**Ord、E**X**セル、 **P**owerpoint) は、検索する必要があるもののみに制限することをお勧めします。
+パターンマッチングはユーザーのパフォーマンスに影響するため、Office アプリケーションの種類 (**W** Ord、E **X** セル、 **P** owerpoint) は、検索する必要があるもののみに制限することをお勧めします。
 
 - キー: **RemoveExternalContentMarkingInApp**
 
 - 値: \<**Office application types WXP**> 
 
-例 :
+次に例を示します。
 
 - Word 文書のみを検索するには、**W** を指定します。
 
 - Word 文書と PowerPoint プレゼンテーションを検索するには、**WP** を指定します。
 
 この後、ヘッダーまたはフッターの内容と、その削除または置換方法を指定したりするために、少なくとも 1 つのより詳細なクライアント設定 **ExternalContentMarkingToRemove** が必要です。
+
+> [!NOTE]
+> 現在、この機能はプレビュー段階にあります。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
 
 ### <a name="how-to-configure-externalcontentmarkingtoremove"></a>ExternalContentMarkingToRemove を構成する方法
 
@@ -790,11 +807,11 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 - キー 1: **ExternalContentMarkingToRemove**
 
-- キー値 1: ** \* 社外秘***
+- キー値 1: **\* 社外秘***
 
 - キー 2: **ExternalContentMarkingToRemove**
 
-- キー値 2: ** \* ラベルが適用され**ました* 
+- キー値 2: **\* ラベルが適用され** ました* 
 
 #### <a name="optimization-for-powerpoint"></a>PowerPoint 用の最適化
 
@@ -804,9 +821,9 @@ PowerPoint では、フッターが図形として実装されます。 指定�
 
 ヘッダーまたはフッターとして使用している図形の名前を検索するには:
 
-1. PowerPoint の**選択**ウィンドウを表示し、**[書式]** タブ > **[配置]** グループ > **[選択ウィンドウ]** の順に選択します。
+1. PowerPoint の **選択** ウィンドウを表示し、**[書式]** タブ > **[配置]** グループ > **[選択ウィンドウ]** の順に選択します。
 
-2. ヘッダーまたはフッターを含むスライド上の図形を選択します。 選択した図形の名前が、**選択**ウィンドウで強調表示されます。
+2. ヘッダーまたはフッターを含むスライド上の図形を選択します。 選択した図形の名前が、**選択** ウィンドウで強調表示されます。
 
 図形の名前を使用して、**PowerPointShapeNameToRemove** キーの文字列値を指定します。 
 
@@ -841,7 +858,7 @@ PowerPoint では、フッターが図形として実装されます。 指定�
 
 - キー 1: **SyncPropertyName**
 
-- キー1の値:\<**property name**> 
+- キー1の値: \<**property name**> 
 
 - キー 2: **SyncPropertyName**
 
@@ -859,9 +876,9 @@ Office ドキュメントにこれらの分類の値のいずれかのラベル�
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
-Office アプリで Azure Information Protection クライアントが使用されている場合は、ドキュメントが最初に保存されたときに、機密情報が検索されます。 クライアントが監査情報を送信しないように構成されていない場合、検出された機密情報の種類 (定義済みまたはカスタム) は[Azure Information Protection analytics](../reports-aip.md)に送信されます。 
+Office アプリで Azure Information Protection クライアントが使用されている場合は、ドキュメントが最初に保存されたときに、機密情報が検索されます。 クライアントが監査情報を送信しないように構成されていない場合、検出された機密情報の種類 (定義済みまたはカスタム) は [Azure Information Protection analytics](../reports-aip.md)に送信されます。 
 
-クライアントが監査情報を送信するかどうかを制御する構成は、[**監査データを Azure Information Protection log analytics に送信する**] の[ポリシー設定](../configure-policy-settings.md)です。 このポリシー設定が**オン**の場合は、ラベル付け操作を含む監査情報を送信するが、クライアントが検出した機密情報の種類を送信しないようにするには、次の文字列を入力します。
+クライアントが監査情報を送信するかどうかを制御する構成は、[**監査データを Azure Information Protection log analytics に送信する**] の [ポリシー設定](../configure-policy-settings.md)です。 このポリシー設定が **オン** の場合は、ラベル付け操作を含む監査情報を送信するが、クライアントが検出した機密情報の種類を送信しないようにするには、次の文字列を入力します。
 
 - キー: **Runauditinformationタイプ検出**
 
@@ -869,19 +886,19 @@ Office アプリで Azure Information Protection クライアントが使用さ�
 
 この高度なクライアント設定を設定した場合でも、クライアントから監査情報を送信できますが、情報はラベル付けアクティビティに限定されます。
 
-次に例を示します。
+例:
 
 - この設定を使用すると、" **Confidential \ Sales**" というラベルが付いた Financial.docx にアクセスしたユーザーが表示されます。
 
 - この設定がないと、Financial.docx に6個のクレジットカード番号が含まれていることがわかります。
     
-    - また、機密性の[高いデータに](../reports-aip.md#content-matches-for-deeper-analysis)対してより深い分析を有効にすると、そのクレジットカード番号を確認することができます。
+    - また、機密性の [高いデータに](../reports-aip.md#content-matches-for-deeper-analysis)対してより深い分析を有効にすると、そのクレジットカード番号を確認することができます。
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>ユーザーのサブセットに対して送信情報の種類の一致を無効にする
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
-機密データに対するより詳細な分析を有効にする[Azure Information Protection analytics](../reports-aip.md)のチェックボックスをオンにすると、機密情報の種類やカスタム条件に一致する内容が収集されます。既定では、この情報は、Azure Information Protection スキャナーを実行するサービスアカウントを含むすべてのユーザーによって送信されます。 このデータを送信できないユーザーがいる場合は、それらのユーザーの[スコープ付きポリシー](../configure-policy-scope.md)で、次のようなクライアントの詳細設定を作成します。 
+機密データに対するより詳細な分析を有効にする [Azure Information Protection analytics](../reports-aip.md) のチェックボックスをオンにすると、機密情報の種類やカスタム条件に一致する内容が収集されます。既定では、この情報は、Azure Information Protection スキャナーを実行するサービスアカウントを含むすべてのユーザーによって送信されます。 このデータを送信できないユーザーがいる場合は、それらのユーザーの[スコープ付きポリシー](../configure-policy-scope.md)で、次のようなクライアントの詳細設定を作成します。 
 
 - キー: **Logmatchedcontent**
 
@@ -900,7 +917,7 @@ Office アプリで Azure Information Protection クライアントが使用さ�
 
 - キー: **ScannerConcurrencyLevel**
 
-- 数値**\<number of concurrent threads>**
+- 数値 **\<number of concurrent threads>**
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>スキャナーの低整合性レベルを無効にする
 
@@ -908,9 +925,9 @@ Office アプリで Azure Information Protection クライアントが使用さ�
 
 既定では、Azure Information Protection スキャナーは低整合性レベルで実行されます。 この設定では、より高度なセキュリティ分離が提供されますが、パフォーマンスが低下します。 低整合性レベルは、特権を持ったアカウント (ローカル管理者アカウントなど) でスキャナーを実行する場合に適しています。この設定は、スキャナーを実行しているコンピューターを保護するのに役立ちます。
 
-ただし、スキャナーを実行するサービスアカウントに、[スキャナーの展開の前提条件](../deploy-aip-scanner-prereqs.md)に記載されている権限しかない場合、低整合性レベルは必要ありません。パフォーマンスに悪影響を及ぼすため、このレベルは推奨されません。 
+ただし、スキャナーを実行するサービスアカウントに、 [スキャナーの展開の前提条件](../deploy-aip-scanner-prereqs.md)に記載されている権限しかない場合、低整合性レベルは必要ありません。パフォーマンスに悪影響を及ぼすため、このレベルは推奨されません。 
 
-Windows 整合性レベルについて詳しくは、「[What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx)」(Windows 整合性メカニズムとは何ですか) をご覧ください。
+Windows 整合性レベルについて詳しくは、「[What is the Windows Integrity Mechanism?](/previous-versions/dotnet/articles/bb625957(v=msdn.10))」(Windows 整合性メカニズムとは何ですか) をご覧ください。
 
 この高度な設定を構成し、Windows によって自動的に割り当てられた整合性レベルでスキャナーが実行される (標準ユーザー アカウントが中程度の整合性レベルで実行される) ようにするには、次の文字列を入力します。
 
@@ -920,15 +937,15 @@ Windows 整合性レベルについて詳しくは、「[What is the Windows Int
 
 ## <a name="change-the-timeout-settings-for-the-scanner"></a>スキャナーのタイムアウト設定を変更する
 
-この構成では、Azure portal で構成する必要のある[アドバンストクライアント設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
+この構成では、Azure portal で構成する必要のある [アドバンストクライアント設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal) を使用します。
 
-既定では、Azure Information Protection スキャナーのタイムアウト期間は 00:15:00 (15 分) に設定されており、機密情報の種類やカスタム条件用に構成した regex 式の各ファイルを検査します。 このコンテンツ抽出プロセスのタイムアウト期間に達すると、タイムアウト前のすべての結果が返され、ファイルに対するさらなる検査が停止します。 このシナリオでは、%*localappdata*% \ Microsoft\MSIP\Logs\MSIPScanner.iplog (複数のログがある場合は zip) に次のエラーメッセージが記録されます: **getcontentparts が失敗**しました。詳細については、**操作が取り消されまし**た。
+既定では、Azure Information Protection スキャナーのタイムアウト期間は 00:15:00 (15 分) に設定されており、機密情報の種類やカスタム条件用に構成した regex 式の各ファイルを検査します。 このコンテンツ抽出プロセスのタイムアウト期間に達すると、タイムアウト前のすべての結果が返され、ファイルに対するさらなる検査が停止します。 このシナリオでは、%*localappdata*% \ Microsoft\MSIP\Logs\MSIPScanner.iplog (複数のログがある場合は zip) に次のエラーメッセージが記録されます: **getcontentparts が失敗** しました。詳細については、 **操作が取り消されまし** た。
 
 大きなファイルが原因でこのタイムアウトの問題が発生した場合は、コンテンツを完全に抽出するために、このタイムアウト期間を長くすることができます。
 
 - キー: **Contentextractiontimeout**
 
-- 数値**\<hh:min:sec>**
+- 数値 **\<hh:min:sec>**
 
 ファイルの種類は、ファイルのスキャンにかかる時間に影響を与える可能性があります。 スキャン時間の例:
 
@@ -938,11 +955,11 @@ Windows 整合性レベルについて詳しくは、「[What is the Windows Int
 
 - 一般的な 100 MB の Excel ファイル: 12-30 分
 
-ビデオファイルなど、非常に大きいファイルの種類によっては、スキャナープロファイルの [**スキャンする**ファイルの種類] オプションにファイル名拡張子を追加して、スキャンから除外することを検討してください。
+ビデオファイルなど、非常に大きいファイルの種類によっては、スキャナープロファイルの [ **スキャンする** ファイルの種類] オプションにファイル名拡張子を追加して、スキャンから除外することを検討してください。
 
 さらに、Azure Information Protection スキャナーでは、処理するファイルごとに 00:30:00 (30 分) のタイムアウト期間があります。 この値は、リポジトリからファイルを取得するためにかかる時間を考慮し、暗号化解除、検査、ラベル付け、および暗号化のためのコンテンツの抽出を含む操作のために、一時的にファイルをローカルに保存します。
 
-Azure Information Protection スキャナーは、1分あたり数百から数百のファイルをスキャンできますが、非常に大きなファイルを持つデータリポジトリがある場合、スキャナーはこの既定のタイムアウト期間を超えることがあり、Azure portal は30分後に停止するように見えます。 このシナリオでは、次のエラーメッセージが%*localappdata*% \ Microsoft\MSIP\Logs\MSIPScanner.iplog (複数のログがある場合は zip) と、スキャナーの .csv ログファイル (**操作が取り消されました**) に記録されます。
+Azure Information Protection スキャナーは、1分あたり数百から数百のファイルをスキャンできますが、非常に大きなファイルを持つデータリポジトリがある場合、スキャナーはこの既定のタイムアウト期間を超えることがあり、Azure portal は30分後に停止するように見えます。 このシナリオでは、次のエラーメッセージが%*localappdata*% \ Microsoft\MSIP\Logs\MSIPScanner.iplog (複数のログがある場合は zip) と、スキャナーの .csv ログファイル ( **操作が取り消されました**) に記録されます。
 
 既定では、4コアプロセッサを搭載したスキャナーには、スキャン用に16個のスレッドがあり、30分間に16の大きなファイルを検出する確率は、大きなファイルの比率によって異なります。 たとえば、スキャンレートが1分あたり200ファイルで、ファイルの1% が30分のタイムアウトを超えると、85% を超える可能性があります。これは、スキャナーで30分間のタイムアウト状況が発生する可能性があります。 これらのタイムアウトによって、スキャン時間が長くなり、メモリ使用量が増加する可能性があります。
 
@@ -952,7 +969,7 @@ Azure Information Protection スキャナーは、1分あたり数百から数�
 
 - キー: **Fileprocessingtimeout**
 
-- 数値**\<hh:min:sec>**
+- 数値 **\<hh:min:sec>**
 
 ## <a name="change-the-local-logging-level"></a>ローカルのログ記録レベルを変更する
 
@@ -964,7 +981,7 @@ Azure Information Protection スキャナーは、1分あたり数百から数�
 
 - キー: **LogLevel**
 
-- 数値**\<logging level>**
+- 数値 **\<logging level>**
 
 ログ記録レベルに次の値のいずれかを設定します。
 
@@ -988,15 +1005,15 @@ Outlook Mobile では、Exchange のメッセージ分類がサポートされ�
 
 このソリューションを実現するには: 
 
-1. [New-MessageClassification](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/New-MessageClassification?view=exchange-ps) Exchange PowerShell コマンドレットを使用して、Azure Information Protection ポリシーのラベル名にマップする名前プロパティでメッセージの分類を作成します。 
+1. [New-MessageClassification](/powershell/module/exchange/policy-and-compliance/New-MessageClassification) Exchange PowerShell コマンドレットを使用して、Azure Information Protection ポリシーのラベル名にマップする名前プロパティでメッセージの分類を作成します。 
 
 2. ラベルごとに Exchange メール フロー ルールを作成します。メッセージのプロパティに構成した分類が含まれる場合はルールを適用し、メッセージ プロパティを変更してメッセージ ヘッダーを設定します。 
 
-     メッセージヘッダーについては、Azure Information Protection ラベルを使用して送信および分類した電子メールのインターネットヘッダーを調べることによって、指定する情報を見つけることができます。 ヘッダー **msip_labels**と、セミコロンを含めて、その直後に続く文字列を探します。 次に例を示します。
+     メッセージヘッダーについては、Azure Information Protection ラベルを使用して送信および分類した電子メールのインターネットヘッダーを調べることによって、指定する情報を見つけることができます。 ヘッダー **msip_labels** と、セミコロンを含めて、その直後に続く文字列を探します。 例:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled = True**
     
-    ルール内のメッセージ ヘッダーの場合は、ヘッダーとして **msip_labels** を指定し、ヘッダー値としてこの文字列の残りの部分を指定します。 次に例を示します。
+    ルール内のメッセージ ヘッダーの場合は、ヘッダーとして **msip_labels** を指定し、ヘッダー値としてこの文字列の残りの部分を指定します。 例:
     
     ![例: 特定の Azure Information Protection ラベルのメッセージ ヘッダーを設定する Exchange Online メール フロー ルール](../media/exchange-rule-for-message-header.png)
     
@@ -1027,5 +1044,3 @@ Azure Information Protection ラベルに保護が適用されている場合は
 - [サポートされるファイルの種類](client-admin-guide-file-types.md)
 
 - [PowerShell コマンド](client-admin-guide-powershell.md)
-
-

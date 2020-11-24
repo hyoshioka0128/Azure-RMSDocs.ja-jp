@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a51376fc2d6114f7d23ec937b4d8ea1238d1655
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 146fa9442aa5fcb05cebab27f1d4104bd33328f0
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953237"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95570886"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -27,7 +27,7 @@ ms.locfileid: "88953237"
 > *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 > [!TIP]
 > ラベルが Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security Center、または Microsoft 365 コンプライアンスセンターから公開されているため、Azure Information Protection 統合ラベルクライアントの使用に関心がある場合は、 Microsoft ダウンロードセンターから、統合されたラベル付けクライアントをダウンロードしてインストールすると、Azure Information Protection クライアントを、統一された [ラベル付けクライアント](unifiedlabelingclient-version-release-history.md)にアップグレードできます。
@@ -40,12 +40,11 @@ ms.locfileid: "88953237"
 
 Azure Information Protection クライアントの各一般公開 (GA) バージョンは、後続の GA バージョンがリリースされた後も最長で 6 か月間はサポートされます。 このセクションを除き、ドキュメントにはサポートされていないバージョンのクライアントに関する情報は含まれていません。 修正プログラムや新しい機能は常に最新の GA バージョンに適用され、古い GA バージョンには適用されません。
 
-実稼働ネットワークのエンド ユーザー向けにプレビュー バージョンをデプロイしないでください。 最新のプレビュー バージョンは、次の GA バージョンに含まれる新しい機能や修正内容の確認と試用にお使いください。 最新でないプレビュー バージョンはサポートされません。
-
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>サポートされなくなった一般提供のバージョン:
 
 |クライアントのバージョン|リリース日|
 |--------------|-------------|
+|1.54.33.0 | 2019/10/23|
 |1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|2018 年 11 月 27 日|
@@ -60,7 +59,7 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 |1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
-このページで使用される日付形式は、 *月/日/年*です。
+このページで使用される日付形式は、 *月/日/年* です。
 
 6/2/2019 以降、Azure Information Protection のラベル付けサービスには、TLS 1.2 を使用する接続が必要です。
 
@@ -70,6 +69,8 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 
 Windows 用 Azure Information Protection クライアントのサポートされているリリースの新機能と変更点については、次の情報を参照してください。 最新のリリースは一番上に表示されます。
 
+現時点では、Azure Information Protection 機能はプレビュー段階です。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+
 > [!NOTE]
 > 細かい修正点は記載されていないので、Azure Information Protection クライアントで問題が発生した場合は、最新の GA リリースで問題が修正されているかどうかを確認することをお勧めします。 問題が引き続き発生する場合は、現在のプレビューバージョン (使用可能な場合) を確認します。
 >  
@@ -77,7 +78,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 ## <a name="version-154590"></a>バージョン1.54.59.0
 
-**リリース**日: 12/02/2020
+**リリース** 日: 02/12/2020
 
 このバージョンには、修正プログラムのみが含まれています。 
 
@@ -90,16 +91,6 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 - 保護された PDF ファイルを操作するときに、クライアントの安定性に関連する問題が解決されます。 
 
 - 電子メールの作成プロセス中に電子メールでラベルが削除されると、保護ラベルが期待どおりに削除されるようになりました。 
-
-## <a name="version-154330"></a>バージョン1.54.33.0
-
-**リリース**日: 10/23/2019
-
-08/12/2020 でサポート
-
-このバージョンには、RMS クライアントの MSIPC バージョン1.0.4008.0813 が含まれています。
-
-このリリースには、安定性とパフォーマンスに関する一般的な修正が含まれています。
 
 ## <a name="next-steps"></a>次のステップ
 

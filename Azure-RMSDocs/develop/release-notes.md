@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 010ed1f194fd29a9d5e371c296adae5e1e216bea
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 63beff811a9a9d6d08cfb7d2119c976e91097109
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563792"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570766"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
@@ -44,7 +44,7 @@ ms.locfileid: "88563792"
 
 7 月リリースの更新で SDK が改訂され、4.2.5 になりました。
 
-- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[方法: エラーとパフォーマンスのログを有効にする](https://docs.microsoft.com/information-protection/develop/enabling-logging)」を参照してください。
+- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[方法: エラーとパフォーマンスのログを有効にする](/information-protection/develop/enabling-logging)」を参照してください。
 - iOS SDK では、ログ記録レベルを設定できません。
 - SDK は、NULL アクセス トークンに対してエラーを返すようになりました。
 
@@ -66,29 +66,29 @@ ms.locfileid: "88563792"
 
 -   ドキュメント追跡 (iOS/OS X および Android オペレーティング システムでは RMS オンラインのみ)
 
-    iOS/OS X の場合の詳細と使用方法については、[MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) クラスを参照してください。追跡情報と [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) での追加の文書追跡登録メソッドを提供します。 Android 用の同様の機能も [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) および [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) に追加されています。
+    iOS/OS X の場合の詳細と使用方法については、[MSLicenseMetadata](/previous-versions/windows/desktop/msipcthin2/mslicensemetadata-class-objc) クラスを参照してください。追跡情報と [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) での追加の文書追跡登録メソッドを提供します。 Android 用の同様の機能も [LicenseMetadata](/previous-versions/windows/desktop/msipcthin2/licensemetadata-interface-java) および [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) に追加されています。
 
     ドキュメント追跡機能の詳細については、「[方法: ドキュメント追跡を使用する](how-to-use-document-tracking.md)」を参照してください。
 
 -   Android API の非同期バージョンに相当する一連の同期メソッド。
 
-    [CustomProtectedInputStream.create 同期メソッド](https://msdn.microsoft.com/library/mt631362.aspx)
+    [CustomProtectedInputStream.create 同期メソッド](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-create-synchronous-method-java)
 
-    [CustomProtectedOutputStream.create 同期メソッド](https://msdn.microsoft.com/library/mt631363.aspx)
+    [CustomProtectedOutputStream.create 同期メソッド](/previous-versions/windows/desktop/msipcthin2/customprotectedoutputstream-create-synchronous-method)
 
-    [ProtectedFileInputStream.create 同期メソッド](https://msdn.microsoft.com/library/mt631375.aspx)
+    [ProtectedFileInputStream.create 同期メソッド](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-create-synchronous-method)
 
-    [ProtectedFileOutputStream.create 同期メソッド](https://msdn.microsoft.com/library/mt631376.aspx)
+    [ProtectedFileOutputStream.create 同期メソッド](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-create-synchronous-method-java)
 
-    [TemplateDescriptor.getTemplates 同期メソッド](https://msdn.microsoft.com/library/mt631380.aspx)
+    [TemplateDescriptor.getTemplates 同期メソッド](/previous-versions/windows/desktop/msipcthin2/templatedescriptor-gettemplates-synchronous-method-java)
 
-    [UserPolicy.acquire 同期メソッド](https://msdn.microsoft.com/library/mt631384.aspx)
+    [UserPolicy.acquire 同期メソッド](/previous-versions/windows/desktop/msipcthin2/userpolicy-acquire-synchronous-method-java)
 
-    [UserPolicy.create (PolicyDescriptor…) 同期メソッド**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [UserPolicy.create (PolicyDescriptor…) 同期メソッド**](/previous-versions/windows/desktop/msipcthin2/userpolicy-create-policydescriptor-------synchronous-method-java)
 
-    [UserPolicy.create (TempalteDescriptor…) 同期メソッド](https://msdn.microsoft.com/library/mt631386.aspx)
+    [UserPolicy.create (TempalteDescriptor…) 同期メソッド](/previous-versions/windows/desktop/msipcthin2/userpolicy-create-templatedescriptor-------synchronous-method-java)
 
--   Android API に新しい [ProtectedBuffer](https://msdn.microsoft.com/library/mt631369.aspx) クラスを追加します。
+-   Android API に新しい [ProtectedBuffer](/previous-versions/windows/desktop/msipcthin2/protectedbuffer-class) クラスを追加します。
 -   エラー メッセージやトラブルシューティングを向上させる更新プログラム
 -   暗号化操作の重要なパフォーマンスの向上
 
@@ -108,7 +108,7 @@ ms.locfileid: "88563792"
 
     アプリケーションの暗号化および復号化を独立して、並列的に実行できます。
 
-    詳細については、「[MSProtector](https://msdn.microsoft.com/library/mt210993.aspx)」を参照してください。
+    詳細については、「[MSProtector](/previous-versions/windows/desktop/msipcthin2/msprotector-class-objc)」を参照してください。
 
     ログ レベルの制御の設定が可能になりました。
 
@@ -116,7 +116,7 @@ ms.locfileid: "88563792"
 
     キャッシュ クリアのサポートが追加されました。
 
-    詳細については、「[MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx)」を参照してください。
+    詳細については、「[MSProtection:resetStateWithCompletionBlock](/previous-versions/windows/desktop/msipcthin2/msprotection-resetstatewithcompletionblock-method-objc)」を参照してください。
 
 ### <a name="february-2015-update---adds-windows-store-application-support"></a>2015 年 2 月の更新 - Windows ストア アプリケーションのサポートを追加
 
@@ -130,13 +130,13 @@ ms.locfileid: "88563792"
 
 RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple iOS/OS X に以下の新機能が追加されています。
 
--   *ユーザーの同意*を処理するための Android および iOS/OS SDK API 拡張により、SDK の動作をユーザーが確認できるようになりました。 現在、サポートされている同意タイプは、ドキュメント追跡、および不明な AD RMS サービス URL へのアクセスです。
+-   *ユーザーの同意* を処理するための Android および iOS/OS SDK API 拡張により、SDK の動作をユーザーが確認できるようになりました。 現在、サポートされている同意タイプは、ドキュメント追跡、および不明な AD RMS サービス URL へのアクセスです。
 
-    詳細については、Android API バージョンの [ConsentCallback インターフェイス](https://msdn.microsoft.com/library/dn833503.aspx)を例として参照してください。
+    詳細については、Android API バージョンの [ConsentCallback インターフェイス](/previous-versions/windows/desktop/msipcthin2/consentcallback-interface-java)を例として参照してください。
 
 -   iOS 8 および OS X 10.10 (Yosemite) がサポートされるようになりました。 Xcode 6 で必要ないくつかのプロパティ名も変更されました。
 
-    たとえば、MSUserPolicy.name が [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx) に変更されました。
+    たとえば、MSUserPolicy.name が [MSUserPolicy.policyName](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-name-property-objc) に変更されました。
 
 ## <a name="release-notes"></a>リリース ノート
 
@@ -146,13 +146,13 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   **AD RMS のサポート** - 新しい AD RMS サーバーのモバイル デバイス拡張機能により、IT 管理者はモバイル デバイスで RMS 対応アプリケーションを使用できます。
 -   **オフラインで使用** - エンドユーザーが RMS 保護されたデータにオフラインでアクセスできます。
--   **認証の分離** - 独自に開発した認証ライブラリを Azure RMS と AD RMS に使用できます (推奨される [Azure AD 認証ライブラリ (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx) を使用することもできます)。
+-   **認証の分離** - 独自に開発した認証ライブラリを Azure RMS と AD RMS に使用できます (推奨される [Azure AD 認証ライブラリ (ADAL)](/previous-versions/azure/jj573266(v=azure.100)) を使用することもできます)。
 -   **UI の分離** - 開発者は、RMS 保護されたドキュメントを保護および使用するためのユーザー インターフェイスを構築できます。
 -   **再設計された API** - 暗号化/復号化の API が単純でわかりやすくなりました。RMS の動作と操作方法に一貫性があり、労力が最小限に抑えられます。
 
 **すべてのプラットフォームに共通**
 
--   RMS SDK 4.x API は*スレッド セーフ*ではありません。
+-   RMS SDK 4.x API は *スレッド セーフ* ではありません。
 
 **Android**
 
@@ -164,9 +164,9 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
     **解決方法** - アプリケーションが Android API への複数インスタンスの呼び出しを許可しないようにします。
 
--   [Protectedfileoutputstream .write](https://msdn.microsoft.com/library/dn790855.aspx)(byte \[ \] array, int offset, int length) メソッドを使用する場合、*配列*の長さの値とは別の長さであるため、SDK を使用して後でコンテンツを使用することはできません。
+-   [Protectedfileoutputstream .write](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java)(byte \[ \] array, int offset, int length) メソッドを使用する場合、*配列* の長さの値とは別の長さであるため、SDK を使用して後でコンテンツを使用することはできません。
 
-    **解決方法** - これは既知の問題です。 これを軽減するには、長さのパラメーターと同じ長さの値を持つ*バイト \[ \] *配列を常に渡すか、 [protectedfileoutputstream .write](https://msdn.microsoft.com/library/dn790855.aspx)(バイト \[ \] 配列) メソッドを使用します。
+    **解決方法** - これは既知の問題です。 これを軽減するには、長さのパラメーターと同じ長さの値を持つ *バイト \[ \]* 配列を常に渡すか、 [protectedfileoutputstream .write](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java)(バイト \[ \] 配列) メソッドを使用します。
 
 **iOS および OS X**
 
@@ -192,8 +192,8 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
     次のメソッドは同時に実行しないでください。 実行の完了を監視するには、説明に従って完了ブロック アプローチを使用します。
 
-    - [MSProtectedData.protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx)
-    - [MSCustomProtectedData.customProtectedDataWithPolicy](https://msdn.microsoft.com/library/dn758315.aspx)
+    - [MSProtectedData.protectedDataWithProtectedFile](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-protecteddatawithprotectedfile-completionblock-method-objc)
+    - [MSCustomProtectedData.customProtectedDataWithPolicy](/previous-versions/windows/desktop/msipcthin2/mscustomprotecteddata-customprotecteddatawithpolicy-protecteddata-contentstartposition-contentsize-completionblock-method-objc)
 
 
 
@@ -203,7 +203,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **すべてのプラットフォーム**
 
-**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 なぜでしょうか?
+**Q**: 保護ワークフローに **カスタム アクセス許可** の選択 UI が表示されません。 これはなぜでしょうか。
 
 **A**: これは既知の問題であり、今後対応する予定です。
 
@@ -211,7 +211,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: Azure AD RMS のテスト組織の資格情報を要求するには、<rmcstbeta@microsoft.com> に電子メールを送信してください。
 
-**Q**: ドキュメントにテスト階層についての説明が見当たりません。 なぜでしょうか?
+**Q**: ドキュメントにテスト階層についての説明が見当たりません。 これはなぜでしょうか。
 
 **A**: 新しい AD RMS SDK にはテスト階層の概念はなく、 常に運用階層を使用します。
 
@@ -234,7 +234,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: iOS 7 以降を使用した Xcode 5.0 です。
 
-**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 なぜでしょうか?
+**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 これはなぜでしょうか。
 
 **A**: すべての操作が取り消し可能なわけではなく、取り消し操作は可能な限りにおいて実行されます。
 

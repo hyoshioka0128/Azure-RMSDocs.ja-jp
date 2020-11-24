@@ -16,12 +16,12 @@ ms.suite: ems
 ms.custom: dev
 experimental: true
 experiment_id: priyamo-test-20160729
-ms.openlocfilehash: aee6442d79c39172f6b082fb2531588ce50c8cf2
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 5159f39d5b91c748abe9fe7e0734c4a6eacbe4d5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135608"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570751"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 
@@ -44,15 +44,15 @@ ms.locfileid: "87135608"
 これらの API を使用して、ドキュメント追跡メタデータと共にコンテンツのライセンスを追加または更新します。
 
 
-運用上、ドキュメント追跡に必要なプロパティは、**コンテンツ名**と**通知の種類**のみです。
+運用上、ドキュメント追跡に必要なプロパティは、**コンテンツ名** と **通知の種類** のみです。
 
 
-- [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
-- [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
+- [IpcCreateLicenseMetadataHandle](/previous-versions/windows/desktop/msipc/ipccreatelicensemetadatahandle)
+- [IpcSetLicenseMetadataProperty](/previous-versions/windows/desktop/msipc/ipcsetlicensemetadataproperty)
 
   すべてのメタデータ プロパティを設定することをお勧めします。 種類ごとの一覧を以下に示します。
 
-  詳細については、「[License metadata property types (ライセンス メタデータ プロパティの種類)](https://msdn.microsoft.com/library/dn974062.aspx)」を参照してください。
+  詳細については、「[License metadata property types (ライセンス メタデータ プロパティの種類)](/previous-versions/windows/desktop/msipc/license-metadata-property-types)」を参照してください。
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -78,16 +78,16 @@ ms.locfileid: "87135608"
 
     ファイルの作成日の設定に使用します。
 
-- [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
+- [IpcSerializeLicenseWithMetadata](/previous-versions/windows/desktop/msipc/ipcserializelicensemetadata)
 
 これらの API から適切なものを使用して、ファイルまたはストリームにメタデータを追加します。
 
-- [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
-- [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
+- [IpcfEncryptFileWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilewithmetadata)
+- [IpcfEncryptFileStreamWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilestreamwithmetadata)
 
 最後に、この API を使用して、追跡対象のドキュメントを追跡システムに登録します。
 
-- [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
+- [IpcRegisterLicense](/previous-versions/windows/desktop/msipc/ipcregisterlicense)
 
 
 ## <a name="2-register-the-document-with-the-rms-service"></a>2. ドキュメントを RMS サービスに登録する
@@ -141,12 +141,12 @@ ms.locfileid: "87135608"
 **[使用の追跡]** UI アイテムをアプリに追加する作業は、次のいずれかの URL 形式の使用と同じように簡単です。
 
 - コンテンツ ID の使用
-  - ライセンスがシリアル番号になっており、ライセンス プロパティの **IPC_LI_CONTENT_ID** が使用される場合、[IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) または [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) を使用してコンテンツ ID を入手します。 詳細については、「[License property types](https://msdn.microsoft.com/library/hh535287.aspx)」 (ライセンスのプロパティの種類) を参照してください。
-  - **ContentId**と**Issuer**メタデータを使用して、次の形式を使用します。`https://track.azurerms.com/#/{ContentId}/{Issuer}`
+  - ライセンスがシリアル番号になっており、ライセンス プロパティの **IPC_LI_CONTENT_ID** が使用される場合、[IpcGetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcgetlicenseproperty) または [IpcGetSerializedLicenseProperty](/previous-versions/windows/desktop/msipc/ipcgetserializedlicenseproperty) を使用してコンテンツ ID を入手します。 詳細については、「[License property types](/previous-versions/windows/desktop/msipc/license-property-types)」 (ライセンスのプロパティの種類) を参照してください。
+  - **ContentId** と **Issuer** メタデータを使用して、次の形式を使用します。`https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     例 - `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
-- そのメタデータにアクセスできない場合 (つまり、保護されていないバージョンのドキュメントを調べている場合) は、次の形式で**Content_Name**を使用できます。`https://track.azurerms.com/#/?q={ContentName}`
+- そのメタデータにアクセスできない場合 (つまり、保護されていないバージョンのドキュメントを調べている場合) は、次の形式で **Content_Name** を使用できます。 `https://track.azurerms.com/#/?q={ContentName}`
 
   例: https://track.azurerms.com/#/?q=Secret!.txt
 
@@ -154,13 +154,12 @@ ms.locfileid: "87135608"
 
 ## <a name="related-topics"></a>関連トピック
 
-* [ライセンス メタデータ プロパティの種類](https://msdn.microsoft.com/library/dn974062.aspx)
-* [通知の基本設定](https://msdn.microsoft.com/library/dn974063.aspx)
-* [通知の種類](https://msdn.microsoft.com/library/dn974064.aspx)
-* [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
-* [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
-* [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
-* [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
-* [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
-* [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
-
+* [ライセンス メタデータ プロパティの種類](/previous-versions/windows/desktop/msipc/license-metadata-property-types)
+* [通知の基本設定](/previous-versions/windows/desktop/msipc/notification-preference)
+* [通知の種類](/previous-versions/windows/desktop/msipc/notification-type)
+* [IpcCreateLicenseMetadataHandle](/previous-versions/windows/desktop/msipc/ipccreatelicensemetadatahandle)
+* [IpcSetLicenseMetadataProperty](/previous-versions/windows/desktop/msipc/ipcsetlicensemetadataproperty)
+* [IpcSerializeLicenseWithMetadata](/previous-versions/windows/desktop/msipc/ipcserializelicensemetadata)
+* [IpcfEncryptFileWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilewithmetadata)
+* [IpcfEncryptFileStreamWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilestreamwithmetadata)
+* [IpcRegisterLicense](/previous-versions/windows/desktop/msipc/ipcregisterlicense)

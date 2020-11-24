@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: batamig
 ms.author: bagol
-ms.date: 08/17/2020
+ms.date: 11/09/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1bd48cd64616785a3b8f7c62a3e944cc5eb80097
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: 635ab25150dd18e50da8b93b4f0ec4c145320e19
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316826"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95570887"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Azure Information Protection の中央レポート (パブリックプレビュー)
 
@@ -36,57 +36,23 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - Windows コンピューターからの内部ユーザーまたは外部ユーザーが保護されたドキュメントにアクセスするタイミングと、アクセスが許可または拒否されたかどうかを特定します。
 
-表示されるデータは、Azure Information Protection のクライアントとスキャナー、Microsoft Cloud App Security、Microsoft Defender Advanced Threat Protection を使用した Windows 10 コンピューター、および保護の [使用状況ログ](log-analyze-usage.md)から集計されます。
+表示されるデータは、Azure Information Protection のクライアントとスキャナー、Microsoft Cloud App Security、Microsoft Defender Advanced Threat Protection を使用した Windows 10 コンピューター、および保護の [使用状況ログ](log-analyze-usage.md)から集計されます。 [AIP ビューアー](rms-client/clientv2-view-use-files.md)では監査ログが送信されないことに注意してください。
 
-たとえば、次のようなことを確認できます。
+> [!NOTE]
+> Central reporting の Azure Information Protection analytics は現在プレビュー段階です。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
 
-- 期間を選択できる**使用状況レポート**からは、次のことが確認できます。
-    
-    - 適用されているラベル
-    
-    - ラベル付けされているドキュメントと電子メールの数
-    
-    - 保護されているドキュメントと電子メールの数
-    
-    - ドキュメントや電子メールにラベル付けしているユーザーの数とデバイスの数
-    
-    - ラベル付けに使用されているアプリケーション
+## <a name="aip-reporting-data"></a>AIP レポートデータ
 
-- 期間を選択できる**アクティビティ ログ**からは、次のことが確認できます。
+たとえば、中央レポートの Azure Information Protection analytics には、次のデータが表示されます。
 
-    - スキャナーによって以前に検出されたファイルは、スキャンされたリポジトリから削除されました    
-    - 特定のユーザーが実行したラベル付けアクション
-    
-    - 特定のデバイスから実行されたラベル付けアクション
-    
-    - 特定のラベル付きのドキュメントにアクセスしたユーザー
-    
-    - 特定のファイル パスに対して実行されたラベル付けアクション
-    
-    - 特定のアプリケーションで実行されたラベル付けアクション (エクスプローラー、右クリック、PowerShell、スキャナー、Microsoft Cloud App Security
-    
-    - ユーザーが正常にアクセスした保護されたドキュメント、またはユーザーが Azure Information Protection クライアントをインストールしていないか組織の外部にある場合でも、ユーザーがアクセスを拒否したドキュメント
-
-    - 報告されたファイルをドリルダウンして、追加情報の**アクティビティの詳細**を表示する
-
-- **データ検出**レポートからは、次のことが確認できます。
-
-    - スキャンされたデータリポジトリ、Windows 10 コンピューター、または Azure Information Protection クライアントを実行しているコンピューターにあるファイル
-    
-    - ラベル付けされ、保護されているファイルと、ラベルごとのファイルの場所
-    
-    - 既知のカテゴリ (財務データや個人情報など) の機密情報が含まれるファイルと、これらのカテゴリごとのファイルの場所
-
-- **推奨事項**レポートから次のことが確認できます。
-    
-    - 既知の種類の機密情報が含まれていて保護されていないファイルを識別します。 推奨事項に従えば、ご利用のラベルのいずれかによって自動ラベル付けまたは推奨ラベル付けを適用するための対応する条件をすぐに構成することができます。
-        
-        次の推奨事項に従うと、次にユーザーがファイルを開いたとき、または Azure Information Protection スキャナーでスキャンしたときに、ファイルを自動的に分類して保護することができます。
-    
-    - 識別された機密情報が含まれているファイルが存在していて、Azure Information Protection によってスキャンされていないデータ リポジトリを特定します。 推奨事項に従えば、識別されたデータ ストアをご利用のスキャナーのプロファイルのいずれかにすぐに追加できます。
-        
-        次のスキャナーサイクルで推奨事項に従うと、ファイルを自動的に分類して保護することができます。
-
+|レポート  |表示されるサンプルデータ |
+|---------|---------|
+|**利用状況レポート**     |  次のいずれかを表示する期間を選択します。 <br /><br />     -適用されているラベル <br /><br />-ラベル付けされているドキュメントと電子メールの数 <br /><br />-保護されているドキュメントと電子メールの数 <br /><br />-ドキュメントと電子メールにラベルを付けているユーザー数とデバイス数 <br /><br />ラベル付けに使用されているアプリケーション     |
+|**アクティビティ ログ**     | 次のいずれかを表示する期間を選択します。 <br /><br />      -スキャナーによって以前に検出されたファイルは、スキャンされたリポジトリから削除されました <br /> <br /> -特定のユーザーによって実行されたラベル付けアクション <br /><br /> -特定のデバイスで実行されたラベル付けアクション<br /> <br />    -特定のラベル付きドキュメントにアクセスしたユーザー<br /> <br />-特定のファイルパスに対して実行されたラベル付けアクション<br /> <br />-ファイルエクスプローラー、右クリック、PowerShell、スキャナー、また Microsoft Cloud App Security はなど、特定のアプリケーションによってラベル付けされたアクションが実行されました。 <br /> <br />-ユーザーが正常にアクセスした、またはユーザーへのアクセスが拒否された、ユーザーに Azure Information Protection クライアントがインストールされていない、または組織外にある保護されたドキュメント <br /> <br />-報告されたファイルにドリルダウンし、追加情報の **アクティビティの詳細** を表示します      |
+|**データ検出レポート**     |      -スキャンされたデータリポジトリ、Windows 10 コンピューター、または Azure Information Protection クライアントを実行しているコンピューターにあるファイル <br /><br />-ラベルが付けられ、保護されているファイルとラベル別のファイルの場所 <br /><br />-財務データや個人情報などの既知のカテゴリの機密情報が含まれているファイル、およびこれらのカテゴリによるファイルの場所       |
+|**推奨事項レポート**     | -既知の機密情報の種類を含む保護されていないファイルを特定します。 推奨事項に従えば、ご利用のラベルのいずれかによって自動ラベル付けまたは推奨ラベル付けを適用するための対応する条件をすぐに構成することができます。 次 **<br /> の推奨事項に従うと**、次にユーザーがファイルを開いたとき、または Azure Information Protection スキャナーでスキャンしたときに、ファイルを自動的に分類して保護することができます。 <br /><br /> -特定の機密情報が含まれているが、Azure Information Protection によってスキャンされていないファイルを持つデータリポジトリ。 推奨事項に従えば、識別されたデータ ストアをご利用のスキャナーのプロファイルのいずれかにすぐに追加できます。 <br />   **推奨事項に従う場合は、次の手順を実行します。** 次のスキャナーサイクルでは、ファイルを自動的に分類して保護することができます。        |
+ 
 レポートでは [Azure Monitor](/azure/log-analytics/log-analytics-overview) を使用して、ご自身の組織が所有している Log Analytics ワークスペースにデータを格納します。 クエリ言語に習熟している場合は、クエリを変更して、新しいレポートや Power BI ダッシュボードを作成できます。 クエリ言語の概要については、「 [Azure Monitor のログクエリの使用](/azure/azure-monitor/log-query/get-started-queries)」を参照してください。
 
 詳細については、次のブログ記事を参照してください。 
@@ -110,15 +76,15 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - ユーザーのデバイスの IP アドレス。 
 
-- **Outlook**や**msip. app**など、関連するプロセス名。
+- **Outlook** や **msip. app** など、関連するプロセス名。
 
-- **Outlook**や**エクスプローラー**など、ラベル付けを実行したアプリケーションの名前
+- **Outlook** や **エクスプローラー** など、ラベル付けを実行したアプリケーションの名前
 
 - ドキュメントの場合: ラベル付けされているドキュメントのファイル パスとファイル名。
 
 - 電子メールの場合: ラベルが付けられている電子メールの件名と電子メールの送信者。 
 
-- コンテンツ内で検出された機密情報の種類 ([定義済み](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for)およびカスタム)。
+- コンテンツ内で検出された機密情報の種類 ([定義済み](/office365/securitycompliance/what-the-sensitive-information-types-look-for)およびカスタム)。
 
 - Azure Information Protection クライアントのバージョン。
 
@@ -129,26 +95,26 @@ Azure Information Protection analytics for central reporting を使用すると�
 詳細については、次のリンクを参照してください。
 
 - [Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)
-- [Azure のアクセス許可を使用して Log Analytics ワークスペースへのアクセスを管理する](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
+- [Azure のアクセス許可を使用して Log Analytics ワークスペースへのアクセスを管理する](/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
 - [監査ログの参照の Azure Information Protection](audit-logs.md)
 
-Azure Information Protection クライアント (クラシック) がこのデータを送信できないようにするには、[**監査データを Azure Information Protection analytics に送信する**] の[ポリシー設定](configure-policy-settings.md)を [**オフ**] に設定します。
+Azure Information Protection クライアント (クラシック) がこのデータを送信できないようにするには、[**監査データを Azure Information Protection analytics に送信する**] の [ポリシー設定](configure-policy-settings.md)を [**オフ**] に設定します。
 
 - ほとんどのユーザーがこのデータを送信し、ユーザーのサブセットが監査データを送信できない場合: 
-    - ユーザーのサブセットのスコープ**ポリシーで [** **監査データを Azure Information Protection analytics に送信**する。 この構成は、運用環境のシナリオに一般的なものです。
+    - ユーザーのサブセットのスコープ **ポリシーで [** **監査データを Azure Information Protection analytics に送信** する。 この構成は、運用環境のシナリオに一般的なものです。
 
 - ユーザーのサブセットだけが監査データを送信する場合: 
-    - グローバルポリシーで [**監査データを Azure Information Protection analytics に送信**する] を [オフ] に、ユーザーのサブセットに対してスコープポリシーを **[** **オフ**] に設定します。 この構成は、テストのシナリオに一般的なものです。
+    - グローバルポリシーで [**監査データを Azure Information Protection analytics に送信** する] を [オフ] に、ユーザーのサブセットに対してスコープポリシーを **[** **オフ**] に設定します。 この構成は、テストのシナリオに一般的なものです。
 
 Azure Information Protection 統合クライアントがこのデータを送信できないようにするには、ラベルポリシーの [詳細設定](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)を構成します。
 
 #### <a name="content-matches-for-deeper-analysis"></a>詳細な分析のためのコンテンツ一致
 
-Azure Information Protection を使用すると、機密情報の種類 (定義済みまたはカスタム) として識別された実際のデータを収集して保存することができます。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 コンテンツの一致は、 **アクティビティログ**からエントリを選択すると表示され、 **アクティビティの詳細**を表示します。 
+Azure Information Protection を使用すると、機密情報の種類 (定義済みまたはカスタム) として識別された実際のデータを収集して保存することができます。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 コンテンツの一致は、 **アクティビティログ** からエントリを選択すると表示され、 **アクティビティの詳細** を表示します。 
 
 既定では Azure Information Protection クライアントはコンテンツの一致を送信しません。 コンテンツの一致が送信されるようにこの動作を変更するには:
 
-- クラシッククライアントの場合は、Azure Information Protection analytics の [構成](#configure-a-log-analytics-workspace-for-the-reports) の一部としてチェックボックスをオンにします。 このチェックボックスを **オンにすると、機微なデータに対してより深い分析を行う**ことができます。
+- クラシッククライアントの場合は、Azure Information Protection analytics の [構成](#configure-a-log-analytics-workspace-for-the-reports) の一部としてチェックボックスをオンにします。 このチェックボックスを **オンにすると、機微なデータに対してより深い分析を行う** ことができます。
     
     このクライアントを使用しているほとんどのユーザーがコンテンツの一致を送信できないが、一部のユーザーがコンテンツの一致を送信できないようにする場合は、チェックボックスをオンにして、ユーザーのサブセットのスコープポリシーの [ [詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) ] を構成します。
 
@@ -161,7 +127,7 @@ Azure Information Protection レポートを表示し、独自のレポートを
 |---------------|--------------------|
 |Log Analytics を含む Azure サブスクリプションで、Azure Information Protection と同じテナント用のサブスクリプション|「[Azure Monitor の価格](https://azure.microsoft.com/pricing/details/log-analytics)」ページをご覧ください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
 |クライアントにラベルを付けるためのレポート情報の場合: <br /><br />-Azure Information Protection クライアント|統一されたラベル付けクライアントと従来のクライアントの両方がサポートされています。 <br /><br />まだインストールされていない場合は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)から、統合されたラベル付けクライアントをダウンロードしてインストールすることができます。 AIP クラシック クライアントをデプロイするには、サポート チケットを作成してダウンロード アクセスを取得します。|
-|クラウドベースのデータストアからの情報を報告する場合: <br /><br />-Microsoft Cloud App Security |Microsoft Cloud App Security から情報を表示するには [Azure Information Protection 統合](https://docs.microsoft.com/cloud-app-security/azip-integration)を構成します。|
+|クラウドベースのデータストアからの情報を報告する場合: <br /><br />-Microsoft Cloud App Security |Microsoft Cloud App Security から情報を表示するには [Azure Information Protection 統合](/cloud-app-security/azip-integration)を構成します。|
 |オンプレミスのデータストアからのレポート情報の場合: <br /><br />-Azure Information Protection スキャナー |スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 |
 |Windows 10 コンピューターからの情報を報告する場合:  <br /><br />-Microsoft Defender Advanced Threat Protection を使用した1809の最小ビルド (Microsoft Defender ATP)|Azure Information Protection 統合機能を Microsoft Defender Security Center から有効にする必要があります。 詳細については、「 [Windows の情報保護の概要](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview)」を参照してください。|
 
@@ -169,7 +135,7 @@ Azure Information Protection レポートを表示し、独自のレポートを
 
 Azure Information Protection 分析に固有の機能として、ご自身の Azure Log Analytics ワークスペースを構成した後、セキュリティ閲覧者の Azure AD 管理者ロールを、Azure portal で Azure Information Protection の管理をサポートしている他の Azure AD ロールの代替として使用することができます。 この追加のロールは、テナントが統一された [ラベル付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にない場合にのみサポートされます。
 
-Azure Information Protection analytics では Azure 監視が使用されるため、Azure 用のロールベースのアクセス制御 (RBAC) によっても、ワークスペースへのアクセスが制御されます。 したがって、Azure Information Protection 分析を管理するためには、Azure ロールと Azure AD の管理者ロールが必要です。 Azure ロールを初めてご使用になる場合は、「[Azure RBAC ロールと Azure AD 管理者ロールの違い](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles)」が役に立つ場合があります。
+Azure Information Protection analytics では Azure 監視が使用されるため、Azure 用のロールベースのアクセス制御 (RBAC) によっても、ワークスペースへのアクセスが制御されます。 したがって、Azure Information Protection 分析を管理するためには、Azure ロールと Azure AD の管理者ロールが必要です。 Azure ロールを初めてご使用になる場合は、「[Azure RBAC ロールと Azure AD 管理者ロールの違い](/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles)」が役に立つ場合があります。
 
 詳細:
 
@@ -188,7 +154,7 @@ Azure Information Protection analytics では Azure 監視が使用されるた�
         - **セキュリティ閲覧者**
         - **グローバル閲覧者**
 
-2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles)のいずれかが必要です。
+2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)または標準の [Azure ロール](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles)のいずれかが必要です。
     
     - ワークスペースを作成する、またはカスタム クエリを作成するには、次のいずれか:
     
@@ -205,10 +171,10 @@ Azure Information Protection analytics では Azure 監視が使用されるた�
 
 Azure Information Protection 分析のためにワークスペースを構成した後、Azure Information Protection 分析レポートを表示するために必要な最低限のロールは、次の両方です。
 
-- Azure AD 管理者ロール:**セキュリティ閲覧**者
+- Azure AD 管理者ロール:**セキュリティ閲覧** 者
 - Azure ロール: **Log Analytics リーダー**
 
-ただし、多くの組織での標準的なロールの割り当ては、Azure AD の**セキュリティ閲覧者**ロールと、Azure の**閲覧者**ロールです。
+ただし、多くの組織での標準的なロールの割り当ては、Azure AD の **セキュリティ閲覧者** ロールと、Azure の **閲覧者** ロールです。
 
 ### <a name="storage-requirements-and-data-retention"></a>ストレージ要件とデータ保有期間
 
@@ -222,7 +188,7 @@ Azure Information Protection ワークスペースに収集されて格納され
 
 必須のラベル付けを使用した場合、またはほとんどのユーザーに既定のラベルを構成した場合、料金は大幅に高くなる可能性があります。
 
-Azure Monitor ログには、格納されているデータの量の見積もりと確認に役立つ **使用量と推定コスト** の機能があります。また、Log Analytics ワークスペースのデータ保有期間を制御することもできます。 詳細については、「 [Azure Monitor ログを使用した使用状況とコストの管理](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage)」を参照してください。
+Azure Monitor ログには、格納されているデータの量の見積もりと確認に役立つ **使用量と推定コスト** の機能があります。また、Log Analytics ワークスペースのデータ保有期間を制御することもできます。 詳細については、「 [Azure Monitor ログを使用した使用状況とコストの管理](/azure/azure-monitor/platform/manage-cost-storage)」を参照してください。
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
 
@@ -238,7 +204,7 @@ Azure Monitor ログには、格納されているデータの量の見積もり
     
     - 既存の Log Analytics ワークスペースを使用するには、一覧からワークスペースを選択します。
     
-    Log Analytics ワークスペースの作成に関する情報については、「[Azure portal で Log Analytics ワークスペースを作成する](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
+    Log Analytics ワークスペースの作成に関する情報については、「[Azure portal で Log Analytics ワークスペースを作成する](/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
 
 4. Azure Information Protection クライアント (クラシック) を使用している場合は、機密情報の種類として識別された実際のデータを保存するには、[ **機微なデータに対してより深い分析を有効に** する] チェックボックスをオンにします。 この設定の詳細については、このページの「詳細な [分析のためのコンテンツの一致](#content-matches-for-deeper-analysis) 」を参照してください。
 
@@ -254,7 +220,7 @@ Azure Information Protection ウィンドウで、[ **ダッシュボード** ] 
 
 - **アクティビティ ログ (プレビュー)**: ユーザーからの、およびデバイスとファイル パス上でのラベル付けアクションを確認するには、このレポートを使用します。 さらに、保護されたドキュメントについては、Azure Information Protection クライアントがインストールされていない場合でも、組織の内部と外部の両方でユーザーのアクセス試行 (成功または拒否) を確認できます。
     
-    このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。 ファイルを選択して**アクティビティの詳細**を表示することで、ファイルの詳細を確認することもできます。
+    このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。 ファイルを選択して **アクティビティの詳細** を表示することで、ファイルの詳細を確認することもできます。
 
 - **データの検出 (プレビュー)**: スキャナーおよびサポートされているエンドポイントによって検出されたラベル付きファイルに関する情報を表示するには、このレポートを使用します。
     
@@ -289,7 +255,7 @@ Azure Information Protection のログに記録されたデータは、テーブ
 |User|User: UPN または DOMAIN\USER の形式を設定します。|
 |ItemPath|アイテムの完全なパスまたは電子メールの件名|
 |ItemName|ファイル名または電子メールの件名 |
-|Method|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
+|メソッド|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
 |アクティビティ|監査アクティビティ: DowngradeLabel、UpgradeLabel、RemoveLabel、NewLabel、Discover、Access、RemoveCustomProtection、ChangeCustomProtection、NewCustomProtection、または FileRemoved |
 |ResultStatus|アクションの結果の状態:<br /><br /> 成功または失敗 (AIP スキャナーのみによって報告)|
 |ErrorMessage_s|ResultStatus = Failed の場合、エラーメッセージの詳細が含まれます。 AIP スキャナーのみによって報告されました|
@@ -309,12 +275,12 @@ Azure Information Protection のログに記録されたデータは、テーブ
 |IsProtected|保護されているかどうか: はい/いいえ |
 |ProtectionOwner |UPN 形式の Rights Management 所有者|
 |Labの前に|GUID または null を変更する前に null を付ける|
-|InformationTypesAbove55|信頼レベル55以上のデータで見つかった [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列 |
-|InformationTypesAbove65|信頼レベル65以上のデータで見つかった [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列 |
-|InformationTypesAbove75|信頼レベル75以上のデータで見つかった [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列 |
-|InformationTypesAbove85|信頼レベル85以上のデータで見つかった [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列 |
-|InformationTypesAbove95|信頼レベル95以上のデータで見つかった [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列|
-|DiscoveredInformationTypes |[SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for)の JSON 配列が、データと一致するコンテンツ (有効な場合) で見つかりました。空の配列は、情報の種類が見つからないことを意味し、null は使用できる情報がないことを意味します。 |
+|InformationTypesAbove55|信頼レベル55以上のデータで見つかった [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列 |
+|InformationTypesAbove65|信頼レベル65以上のデータで見つかった [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列 |
+|InformationTypesAbove75|信頼レベル75以上のデータで見つかった [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列 |
+|InformationTypesAbove85|信頼レベル85以上のデータで見つかった [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列 |
+|InformationTypesAbove95|信頼レベル95以上のデータで見つかった [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) の JSON 配列|
+|DiscoveredInformationTypes |[SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for)の JSON 配列が、データと一致するコンテンツ (有効な場合) で見つかりました。空の配列は、情報の種類が見つからないことを意味し、null は使用できる情報がないことを意味します。 |
 |ProtectedBefore|変更前にコンテンツが保護されていたかどうか: はい/いいえ |
 |ProtectionOwnerBefore|変更前に所有者を Rights Management |
 |UserJustification|ラベルをダウングレードまたは削除するときの理由|
@@ -361,7 +327,7 @@ InformationProtectionEvents
 この例では、アクション前のラベルの名前に **Confidential** (社外秘) が含まれ、アクション後の名前に **Confidential** が含まれていない場合のみ、ダウングレードされたラベルとしてカウントされます。 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 レポートの情報を確認した後、Azure Information Protection クライアントを使用している場合は、Azure Information Protection ポリシーに変更を加えることができます。 手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」を参照してください。
 
 Microsoft 365 のサブスクリプションがある場合は、Microsoft 365 コンプライアンス センターと Microsoft 365 セキュリティ センターでラベルの使用状況を表示することもできます。 詳しくは、「[ラベル分析によるラベル使用状況の表示](/microsoft-365/compliance/label-analytics)」をご覧ください。

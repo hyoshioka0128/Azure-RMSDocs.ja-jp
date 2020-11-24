@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection に関してよく寄せられる質問
 description: Azure Information Protection とその保護サービス、Azure Rights Management (Azure RMS) に関してよく寄せられる質問をいくつか示します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/23/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,19 +12,19 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e893f7515ed18d749d43eeadc2f0893ea9a9dee9
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 36ef25b54fed8d73f33158f2c62670434c5d2f31
+ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952999"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95570958"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection、または Azure Rights Management サービス (Azure RMS) に関して質問がございますか。 ここで回答を探してみてください。
 
@@ -34,7 +34,7 @@ Azure Information Protection とは異なり、 [Microsoft Information Protectio
 
 **Microsoft Information Protection 製品には次のものが含まれます。**
 - Azure Information Protection
-- Office 365 Information Protection (Office 365 DLP など)
+- Microsoft 365 Information Protection (Microsoft 365 DLP など)
 - Windows Information Protection
 - Microsoft Cloud App Security
 
@@ -49,17 +49,17 @@ Azure Information Protection とは異なり、 [Microsoft Information Protectio
 
 ## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Office 365 の Azure Information Protection ラベルとラベルの違いは何ですか。
 
-もともと、Office 365 では、コンテンツが Office 365 サービスに保存されたときに監査と保持のためのドキュメントや電子メールを分類できるようにするための [保持ラベル](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) だけが使用されていました。 
+もともと、Microsoft 365 には、コンテンツが Microsoft 365 services に保存されたときに監査と保持のためのドキュメントや電子メールを分類できるようにする [保持ラベル](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) だけがありました。 
 
 一方、Azure Information Protection ラベルを有効にすると、オンプレミスまたはクラウドのどちらに保存されたかにかかわらず、ドキュメントと電子メールに一貫した分類と保護ポリシーが適用されます。
 
-州オーランドの Microsoft Ignite 2018 で発表された Office 365 には、リテンション期間のラベルに加えて、 [機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)を作成して構成するオプションが追加されました。 機密ラベルは、次の管理センターで作成および構成できます。
+州オーランドの Microsoft Ignite 2018 で発表された、Microsoft 365 では、保有期間ラベルに加えて、 [機密ラベル](/microsoft-365/compliance/sensitivity-labels)を作成および構成するオプションが追加されました。 機密ラベルは、次の管理センターで作成および構成できます。
 
 - Office 365 セキュリティ/コンプアライアンス センター
 - Microsoft 365 セキュリティ センター
 - Microsoft 365 コンプライアンス センター
 
-[AIP ラベルを統合ラベルストアに移行する](configure-policy-migrate-labels.md)ことによって、Office 365 アプリの秘密度ラベルとして Azure Information Protection ラベルを使用します。
+[AIP ラベルを統一されたラベル付けストアに移行する](configure-policy-migrate-labels.md)ことによって、Microsoft 365 アプリで Azure Information Protection ラベルを機密ラベルとして使用します。
 
 統一されたラベル付け管理とサポートの詳細については、「 [機密データを保護するための情報保護機能の可用性の発表](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」を参照してください。
 
@@ -71,18 +71,18 @@ Azure Information Protection とは異なり、 [Microsoft Information Protectio
 
 ![移行情報バナー](media/migration-status-banner.png)
 
-また、[ **Azure Information Protection**の  >  統合ラベルの**管理**] に移動して、統一さ  >  **Unified labeling**れた**ラベル**の状態を確認することもできます。
+また、[ **Azure Information Protection** の  >  統合ラベルの **管理**] に移動して、統一さ  >  **Unified labeling** れた **ラベル** の状態を確認することもできます。
 
-|状態 |説明  |
+|Status |説明  |
 |---------|---------|
-|**アクティブ**     |  テナントは、統一されたラベル付けプラットフォーム上にあります。 </br>Microsoft 365 コンプライアンスセンターで [ラベルを作成、構成、および発行](/microsoft-365/compliance/create-sensitivity-labels) することができます。       |
-|**非アクティブ化**    |  テナントは、統一されたラベル付けプラットフォーム上にありません。 </br>移行の手順とガイダンスについては、「 [Azure Information Protection ラベルを統合秘密度ラベルに移行する方法](configure-policy-migrate-labels.md)」を参照してください。       |
+|**行っ**     |  テナントは、統一されたラベル付けプラットフォーム上にあります。 <br />Microsoft 365 コンプライアンスセンターで [ラベルを作成、構成、および発行](/microsoft-365/compliance/create-sensitivity-labels) することができます。       |
+|**非アクティブ化**    |  テナントは、統一されたラベル付けプラットフォーム上にありません。 <br />移行の手順とガイダンスについては、「 [Azure Information Protection ラベルを統合秘密度ラベルに移行する方法](configure-policy-migrate-labels.md)」を参照してください。       |
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients"></a>Azure Information Protection クラシックと統合されたラベル付けクライアントの違いは何ですか。
 
-*Azure Information client*または*クラシック*クライアントと呼ばれる元のクライアントは、azure からラベルとポリシー設定をダウンロードし、Azure portal から[AIP ポリシー](overview-policy.md)を構成できます。
+*Azure Information client* または *クラシック* クライアントと呼ばれる元のクライアントは、azure からラベルとポリシー設定をダウンロードし、Azure portal から [AIP ポリシー](overview-policy.md)を構成できます。
 
-統一された *ラベル付けクライアント* はより新しい追加であり、複数のアプリケーションやサービスで使用される統一されたラベル付けストアをサポートしています。 統一されたラベル付けクライアントは、次の管理センターから [機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) とポリシー設定をダウンロードします。
+統一された *ラベル付けクライアント* はより新しい追加であり、複数のアプリケーションやサービスで使用される統一されたラベル付けストアをサポートしています。 統一されたラベル付けクライアントは、次の管理センターから [機密ラベル](/microsoft-365/compliance/sensitivity-labels) とポリシー設定をダウンロードします。
 
 - Office 365 セキュリティ/コンプアライアンス センター
 - Microsoft 365 セキュリティ センター
@@ -94,7 +94,7 @@ Azure Information Protection とは異なり、 [Microsoft Information Protectio
 
 クラシックまたは統合されたラベル付けクライアントがインストールされているかどうかを確認するユーザーの場合は、[ **ヘルプとフィードバック** ] を選択して [ **Microsoft Azure Information Protection** ] ダイアログボックスを表示します。 
 
-次に例を示します。
+例:
 
 :::image type="content" source="media/client-about.png" alt-text="クラシックまたは統合クライアントがインストールされているかどうかを確認する":::
 
@@ -118,11 +118,21 @@ Azure Information Protection ラベルを統一されたラベル付けプラッ
 
 Azure portal でラベルを移行したら、インストールしたクライアントに応じて、次のいずれかの場所で管理を続行します。
 
-|クライアント  |Column2  |
+|Client  |説明  |
 |---------|---------|
-|[クライアントとサービスのみの統一](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) されたラベル付け    |  統一されたラベル付けクライアントがインストールされている場合は、管理センターの1つでラベルを管理します。 Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security center、または Microsoft 365 コンプライアンスセンターです。 統合ラベル付けのクライアントは、これらの管理センターからラベルとポリシー設定をダウンロードします。 </br></br>手順については、「 [秘密度ラベルとそのポリシーを作成して構成する](/microsoft-365/compliance/create-sensitivity-labels)」を参照してください。     |
+|[クライアントとサービスのみの統一](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) されたラベル付け    |  統一されたラベル付けクライアントがインストールされている場合は、管理センターの1つでラベルを管理します。 Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security center、または Microsoft 365 コンプライアンスセンターです。 統合ラベル付けのクライアントは、これらの管理センターからラベルとポリシー設定をダウンロードします。 <br /><br />手順については、「 [秘密度ラベルとそのポリシーを作成して構成する](/microsoft-365/compliance/create-sensitivity-labels)」を参照してください。     |
 |[従来のクライアント](./rms-client/aip-client.md) のみ  | ラベルを移行した後も従来のクライアントがインストールされている場合は、引き続き Azure portal を使用してラベルとポリシー設定を編集します。 クラシッククライアントは、Azure からラベルとポリシー設定を引き続きダウンロードします。
-|AIP [クラシッククライアント](./rms-client/aip-client.md) と統一された [ラベル付け](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) クライアントの両方     | 両方のクライアントがインストールされている場合は、管理センターまたは Azure portal を使用してラベルを変更します。 </br></br>クラシッククライアントが管理センターで行われたラベルの変更を取得するには、Azure portal に戻り、発行します。 [Azure portal > **Azure Information Protection-統合ラベル** ] ウィンドウで、[ **発行**] を選択します。  </br></br> [中央レポート機能](reports-aip.md)と[スキャナー](deploy-aip-scanner.md)には、引き続き Azure portal を使用します。     |
+|AIP [クラシッククライアント](./rms-client/aip-client.md) と統一された [ラベル付け](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) クライアントの両方     | 両方のクライアントがインストールされている場合は、管理センターまたは Azure portal を使用してラベルを変更します。 <br /><br />クラシッククライアントが管理センターで行われたラベルの変更を取得するには、Azure portal に戻り、発行します。 [Azure portal > **Azure Information Protection-統合ラベル** ] ウィンドウで、[ **発行**] を選択します。  <br /><br /> [中央レポート機能](reports-aip.md)と[スキャナー](deploy-aip-scanner.md)には、引き続き Azure portal を使用します。     |
+| | |
+
+## <a name="do-i-need-to-re-encrypt-my-files-after-moving-to-sensitivity-labels-and-the-unified-labeling-platform"></a>機密ラベルと統合されたラベル付けプラットフォームに移行した後、ファイルを再暗号化する必要がありますか。
+
+いいえ。 AIP クラシッククライアントからの移行後、および Azure portal で管理されているラベルを使用して、機密ラベルと統一されたラベル付けプラットフォームに移行した後、ファイルを再暗号化する必要はありません。
+
+移行した後、ラベル管理センター (Microsoft security center、Microsoft コンプライアンスセンター、Microsoft セキュリティ & コンプライアンスセンターなど) からラベルとラベル付けポリシーを管理します。 
+
+詳細については、Microsoft 365 のドキュメントの「 [機密ラベルについ](/microsoft-365/compliance/sensitivity-labels) て」および「 [統合ラベルの移行](https://techcommunity.microsoft.com/t5/microsoft-security-and/understanding-unified-labeling-migration/ba-p/783185) に関するブログ」を参照してください。
+
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Azure Information Protection と Azure Rights Management の違いは何ですか。
 
@@ -130,7 +140,7 @@ Azure Information Protection (AIP) は、組織のドキュメントや電子メ
 
 コンテンツは、AIP のコンポーネントである Azure Rights Management サービスを使用して保護されます。 
 
-詳細については、「 [データの保護方法](what-is-information-protection.md#how-aip-protects-your-data) 」と「 [Azure Rights Management とは](what-is-azure-rms.md)」を参照してください。
+詳細については、「 [AIP によるデータの保護](aip-classification-and-protection.md#how-aip-protects-your-data) 」および「 [Azure Rights Management とは](what-is-azure-rms.md)」を参照してください。
 
 ## <a name="whats-the-role-of-identity-management-for-azure-information-protection"></a>Azure Information Protection の id 管理の役割は何ですか。
 
@@ -142,7 +152,7 @@ Azure Information Protection でデータを保護するしくみについての
 
 AIP サブスクリプションの詳細については、「 [Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection) 」ページのサブスクリプション情報と機能一覧を参照してください。
 
-Azure Rights Management データ保護を含む Office 365 サブスクリプションがある場合は、AIP との統合の詳細について [Azure Information Protection ライセンスデータシート](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) をダウンロードしてください。
+Azure Rights Management data protection を含む Microsoft 365 サブスクリプションがある場合は、AIP との統合の詳細について [Azure Information Protection ライセンスデータシート](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) をダウンロードしてください。
 
 ライセンスについてまだご質問がありますか。 [ライセンスについてよく寄せられる質問](https://azure.microsoft.com/pricing/details/information-protection#faq)のセクションで回答されているかどうかを確認してください。
 
@@ -156,7 +166,7 @@ Azure Information Protection ポリシーを使用せずにクラシッククラ
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators"></a>Azure Information Protection を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?
 
-Office 365 テナントまたは Azure AD テナントのグローバル管理者は、Azure Information Protection のすべての管理タスクを実行できます。 
+Microsoft 365 テナントまたは Azure AD テナントのグローバル管理者は、Azure Information Protection のすべての管理タスクを明らかに実行できます。 
 
 ただし、管理アクセス許可を他のユーザーに割り当てる場合は、次の役割を使用します。
 
@@ -171,10 +181,10 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 |トピック  |詳細  |
 |---------|---------|
 |**サポートされているアカウントの種類**     | Microsoft アカウントは、一覧表示されているいずれかの管理者ロールにアカウントが割り当てられている場合でも、Azure Information Protection の代理管理ではサポートされません。         |
-|**オンボードコントロール**     |[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成してある場合は、RMS コネクタを除き、Azure Information Protection を管理する機能に影響はありません。 </br></br>たとえば、オンボードコントロールを構成して、コンテンツを保護する機能が *IT 部門* のグループに限定されるようにした場合、RMS コネクタのインストールと構成に使用するアカウントは、そのグループのメンバーである必要があります。          |
-|**保護の削除**     |  管理者は、Azure Information Protection によって保護されたドキュメントまたは電子メールから保護を自動的に削除することはできません。 </br></br>スーパーユーザーとして割り当てられているユーザーのみが保護を削除でき、スーパーユーザー機能が有効になっている場合のみです。 </br></br>Azure Information Protection に対する管理アクセス許可を持つすべてのユーザーは、スーパーユーザー機能を有効にし、自分のアカウントを含むスーパーユーザーとしてユーザーを割り当てることができます。 </br></br>これらのアクションは、管理者ログに記録されます。 </br></br>詳細については、「 [Azure Information Protection および探索サービスまたはデータ回復用のスーパーユーザーの構成](configure-super-users.md)」のセキュリティのベストプラクティスに関するセクションを参照してください。 
+|**オンボードコントロール**     |[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成してある場合は、RMS コネクタを除き、Azure Information Protection を管理する機能に影響はありません。 <br /><br />たとえば、オンボードコントロールを構成して、コンテンツを保護する機能が *IT 部門* のグループに限定されるようにした場合、RMS コネクタのインストールと構成に使用するアカウントは、そのグループのメンバーである必要があります。          |
+|**保護の削除**     |  管理者は、Azure Information Protection によって保護されたドキュメントまたは電子メールから保護を自動的に削除することはできません。 <br /><br />スーパーユーザーとして割り当てられているユーザーのみが保護を削除でき、スーパーユーザー機能が有効になっている場合のみです。 <br /><br />Azure Information Protection に対する管理アクセス許可を持つすべてのユーザーは、スーパーユーザー機能を有効にし、自分のアカウントを含むスーパーユーザーとしてユーザーを割り当てることができます。<br /><br />これらのアクションは、管理者ログに記録されます。 <br /><br />詳細については、「 [Azure Information Protection および探索サービスまたはデータ回復用のスーパーユーザーの構成](configure-super-users.md)」のセキュリティのベストプラクティスに関するセクションを参照してください。 
        |
-|**統一されたラベル付けストアへの移行**      |  Azure Information Protection ラベルを統合ラベルストアに移行する場合は、「移行に関するドキュメント」の次のセクションを必ず参照してください。 </br>[統一されたラベル付けプラットフォームをサポートする管理ロール](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)。
+|**統一されたラベル付けストアへの移行**      |  Azure Information Protection ラベルを統合ラベルストアに移行する場合は、「移行に関するドキュメント」の次のセクションを必ず参照してください。 <br />[統一されたラベル付けプラットフォームをサポートする管理ロール](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)。
        |
 
 ### <a name="azure-information-protection-administrator"></a>Azure Information Protection 管理者
@@ -265,13 +275,13 @@ Azure Information Protection では、メール メッセージやドキュメ�
 > 
 
 > [!TIP]
-> Power BI では、機密ラベルを使用した分類がサポートされるようになりました。また、次のファイル形式 (.pdf、.xls、.ppt) にエクスポートされたデータに、これらのラベルからの保護を適用できます。 詳細については、「[Power BI におけるデータ保護](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)」を参照してください。
+> Power BI では、機密ラベルを使用した分類がサポートされるようになりました。また、次のファイル形式 (.pdf、.xls、.ppt) にエクスポートされたデータに、これらのラベルからの保護を適用できます。 詳細については、「[Power BI におけるデータ保護](/power-bi/admin/service-security-data-protection-overview)」を参照してください。
 > 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか。
 
 はい。プレビュー オファリングとして、Azure Information Protection に Azure AD 条件付きアクセスを構成できるようになりました。
 
-Azure Information Protection で保護されているドキュメントをユーザーが開くとき、標準的な条件付きアクセス コントロールに基づき、管理者は自分のテナントでユーザーをブロックするか、アクセス許可を与えることができるようになりました。 最も一般的に要求される条件の 1 つが多要素認証 (MFA) を要求することです。 もう 1 つは、デバイスが [Intune ポリシーに準拠する](/intune/conditional-access-intune-common-ways-use)必要があるということです (たとえば、モバイル デバイスがパスワード要件やオペレーティング システムの最小バージョンを満たすようにする)。また、コンピューターはドメインに参加する必要があります。
+Azure Information Protection で保護されているドキュメントをユーザーが開くとき、標準的な条件付きアクセス コントロールに基づき、管理者は自分のテナントでユーザーをブロックするか、アクセス許可を与えることができるようになりました。 最も一般的に要求される条件の 1 つが多要素認証 (MFA) を要求することです。 もう 1 つは、デバイスが [Intune ポリシーに準拠する](/intune/protect/conditional-access-intune-common-ways-use)必要があるということです (たとえば、モバイル デバイスがパスワード要件やオペレーティング システムの最小バージョンを満たすようにする)。また、コンピューターはドメインに参加する必要があります。
 
 チュートリアル形式の例が必要であれば、ブログ投稿の「[Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/)」 (Azure Information Protection の条件付きアクセス ポリシー) を参照してください。
 
@@ -279,22 +289,30 @@ Azure Information Protection で保護されているドキュメントをユー
 
 |トピック  |詳細  |
 |---------|---------|
-|**評価の頻度**    | Windows コンピューターと現在のプレビューリリースでは、 [ユーザー環境が初期化さ](./how-does-it-work.md#initializing-the-user-environment) れると (このプロセスはブートストラップとも呼ばれます)、その後30日ごとに、Azure Information Protection の条件付きアクセスポリシーが評価されます。</br></br>条件付きアクセスポリシーが評価される頻度を微調整するには、 [トークンの有効期間を構成](/azure/active-directory/active-directory-configurable-token-lifetimes)します。       |
+|**評価の頻度**    | Windows コンピューターと現在のプレビューリリースでは、 [ユーザー環境が初期化さ](./how-does-it-work.md#initializing-the-user-environment) れると (このプロセスはブートストラップとも呼ばれます)、その後30日ごとに、Azure Information Protection の条件付きアクセスポリシーが評価されます。<br /><br />条件付きアクセスポリシーが評価される頻度を微調整するには、 [トークンの有効期間を構成](/azure/active-directory/active-directory-configurable-token-lifetimes)します。       |
 |**管理者アカウント**     |条件付きアクセスポリシーに管理者アカウントを追加しないことをお勧めします。これらのアカウントは、Azure portal の [Azure Information Protection] ウィンドウにアクセスできないためです。         |
 |**MFA と B2B コラボレーション**     | 他の組織とのコラボレーション (B2B) のための条件付きアクセス ポリシーで MFA を使用する場合は、[Azure AD B2B コラボレーション](/azure/active-directory/b2b/what-is-b2b)を使用して、他の組織と共有するユーザーのためのゲスト アカウントを作成する必要があります。        |
 |**使用条件のプロンプト**     |  Azure AD 12 月2018プレビューリリースでは、保護されたドキュメントを初めて開く前に、 [使用条件に同意するようにユーザーに求める](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) ことができるようになりました。       |
-|**クラウド アプリ**     |  多くのクラウド アプリで条件付きアクセスを使用する場合、選択対象の一覧に **Microsoft Azure Information Protection** が表示されないことがあります。 </br></br>その場合、一覧の上にある検索ボックスを使用します。 「Microsoft Azure Information Protection」と入力し、利用可能アプリを絞り込みます。 サポートされているサブスクリプションがある場合、選択対象として **Microsoft Azure Information Protection** が表示されます。        |
+|**クラウド アプリ**     |  多くのクラウド アプリで条件付きアクセスを使用する場合、選択対象の一覧に **Microsoft Azure Information Protection** が表示されないことがあります。 <br /><br />その場合、一覧の上にある検索ボックスを使用します。 「Microsoft Azure Information Protection」と入力し、利用可能アプリを絞り込みます。 サポートされているサブスクリプションがある場合、選択対象として **Microsoft Azure Information Protection** が表示されます。        |
+| | |
 
+> [!NOTE]
+> 条件付きアクセスの Azure Information Protection サポートは、現在プレビューの段階です。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
 
 ## <a name="i-see-azure-information-protection-is-listed-as-a-security-provider-for-microsoft-graph-securityhow-does-this-work-and-what-alerts-will-i-receive"></a>Azure Information Protection が Microsoft Graph Security のセキュリティ プロバイダーとして記載されています。これはどのように動作しますか? また、どのようなアラートを受信できますか?
 
-はい。公共プレビュー サービスとして、**Azure Information Protection の異常なデータ アクセス**に対するアラートを受信できるようになりました。 Azure Information Protection によって保護されているデータに対する異常なアクセスの試行があると、このアラートがトリガーされます。 たとえば、異常に大量のデータへのアクセス、不自然な時間帯でのアクセス、または不明な場所からのアクセスなどです。
+はい。公共プレビュー サービスとして、**Azure Information Protection の異常なデータ アクセス** に対するアラートを受信できるようになりました。 Azure Information Protection によって保護されているデータに対する異常なアクセスの試行があると、このアラートがトリガーされます。 たとえば、異常に大量のデータへのアクセス、不自然な時間帯でのアクセス、または不明な場所からのアクセスなどです。
 
 このようなアラートは、データ関連の高度な攻撃や、環境内部の脅威を検出するのに役立ちます。 これらのアラートでは、保護されたデータにアクセスするユーザーの動作をプロファイルするために機械学習が使用されます。 
 
-Azure Information Protection のアラートにアクセスするには、[Microsoft Graph Security API を使用します](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview)。または、Azure Monitor を使用して、Splunk や IBM Qradar などの SIEM ソリューションに[アラートをストリームする](https://developer.microsoft.com/graph/docs/concepts/security_siemintegration)ことができます。
+Azure Information Protection のアラートにアクセスするには、[Microsoft Graph Security API を使用します](/graph/api/resources/security-api-overview)。または、Azure Monitor を使用して、Splunk や IBM Qradar などの SIEM ソリューションに[アラートをストリームする](/graph/security-integration)ことができます。
 
-Microsoft Graph Security API について詳しくは、「[Microsoft Graph Security API の概要](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview)」をご覧ください。
+Microsoft Graph Security API について詳しくは、「[Microsoft Graph Security API の概要](/graph/security-concept-overview)」をご覧ください。
+
+> [!NOTE]
+> Microsoft Graph セキュリティの Azure Information Protection サポートは、現在プレビューの段階です。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
 
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Windows Server FCI と Azure Information Protection スキャナーの違いは何ですか。
 
@@ -306,7 +324,7 @@ Microsoft Graph Security API について詳しくは、「[Microsoft Graph Secu
 
 |  |Windows Server FCI  |Azure Information Protection スキャナー  |
 |---------|---------|---------|
-|**サポートされているデータ ストア**    | Windows Server 上のローカルフォルダー        | - Windows ファイル共有とネットワーク接続ストレージ<br /></br>- SharePoint Server 2016 と SharePoint Server 2013。 [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint Server 2010 もサポートされています。        |
+|**サポートされているデータ ストア**    | Windows Server 上のローカルフォルダー        | - Windows ファイル共有とネットワーク接続ストレージ<br /><br />- SharePoint Server 2016 と SharePoint Server 2013。 [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint Server 2010 もサポートされています。        |
 |**操作モード**     |リアルタイム         |データストアを体系的に1回または繰り返しクロールする         |
 |**サポートされるファイルの種類**     | - すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office ファイルの種類と PDF ドキュメントは既定で保護されます <br /><br />- レジストリを編集することで、保護に含めるファイルの種類を追加できます|
 
@@ -337,11 +355,9 @@ Microsoft Graph Security API について詳しくは、「[Microsoft Graph Secu
 
 ## <a name="how-can-azure-information-protection-help-with-gdpr"></a>Azure Information Protection は GDPR にどのように役立ちますか?
 
-一般データ保護規則 (GDPR) に準拠するために Azure Information Protection がどのように役立つかを確認するには、ブログ記事 
+[!INCLUDE [gdpr-hybrid-note](includes/gdpr-hybrid-note.md)]
 
-[Microsoft 365 は、GDPR を支援する情報保護戦略を提供します。](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr)
-
-## <a name="where-can-i-find-supporting-information-for-azureinformation-protectionsuch-as-legal-compliance-and-slas"></a>法律、法令遵守、SLA など、Azure Information Protection に関するサポート情報はどこで入手できますか。
+## <a name="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas"></a>法律、法令遵守、SLA など、Azure Information Protection に関するサポート情報はどこで入手できますか。
 「[Azure Information Protection のコンプライアンスとサポート情報](./compliance.md)」を参照してください。
 
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Azure Information Protection の問題を報告またはフィードバックを送信するにはどうすればよいですか。
@@ -364,5 +380,4 @@ Microsoft Graph Security API について詳しくは、「[Microsoft Graph Secu
 
 - [iOS 用と Android 用の Azure Information Protection の FAQ](./rms-client/mobile-app-faq.md)
 
-- [Mac コンピューター用 RMS 共有アプリの FAQ](https://technet.microsoft.com/dn451248)
-
+- [Mac コンピューター用 RMS 共有アプリの FAQ](/previous-versions/msdn10/dn451248(v=msdn.10))

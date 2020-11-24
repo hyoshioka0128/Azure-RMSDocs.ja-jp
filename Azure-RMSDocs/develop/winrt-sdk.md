@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 41ae437f06a3d90f391ead9dc843e86c1b54fcd8
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: 0382a1a97d65938c5d90d10d4e572697558223cc
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068675"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570734"
 ---
 # <a name="windows-store-setup"></a>Windows ストアのセットアップ
 
@@ -32,7 +32,7 @@ Windows ストア アプリケーションは Microsoft Rights Management SDK 4
 -   [前提条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
--   [関連項目](#see-also)
+-   [参照](#see-also)
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -42,12 +42,12 @@ Windows ストア アプリケーションは Microsoft Rights Management SDK 4
 -   [Windows 8.1](https://windows.microsoft.com/windows-8/meet) オペレーティング システム
 -   [Windows 8.1 用 Windows SDK](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) 以降、または Visual Studio Express 2012 (Windows 8.0/8.1 用 Windows SDK に付属)
--   Windows ストア アプリケーション用の MS RMS SDK 4.2 パッケージ。 詳細については、「[作業開始](get-started.md)」を参照してください。
--   認証ライブラリ: [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) または他の使用可能な認証ライブラリを使用することをお勧めします。
+-   Windows ストア アプリケーション用の MS RMS SDK 4.2 パッケージ。 詳細については、「 [はじめ](get-started.md)に」を参照してください。
+-   認証ライブラリ: [Azure AD Authentication Library](/previous-versions/azure/jj573266(v=azure.100)) または他の使用可能な認証ライブラリを使用することをお勧めします。
 
-[新機能](release-notes.md)に関するトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
+「[新機能](release-notes.md)」のトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>［オプション］
+## <a name="optional"></a>Optional
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します - [Windows ストア アプリ用の UI ライブラリ](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore)。 Windows ストア アプリのサンプル アプリケーションも提供しています - [Windows ストア用の RMS サンプル アプリケーション](https://github.com/AzureADSamples/rms-samples-for-windowsstore)。
 
@@ -55,25 +55,25 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 
 -   Visual Studio を開きます。
--   **[ファイル]** をクリックし、 **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。
--   **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C\#]** 、 **[空のアプリケーション (Windows)]** の順にクリックし、 **[OK]** をクリックします。
+-   [**ファイル**] をクリックし、[**新規作成**] をクリックし、[**プロジェクト**] をクリックします。
+-   [**新しいプロジェクト**] ダイアログボックスで、 **[Visual \# C** ] をクリックし、[**空のアプリケーション (Windows)** ] をクリックして、[ **OK**] をクリックします。
 
-    ![新規プロジェクトの作成](../media/winrtsetup-newproj.png)
+    ![新しいプロジェクトの作成](../media/winrtsetup-newproj.png)
 
--   **ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
+-   **ソリューション エクスプローラー** でプロジェクトを右クリックし、**[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
 
     ![参照の追加](../media/winrtsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスで **[参照]** をクリックし、SDK パッケージを解凍したフォルダー内にある *Microsoft.RightsManagement.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。 **[Windows 8.1]** -&gt; **[拡張機能]** を選択し、 **[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
+-   **管理対象アプリ**-管理対象アプリを構築するには、この参照を追加する必要があります。**Windows 8.1** - &gt; **拡張機能** を選択し、[windows **Visual C++ Runtime Package for windows** ] チェックボックスをオンにします
 
     ![拡張機能の追加](../media/winrtsetup-refmngr.png)
 
--   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、 **[機能]** タブに移動して追加します。
+-   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、**[機能]** タブに移動して追加します。
 
 これで、新しい独自の Windows ストア アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
 [作業開始](get-started.md)
 
@@ -85,4 +85,4 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
-[Windows API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx)
+[Windows API リファレンス](/previous-versions/windows/desktop/msipcthin2/winrt)

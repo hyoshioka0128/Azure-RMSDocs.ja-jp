@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用のラベ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 38e2998244edc7170263741b128885779e975c6e
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 26cb50eb6532eccee86eb28313c1cd1ac1751949
+ms.sourcegitcommit: ed3745bff0f0d4883200a310a0b63f7794149330
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447142"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "95570814"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -24,7 +24,7 @@ ms.locfileid: "89447142"
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection 統合されたラベル付けクライアントをエンタープライズネットワークにインストールする前に、コンピューターに必要なオペレーティングシステムのバージョンとアプリケーションがあることを確認してください。 Azure Information Protection: [Azure Information Protection の要件](../requirements.md)を確認してください。 
 
@@ -43,45 +43,45 @@ Azure Information Protection 統合されたラベル付けクライアントを
 |**Microsoft Online Services サインイン アシスタント 7.250.4303.0**     |   Office 2010 を実行しているコンピューターには、クライアントインストールに含まれている Microsoft Online Services サインインアシスタントバージョン7.250.4303.0 が必要です。 </br></br>新しいバージョンのサインインアシスタントがある場合は、Azure Information Protection 統合ラベル付けクライアントをインストールする前にアンインストールしてください。 </br></br>たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >  **Program and Features**  >  **プログラムのアンインストールまたは変更**] を使用します。      |
 |**KB 4482887**     | Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 </br></br>Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。        |
 |**管理者のアクセス許可**| Azure Information Protection の統合ラベル付けクライアントをインストールするには、ローカルの管理アクセス許可が必要です。| 
-|**Exploit protection を無効にする**   |AIP クライアントは、 [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっているコンピューターではサポートされていません。 AIP クライアントをインストールする前に、 [Exploit protection が無効](../known-issues.md#known-issues-for-installing-the-aip-client) になっていることを確認してください。  |
+|**Exploit protection を無効にする**   |AIP クライアントは、 [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっているコンピューターではサポートされていません。 AIP クライアントをインストールする前に、 [Exploit protection が無効](../known-issues.md#known-issues-for-installing-the-aip-client) になっていることを確認してください。  |
 |||
         
 ### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>AIP が無効にならないようにグループポリシーを構成する
 
 Office バージョン2013以降では、Office アプリケーション用の **Microsoft Azure Information Protection** アドインが常に有効になるように、グループポリシーを構成することをお勧めします。  このアドインがなければ、ユーザーは Office アプリケーションでドキュメントや電子メールにラベルを付けることができません。   
 
-- **Outlook の場合:** 「 [システム管理者によるアドインの制御](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins)」に記載されているグループポリシー設定を使用します。
-- **Word、Excel、PowerPoint の場合:**[Office 2013 および office 2016 プログラムのグループポリシー設定が原因で、「アドインが読み込まれていません](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」に記載されている**管理対象アドインの**グループポリシー設定の一覧を使用します。 . 
+Word、Excel、PowerPoint、および Outlook では、 [office 2013 および office 2016 プログラムのグループポリシー設定が原因で、「アドインが読み込まれていません](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」に記載されている **管理対象アドインの** グループポリシー設定の一覧を使用します。 
 
-    AIP に次のプログラム識別子 (ProgID) を指定し、オプションを1に設定します。この **アドインは常に有効になっ**ています。
+AIP に次のプログラム識別子 (ProgID) を指定し、オプションを1に設定します。この **アドインは常に有効になっ** ています。
 
-    |Application  |ProgID  |
-    |---------|---------|
-    |Word     |     `MSIP.WordAddin`    |
-    |Excel     |  `MSIP.ExcelAddin`       |
-    |PowerPoint     |   `MSIP.PowerPointAddin`      |
-    | | | 
+|アプリケーション  |ProgID  |
+|---------|---------|
+|Word     |     `MSIP.WordAddin`    |
+|Excel     |  `MSIP.ExcelAddin`       |
+|PowerPoint     |   `MSIP.PowerPointAddin`      |
+|Outlook | `MSIP.OutlookAddin` |
+| | | 
 
 ## <a name="applications"></a>アプリケーション
 
 Azure Information Protection の統一されたラベル付けクライアントは、次のいずれかの Office エディションの Office アプリケーション Word、Excel、PowerPoint、Outlook を使用して、ドキュメントや電子メールにラベルを付け、保護することができます。
 
-- ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ
-- Office 365 ProPlus
+- Office アプリの最小バージョン1805、ユーザーに Azure Rights Management のライセンスが割り当てられている場合の Microsoft 365 App for Business または Microsoft 365 Business Premium からのビルド 9330.2078 (Office 365 の場合は Azure Information Protection とも呼ばれます)
+- Microsoft 365 Apps for enterprise
 - Office Professional Plus 2019
 - Office Professional Plus 2016
 - Office Professional Plus 2013 Service Pack 1
 - Office Professional Plus 2010 Service Pack 2
 
-Office の他のエディション ( **標準**など) では、Rights Management サービスを使用してドキュメントや電子メールを保護することはできません。 これらのエディションでは、 **ラベル付け** のためだけに Azure Information Protection がサポートされています。 そのため、保護を適用するラベルは、Azure Information Protection の秘密度ボタンまたはバーにユーザーに表示されません。
+Office の他のエディション ( **標準** など) では、Rights Management サービスを使用してドキュメントや電子メールを保護することはできません。 これらのエディションでは、 **ラベル付け** のためだけに Azure Information Protection がサポートされています。 そのため、保護を適用するラベルは、Azure Information Protection の秘密度ボタンまたはバーにユーザーに表示されません。
 
-保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](https://docs.microsoft.com/azure/information-protection/requirements-applications)」を参照してください。
+保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](../requirements-applications.md)」を参照してください。
 
-### <a name="office-features-and-capabilities-not-supported"></a>サポートされていない Office の機能
+### <a name="office-features-and-capabilities-not-supported"></a>サポートされていない Office の特徴と機能
 
 Azure Information Protection 統合ラベル付けクライアントは、同じコンピューター上で複数のバージョンの Office をサポートしたり、Office のユーザーアカウントを切り替えたりすることはできません。
 
-Office メールのマージ機能は、Azure Information Protection 機能ではサポートされていません。
+Office の差し込み印刷機能は、どの Azure Information Protection 機能でもサポートされていません。
 
 ## <a name="options-to-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Azure Information Protection 統合されたラベル付けクライアントをインストールするためのオプション
 
@@ -101,7 +101,7 @@ Microsoft Update カタログを使用していない場合、または Intune �
     
     プレビュー バージョンが利用可能な場合は、このバージョンはテスト用にのみ使用してください。 運用環境でのエンド ユーザー向けのものではありません。 
 
-2. 既定のインストールの場合は、実行可能ファイル ( **AzInfoProtection_UL.exe**など) を実行するだけです。 ただし、インストールオプションを表示するには、まず、次のように **/help**を使用して実行可能ファイルを実行します。 `AzInfoProtection_UL.exe /help`
+2. 既定のインストールの場合は、実行可能ファイル ( **AzInfoProtection_UL.exe** など) を実行するだけです。 ただし、インストールオプションを表示するには、まず、次のように **/help** を使用して実行可能ファイルを実行します。 `AzInfoProtection_UL.exe /help`
 
     サイレント モードでクライアントをインストールする例: `AzInfoProtection_UL.exe /quiet`
     
@@ -145,7 +145,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>ServiceLocation パラメーターに指定する値を特定するには
 
-1. PowerShell セッションから、まず [connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) を実行し、Azure Rights Management サービスに接続するための管理者の資格情報を指定します。 次 [に、AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)を実行します。 
+1. PowerShell セッションから、まず [connect-AipService](/powershell/module/aipservice/connect-aipservice) を実行し、Azure Rights Management サービスに接続するための管理者の資格情報を指定します。 次 [に、AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)を実行します。 
  
     Azure Rights Management サービス用の PowerShell モジュールをまだインストールしていない場合は、「 [AIPService powershell モジュールのインストール](../install-powershell.md)」を参照してください。
 
@@ -164,7 +164,7 @@ Office 2010 と Azure RMS のクライアントのサイレント インスト�
 
 集中展開の場合は、Azure Information Protection 統合ラベル付けクライアントの .msi インストールバージョンに固有の次の情報を使用します。 
 
-ソフトウェアの展開方法に Intune を使用する場合は、次の手順を実行するとともに、「[Microsoft Intune でアプリを追加する](/intune/deploy-use/add-apps)」をご覧ください。
+ソフトウェアの展開方法に Intune を使用する場合は、次の手順を実行するとともに、「[Microsoft Intune でアプリを追加する](/mem/intune/apps/apps-add)」をご覧ください。
 
 1. Azure Information Protection 統合されたラベル付けクライアント (AzInfoProtection_UL) の .msi バージョンを [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードします。 
     
@@ -190,7 +190,7 @@ Office 2010 と Azure RMS のクライアントのサイレント インスト�
     > [!NOTE]
     > 既定では、[ **使用状況の統計情報を Microsoft インストールに送信して Azure Information Protection を向上させる** ] オプションが有効になっています。 このオプションを無効にするには、次のいずれかを実行してください。
     >
-    >- インストール中に、 **Allowtelemetry = 0**を指定します。
+    >- インストール中に、 **Allowtelemetry = 0** を指定します。
     >- インストール後、レジストリキーを次のように更新します: **EnableTelemetry = 0**。
     >
 
@@ -202,4 +202,3 @@ Azure Information Protection 統合されたラベル付けクライアントを
 - [サポートされるファイルの種類](clientv2-admin-guide-file-types.md)
 
 - [PowerShell コマンド](clientv2-admin-guide-powershell.md)
-

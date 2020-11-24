@@ -6,18 +6,18 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/29/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 51934a4a285368a00aaf23780c7fd6c2f315ed7d
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 8c414b5b66525169b1c55ae83f60e91e69188b53
+ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563955"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "95570839"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK - プロファイル オブジェクトとエンジン オブジェクトの概念
 
-## <a name="profiles"></a>プロファイル
+## <a name="profiles"></a>Profiles
 
-は、 `MipContext` SDK 固有の設定を格納するためのクラスです。このプロファイルは、MIP SDK のすべての mipmap ラベル付け操作と保護固有の操作のルートクラスです。 3つの API セットのいずれかを使用する前に、クライアントアプリケーションでプロファイルを作成する必要があります。 今後の操作は、プロファイルまたはプロファイルに *追加された* 他のオブジェクトによって実行されます。
+は、 `MipContext` SDK 固有の設定を格納するためのクラスです。このプロファイルは、MIP SDK のすべての mipmap ラベル付け操作と保護固有の操作のルートクラスです。 3つの API セットのいずれかを使用する前に、クライアントアプリケーションでプロファイルを作成する必要があります。 今後の操作は、プロファイルまたはプロファイルに *追加された* 他のオブジェクトによって実行されます。 プロセスごとに1つのプロファイルオブジェクトのみをお勧めします。 複数のを作成すると、予期しない動作が発生する可能性があります。 
 
 MIP SDK には、次の 3 つの種類のプロファイルがあります。
 
@@ -90,7 +90,7 @@ SDK には 3 つのエンジン クラス (API ごとに 1 つずつ) があり�
 
 このメソッドは、既存のエンジンを読み込むか、またはローカル状態にまだ存在しない場合は作成します。
 
-アプリケーションで `id` が提供されない場合、`AddEngineAsync` で新しい `id` が生成されます。 その後、その `id` を持つエンジンがローカル状態で既に存在するかどうかが確認されます。 存在しない場合は、そのエンジンが読み込まれます。 エンジンがローカル状態で存在*しない* 場合、必要な API とバックエンド サービスを呼び出すことで、新しいエンジンが作成されます。
+アプリケーションで `id` が提供されない場合、`AddEngineAsync` で新しい `id` が生成されます。 その後、その `id` を持つエンジンがローカル状態で既に存在するかどうかが確認されます。 存在しない場合は、そのエンジンが読み込まれます。 エンジンがローカル状態で存在 *しない* 場合、必要な API とバックエンド サービスを呼び出すことで、新しいエンジンが作成されます。
 
 いずれの場合も、メソッドが成功したときに、エンジンが読み込まれ、使用できるようになります。
 

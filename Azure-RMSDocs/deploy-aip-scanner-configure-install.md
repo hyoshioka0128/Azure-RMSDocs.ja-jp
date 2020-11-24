@@ -4,7 +4,7 @@ description: Azure Information Protection 統合されたラベル付けスキ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/31/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 956b9f65c9dd5a4a5fdf66d3f70770ff5e7162d2
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: e6e90124dfae07e4ccc02a1d047fc15627b7b35f
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316911"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95570895"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーの構成とインストール
 
@@ -80,7 +80,7 @@ Azure Information Protection スキャナーの構成とインストールを開
 
 1. 左側の [ **スキャナー** ] メニューで、[ **クラスター** ![クラスター] アイコン](media/i-clusters.png "クラスターアイコン")を選択します。
 
-1. [ **Azure Information Protection クラスター** ] ウィンドウで、[追加![] アイコン](media/i-add.png "[追加] アイコン")**を選択し**ます。
+1. [ **Azure Information Protection クラスター** ] ウィンドウで、[追加 ![] アイコン](media/i-add.png "[追加] アイコン")**を選択し** ます。
     
 1. [ **新しいクラスターの追加** ] ウィンドウで、スキャナーにわかりやすい名前を入力し、必要に応じて説明を入力します。 
     
@@ -92,20 +92,21 @@ Azure Information Protection スキャナーの構成とインストールを開
 
 ### <a name="create-a-network-scan-job-public-preview"></a>ネットワークスキャンジョブの作成 (パブリックプレビュー)
 
-バージョン [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview)以降では、危険なリポジトリをネットワークでスキャンできます。 コンテンツスキャンジョブに検出されたリポジトリを1つ以上追加して、機密コンテンツをスキャンします。
-
-> [!NOTE]
-> 現在、 **ネットワーク探索** インターフェイスは段階的に展開されており、2020年9月15日までにすべてのリージョンで利用可能になります。 
+バージョン [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850)以降では、危険なリポジトリをネットワークでスキャンできます。 コンテンツスキャンジョブに検出されたリポジトリを1つ以上追加して、機密コンテンツをスキャンします。
 
 - [ネットワーク検出の前提条件](#network-discovery-prerequisites)
 - [ネットワークスキャンジョブの作成](#creating-a-network-scan-job)
+
+> [!NOTE]
+> Azure Information Protection のネットワーク探索機能は、現在プレビューの段階です。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
 
 #### <a name="network-discovery-prerequisites"></a>ネットワーク検出の前提条件
 
 |前提条件  |説明  |
 |---------|---------|
-|**ネットワーク探索サービスをインストールする**     |   最近スキャナーをアップグレードした場合は、引き続きネットワーク探索サービスをインストールする必要があります。 </br></br>ネットワークスキャンジョブを有効にするには、 [**MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) コマンドレットを実行します。      |
-|**Azure Information Protection analytics**     | Azure Information Protection analytics が有効になっていることを確認します。 </br></br>Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー) にアクセスします。** </br></br>詳細については、「 [Azure Information Protection の中央レポート (パブリックプレビュー)](reports-aip.md)」を参照してください。|
+|**ネットワーク探索サービスをインストールする**     |   最近スキャナーをアップグレードした場合は、引き続きネットワーク探索サービスをインストールする必要があります。 <br /><br />ネットワークスキャンジョブを有効にするには、 [**MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) コマンドレットを実行します。      |
+|**Azure Information Protection analytics**     | Azure Information Protection analytics が有効になっていることを確認します。 <br /><br />Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー) にアクセスします。** <br /><br />詳細については、「 [Azure Information Protection の中央レポート (パブリックプレビュー)](reports-aip.md)」を参照してください。|
 | | |
 
 #### <a name="creating-a-network-scan-job"></a>ネットワークスキャンジョブの作成
@@ -120,10 +121,10 @@ Azure Information Protection スキャナーの構成とインストールを開
     |---------|---------|
     |**ネットワークスキャンジョブ名**     |このジョブのわかりやすい名前を入力します。  このフィールドは必須です。       |
     |**説明**     |   わかりやすい説明を入力します。      |
-    |**クラスターを選択します**     |ドロップダウンリストから、構成したネットワークの場所をスキャンするために使用するクラスターを選択します。  </br></br>**ヒント:** クラスターを選択するときは、割り当てたクラスター内のノードが SMB 経由で構成済みの IP 範囲にアクセスできることを確認してください。      |
-    |**検出する IP 範囲の構成**     |   IP アドレスまたは範囲を定義する場合にクリックします。 </br></br>[ **IP 範囲の選択** ] ウィンドウで、必要に応じて名前を入力し、範囲の開始 ip アドレスと終了 ip アドレスを入力します。 </br></br>**ヒント:** 特定の IP アドレスのみをスキャンするには、[ **開始 ip** ] フィールドと [ **終了 ip** ] フィールドの両方に同じ ip アドレスを入力します。      |
-    |**スケジュールの設定**     | このネットワークスキャンジョブを実行する頻度を定義します。  </br></br>[ **週単位**] を選択すると、 **[ネットワークスキャンジョブを実行** する] 設定が表示されます。 ネットワークスキャンジョブを実行する曜日を選択します。       |
-    |**開始時刻の設定 (UTC)**     |このネットワークスキャンジョブの実行を開始する日付と時刻を定義します。 ジョブを毎日、毎週、または毎月実行するように選択した場合は、選択した繰り返しで、定義された時刻にジョブが実行されます。 </br></br>**注**: 月末に日付を任意の日に設定する場合は注意してください。 31を選択した場合 **、** ネットワークスキャンジョブは、30日以内の任意の月に実行されません。    |
+    |**クラスターを選択します**     |ドロップダウンリストから、構成したネットワークの場所をスキャンするために使用するクラスターを選択します。  <br /><br />**ヒント:** クラスターを選択するときは、割り当てたクラスター内のノードが SMB 経由で構成済みの IP 範囲にアクセスできることを確認してください。      |
+    |**検出する IP 範囲を構成する**     |   IP アドレスまたは範囲を定義する場合にクリックします。 <br /><br />[ **IP 範囲の選択** ] ウィンドウで、必要に応じて名前を入力し、範囲の開始 ip アドレスと終了 ip アドレスを入力します。 <br /><br />**ヒント:** 特定の IP アドレスのみをスキャンするには、[ **開始 ip** ] フィールドと [ **終了 ip** ] フィールドの両方に同じ ip アドレスを入力します。      |
+    |**スケジュールを設定する**     | このネットワークスキャンジョブを実行する頻度を定義します。  <br /><br />[ **週単位**] を選択すると、 **[ネットワークスキャンジョブを実行** する] 設定が表示されます。 ネットワークスキャンジョブを実行する曜日を選択します。       |
+    |**開始時刻 (UTC) を設定する**     |このネットワークスキャンジョブの実行を開始する日付と時刻を定義します。 ジョブを毎日、毎週、または毎月実行するように選択した場合は、選択した繰り返しで、定義された時刻にジョブが実行されます。 <br /><br />**注**: 月末に日付を任意の日に設定する場合は注意してください。 31を選択した場合 **、** ネットワークスキャンジョブは、30日以内の任意の月に実行されません。    |
     | | |
 
 1. [ **保存** ![] アイコン](media/qs-tutor/save-icon.png "保存アイコン") を選択して、変更を保存します。
@@ -136,33 +137,37 @@ Azure Information Protection スキャナーの構成とインストールを開
 
 ### <a name="analyze-risky-repositories-found-public-preview"></a>見つかった危険なリポジトリの分析 (パブリックプレビュー)
 
-ネットワークスキャンジョブ、コンテンツスキャンジョブ、またはログファイルで検出されたユーザーアクセスによって検出されたリポジトリは、[ **スキャナー > リポジトリ**の [リポジトリ] アイコン](media/i-repositories.png "リポジトリアイコン") ウィンドウに集計され、一覧表示されます。
+ネットワークスキャンジョブ、コンテンツスキャンジョブ、またはログファイルで検出されたユーザーアクセスによって検出されたリポジトリは、[ **スキャナー > リポジトリ** の [リポジトリ] アイコン](media/i-repositories.png "リポジトリアイコン") ウィンドウに集計され、一覧表示されます。
 
 [ネットワークスキャンジョブを定義](#create-a-network-scan-job-public-preview)し、特定の日時に実行するように設定している場合は、実行が完了して結果が確認されるまで待機します。 [コンテンツスキャンジョブ](#create-a-content-scan-job)を実行して更新されたデータを表示した後に、ここで返すこともできます。
+
+> [!NOTE]
+> Azure Information Protection **リポジトリ** 機能は現在プレビューの段階です。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+> 
 
 1. 左側の [**スキャナー** ] メニューで、[**リポジトリ**![リポジトリ] アイコン](media/i-repositories.png "リポジトリアイコン")を選択します。
     
     検出されたリポジトリは次のようになります。
     - [ **状態別リポジトリ** ] グラフには、コンテンツスキャンジョブに対して既に構成されているリポジトリの数と、その数が示されていません。
-    - **アクセスグラフ別の上位10個の管理**されていないリポジトリには、現在コンテンツスキャンジョブに割り当てられていない上位10個のリポジトリ、およびそれらのアクセスレベルの詳細が表示されます。 アクセスレベルは、リポジトリの危険度を示すことができます。
+    - **アクセスグラフ別の上位10個の管理** されていないリポジトリには、現在コンテンツスキャンジョブに割り当てられていない上位10個のリポジトリ、およびそれらのアクセスレベルの詳細が表示されます。 アクセスレベルは、リポジトリの危険度を示すことができます。
     - グラフの下の表には、検出された各リポジトリとその詳細が一覧表示されます。
 
 1. 次のいずれかを実行します。
     
     |オプション  |説明  |
     |---------|---------|
-    |![列アイコン](media/i-columns.png "列アイコン")    | **列**を選択して、表示されるテーブルの列を変更します。        |
+    |![列アイコン](media/i-columns.png "列アイコン")    | **列** を選択して、表示されるテーブルの列を変更します。        |
     |![更新アイコン](media/i-refresh.png "更新アイコン")   | スキャナーでネットワークスキャンの結果を最近実行した場合は、[ **更新** ] を選択してページを更新します。      |
     |![[追加] アイコン](media/i-add.png "[追加] アイコン")   | 表に一覧表示されている1つ以上のリポジトリを選択し、[ **選択した項目の割り当て** ] を選択して、それらをコンテンツスキャンジョブに割り当てます。          |
-    |**Assert**     |   フィルター行には、現在適用されているすべてのフィルター条件が表示されます。 表示されたいずれかの条件を選択して設定を変更するか、[ **フィルターの追加** ] を選択して新しいフィルター条件を追加します。 </br></br>[ **フィルター** ] を選択して変更を適用し、更新されたフィルターを使用してテーブルを更新します。       |
+    |**Assert**     |   フィルター行には、現在適用されているすべてのフィルター条件が表示されます。 表示されたいずれかの条件を選択して設定を変更するか、[ **フィルターの追加** ] を選択して新しいフィルター条件を追加します。 <br /><br />[ **フィルター** ] を選択して変更を適用し、更新されたフィルターを使用してテーブルを更新します。       |
     |![Log Analytics アイコン](media/i-log-analytics.png "Log Analytics アイコン") |[管理されていないリポジトリ] グラフの右上隅にある **Log Analytics** アイコンをクリックして、これらのリポジトリの Log Analytics データに移動します。 |
     | | |
 
 #### <a name="repositories-with-public-access"></a>パブリックアクセスを持つリポジトリ
 
-**パブリックアクセス**に**読み取り**または**読み取り/書き込み**機能があることが判明したリポジトリには、セキュリティで保護する必要がある機密コンテンツが含まれている可能性があります。 **パブリックアクセス**が false の場合、リポジトリはパブリックではアクセスできません。
+**パブリックアクセス** に **読み取り** または **読み取り/書き込み** 機能があることが判明したリポジトリには、セキュリティで保護する必要がある機密コンテンツが含まれている可能性があります。 **パブリックアクセス** が false の場合、リポジトリはパブリックではアクセスできません。
 
-リポジトリへのパブリックアクセスは、 [**MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)または[**MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscovery)コマンドレットの**StandardDomainsUserAccount**パラメーターに弱いアカウントを設定した場合にのみ報告されます。
+リポジトリへのパブリックアクセスは、 [**MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)コマンドレットの **StandardDomainsUserAccount** パラメーターに弱いアカウントを設定した場合にのみ報告されます。
 
 - これらのパラメーターで定義されているアカウントは、リポジトリへの弱いユーザーのアクセスをシミュレートするために使用されます。 そこで定義されている弱いユーザーがリポジトリにアクセスできる場合は、リポジトリにパブリックにアクセスできることを意味します。 
 
@@ -182,9 +187,9 @@ Azure Information Protection スキャナーの構成とインストールを開
     
     |設定  |説明  |
     |---------|---------|
-    |**コンテンツスキャンジョブの設定**     |    - **スケジュール**:**既定のままにし**ておきます。 </br>- **検出される情報の種類**:**ポリシーのみ**に変更 </br>- **リポジトリを構成**する: コンテンツスキャンジョブを最初に保存する必要があるため、現時点では構成しないでください。         |
-    |**ポリシーの適用**     | - **強制**: [**オフ**] を選択します。 </br>- **コンテンツに基づいてファイルにラベルを付ける**: の既定値のまま**に**します。 </br>- **既定のラベル**: 既定の**ポリシー**の既定値のままにします。 </br>- **ファイルのラベル**を変更する: 既定値を**オフ**のままにします。        |
-    |**ファイル設定の構成**     | - [**更新日]、[最終更新日]、[変更者] を保持し**ます。の既定値のまま**に**します。 </br>- **スキャンするファイルの種類**: [**除外**するファイルの種類を既定のままにする。 </br>- **既定の所有者**: 既定の**スキャナーアカウント**を保持します        |
+    |**コンテンツスキャンジョブの設定**     |    - **スケジュール**:**既定のままにし** ておきます。 <br />- **検出される情報の種類**:**ポリシーのみ** に変更 <br />- **リポジトリを構成** する: コンテンツスキャンジョブを最初に保存する必要があるため、現時点では構成しないでください。         |
+    |**ポリシーの適用**     | - **強制**: [**オフ**] を選択します。 <br />- **コンテンツに基づいてファイルにラベルを付ける**: の既定値のまま **に** します。 <br />- **既定のラベル**: 既定の **ポリシー** の既定値のままにします。 <br />- **ファイルのラベル** を変更する: 既定値を **オフ** のままにします。        |
+    |**ファイル設定の構成**     | - [**更新日]、[最終更新日]、[変更者] を保持し** ます。の既定値のまま **に** します。 <br />- **スキャンするファイルの種類**: [**除外** するファイルの種類を既定のままにする。 <br />- **既定の所有者**: 既定の **スキャナーアカウント** を保持します        |
     | | |
 
 1. コンテンツスキャンジョブの作成と保存が完了したら、[ **リポジトリの構成** ] オプションに戻り、スキャンするデータストアを指定できます。 
@@ -203,28 +208,37 @@ Azure Information Protection スキャナーの構成とインストールを開
         :::image type="content" source="media/scanner-repository-add.png" alt-text="Azure Information Protection スキャナーのデータ リポジトリを追加する":::
 
     1. [ **リポジトリ** ] ウィンドウで、データリポジトリのパスを指定し、[ **保存**] を選択します。
-
-        次に例を示します。 
-
+    
+        
         - ネットワーク共有の場合は、を使用 `\\Server\Folder` します。 
         - SharePoint ライブラリの場合は、を使用 `http://sharepoint.contoso.com/Shared%20Documents/Folder` します。
+        - ローカル パスの場合: `C:\Folder`
+        - UNC パスの場合: `\\Server\Folder`
 
-        > [!NOTE]
-        > ワイルドカードはサポートされていません。また、WebDav の場所はサポートされていません。
-        >     
+    > [!NOTE]
+    > ワイルドカードはサポートされていません。また、WebDav の場所はサポートされていません。
+    >  
+  
+    **共有ドキュメント** の SharePoint パスを追加する場合は、次のようにします。
+    - 共有ドキュメントのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Shared Documents** を指定します。 
+    例: `http://sp2013/SharedDocuments`
+    - 共有ドキュメント下のサブフォルダーのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Documents** を指定します。 
+    例: `http://sp2013/Documents/SalesReports`
+    - または、Sharepoint の **FQDN** だけを指定し `http://sp2013` ます。たとえば、特定の url とサブタイトル [の下にあるすべての sharepoint サイトおよびサブサイトを検出してスキャン](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) します。 この機能を有効にするには、スキャナー **サイトコレクターの監査** 者権限を付与します。 
+    >
 
-        このウィンドウの残りの設定については、この初期構成では変更せず、[ **コンテンツスキャンジョブ] の既定値**のままにしておきます。 既定の設定は、データリポジトリがコンテンツスキャンジョブから設定を継承することを意味します。
 
-        SharePoint パスを追加するときは、次の構文を使用します。
+    このウィンドウの残りの設定については、この初期構成では変更せず、[ **コンテンツスキャンジョブ] の既定値** のままにしておきます。 既定の設定は、データリポジトリがコンテンツスキャンジョブから設定を継承することを意味します。
+
+    SharePoint パスを追加するときは、次の構文を使用します。
     
-        |パス  |構文  |
-        |---------|---------|
-        |**ルートパス**     | `http://<SharePoint server name>` </br></br>スキャナーユーザーに許可されているサイトコレクションも含め、すべてのサイトをスキャンします。 </br>ルートコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です        |
-        |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれか: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
-        |**特定の SharePoint ライブラリ**     | 次のいずれか: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
-        |**特定の SharePoint フォルダー**     | `http://<SharePoint server name>/.../<folder name>`        |
-        | | |
-
+    |パス  |Syntax  |
+    |---------|---------|
+    |**ルートパス**     | `http://<SharePoint server name>` <br /><br />スキャナーユーザーに許可されているサイトコレクションも含め、すべてのサイトをスキャンします。 <br />ルートコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です        |
+    |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれかです。 <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
+    |**特定の SharePoint ライブラリ**     | 次のいずれかです。 <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
+    |**特定の SharePoint フォルダー**     | `http://<SharePoint server name>/.../<folder name>`        |
+    
 
 1. 前の手順を繰り返して、必要な数のリポジトリを追加します。
 
@@ -262,9 +276,9 @@ Azure Information Protection スキャナーの構成とインストールを開
     
     プロンプトが表示されたら、スキャナーサービスアカウントの資格情報 ( \<domain\user name> ) とパスワードを入力します。
 
-1. **管理ツール**サービスを使用して、サービスがインストールされていることを確認し  >  **Services**ます。 
+1. **管理ツール** サービスを使用して、サービスがインストールされていることを確認し  >  **Services** ます。 
     
-    インストールされているサービスの名前は **Azure Information Protection スキャナー**で、作成したスキャナー サービス アカウントを使用して実行するように構成されます。
+    インストールされているサービスの名前は **Azure Information Protection スキャナー** で、作成したスキャナー サービス アカウントを使用して実行するように構成されます。
 
 スキャナーをインストールしたので、スキャナーを無人で実行できるように、スキャナーサービスアカウント [の Azure AD トークンを取得](#get-an-azure-ad-token-for-the-scanner) して認証する必要があります。 
 
@@ -272,7 +286,7 @@ Azure Information Protection スキャナーの構成とインストールを開
 
 Azure AD トークンを使用すると、スキャナーを Azure Information Protection サービスに対して認証できるようになり、スキャナーが非対話形式で実行されるようになります。
 
-詳細については、「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
+「[非対話形式でファイルに Azure Information Protection のラベル付けをする方法](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
 
 Azure AD トークンを取得するには:
 
@@ -282,22 +296,22 @@ Azure AD トークンを取得するには:
 
     前の手順でコピーした値を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行します。
     
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
     ```
         
-    次に例を示します。
+    例:
 
-    ```ps
+    ```PowerShell
     $pscreds = Get-Credential CONTOSO\scanner
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
     Acquired application access token on behalf of CONTOSO\scanner.
     ```
 
 > [!TIP]
-> スキャナーサービスアカウントにインストールの**ローカルログオン**権限が付与されていない場合は、「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」で説明されているように、 [Set-aipauthentication](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipauthentication)で*OnBehalfOf*パラメーターを使用します。
+> スキャナーサービスアカウントにインストールの **ローカルログオン** 権限が付与されていない場合は、「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」で説明されているように、 [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)で *OnBehalfOf* パラメーターを使用します。
 
-これで、Azure AD に対して認証するためのトークンがスキャナーに含まれるようになりました。 このトークンは、Azure AD の **Web アプリ/API** クライアントシークレットの構成に従って、1年間、2年間、またはそれ以上の期間有効です。 
+これで、Azure AD への認証を行うためのトークンがスキャナーに与えられました。 このトークンは、Azure AD の **Web アプリ/API** クライアントシークレットの構成に従って、1年間、2年間、またはそれ以上の期間有効です。 
 
 トークンの有効期限が切れると、この手順を繰り返す必要があります。
 
@@ -315,8 +329,8 @@ Azure AD トークンを取得するには:
 
 2. [コンテンツスキャンジョブ] ウィンドウで、次のように変更し、[ **保存**] を選択します。
     
-   - **コンテンツスキャンジョブ**セクション:**スケジュール**を**常**に変更する
-   - [**ポリシーの適用**] セクションから: [**適用**先] を **[オン**] に変更します。
+   - **コンテンツスキャンジョブ** セクション:**スケジュール** を **常** に変更する
+   - [**ポリシーの適用**] セクションから: [**適用** 先] を **[オン**] に変更します。
     
     > [!TIP]
     > ファイルの属性を変更するかどうかや、スキャナーがファイルのラベルを変更できるかどうかなど、このウィンドウの他の設定を変更することもできます。 情報のポップアップ ヘルプを使って、各構成設定について詳しく学習してください。
@@ -327,7 +341,7 @@ Azure AD トークンを取得するには:
     
     または、PowerShell セッションで次のコマンドを実行します。
     
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -339,19 +353,19 @@ Azure AD トークンを取得するには:
 
 PowerShell コマンドを使用して、必要に応じてこの動作を変更します。たとえば、すべてのファイルの種類を保護するようにスキャナーを構成したり、クライアントと同様に、またはその他の特定のファイルの種類を保護したりします。 
 
-スキャナーのラベルをダウンロードするユーザーアカウントに適用されるラベルポリシーについては、 **PFileSupportedExtensions**という名前の PowerShell の詳細設定を指定します。 
+スキャナーのラベルをダウンロードするユーザーアカウントに適用されるラベルポリシーについては、 **PFileSupportedExtensions** という名前の PowerShell の詳細設定を指定します。 
 
-インターネットにアクセスできるスキャナーの場合、このユーザーアカウントは、 *DelegatedUser* パラメーターに指定するアカウントで、Set-AIPAuthentication コマンドを使用します。
+インターネットにアクセスできるスキャナーの場合、このユーザーアカウントは、Set-AIPAuthentication コマンドで *DelegatedUser* パラメーターに指定したアカウントになります。
 
 **例 1:**  ラベルポリシーが "Scanner" という名前のすべてのファイルの種類を保護するためのスキャナーの PowerShell コマンド:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
 **例 2:** Office ファイルと PDF ファイルに加えて .xml ファイルと tiff ファイルを保護するためのスキャナー用の PowerShell コマンド。ラベルポリシーには "Scanner" という名前が付けられています。
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
 ```
 
@@ -373,7 +387,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 リポジトリ間で一括変更を行うには、次のようにします。
 
-1. [ **リポジトリ** ] ウィンドウの Azure portal で、[ **エクスポート** ] オプションを選択します。 次に例を示します。
+1. [ **リポジトリ** ] ウィンドウの Azure portal で、[ **エクスポート** ] オプションを選択します。 例:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Azure Information Protection スキャナーのデータリポジトリ設定をエクスポートしています":::
 
@@ -398,7 +412,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 |設定  |説明  |
 |---------|---------|
-|**コンテンツに基づいてファイルにラベルを付ける**    |**Off**に設定         |
+|**コンテンツに基づいてファイルにラベルを付ける**    |**Off** に設定         |
 |**既定のラベル**     | [ **カスタム**] に設定し、使用するラベルを選択します。       |
 |**既定のラベルを適用する**     | 既定のラベルが既にラベル付けされている場合でも、すべてのファイルに適用されるようにする場合に選択します。        |
 | | |
@@ -411,9 +425,9 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 |設定  |説明  |
 |---------|---------|
-|**コンテンツに基づいてファイルにラベルを付ける**    |**Off**に設定         |
+|**コンテンツに基づいてファイルにラベルを付ける**    |**Off** に設定         |
 |**既定のラベル**     | **[なし**] に設定  |
-|**ファイルのラベルを再付けする** | [**既定のラベルを強制**する] チェックボックスをオンにして、 **[オン**] に設定します。|
+|**ファイルのラベルを再付けする** | [**既定のラベルを強制** する] チェックボックスをオンにして、 **[オン**] に設定します。|
 | | |
 
 ### <a name="identify-all-custom-conditions-and-known-sensitive-information-types"></a>すべてのカスタム条件と既知の機密情報の種類を識別する
@@ -434,10 +448,10 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 |オプション  |説明  |
 |---------|---------|
-|**スキャナー コンピューターとスキャンされたデータ ストア間のネットワーク接続を高速かつ信頼性の高い接続にする**     |  たとえば、スキャナーコンピューターを同じ LAN、または可能であれば、スキャンしたデータストアと同じネットワークセグメントに配置します。 </br></br>ネットワーク接続の品質はスキャナーのパフォーマンスに影響します。これは、ファイルを検査するために、スキャナーがファイルの内容をスキャナーサービスを実行しているコンピューターに転送するためです。 </br></br>データの移動に必要なネットワークホップを減らしたり、削除したりすると、ネットワークの負荷も軽減されます。      |
-|**スキャナー コンピューターに利用可能なプロセッサ リソースがあることを確認する**     | ファイルの内容の検査とファイルの暗号化と復号化は、プロセッサを集中的に処理する操作です。 </br></br>指定されたデータストアの一般的なスキャンサイクルを監視し、プロセッサリソースの不足がスキャナーのパフォーマンスに悪影響を与えていないかどうかを特定します。        |
-|**スキャナーの複数のインスタンスをインストールする** | スキャナーにカスタムクラスター (プロファイル) 名を指定した場合、Azure Information Protection スキャナーは、同じ SQL server インスタンス上の複数の構成データベースをサポートします。 </br></br>複数のスキャナーで同じクラスター (プロファイル) を共有することもでき、その結果、スキャン時間が短縮されます。|
-|**別の構成の使用方法を確認する** |[代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのファイルに既定のラベルを適用すると、ファイル内容の検査がスキップされるため、スキャナーの実行速度が速くなります。 <br/></br>[代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのカスタム条件と既知の機密情報の種類を特定すると、スキャナーの実行速度が遅くなりなります。|
+|**スキャナー コンピューターとスキャンされたデータ ストア間のネットワーク接続を高速かつ信頼性の高い接続にする**     |  たとえば、スキャナーコンピューターを同じ LAN、または可能であれば、スキャンしたデータストアと同じネットワークセグメントに配置します。 <br /><br />ネットワーク接続の品質はスキャナーのパフォーマンスに影響します。これは、ファイルを検査するために、スキャナーがファイルの内容をスキャナーサービスを実行しているコンピューターに転送するためです。 <br /><br />データの移動に必要なネットワークホップを減らしたり、削除したりすると、ネットワークの負荷も軽減されます。      |
+|**スキャナー コンピューターに利用可能なプロセッサ リソースがあることを確認する**     | ファイルの内容の検査とファイルの暗号化と復号化は、プロセッサを集中的に処理する操作です。 <br /><br />指定されたデータストアの一般的なスキャンサイクルを監視し、プロセッサリソースの不足がスキャナーのパフォーマンスに悪影響を与えていないかどうかを特定します。        |
+|**スキャナーの複数のインスタンスをインストールする** | スキャナーにカスタムクラスター (プロファイル) 名を指定した場合、Azure Information Protection スキャナーは、同じ SQL server インスタンス上の複数の構成データベースをサポートします。 <br /><br />複数のスキャナーで同じクラスター (プロファイル) を共有することもでき、その結果、スキャン時間が短縮されます。|
+|**別の構成の使用方法を確認する** |[代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのファイルに既定のラベルを適用すると、ファイル内容の検査がスキップされるため、スキャナーの実行速度が速くなります。 <br/><br />[代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのカスタム条件と既知の機密情報の種類を特定すると、スキャナーの実行速度が遅くなりなります。|
 | | |
 
 
@@ -448,11 +462,11 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 |要素  |説明  |
 |---------|---------|
 |**読み込み/応答時間**     |スキャンするファイルが含まれているデータストアの現在の負荷と応答時間は、スキャナーのパフォーマンスにも影響します。         |
-|**スキャナーモード** (検出/強制)    | 通常、検出モードは、強制モードよりも高いスキャンレートを持ちます。 </br></br>検出には1つのファイル読み取り操作が必要ですが、強制モードでは読み取りと書き込みの操作が必要です。        |
-|**ポリシーの変更**     |ラベルポリシーで autolabeling を変更した場合、スキャナーのパフォーマンスが影響を受ける可能性があります。 </br></br>最初のスキャンサイクルでは、スキャナーがすべてのファイルを検査する必要があるときに、既定では、新しいファイルと変更されたファイルのみを検査する後続のスキャンサイクルよりも時間がかかります。 </br></br>条件または autolabeling の設定を変更すると、すべてのファイルが再度スキャンされます。 詳細については、「ファイルの再 [スキャン](deploy-aip-scanner-manage.md#rescanning-files)」を参照してください。|
-|**Regex の構造**    | スキャナーのパフォーマンスは、カスタム条件の regex 式がどのように構築されるかによって影響を受けます。 </br></br> メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 </br></br>次に例を示します。 </br>-[最長一致の量指定子](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)を避けます。 </br>-の代わりに、のような非キャプチャグループを使用し `(?:expression)` ます。 `(expression)`    |
-|**ログレベル**     |  ログレベルのオプションには、スキャナーレポートの [ **デバッグ**]、[ **情報**]、[ **エラー** ]、[ **オフ** ] があります。</br></br>- **オフ** にすると最適なパフォーマンスが得られる </br>- **デバッグ** によってスキャナーの速度が大幅に低下するため、トラブルシューティングにのみ使用してください。 </br></br>詳細については、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットの *ReportLevel* パラメーターを参照してください。       |
-|**スキャンされるファイル**     |-Excel ファイルを除き、Office ファイルは PDF ファイルよりもすばやくスキャンされます。 </br></br>-保護されていないファイルは、保護されたファイルよりもスキャンが高速です。 </br></br>-大きなファイルは、小さいファイルよりもスキャンに時間がかかることが明らかです。         |
+|**スキャナーモード** (検出/強制)    | 通常、検出モードは、強制モードよりも高いスキャンレートを持ちます。 <br /><br />検出には1つのファイル読み取り操作が必要ですが、強制モードでは読み取りと書き込みの操作が必要です。        |
+|**ポリシーの変更**     |ラベルポリシーで autolabeling を変更した場合、スキャナーのパフォーマンスが影響を受ける可能性があります。 <br /><br />最初のスキャンサイクルでは、スキャナーがすべてのファイルを検査する必要があるときに、既定では、新しいファイルと変更されたファイルのみを検査する後続のスキャンサイクルよりも時間がかかります。 <br /><br />条件または autolabeling の設定を変更すると、すべてのファイルが再度スキャンされます。 詳細については、「ファイルの再 [スキャン](deploy-aip-scanner-manage.md#rescanning-files)」を参照してください。|
+|**Regex の構造**    | スキャナーのパフォーマンスは、カスタム条件の regex 式がどのように構築されるかによって影響を受けます。 <br /><br /> メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 <br /><br />例: <br />-[最長一致の量指定子](/dotnet/standard/base-types/quantifiers-in-regular-expressions)を避けます。 <br />-の代わりに、のような非キャプチャグループを使用し `(?:expression)` ます。 `(expression)`    |
+|**ログレベル**     |  ログレベルのオプションには、スキャナーレポートの [ **デバッグ**]、[ **情報**]、[ **エラー** ]、[ **オフ** ] があります。<br /><br />- **オフ** にすると最適なパフォーマンスが得られる <br />- **デバッグ** によってスキャナーの速度が大幅に低下するため、トラブルシューティングにのみ使用してください。 <br /><br />詳細については、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットの *ReportLevel* パラメーターを参照してください。       |
+|**スキャンされるファイル**     |-Excel ファイルを除き、Office ファイルは PDF ファイルよりもすばやくスキャンされます。 <br /><br />-保護されていないファイルは、保護されたファイルよりもスキャンが高速です。 <br /><br />-大きなファイルは、小さいファイルよりもスキャンに時間がかかることが明らかです。         |
 | | |
 
 ## <a name="list-of-cmdlets-for-the-scanner"></a>スキャナーのコマンドレットの一覧
@@ -471,15 +485,15 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
-- [MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)
+- [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)
 
-- [MIPNetworkDiscoveryJobs](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)
+- [MIPNetworkDiscoveryJobs](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)
 
-- [MIPNetworkDiscoveryStatus](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
+- [MIPNetworkDiscoveryStatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
 - [インポート-Aipscanの構成](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
-- [MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
+- [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
@@ -489,19 +503,19 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
-- [MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
+- [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 
 - [開始-AIPScanDiagnostics](/powershell/module/azureinformationprotection/Start-AIPScannerDiagnostics)
 
-- [MIPNetworkDiscovery](https://docs.microsoft.com/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
+- [MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
 
 - [停止-AIPScan](/powershell/module/azureinformationprotection/Stop-AIPScan)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 
-- [MIPNetworkDiscovery](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
+- [MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 

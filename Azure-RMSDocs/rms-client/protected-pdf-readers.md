@@ -4,7 +4,7 @@ description: 分類と保護のラベルが付けられた PDF ドキュメン�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/17/2020
+ms.date: 10/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,18 +14,18 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 56aac3e677ab835b0345394be014c1a803bd0b2e
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: e8cd7846159e2299d33b8b6533813ac8502140d3
+ms.sourcegitcommit: 2a72516a1f380adddd6501984b1989e3fa051976
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316724"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "95570823"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>保護された Pdf ではどの PDF リーダーがサポートされていますか。
 
 分類済みまたは保護された pdf の PDF リーダーを使用すると、機密情報を含む暗号化された Pdf を開くことができます。
 
-[Azure Information Protection (AIP)](../what-is-information-protection.md)を使用して pdf を暗号化すると、承認されていないユーザーがファイルの内容を読み取ることができなくなります。また、承認されたユーザーでも、コンテンツを表示する画面やスクリーンショットを共有することはできません。
+[Azure Information Protection (AIP)](../what-is-information-protection.md)を使用して pdf を暗号化すると、承認されていないユーザーがファイルの内容を読み取ることができなくなります。
 
 Azure Information Protection をサポートする保護された PDF リーダーは、ドキュメントを開くためのアクセス許可が付与されていることを確認し、コンテンツの暗号化を解除します。
 
@@ -56,7 +56,7 @@ Azure Information Protection をサポートする保護された PDF リーダ�
 
 Adobe Acrobat Reader は、 [Azure Information Protection](../what-is-information-protection.md) などの Microsoft Information Protection ソリューションと統合して、分類された、または保護された pdf について、シンプルで一貫したエクスペリエンスをユーザーに提供します。
 
-Microsoft Information Protection 統合を使用した Adobe Acrobat Reader は、 [Windows](protected-pdf-readers-windows.md) および [macOS](protected-pdf-readers-mac.md)でサポートされています。
+Microsoft Information Protection 統合を使用した Adobe Acrobat Reader は、 [Windows](#installing-a-protected-pdf-reader-for-windows-or-mac) および [macOS](#installing-a-protected-pdf-reader-for-windows-or-mac)でサポートされています。
 
 詳細については、次のブログ投稿を参照してください。 
 
@@ -82,7 +82,7 @@ Microsoft Edge では、分類および保護されている PDF ファイルを
 1. システムにインストールされている [Microsoft Edge のバージョン](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) を確認します。 
 1. Microsoft Edge のバージョンが83.0.478.37 以上の場合は、Microsoft edge ブラウザーで直接保護されたファイルを開くことができます。 
 
-1. SharePoint で PDF ファイルを開くには、[ブラウザーで**開く] をクリックし**  >  **Open in browser**ます。 
+1. SharePoint で PDF ファイルを開くには、[ブラウザーで **開く] をクリックし**  >  **Open in browser** ます。 
 
     :::image type="content" source="../media/edge_open_browser.png" alt-text="ブラウザーで [ブラウザーで開く] オプションを使用して、Microsoft Edge を使用して保護された PDF を開きます。":::
  
@@ -110,7 +110,7 @@ Microsoft Edge では、分類および保護されている PDF ファイルを
 
 1. 管理者の承認を求めるメッセージが表示された場合は、管理者にプラグインの承認を依頼してください。
 
-    次に例を示します。
+    例:
     
     :::image type="content" source="../media/admin-approval-for-mip-in-adobe-reader.png" alt-text="Acrobat および Acrobat Reader 用 MIP プラグインをインストールするために管理者の承認が必要":::
     

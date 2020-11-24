@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8fad52e81d68625d3589b1324163932ad669a78f
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: dd8a63f3bc761cd7bcaa7b8b40a3309488385acb
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788724"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570726"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -69,7 +69,7 @@ RMS コネクタを構成する前に、ソリューションに一致するク�
 
 :::image type="content" source="media/authenticate_tenant_rms_connector.png" alt-text="新しい AAD RM コネクタを認証するための適切な Azure 環境を選択します":::
 
-クラウド環境を選択したら、 **ユーザー名** と **パスワード**を入力します。 RMS コネクタを構成するための十分な特権を持つアカウントの資格情報を入力してください。 たとえば、「」と入力し、 <strong>admin@contoso.com</strong> このアカウントのパスワードを指定します。
+クラウド環境を選択したら、 **ユーザー名** と **パスワード** を入力します。 RMS コネクタを構成するための十分な特権を持つアカウントの資格情報を入力してください。 たとえば、「」と入力し、 <strong>admin@contoso.com</strong> このアカウントのパスワードを指定します。
 
 
 さらに、[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装済みの場合は、指定するアカウントでコンテンツを保護できることを確認してください。 たとえば、コンテンツの保護機能の使用を "IT 部門" グループに限り許可している場合、ここで指定するアカウントがそのグループのメンバーである必要があります。 それ以外の場合、" **管理サービスと組織の場所を検出できませんでした。" というエラーメッセージが表示されます。組織で Microsoft Rights Management サービスが有効になっていることを確認します。**
@@ -130,7 +130,7 @@ RMS コネクタのインストール プロセスでは、すべての前提条
 
 RMS コネクタをアンインストールする必要がある場合は、ウィザードを再実行してアンインストール オプションを選択します。
 
-インストール中に問題が発生した場合は、インストールログ: **%LocalAppData%\Temp\Microsoft Rights Management connector_ \<date and time> ログ**を確認してください。 
+インストール中に問題が発生した場合は、インストールログ: **%LocalAppData%\Temp\Microsoft Rights Management connector_ \<date and time> ログ** を確認してください。 
 
 たとえば、インストール ログは C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log のようになります。
 
@@ -187,7 +187,7 @@ RMS コネクタの2つ目または最後のインスタンスをインストー
 > [!IMPORTANT]
 > コネクタを使用するように Exchange サーバーまたは SharePoint サーバーを構成した後は、この名前を変更しないことをお勧めします。名前を変更すると、これらのサーバーですべての IRM 構成を消去し、再構成する必要があります。
 
-DNS で名前を作成して IP アドレスを構成したら、そのアドレスに対する負荷分散を構成し、トラフィックを複数のコネクタ サーバーに振り分けます。 その場合、Windows Server のネットワーク負荷分散 (NLB) 機能など、IP ベースの任意のロード バランサーを使用できます。 詳細については、[負荷分散デプロイに関するガイド](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx)を参照してください。
+DNS で名前を作成して IP アドレスを構成したら、そのアドレスに対する負荷分散を構成し、トラフィックを複数のコネクタ サーバーに振り分けます。 その場合、Windows Server のネットワーク負荷分散 (NLB) 機能など、IP ベースの任意のロード バランサーを使用できます。 詳細については、[負荷分散デプロイに関するガイド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754833(v=ws.10))を参照してください。
 
 次の設定を使用して、NLB クラスターを構成します。
 
@@ -215,8 +215,8 @@ HTTPS オプションを使用する場合は、コネクタを実行するす�
 > 次の情報とリソースを使用して、サーバー認証証明書を要求してインストールし、その証明書を IIS の既定の Web サイトにバインドできます。
 >
 > - Active Directory 証明書サービス (AD CS) とエンタープライズ証明機関 (CA) を使用して、これらのサーバー認証証明書を展開する場合は、Web サーバー証明書テンプレートを複製して使用することができます。 この証明書テンプレートでは、証明書のサブジェクト名で [**要求に含まれる**] オプションを使用しています。これにより、証明書を要求する際に、証明書のサブジェクト名またはサブジェクトの別名に RMS コネクタ名の FQDN を指定できます。
-> -   スタンドアロン CA を使用する場合や、この証明書を別の会社から購入している場合は、TechNet の「[Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」 (Web サーバー (IIS)) ドキュメント ライブラリにある「[Configuring Internet Server Certificates (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx)」 (インターネット サーバー証明書の構成 (IIS 7)) 参照してください。
-> - 証明書を使用するように IIS を構成する場合は、TechNet の「[Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」 (Web サーバー (IIS)) ドキュメント ライブラリにある「[Add a Binding to a Site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx)」 (サイトにバインドを追加する (IIS 7)) を参照してください。
+> -   スタンドアロン CA を使用する場合や、この証明書を別の会社から購入している場合は、TechNet の「[Web Server (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10))」 (Web サーバー (IIS)) ドキュメント ライブラリにある「[Configuring Internet Server Certificates (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731977(v=ws.10))」 (インターネット サーバー証明書の構成 (IIS 7)) 参照してください。
+> - 証明書を使用するように IIS を構成する場合は、TechNet の「[Web Server (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10))」 (Web サーバー (IIS)) ドキュメント ライブラリにある「[Add a Binding to a Site (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731692(v=ws.10))」 (サイトにバインドを追加する (IIS 7)) を参照してください。
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Web プロキシ サーバー用の RMS コネクタの構成
 コネクタサーバーがインターネットに直接接続されていないネットワークにインストールされており、インターネットに発信アクセスするために web プロキシサーバーを手動で構成する必要がある場合は、これらのサーバーのレジストリを RMS コネクタ用に構成する必要があります。
@@ -255,4 +255,3 @@ RMS コネクタ管理ツールをインストールするには、次のファ�
 
 ## <a name="next-steps"></a>次のステップ
 これで RMS コネクタのインストールと構成が完了したので、コネクタを使用するようにオンプレミス サーバーを構成することができます。 「[Azure Rights Management コネクタ用にサーバーを構成する](configure-servers-rms-connector.md)」に進みます。
-

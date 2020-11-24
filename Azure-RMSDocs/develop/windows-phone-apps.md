@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 8c36466511749b6148f58c439702c8cd0f252a64
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: 541315cba8d1c14d7284ac6f15c38728fbd4a553
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068510"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570743"
 ---
 # <a name="windows-phone-setup"></a>Windows Phone のセットアップ
 
@@ -31,56 +31,56 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 -   [前提条件](#prerequisites)
 -   [開発環境の構成](#configuring-your-development-environment)
--   [関連項目](#see-also)
+-   [参照](#see-also)
 
 ## <a name="prerequisites"></a>前提条件
 
 
 開発システムには、以下のソフトウェアが必要です。
 
--   [Windows 8.1](https://windows.microsoft.com/windows-8/meet) オペレーティング システム
+-   [Windows 8.1](https://windows.microsoft.com/windows-8/meet)オペレーティングシステム。
 -   [Windows Phone 8.1 の開発ツール (SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) 以降または Visual Studio Express 2012 (Windows Phone SDK 8.0/8.1 に付属)
--   Windows Phone 向け MS RMS SDK 4.2 パッケージ。 詳細については、「[作業開始](get-started.md)」を参照してください。
--   認証ライブラリ: [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) または他の使用可能な認証ライブラリを使用することをお勧めします。
+-   Windows Phone 向け MS RMS SDK 4.2 パッケージ。 詳細については、「 [はじめ](get-started.md)に」を参照してください。
+-   認証ライブラリ: [Azure AD Authentication Library](/previous-versions/azure/jj573266(v=azure.100)) または他の使用可能な認証ライブラリを使用することをお勧めします。
 
-[新機能](release-notes.md)に関するトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
+「[新機能](release-notes.md)」のトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
 
-[Windows Phone の開発](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx)の詳細については、Windows Phone デベロッパー センターでご確認ください。
+[Windows Phone の開発](/previous-versions/windows/apps/ff402535(v=vs.105))の詳細については、Windows Phone デベロッパー センターでご確認ください。
 
 ## <a name="configuring-your-development-environment"></a>開発環境の構成
 
 
 -   *Visual Studio* を開きます。
--   **[ファイル]** をクリックします。 **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。
--   **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C\#]** 、 **[空のアプリケーション (Windows Phone)]** の順に選択し、 **[OK]** をクリックします。
+-   [**ファイル**] をクリックします。 **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。
+-   [**新しいプロジェクト**] ダイアログボックスで、 **[Visual \# C**]、[**空のアプリ (Windows Phone)**] の順に選択し、[ **OK**] をクリックします。
 
-    ![新規プロジェクトの作成](../media/wpsetup-newproj.png)
+    ![新しいプロジェクトの作成](../media/wpsetup-newproj.png)
 
--   ソリューション エクスプローラーでプロジェクトを右クリックし、 **[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
+-   ソリューション エクスプローラーでプロジェクトを右クリックし、**[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
 
     ![参照の追加](../media/wpsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスの左下で **[参照]** をクリックし、パッケージを解凍したフォルダー内にある *Microsoft.RightsManagment.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。 **[Windows 8.1]** -&gt; **[拡張機能]** を選択し、 **[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
+-   **管理対象アプリ**-管理対象アプリを構築するには、この参照を追加する必要があります。**Windows 8.1** - &gt; **拡張機能** を選択し、[windows **Visual C++ Runtime Package for windows** ] チェックボックスをオンにします
 
     ![拡張機能の追加](../media/wpsetup-refmngr.png)
 
--   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、 **[機能]** タブに移動して追加します。
+-   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、**[機能]** タブに移動して追加します。
 
 これで、独自の Windows Phone アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
 [作業開始](get-started.md)
 
 [新機能](release-notes.md)
 
-[コア概念](core-concepts.md)
+[主要な概念](core-concepts.md)
 
-[Windows Phone の開発](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx)
+[Windows Phone の開発](/previous-versions/windows/apps/ff402535(v=vs.105))
 
-[Windows API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx)
+[Windows API リファレンス](/previous-versions/windows/desktop/msipcthin2/winrt)
 
 [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 

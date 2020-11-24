@@ -12,19 +12,19 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d6814e3a7b34ab25d8b38f2813440a717ad4bd1a
-ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
+ms.openlocfilehash: c525903e8b9bca6679455ddc5767c53f28b6d69d
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281955"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95570998"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Azure Information Protection クラシックスキャナーとは何ですか。
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
 
 >[!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 > 統一されたラベル付けクライアントを使用している場合は、「 [Azure Information Protection 統合ラベル付けスキャナーとは](deploy-aip-scanner.md)」を参照してください。
 
@@ -32,12 +32,12 @@ ms.locfileid: "86281955"
 
 AIP スキャナーは、Windows Server 上のサービスとして実行され、次のデータストア上のファイルを検出、分類、および保護することができます。
 
-- サーバーメッセージブロック (SMB) プロトコルを使用するネットワーク共有の**UNC パス**。
+- サーバーメッセージブロック (SMB) プロトコルを使用するネットワーク共有の **UNC パス**。
 
-- Sharepoint server 2013 2019 の sharepoint**ドキュメントライブラリおよびフォルダー** 。 [SharePoint 2010 の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)をご利用のお客様向けに、このバージョンの SharePoint もサポートされています。
+- Sharepoint server 2013 2019 の sharepoint **ドキュメントライブラリおよびフォルダー** 。 
 
 > [!NOTE]
-> クラウド リポジトリ上のファイルをスキャンおよびラベル付けするには、スキャナーの代わりに [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) を使用します。
+> クラウド リポジトリ上のファイルをスキャンおよびラベル付けするには、スキャナーの代わりに [Cloud App Security](/cloud-app-security/) を使用します。
 >
 ## <a name="azure-information-protection-classic-scanner-overview"></a>クラシックスキャナーの Azure Information Protection の概要
 
@@ -47,16 +47,16 @@ AIP スキャナーは、Windows がインデックスを作成できるすべ�
 
 :::image type="content" source="media/classic-scanner-arch.png" alt-text="クラシックスキャナーアーキテクチャの Azure Information Protection":::
 
-ファイルを検査するために、スキャナーはコンピューターにインストールされている IFilters を使用します。 ファイルにラベルを付ける必要があるかどうかを判断するために、スキャナーは Office 365 の組み込みデータ損失防止 (DLP) の機密情報の種類とパターン検出、または Office 365 regex パターンを使用します。
+ファイルを検査するために、スキャナーはコンピューターにインストールされている IFilters を使用します。 ファイルにラベルを付ける必要があるかどうかを判断するために、スキャナーは Microsoft 365 組み込みのデータ損失防止 (DLP) の機密情報の種類とパターンの検出、または正規表現パターンの Microsoft 365 を使用します。
 
 スキャナーは Azure Information Protection クライアントを使用し、クライアントと同じ種類のファイルを分類して保護することができます。 詳細については、「 [Azure Information Protection クライアントでサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)」を参照してください。
 
 次のいずれかの操作を行って、必要に応じてスキャンを構成します。
 
-- **検索モードでスキャナーを実行**するのは、ファイルにラベルが付けられたときに何が起こるかを確認するレポートを作成する場合のみにしてください。
-- 自動分類を適用するラベルを構成せず**に、スキャナーを実行して機密情報を含むファイルを検出**します。
-- 構成に従ってラベルを適用するに**は、スキャナーを自動的に実行**します。
-- スキャンまたは除外する特定のファイルを指定する**ファイルの種類の一覧を定義**します。
+- **検索モードでスキャナーを実行** するのは、ファイルにラベルが付けられたときに何が起こるかを確認するレポートを作成する場合のみにしてください。
+- 自動分類を適用するラベルを構成せず **に、スキャナーを実行して機密情報を含むファイルを検出** します。
+- 構成に従ってラベルを適用するに **は、スキャナーを自動的に実行** します。
+- スキャンまたは除外する特定のファイルを指定する **ファイルの種類の一覧を定義** します。
 
 > [!NOTE]
 > スキャナーはリアルタイムで検出してラベルを付けません。 指定したデータストア上のファイルを体系的にクロールします。 このサイクルを1回または繰り返し実行するように構成します。
@@ -72,19 +72,19 @@ AIP スキャナーは、ファイルをスキャンするときに、次の手�
 [3. 検査できないファイルにラベルを付ける](#3-label-files-that-cant-be-inspected)
 
 > [!NOTE]
-> 詳細については、「[スキャナーによってラベル付けされていないファイル](#files-not-labeled-by-the-scanner)」を参照してください。
+> 詳細については、「 [スキャナーによってラベル付けされていないファイル](#files-not-labeled-by-the-scanner)」を参照してください。
 
 ### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. スキャンのためにファイルが含まれるか除外されるかを決定します。
 
-スキャナーでは、実行可能ファイルやシステム ファイルなど、分類と保護から除外されているファイルは自動的にスキップされます。 詳細については、「[分類と保護から除外されるファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)」を参照してください。
+スキャナーでは、実行可能ファイルやシステム ファイルなど、分類と保護から除外されているファイルは自動的にスキップされます。 詳細については、「 [分類と保護から除外されるファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)」を参照してください。
 
 また、スキャナーは、明示的に定義されたすべてのファイルリストをスキャンするか、スキャンから除外するかを検討します。 ファイルの一覧は、既定ですべてのデータリポジトリに適用されます。また、特定のリポジトリに対してのみ定義できます。
 
-スキャンまたは除外するファイルの種類を定義するには、コンテンツスキャンジョブの [**スキャンするファイルの種類**] を使用します。 次に例を示します。
+スキャンまたは除外するファイルの種類を定義するには、コンテンツスキャンジョブの [ **スキャンするファイルの種類** ] を使用します。 例:
 
 ![Azure Information Protection スキャナー用にスキャンするファイルの種類を構成する](./media/scanner-file-types.png)
 
-詳細については、「[ファイルを自動的に分類して保護するための Azure Information Protection スキャナーの展開](deploy-aip-scanner-configure-install.md)」を参照してください。
+詳細については、「 [ファイルを自動的に分類して保護するための Azure Information Protection スキャナーの展開](deploy-aip-scanner-configure-install.md)」を参照してください。
 
 ### <a name="2-inspect-and-label-files"></a>2. ファイルを検査してラベルを付ける
 
@@ -92,7 +92,7 @@ AIP スキャナーは、ファイルをスキャンするときに、次の手�
 
 これらの追加のフィルターは、Windows Search およびインデックス作成用にオペレーティングシステムで使用されるものと同じであり、追加の構成は必要ありません。 Windows IFilter は、Word、Excel、PowerPoint で使用されるファイルの種類、および PDF ドキュメントやテキストファイルのスキャンにも使用されます。
 
-検査がサポートされているファイルの種類の完全な一覧と、.zip ファイルと tiff ファイルを含めるようにフィルターを構成するための追加の手順については、「[検査でサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)」を参照してください。
+検査がサポートされているファイルの種類の完全な一覧と、.zip ファイルと tiff ファイルを含めるようにフィルターを構成するための追加の手順については、「 [検査でサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)」を参照してください。
 
 検査後、サポートされているファイルの種類は、ラベルに指定された条件を使用してラベル付けされます。 探索モードを使用している場合、これらのファイルには、ラベルに指定された条件を含むようにレポートされるか、既知の機密情報の種類が含まれていることを報告できます。
 
@@ -104,15 +104,15 @@ AIP スキャナーは、ファイルをスキャンするときに、次の手�
 
 AIP スキャナーは、次の状況でファイルにラベルを付けることはできません。
 
-- ラベルに分類が適用され、保護は適用されず、ファイルの種類がクライアントによる分類のみをサポートしていない場合。 詳細については、「[クラシッククライアントファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only)」を参照してください。
+- ラベルに分類が適用され、保護は適用されず、ファイルの種類がクライアントによる分類のみをサポートしていない場合。 詳細については、「 [クラシッククライアントファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only)」を参照してください。
 
 - ラベルに分類と保護が適用されていても、スキャナーがファイルの種類をサポートしていない場合。
   
     既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。
 
-    保護[するファイルの種類を変更](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect)すると、保護のために他の種類のファイルを追加できます。
+    保護 [するファイルの種類を変更](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect)すると、保護のために他の種類のファイルを追加できます。
 
-**例:**.Txt ファイルの種類では分類のみがサポートされていないため、.txt ファイルを検査した後は、[分類のみ] に構成されたラベルをスキャナーで適用することはできません。
+**例:** .Txt ファイルの種類では分類のみがサポートされていないため、.txt ファイルを検査した後は、[分類のみ] に構成されたラベルをスキャナーで適用することはできません。
 
 ただし、ラベルが分類と保護の両方に構成されていて、保護するスキャナーに .txt ファイルの種類が含まれている場合は、スキャナーでファイルにラベルを付けることができます。
 

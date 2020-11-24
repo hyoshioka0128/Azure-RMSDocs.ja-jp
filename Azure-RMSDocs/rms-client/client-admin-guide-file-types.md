@@ -1,10 +1,10 @@
 ---
 title: サポートされているファイルの種類-Azure Information Protection クライアント
 description: Windows 用 Azure Information Protection クライアントを担当する管理者のために、サポートされるファイルの種類、ファイル名拡張子、保護のレベルに関する技術の詳細について説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4213be53fe21491118b4771c22ed43255d5c342d
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: eb1896adf9899700fe03fa1286509602e73c90bd
+ms.sourcegitcommit: c6b0b092735504fd76d74a46d024321673482098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868945"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "95570871"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -27,7 +27,7 @@ ms.locfileid: "86868945"
 > *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection クライアントは、次のことをドキュメントとメールに適用できます。
 
@@ -73,9 +73,9 @@ Azure Information Protection クライアントでは、よく知られている
 
 他のファイルの種類では、保護されている場合に分類がサポートされます。 これらのファイルの種類については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」を参照してください。
 
-たとえば、現在の[既定のポリシー](../configure-policy-default.md)では、**全般**ラベルは、分類を適用しますが、保護を適用しません。 **全般ラベル**の場合 sales.pdf という名前のファイルに適用することは可能ですが、sales.txt という名前のファイルに適用することはできません。 
+たとえば、現在の [既定のポリシー](../configure-policy-default.md)では、**全般** ラベルは、分類を適用しますが、保護を適用しません。 **全般ラベル** の場合 sales.pdf という名前のファイルに適用することは可能ですが、sales.txt という名前のファイルに適用することはできません。 
 
-また、現在の既定のポリシーでは、**社外秘 \ すべての従業員**は分類と保護を適用します。 このラベルの場合は、sales.pdf とい名前のファイルと sales.txt という名前のファイルに、このラベルを適用することが可能です。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
+また、現在の既定のポリシーでは、**社外秘 \ すべての従業員** は分類と保護を適用します。 このラベルの場合は、sales.pdf とい名前のファイルと sales.txt という名前のファイルに、このラベルを適用することが可能です。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
 
 ## <a name="file-types-supported-for-protection"></a>保護がサポートされているファイルの種類
 
@@ -83,7 +83,7 @@ Azure Information Protection クライアントは、次の表に示すように
 
 |保護の種類|ネイティブ|ジェネリック|
 |----------------------|----------|-----------|
-|説明|テキスト、イメージ、Microsoft Office (Word、Excel、PowerPoint) ファイル、.pdf ファイル、および Rights Management サービスをサポートする他のアプリケーションのファイルの種類については、ネイティブ保護で、暗号化と権限の適用 (アクセス許可) の両方を含む強力なレベルの保護が提供されます。|他のすべてのアプリケーションとファイルの種類では、.pfile ファイルの種類を使用したファイルのカプセル化と、ユーザーがファイルを開くことを許可されているかどうかの検証を含む、一般的な保護が提供されます。|
+|説明|テキスト、イメージ、Microsoft Office (Word、Excel、PowerPoint) ファイル、.pdf ファイル、および Rights Management サービスをサポートする他のアプリケーションのファイルの種類については、ネイティブ保護で、暗号化と権限の適用 (アクセス許可) の両方を含む強力なレベルの保護が提供されます。|サポートされているその他のファイルの種類については、汎用的な保護によって、pfile ファイルの種類を使用したファイルのカプセル化と、ファイルを開く権限がユーザーに与えられているかどうかを確認する認証の両方が含まれます。|
 |保護|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、電子メールでファイルを受け取るユーザー、あるいはファイルや共有のアクセス許可によってそれに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。<br /><br />- さらに、ファイルが保護されたときにコンテンツの所有者によって設定された使用権限およびポリシーは、コンテンツが Azure Information Protection ビューアーで表示される (保護されたテキストとイメージ ファイルの場合) か、関連付けられたアプリケーションで表示される (他のサポートされているすべてのファイルの種類の場合) ときに適用されます。|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、ファイルを開く権限があり、それに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。 認証が失敗した場合、ファイルは開きません。<br /><br />- コンテンツの所有者によって設定された使用権限とポリシーが表示され、目的の使用ポリシーが承認済みユーザーに通知されます。<br /><br />- 承認済みユーザーがファイルを開きアクセスしていることを確認する監査ログが実行されます。 ただし、使用権限は適用されません。|
 |ファイルの種類ごとの既定値|これは、次のファイルの種類の既定の保護レベルです。<br /><br />- テキストとイメージ ファイル<br /><br />- Microsoft Office (Word、Excel、PowerPoint) ファイル<br /><br />- Portable Document Format (.pdf)<br /><br />詳細については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」 を参照してください。|これは、ネイティブな保護によってサポートされない他のすべてのファイルの種類 (.vsdx、.rtf など) の既定の保護です。|
 
@@ -168,7 +168,7 @@ Azure Information Protection クライアントがファイルを保護する方
 
     - 32 ビット版の Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
-    - 64ビット版の Windows の場合: **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** and **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection**
+    - Windows の64ビットバージョンの場合: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** と **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
 2. 新しく追加したキー (例: HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*) の中に、新しい文字列値 (REG_SZ) を **Encryption** という名前で作成し、データ値は **Pfile** とします。
 
@@ -176,7 +176,7 @@ Azure Information Protection クライアントがファイルを保護する方
 
 これら 2 つの設定により、Azure Information Protection クライアントは、ファイル名拡張子を持つすべてのファイルに汎用的な保護を適用します。 これが目指す結果の場合、これ以上の構成は必要ありません。 ただし、特定のファイルの種類に例外を定義して、ネイティブ保護を適用することができます。 そのためには、以下のように、ファイルの種類ごとに追加で 3 つ (32 ビット Windows の場合) または 6 つ (64 ビット Windows の場合) のレジストリ編集を行う必要があります。
 
-1. **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection**と**HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** (該当する場合): ファイル名拡張子の名前を持つ新しいキーを追加します (前の期間は含まれません)。
+1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** および **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (該当する場合): ファイル名拡張子の名前を持つ新しいキーを追加します (前のピリオドは付けません)。
 
     たとえば、ファイル名拡張子が .docx であるファイルの場合は、**DOCX** という名前のキーを作成します。
 
@@ -221,12 +221,12 @@ Azure Information Protection クライアントがファイルを保護する方
 
 スキャナーによるファイル検査について、対象または対象外となるファイルの種類を変更することができます。
 
-- [Azure portal を使用して](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)、スキャナープロファイルで**スキャンするファイルの種類**を構成します。
+- [Azure portal を使用して](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)、スキャナープロファイルで **スキャンするファイルの種類** を構成します。
 
 > [!NOTE]
 > スキャン対象に .rtf ファイルを含める場合は、スキャナーを注意深く監視してください。 一部の .rtf ファイルはスキャナーで正常に検査できません。このようなファイルの検査は完了せず、サービスを再開する必要があります。 
 
-既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 このスキャナーの動作を変更するには、レジストリを編集し、保護する追加のファイルの種類を指定します。 手順については、「[レジストリを使用](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect)して、保護するファイルの種類をスキャナーの展開手順から変更する」を参照してください。
+既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 このスキャナーの動作を変更するには、レジストリを編集し、保護する追加のファイルの種類を指定します。 手順については、「 [レジストリを使用](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) して、保護するファイルの種類をスキャナーの展開手順から変更する」を参照してください。
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>既定では保護できないファイル
 
@@ -256,9 +256,9 @@ Azure Information Protection クライアントがファイルを保護する方
 |PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
-構成を追加すると、その他のファイルの種類も検査できます。 たとえば、[カスタム ファイル名拡張子を登録してテキスト ファイルに既存の Windows フィルター ハンドラーを使用する](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters)ことや、ソフトウェア ベンダーから追加のフィルターをインストールすることができます。
+構成を追加すると、その他のファイルの種類も検査できます。 たとえば、[カスタム ファイル名拡張子を登録してテキスト ファイルに既存の Windows フィルター ハンドラーを使用する](/windows/desktop/search/-search-ifilter-registering-filters)ことや、ソフトウェア ベンダーから追加のフィルターをインストールすることができます。
 
-インストールされているフィルターを確認する方法については、Windows Search 開発者ガイドの「[Finding a Filter Handler for a Given File Extension (特定のファイル拡張子用のフィルター ハンドラーの検索)](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension)」セクションをご覧ください。
+インストールされているフィルターを確認する方法については、Windows Search 開発者ガイドの「[Finding a Filter Handler for a Given File Extension (特定のファイル拡張子用のフィルター ハンドラーの検索)](/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension)」セクションをご覧ください。
 
 以下のセクションでは、.zip ファイルと .tiff ファイルを検査するための構成方法について説明します。
 
@@ -268,7 +268,7 @@ Azure Information Protection クライアントがファイルを保護する方
 
 1. スキャナーまたは PowerShell セッションが実行されているコンピューターに、[Office 2010 Filter Pack SP2](https://support.microsoft.com/help/2687447/description-of-office-2010-filter-pack-sp2) をインストールします。
 
-2. スキャナーの場合: 機密情報を見つけた後、.zip ファイルをラベルで分類して保護する必要がある場合は、「[レジストリを使用](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect)して保護するファイルの種類をスキャナーの展開手順で変更する」の説明に従って、汎用的な保護 (pfile) を持つように、このファイル名拡張子のレジストリエントリを追加します。
+2. スキャナーの場合: 機密情報を見つけた後、.zip ファイルをラベルで分類して保護する必要がある場合は、「 [レジストリを使用](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) して保護するファイルの種類をスキャナーの展開手順で変更する」の説明に従って、汎用的な保護 (pfile) を持つように、このファイル名拡張子のレジストリエントリを追加します。
 
 これらの手順の実行後のシナリオ例: 
 
@@ -278,9 +278,9 @@ Azure Information Protection クライアントがファイルを保護する方
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>OCR を使用して .tiff ファイルを検査するには
 
-スキャナーまたは PowerShell セッションが実行されているコンピューターに Windows TIFF IFilter 機能をインストールして、[Windows TIFF IFilter 設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29)を構成すると、Azure Information Protection スキャナーおよび [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドで光学式文字認識 (OCR) を使用して、ファイル名拡張子 .tiff を持つ TIFF イメージを検査できます。
+スキャナーまたは PowerShell セッションが実行されているコンピューターに Windows TIFF IFilter 機能をインストールして、[Windows TIFF IFilter 設定](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10))を構成すると、Azure Information Protection スキャナーおよび [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドで光学式文字認識 (OCR) を使用して、ファイル名拡張子 .tiff を持つ TIFF イメージを検査できます。
 
-スキャナーの場合: 機密情報を見つけた後に、tiff ファイルをラベルで分類および保護する必要がある場合は、「[レジストリを使用](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect)して、保護するファイルの種類をスキャナーの展開手順によって変更する」の説明に従って、このファイル名拡張子のレジストリエントリを追加してネイティブで保護します。
+スキャナーの場合: 機密情報を見つけた後に、tiff ファイルをラベルで分類および保護する必要がある場合は、「 [レジストリを使用](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) して、保護するファイルの種類をスキャナーの展開手順によって変更する」の説明に従って、このファイル名拡張子のレジストリエントリを追加してネイティブで保護します。
 
 ## <a name="next-steps"></a>次のステップ
 Azure Information Protection クライアントによってサポートされるファイルの種類がわかったので、このクライアントのサポートに必要な追加情報を以下のリソースで参照してください。
@@ -292,4 +292,3 @@ Azure Information Protection クライアントによってサポートされる
 - [ドキュメント追跡](client-admin-guide-document-tracking.md)
 
 - [PowerShell コマンド](client-admin-guide-powershell.md)
-
