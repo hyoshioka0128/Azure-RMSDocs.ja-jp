@@ -1,17 +1,17 @@
 ---
 title: クラス ProtectionHandler::P ublishingSettings
 description: Microsoft Information Protection (MIP) SDK の protectionhandler::p ublishingsettings クラスについて説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: fc1de565e103b840c1190b397c247caca515d5bd
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c5edcb9eca5e14d0f0f611f32e2f91d9ed2fcb25
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764424"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567114"
 ---
 # <a name="class-protectionhandlerpublishingsettings"></a>クラス ProtectionHandler::P ublishingSettings 
 新しいコンテンツを保護する ProtectionHandler を作成するために使用される設定。
@@ -19,8 +19,8 @@ ms.locfileid: "81764424"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-公開発行設定 (const std:: shared_ptr\<protectiondescriptor\>& protectiondescriptor)  |  新しいエンジンを作成するための ProtectionHandler:: Settings コンストラクター。
-public std:: shared_ptr\<protectiondescriptor\> getprotectiondescriptor () const  | _まだ文書化されていません。_
+公開発行設定 (const std:: shared_ptr \<ProtectionDescriptor\>& protectiondescriptor)  |  新しいエンジンを作成するための ProtectionHandler:: Settings コンストラクター。
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _まだ文書化されていません。_
 public bool GetIsAuditedExtractionAllowed () const  |  非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されているかどうかを取得します。
 public void SetIsAuditedExtractionAllowed (bool isAuditedExtractionAllowed)  |  非 MIP 対応アプリケーションで保護されたコンテンツを開くことを許可するかどうかを設定します。
 public bool GetIsDeprecatedAlgorithmPreferred () const  |  非推奨の暗号アルゴリズム (ECB) が下位互換性のために推奨されるかどうかを取得します。
@@ -43,14 +43,14 @@ public const std:: string& GetPreLicenseUserEmail () const  |  ライセンス�
 
   
 ### <a name="getprotectiondescriptor-function"></a>GetProtectionDescriptor 関数
-_まだ文書化されていません。_
+まだ文書化されていません。
 
   
 ### <a name="getisauditedextractionallowed-function"></a>GetIsAuditedExtractionAllowed 関数
 非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されているかどうかを取得します。
 
   
-**を返し**ます。非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されている場合
+**を返し** ます。非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されている場合
   
 ### <a name="setisauditedextractionallowed-function"></a>SetIsAuditedExtractionAllowed 関数
 非 MIP 対応アプリケーションで保護されたコンテンツを開くことを許可するかどうかを設定します。
@@ -64,13 +64,13 @@ _まだ文書化されていません。_
 非推奨の暗号アルゴリズム (ECB) が下位互換性のために推奨されるかどうかを取得します。
 
   
-は、deprectated crypto アルゴリズムが推奨される場合は**を返し**ます。
+は、deprectated crypto アルゴリズムが推奨される場合は **を返し** ます。
   
 ### <a name="setisdeprecatedalgorithmpreferred-function"></a>SetIsDeprecatedAlgorithmPreferred 関数
 非推奨の暗号アルゴリズム (ECB) が下位互換性のために推奨されるかどうかを設定します。
 
 パラメーター:  
-* : Deprectated crypto アルゴリズムが推奨される**場合**
+* : Deprectated crypto アルゴリズムが推奨される **場合**
 
 
   
@@ -93,7 +93,7 @@ _まだ文書化されていません。_
 返された pl が json 形式であるかどうかを取得します (xml 形式は広く受け入れられており、既定値です)。
 
   
-は、が json 形式の出力に設定されている場合に True**を返し**ます。
+は、が json 形式の出力に設定されている場合に True **を返し** ます。
   
 ### <a name="setpublishingformatjson-function"></a>Set発行 Formatjson 関数
 返された pl が json 形式であるかどうかを示します (xml 形式は広く受け入れられており、既定値です)。

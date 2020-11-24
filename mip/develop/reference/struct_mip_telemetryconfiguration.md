@@ -1,34 +1,35 @@
 ---
-title: 'struct mip:: TelemetryConfiguration'
+title: 構造体 TelemetryConfiguration
 description: Microsoft Information Protection (MIP) SDK に関連付けられているドキュメント構造。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 4e3e9be086bbcddea5398ccfbe549ffc2ca1aae6
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.date: 09/21/2020
+ms.openlocfilehash: 0599dfb9fdc5d37849c19c9284b2d6fd27cec606
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73567529"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566746"
 ---
-# <a name="struct-miptelemetryconfiguration"></a>struct mip:: TelemetryConfiguration 
+# <a name="struct-telemetryconfiguration"></a>構造体 TelemetryConfiguration 
 カスタムテレメトリ設定 (一般的には使用されません)
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std:: string hostNameOverride  |  ホストテレメトリのインスタンス名。 設定されていない場合、MIP は独自のホストとして機能します。
 public std:: string libraryNameOverride  |  代替テレメトリライブラリ (DLL) ファイル名。
-public std:: shared_ptr\<HttpDelegate\> httpDelegateOverride  |  設定すると、このインスタンスによって HTTP 処理が管理されます
-public std:: shared_ptr\<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  設定した場合、非同期タスクの処理はこのインスタンスによって管理されます。テレメトリオブジェクトを保持できるため、taskDispatcherDelegateOverides を共有することはできません。また、taskDispatcher が解放されるまで、リリースを防ぐ必要があります。
+public std:: shared_ptr \<HttpDelegate\> httpDelegateOverride  |  設定すると、このインスタンスによって HTTP 処理が管理されます
+public std:: shared_ptr \<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  設定した場合、非同期タスクの処理はこのインスタンスによって管理されます。テレメトリオブジェクトを保持できるため、taskDispatcherDelegateOverides を共有することはできません。また、taskDispatcher が解放されるまで、リリースを防ぐ必要があります。
 public bool isNetworkDetectionEnabled  |  設定すると、テレメトリコンポーネントによってバックグラウンドスレッドでネットワークの状態が ping されます。
 public bool isLocalCachingEnabled  |  設定すると、テレメトリコンポーネントはディスク上のキャッシュを使用します。
 public bool isTraceLoggingEnabled  |  設定すると、テレメトリコンポーネントによって警告/エラーログがディスクに書き込まれます
 public bool isTelemetryOptedOut  |  設定すると、必要なサービスデータテレメトリのみが送信されます
 public bool isFastShutdownEnabled  |  設定した場合、シャットダウン時にイベントはアップロードされません。監査イベントはログ記録時に直ちにアップロードされます
-public std:: map\<std:: string、std:: string\> customSettings  |  カスタムテレメトリ設定 >
+public std:: map \<std::string, std::string\> customsettings  |  カスタムテレメトリ設定 >
+public std:: map \<std::string, std::vector\<std::string\> \> maskedProperties  |  マスクする必要があるテレメトリイベント/プロパティ
   
 ## <a name="members"></a>メンバー
   
@@ -61,3 +62,6 @@ public std:: map\<std:: string、std:: string\> customSettings  |  カスタム�
   
 ### <a name="customsettings-struct-member"></a>customSettings 構造体メンバー
 カスタムテレメトリ設定 >
+  
+### <a name="maskedproperties-struct-member"></a>maskedProperties struct メンバー
+マスクする必要があるテレメトリイベント/プロパティ

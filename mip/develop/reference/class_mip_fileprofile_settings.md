@@ -1,17 +1,17 @@
 ---
 title: 'クラス FileProfile:: Settings'
 description: 'Microsoft Information Protection (MIP) SDK の fileprofile:: settings クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 8202dc85cf54b7629d688442a0b386d4ca725ac7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 5ab95e72c1b6198b8619f1fe6b0f850562ff00df
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762745"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566913"
 ---
 # <a name="class-fileprofilesettings"></a>クラス FileProfile:: Settings 
 作成時および有効期間全体にわたって FileProfile に使用される設定。
@@ -19,15 +19,15 @@ ms.locfileid: "81762745"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: shared_ptr\<mipContext\>& MipContext、cacheStorageType cachestoragetype、std:: shared_ptr\<con delegate\> con delegate、std:: shared_ptr\<オブザーバー\>オブザーバー)  |  FileProfile::Settings コンストラクター。
+パブリック設定 (const std:: shared_ptr \<MipContext\>& mipContext、cacheStorageType cacheStorageType、std:: shared_ptr \<ConsentDelegate\> conて delegate、std:: shared_ptr \<Observer\> オブザーバー)  |  FileProfile::Settings コンストラクター。
 パブリック CacheStorageType GetCacheStorageType () const  |  キャッシュをメモリまたはディスクのどちらに格納するかを取得します。
-public std:: shared_ptr\<con、delegate\> getconの delegate () const  |  サービスに接続しているユーザーの同意を要求するために使用する同意委任を取得します。
-public std:: shared_ptr\<オブザーバー\> GetObserver () const  |  FileProfile に関連するイベントの通知を受信するオブザーバーを取得します。
-public std:: shared_ptr\<MipContext\> GetMipContext () const  |  すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
-public std:: shared_ptr\<httpdelegate\> GetHttpDelegate () const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
-public void SetHttpDelegate (const std:: shared_ptr\<httpdelegate\>& httpdelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
-public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
-public void SetTaskDispatcherDelegate (const std:: shared_ptr\<taskDispatcherDelegate\>& TaskDispatcherDelegate)  |  クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
+public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  サービスに接続しているユーザーの同意を要求するために使用する同意委任を取得します。
+public std::shared_ptr\<Observer\> GetObserver() const  |  FileProfile に関連するイベントの通知を受信するオブザーバーを取得します。
+public std:: shared_ptr \<MipContext\> GetMipContext () const  |  すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
+public std:: shared_ptr \<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
+public void SetTaskDispatcherDelegate (const std:: shared_ptr \<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
 public void SetSessionId(const std::string& sessionId)  |  セッション ID を設定します。
 public const std::string& GetSessionId() const  |  セッション ID を取得します。
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  エンドユーザーライセンス (Eul) がローカルにキャッシュされるかどうかを構成します。
@@ -94,7 +94,7 @@ FileProfile に関連するイベントの通知を受信するオブザーバ�
 アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
 
   
-は、非同期タスクの実行に使用される taskdispatcher デリゲートを**返し**ます。
+は、非同期タスクの実行に使用される taskdispatcher デリゲートを **返し** ます。
   
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate 関数
 クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。

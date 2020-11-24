@@ -1,17 +1,17 @@
 ---
 title: MipContext クラス
 description: 'Microsoft Information Protection (MIP) SDK の mipcontext:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cf191a1e770d13d84603fe593d63dedb98bbb14b
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c593ebc368b0717d32e873e6924f80af103325ea
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761468"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566763"
 ---
 # <a name="class-mipcontext"></a>MipContext クラス 
 MipContext は、すべてのプロファイル、エンジン、ハンドラー間で共有される状態を表します。
@@ -25,9 +25,9 @@ public const ApplicationInfo& GetApplicationInfo() const  |  アプリケーシ�
 public const std:: string& GetMipPath () const  |  ログ、キャッシュなどのファイルパスを取得します。
 public bool IsOfflineOnly ()  |  オフラインのみの設定を取得します。
 public LogLevel GetThresholdLogLevel () const  |  しきい値ログレベルを取得します。
-public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate ()  |  Logger の実装を取得します。
+public std:: shared_ptr \<LoggerDelegate\> GetLoggerDelegate ()  |  Logger の実装を取得します。
 public LoggerDelegate * GetRawLoggerDelegate ()  |  Logger の実装を取得します。
-public const std:: map\<のフライト機能、Bool\>& get観光 ingfeatures () const  |  フライト機能セットを取得します。
+public const std:: map \<FlightingFeature, bool\>& get観光 ingfeatures () const  |  フライト機能セットを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -68,7 +68,7 @@ MIP を終了します。
 しきい値ログレベルを取得します。
 
   
-**戻り**値: しきい値ログレベル
+**戻り** 値: しきい値ログレベル
   
 ### <a name="getloggerdelegate-function"></a>GetLoggerDelegate 関数
 Logger の実装を取得します。

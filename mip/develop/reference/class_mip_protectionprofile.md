@@ -1,17 +1,17 @@
 ---
 title: クラス ProtectionProfile
 description: 'Microsoft Information Protection (MIP) SDK の protectionprofile:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: d3a2f02a0dab5bba9b74b264348bcfd7e073f783
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: a783a90b64d5829632e2104ff2706fd86a0d9e68
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764412"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567106"
 ---
 # <a name="class-protectionprofile"></a>クラス ProtectionProfile 
 ProtectionProfile は、保護操作を実行するためのルート クラスです。
@@ -21,11 +21,11 @@ ProtectionProfile は、保護操作を実行するためのルート クラス�
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  初期化時および有効期間全体にわたって ProtectionProfile によって使用される設定を取得します。
-public std:: shared_ptr\<asynccontrol\> ListEnginesAsync (const std:: shared_ptr\<void\>& context)  |  エンジンの一覧操作を開始します。
-public std:: vector\<std:: string\> listengines ()  |  エンジンを一覧表示します。
-public std:: shared_ptr\<asynccontrol\> AddEngineAsync (const protectionengine:: settings& settings, const std:: shared_ptr\<void\>& context)  |  プロファイルへの新しい保護エンジンの追加を開始します。
-public std:: shared_ptr\<protectionengine\> Addengine (const protectionengine:: settings& settings)  |  プロファイルに新しい保護エンジンを追加します。
-public std:: shared_ptr\<asynccontrol\> DeleteEngineAsync (const std:: string& engineId、const std:: shared_ptr\<void\>& context)  |  指定した ID を持つ保護エンジンの削除を開始します。 指定したエンジンのすべてのデータが削除されます。
+public std:: shared_ptr \<AsyncControl\> ListEnginesAsync (const std:: shared_ptr \<void\>& context)  |  エンジンの一覧操作を開始します。
+public std:: vector \<std::string\> listengines ()  |  エンジンを一覧表示します。
+public std:: shared_ptr \<AsyncControl\> AddEngineAsync (Const ProtectionEngine:: settings& settings, const std:: shared_ptr \<void\>& context)  |  プロファイルへの新しい保護エンジンの追加を開始します。
+public std::shared_ptr\<ProtectionEngine\> AddEngine(const ProtectionEngine::Settings& settings)  |  プロファイルに新しい保護エンジンを追加します。
+public std:: shared_ptr \<AsyncControl\> DeleteEngineAsync (const std:: string& engineId、const std:: shared_ptr \<void\>& context)  |  指定した ID を持つ保護エンジンの削除を開始します。 指定したエンジンのすべてのデータが削除されます。
 public void DeleteEngine(const std::string& engineId)  |  指定した ID を持つ保護エンジンを削除します。 指定したエンジンのすべてのデータが削除されます。
   
 ## <a name="members"></a>メンバー
@@ -46,7 +46,7 @@ public void DeleteEngine(const std::string& engineId)  |  指定した ID を持
 
   
 **戻り値**: Async control オブジェクト。
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) は成功または失敗時に呼び出されます。
+ProtectionProfile::Observer は成功または失敗時に呼び出されます。
   
 ### <a name="listengines-function"></a>ListEngines 関数
 エンジンを一覧表示します。

@@ -1,17 +1,17 @@
 ---
 title: Httpresponse.cache クラス
 description: 'Microsoft Information Protection (MIP) SDK の httpresponse.cache:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 6e37613adce0397ed543c4df793a59e74795fb26
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 0a08b2bea4834375a01897b3d657772112463b89
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762465"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566874"
 ---
 # <a name="class-httpresponse"></a>Httpresponse.cache クラス 
 HttpDelegate をオーバーライドするときに、クライアント アプリによって実装される 1 つの HTTP 要求を表すインターフェイス。
@@ -21,8 +21,8 @@ HttpDelegate をオーバーライドするときに、クライアント アプ
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  応答 ID を取得します。
 public int32_t GetStatusCode() const  |  応答の状態コードを取得します。
-public const std:: vector\<Uint8_t\>& getbody () const  |  要求本文を取得します。
-public const std:: map\<std:: string、std:: String、CaseInsensitiveComparator\>& GetHeaders () const  |  要求ヘッダーを取得します。
+public const std:: vector \<uint8_t\>& getbody () const  |  要求本文を取得します。
+public const std:: map \<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders () const  |  要求ヘッダーを取得します。
   
 ## <a name="members"></a>メンバー
   

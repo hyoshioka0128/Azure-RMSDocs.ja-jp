@@ -1,17 +1,17 @@
 ---
 title: クラス NotSupportedError
 description: 'Microsoft Information Protection (MIP) SDK の notsupportederror:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 744b3971d0f0025d868faa77542434aa9d8e085b
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 7bea25ef1a9cccf4b6567ca5cb3eda85db0e970b
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761232"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566686"
 ---
 # <a name="class-notsupportederror"></a>クラス NotSupportedError 
 アプリケーションによって要求された操作は、SDK ではサポートされていません。
@@ -21,4 +21,4 @@ ms.locfileid: "81761232"
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>メンバー
-_まだ文書化されていません。_
+まだ文書化されていません。

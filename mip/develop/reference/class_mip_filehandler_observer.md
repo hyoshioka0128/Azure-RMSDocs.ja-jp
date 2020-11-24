@@ -1,17 +1,17 @@
 ---
 title: 'クラス FileHandler:: オブザーバー'
 description: 'Microsoft Information Protection (MIP) SDK の filehandler:: observer クラスについて説明します。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 90bba9b5cfb27068447512152d14e20c7aa5a7e2
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: d469271718d422216f6eaad905e60cd82e7f1244
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763046"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566953"
 ---
 # <a name="class-filehandlerobserver"></a>クラス FileHandler:: オブザーバー 
 クライアントがファイル ハンドラーに関連する通知イベントを取得するための Observer インターフェイス。
@@ -20,18 +20,18 @@ ms.locfileid: "81763046"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public virtual void Oncreatefileハンドラ Success (const std:: shared_ptr\<filehandler\>& filehandler、const std:: shared_ptr\<void\>& context)  |  ハンドラーが正しく作成されると呼び出されます。
-public virtual void Oncreatefileハンドラ Failure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  ハンドラー フィールドを作成するときに呼び出されます。
-パブリック仮想 void onclassid 年成功 (const std:: vector\<std:: shared_ptr\<Action\> \>& actions、const std:: shared_ptr\<void\>& context)  |  分類が成功したときに呼び出されます。
-パブリック仮想 void Onclassid の失敗 (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  分類に失敗したときに呼び出されます。
-public virtual void OnGetDecryptedTemporaryFileSuccess (const std:: string& decryptedFilePath、const std:: shared_ptr\<void\>& context)  |  復号化された一時ファイルの成功を取得するときに呼び出されます。
-public virtual void OnGetDecryptedTemporaryFileFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  復号化された一時ファイルの取得に失敗したときに呼び出されます。
-public virtual void OnGetDecryptedTemporaryStreamSuccess (const std:: shared_ptr\<Stream\>& decryptedStream、const std:: shared_ptr\<void\>& context)  |  復号化された一時ストリームの成功を取得するときに呼び出されます。
-public virtual void OnGetDecryptedTemporaryStreamFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  復号化された一時ストリームの取得に失敗したときに呼び出されます。
-パブリック仮想 void OnCommitSuccess (bool committed、const std:: shared_ptr\<void\>& context)  |  ファイルに対する変更のコミットが正常に実行された場合に呼び出されます。
-パブリック仮想 void OnCommitFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  失敗したファイルへの変更をコミットするときに呼び出されます。
-public virtual void OnInspectSuccess (const std:: shared_ptr\<fileinspector\>& fileinspector、const std:: shared_ptr\<void\>& context)  |  検査が成功したときに呼び出されます。
-public virtual void OnInspectFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  検査が失敗したときに呼び出されます。
+public virtual void OnCreateFileHandlerSuccess(const std::shared_ptr\<FileHandler\>& fileHandler, const std::shared_ptr\<void\>& context)  |  ハンドラーが正しく作成されると呼び出されます。
+public virtual void OnCreateFileHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  ハンドラー フィールドを作成するときに呼び出されます。
+パブリック仮想 void Onclassid 年成功 (const std:: vector \<std::shared_ptr\<Action\> \>& actions, const std:: shared_ptr \<void\>& context)  |  分類が成功したときに呼び出されます。
+パブリック仮想 void Onclassid の失敗 (const std:: exception_ptr& error、const std:: shared_ptr \<void\>& context)  |  分類に失敗したときに呼び出されます。
+public virtual void OnGetDecryptedTemporaryFileSuccess (const std:: string& decryptedFilePath、const std:: shared_ptr \<void\>& context)  |  復号化された一時ファイルの成功を取得するときに呼び出されます。
+public virtual void OnGetDecryptedTemporaryFileFailure (const std:: exception_ptr& error、const std:: shared_ptr \<void\>& context)  |  復号化された一時ファイルの取得に失敗したときに呼び出されます。
+public virtual void OnGetDecryptedTemporaryStreamSuccess (const std:: shared_ptr \<Stream\>& decryptedStream、const std:: shared_ptr \<void\>& context)  |  復号化された一時ストリームの成功を取得するときに呼び出されます。
+public virtual void OnGetDecryptedTemporaryStreamFailure (const std:: exception_ptr& error、const std:: shared_ptr \<void\>& context)  |  復号化された一時ストリームの取得に失敗したときに呼び出されます。
+public virtual void OnCommitSuccess(bool committed, const std::shared_ptr\<void\>& context)  |  ファイルに対する変更のコミットが正常に実行された場合に呼び出されます。
+public virtual void OnCommitFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  失敗したファイルへの変更をコミットするときに呼び出されます。
+public virtual void OnInspectSuccess (const std:: shared_ptr \<FileInspector\>& fileinspector、const std:: shared_ptr \<void\>& context)  |  検査が成功したときに呼び出されます。
+public virtual void OnInspectFailure (const std:: exception_ptr& error、const std:: shared_ptr \<void\>& context)  |  検査が失敗したときに呼び出されます。
   
 ## <a name="members"></a>メンバー
   

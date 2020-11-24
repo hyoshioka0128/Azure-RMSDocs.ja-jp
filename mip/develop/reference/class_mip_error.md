@@ -1,17 +1,17 @@
 ---
 title: クラスエラー
 description: 'Microsoft Information Protection (MIP) SDK の error:: undefined クラスをドキュメントに記載しています。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 08e770c22f59bf0757039c623cb6ed1ed5b66cd7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 81284b67d3580f9dfc0f4d5f9ac6ded6930a6a0f
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763328"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567002"
 ---
 # <a name="class-error"></a>クラスエラー 
 MIP SDK からレポートされる (スローまたは返される) すべてのエラーの基底クラス。
@@ -21,4 +21,4 @@ MIP SDK からレポートされる (スローまたは返される) すべて�
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>メンバー
-_まだ文書化されていません。_
+まだ文書化されていません。
