@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 73c56e5a5e2facf31eeadd59b36197dea8bbecc2
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: e7d1cacde412ab4ca43256309d2f2c53771d94b0
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563707"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566578"
 ---
 # <a name="functions-c"></a>関数 (C++) 
 
@@ -54,16 +54,13 @@ public ActionType operator ^ (ActionType a, ActionType b)       |  Action タイ
 パラメーター:  
 * **actionsource**: アクションのソース。 
 
-は、アクションソースの文字列形式を**返し**ます。
+は、アクションソースの文字列形式を **返し** ます。
   
 ### <a name="getdatastatestring-function"></a>GetDataStateString 関数
 コンテンツの状態名を取得します。
 
 パラメーター:  
 * **Actionsource**: 作業中のコンテンツの状態。 
-
-
-
   
 **戻り値**: コンテンツの状態の文字列形式。
   
@@ -119,7 +116,7 @@ SCC ポリシー データをエクスポートするファイルのパスを明
 機能が既定で有効になっているかどうかを取得します。
 
   
-**戻り**値: フライト機能の既定の状態
+**戻り** 値: フライト機能の既定の状態
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream 関数
 std::istream からストリームを作成します。
@@ -152,7 +149,7 @@ std::iostream からストリームを作成します。
 
 
   
-は、std:: iostream をラップするストリームを**返し**ます。
+は、std:: iostream をラップするストリームを **返し** ます。
   
 ### <a name="createstreamfrombuffer-function"></a>CreateStreamFromBuffer 関数
 バッファーからストリームを作成します。
@@ -174,7 +171,7 @@ std::iostream からストリームを作成します。
 
 
   
-は、バイトのベクターを**返し**ます。
+は、バイトのベクターを **返し** ます。
   
 ### <a name="operator-function"></a>operator |プロシージャ
 Action タイプの列挙型に対する Or (|) 演算子。
@@ -198,15 +195,15 @@ public std:: string LastModifiedDate ()       | _まだ文書化されていま�
 文字列形式のメタデータキーを監査します。
   
 ### <a name="recipients-function"></a>受信者関数
-_まだ文書化されていません。_
+まだ文書化されていません。
 
   
 ### <a name="lastmodifiedby-function"></a>Lastて関数
-_まだ文書化されていません。_
+まだ文書化されていません。
 
   
 ### <a name="lastmodifieddate-function"></a>LastModifiedDate 関数
-_まだ文書化されていません。_
+まだ文書化されていません。
 
 
 ## <a name="namespace-miprights"></a>空間 `mip::rights` 

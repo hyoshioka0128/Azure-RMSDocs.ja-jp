@@ -1,22 +1,22 @@
 ---
-title: 'struct mip:: ApplicationInfo'
+title: struct ApplicationInfo
 description: Microsoft Information Protection (MIP) SDK に関連付けられているドキュメント構造。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 6bee61bc72de35aeaefd9ef1e7639450392b70a7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.date: 09/21/2020
+ms.openlocfilehash: 4971d7cf0891308733dafd0dc64d58c02343f1e4
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73567427"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566553"
 ---
-# <a name="struct-mipapplicationinfo"></a>struct mip:: ApplicationInfo 
+# <a name="struct-applicationinfo"></a>struct ApplicationInfo 
 アプリケーション固有の情報を含む構造体。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string applicationId  |  AAD ポータルで設定されたアプリケーション id (角かっこなしの GUID である必要があります)。

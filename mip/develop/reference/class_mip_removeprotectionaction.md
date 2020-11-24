@@ -1,17 +1,17 @@
 ---
 title: クラス RemoveProtectionAction
 description: 'Microsoft Information Protection (MIP) SDK の removeprotectionaction:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 20a4bc96585afaebe3f85ffee6050ab130512791
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 4fd28ff7fa4594c73b5315901b36fa02d39c9197
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764380"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566566"
 ---
 # <a name="class-removeprotectionaction"></a>クラス RemoveProtectionAction 
 ドキュメントからの保護の削除を指定するアクション クラス。
@@ -21,4 +21,4 @@ ms.locfileid: "81764380"
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>メンバー
-_まだ文書化されていません。_
+まだ文書化されていません。

@@ -1,17 +1,17 @@
 ---
 title: クラスストリーム
 description: 'Microsoft Information Protection (MIP) SDK の stream:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b2c8be3d6997985b62933d40bf855e48a20ca928
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: a370d6917306f2865c1d91eb7fa90c2880497a04
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764343"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566625"
 ---
 # <a name="class-stream"></a>クラスストリーム 
 MIP SDK とストリーム ベースのコンテンツの間のインターフェイスを定義するクラス。
