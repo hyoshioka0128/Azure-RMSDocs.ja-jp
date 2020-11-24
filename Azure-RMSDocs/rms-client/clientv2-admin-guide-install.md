@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用のラベ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/26/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 26cb50eb6532eccee86eb28313c1cd1ac1751949
-ms.sourcegitcommit: ed3745bff0f0d4883200a310a0b63f7794149330
+ms.openlocfilehash: 0cbb554d09d24b1403c24f52fd5215fdee71ab61
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "95570814"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95735050"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -36,14 +36,14 @@ Azure Information Protection 統合されたラベル付けクライアントを
 
 |要件  |説明  |
 |---------|---------|
-|**Microsoft .NET Framework 4.6.2**     | 既定では Azure Information Protection 統合されたラベル付けクライアントの完全インストールには、Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。 </br></br>このフレームワークがインストールされていない場合は、実行可能ファイルインストーラーのセットアップウィザードによって、この前提条件のダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。       |
-|**Microsoft .NET Framework 4.5.2**     | Azure Information Protection ビューアーが個別にインストールされている場合、ビューアーアプリケーションには Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。 </br></br>**重要:** ビューアーにこのフレームワークがない場合は、実行可能ファイルのインストーラーによってダウンロードまたはインストール *されません* 。        |
-|**Windows PowerShell の最小バージョン4.0**     |   クライアントの PowerShell モジュールには、Windows PowerShell 4.0 の最小バージョンが必要です。これは、古いオペレーティングシステムにインストールする必要がある場合があります。 </br></br>詳細については、「[How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 </br></br>**重要:** インストーラーでは、この前提条件を確認したりインストールしたりすることは *ありません* 。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。      |
+|**Microsoft .NET Framework 4.6.2**     | 既定では Azure Information Protection 統合されたラベル付けクライアントの完全インストールには、Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。 <br><br>このフレームワークがインストールされていない場合は、実行可能ファイルインストーラーのセットアップウィザードによって、この前提条件のダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。       |
+|**Microsoft .NET Framework 4.5.2**     | Azure Information Protection ビューアーが個別にインストールされている場合、ビューアーアプリケーションには Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。 <br><br>**重要:** ビューアーにこのフレームワークがない場合は、実行可能ファイルのインストーラーによってダウンロードまたはインストール *されません* 。        |
+|**Windows PowerShell の最小バージョン4.0**     |   クライアントの PowerShell モジュールには、Windows PowerShell 4.0 の最小バージョンが必要です。これは、古いオペレーティングシステムにインストールする必要がある場合があります。 <br><br>詳細については、「[How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 <br><br>**重要:** インストーラーでは、この前提条件を確認したりインストールしたりすることは *ありません* 。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。      |
 |**800 x 600 より大きい画面の解像度**    |     解像度が 800 x 600 以下だと、エクスプローラーでファイルやフォルダーを右クリックしても、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを完全に表示できません。    |
-|**Microsoft Online Services サインイン アシスタント 7.250.4303.0**     |   Office 2010 を実行しているコンピューターには、クライアントインストールに含まれている Microsoft Online Services サインインアシスタントバージョン7.250.4303.0 が必要です。 </br></br>新しいバージョンのサインインアシスタントがある場合は、Azure Information Protection 統合ラベル付けクライアントをインストールする前にアンインストールしてください。 </br></br>たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >  **Program and Features**  >  **プログラムのアンインストールまたは変更**] を使用します。      |
-|**KB 4482887**     | Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 </br></br>Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。        |
+|**Microsoft Online Services サインイン アシスタント 7.250.4303.0**     |   Office 2010 を実行しているコンピューターには、クライアントインストールに含まれている Microsoft Online Services サインインアシスタントバージョン7.250.4303.0 が必要です。 <br><br>新しいバージョンのサインインアシスタントがある場合は、Azure Information Protection 統合ラベル付けクライアントをインストールする前にアンインストールしてください。 <br><br>たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >  **Program and Features**  >  **プログラムのアンインストールまたは変更**] を使用します。      |
+|**KB 4482887**     | Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 <br><br>Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。        |
 |**管理者のアクセス許可**| Azure Information Protection の統合ラベル付けクライアントをインストールするには、ローカルの管理アクセス許可が必要です。| 
-|**Exploit protection を無効にする**   |AIP クライアントは、 [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっているコンピューターではサポートされていません。 AIP クライアントをインストールする前に、 [Exploit protection が無効](../known-issues.md#known-issues-for-installing-the-aip-client) になっていることを確認してください。  |
+|**Exploit protection を無効にする (.NET 2 または3のみ)**   |AIP クライアントは、 [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっている .net 2 または3のコンピューターではサポートされていません。 上記の .NET 4.x バージョンに加えて、コンピューターに .NET 2 または3がある場合は、AIP クライアントをインストールする前に、 [Exploit protection を無効](../known-issues.md#known-issues-for-aip-and-exploit-protection) にしてください。  |
 |||
         
 ### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>AIP が無効にならないようにグループポリシーを構成する

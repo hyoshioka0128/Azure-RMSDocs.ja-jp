@@ -1,10 +1,10 @@
 ---
-title: IOS & Android 用 Azure Information Protection アプリ
-description: IOS および Android デバイス用の Azure Information Protection (AIP) アプリの基本について説明します。
+title: IOS & Android 用モバイルアプリの Azure Information Protection
+description: IOS および Android デバイス用の Azure Information Protection (AIP) モバイルアプリの基本について説明します。
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/07/2020
+ms.date: 11/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 42c74f9ffa8097768e4ab97d1dea6e75bc0aaffc
-ms.sourcegitcommit: b5043f88f9287e63b510f44a5e6ceaead9093163
+ms.openlocfilehash: 17f1efc5c5e0c01f33e638d1ef674a81b17494f8
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "95570790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734966"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>IOS または Android 用の Azure Information Protection アプリとは
 
 *適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-IOS および Android 用の Azure Information Protection (AIP) モバイルアプリを使用すると、保護された電子メールメッセージ、Pdf、画像、テキストファイルを表示できます。これらのファイルの種類の通常のアプリで保護がサポートされていない場合に便利です。 
+IOS および Android 用の Azure Information Protection (AIP) モバイルアプリは、保護された電子メールメッセージ、Pdf、画像、テキストファイルを表示できるビューアーアプリです。これらのファイルの種類の通常のアプリで保護がサポートされていない場合に便利です。 
 
 たとえば、保護された電子メールが通常の電子メールモバイルアプリに添付ファイルとして表示される場合は、AIP モバイルアプリを使用してその電子メールを表示できます。
 
@@ -65,7 +65,7 @@ IOS および Android 用の Azure Information Protection (AIP) モバイルア�
 
     [**ファイルを共有**] を選択し、[ **AIP ビューアーにコピー** ] を選択します。
 
-    例:
+    次に例を示します。
 
     :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="IOS の AIP ビューアーに共有する" border="false":::
 

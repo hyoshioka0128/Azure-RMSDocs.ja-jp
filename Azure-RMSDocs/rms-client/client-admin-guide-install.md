@@ -4,7 +4,7 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 11/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 468e7a5b7ef5482b1027d491adf6b6b4d8271261
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 3d16d735f6119617eb12599f110f8c22682992d4
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570446"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734999"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -79,7 +79,7 @@ ms.locfileid: "95570446"
 
         PowerPoint の場合: `MSIP.PowerPointAddin`
 
-- AIP クライアントは、 [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっているコンピューターではサポートされていません。 AIP クライアントをインストールする前に、 [Exploit protection が無効](../known-issues.md#known-issues-for-installing-the-aip-client) になっていることを確認してください。  
+- AIP クライアントは、 [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっている .net バージョン2または3のコンピューターではサポートされていません。 上記の .NET 4.x バージョンに加えて、コンピューターに .NET version 2 または3がある場合は、AIP クライアントをインストールする前に、 [Exploit protection を無効](../known-issues.md#known-issues-for-aip-and-exploit-protection) にしてください。  
 
 > [!IMPORTANT]
 > Azure Information Protection クライアントのインストールには、ローカル管理者権限が必要です。
@@ -90,8 +90,8 @@ ms.locfileid: "95570446"
 
 |インストール オプション  |説明  |
 |---------|---------|
-|**クライアント実行可能ファイル (.exe) を実行します。**  </br></br> [手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | インストールを対話形式またはサイレントモードで実行するには、クライアントの .exe バージョンを実行することをお勧めします。</br></br> .Exe ファイルを実行すると、最も柔軟性が高くなります。また、前提条件の多くをチェックし、不足している必須コンポーネントをインストールすることもできるため、このファイルを使用することをお勧めします。 |
-|**クライアントの Windows インストーラー (.msi) を展開する** </br></br> [手順](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Azure Information Protection クライアントの Windows インストーラーは、中央の展開メカニズムを使用するサイレントインストールでのみサポートされています。</br></br> たとえば、グループポリシー、Configuration Manager、Microsoft Intune と共に展開する場合は、.msi ファイルを使用します。</br></br> Intune で管理され、モバイルデバイス管理 (MDM) の .exe ファイルは、これらのコンピューターではサポートされていない Windows 10 Pc に対しては、この方法を使用する必要があります。</br></br>**注:** .Msi のインストールを使用する場合は、前提条件を手動で確認し、必要な依存ソフトウェアをインストールまたはアンインストールする必要があります。 |
+|**クライアント実行可能ファイル (.exe) を実行します。**  <br><br> [手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | インストールを対話形式またはサイレントモードで実行するには、クライアントの .exe バージョンを実行することをお勧めします。<br><br> .Exe ファイルを実行すると、最も柔軟性が高くなります。また、前提条件の多くをチェックし、不足している必須コンポーネントをインストールすることもできるため、このファイルを使用することをお勧めします。 |
+|**クライアントの Windows インストーラー (.msi) を展開する** <br><br> [手順](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Azure Information Protection クライアントの Windows インストーラーは、中央の展開メカニズムを使用するサイレントインストールでのみサポートされています。<br><br> たとえば、グループポリシー、Configuration Manager、Microsoft Intune と共に展開する場合は、.msi ファイルを使用します。<br><br> Intune で管理され、モバイルデバイス管理 (MDM) の .exe ファイルは、これらのコンピューターではサポートされていない Windows 10 Pc に対しては、この方法を使用する必要があります。<br><br>**注:** .Msi のインストールを使用する場合は、前提条件を手動で確認し、必要な依存ソフトウェアをインストールまたはアンインストールする必要があります。 |
 
 クライアントをインストールした後、同じインストール方法を繰り返して更新を実行するか、Windows Update を使用してクライアントを自動的に更新します。 新しいバージョンをインストールする前に、レガシバージョンのクライアントをアンインストールする必要はありません。
 
