@@ -4,7 +4,7 @@ description: Windows 用に Azure Information Protection 統合ラベルクラ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/10/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edfd5a5f309228c7f75a895e40826b65af74e1d7
-ms.sourcegitcommit: 04b9d7ee1ce8b6662ceda5a13b7b0d5630c91d28
+ms.openlocfilehash: cd640f1fd60f1ca9872bb3741bfa5d1f0426b18e
+ms.sourcegitcommit: 1c12edc8ca4bfac9eb4e87516908cafe6e5dd42a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "95570975"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96034389"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントのカスタム構成
 
@@ -36,7 +36,7 @@ AIP の統一されたラベル付けクライアントを管理する際に、�
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Office 365 セキュリティ & コンプライアンスセンター PowerShell を使用してクライアントの詳細設定を構成する方法
 
-Office 365 Security & コンプライアンスセンターの PowerShell を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 例:
+Office 365 Security & コンプライアンスセンターの PowerShell を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 次に例を示します。
 
 - Office アプリの Information Protection バーを表示する設定は、***ラベルポリシーの詳細設定** _ です。
 - ラベルの色を指定する設定は、 _*_ラベルの詳細設定_*_ です。
@@ -171,6 +171,7 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 |PFileSupportedExtensions|[保護するファイルの種類を変更する](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[必須のラベル付けを使用するときにドキュメントの "後で" を削除する](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)|
+|RemoveExternalMarkingFromCustomLayouts | [PowerPoint でカスタムレイアウトから外部コンテンツマークを削除する](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
 |ReportAnIssueLink|[ユーザー向けの "問題の報告" を追加する](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[バックグラウンドでの分類の継続的実行をオンにする](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[スキャナーで使用されるスレッドの数を制限する](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -462,19 +463,14 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkin
 
 ### <a name="how-to-configure-externalcontentmarkingtoremove"></a>ExternalContentMarkingToRemove を構成する方法
 
-**ExternalContentMarkingToRemove** キーに文字列値を指定するときには、正規表現を使用する 3 つのオプションがあります。
+**Externalcontentmarkingtoremove** キー] に文字列値を指定すると、正規表現を使用する3つのオプションが表示されます。 これらの各シナリオについて、次の表の「 **値の例** 」の列に示されている構文を使用します。
 
-- ヘッダーまたはフッターのすべてを削除する部分一致。
-
-    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 これらのヘッダーまたはフッターを完全に削除したいとします。 値 `*TEXT*` を指定します。
-
-- ヘッダーまたはフッターの特定の単語のみを削除する完全一致。
-
-    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 単語 **TEXT** のみを削除し、ヘッダーまたはフッター文字列は **TO REMOVE** として残したいとします。 値 `TEXT ` を指定します。
-
-- ヘッダーまたはフッターのすべてを削除する完全一致。
-
-    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 正確にこの文字列が含まれているヘッダーまたはフッターを削除したいとします。 値 `^TEXT TO REMOVE$` を指定します。
+|オプション  |説明の例 |値の例|
+|---------|---------|---------|
+|**ヘッダーまたはフッター内のすべてを削除する部分的な一致**     | ヘッダーまたはフッターには、 **削除する文字列テキスト** が含まれており、これらのヘッダーまたはフッターを完全に削除する必要があります。   |`*TEXT*`  | 
+|**ヘッダーまたはフッター内の特定の単語だけを削除するには、[一致する文字列を入力します。**     |    ヘッダーまたはフッターには **削除する文字列テキスト** が含まれており、 **テキスト** のみを削除して、ヘッダーまたはフッター文字列を **削除** する場合は削除します。      |`TEXT ` |
+|**ヘッダーまたはフッター内のすべてを削除するための完全一致**     |ヘッダーまたはフッターには、 **削除する文字列テキスト** が含まれています。 正確にこの文字列が含まれているヘッダーまたはフッターを削除したいとします。         |`^TEXT TO REMOVE$`|
+|     |         | |
 
 
 指定した文字列のパターン マッチングでは大文字と小文字が区別されます。 文字列の最大長は255文字で、空白を含めることはできません。 
@@ -495,7 +491,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="multiline-headers-or-footers"></a>複数行のヘッダーまたはフッター
 
-ヘッダーまたはフッターのテキストが複数行にわたる場合は、行ごとにキーと値を作成します。 たとえば、2 行にわたる次のフッターがあるとします。
+ヘッダーまたはフッターのテキストが複数行にわたる場合は、行ごとにキーと値を作成します。 たとえば、次の2行のフッターがあるとします。
 
 **ファイルは社外秘として分類**
 
@@ -517,13 +513,20 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="optimization-for-powerpoint"></a>PowerPoint 用の最適化
 
-PowerPoint では、フッターが図形として実装されます。 指定したテキストのうち、ヘッダーまたはフッターでない図形が削除されるのを防ぐには、**PowerPointShapeNameToRemove** という名前の、追加のクライアントの詳細設定を使用します。 また、すべての図形のテキストのチェックはリソースを消費するプロセスであるため、この設定を使用して回避することをお勧めします。
+PowerPoint のヘッダーとフッターは、図形として実装されます。 
+
+ヘッダーまたはフッターでは *なく* 、指定したテキストを含む図形を削除しないようにするには、 **PowerPointShapeNameToRemove** という名前の追加のアドバンストクライアント設定を使用します。 また、すべての図形のテキストのチェックはリソースを消費するプロセスであるため、この設定を使用して回避することをお勧めします。
 
 - この追加のクライアントの詳細設定を指定せず、PowerPoint が **RemoveExternalContentMarkingInApp** キーの値に含まれている場合、**ExternalContentMarkingToRemove** で指定したテキストがすべての図形でチェックされます。 
 
 - この値が指定されている場合は、図形名の条件を満たす図形だけでなく、 **Externalcontentmarkingtoremove** によって提供された文字列と一致するテキストも削除されます。
 
-**ヘッダーまたはフッターとして使用している図形の名前を検索するには:**
+また、PowerPoint でカスタムレイアウトが構成されている場合、既定の動作では、カスタムレイアウト内で見つかった図形は無視されます。 カスタムレイアウト内から外部コンテンツマーキングを明示的に削除するには、 **Removeexternalmarkingfromcustomlayouts** 詳細プロパティを true に設定し **ます。**
+
+> [!NOTE]
+> このセクションで説明するクライアントの詳細設定でサポートされている PowerPoint 図形の種類は、 **Msotextbox、** **MsoTextEffect、** および **msotextbox** です。
+>
+##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>ヘッダーまたはフッターとして使用している図形の名前を検索する
 
 1. PowerPoint の **選択** ウィンドウを表示し、**[書式]** タブ > **[配置]** グループ > **[選択ウィンドウ]** の順に選択します。
 
@@ -555,6 +558,22 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+```
+
+##### <a name="remove-external-content-marking-from-custom-layouts-in-powerpoint"></a>PowerPoint でカスタムレイアウトから外部コンテンツマークを削除する
+
+この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの [詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) を使用します。
+
+既定では、外部コンテンツマーキングを削除するために使用されるロジックは、PowerPoint で構成されたカスタムレイアウトを無視します。 このロジックをカスタムレイアウトに拡張するには、 **Removeexternalmarkingfromcustomlayouts** 詳細プロパティを **True** に設定します。
+
+- キー: **Removeexternalmarkingfromcustomlayouts**
+
+- 値: **True**
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
 ```
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>エクスプローラーでカスタムアクセス許可を無効にする
@@ -1067,7 +1086,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProp
 
 機密ラベルによって適用されるメタデータに加えて、1つまたは複数のカスタムプロパティをドキュメントまたは電子メールメッセージに適用する場合は、いくつかのシナリオが考えられます。
 
-例:
+次に例を示します。
 
 - セキュリティで保護された島など、 [別のラベル付けソリューションから移行](#migrate-labels-from-secure-islands-and-other-labeling-solutions)しています。 移行中の相互運用性を確保するために、機密ラベルを使用して、他のラベル付けソリューションで使用されるカスタムプロパティを適用することもできます。
 
@@ -1318,7 +1337,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **読み取り専用またはアーカイブ済みのファイルをスキップする**
 
-ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 例:
+ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 次に例を示します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1368,7 +1387,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwne
 
 表示される既定 **の他の** テキストを変更するには、 **JustificationTextForUserText** advanced プロパティを使用して、このコマンドレットを [設定](/powershell/module/exchange/set-labelpolicy) します。 代わりに、使用するテキストに値を設定します。
 
-例:
+次に例を示します。
 
 ``` PowerShell
 

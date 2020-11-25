@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to extend Microsoft 365's labeling 
 ms.custom: contperfq2
 search.appverid:
 - MET150
-ms.openlocfilehash: 4a945f07532786c268886a44de23430be9a78700
-ms.sourcegitcommit: 822b23024cfd01ea41ac6ae9370489193782f078
+ms.openlocfilehash: 7ee4c5c26792a56c2637d62a67e2921df8c99a61
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634701"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924953"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -47,7 +47,7 @@ Azure Information Protection 統合ラベル付けクライアントにより、
     
 ## <a name="aip-on-premises-scanner"></a>AIP オンプレミス スキャナー
 
-Azure Information Protection オンプレミス スキャナーを使用すると、管理者は自分のネットワークおよびオンプレミスのファイル リポジトリをスキャンして、ラベル付け、分類、保護を必要とする機密コンテンツを検索することができます。
+Azure Information Protection オンプレミス スキャナーを使用すると、管理者は自分のオンプレミスのファイル リポジトリをスキャンして、ラベル付け、分類、保護を必要とする機密コンテンツを検索することができます。
 
 オンプレミス スキャナーは、統合ラベル付けクライアントの一部として提供されている PowerShell コマンドレットを使用してインストールします。そして、PowerShell、および Azure portal の Azure Information Protection 領域を使用して管理することができます。
 
