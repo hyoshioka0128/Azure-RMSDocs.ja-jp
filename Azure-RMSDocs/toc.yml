@@ -81,7 +81,7 @@
               href: migrate-from-ad-rms-phase5.md
     - name: Azure Information Protection ポリシー
       href: overview-policy.md
-    - name: Security
+    - name: セキュリティ
       items:
         - name: セキュリティ ベースライン
           href: security-baseline.md
@@ -319,7 +319,7 @@
                       href: ./rms-client/client-protection-only-mode.md
                     - name: RMS 共有アプリケーションで実行していたタスク
                       href: ./rms-client/upgrade-client-app.md
-        - name: iOS 用と Android 用の Azure Information Protection
+        - name: iOS 用と Android 用の Azure Information Protection モバイル アプリ
           href: ./rms-client/mobile-app-faq.md
         - name: 保護された PDF リーダー
           href: ./rms-client/protected-pdf-readers.md
