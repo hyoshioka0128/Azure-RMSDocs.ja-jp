@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.date: 07/29/2020
 ms.author: tommos
 ms.openlocfilehash: fdbcf9d618612021a971af34380b65dc062c2802
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95570143"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316536"
 ---
 # <a name="microsoft-information-protection-sdk---proxy-support"></a>Microsoft Information Protection SDK-プロキシのサポート
 
@@ -26,11 +26,11 @@ ms.locfileid: "95570143"
   
 | プラットフォーム        | 透過プロキシ | 認証されたプロキシ | プロキシの自動検出 | 明示的なプロキシ |
 | --------------- | ----------------- | --------------------- | -------------------- | -------------- |
-| **Windows**     | サポートされています         | サポートされていません         | サポートされています            | サポートされています      |
+| **Windows**     | サポートされています         | サポートされていません         | サポートされています            | サポート      |
 | **Linux (すべて)** | サポートされています         | サポートされていません         | サポートされていません        | サポートされていません  |
 | ****       | サポートされています         | サポートされていません         | サポートされていません        | サポートされていません  |
 | **Android**     | サポートされています         | サポートされていません         | サポートされていません        | サポートされていません  |
-| **iOS**         | サポートされています         | サポートされていません         | サポートされていません        | サポートされていません  |
+| **Android**         | サポートされています         | サポートされていません         | サポートされていません        | サポートされていません  |
 
 ## <a name="proxies-on-windows"></a>Windows 上のプロキシ
 
@@ -69,7 +69,7 @@ profileSettings.SetHttpDelegate(httpDelegate);
 
 カスタム HTTP デリゲートがオプションでない場合は、プロキシをバイパスし、MIP ラベルと保護エンドポイントの直接ネットワーク接続を許可し、Azure Active Directory する必要があります。 [監査ログ](/azure/information-protection/reports-aip)が必要な場合は、監査ログのエンドポイントも必要です。
 
-| エンドポイント           | hostname                                                                                                                                                                |
+| エンドポイント           | Hostname (ホスト名)                                                                                                                                                                |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 保護サービス | https://api.aadrm.com                                                                                                                                                   |
 | ポリシー             | https:// \* protection.outlook.com                                                                                                                                       |

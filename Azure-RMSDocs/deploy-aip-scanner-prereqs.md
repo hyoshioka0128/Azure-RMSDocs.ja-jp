@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 266ff1c9ff09b9b9b1a2133601f5adf44a4c7d4a
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: a1833ca3bb60030414213076f68ca78ddb5534af
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95571007"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316247"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベル付けスキャナーをインストールおよびデプロイするための前提条件
 
@@ -163,11 +163,13 @@ Azure Information Protection クライアントの現在の [一般公開バー�
 
 SharePoint ドキュメントライブラリおよびフォルダーをスキャンするには、SharePoint サーバーが次の要件を満たしていることを確認します。
 
-- **サポートされているバージョン。** サポートされているバージョンは、SharePoint 2019、SharePoint 2016、および SharePoint 2013 です。 スキャナーでは SharePoint の他のバージョンはサポートされていません。
-
-- **版.** [バージョン管理](/sharepoint/governance/versioning-content-approval-and-check-out-planning)を使用すると、スキャナーは最後に発行されたバージョンを検査してラベルを付けます。 スキャナーがファイルと [コンテンツの承認](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) を必要とする場合は、そのラベルの付いたファイルをユーザーが使用できるように承認する必要があります。  
-
-- **大規模な SharePoint ファーム。** 大規模な SharePoint ファームの場合は、スキャナーがすべてのファイルにアクセスするために、リスト ビューのしきい値 (既定では 5,000) を増やす必要があるかどうかを確認します。 詳細については、「 [SharePoint での大規模なリストとライブラリの管理](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)」を参照してください。
+|要件  |説明  |
+|---------|---------|
+|**サポートされているバージョン** | サポートされているバージョンは、SharePoint 2019、SharePoint 2016、および SharePoint 2013 です。 <br> スキャナーでは SharePoint の他のバージョンはサポートされていません。     |
+|**バージョン管理**     |  [バージョン管理](/sharepoint/governance/versioning-content-approval-and-check-out-planning)を使用すると、スキャナーは最後に発行されたバージョンを検査してラベルを付けます。 <br><br>スキャナーがファイルと [コンテンツの承認](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) を必要とする場合は、そのラベルの付いたファイルをユーザーが使用できるように承認する必要があります。       |
+|**大規模な SharePoint ファーム** |大規模な SharePoint ファームの場合は、スキャナーがすべてのファイルにアクセスするために、リスト ビューのしきい値 (既定では 5,000) を増やす必要があるかどうかを確認します。 <br><br>詳細については、「 [SharePoint での大規模なリストとライブラリの管理](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)」を参照してください。 |
+|**長いファイルパス**  |SharePoint に長いファイルパスがある場合は、SharePoint サーバーの HttpRuntime の [maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) 値が既定の260文字より大きいことを確認します。 <br><br>詳細については、「 [SharePoint でのスキャナータイムアウトの回避](rms-client/clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint)」を参照してください。 | 
+| | |
 
 ## <a name="microsoft-office-requirements"></a>Microsoft Office の要件
 
@@ -243,11 +245,21 @@ SharePoint ポリシーレベルを管理する方法の詳細については、
 
 統一されたラベル付けクライアントは、インターネット接続を使用せずに保護を適用できませんが、インポートされたポリシーに基づいてラベルを適用することはできます。
 
-切断されたコンピューターをサポートするには、次の手順を実行します。
+切断されたコンピューターをサポートするには、次のいずれかの方法を使用します。
+
+- [Azure portal を使用](#use-the-azure-portal-with-a-disconnected-computer) する (可能な場合は推奨)
+
+- [PowerShell の使用](#use-powershell-with-a-disconnected-computer)
+
+#### <a name="use-the-azure-portal-with-a-disconnected-computer"></a>切断されたコンピューターで Azure portal を使用する
+
+Azure portal から切断されたコンピューターをサポートするには、次の手順を実行します。
 
 1.  ポリシーのラベルを構成し、切断された [コンピューターをサポートする手順](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) を使用して、オフラインでの分類とラベル付けを有効にします。
 
-1. コンテンツスキャンジョブのオフライン管理を有効にする:
+1. 次のように、コンテンツおよびネットワークスキャンジョブのオフライン管理を有効にします。
+
+    **コンテンツスキャンジョブのオフライン管理を有効にする:**
 
     1. スキャナーを **オフライン** モードで機能するように設定するには、 [Set-Aipscanの configuration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) コマンドレットを使用します。
 
@@ -259,7 +271,7 @@ SharePoint ポリシーレベルを管理する方法の詳細については、
     
     オフラインコンテンツスキャンジョブの結果は次の場所にあります: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
     
-1. ネットワークスキャンジョブのオフライン管理を有効にする:
+    **ネットワークスキャンジョブのオフライン管理を有効にする:**
 
     1. ネットワーク探索サービスをオフラインモードで機能するように設定するには、 [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) コマンドレットを使用します。
 
@@ -270,6 +282,37 @@ SharePoint ポリシーレベルを管理する方法の詳細については、
     1.  [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration)コマンドレットを使用して、クラスター名と一致するファイルを使用してネットワークスキャンジョブをインポートします。  
     
     オフラインのネットワークスキャンジョブの結果は次の場所にあります: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
+
+#### <a name="use-powershell-with-a-disconnected-computer"></a>接続されていないコンピューターで PowerShell を使用する
+
+PowerShell のみを使用して切断されたコンピューターをサポートするには、次の手順を実行します。
+
+**PowerShell のみを使用してコンテンツスキャンジョブを管理します。**
+
+1. スキャナーを **オフライン** モードで機能するように設定するには、 [Set-Aipscanの configuration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) コマンドレットを使用します。
+
+1. [AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)コマンドレットを使用して新しいコンテンツスキャンジョブを作成し、必ず必須パラメーターを使用し `-Enforce On` ます。
+
+1. 追加するリポジトリのパスと共に、 [Add Aipscanを](/powershell/module/azureinformationprotection/add-aipscannerrepository) 使用してリポジトリを追加します。
+
+    > [!TIP]
+    > リポジトリがコンテンツスキャンジョブから設定を継承しないようにするには、 `OverrideContentScanJob On` パラメーターと追加設定の値を追加します。
+    >
+    > 既存のリポジトリの詳細を編集するには、 [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) コマンドを使用します。
+    >
+ 
+1. [AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)および[Get-aipscan](/powershell/module/azureinformationprotection/get-aipscannerrepository)コマンドレットを使用して、コンテンツスキャンジョブの現在の設定に関する情報を返します。 
+
+1. 既存のリポジトリの詳細を更新するには、 [Set-Aipscanを](/powershell/module/azureinformationprotection/set-aipscannerrepository) 使用します。
+
+1. 必要に応じて、 [Start-AIPScan](/powershell/module/azureinformationprotection/start-aipscan) コマンドレットを使用して、コンテンツスキャンジョブを直ちに実行します。 
+
+    オフラインコンテンツスキャンジョブの結果は次の場所にあります: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
+
+1. リポジトリまたはコンテンツスキャンジョブ全体を削除する必要がある場合は、次のコマンドレットを使用します。
+
+    - [AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+    - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>制限: Sysadmin の付与が認められない、または手動でデータベースを作成し構成する必要がある
 

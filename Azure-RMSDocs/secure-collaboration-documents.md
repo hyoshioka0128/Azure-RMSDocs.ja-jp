@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bbb085aa7de8555594d33bc0b2e0ea4d06034aa2
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: fcdfc020061428959e2137a46347b49b150ad73a
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95571006"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316706"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -61,9 +61,9 @@ Azure Information Protection では、承認済みユーザーのコラボレー
     
    - 第 1 外部組織内の全ユーザー: **[詳細を入力]** を選択し、組織のテナント内のドメイン名を入力します (たとえば、fabrikam.com)。
     
-   - 第 2 外部組織内のグループ: **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、sales@contoso.com のようにします。
+   - 第 2 外部組織内のグループ: **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、「 sales@contoso.com 」のように入力します。
     
-   - Azure AD アカウントを持っていないユーザー: **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、bengi.turan@gmail.com のようにします。 
+   - Azure AD アカウントを持っていないユーザー: **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、「 bengi.turan@gmail.com 」のように入力します。 
 
 4. これらすべてのユーザーに同じ権限を付与するには、**[事前設定されたものの中からアクセス許可を選択する]** で、**[共同所有者]**、**[共同作成者]**、**[レビュー担当者]**、または **[カスタム]** を選択し、付与する権限を選択します。
     
@@ -81,7 +81,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ラベルを構成したら、次に示す各種の方法でラベルをドキュメントに適用できます。
 
-|ラベルの適用方法|説明を見る|
+|ラベルの適用方法|詳細情報|
 |---------------|----------|
 |Office アプリケーションでのドキュメント作成時に、手動でラベルを選択する。|Office リボンの **[保護]** ボタンか、Azure Information Protection バーからラベルを選択します。|
 |新規ドキュメントの保存時に、ラベルを選択するように求められる。|**[すべてのドキュメントとメールにラベルを付ける]** という Azure Information Protection [ポリシー設定](configure-policy-settings.md)を構成した場合です。|
@@ -99,7 +99,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ## <a name="opening-and-editing-the-protected-document"></a>保護されたドキュメントを開いて編集する
 
-承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 例:
+承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 次に例を示します。
 
 ![Azure Information Protection の権限に関する情報バナーの例](./media/example-restricted-access-banner.png)
 
@@ -138,16 +138,13 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 |ドキュメントの表示と編集のためのプラットフォーム: <br />Word、Excel、PowerPoint|認証方法:<br />Azure AD|認証方法:<br />Microsoft アカウント|
 |---------------|----------|-----------|-----------|
-|Windows|はい [[1]](#footnote-1)|はい [[2]](#footnote-2)|
-|iOS|はい [[1]](#footnote-1)|はい (バージョン1385219以降) |
-|Android|はい [[1]](#footnote-1)|はい (バージョン13029以降)|
-|MacOS|はい [[1]](#footnote-1)|いいえ|
+|Windows|はい [[1]](#footnote-1)|はい (Microsoft 365 アプリのみ)|
+|iOS|はい [[1]](#footnote-1)|はい (バージョン2.42 以降) |
+|Android|はい [[1]](#footnote-1)|はい (バージョン16.0.13029 以降)|
+|MacOS|はい [[1]](#footnote-1)|はい (バージョン16.42 以降)|
 
 ###### <a name="footnote-1"></a>脚注 1
 ユーザー アカウント、電子メールが有効なグループ、すべてのメンバーがサポートされています。 ユーザー アカウント、および電子メールが有効なグループには、ゲスト アカウントが含まれる場合があります。 すべてのメンバーには、ゲスト アカウントは含まれません。
-
-###### <a name="footnote-2"></a>脚注 2
-現在、Microsoft 365 アプリでのみサポートされています。
 
 ## <a name="next-steps"></a>次のステップ
 

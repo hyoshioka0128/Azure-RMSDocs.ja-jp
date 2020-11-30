@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: cfe396cea14effdd77b912b32c7c64296806b4be
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95570894"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316230"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (BYOK) の詳細を表示する
 
@@ -190,7 +190,7 @@ Azure Information のテナント キーとして使用するキーを含む Key
 
 - Azure Information Protection キーへの保護チェーンのすべての暗号化呼び出し。 そのため、Azure Information Protection テナントと同じ Azure リージョンまたはインスタンスにキーコンテナーを作成することによって、これらの呼び出しに必要なネットワーク待機時間を最小限に抑えることができます。
 
-Azure Information Protection テナントの場所を特定するには、 [AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) PowerShell コマンドレットを使用して、url からリージョンを識別します。 例:
+Azure Information Protection テナントの場所を特定するには、 [AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) PowerShell コマンドレットを使用して、url からリージョンを識別します。 次に例を示します。
 
 ```ps
 LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
@@ -261,7 +261,7 @@ Hsm で保護されたキーをオンプレミスに作成し、それを HSM �
 
 Azure Key Vault に格納されているキーには、キー ID があります。
 
-キー ID は、キーコンテナーの名前、キーコンテナー、キーの名前、およびキーのバージョンを含む URL です。 例:
+キー ID は、キーコンテナーの名前、キーコンテナー、キーの名前、およびキーのバージョンを含む URL です。 次に例を示します。
 
 **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**.
 
@@ -286,7 +286,7 @@ Azure Rights Management サービスは、キーを使用する権限を持っ�
 
 Key Vault PowerShell コマンドレット [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)を実行し、GUID **00000012-0000-0000-c000-000000000000** を使用して Azure Rights Management サービスプリンシパルにアクセス許可を付与します。
 
-例:
+次に例を示します。
 
 ```ps
 Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
@@ -300,7 +300,7 @@ Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'Contos
 az keyvault role assignment create --hsm-name "ContosoMHSM" --role "Managed HSM Crypto User" --assignee 00000012-0000-0000-c000-000000000000 --scope /keys/contosomhsmkey
 ```
 
-各値の説明:
+この場合、
 - **00000012-0000-0000-c000-000000000000** は、このコマンドで使用する GUID です。
 - **ContosoMHSM** は、HSM のサンプル名です。 このコマンドを実行するときは、この値を独自の HSM 名に置き換えます。
 
@@ -321,7 +321,7 @@ Azure RMS コマンドレットを使用して、次のコマンドを実行し�
     Connect-AipService
     ```
 
-1. キーの URL を指定して、 [AipServiceKeyVaultKey コマンドレット](/powershell/module/aipservice/use-aipservicekeyvaultkey)を実行します。 例:
+1. キーの URL を指定して、 [AipServiceKeyVaultKey コマンドレット](/powershell/module/aipservice/use-aipservicekeyvaultkey)を実行します。 次に例を示します。
 
     ```ps
     Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/<key-version>"

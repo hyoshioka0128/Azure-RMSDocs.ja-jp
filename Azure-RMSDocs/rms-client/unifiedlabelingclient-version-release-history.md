@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b9eaa35d1fde58863a9f9ef9c5160a2bb103d031
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: ce85af63a70bf6ee4119e5c5fb22a797fb27df16
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95570879"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316791"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -60,12 +60,67 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 次の情報を使用して、Windows 用の Azure Information Protection 統合ラベルクライアントのサポートされているリリースの新機能と変更点を確認してください。 最新のリリースは一番上に表示されます。 このページで使用される日付形式は、 *月/日/年* です。
 
+最新バージョンの Azure Information Protection は現在プレビューの段階です。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
+
 > [!NOTE]
 > マイナー修正は記載されていないので、統一されたラベル付けクライアントで問題が発生した場合は、最新の GA リリースで修正されているかどうかを確認することをお勧めします。 問題が引き続き発生する場合は、現在のプレビューバージョン (使用可能な場合) を確認します。
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
+
+## <a name="version-291010-public-preview"></a>バージョン 2.9.101.0 (パブリックプレビュー)
+
+ラベル付けされたスキャナーバージョン2.9.101.0 の統合
+
+**リリース** 11/30/2020
+
+次の新機能がリリースされ、バージョン2.9.101.0 の [オンプレミスのスキャナーとラベルが統合](../deploy-aip-scanner.md) されました。
+
+- [接続されていないスキャナーサーバーに対する PowerShell のサポート](#powershell-support-for-disconnected-scanner-servers)
+- [コンテンツスキャンジョブでの NFS リポジトリのサポート](#support-for-nfs-repositories-in-content-scan-jobs)
+- [機密情報の種類のサポートを追加しました](#added-support-for-sensitive-information-types)
+### <a name="powershell-support-for-disconnected-scanner-servers"></a>接続されていないスキャナーサーバーに対する PowerShell のサポート
+[オンプレミスの Azure Information Protection スキャナー](../deploy-aip-scanner.md)は、PowerShell 経由で、インターネットに接続できないスキャナーサーバーのコンテンツスキャンジョブの管理をサポートするようになりました。
+
+接続されていないスキャナーサーバーをサポートするために、次の新しいコマンドレットを追加しました。
+
+|コマンドレット  |説明  |
+|---------|---------|
+|**[追加-Aipscanのリポジトリ](/powershell/module/azureinformationprotection/add-aipscannerrepository)**     | コンテンツスキャンジョブに新しいリポジトリを追加します。        |
+|**[AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)**     |      コンテンツスキャンジョブの詳細を取得します。   |
+|**[Get-Aipscanのリポジトリ](/powershell/module/azureinformationprotection/get-aipscannerrepository)**     |  コンテンツスキャンジョブに対して定義されているリポジトリに関する詳細を取得します。       |
+|**[AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)**       |    コンテンツスキャンジョブを削除します。     |
+| **[-Aipscanのリポジトリを削除します。](/powershell/module/azureinformationprotection/remove-aipscannerrepository)**    |   コンテンツスキャンジョブからリポジトリを削除します。      |
+|**[AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)**     |   コンテンツスキャンジョブの設定を定義します。      |
+**[Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)**     |   コンテンツスキャンジョブ内の既存のリポジトリの設定を定義します。      |
+| | |
+
+
+[**MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)コマンドレットは、追加のサポートを提供するために追加されました。これにより、PowerShell を使用してネットワーク探索サービスのインストール設定を更新することができます。
+
+詳細については、「 [スキャナーサーバーがインターネットに接続できない場合](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) 」と「 [スキャナーを構成](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)する」を参照してください。
+
+### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>コンテンツスキャンジョブでの NFS リポジトリのサポート
+
+これで、SMB ファイル共有と SharePoint リポジトリに加えて、コンテンツスキャンジョブに NFS リポジトリを追加できるようになりました。
+
+詳細については、「 [コンテンツスキャンジョブの作成](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)」を参照してください。
+
+### <a name="added-support-for-sensitive-information-types"></a>機密情報の種類のサポートを追加しました
+**オーストラリアの事業番号、** **オーストラリアの会社番号、** **オーストリアの id カード** など、Azure Information Protection でのその他の機密情報の種類のサポートが追加されました。 
+
+詳細については、Microsoft 365 のドキュメントで、 [機密情報の種類のエンティティの定義](/microsoft-365/compliance/sensitive-information-type-entity-definitions) を参照してください。
+### <a name="fixes-and-improvements"></a>修正プログラムと機能強化
+
+Azure Information Protection 統合された [ラベル付けスキャナー](../deploy-aip-scanner.md)のバージョン2.9.101.0 では、次の修正プログラムが提供されました。
+
+- **-**[スキャナーデータベース](../deploy-aip-scanner-prereqs.md)名にハイフン () のサポートを追加しました
+- **[[コンテンツに基づくラベルファイル](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)**] オプションが **オフ** に設定されている場合のレポートの更新
+- 大量の情報の種類の一致による[メモリ消費の向上](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
+- スラッシュ () で終わる [SharePoint オンプレミス](../deploy-aip-scanner-prereqs.md#sharepoint-requirements)パスのサポート **/**
+- SharePoint のスキャン[速度](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)の向上
+- SharePoint サーバーのスキャン時の [タイムアウトを回避](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) するためのサポート。
 
 ## <a name="version-28850"></a>バージョン2.8.85.0
 
@@ -75,11 +130,11 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このバージョンには、統合されたラベル付けスキャナーとクライアントの次の新機能、修正プログラム、および拡張機能が含まれています。
 
-- [統一されたラベル付けスキャナーの新機能](#new-features-for-the-unified-labeling-scanner)
-- [統一されたラベル付けクライアントの新機能](#new-features-for-the-unified-labeling-client)
-- [修正プログラムと機能強化](#fixes-and-improvements)
+- [統一されたラベル付けスキャナーの新機能](#new-features-for-the-unified-labeling-scanner-version-28850)
+- [統一されたラベル付けクライアントの新機能](#new-features-for-the-unified-labeling-client-version-28850)
+- [修正プログラムと機能強化](#fixes-and-improvements-version-28850)
 
-### <a name="new-features-for-the-unified-labeling-scanner"></a>統一されたラベル付けスキャナーの新機能
+### <a name="new-features-for-the-unified-labeling-scanner-version-28850"></a>統一されたラベル付けスキャナーの新機能、バージョン2.8.85.0
 
 - [検出された変更のフル再スキャン (オプション)](#optional-full-rescans-for-changes-detected)
 - [SharePoint のタイムアウトを構成する](#configure-sharepoint-timeouts)
@@ -155,7 +210,7 @@ AIP 管理者は、すべての web 要求とファイル web 要求に対して
 |[**MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  ネットワーク探索サービスをアンインストールします。       |
 | | |
 
-### <a name="new-features-for-the-unified-labeling-client"></a>統一されたラベル付けクライアントの新機能
+### <a name="new-features-for-the-unified-labeling-client-version-28850"></a>統一されたラベル付けクライアントバージョン2.8.85.0 の新機能
 
 - [Outlook での AIP ポップアップの管理者によるカスタマイズ](#administrator-customizations-for-aip-popups-in-outlook) 
 - [理由を確認するための管理者のカスタマイズ](#administrator-customizations-for-justification-prompts) 
@@ -189,12 +244,12 @@ Azure Information Protection は、スキャナーでのダブルキー暗号化
 - [Azure Information Protection テナント キーを計画して実装する](../plan-implement-tenant-key.md)
 - Microsoft 365 ドキュメントの[二重キー暗号化](/microsoft-365/compliance/double-key-encryption)
 
-### <a name="fixes-and-improvements"></a>修正プログラムと機能強化
+### <a name="fixes-and-improvements-version-28850"></a>修正プログラムと機能強化、バージョン2.8.85.0
 
-- [スキャナーの修正と機能強化](#azure-information-protection-scanner-fixed-issues)
-- [クライアントの修正と機能強化](#azure-information-protection-client-fixed-issues)
+- [スキャナーの修正と機能強化](#azure-information-protection-scanner-fixed-issues-version-28850)
+- [クライアントの修正と機能強化](#azure-information-protection-client-fixed-issues-version-28850)
 
-#### <a name="azure-information-protection-scanner-fixed-issues"></a>Azure Information Protection スキャナーの修正済みの問題
+#### <a name="azure-information-protection-scanner-fixed-issues-version-28850"></a>Azure Information Protection スキャナーの修正済みの問題、バージョン2.8.85.0
 
 Azure Information Protection 統合されたラベル付けスキャナーのバージョン2.8.85.0 では、次の修正プログラムが提供されました。
 
@@ -203,7 +258,7 @@ Azure Information Protection 統合されたラベル付けスキャナーのバ
 - AIP スキャナーでは、パスにピリオドが付いた [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) ファイルがサポートされるようになりましたが、拡張子はありません。 たとえば、パスがで拡張子が付けら `https://sharepoint.contoso.com/shared documents/meeting-notes` れていないファイルは、正常にスキャンされるようになりました。
 - AIP スキャナーは、Microsoft のセキュリティとコンプライアンスセンターで作成され、どのポリシーにも属していない [カスタム機微な情報の種類](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) をサポートするようになりました。
 
-#### <a name="azure-information-protection-client-fixed-issues"></a>Azure Information Protection クライアントの修正済みの問題
+#### <a name="azure-information-protection-client-fixed-issues-version-28850"></a>Azure Information Protection クライアントの修正済みの問題、バージョン2.8.85.0
 
 Azure Information Protection 統合されたラベル付けクライアントのバージョン2.8.85.0 では、次の修正プログラムが提供されました。
 
@@ -299,6 +354,7 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 要件の詳細については、「 [ファイアウォールとネットワークインフラストラクチャの要件](../requirements.md#firewalls-and-network-infrastructure)」を参照してください。
 
 **修正プログラムと機能強化** 
+
 - スキャナー SQL の機能強化:
     - パフォーマンス
     - 大量の情報の種類が含まれるファイル

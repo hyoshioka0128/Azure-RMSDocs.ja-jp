@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 33e6d4205fbfc2c168514fc30cc20acbd9d8578f
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 35bb27bbb6cbfeb8fa4291c9442c95190b92e28b
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95570991"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316274"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベル付けスキャナーとは
 
@@ -32,7 +32,7 @@ ms.locfileid: "95570991"
 
 AIP スキャナーは、Windows Server 上のサービスとして実行され、次のデータストア上のファイルを検出、分類、および保護することができます。
 
-- サーバーメッセージブロック (SMB) プロトコルを使用するネットワーク共有の **UNC パス**。
+- SMB または NFS (プレビュー) プロトコルを使用するネットワーク共有の **UNC パス**。
 
 - Sharepoint server 2013 2019 の sharepoint **ドキュメントライブラリおよびフォルダー** 。 [SharePoint 2010 の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)をご利用のお客様向けに、このバージョンの SharePoint もサポートされています。
 
@@ -84,7 +84,7 @@ AIP スキャナーは、ファイルをスキャンするときに、次の手�
 
 また、スキャナーは、明示的に定義されたすべてのファイルリストをスキャンするか、スキャンから除外するかを検討します。 ファイルの一覧は、既定ですべてのデータリポジトリに適用されます。また、特定のリポジトリに対してのみ定義できます。
 
-スキャンまたは除外するファイルの種類を定義するには、コンテンツスキャンジョブの [ **スキャンするファイルの種類** ] を使用します。 例:
+スキャンまたは除外するファイルの種類を定義するには、コンテンツスキャンジョブの [ **スキャンするファイルの種類** ] を使用します。 次に例を示します。
 
 ![Azure Information Protection スキャナー用にスキャンするファイルの種類を構成する](./media/scanner-file-types.png)
 

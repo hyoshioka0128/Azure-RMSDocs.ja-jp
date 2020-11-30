@@ -4,7 +4,7 @@ description: Azure Information Protection 統合されたラベル付けスキ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e6e90124dfae07e4ccc02a1d047fc15627b7b35f
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: de4c71b6cb7b6836d6757c7cd74bc21e30999a38
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95570895"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316570"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーの構成とインストール
 
@@ -232,12 +232,13 @@ Azure Information Protection スキャナーの構成とインストールを開
 
     SharePoint パスを追加するときは、次の構文を使用します。
     
-    |パス  |Syntax  |
+    |パス  |構文  |
     |---------|---------|
     |**ルートパス**     | `http://<SharePoint server name>` <br /><br />スキャナーユーザーに許可されているサイトコレクションも含め、すべてのサイトをスキャンします。 <br />ルートコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です        |
     |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれかです。 <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
     |**特定の SharePoint ライブラリ**     | 次のいずれかです。 <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**特定の SharePoint フォルダー**     | `http://<SharePoint server name>/.../<folder name>`        |
+    | | |
     
 
 1. 前の手順を繰り返して、必要な数のリポジトリを追加します。
@@ -262,7 +263,7 @@ Azure Information Protection スキャナーの構成とインストールを開
 
 1. [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)コマンドレットを実行して、Azure Information Protection スキャナー用のデータベースを作成する SQL Server インスタンスと、前のセクションで指定したスキャナークラスター名を指定します。 
     
-    ```
+    ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
     ```
     
@@ -300,7 +301,7 @@ Azure AD トークンを取得するには:
     Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
     ```
         
-    例:
+    次に例を示します。
 
     ```PowerShell
     $pscreds = Get-Credential CONTOSO\scanner
@@ -387,7 +388,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 リポジトリ間で一括変更を行うには、次のようにします。
 
-1. [ **リポジトリ** ] ウィンドウの Azure portal で、[ **エクスポート** ] オプションを選択します。 例:
+1. [ **リポジトリ** ] ウィンドウの Azure portal で、[ **エクスポート** ] オプションを選択します。 次に例を示します。
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Azure Information Protection スキャナーのデータリポジトリ設定をエクスポートしています":::
 
@@ -464,7 +465,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 |**読み込み/応答時間**     |スキャンするファイルが含まれているデータストアの現在の負荷と応答時間は、スキャナーのパフォーマンスにも影響します。         |
 |**スキャナーモード** (検出/強制)    | 通常、検出モードは、強制モードよりも高いスキャンレートを持ちます。 <br /><br />検出には1つのファイル読み取り操作が必要ですが、強制モードでは読み取りと書き込みの操作が必要です。        |
 |**ポリシーの変更**     |ラベルポリシーで autolabeling を変更した場合、スキャナーのパフォーマンスが影響を受ける可能性があります。 <br /><br />最初のスキャンサイクルでは、スキャナーがすべてのファイルを検査する必要があるときに、既定では、新しいファイルと変更されたファイルのみを検査する後続のスキャンサイクルよりも時間がかかります。 <br /><br />条件または autolabeling の設定を変更すると、すべてのファイルが再度スキャンされます。 詳細については、「ファイルの再 [スキャン](deploy-aip-scanner-manage.md#rescanning-files)」を参照してください。|
-|**Regex の構造**    | スキャナーのパフォーマンスは、カスタム条件の regex 式がどのように構築されるかによって影響を受けます。 <br /><br /> メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 <br /><br />例: <br />-[最長一致の量指定子](/dotnet/standard/base-types/quantifiers-in-regular-expressions)を避けます。 <br />-の代わりに、のような非キャプチャグループを使用し `(?:expression)` ます。 `(expression)`    |
+|**Regex の構造**    | スキャナーのパフォーマンスは、カスタム条件の regex 式がどのように構築されるかによって影響を受けます。 <br /><br /> メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 <br /><br />次に例を示します。 <br />-[最長一致の量指定子](/dotnet/standard/base-types/quantifiers-in-regular-expressions)を避けます。 <br />-の代わりに、のような非キャプチャグループを使用し `(?:expression)` ます。 `(expression)`    |
 |**ログレベル**     |  ログレベルのオプションには、スキャナーレポートの [ **デバッグ**]、[ **情報**]、[ **エラー** ]、[ **オフ** ] があります。<br /><br />- **オフ** にすると最適なパフォーマンスが得られる <br />- **デバッグ** によってスキャナーの速度が大幅に低下するため、トラブルシューティングにのみ使用してください。 <br /><br />詳細については、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットの *ReportLevel* パラメーターを参照してください。       |
 |**スキャンされるファイル**     |-Excel ファイルを除き、Office ファイルは PDF ファイルよりもすばやくスキャンされます。 <br /><br />-保護されていないファイルは、保護されたファイルよりもスキャンが高速です。 <br /><br />-大きなファイルは、小さいファイルよりもスキャンに時間がかかることが明らかです。         |
 | | |
@@ -473,15 +474,17 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 このセクションでは、Azure Information Protection スキャナーでサポートされている PowerShell コマンドレットの一覧を示します。
 
-> [!NOTE]
-> Azure Information Protection スキャナーは、Azure portal から構成されます。 このため、以前のバージョンで使用されていた、データリポジトリとスキャンされたファイルの種類の一覧を構成するコマンドレットは非推奨となりました。
-> 
-
 スキャナーでサポートされているコマンドレットは次のとおりです。
+
+- [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)
 
 - [Export-Ai: Gs](/powershell/module/azureinformationprotection/Export-AIPLogs)
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
+
+- [AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)
+
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
@@ -493,6 +496,8 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 - [インポート-Aipscanの構成](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
+- [MIPNetworkDiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
+
 - [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
@@ -503,6 +508,10 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
+- [AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)
+
+- [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
+
 - [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
@@ -512,6 +521,10 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 - [MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
 
 - [停止-AIPScan](/powershell/module/azureinformationprotection/Stop-AIPScan)
+
+- [AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 

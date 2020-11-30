@@ -4,7 +4,7 @@ description: Windows 用に Azure Information Protection 統合ラベルクラ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cd640f1fd60f1ca9872bb3741bfa5d1f0426b18e
-ms.sourcegitcommit: 1c12edc8ca4bfac9eb4e87516908cafe6e5dd42a
+ms.openlocfilehash: 0fe8286b9fab39a8ac9df3112866d21caa835e5f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96034389"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316842"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントのカスタム構成
 
@@ -765,12 +765,14 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollab
     
     - 数値 **\<**domain names, comma separated**>**
 
-たとえば、[**社外秘 \ すべての従業員**] ラベルに対して **OutlookBlockUntrustedCollaborationLabel** アドバンストクライアント設定を指定したとします。 ここで、 **Outlookジャスト Ifytrusteddomains** と **contoso.com** の追加のアドバンストクライアント設定を指定します。 その結果、ユーザーは、" john@sales.contoso.com **社外秘 \ すべての従業員** " というラベルが付いたときに電子メールをに送信できますが、Gmail アカウントに同じラベルの電子メールを送信することは禁止されます。
+たとえば、[**社外秘 \ すべての従業員**] ラベルに **OutlookBlockUntrustedCollaborationLabel** アドバンストクライアント設定を指定したとします。 
+
+ここで、contoso.com を使用して、 **Outlookblocktrusteddomains** の追加のアドバンストクライアント設定を指定し **ます。** その結果、ユーザーは、" `john@sales.contoso.com` **社外秘 \ すべての従業員**" というラベルが付いたときに電子メールをに送信できますが、Gmail アカウントに同じラベルの電子メールを送信することは禁止されます。
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="contoso.com"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
@@ -1488,7 +1490,7 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 
 ルールアクションには、次のいずれかを指定できます。
 
-|アクション  |Syntax  |サンプル メッセージ  |
+|アクション  |構文  |サンプル メッセージ  |
 |---------|---------|---------|
 |**ブロック**     |    `Block (List<language, [title, body]>)`     |    **_メールがブロック_* されました _<br /><br />  _You は、**シークレット** として分類されたコンテンツを1つ以上の信頼されていない受信者に送信しようとしています: *<br />* `rsinclair@contoso.com` *<br /><br />* 組織のポリシーでは、この操作が許可されて これらの受信者を削除するか、コンテンツを置き換えることを検討してください。 *|
 |**呼びかけ**     | `Warn (List<language,[title,body]>)`        |  **_確認が必要_* _<br /><br />_You は、**一般** に分類されたコンテンツを1つ以上の信頼されていない受信者に送信しようとしています *<br />* `rsinclair@contoso.com` *<br /><br />* 。組織のポリシーでは、このコンテンツの送信を確認する必要があります。 *       |
@@ -1826,6 +1828,24 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
     ```
+
+### <a name="avoid-scanner-timeouts-in-sharepoint"></a>SharePoint でスキャナーのタイムアウトを回避する
+
+SharePoint バージョン2013以降に長いファイルパスがある場合は、SharePoint サーバーの [httpRuntime](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) の値が既定の260文字よりも大きいことを確認してください。
+
+この値は、構成の **Httpruntimesection** クラスで定義され `ASP.NET` ます。 この値を更新する必要がある場合は、次の手順を実行します。
+
+1. **web.config** 構成をバックアップします。 
+
+1. 必要に応じて **maxUrlLength** 値を更新します。 次に例を示します。
+
+    ```c#
+    <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
+    ```
+
+1. SharePoint web サーバーを再起動し、正しく読み込まれることを確認します。 
+
+    たとえば、Windows インターネットインフォメーションサービス (IIS) マネージャーで、サイトを選択し、[ **Web サイトの管理**] で [ **再起動**] を選択します。 
 
 ## <a name="prevent-outlook-performance-issues-with-smime-emails"></a>S/MIME メールで Outlook のパフォーマンスの問題を回避する
 
