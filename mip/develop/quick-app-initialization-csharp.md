@@ -8,11 +8,11 @@ ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
 ms.openlocfilehash: b0aeeabeabf6dc4c3bba39ea2f58374b98bac491
-ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93044384"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316740"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C#)
 
@@ -110,7 +110,7 @@ SDK の `Microsoft.InformationProtection.IAuthDelegate` インターフェイス
 
 SDK の `Microsoft.InformationProtection.IConsentDelegate` インターフェイスを拡張し、`GetUserConsent()` をオーバーライド/実装することで、同意の委任に対して実装を作成します。 この同意の委任はインスタンス化され、ファイル プロファイルとファイル エンジン オブジェクトによって後で使用されます。 同意の委任によりサービスのアドレスが提供され、これを `url` パラメーターで使用することをユーザーが同意する必要があります。 委任では一般に、サービスへのアクセスに同意することをユーザーが許可/拒否できるようにするフローがいくつか提供されます。 このクイック スタートでは `Consent.Accept` をハードコーディングします。
 
-1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、 **[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。
+1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、**[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。
 
 2. ここで **ConsentDelegateImpl.cs** を更新して、新しい同意の委任クラスを実装します。 `Microsoft.InformationProtection` に using ステートメントを追加し、`IConsentDelegate` を継承するようにクラスを設定します。
 

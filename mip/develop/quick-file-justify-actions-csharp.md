@@ -7,11 +7,11 @@ ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
 ms.openlocfilehash: 666b0c7fdbc483f638f76def37ec3082c9eb7377
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91421194"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316519"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Information Protection SDK File API - ファイルの秘密度ラベルをダウングレードするアクションの理由 (C#)
 
@@ -107,7 +107,7 @@ ms.locfileid: "91421194"
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
-2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインが求められることはなく、ラベルの一覧と、適用されたラベルおよび修正されたファイルに関する情報が表示されます。
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる *場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインが求められることはなく、ラベルの一覧と、適用されたラベルおよび修正されたファイルに関する情報が表示されます。
 
   ```console
     Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
