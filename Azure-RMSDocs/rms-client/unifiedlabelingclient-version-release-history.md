@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ce85af63a70bf6ee4119e5c5fb22a797fb27df16
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 8a37c13f9ad51e2aef03c8e6377633c72f83f063
+ms.sourcegitcommit: 6e50dc8c21be370ce22ff7cbafdbed8c9f3c988f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316791"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544642"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -122,6 +122,9 @@ Azure Information Protection 統合された [ラベル付けスキャナー](..
 - SharePoint のスキャン[速度](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)の向上
 - SharePoint サーバーのスキャン時の [タイムアウトを回避](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) するためのサポート。
 
+### <a name="known-issues"></a>既知の問題
+このパブリックプレビューバージョンでは、 [Dke 保護](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) でラベルを適用することは、スキャナーではサポートされていません。
+
 ## <a name="version-28850"></a>バージョン2.8.85.0
 
 統一されたラベル付けスキャナーとクライアントバージョン2.8.85.0
@@ -173,7 +176,7 @@ AIP 管理者は、すべての web 要求とファイル web 要求に対して
 
 **ネットワーク探索サービスを使用するには**
 
-1. スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。 詳細については次を参照してください:
+1. スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。 詳細については、次を参照してください。
     - [スキャナーをアップグレードする](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [スキャナークラスターを作成する](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster) 
     
@@ -239,7 +242,7 @@ AIP 管理者は、エンドユーザーがドキュメントや電子メール�
 
 Azure Information Protection は、スキャナーでのダブルキー暗号化 (DKE) テンプレートベースのラベル付けと、エクスプローラーと PowerShell の使用をサポートするようになりました。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [Azure Information Protection テナント キーを計画して実装する](../plan-implement-tenant-key.md)
 - Microsoft 365 ドキュメントの[二重キー暗号化](/microsoft-365/compliance/double-key-encryption)
@@ -336,7 +339,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 スキャン済みのファイルが削除されたことをスキャナーが検出するたびに、監査ログが生成されるようになりました。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 - [ファイルが削除された監査ログ](../audit-logs.md#file-removed-audit-logs)
 - [Azure Information Protection の Central Reporting](../reports-aip.md)
 
