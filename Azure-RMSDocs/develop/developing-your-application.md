@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 2fc3fecd33d6e461156e8c608eae91dee17dff2b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e0dedeffe2f10b1d312a865acdc64a1248144776
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570686"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536064"
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
 
@@ -51,7 +51,7 @@ Azure Information Protection の Azure AD 環境を構成するには、 [Azure 
 >BPOS ID (テナント ID) 値を記録します。 後の手順で必要になります。
 
 *出力例* 
- ![コマンドレットの出力](../media/develop/output-of-Get-AadrmConfiguration.png)
+ ![Get-aadrmconfiguration コマンドレットの出力](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - サービスから切断します: `Disconnect-AipServiceService`
 
@@ -67,12 +67,12 @@ Azure Information Protection の Azure AD 環境を構成するには、 [Azure 
   > 後で使用するために、対称キーとアプリケーションのプリンシパル ID を記録します。
 
 *出力例* 
- ![コマンドレットの出力](../media/develop/output-of-NewMsolServicePrincipal.png)
+ ![NewMsolServicePrincipal コマンドレットの出力](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - アプリケーションのプリンシパル ID、対称キー、およびテナント ID をアプリケーションの App.config ファイルに追加します。
 
 *App.config ファイル* 
- ![ の例コマンドレットの出力](../media/develop/example-App.config-file.png)
+ ![ の例App.config ファイルの例](../media/develop/example-App.config-file.png)
 
 - *ClientID* と *RedirectUri* は、Azure にアプリケーションを登録したときに入手できます。 Azure にアプリケーションを登録する方法、および *ClientID* と *RedirectUri* の取得方法の詳細については、「[Azure RMS の ADAL 認証を構成する](adal-auth.md)」を参照してください。
 
