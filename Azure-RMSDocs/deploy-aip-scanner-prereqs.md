@@ -4,7 +4,7 @@ description: Azure Information Protection 統合されたラベル付けスキ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 12/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a1833ca3bb60030414213076f68ca78ddb5534af
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: f426f62f071885932ad436735e5a1bfe8663fa2f
+ms.sourcegitcommit: 2b9ef3b97609dca6f6d64d78aff83e44d4aafc4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316247"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556027"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベル付けスキャナーをインストールおよびデプロイするための前提条件
 
@@ -26,7 +26,9 @@ ms.locfileid: "96316247"
 >[!NOTE]
 > クラシックスキャナーを使用している場合は、「 [Azure Information Protection クラシックスキャナーをインストールして展開するための前提条件](deploy-aip-scanner-prereqs-classic.md)」を参照してください。
 
-オンプレミスの Azure Information Protection スキャナーをインストールする前に、システムが基本的な [Azure Information Protection 要件](requirements.md)に準拠していること、およびスキャナーに固有の次の要件を満たしていることを確認してください。
+オンプレミスの Azure Information Protection スキャナーをインストールする前に、システムが基本的な [Azure Information Protection の要件](requirements.md)を満たしていることを確認してください。
+
+また、スキャナーに固有の要件は次のとおりです。
 
 - [Windows Server の要件](#windows-server-requirements)
 - [サービス アカウントの要件](#service-account-requirements)
@@ -38,7 +40,7 @@ ms.locfileid: "96316247"
 - [ファイルパスの要件](#file-path-requirements)
 - [使用状況の統計情報の要件](#usage-statistics-requirements)
 
-組織のポリシーによって禁止されているためにテーブル内のすべての要件を満たすことができない場合は、「 [代替構成](#deploying-the-scanner-with-alternative-configurations) 」セクションを参照してください。
+組織のポリシーによって禁止されているため、スキャナーに記載されているすべての要件を満たすことができない場合は、「 [代替構成](#deploying-the-scanner-with-alternative-configurations) 」セクションを参照してください。
 
 スキャナーを運用環境にデプロイする場合、または複数のスキャナーのパフォーマンスをテストする場合は、「 [SQL Server のための記憶域の要件と容量計画](#storage-requirements-and-capacity-planning-for-sql-server)」を参照してください。
 
@@ -152,7 +154,7 @@ Azure Information Protection クライアントの現在の [一般公開バー�
 
 ラベルに自動ラベル付けの条件がない場合は、以下 [の代替構成の手順](#restriction-your-labels-do-not-have-auto-labeling-conditions) を参照してください。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels)
 - [機密ラベルをコンテンツに自動的に適用する](/microsoft-365/compliance/apply-sensitivity-label-automatically)
@@ -334,7 +336,7 @@ PowerShell のみを使用して切断されたコンピューターをサポー
 
     通常、スキャナーのインストールと構成には同じユーザー アカウントを使用します。 異なるアカウントを使用する場合は、どちらもスキャナー構成データベースの db_owner ロールが必要です。 必要に応じて、このユーザーと権限を作成します。 独自のクラスター (プロファイル) 名を指定した場合、構成データベースの名前は **cluster_name>AIPScannerUL_<** になります。
 
-追加として:
+補足:
 
 - スキャナーを実行するサーバーのローカル管理者である必要があります。
 - スキャナーを実行するサービスアカウントには、次のレジストリキーに対するフルコントロールのアクセス許可が付与されている必要があります。
@@ -397,7 +399,7 @@ PowerShell のみを使用して切断されたコンピューターをサポー
 |**既定のラベルを定義する**     |   [ポリシー](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do)、[コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)、または[リポジトリ](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository)で既定のラベルを定義します。 </br></br>この場合、スキャナーは、見つかったすべてのファイルに既定のラベルを適用します。       |
 | | |
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 システムがスキャナーの前提条件に準拠していることを確認したら、 [Azure Information Protection スキャナーの展開を続けて、ファイルを自動的に分類して保護](deploy-aip-scanner-configure-install.md)します。
 
