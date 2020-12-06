@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f426f62f071885932ad436735e5a1bfe8663fa2f
-ms.sourcegitcommit: 2b9ef3b97609dca6f6d64d78aff83e44d4aafc4d
+ms.openlocfilehash: e9817c21662ed6a606a30b851aff97bbbc5bb863
+ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96556027"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "96740607"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベル付けスキャナーをインストールおよびデプロイするための前提条件
 
@@ -57,7 +57,8 @@ ms.locfileid: "96556027"
 |**ディスク領域**     |一時ファイルの 10 GB の空き領域 (平均)。 </br></br>スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 </br></br>推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。
 |**オペレーティング システム**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**注:** 非運用環境でのテストまたは評価の目的では、 [Azure Information Protection クライアントでサポート](requirements.md#client-devices)されている任意の Windows オペレーティングシステムを使用することもできます。
 |**ネットワーク接続**     | スキャナーコンピューターは、スキャンするデータストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。 </br></br> 組織のポリシーのためにインターネット接続ができない場合は、「 [代替構成を使用したスキャナーの展開](#deploying-the-scanner-with-alternative-configurations)」を参照してください。 </br></br>それ以外の場合は、このコンピューターがインターネットに接続されていることを確認し、HTTPS 経由で次の Url を使用できるようにします (ポート 443)。</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.azure.com <br /> -informationprotection.hosting.portal.azure.net <br /> - \*. aria.microsoft.com <br />-  \*. protection.outlook.com |
-| ||
+|**NFS 共有** |NFS 共有のスキャンをサポートするには、スキャナーコンピューターに NFS 用サービスを展開する必要があります。 <br><br>コンピューターで、[ **windows の機能] ([windows の機能の有効化または無効化)** の設定] ダイアログボックスに移動し、[ **nfs 用サービス**]  >  **管理ツール** と **nfs クライアント** を選択します。 |
+| | |
 
 ## <a name="service-account-requirements"></a>サービス アカウントの要件
 
@@ -399,7 +400,7 @@ PowerShell のみを使用して切断されたコンピューターをサポー
 |**既定のラベルを定義する**     |   [ポリシー](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do)、[コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)、または[リポジトリ](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository)で既定のラベルを定義します。 </br></br>この場合、スキャナーは、見つかったすべてのファイルに既定のラベルを適用します。       |
 | | |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 システムがスキャナーの前提条件に準拠していることを確認したら、 [Azure Information Protection スキャナーの展開を続けて、ファイルを自動的に分類して保護](deploy-aip-scanner-configure-install.md)します。
 

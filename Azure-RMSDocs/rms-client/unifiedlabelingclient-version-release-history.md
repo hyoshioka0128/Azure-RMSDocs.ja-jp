@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8a37c13f9ad51e2aef03c8e6377633c72f83f063
-ms.sourcegitcommit: 6e50dc8c21be370ce22ff7cbafdbed8c9f3c988f
+ms.openlocfilehash: af8998f4a96649c6a14522c5f5beb025527ec556
+ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544642"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "96740624"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -104,6 +104,16 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 ### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>コンテンツスキャンジョブでの NFS リポジトリのサポート
 
 これで、SMB ファイル共有と SharePoint リポジトリに加えて、コンテンツスキャンジョブに NFS リポジトリを追加できるようになりました。
+
+NFS 共有のスキャンをサポートするには、スキャナーコンピューターに NFS サービスを展開する必要があります。
+
+1. コンピューターで、[ **windows の機能] ([windows の機能の有効化または無効化)** の設定] ダイアログに移動します。
+
+1. 次の項目を選択します。 
+
+    - **NFS 用サービス** 
+        - **管理ツール**
+        - **NFS クライアント**。
 
 詳細については、「 [コンテンツスキャンジョブの作成](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)」を参照してください。
 
