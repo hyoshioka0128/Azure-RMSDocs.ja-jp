@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 74f141054d177ccabea88f6521ebb2ba6a930be5
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 46ad00630997afd598d1476cba3c877e1a604864
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570575"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849778"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Azure Information Protection の使用権限を構成する
 
@@ -94,8 +94,8 @@ Windows 用 Azure Information Protection クライアントには適用されま
 
 |テンプレートの表示名|使用権限 (2017 年 10 月 6 日から現在)|使用権限 (2017 年 10 月 6 日より前)|
 |----------------|--------------------|----------|
-|\<*organization name> -社外秘、表示のみ * <br /><br />または<br /><br /> *非常に機密性の高い社外秘 \ すべての従業員*|表示、開く、読み取り、コピー、権利の表示、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集|表示、開く、読み取り|
-|\<*organization name>部外 <br /><br />または <br /><br />*社外秘 \ すべての従業員*|表示、開く、読み取り、名前を付けて保存、エクスポート、コピー、権利の表示、権利の変更、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集、フル コントロール|表示、開く、読み取り、名前を付けて保存、エクスポート、コンテンツの編集、編集、権利の表示、マクロの許可、転送、返信、全員に返信|
+|\<*organization name> -社外秘、表示のみ * <br /><br />or<br /><br /> *非常に機密性の高い社外秘 \ すべての従業員*|表示、開く、読み取り、コピー、権利の表示、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集|表示、開く、読み取り|
+|\<*organization name>部外 <br /><br />or <br /><br />*社外秘 \ すべての従業員*|表示、開く、読み取り、名前を付けて保存、エクスポート、コピー、権利の表示、権利の変更、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集、フル コントロール|表示、開く、読み取り、名前を付けて保存、エクスポート、コンテンツの編集、編集、権利の表示、マクロの許可、転送、返信、全員に返信|
 
 ## <a name="do-not-forward-option-for-emails"></a>電子メールの [転送不可] オプション
 
@@ -124,7 +124,14 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 Exchange Online で Office 365 Message Encryption の新機能を使用する場合、新しい電子メール オプション (**暗号化のみ**) を利用できます。
 
-このオプションは、Exchange Online を使用するテナントに対して使用できます。また、web 上の Outlook で選択できます。また、メールフロールールの別の権利保護オプションとして、Office 365 の DLP Microsoft 365 [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) アクションとして、また [Azure RMS をサポートする Microsoft 365 アプリ](requirements-applications.md#windows-computers-for-information-rights-management-irm)を使用している場合は、1805の最小バージョンを選択できます。 Encrypt-Only オプションの詳細については、Office チームの次のブログ投稿のお知らせを参照してください。 [office 365 Message Encryption でのロールアウトのみを暗号化](https://aka.ms/omefeb2018)します。
+このオプションは、Exchange Online を使用するテナントで使用でき、次のように選択できます。
+
+- **Web 上の Outlook で**
+- メールフロールールの **別の権利保護オプションとして**
+- **Office 365 DLP アクションとして**
+- **Outlook から、** [更新チャネル別の Microsoft 365 アプリのサポートされているバージョンの表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンの [Azure RMS をサポートする Microsoft 365 アプリ](requirements-applications.md#windows-computers-for-information-rights-management-irm)がある場合。 
+
+Encrypt-Only オプションの詳細については、Office チームの次のブログ投稿のお知らせを参照してください。 [office 365 Message Encryption でのロールアウトのみを暗号化](https://aka.ms/omefeb2018)します。
 
 このオプションが選択されると、電子メールが暗号化され、受信者は認証される必要があります。 すると、受信者には **名前を付けて保存、エクスポート** と **フル コントロール** を除くすべての使用権限が割り当てられます。 この使用権限の組み合わせは、保護を削除できないこと以外は、受信者には制限がないということです。 たとえば、受信者は電子メールをコピー、印刷、および転送することができます。 
 
@@ -190,7 +197,7 @@ Azure Rights Management によって保護されたドキュメントまたは�
     
     PowerShell を使用してこの設定を構成するための詳細とガイダンスについては、各コマンドレットのヘルプを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)
 
 [Azure Information Protection と、検出サービスまたはデータ復旧用のスーパー ユーザーの構成](configure-super-users.md)

@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0fe8286b9fab39a8ac9df3112866d21caa835e5f
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 25dfd0eb9fe2708e90f04a3bc7203dc8ecde5bcc
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316842"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849863"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントのカスタム構成
 
@@ -36,7 +36,7 @@ AIP の統一されたラベル付けクライアントを管理する際に、�
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Office 365 セキュリティ & コンプライアンスセンター PowerShell を使用してクライアントの詳細設定を構成する方法
 
-Office 365 Security & コンプライアンスセンターの PowerShell を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 次に例を示します。
+Office 365 Security & コンプライアンスセンターの PowerShell を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 例:
 
 - Office アプリの Information Protection バーを表示する設定は、***ラベルポリシーの詳細設定** _ です。
 - ラベルの色を指定する設定は、 _*_ラベルの詳細設定_*_ です。
@@ -309,7 +309,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 
 次の表を使用して、指定する文字列値を指定します。
 
-| 文字列値| Client| スキャナー|
+| 文字列値| クライアント| スキャナー|
 |-------------|-------|--------|
 |\*|既定値: すべてのファイルの種類に保護を適用します。|すべてのファイルの種類に保護を適用する|
 |Convertto-html (".jpg", ".png")|Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。 | Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。
@@ -702,6 +702,12 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:h
 
 選択したポリシーについて、次のキーを使用して次の詳細設定を1つ以上作成します。 値には、1つまたは複数のラベルを Guid で指定し、それぞれをコンマで区切って指定します。
 
+> [!NOTE]
+> このセクションの詳細設定は、 *特定* のラベルが使用されている場合に適しています。
+> 
+> **[OutlookUnlabeledCollaborationAction](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)** advanced 設定など、*ラベル* のないコンテンツに対して詳細設定を構成していて、ラベル付けされていないコンテンツのポップアップメッセージをカスタマイズする場合は、json ファイルを使用して詳細設定を定義します。 詳細については、「 [Outlook ポップアップメッセージをカスタマイズ](#customize-outlook-popup-messages)する」を参照してください。
+> 
+
 複数のラベル Guid の値の例 (コンマ区切り文字列): 
 
 ```sh
@@ -1088,7 +1094,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProp
 
 機密ラベルによって適用されるメタデータに加えて、1つまたは複数のカスタムプロパティをドキュメントまたは電子メールメッセージに適用する場合は、いくつかのシナリオが考えられます。
 
-次に例を示します。
+例:
 
 - セキュリティで保護された島など、 [別のラベル付けソリューションから移行](#migrate-labels-from-secure-islands-and-other-labeling-solutions)しています。 移行中の相互運用性を確保するために、機密ラベルを使用して、他のラベル付けソリューションで使用されるカスタムプロパティを適用することもできます。
 
@@ -1253,7 +1259,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするためのプロンプトが Office アプリケーションに表示されない場合は、[ **Microsoft Azure Information Protection** ] ダイアログボックスに戻り、[更新された **クライアントステータス**] セクションから [**サインイン**] を選択します。
 
-追加として:
+補足:
 
 - これらの手順を完了した後も、Azure Information Protection 統合されたラベル付けクライアントが古いアカウントでサインインしている場合は、Internet Explorer からすべての cookie を削除してから、手順 1. と 2. を繰り返します。
 
@@ -1339,7 +1345,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **読み取り専用またはアーカイブ済みのファイルをスキップする**
 
-ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 次に例を示します。
+ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 例:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1389,7 +1395,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwne
 
 表示される既定 **の他の** テキストを変更するには、 **JustificationTextForUserText** advanced プロパティを使用して、このコマンドレットを [設定](/powershell/module/exchange/set-labelpolicy) します。 代わりに、使用するテキストに値を設定します。
 
-次に例を示します。
+例:
 
 ``` PowerShell
 
@@ -1464,7 +1470,7 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 "nodes" : []
 ```
 
-少なくとも2つのノード、最初のノードがルールの条件を表し、最後のノードがルールのアクションを表している必要があります。 詳細については次を参照してください:
+少なくとも2つのノード、最初のノードがルールの条件を表し、最後のノードがルールのアクションを表している必要があります。 詳細については、次を参照してください。
 
 - [ルール条件の構文](#rule-condition-syntax)
 - [ルールアクションの構文](#rule-action-syntax)
@@ -1837,7 +1843,7 @@ SharePoint バージョン2013以降に長いファイルパスがある場合�
 
 1. **web.config** 構成をバックアップします。 
 
-1. 必要に応じて **maxUrlLength** 値を更新します。 次に例を示します。
+1. 必要に応じて **maxUrlLength** 値を更新します。 例:
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />

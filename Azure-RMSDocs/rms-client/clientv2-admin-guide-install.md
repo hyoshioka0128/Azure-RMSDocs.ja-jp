@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用のラベ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 12/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cbb554d09d24b1403c24f52fd5215fdee71ab61
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: 7fabd12e3ca0dc08f8c5617b37252ac5adc22948
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95735050"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849676"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -54,7 +54,7 @@ Word、Excel、PowerPoint、および Outlook では、 [office 2013 および o
 
 AIP に次のプログラム識別子 (ProgID) を指定し、オプションを1に設定します。この **アドインは常に有効になっ** ています。
 
-|アプリケーション  |ProgID  |
+|Application  |ProgID  |
 |---------|---------|
 |Word     |     `MSIP.WordAddin`    |
 |Excel     |  `MSIP.ExcelAddin`       |
@@ -66,7 +66,7 @@ AIP に次のプログラム識別子 (ProgID) を指定し、オプションを
 
 Azure Information Protection の統一されたラベル付けクライアントは、次のいずれかの Office エディションの Office アプリケーション Word、Excel、PowerPoint、Outlook を使用して、ドキュメントや電子メールにラベルを付け、保護することができます。
 
-- Office アプリの最小バージョン1805、ユーザーに Azure Rights Management のライセンスが割り当てられている場合の Microsoft 365 App for Business または Microsoft 365 Business Premium からのビルド 9330.2078 (Office 365 の場合は Azure Information Protection とも呼ばれます)
+- Azure Rights Management のライセンスがユーザーに割り当てられている場合 (Office 365 の場合は Azure Information Protection とも呼ばれています)、「更新 Microsoft 365 Business Microsoft 365 [チャネル別の Microsoft 365 アプリのサポートされているバージョン」の表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンの office アプリ。
 - Microsoft 365 Apps for enterprise
 - Office Professional Plus 2019
 - Office Professional Plus 2016

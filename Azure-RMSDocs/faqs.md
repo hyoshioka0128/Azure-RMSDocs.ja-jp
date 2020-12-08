@@ -4,7 +4,7 @@ description: Azure Information Protection とその保護サービス、Azure Ri
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 36ef25b54fed8d73f33158f2c62670434c5d2f31
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: d528c715b54c063a267694fb974ef685fe264ea3
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95570958"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849761"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -118,7 +118,7 @@ Azure Information Protection ラベルを統一されたラベル付けプラッ
 
 Azure portal でラベルを移行したら、インストールしたクライアントに応じて、次のいずれかの場所で管理を続行します。
 
-|Client  |説明  |
+|クライアント  |説明  |
 |---------|---------|
 |[クライアントとサービスのみの統一](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) されたラベル付け    |  統一されたラベル付けクライアントがインストールされている場合は、管理センターの1つでラベルを管理します。 Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security center、または Microsoft 365 コンプライアンスセンターです。 統合ラベル付けのクライアントは、これらの管理センターからラベルとポリシー設定をダウンロードします。 <br /><br />手順については、「 [秘密度ラベルとそのポリシーを作成して構成する](/microsoft-365/compliance/create-sensitivity-labels)」を参照してください。     |
 |[従来のクライアント](./rms-client/aip-client.md) のみ  | ラベルを移行した後も従来のクライアントがインストールされている場合は、引き続き Azure portal を使用してラベルとポリシー設定を編集します。 クラシッククライアントは、Azure からラベルとポリシー設定を引き続きダウンロードします。
@@ -182,11 +182,9 @@ Microsoft 365 テナントまたは Azure AD テナントのグローバル管�
 |---------|---------|
 |**サポートされているアカウントの種類**     | Microsoft アカウントは、一覧表示されているいずれかの管理者ロールにアカウントが割り当てられている場合でも、Azure Information Protection の代理管理ではサポートされません。         |
 |**オンボードコントロール**     |[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成してある場合は、RMS コネクタを除き、Azure Information Protection を管理する機能に影響はありません。 <br /><br />たとえば、オンボードコントロールを構成して、コンテンツを保護する機能が *IT 部門* のグループに限定されるようにした場合、RMS コネクタのインストールと構成に使用するアカウントは、そのグループのメンバーである必要があります。          |
-|**保護の削除**     |  管理者は、Azure Information Protection によって保護されたドキュメントまたは電子メールから保護を自動的に削除することはできません。 <br /><br />スーパーユーザーとして割り当てられているユーザーのみが保護を削除でき、スーパーユーザー機能が有効になっている場合のみです。 <br /><br />Azure Information Protection に対する管理アクセス許可を持つすべてのユーザーは、スーパーユーザー機能を有効にし、自分のアカウントを含むスーパーユーザーとしてユーザーを割り当てることができます。<br /><br />これらのアクションは、管理者ログに記録されます。 <br /><br />詳細については、「 [Azure Information Protection および探索サービスまたはデータ回復用のスーパーユーザーの構成](configure-super-users.md)」のセキュリティのベストプラクティスに関するセクションを参照してください。 
-       |
-|**統一されたラベル付けストアへの移行**      |  Azure Information Protection ラベルを統合ラベルストアに移行する場合は、「移行に関するドキュメント」の次のセクションを必ず参照してください。 <br />[統一されたラベル付けプラットフォームをサポートする管理ロール](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)。
-       |
-
+|**保護の削除**     |  管理者は、Azure Information Protection によって保護されたドキュメントまたは電子メールから保護を自動的に削除することはできません。 <br /><br />スーパーユーザーとして割り当てられているユーザーのみが保護を削除でき、スーパーユーザー機能が有効になっている場合のみです。 <br /><br />Azure Information Protection に対する管理アクセス許可を持つすべてのユーザーは、スーパーユーザー機能を有効にし、自分のアカウントを含むスーパーユーザーとしてユーザーを割り当てることができます。<br /><br />これらのアクションは、管理者ログに記録されます。 <br /><br />詳細については、「 [Azure Information Protection および探索サービスまたはデータ回復用のスーパーユーザーの構成](configure-super-users.md)」のセキュリティのベストプラクティスに関するセクションを参照してください。 <br><br>**ヒント:** コンテンツが SharePoint または OneDrive に保存されている場合、管理者は [SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) コマンドレットを実行して、秘密度ラベルと暗号化の両方を削除できます。 詳細については、[Microsoft 365 のドキュメント](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document)を参照してください。 |
+|**統一されたラベル付けストアへの移行**      |  Azure Information Protection ラベルを統合ラベルストアに移行する場合は、「移行に関するドキュメント」の次のセクションを必ず参照してください。 <br />[統一されたラベル付けプラットフォームをサポートする管理ロール](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)。 |
+| | |
 ### <a name="azure-information-protection-administrator"></a>Azure Information Protection 管理者
 
 管理者はこの Azure Active Directory 管理者ロールを使用して Azure Information Protection を構成できますが、他のサービスは構成できません。 
@@ -326,7 +324,7 @@ Microsoft Graph Security API について詳しくは、「[Microsoft Graph Secu
 |---------|---------|---------|
 |**サポートされているデータ ストア**    | Windows Server 上のローカルフォルダー        | - Windows ファイル共有とネットワーク接続ストレージ<br /><br />- SharePoint Server 2016 と SharePoint Server 2013。 [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint Server 2010 もサポートされています。        |
 |**操作モード**     |リアルタイム         |データストアを体系的に1回または繰り返しクロールする         |
-|**サポートされるファイルの種類**     | - すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office ファイルの種類と PDF ドキュメントは既定で保護されます <br /><br />- レジストリを編集することで、保護に含めるファイルの種類を追加できます|
+|**サポートされているファイルの種類**     | - すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office ファイルの種類と PDF ドキュメントは既定で保護されます <br /><br />- レジストリを編集することで、保護に含めるファイルの種類を追加できます|
 
 ### <a name="setting-rights-management-owners"></a>Rights Management 所有者の設定
 

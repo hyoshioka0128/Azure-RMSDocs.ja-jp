@@ -5,19 +5,19 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: abab1e8a35b1928dd752cd287dc20aebded9bb14
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: e19400a0901c62bd00f7cd965e23ea01c36be395
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95569679"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849744"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
 
@@ -38,7 +38,7 @@ Office 2010 を実行しているコンピューターでは、Azure Information
 
 Windows 用のクライアントのエンタープライズインストールおよび構成については、次の管理者ガイドを参照してください。
 
-- 統一されたラベル付けクライアント: Azure Information Protection 統合された [クライアント管理者ガイド](./rms-client/clientv2-admin-guide.md)] (./rms-client/client-admin-guide.md)
+- 統一されたラベル付けクライアント: [Azure Information Protection 統合クライアント管理者ガイド](./rms-client/clientv2-admin-guide.md)
 
 - 従来のクライアント: [Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)
 

@@ -1,10 +1,10 @@
 ---
 title: Azure RMS に関してよく寄せられる質問 - AIP
 description: Azure Information Protection のデータ保護サービス、Azure Rights Management (Azure RMS) に関してよく寄せられる質問の一部。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d5da3848ab1791a9cfe4ac00ae28193669190435
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 46d03db1a8e66b0e1753606a4a5e152047e43d22
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95569983"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849727"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -88,14 +88,14 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>一部のユーザーは Exchange Online に登録され、他のユーザーは Exchange Server に登録されている、Exchange のハイブリッド デプロイ構成は、Azure RMS でサポートされていますか。
 はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できることがメリットです。 この構成の場合、[Azure RMS をアクティブ](activate-service.md)にし、[IRM for Exchange Online を有効](/microsoft-365/enterprise/activate-rms-in-microsoft-365)にします。次に、[RMS コネクタをデプロイ](deploy-rms-connector.md)して、Exchange Server 用に構成します。
 
-## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azurerms"></a>運用環境にこの保護を利用すると、会社の環境がこのソリューションに固定されたり、Azure RMS で保護したコンテンツにアクセスできなくなる危険性が生じたりしますか。
-いいえ。データを常に制御することができます。また、たとえ Azure Rights Management サービスの使用を停止したとしても、継続してデータにアクセスすることができます。 詳細については、「 [Azure Rights Management の使用停止と非アクティブ](decommission-deactivate.md)化」を参照してください。
+## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>運用環境にこの保護を利用すると、会社の環境が Azure RMS に固定されたり、Azure RMS で保護したコンテンツにアクセスできなくなる危険性が生じたりしますか。
+いいえ。データを常に制御することができます。また、Azure Rights Management サービスの使用を停止したとしても、継続してデータにアクセスすることができます。 詳細については、「 [Azure Rights Management の使用停止と非アクティブ](decommission-deactivate.md)化」を参照してください。
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Azure RMS を使用してコンテンツを保護するユーザーを制御できますか。
 はい。Azure Rights Management サービスには、このシナリオのためのユーザー オンボーディング コントロールがあります。 詳細については、「 [Azure Information Protection からの保護サービスのアクティブ化](activate-service.md)」の記事の「[段階的な展開のオンボードコントロールの構成](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」セクションを参照してください。
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>保護されたドキュメントをユーザーが特定の組織と共有しないようにすることはできますか。
-データ保護に Azure Rights Management サービスを使用する最大の利点の 1 つは、Azure AD が認証を自動的に処理するため、各パートナー組織に対して明示的な信頼を構成することなく、企業間のコラボレーションをサポートできることです。
+データ保護に Azure Rights Management サービスを使用する最大の利点の 1 つは、Azure AD が認証を自動的に処理するため、各パートナー組織に対して明示的な信頼を構成することなく、企業間のコラボレーションをサポートできることです。
 
 ユーザーが特定の組織とドキュメントを安全に共有することを防止するような管理オプションはありません。 たとえば、信頼されていない組織や、競合が発生している組織をブロックするとします。 Azure Rights Management サービスが保護されたドキュメントをこれらの組織のユーザーに送信できないようにすることは意味がありません。これは、ユーザーがドキュメントを保護されていない状態で共有するためです。このシナリオでは、おそらく最後に実行しようとしている可能性があります。 たとえば、社外秘ドキュメントを共有しているユーザーを特定することはできません。このような組織では、ドキュメント (または電子メール) が Azure Rights Management サービスによって保護されている場合に実行できます。
 
@@ -184,6 +184,7 @@ Azure Information Protection では、他のユーザーと情報を安全に共
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>退職した従業員が保護していたファイルにアクセスするには、どうすればよいですか。
 [スーパー ユーザー機能](configure-super-users.md)を使用してください。この機能により、テナントで保護されているすべてのドキュメントと電子メールに対して承認されたユーザーにフル コントロール使用権限が与えられます。 スーパー ユーザーは常にこの保護されたコンテンツを読み取ることができ、必要に応じて、保護を解除したり、別のユーザーのために再度保護したりすることができます。 また必要であれば、スーパー ユーザー機能を使用して、権限を持つサービスによるファイルのインデックス化と検査を許可することができます。
 
+コンテンツが SharePoint または OneDrive に保存されている場合、管理者は [SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) コマンドレットを実行して、秘密度ラベルと暗号化の両方を削除できます。 詳細については、[Microsoft 365 のドキュメント](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document)を参照してください。
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>ドキュメント追跡サイトで失効をテストすると、最大 30 日間はドキュメントにアクセスできるというメッセージが表示されます。この期間を構成することはできますか。
 
 はい。 このメッセージは、その特定のファイルの[使用ライセンス](configure-usage-rights.md#rights-management-use-license)を反映しています。
