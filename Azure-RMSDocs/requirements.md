@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d90fdf263c15f80e23229bba427cb8d2b68f74e
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: d750edb4aef5bf0b2c546598bb3007f609e50cf4
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316672"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849699"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -138,9 +138,7 @@ Azure Information Protection クライアントとリモート デスクトッ�
 
 Azure Information Protection クライアントでは、次のいずれかの Office エディションの Microsoft **Word**、**Excel**、**PowerPoint**、**Outlook** を使用して、ドキュメントと電子メールにラベルを付け、保護することができます。
 
-- Microsoft 365 Apps for Business または Microsoft 365 Business Premium の **Office アプリの最小バージョン 1805**、ビルド 9330.2078。 
-
-    このエディションは、ユーザーに Azure Rights Management (別名 Azure Information Protection for Microsoft 365) のライセンスが割り当てられている場合にのみサポートされます。
+- **Office アプリ**。[更新チャネルによる Microsoft 365 アプリにサポートされている表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンについては、ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合は、Microsoft 365 Apps for Business または Microsoft 365 Business Premium の Office アプリの最小バージョン 1805、ビルド 9330.2078
 
 - **Microsoft 365 Apps for Enterprise**
 

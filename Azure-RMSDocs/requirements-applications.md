@@ -13,16 +13,16 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2461aed992c46859191a118db72c97ca90815315
-ms.sourcegitcommit: 1e028d89d179d0ef81851d969f5d0dc90b8dd45c
+ms.openlocfilehash: f25b020a72a48e79b24840a597aefd4cc9e594af
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93245104"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849706"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 このページに一覧表示されているアプリケーションとソフトウェアにより、Azure Information Protection のデータ保護を提供する Azure Rights Management (Azure RMS) サービスがネイティブでサポートされます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "93245104"
 |---------|---------|
 |**Word、Excel、PowerPoint**    | - [Microsoft 365 アプリ](#microsoft-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office for the web (保護されたドキュメントの表示)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web ブラウザー](#web-browser-support)        |
 |[**電子メール**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Microsoft 365 Apps for Enterprise の Outlook<br />- [Web ブラウザー](#web-browser-support)<br />- [Windows メール](#email-clients-using-exchange-activesync-irm)|
-|[**他のファイルの種類**](#supported-text-and-image-file-types)    |  - Microsoft 365 アプリ、Office 2019、および Office 2016 の Visio: **.vsdm、** **.vsdx、** **.vssm** 、 **.vstm** 、 **.vssx** 、 **.vstx** <br />- Windows 用 Azure Information Protection クライアント: テキスト、画像、 **pfile** <br />- AutoCAD 用 SealPath RMS プラグイン: **.dwg**       |
+|[**他のファイルの種類**](#supported-text-and-image-file-types)    |  - Microsoft 365 アプリ、Office 2019、および Office 2016 の Visio: **.vsdm、** **.vsdx、** **.vssm**、 **.vstm**、 **.vssx**、 **.vstx** <br />- Windows 用 Azure Information Protection クライアント: テキスト、画像、**pfile** <br />- AutoCAD 用 SealPath RMS プラグイン: **.dwg**       |
 | | |
 
 ## <a name="macos-rms-enlightened-applications"></a>macOS RMS 対応アプリケーション
@@ -123,8 +123,8 @@ Office ファイルや電子メール メッセージ以外のファイルの種
 ### <a name="microsoft-365-app-support"></a>Microsoft 365 アプリのサポート
 
 含まれるもの: 
-- Microsoft 365 Apps for Business または Microsoft 365 Business Premium の Office アプリの最小バージョン 1805、ビルド 9330.2078。 ユーザーに Azure Rights Management (別名 Azure Information Protection for Microsoft 365 Business Premium) のライセンスが割り当てられている場合にのみサポートされます。
-- Microsoft 365 Apps for enterprise。
+- Office アプリ。[更新チャネルによる Microsoft 365 アプリにサポートされている表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンについては、ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合は、Microsoft 365 Apps for Business または Microsoft 365 Business Premium の Office アプリの最小バージョン 1805、ビルド 9330.2078
+- Microsoft 365 Apps for enterprise
 
 ### <a name="viewing-protected-documents-in-office-for-the-web"></a>Office for the web での保護されたドキュメントの表示
 
@@ -132,7 +132,7 @@ Microsoft SharePoint および OneDrive でのみサポートされており、�
 
 ### <a name="web-browser-support"></a>Web ブラウザー サポート
 
-- [Microsoft 365 メッセージ暗号化と新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)を使用して [Office 添付ファイル](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM)が保護されている場合、 **Word、Excel、および PowerPoint** ファイルで Web ブラウザーがサポートされます。
+- [Microsoft 365 メッセージ暗号化と新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)を使用して [Office 添付ファイル](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM)が保護されている場合、**Word、Excel、および PowerPoint** ファイルで Web ブラウザーがサポートされます。
 
 - **電子メール** の場合、Web ブラウザーは次のシナリオでのみサポートされます。
 
@@ -170,7 +170,7 @@ Azure RMS は、Word、Excel、PowerPoint、および Outlook のアプリケー
 
 次の Office クライアント スイートは、Windows コンピューター上にあるファイルや電子メールの Azure Rights Management サービスを使用した保護をサポートします。
 
-- ユーザーに Azure Rights Management (Azure Information Protection for Microsoft 365 ともいう) のライセンスが割り当てられている場合は、 **Microsoft 365 Apps for Business または Microsoft 365 Business Premium の Office アプリの最小バージョン 1805、ビルド 9330.2078**
+- **Office アプリ**。[更新チャネルによる Microsoft 365 アプリにサポートされている表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンについては、ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合は、Microsoft 365 Apps for Business または Microsoft 365 Business Premium の Office アプリの最小バージョン 1805、ビルド 9330.2078
 
 - **Microsoft 365 Apps for Enterprise**
 
@@ -221,11 +221,11 @@ iOS デバイスや Android デバイスを Microsoft Intune で登録してい�
 
 Azure Information Protection (AIP) クライアントには 2 つのバージョンが含まれており、バージョンごとに管理者およびユーザー ガイドがあります。
 
-- **統合ラベル付けクライアント** :
+- **統合ラベル付けクライアント**:
     - [管理者ガイド](./rms-client/clientv2-admin-guide.md)
     - [ユーザー ガイド](./rms-client/clientv2-user-guide.md)
 
-- **クラシック クライアント** :
+- **クラシック クライアント**:
     - [管理者ガイド](./rms-client/client-admin-guide.md)
     - [ユーザー ガイド](./rms-client/client-user-guide.md)
 
