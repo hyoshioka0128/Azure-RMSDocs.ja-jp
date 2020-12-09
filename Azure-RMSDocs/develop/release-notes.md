@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 63beff811a9a9d6d08cfb7d2119c976e91097109
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 65e7e70d6cd144905c37d0c20c05f5841f310c42
+ms.sourcegitcommit: 03fef7cf0a7687962bfd3f0cd221541520f4a317
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570766"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862515"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
@@ -158,7 +158,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   Amazon® Kindle デバイスで .ptxt の添付ファイルを表示するサンプル アプリケーションを使用する際に、表示する前に、まずファイルをダウンロードする必要があります。
 
-    **解決方法** - 既知の問題には後に対処されます。
+    **解決策** -これは既知の問題であり、解決されない可能性が1つあります。 代わりに、 [Microsoft INFORMATION PROTECTION SDK](/information-protection/develop/) を調査することをお勧めします。
 
 -   複数のインスタンスが許可されていると、SDK を使用するアプリケーションがクラッシュすることがあります。
 
@@ -197,13 +197,13 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 
 
-**メモ**   MDI アプリケーションは、iOS API ではサポートされていません。
+**注**  MDI アプリケーションは、iOS API ではサポートされていません。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 **すべてのプラットフォーム**
 
-**Q**: 保護ワークフローに **カスタム アクセス許可** の選択 UI が表示されません。 これはなぜでしょうか。
+**Q**: 保護ワークフローに **カスタム アクセス許可** の選択 UI が表示されません。 なぜでしょうか。
 
 **A**: これは既知の問題であり、今後対応する予定です。
 
@@ -211,7 +211,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: Azure AD RMS のテスト組織の資格情報を要求するには、<rmcstbeta@microsoft.com> に電子メールを送信してください。
 
-**Q**: ドキュメントにテスト階層についての説明が見当たりません。 これはなぜでしょうか。
+**Q**: ドキュメントにテスト階層についての説明が見当たりません。 なぜでしょうか。
 
 **A**: 新しい AD RMS SDK にはテスト階層の概念はなく、 常に運用階層を使用します。
 
@@ -234,7 +234,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: iOS 7 以降を使用した Xcode 5.0 です。
 
-**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 これはなぜでしょうか。
+**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 なぜでしょうか。
 
 **A**: すべての操作が取り消し可能なわけではなく、取り消し操作は可能な限りにおいて実行されます。
 
