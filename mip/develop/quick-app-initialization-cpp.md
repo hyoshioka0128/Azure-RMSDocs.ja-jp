@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 3f74606e8f5caf4b4d0d480ba36830129249c9cf
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: cc8b2f4d969e24451110a6838ce10c8eea39abd9
+ms.sourcegitcommit: 54e742defb0b8dca35047b34498ec66e61602fa6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588310"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96577050"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート: クライアント アプリケーションの初期化 (C++) 
 
@@ -43,7 +43,7 @@ ms.locfileid: "91588310"
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. MIP SDK ファイル API 用の Nuget パッケージをご自分のプロジェクトに追加します。
-   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
+   - **ソリューション エクスプローラー** で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
    - **[NuGet パッケージ マネージャー]** タブが [エディター グループ] タブ領域で開かれたら、次の操作を行います。
      - **[参照]** を選択します。
      - 検索ボックスに「Microsoft.InformationProtection」と入力します。
@@ -58,7 +58,7 @@ ms.locfileid: "91588310"
 
 1. header/.h ファイルと implementation/.cpp ファイルの両方を作成する、新しいクラスをご自分のプロジェクトに追加します。
 
-   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
+   - **ソリューション エクスプローラー** でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
    - **[クラスの追加]** ダイアログで以下の操作を行います。
      - **[クラス名]** フィールドに「profile_observer」と入力します。 入力した名前に基づき、 **[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
      - 完了したら、 **[OK]** ボタンをクリックします。
@@ -67,7 +67,7 @@ ms.locfileid: "91588310"
 
 2. クラスの .h ファイルおよび .cpp ファイルを作成すると、両ファイルは [エディター グループ] タブに表示されます。 ここで各ファイルを更新して、新しいオブザーバー クラスを実装します。
 
-   - 生成した `profile_observer` クラスを選択または削除することで、"profile_observer.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `profile_observer` クラスを選択または削除することで、"profile_observer.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      #include <memory>
@@ -83,7 +83,7 @@ ms.locfileid: "91588310"
      };
      ```
 
-   - 生成した `profile_observer` クラス実装を選択/削除することで、"profile_observer.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `profile_observer` クラス実装を選択/削除することで、"profile_observer.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      #include <future>
@@ -127,7 +127,7 @@ SDK の `mip::AuthDelegate` クラスを拡張し、`mip::AuthDelegate::AcquireO
 
 2. ここで、各ファイルを更新して、新しい認証の委任クラスを実装します。
 
-   - 生成された `auth_delegate` クラス コードをすべて次のソースに置き換えることにより、"auth_delegate.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma, #include)。
+   - 生成された `auth_delegate` クラス コードをすべて次のソースに置き換えることにより、"auth_delegate.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma, #include)。
 
      ```cpp
      #include <string>
@@ -154,15 +154,15 @@ SDK の `mip::AuthDelegate` クラスを拡張し、`mip::AuthDelegate::AcquireO
      };
      ```
 
-   - 生成された `auth_delegate` クラスの実装をすべて次のソースに置き換えることにより、"auth_delegate.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 
+   - 生成された `auth_delegate` クラスの実装をすべて次のソースに置き換えることにより、"auth_delegate.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 
 
      > [!IMPORTANT]
      > 次のトークン取得コードは、運用環境での使用には適していません。 運用環境では、次に示すものを使用して、動的にトークンを取得するコードで置き換える必要があります。
-     > - ご利用の Azure AD アプリ登録で指定されたアプリケーション ID と応答/リダイレクトの URI (応答/リダイレクトの URI は、ご利用のアプリの登録に一致する**必要があります**)
-     > - `challenge` 引数の SDK によって渡された機関とリソースの URL (リソース URL はご利用のアプリ登録の API/アクセス許可に一致する**必要があります**)
+     > - ご利用の Azure AD アプリ登録で指定されたアプリケーション ID と応答/リダイレクトの URI (応答/リダイレクトの URI は、ご利用のアプリの登録に一致する **必要があります**)
+     > - `challenge` 引数の SDK によって渡された機関とリソースの URL (リソース URL はご利用のアプリ登録の API/アクセス許可に一致する **必要があります**)
      > - アカウントが SDK によって渡された `identity` 引数に一致する、有効なアプリ/ユーザーの資格情報。 OAuth2 の "ネイティブ" クライアントではユーザーの資格情報を求める確認メッセージが表示し、"認証コード" フローを使用する必要があります。 OAuth2 の "Confidential クライアント" では、"クライアントの資格情報" フロー (サービスなど) で独自のセキュリティで保護された資格情報を使用したり、"認証コード" フロー (Web アプリなど) を使用してユーザーの資格情報を求める確認メッセージを表示したりすることができます。 
      >
-     > OAuth2 トークンの取得は複雑なプロトコルであり、通常はライブラリを使用することによって実現されます。 TokenAcquireOAuth2Token() は、必要に応じて MIP SDK によって**のみ**呼び出されます。
+     > OAuth2 トークンの取得は複雑なプロトコルであり、通常はライブラリを使用することによって実現されます。 TokenAcquireOAuth2Token() は、必要に応じて MIP SDK によって **のみ** 呼び出されます。
 
      ```cpp
      #include <iostream>
@@ -206,7 +206,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
 
 2. ここで各ファイルを更新して、新しい同意の委任クラスを実装します。
 
-   - 生成された `consent_delegate` クラス コードをすべて次のソースに置き換えることにより、"consent_delegate.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma, #include)。
+   - 生成された `consent_delegate` クラス コードをすべて次のソースに置き換えることにより、"consent_delegate.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma, #include)。
 
      ```cpp
      #include "mip/common_types.h"
@@ -219,7 +219,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
      };
      ```
 
-   - 生成された `consent_delegate` クラスの実装をすべて次のソースに置き換えることにより、"consent_delegate.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 
+   - 生成された `consent_delegate` クラスの実装をすべて次のソースに置き換えることにより、"consent_delegate.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 
 
      ```cpp
      #include <iostream>
@@ -240,12 +240,11 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
 
 前述のように、MIP API を使用する SDK クライアントには、プロファイル オブジェクトとエンジン オブジェクトが必要です。 プロファイル オブジェクトとエンジン オブジェクトをインスタンス化するためにコードを追加することで、このクイック スタートのコード部分を完了します。 
 
-1. **ソリューション エクスプローラー**から、`main()` メソッドの実装を含む .cpp ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+1. **ソリューション エクスプローラー** から、`main()` メソッドの実装を含む .cpp ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
-2. 生成された `main()` の実装を削除します。 プロジェクトの作成時に Visual Studio で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma, #include)。 任意のプリプロセッサ ディレクティブの後に次のコードを追加します。
+2. 生成された `main()` の実装を削除します。 プロジェクトの作成時に Visual Studio で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma, #include)。 任意のプリプロセッサ ディレクティブの後に次のコードを追加します。
 
    ```cpp
-   #include "mip/mip_init.h"
    #include "mip/mip_context.h"  
    #include "auth_delegate.h"
    #include "consent_delegate.h"
