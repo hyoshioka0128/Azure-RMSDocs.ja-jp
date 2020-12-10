@@ -1,17 +1,17 @@
 ---
 title: クイック スタート - クライアント アプリケーション初期化 - 保護 API (C#)
-description: Microsoft Information Protection (MIP) SDK - 保護 API C# クライアント アプリケーションの初期化ロジックを記述する方法を示すクイック スタート。
+description: Microsoft Information Protection (MIP) SDK - 保護 API C# クライアント アプリケーション (C#) の初期化ロジックを記述する方法を示すクイック スタート
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 6222326e569d03fbb208d42aacd7efb7ab406a78
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 0f8ed60420b5a0c4fcc0f8264d54f696f5c439a2
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766373"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535894"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>クイック スタート:保護 API のためのクライアント アプリケーション初期化 (C#)
 
@@ -42,7 +42,7 @@ ms.locfileid: "81766373"
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
 2. MIP SDK ファイル API 用の Nuget パッケージをご自分のプロジェクトに追加します。
-   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
+   - **ソリューション エクスプローラー** で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
    - **[NuGet パッケージ マネージャー]** タブが [エディター グループ] タブ領域で開かれたら、次の操作を行います。
      - **[参照]** を選択します。
      - 検索ボックスに「Microsoft.InformationProtection」と入力します。
@@ -57,7 +57,7 @@ ms.locfileid: "81766373"
 
 ## <a name="initialize-the-mip-sdk-managed-wrapper"></a>MIP SDK のマネージド ラッパーを初期化する
 
-1. **ソリューション エクスプローラー**から、`Main()` メソッドの実装を含む .cs ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+1. **ソリューション エクスプローラー** から、`Main()` メソッドの実装を含む .cs ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 2. 生成された `main()` の実装を削除します。
 
@@ -163,7 +163,7 @@ namespace mip_sdk_dotnet_quickstart
 
 4. アプリケーションの最終ビルドを行い、任意のエラーを解決します。 コードは正常にビルドされるはずです。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 これで初期化コードが完了し、MIP 保護 API の操作を開始する次のクイック スタートの準備ができました。
 

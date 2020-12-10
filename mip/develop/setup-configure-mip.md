@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 5edca37acb2f817173142c6638775c2e95bd7439
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 44636616cf410f0976a51afa4bd110e0531de85c
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588242"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535554"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成
 
@@ -131,7 +131,7 @@ ms.locfileid: "91588242"
      - \<target\> = `debug`, `release`
      - \<platform\> = `amd64` (x64)、`x86` など。
 
-   - **パス**変数の更新が完了したら、 **[OK]** をクリックします。 **[環境変数]** ダイアログに戻ったら、 **[OK]** をクリックします。
+   - **パス** 変数の更新が完了したら、 **[OK]** をクリックします。 **[環境変数]** ダイアログに戻ったら、 **[OK]** をクリックします。
 
 6. GitHub から SDK サンプルをダウンロードします (省略可能)。
 
@@ -145,7 +145,7 @@ ms.locfileid: "91588242"
 
 Microsoft 365 サブスクリプションのプロビジョニング プロセスの一環として、関連付けられた Azure Active Directory (Azure AD) テナントが作成されます。 Azure AD テナントでは、Microsoft 365 "*ユーザー アカウント*" と "*アプリケーション アカウント*" の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
 
-実行時の認証と承認では、アカウントの ID 情報から派生した*セキュリティ プリンシパル*によってアカウントが表されます。 アプリケーション アカウントを表すセキュリティ プリンシパルは、[*サービス プリンシパル*](/azure/active-directory/develop/developer-glossary#service-principal-object)と呼ばれます。
+実行時の認証と承認では、アカウントの ID 情報から派生した *セキュリティ プリンシパル* によってアカウントが表されます。 アプリケーション アカウントを表すセキュリティ プリンシパルは、[*サービス プリンシパル*](/azure/active-directory/develop/developer-glossary#service-principal-object)と呼ばれます。
 
 クイック スタートおよび MIP SDK のサンプルで使用するために Azure AD でアプリケーション アカウントを登録するには、次の手順を実行します。
 
@@ -162,14 +162,14 @@ Microsoft 365 サブスクリプションのプロビジョニング プロセ�
 3. 次に、 **[API のアクセス許可]** をクリックして、クライアントがアクセスする必要がある API とアクセス許可を追加します。 **[アクセス許可の追加]** をクリックして、[API アクセス許可の要求] ブレードを開きます。
 
 4. 次に、実行時にアプリケーションで要求される MIP API とアクセス許可を追加します。
-   - **[API を選択します]** ページで、**Azure Rights Management サービス**をクリックします。
-   - **Azure Rights Management サービス**の API ページで、 **[委任されたアクセス許可]** をクリックします。
+   - **[API を選択します]** ページで、**Azure Rights Management サービス** をクリックします。
+   - **Azure Rights Management サービス** の API ページで、 **[委任されたアクセス許可]** をクリックします。
    - **[アクセス許可の選択]** セクションで、**user_impersonation** アクセス許可をオンにします。 これにより、アプリケーションがユーザーに代わって、保護されたコンテンツの作成やアクセスを行うことが可能になります。
    - **[アクセス許可の追加]** をクリックして保存します。
 
 5. 手順 4 を繰り返しますが、今回は **[API の選択]** ページで API を検索する必要があります。
    - **[API を選択します]** ページで、 **[所属する組織で使用している API]** をクリックした後、検索ボックスに「**Microsoft Information Protection 同期サービス**」と入力して、それを選択します。
-   - **Microsoft Information Protection 同期サービス**の API ページで、 **[委任されたアクセス許可]** をクリックします。
+   - **Microsoft Information Protection 同期サービス** の API ページで、 **[委任されたアクセス許可]** をクリックします。
    - **[UnifiedPolicy]** ノードを展開し、 **[UnifiedPolicy.User.Read]** をオンにします。
    - **[アクセス許可の追加]** をクリックして保存します。
 
@@ -177,7 +177,7 @@ Microsoft 365 サブスクリプションのプロビジョニング プロセ�
 
 完了すると、アプリケーションの登録と API のアクセス許可は、次の例のようになるはずです。
 
-   [![Azure AD アプリの登録](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Azure AD アプリの登録](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
+   [![Azure AD アプリの登録](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Azure AD アプリのアクセス許可](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 登録に API とアクセス許可を追加する方法の詳細については、「[Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)」(Web API にアクセスするためのクライアント アプリケーションを構成する) を参照してください。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。
 
@@ -187,7 +187,7 @@ MIP を使用して開発したアプリケーションをリリースする前�
 
 1. 次の情報を記載した電子メールを [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) に送信して、IPIA を入手します。
 
-   **件名:** *会社名*の IPIA 申し込み
+   **件名:** *会社名* の IPIA 申し込み
 
    電子メールの本文に、次の情報を含めます。
    - アプリケーションと製品名
@@ -204,7 +204,7 @@ MIP を使用して開発したアプリケーションをリリースする前�
    - 会社のアプリケーションの名前
    - アプリケーションの簡単な説明
    - *Azure テナント ID*
-   - アプリケーションの*アプリ ID*
+   - アプリケーションの *アプリ ID*
    - 緊急時の会社の連絡先、電子メール アドレス、および電話番号
 
 3. フォームが受信されると、デジタル署名を行うための最終的な IPIA リンクがお客様に送信されます。 お客様の署名後、適切な Microsoft 担当者が署名することで、契約が締結されます。

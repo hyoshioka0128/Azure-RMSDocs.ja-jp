@@ -1,17 +1,17 @@
 ---
 title: ファイル API - 電子メール .msg ファイルの処理 (C++)
-description: この記事では、MIP SDK File API を使用して .msg ファイルを処理する方法のシナリオについて説明します。
+description: この記事は、MIP SDK ファイル API を使用して .msg ファイルを処理する方法 (C++) のシナリオを理解するうえで役立ちます。
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
-ms.openlocfilehash: ef6f8db6915242a830d252eec4509fa67eecbb8c
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: ab070974fc8c03236269a40b2230862e87e19e6b
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403317"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536020"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>ファイル API - 電子メール .msg ファイルの処理 (C++)
 
@@ -42,7 +42,7 @@ File API は、他の種類のファイルと同じ方法で .msg ファイル�
 
 次のファイル エンジンの構築コードを追加して `enable_msg_file_type flag` を設定し、ファイル エンジンを使用して .msg ファイルを保護します。
 
-1. *ソリューション エクスプローラー*を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+1. *ソリューション エクスプローラー* を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 2. 次の #include と using ディレクティブをファイルの上部の対応する既存のディレクティブの下に追加します。
 

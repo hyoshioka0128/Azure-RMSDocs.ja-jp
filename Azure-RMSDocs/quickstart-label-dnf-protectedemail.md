@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: dbadf410696d6d712be12d9df6d91aaec9e32c48
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: e21a19d44c287de326c7bcd2425b94bba9b984ef
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503589"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849812"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
@@ -44,11 +44,11 @@ ms.locfileid: "94503589"
 
 |要件  |説明  |
 |---------|---------|
-|**サポート サブスクリプション**     |  [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプションが必要です。 </br></br>このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。       |
-|**Azure portal に AIP が追加されている**    |  Azure portal に [Azure Information Protection] ペインを追加し、保護サービスがアクティブになっていることを確認した。 </br></br>詳細については、「[クイック スタート: 作業の開始](quickstart-viewpolicy.md)に関するページをご覧ください。       |
+|**サポート サブスクリプション**     |  [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプションが必要です。 <br><br>このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。       |
+|**Azure portal に AIP が追加されている**    |  Azure portal に [Azure Information Protection] ペインを追加し、保護サービスがアクティブになっていることを確認した。 <br><br>詳細については、「[クイック スタート: 作業の開始](quickstart-viewpolicy.md)に関するページをご覧ください。       |
 |**構成する既存の Azure Information Protection ラベル**     | 既定のいずれかのラベルまたは作成済みのラベルを使用できます。 詳細については、「[クイック スタート: 特定のユーザー向けの新しい Azure Information Protection ラベルを作成する](quickstart-label-specificusers.md)」をご覧ください。 |
-|**クラシック クライアントがインストールされている**    |   新しいラベルをテストするには、使用するコンピューターにクラシック クライアントをインストールする必要があります。 </br></br>Azure Information Protection クラシック クライアントは、2021 年 3 月に非推奨となる予定です。 AIP クラシック クライアントをデプロイするには、サポート チケットを作成してダウンロード アクセスを取得します。  |
-|**Office アプリにサインインしている Windows コンピューター** |新しいラベルをテストするには、Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューターが必要です。 </br></br>このコンピューターで、次のいずれかのバージョンに該当する Office アプリにサインインします。 </br>- Azure Rights Management のライセンスが割り当てられている場合は Office アプリの最小バージョン 1805、Microsoft 365 Apps for Business のビルド 9330.2078、または Microsoft 365 Business Premium。 </br>- Microsoft 365 Apps for Enterprise。 </br>- Office Professional Plus 2019。 </br>- Office Professional Plus 2016。</br>- Office Professional Plus 2013 Service Pack 1。 </br>- Office Professional Plus 2010 Service Pack 2。|
+|**クラシック クライアントがインストールされている**    |   新しいラベルをテストするには、使用するコンピューターにクラシック クライアントをインストールする必要があります。 <br><br>Azure Information Protection クラシック クライアントは、2021 年 3 月に非推奨となる予定です。 AIP クラシック クライアントをデプロイするには、サポート チケットを作成してダウンロード アクセスを取得します。  |
+|**Office アプリにサインインしている Windows コンピューター** |新しいラベルをテストするには、Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューターが必要です。 <br><br>このコンピューターで、次のいずれかのバージョンに該当する Office アプリにサインインします。 <br><br>- **Office アプリ。** ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合、Microsoft 365 Apps for Business または Microsoft 365 Business Premium の[更新チャネル別の Microsoft 365 アプリでサポートされているバージョンの表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョン。 <br>- **Microsoft 365 Apps for Enterprise。** <br>- **Office Professional Plus 2019。** <br>- **Office Professional Plus 2016**。<br>- **Office Professional Plus 2013 Service Pack 1**。 <br>- **Office Professional Plus 2010 Service Pack 2**。|
 | | |
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。

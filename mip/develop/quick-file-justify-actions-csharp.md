@@ -1,17 +1,17 @@
 ---
 title: '方法: 理由を必要とするラベルのダウングレードまたは削除 (C#)'
-description: この記事では、理由を必要とするラベルをダウングレードまたは削除する方法のシナリオについて説明します。
+description: この記事は、理由を必要とするラベルをダウングレードまたは削除する方法 (C#) のシナリオを理解するうえで役立ちます。
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 666b0c7fdbc483f638f76def37ec3082c9eb7377
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 9543934addfbd7d2b897f420e9178513ffc0c639
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316519"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535979"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Information Protection SDK File API - ファイルの秘密度ラベルをダウングレードするアクションの理由 (C#)
 

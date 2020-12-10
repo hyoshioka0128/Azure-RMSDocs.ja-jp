@@ -1,18 +1,18 @@
 ---
 title: クイック スタート - MIP SDK C# ラッパーを利用し、Microsoft Information Protection (MIP) テナントの認証ユーザーが利用できる保護テンプレートを一覧表示する
-description: Microsoft Information Protection SDK 保護 API C# ラッパーを使用し、ユーザーが利用できる保護テンプレートを一覧表示する方法について説明するクイック スタート。
+description: Microsoft Information Protection SDK 保護 API C# ラッパーを使用し、ユーザーが利用できる保護テンプレートを一覧表示する方法 (C#) について説明するクイック スタート
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: 7b9a8d916b0c3c4b8aaa006abdf27cd8c02a7f6e
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 88c385d783df55b8270740357372c6345da8701a
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588259"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535927"
 ---
 # <a name="quickstart-list-templates-c"></a>クイック スタート:テンプレートを一覧表示する (C#)
 
@@ -31,7 +31,7 @@ ms.locfileid: "91588259"
 
 1. 前の「クイック スタート - クライアント アプリケーション初期化 - 保護 API (C#)」の記事で作成した Visual Studio ソリューションを開きます。
 
-2. **ソリューション エクスプローラー**を使用して、`Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+2. **ソリューション エクスプローラー** を使用して、`Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 3. `Main()` 本文の末尾の、`Main()` 関数のアプリケーション シャットダウンのセクションの上 (前のクイック スタートが終わった場所) に、次のコードを挿入します。
 
@@ -54,7 +54,7 @@ ms.locfileid: "91588259"
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
-2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインを求められることはなく、ラベルの一覧が表示されます。
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる *場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインを求められることはなく、ラベルの一覧が表示されます。
 
      [![Visual Studio のトークンでのサインインの取得](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 

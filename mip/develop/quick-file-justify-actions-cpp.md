@@ -1,17 +1,17 @@
 ---
 title: '方法: 理由を必要とするラベルのダウングレードまたは削除 ( C++ )'
-description: この記事では、理由を必要とするラベルをダウングレードまたは削除する方法のシナリオについて説明します。
+description: この記事は、理由を必要とするラベルをダウングレードまたは削除する方法 (C++) のシナリオを理解するうえで役立ちます。
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
 ms.author: v-anikep
-ms.openlocfilehash: 96bd94398c2a5c0bbe2cd87c12ec8e6a0af7e18b
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: dd02fe709c0fc946ba7bb5d0c5fec82a0688540c
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135676"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536027"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Information Protection SDK File API - ファイルの秘密度ラベルを下げるアクションの理由 (C++)
 

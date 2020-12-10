@@ -1,18 +1,18 @@
 ---
 title: クイック スタート - C++ MIP SDK を利用し、Microsoft Information Protection (MIP) テナントの認証ユーザーが利用できる保護テンプレートを一覧表示する
-description: Microsoft Information Protection SDK 保護 C++ API を使用し、ユーザーが利用できる保護テンプレートを一覧表示する方法について説明するクイック スタート。
+description: Microsoft Information Protection C++ SDK 保護 API を使用し、ユーザーが利用できる保護テンプレートを一覧表示する方法 (C++) について説明するクイック スタート
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: c8af932e5210bdf2445926c6584d4680a6fb0158
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: cc38554ccd9d1ff33c41c4d9adf37b097b7b8547
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588276"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535912"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>クイック スタート:保護テンプレートを一覧表示する (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "91588276"
 
 1. 前の「クイック スタート - クライアント アプリケーション初期化 - 保護 API (C++)」の記事で作成した Visual Studio ソリューションを開きます。
 
-2. **ソリューション エクスプローラー**を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+2. **ソリューション エクスプローラー** を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 3. 次の `using` ディレクティブをファイル上部の `using mip::ProtectionEngine;` の後に追加します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "91588276"
     engine->GetTemplatesAsync(engineObserver, loadPromise);
     auto templates = loadFuture.get();
 
-    cout << "*** Template List: " << endl;
+    cout << "**_ Template List: " << endl;
 
     for (const auto& protectionTemplate : templates) {
         cout << "Name: " << protectionTemplate->GetName() << " : " << protectionTemplate->GetId() << endl;
@@ -84,7 +84,7 @@ ms.locfileid: "91588276"
 
 最後に、クライアント アプリケーションを構築してテストします。
 
-1. Ctrl+Shift+b ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
+1. Ctrl+Shift+b (*[ソリューションのビルド] **) キーを使用して、クライアント アプリケーションを構築します。ビルド エラーがない場合は、F5 (** [デバッグ開始]**) を使用してご自分のアプリケーションを実行します。
 
 2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireOAuth2Token()` メソッドを呼び出すたびに、アプリケーションによりアクセス トークンが求められます。 複数回求められ、要求される値が同じ場合は、前に生成したトークンを再利用できます。
 
@@ -112,7 +112,7 @@ ms.locfileid: "91588276"
 4. アクセス トークンを手順 2 番のプロンプトに貼り付けると、次の例のように、コンソール出力に保護テンプレートが表示されます。
 
    ```console
-   *** Template List:
+   **_ Template List:
    Name: Confidential \ All Employees : a74f5027-f3e3-4c55-abcd-74c2ee41b607
    Name: Highly Confidential \ All Employees : bb7ed207-046a-4caf-9826-647cff56b990
    Name: Confidential : 174bc02a-6e22-4cf2-9309-cb3d47142b05
@@ -133,7 +133,7 @@ ms.locfileid: "91588276"
 
 | [概要] | エラー メッセージ | 解決策: |
 |---------|---------------|----------|
-| アプリケーションの登録または PowerShell スクリプトに不正なリダイレクト URI (AADSTS50011) |*AADSTS50011: 要求で指定した応答 URL がアプリケーションに構成されている応答 URL と一致しません: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* | 次のいずれかの手順を完了し、使用しているリダイレクト URI を確認してください。<br><br><li>Azure AD のアプリケーションの構成のリダイレクト URI が PowerShell のスクリプトと一致するように更新します。 リダイレクト URI のプロパティが正しく構成されていることを、「[MIP SDK setup and configuration](setup-configure-mip.md#register-a-client-application-with-azure-active-directory)」 (MIP SDK の設定と構成) で確認します。<br><li>PowerShell スクリプトの `redirectUri` 変数が、アプリケーションの登録と一致していることを確認します。 |
+| アプリケーションの登録または PowerShell スクリプトに不正なリダイレクト URI (AADSTS50011) |_AADSTS50011: 要求で指定した応答 URL がアプリケーションに構成されている応答 URL と一致しません: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'。* | 次のいずれかの手順を完了し、使用しているリダイレクト URI を確認してください。<br><br><li>Azure AD のアプリケーションの構成のリダイレクト URI が PowerShell のスクリプトと一致するように更新します。 リダイレクト URI のプロパティが正しく構成されていることを、「[MIP SDK setup and configuration](setup-configure-mip.md#register-a-client-application-with-azure-active-directory)」 (MIP SDK の設定と構成) で確認します。<br><li>PowerShell スクリプトの `redirectUri` 変数が、アプリケーションの登録と一致していることを確認します。 |
 | 不正なサインイン アカウント (AADSTS50020) | *AADSTS50020: ID プロバイダー 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/ ' のユーザー アカウント 'user@domain.com ' がテナントの '組織名' になく、そのテナントのアプリケーション '0edbblll-8773-44de-b87c-b8c6276d41eb' にアクセスできません。* | 次のいずれかを完了します。<br><br><li>PowerShell スクリプトを再実行します。その際、Azure AD アプリケーションが登録されたのと同じテナントのアカウントを使用してください。<br><li>サインイン アカウントが正しい場合、PowerShell のホスト セッションが既に別のアカウントで認証されている可能性があります。 この場合、スクリプト ホストを終了し、再度開き、再度実行します。<br><li>(ネイティブではなく) Web アプリでこのクイック スタートを使用しており、別のテナントのアカウントを使用してサインインする必要がある場合、Azure AD アプリケーションの登録がマルチテナントで使用できるよう、有効になっていることを確認します。 アプリケーションの登録の「マニフェストの編集」機能を使用して、これが `"availableToOtherTenants": true,` を指定していることを確認することで確認できます。 |
 | アプリケーションの登録での不正なアクセス許可 (AADSTS65005) | *AADSTS65005: 無効なリソースです。クライアントのアプリケーションの登録で要求されたアクセス許可にないリソースに、クライアントがアクセスを求めました。クライアント アプリ ID: 0edbblll-8773-44de-b87c-b8c6276d41eb。要求のリソース値: https://syncservice.o365syncservice.com/ 。リソース アプリ ID: 870c4f2e-85b6-4d43-bdda-6ed9a579b725。アプリの登録で有効なリソースの一覧: 00000002-0000-0000-c000-000000000000。* | Azure AD のアプリケーションの構成の権限要求を更新します。 アプリケーションの登録で権限要求が正しく構成されていることを確認するには、「[MIP SDK setup and configuration](setup-configure-mip.md#register-a-client-application-with-azure-active-directory)」 (MIP SDK の設定と構成) を参照してください。 |
 
@@ -143,7 +143,7 @@ ms.locfileid: "91588276"
 |---------|---------------|----------|
 | 不正なアクセス トークン | *例外が発生しました...正しくない/期限切れのアクセス トークンですか?<br><br>API 呼び出しが失敗しました: profile_add_engine_async が次により失敗しました: [class mip::PolicySyncException] ポリシーの取得に失敗しました。次の http 状態コードにより要求が失敗しました:401, x-ms-diagnostics: [2000001;reason="要求により送信された OAuth トークンを解析できません。";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (process 29924) がコード 0 により終了しました。<br><br>このウィンドウを閉じるには、いずれかのキーを押してください . . .* | プロジェクトが正しく構成されているにもかかわらず、左と同様な出力がある場合、`AcquireOAuth2Token()` メソッドのトークンが不正であるか期限切れである可能性があります。 「[アクセス トークンを生成するための PowerShell スクリプトの作成](#create-a-powershell-script-to-generate-access-tokens)」に戻ってアクセス トークンを再生成し、`AcquireOAuth2Token()` をもう一度更新して、再構築/再テストを行います。 [jwt.ms](https://jwt.ms/) の 1 ページからなる Web アプリケーションを使用して、トークンとその要求を検証および確認することも可能です。 |
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 認証ユーザーが利用できる保護テンプレートを一覧表示する方法を覚えたところで、次のクイック スタートをお試しください。
 

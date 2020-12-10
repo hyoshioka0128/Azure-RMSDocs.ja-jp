@@ -1,6 +1,6 @@
 ---
 title: クイック スタート - C# MIP SDK 保護 API を使用してテキストを暗号化し、復号する
-description: Microsoft Information Protection SDK .NET ラッパーを使用し、保護テンプレートでアドホック テキストを暗号化し、復号する方法について説明するクイック スタート。
+description: Microsoft Information Protection SDK .NET ラッパーを使用し、保護テンプレートでアドホック テキストを暗号化し、復号する方法 (C#) について説明するクイック スタート
 services: information-protection
 author: Pathak-Aniket
 ms.service: information-protection
@@ -8,12 +8,12 @@ ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: 85c3575aad9315155b2fbfaad991e586435edb37
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 5fae5837ab26c4fce20ac120293eff3823dd9b70
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972154"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535826"
 ---
 # <a name="quickstart-encryptdecrypt-text-using-mip-sdk-c"></a>クイック スタート:MIP SDK (C#) を使用して暗号化し、復号する
 
@@ -30,7 +30,7 @@ ms.locfileid: "82972154"
 
 保護エンジン オブジェクトを使用し、アドホック テキストを暗号化するロジックを追加する
 
-1. **ソリューション エクスプローラー**を使用して、Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+1. **ソリューション エクスプローラー** を使用して、Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 2. `Main()` 本文の末尾 (前のクイック スタートが終わった場所) に次のコードを挿入します。
 
@@ -100,7 +100,7 @@ ms.locfileid: "82972154"
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
-2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインが求められることはなく、ラベルの一覧と、適用されたラベルおよび修正されたファイルに関する情報が表示されます。
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる *場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインが求められることはなく、ラベルの一覧と、適用されたラベルおよび修正されたファイルに関する情報が表示されます。
 
   ```console
    Original content: My secure text
