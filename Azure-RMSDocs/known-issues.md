@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee493790e4997f8be11244490cf6014c17e6c6fd
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 26e354c883fd2e8ef5244b77635cb3e63ba9bc8e
+ms.sourcegitcommit: d578b609ddefc2580548cdb0a54a8af0ba69fbf4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384232"
+ms.locfileid: "97388390"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題 - Azure Information Protection
 
@@ -43,7 +43,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 ## <a name="known-issues-for-aip-and-exploit-protection"></a>AIP と Exploit Protection の既知の問題
 
-Azure Information Protection クライアントは、 [Exploit Protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっている、.net 2 または3がインストールされているコンピューターではサポートされていません。これにより、Office アプリがクラッシュします。
+Azure Information Protection クライアントは、 [Exploit Protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっている .net 2 または3のコンピューターではサポートされていません。これにより、Office アプリが予期せず動作します。
 
 ご使用のシステムに必要な .NET 4.x バージョンに加えて .NET バージョン2または3がある場合は、AIP をインストールする前に、Exploit protection を無効にしてください。 
 
@@ -69,7 +69,7 @@ Azure Information Protection クライアントと共にインストールされ
 
 ## <a name="aip-known-issues-in-office-applications"></a>Office アプリケーションの AIP に関する既知の問題
 
-|機能  |既知の問題  |
+|特徴  |既知の問題  |
 |---------|---------|
 |**複数のバージョンの Office**    | Azure Information Protection クライアントでは、クラシックでも統合ラベル付けでも、同じコンピューター上で複数のバージョンの Office を使用したり、Office のユーザー アカウントを切り替えたりすることはサポートされていません。       |
 |**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、次のようになります。 <br><br>-Office アプリでパフォーマンスの問題が発生する可能性があります。<br>-Azure Information Protection バーが、1つまたは両方の画面で、Office 画面の中央にフローティングするように見える場合があります。 <br><br>一貫したパフォーマンスを確保し、バーが正しい場所にあることを確認するには、Office アプリケーションの [**オプション**] ダイアログを開き、[**全般**] で、[**最適化**] ではなく [**互換性のために最適化**] を選択します。    |
@@ -95,7 +95,7 @@ Azure Information Protection クライアントと共にインストールされ
     
     :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="クライアントビューアーで拡大されるイメージ":::
     
-    詳細については、次を参照してください。
+    詳細については次を参照してください:
 
     - [統一された **ラベル付けクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/clientv2-view-use-files.md)
     - [**従来のクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/client-view-use-files.md)
