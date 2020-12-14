@@ -1,10 +1,10 @@
 ---
 title: アプリが AIP から Azure Rights Management をサポートするしくみ
 description: 最も一般的に使用されるアプリケーション (Office アプリなど) とサービス (Exchange や SharePoint など) が Azure Information Protection の Azure Rights Management サービスを使用して、組織のドキュメントや電子メールを保護する方法について説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,18 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cc23496dc8ceedeb463205147a076d8a98d58c75
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 5ee04997191002a9b20b97c52573834483eb8813
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746153"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383994"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 *
 
 次の情報は、一般的に使用されているエンドユーザーアプリケーションとサービスが Azure Information Protection の Azure Rights Management サービスを使用して組織のドキュメントや電子メールを保護する方法を理解するのに役立ちます。 アプリケーションには、Word、Excel、PowerPoint、Outlook があります。 サービスには、Exchange と Microsoft SharePoint が含まれます。
 
@@ -50,7 +52,7 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 -   [Office アプリケーションおよびサービス](office-apps-services-support.md)
 
--   [Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイルサーバー](file-server-support.md)
+-   [Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイル サーバー](file-server-support.md)
 
 -   [RMS API をサポートするその他のアプリケーション](api-support.md)
 

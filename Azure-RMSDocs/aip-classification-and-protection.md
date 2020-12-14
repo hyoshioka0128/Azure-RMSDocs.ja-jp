@@ -12,19 +12,21 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 450cf34997f676e1033856e14adfc3e792fb1e04
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: 71f07f5ffb9167ab61653cef10c610968ff74786
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95570951"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384198"
 ---
 # <a name="azure-information-protection-aip-labeling-classification-and-protection"></a>Azure Information Protection (AIP) ラベル付け、分類、保護
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> ***関連**: [Azure Information Protection Windows 用のクライアントと従来のクライアントとの統合](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection (AIP) は、組織がドキュメントや電子メールにラベルを適用して、分類および保護できるようにするクラウドベースのソリューションです。 
 
@@ -43,16 +45,16 @@ AIP でコンテンツにラベルを付けるには、次のものが含まれ�
 
 - データの保存場所やデータの共有者に関係なく識別できる **分類**。
 - ヘッダー、フッター、透かしなどの **視覚的なマーキング**。
-- クリア テキストでファイルと電子メール ヘッダーに追加される **メタデータ**。 クリア テキストのメタデータでは、その他のサービスが分類を識別して適切なアクションを取ることができます
+- **メタデータ**。クリアテキストでファイルと電子メールヘッダーに追加されます。 クリア テキストのメタデータでは、その他のサービスが分類を識別して適切なアクションを取ることができます
 
-たとえば、次の図では、[統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)を使用したラベル付けによって、電子メール メッセージが "*一般*" と分類されています。
+たとえば、次の図では、ラベル付けによって電子メールメッセージが *一般* に分類されています。
 
 :::image type="content" source="media/example-email-footerv2.png" alt-text="Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例":::
 
 この例では、ラベルは次も行っています。
 
-- **フッター "*秘密度: 一般*" がメール メッセージに追加されました。** このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。
-- **電子メール ヘッダーにメタデータが埋め込まれました。** ヘッダー データを使用すると、電子メール サービスはラベルを検査し、理論上、監査エントリを作成できるようになり、組織外への送信ができなくなります。
+- ***[秘密度: 全般* ] のフッターを電子メールメッセージに追加しまし** た。 このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。
+- **電子メールヘッダーに埋め込まれたメタデータ**。 ヘッダー データを使用すると、電子メール サービスはラベルを検査し、理論上、監査エントリを作成できるようになり、組織外への送信ができなくなります。
 
 ラベルは、管理者がルールと条件を使用して手動で適用することも、ユーザーが手動で適用することもできます。また、管理者がユーザーに表示する推奨事項を定義する組み合わせを使用することもできます
 
@@ -66,8 +68,8 @@ Azure RMS では暗号化、ID、および承認ポリシーが使用されま�
 
 保護設定は:
 
-- **ラベルの構成に含めることができます**。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールを分類して保護できます。 
-- 保護をサポートするアプリケーションとサービスによって **独自に使用することもできます**。ただし、ラベルを付けることはできません。 
+- ラベル **の構成の一部**。ユーザーはラベルを適用するだけで、ドキュメントと電子メールを分類して保護することができます。 
+- 保護をサポートするがラベル付けをサポートしていないアプリケーションやサービスによって、**独自に使用され** ます。 
 
     保護のみをサポートするアプリケーションとサービスでは、保護設定は [Rights Management テンプレート](#rights-management-templates)として表示されます。
 
@@ -95,7 +97,7 @@ Rights Management テンプレートは、Azure Rights Management をサポー�
 
 AIP クライアントにより、Office アプリケーションに Information Protection バーがインストールされ、エンド ユーザーが AIP とドキュメントや電子メールを統合できるようになります。
 
-たとえば、Excel で[統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)を使用している場合:
+たとえば、Excel の場合は次のようになります。
 
 ![Excel の Azure Information Protection バーの例](./media/excelproplus-infoprotect-bar.png)
 
@@ -120,7 +122,7 @@ Exchange Online で AIP を使用すると、保護された電子メールが�
 
 たとえば、機密情報を、**Gmail**、**Hotmail**、または **Microsoft** アカウントを使用している個人用メール アドレス、または Office 365 や Azure AD のアカウントがないユーザーに送信する必要があるとします。 これらの電子メールは、保存時または送信中に暗号化し、本来の受信者のみが読み取ることができるようにする必要があります。
 
-このシナリオには、[Office 365 Message Encryption の機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)が必要です。 保護された電子メールを自分のネイティブ電子メール クライアントで開くことはできない受信者の場合は、ワンタイム パスコードを使用することでブラウザー内で機密情報を閲覧することができます。
+このシナリオには、[Office 365 Message Encryption の機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)が必要です。 受信者が組み込みの電子メールクライアントで保護された電子メールを開くことができない場合は、ワンタイムパスコードを使用してブラウザーで機微な情報を読み取ることができます。
 
 たとえば、Gmail ユーザーが受信した電子メール メッセージに次のプロンプトが表示される場合があります。
 
@@ -128,7 +130,7 @@ Exchange Online で AIP を使用すると、保護された電子メールが�
 
 電子メールを送信するユーザーに必要なアクションは、所属する組織内のユーザーに保護された電子メールを送信する場合と変わりありません。 たとえば、AIP クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択します。 
 
-または、[転送不可] 機能をラベルに統合して、ユーザーが分類と保護の両方をその電子メールに適用できるようにすることもできます。 たとえば、[統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)で:
+または、[ **転送不可** ] 機能をラベルに統合して、ユーザーが分類と保護の両方をこの電子メールに適用できるようにすることもできます。 次に例を示します。
 
 ![[転送不可] として構成されたラベルを選択](./media/recipients-only-label2.png)
 
@@ -153,6 +155,11 @@ Exchange Online で AIP を使用すると、保護された電子メールが�
 
 ## <a name="next-steps"></a>次のステップ
 
-[クイック スタート](quickstart-viewpolicy.md)と[チュートリアル](infoprotect-quick-start-tutorial.md)を参照すれば、Azure Information Protection をご自分で構成および確認できます。 
+クイックスタートとチュートリアルを使用して、Azure Information Protection を構成して表示します。
+
+- [クイック スタート: 統合ラベル付けクライアントのデプロイ](quickstart-deploy-client.md)
+- [チュートリアル:Azure Information Protection (AIP) 統合ラベル付けスキャナーのインストール](tutorial-install-scanner.md)
+- [チュートリアル: Azure Information Protection (AIP) スキャナーを使用して機密コンテンツを検出する](tutorial-scan-networks-and-content.md)
+- [チュートリアル: Azure Information Protection (AIP) を使用した Outlook での過剰共有の防止](tutorial-preventing-oversharing.md)
 
 このサービスを組織向けにデプロイする準備ができている場合は、[攻略ガイド](how-to-guides.md)を参照してください。

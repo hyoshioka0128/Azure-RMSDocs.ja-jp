@@ -1,6 +1,6 @@
 ---
-title: Azure Information Protection クライアント-バージョン履歴 & サポートポリシー
-description: Windows 用 Azure Information Protection クライアントのリリースの新機能と変更点、サポートのライフサイクル ポリシーについて説明します。
+title: Azure Information Protection classic クライアント-バージョン履歴 & サポートポリシー
+description: Azure Information Protection クラシッククライアントのリリースの新機能と変更点、およびサポートのライフサイクルポリシーについて説明します。
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,27 +12,24 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 146fa9442aa5fcb05cebab27f1d4104bd33328f0
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: 4eabec082a6124689d6ef6e8c34698b73fb9162e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95570886"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385728"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
+# <a name="azure-information-protection-classic-client-version-release-history-and-support-policy"></a>クラシッククライアントの Azure Information Protection: バージョンリリース履歴とサポートポリシー
 
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [クライアントのバージョン履歴の統合](unifiedlabelingclient-version-release-history.md)」を参照してください。
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-> [!TIP]
-> ラベルが Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security Center、または Microsoft 365 コンプライアンスセンターから公開されているため、Azure Information Protection 統合ラベルクライアントの使用に関心がある場合は、 Microsoft ダウンロードセンターから、統合されたラベル付けクライアントをダウンロードしてインストールすると、Azure Information Protection クライアントを、統一された [ラベル付けクライアント](unifiedlabelingclient-version-release-history.md)にアップグレードできます。
-
-**AIP クラシック クライアントをデプロイするには**、サポート チケットを作成してダウンロード アクセスを取得します。
+**AIP クラシッククライアントをデプロイするに** は、サポートチケットを開いてダウンロードアクセスを取得します。
 
 詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
 
@@ -67,7 +64,7 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 
 ### <a name="release-history"></a>リリース履歴
 
-Windows 用 Azure Information Protection クライアントのサポートされているリリースの新機能と変更点については、次の情報を参照してください。 最新のリリースは一番上に表示されます。
+次の情報を使用して、サポートされている Windows 用 Azure Information Protection クラシッククライアントのリリースの新機能と変更点を確認してください。 最新のリリースは一番上に表示されます。
 
 現時点では、Azure Information Protection 機能はプレビュー段階です。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。 
 
@@ -94,7 +91,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 ## <a name="next-steps"></a>次のステップ
 
-インストールするクライアントが適切かどうかは確認できません。  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
+インストールするクライアントが適切かどうかは確認できません。  「 [Windows のラベル付けソリューションを選択する」を](use-client.md#choose-your-windows-labeling-solution)参照してください。
 
 クライアントのインストールと使用の詳細: 
 

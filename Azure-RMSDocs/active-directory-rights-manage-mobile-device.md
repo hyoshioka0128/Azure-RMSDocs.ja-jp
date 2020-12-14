@@ -1,27 +1,28 @@
 ---
 title: AIP 用の rights management services モバイルデバイス拡張機能の Active Directory
 description: AIP 向けのモバイルデバイス拡張機能の Active Directory について説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 07/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 59bc53914d73d64c7dc34bbc63b28bf1e70adeb4
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 874a73480e8d15380d9e69a532a1b8ff39d38eb7
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95570030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384164"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Active Directory Rights Management Services モバイル デバイス拡張機能
 
- 
-適用対象: Windows Server 2019、2016、2012 R2、および2012
+>***適用対象**: Windows Server 2019、2016、2012 R2、および 2012 *
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Active Directory Rights Management サービス (AD RMS) モバイルデバイス拡張機能を [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=43738) からダウンロードし、この拡張機能を既存の AD RMS 展開の上にインストールすることができます。 これにより、デバイスが最新の API 対応アプリをサポートしているときに、ユーザーが機微なデータを保護および使用できるようになります。 たとえば、ユーザーは次の操作を実行できます。
 - Azure Information Protection アプリを使用して、さまざまな形式 (.txt、.csv、.xml など) で保護されたテキストファイルを使用します。
@@ -224,8 +225,8 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |------|------|
 |Domain|_tcp. contoso .com
 |サービス|_rmsdisco
-|Protocol|_http
-|優先度|0
+|プロトコル|_http
+|Priority|0
 |Weight|0
 |ポート番号|443
 |このサービスを提供しているホスト|_rmsserver. contoso .com
@@ -234,11 +235,12 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |------|------|
 |Domain|_tcp. fabrikam .com
 |サービス|_rmsdisco
-|Protocol|_http
-|優先度|0
+|プロトコル|_http
+|Priority|0
 |Weight|0
 |ポート番号|443
 |このサービスを提供しているホスト|_rmsserver. contoso .com|
+| | |
 
 電子メールドメインの DNS SRV レコードに加えて、RMS クラスタードメインに別の DNS SRV レコードを作成する必要があります。 このレコードには、コンテンツを保護する RMS クラスターの Fqdn を指定する必要があります。 RMS で保護されているすべてのファイルには、そのファイルを保護したクラスターへの URL が含まれます。 モバイル デバイスは、DNS SRV レコードと、レコードで指定されている URL FQDN を使用して、モバイル デバイスをサポートできる対応する RMS クラスターを探します。
 
@@ -250,11 +252,12 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |------|------|
 |Domain|_tcp. contoso .com
 |サービス|_rmsdisco
-|Protocol|_http
-|優先度|0
+|プロトコル|_http
+|Priority|0
 |Weight|0
 |ポート番号|443
 |このサービスを提供しているホスト|_rmsserver. contoso .com|
+| | |
 
 ## <a name="deploying-the-ad-rms-mobile-device-extension"></a>AD RMS モバイル デバイス拡張機能の展開
 
@@ -275,22 +278,22 @@ AD RMS クラスターと AD FS サーバーの間にプロキシサーバーが
 
 1. 次のノードをファイルに追加します。
 
-```powershell
-   <system.net>
-    <defaultProxy>
-        <proxy  proxyaddress="http://<proxy server>:<port>"
-                bypassonlocal="true"
-        />
-        <bypasslist>
-            <add address="<AD FS URL>" />
-        </bypasslist>
-    </defaultProxy>
-<system.net>
-```
+    ```PowerShell
+       <system.net>
+        <defaultProxy>
+            <proxy  proxyaddress="http://<proxy server>:<port>"
+                    bypassonlocal="true"
+            />
+            <bypasslist>
+                <add address="<AD FS URL>" />
+            </bypasslist>
+        </defaultProxy>
+    <system.net>
+    ```
 1. 次の変更を行い、ファイルを保存します。
-- \<proxy-server>をプロキシサーバーの名前またはアドレスに置き換えます。
-- を、 \<port> プロキシサーバーが使用するように構成されているポート番号に置き換えます。
-- \<AD FS URL>をフェデレーションサービスの URL に置き換えます。 HTTP プレフィックスを含めないでください。
+    - \<proxy-server>をプロキシサーバーの名前またはアドレスに置き換えます。
+    - を、 \<port> プロキシサーバーが使用するように構成されているポート番号に置き換えます。
+    - \<AD FS URL>をフェデレーションサービスの URL に置き換えます。 HTTP プレフィックスを含めないでください。
 
     > [!NOTE]
     > プロキシ設定の上書きの詳細については、 [プロキシ構成](/dotnet/framework/network-programming/proxy-configuration) のドキュメントを参照してください。
@@ -303,5 +306,3 @@ RMS クラスター内のすべてのノードで、この手順を繰り返し�
 ## <a name="see-also"></a>参照
 
 Azure Information Protection の詳細を確認し、他の AIP のお客様と連絡をとって、AIP 製品マネージャーと [API yammer グループ](https://www.yammer.com/askipteam/)を使用します。 
-
-"

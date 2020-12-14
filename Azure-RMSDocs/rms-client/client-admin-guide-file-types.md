@@ -1,6 +1,6 @@
 ---
-title: サポートされているファイルの種類-Azure Information Protection クライアント
-description: Windows 用 Azure Information Protection クライアントを担当する管理者のために、サポートされるファイルの種類、ファイル名拡張子、保護のレベルに関する技術の詳細について説明します。
+title: サポートされているファイルの種類-Azure Information Protection クラシッククライアント
+description: サポートされているファイルの種類、ファイル名拡張子、および Windows 用のクラシッククライアントの Azure Information Protection を担当する管理者の保護レベルに関する技術的な詳細。
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eb1896adf9899700fe03fa1286509602e73c90bd
-ms.sourcegitcommit: c6b0b092735504fd76d74a46d024321673482098
+ms.openlocfilehash: 67d5e173b1dbc1b749c9090746c8ed0342f064cc
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "95570871"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386101"
 ---
-# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
+# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-classic-client"></a>管理者ガイド: Azure Information Protection classic クライアントでサポートされるファイルの種類
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Azure Information Protection Classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-Azure Information Protection クライアントは、次のことをドキュメントとメールに適用できます。
+Azure Information Protection クラシッククライアントでは、次のものをドキュメントと電子メールに適用できます。
 
 - 分類のみ
 
@@ -95,7 +95,7 @@ Azure Information Protection クライアントで適用される既定の保護
 
 Azure Information Protection クライアントが保護をサポートするファイルのサイズには上限があります。
 
-- **Office ファイル:**
+- **Office ファイルの場合**:
 
 
   |                                                     Office アプリケーション                                                      |                                                サポートされる最大ファイル サイズ                                                 |

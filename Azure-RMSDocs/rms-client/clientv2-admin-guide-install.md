@@ -5,26 +5,26 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 12/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7fabd12e3ca0dc08f8c5617b37252ac5adc22948
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 427143c8ee2a93e60be683b3e80b5493c0bab441
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849676"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385473"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
-> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***手順**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide-install.md)」を参照してください。
 
 Azure Information Protection 統合されたラベル付けクライアントをエンタープライズネットワークにインストールする前に、コンピューターに必要なオペレーティングシステムのバージョンとアプリケーションがあることを確認してください。 Azure Information Protection: [Azure Information Protection の要件](../requirements.md)を確認してください。 
 
@@ -37,10 +37,10 @@ Azure Information Protection 統合されたラベル付けクライアントを
 |要件  |説明  |
 |---------|---------|
 |**Microsoft .NET Framework 4.6.2**     | 既定では Azure Information Protection 統合されたラベル付けクライアントの完全インストールには、Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。 <br><br>このフレームワークがインストールされていない場合は、実行可能ファイルインストーラーのセットアップウィザードによって、この前提条件のダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。       |
-|**Microsoft .NET Framework 4.5.2**     | Azure Information Protection ビューアーが個別にインストールされている場合、ビューアーアプリケーションには Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。 <br><br>**重要:** ビューアーにこのフレームワークがない場合は、実行可能ファイルのインストーラーによってダウンロードまたはインストール *されません* 。        |
-|**Windows PowerShell の最小バージョン4.0**     |   クライアントの PowerShell モジュールには、Windows PowerShell 4.0 の最小バージョンが必要です。これは、古いオペレーティングシステムにインストールする必要がある場合があります。 <br><br>詳細については、「[How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 <br><br>**重要:** インストーラーでは、この前提条件を確認したりインストールしたりすることは *ありません* 。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。      |
+|**Microsoft .NET Framework 4.5.2**     | Azure Information Protection ビューアーが個別にインストールされている場合、ビューアーアプリケーションには Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。 <br><br>**重要**: このフレームワークがビューアーに表示されていない場合、実行可能ファイルのインストーラーによってダウンロードまたはインストール *されません* 。        |
+|**Windows PowerShell の最小バージョン4.0**     |   クライアントの PowerShell モジュールには、Windows PowerShell 4.0 の最小バージョンが必要です。これは、古いオペレーティングシステムにインストールする必要がある場合があります。 <br><br>詳細については、「[How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 <br><br>**重要**: この前提条件は、インストーラーによって確認またはインストール *されません* 。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。      |
 |**800 x 600 より大きい画面の解像度**    |     解像度が 800 x 600 以下だと、エクスプローラーでファイルやフォルダーを右クリックしても、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを完全に表示できません。    |
-|**Microsoft Online Services サインイン アシスタント 7.250.4303.0**     |   Office 2010 を実行しているコンピューターには、クライアントインストールに含まれている Microsoft Online Services サインインアシスタントバージョン7.250.4303.0 が必要です。 <br><br>新しいバージョンのサインインアシスタントがある場合は、Azure Information Protection 統合ラベル付けクライアントをインストールする前にアンインストールしてください。 <br><br>たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >  **Program and Features**  >  **プログラムのアンインストールまたは変更**] を使用します。      |
+|**Microsoft Online Services サインイン アシスタント 7.250.4303.0**     |   Office 2010 を実行しているコンピューターには、クライアントインストールに含まれている Microsoft Online Services サインインアシスタントバージョン7.250.4303.0 が必要です。 <br><br>新しいバージョンのサインインアシスタントがある場合は、Azure Information Protection 統合ラベル付けクライアントをインストールする前にアンインストールしてください。 <br><br>たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >    >  **プログラムのアンインストールまたは変更**] を使用します。      |
 |**KB 4482887**     | Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 <br><br>Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。        |
 |**管理者のアクセス許可**| Azure Information Protection の統合ラベル付けクライアントをインストールするには、ローカルの管理アクセス許可が必要です。| 
 |**Exploit protection を無効にする (.NET 2 または3のみ)**   |AIP クライアントは、 [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっている .net 2 または3のコンピューターではサポートされていません。 上記の .NET 4.x バージョンに加えて、コンピューターに .NET 2 または3がある場合は、AIP クライアントをインストールする前に、 [Exploit protection を無効](../known-issues.md#known-issues-for-aip-and-exploit-protection) にしてください。  |
@@ -66,7 +66,7 @@ AIP に次のプログラム識別子 (ProgID) を指定し、オプションを
 
 Azure Information Protection の統一されたラベル付けクライアントは、次のいずれかの Office エディションの Office アプリケーション Word、Excel、PowerPoint、Outlook を使用して、ドキュメントや電子メールにラベルを付け、保護することができます。
 
-- Azure Rights Management のライセンスがユーザーに割り当てられている場合 (Office 365 の場合は Azure Information Protection とも呼ばれています)、「更新 Microsoft 365 Business Microsoft 365 [チャネル別の Microsoft 365 アプリのサポートされているバージョン」の表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンの office アプリ。
+- Office アプリ。[更新チャネルによる Microsoft 365 アプリにサポートされている表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンについては、ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合は、Microsoft 365 Apps for Business または Microsoft 365 Business Premium の Office アプリの最小バージョン 1805、ビルド 9330.2078
 - Microsoft 365 Apps for enterprise
 - Office Professional Plus 2019
 - Office Professional Plus 2016
@@ -127,7 +127,7 @@ Microsoft Update カタログを使用していない場合、または Intune �
     
     例: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
-    このログ ファイルで、次の文字列を検索します: **製品: Microsoft Azure Information Protection -- インストールを正しく完了しました。** インストールに失敗した場合、このログ ファイルには、問題の特定と解決に役立つ詳細が含まれます。
+    このログファイルで、次の文字列を検索します。 **Product: Microsoft Azure Information Protection--インストールが正常に完了** しました。 インストールに失敗した場合、このログ ファイルには、問題の特定と解決に役立つ詳細が含まれます。
 
 #### <a name="more-information-about-the-servicelocation-installation-parameter"></a>ServiceLocation インストール パラメーターの詳細について
 

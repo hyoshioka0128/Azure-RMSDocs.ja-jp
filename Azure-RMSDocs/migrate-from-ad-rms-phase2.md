@@ -1,11 +1,11 @@
 ---
 title: AD RMS から Azure Information Protection への移行 - フェーズ 2
 description: AD RMS から Azure Information Protection への移行のフェーズ 2 には、手順 4 から 6 が含まれます。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/02/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
@@ -13,16 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a354e9f787cf079e2c67a03fb58d330ab7785ce3
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: ad4fe6bd495bfe6a19ce897bf3ee5290c778a8ac
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95570134"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386068"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 AD RMS から Azure Information Protection への移行フェーズ 2 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 4 から手順 6 を説明します。
 
@@ -88,6 +90,7 @@ Azure Information Protection テナント キー トポロジには、テナン�
 |AD RMS データベースでのパスワード保護|お客様が管理 (BYOK)|この表の後 **に、ソフトウェアで保護されているキーから HSM で保護されているキーへ** の移行に関する手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、一連の 4 つの手順を実行する必要があります。最初にソフトウェア キーを抽出してオンプレミスの HSM にインポートし、次にオンプレミスの HSM から Azure Information Protection HSM にキーを転送し、さらに Key Vault データを Azure Information Protection に転送して、最後に構成データを Azure Information Protection に転送します。|
 |NCipher 以外のサプライヤーのハードウェアセキュリティモジュール (HSM) を使用した HSM 保護 |お客様が管理 (BYOK)|この HSM から nCipher nShield ハードウェアセキュリティモジュール (HSM) にキーを転送する方法については、HSM のサプライヤーに問い合わせてください。 次に、この表の後 **に、hsm で保護されているキーから hsm で保護されているキーへ** の移行手順を実行します。|
 |外部暗号プロバイダーを使用して保護されたパスワード|お客様が管理 (BYOK)|NCipher nShield ハードウェアセキュリティモジュール (HSM) にキーを転送する方法については、暗号化サービスプロバイダーの供給元にお問い合わせください。 次に、この表の後 **に、hsm で保護されているキーから hsm で保護されているキーへ** の移行手順を実行します。|
+| | |
 
 エクスポートできない HSM で保護されたキーがある場合でも、読み取り専用モード用に AD RMS クラスターを構成することで、Azure Information Protection に移行できます。 このモードでは、以前に保護されたコンテンツを引き続き開くことはできますが、新たに保護されたコンテンツでは、ユーザー (BYOK) または Microsoft によって管理されている新しいテナント キーが使用されます。 詳細については、「[AD RMS から Azure RMS への移行がサポートされている Office の更新プログラムが利用可能になりました](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to)」を参照してください。
 
@@ -108,13 +111,13 @@ PowerShell セッションを開き、次のコマンドを実行します。
 
 1. Azure Rights Management サービスに接続し、メッセージが表示されたら、グローバル管理者の資格情報を指定します。
 
-    ```ps
+    ```PowerShell
     Connect-AipService
     ```
 
 2. Azure Rights Management サービスをアクティブにします。
 
-    ```ps
+    ```PowerShell
     Enable-AipService
     ```
 
@@ -164,9 +167,9 @@ Azure Portal でテンプレートをラベルに変換すると、外部ユー�
 
 このセクションに含まれるサンプル スクリプトを使用すると、前のセクションで説明したように、ANYONE グループが定義されている AD RMS テンプレートを識別できます。
 
-**免責事項:** このサンプル スクリプトは、Microsoft の標準サポート プログラムまたはサービスではサポートされません。 サンプル スクリプトは現状有姿で提供され、いかなる保証も行いません。
+**免責事項**: このサンプルスクリプトは、Microsoft の標準サポートプログラムまたはサービスではサポートされていません。 サンプル スクリプトは現状有姿で提供され、いかなる保証も行いません。
 
-```ps
+```PowerShell
 import-module adrmsadmin
 
 New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force

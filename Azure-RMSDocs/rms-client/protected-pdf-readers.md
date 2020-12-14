@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
@@ -14,14 +14,21 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: e8cd7846159e2299d33b8b6533813ac8502140d3
-ms.sourcegitcommit: 2a72516a1f380adddd6501984b1989e3fa051976
+ms.openlocfilehash: f6ebddb276cdf77c977acc516cf1b6c3d2bbc7b4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "95570823"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385116"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>保護された Pdf ではどの PDF リーダーがサポートされていますか。
+
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 分類済みまたは保護された pdf の PDF リーダーを使用すると、機密情報を含む暗号化された Pdf を開くことができます。
 
@@ -50,7 +57,11 @@ Azure Information Protection をサポートする保護された PDF リーダ�
 
 このページで参照されている PDF リーダーは、PDF 暗号化の ISO 標準に準拠するすべての保護されたドキュメントを開くことができます。 
 
-この標準は、 [管理者によって無効](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)にされている場合を除き、AIP クラシックおよび統合ラベルクライアントの両方で既定で使用されます。
+この標準は、既定で AIP クライアントによって使用されます。
+
+> [!NOTE]
+> **従来のクライアントのみ**: AIP クラシッククライアントを使用している場合は、 [管理者によって無効](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)にされている可能性があります。
+> 
 
 ### <a name="viewing-protected-pdfs-in-adobe-acrobat-reader"></a>Adobe Acrobat Reader での保護された Pdf の表示
 
@@ -66,23 +77,23 @@ Microsoft Information Protection 統合を使用した Adobe Acrobat Reader は�
 
 ## <a name="viewing-protected-pdfs-in-microsoft-edge-on-windows-or-mac"></a>Windows または Mac での Microsoft Edge での保護された Pdf の表示
 
-Microsoft Edge では、分類および保護されている PDF ファイルを表示するネイティブサポートを提供しています。 Microsoft Edge を使用することにより、ユーザーは追加の設定やソフトウェアをインストールまたは構成しなくても、保護された PDF ファイルをシームレスに開くことができます。
+Microsoft Edge には、分類および保護されている PDF ファイルを表示するための組み込みサポートが用意されています。 Microsoft Edge を使用することにより、ユーザーは追加の設定やソフトウェアをインストールまたは構成しなくても、保護された PDF ファイルをシームレスに開くことができます。
 
 サポートされているバージョンは次のとおりです。
 
-- **Windows:** Windows 10 以前のバージョン。 
+- **Windows: windows** 10 以前のバージョン。 
     
     以前のバージョンの詳細については、「 [以前の形式のサポート](#support-for-previous-formats)」を参照してください。
 
-- **Mac:** macOS バージョン10.12 以降 
+- **Mac**: macOS バージョン10.12 以降 
 
 
-**マニュアル** 
+**手順**: 
 
 1. システムにインストールされている [Microsoft Edge のバージョン](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) を確認します。 
 1. Microsoft Edge のバージョンが83.0.478.37 以上の場合は、Microsoft edge ブラウザーで直接保護されたファイルを開くことができます。 
 
-1. SharePoint で PDF ファイルを開くには、[ブラウザーで **開く] をクリックし**  >  **Open in browser** ます。 
+1. SharePoint で PDF ファイルを開くには、[ブラウザーで **開く] をクリックし**  >  ます。 
 
     :::image type="content" source="../media/edge_open_browser.png" alt-text="ブラウザーで [ブラウザーで開く] オプションを使用して、Microsoft Edge を使用して保護された PDF を開きます。":::
  
@@ -90,7 +101,7 @@ Microsoft Edge では、分類および保護されている PDF ファイルを
 
 保護された PDF ドキュメントをデスクトップコンピューターで開くには、オペレーティングシステム用に、 [acrobat および Acrobat Reader 用の関連する Microsoft Information Protection (MIP) プラグイン](https://go.microsoft.com/fwlink/?linkid=2050049) をインストールすることをお勧めします。
 
-**マニュアル**
+**手順**:
 
 1. Adobe Reader がまだインストールされていない場合は、 [adobe サイト](https://www.adobe.com/)からインストールします。
 
@@ -102,15 +113,15 @@ Microsoft Edge では、分類および保護されている PDF ファイルを
 
     サポートされているバージョンは次のとおりです。
 
-    - **Windows:** Windows 10 以前のバージョン。 
+    - **Windows: windows** 10 以前のバージョン。 
     
         以前のバージョンの詳細については、「 [以前の形式のサポート](#support-for-previous-formats)」を参照してください。
 
-    - **Mac:** macOS バージョン 10.12-10.14 
+    - **Mac**: macOS バージョン 10.12-10.14 
 
 1. 管理者の承認を求めるメッセージが表示された場合は、管理者にプラグインの承認を依頼してください。
 
-    例:
+    次に例を示します。
     
     :::image type="content" source="../media/admin-approval-for-mip-in-adobe-reader.png" alt-text="Acrobat および Acrobat Reader 用 MIP プラグインをインストールするために管理者の承認が必要":::
     

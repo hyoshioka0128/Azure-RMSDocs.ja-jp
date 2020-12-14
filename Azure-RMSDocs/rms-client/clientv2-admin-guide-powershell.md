@@ -1,34 +1,34 @@
 ---
 title: Azure Information Protection 統合されたラベル付けクライアントで PowerShell を使用する
 description: 管理者が PowerShell を使用して Azure Information Protection 統合されたラベル付けクライアントを管理するための手順と情報です。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2133259809b87a66fe5e63e10e1273a0412208b7
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 38e2156b0102c857d13b99233a5bad2331662606
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570327"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385490"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>管理者ガイド: Azure Information Protection 統合クライアントでの PowerShell の使用
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
-> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide-powershell.md)」を参照してください。
 
 Azure Information Protection 統合ラベル付けクライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
-コマンドレットは、ラベル付け用のコマンドレットを持つ PowerShell モジュール **Azureinformationprotection** と共にインストールされます。 例:
+コマンドレットは、ラベル付け用のコマンドレットを持つ PowerShell モジュール **Azureinformationprotection** と共にインストールされます。 次に例を示します。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -36,6 +36,7 @@ Azure Information Protection 統合ラベル付けクライアントをインス
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|共有フォルダーで、ファイルの内容を検査したあと、指定した条件に基づいて、ラベル付けされていないファイルに自動的にラベルを付与します。|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|共有フォルダーで、ラベルが付いていないすべてのファイルに指定したラベルを適用します。|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|スケジュールに基づいて実行されるスクリプトを利用するなど、非対話式にファイルにラベルを付けます。|
+| | |
 
 このモジュールは、**\ProgramFiles (x86)\Microsoft Azure Information Protection** にインストールされ、このフォルダーを **PSModulePath** システム変数に追加します。 このモジュールの .dll の名前は **AIP.dll** です。
 
@@ -54,13 +55,11 @@ Azure Information Protection 統合ラベル付けクライアントをインス
 
 ### <a name="prerequisites-for-using-the-azureinformationprotection-module"></a>AzureInformationProtection モジュールを使用するための前提条件
 
-AzureInformationProtection モジュールをインストールするための前提条件に加えて、Azure Information Protection のラベル付けコマンドレットを使用する場合は、次のような追加の前提条件があります。
+**Azureinformationprotection** モジュールをインストールするための前提条件に加えて、Azure Information Protection のラベル付けコマンドレットを使用する場合は、次のような追加の前提条件があります。
 
 1. Azure Rights Management サービスをアクティブ化する必要があります。
 
-2. 自分のアカウントを使って他のユーザーのファイルから保護を削除するには: 
-
-    - 組織のスーパー ユーザー機能を有効にし、自分のアカウントを Azure Rights Management のスーパー ユーザーとして構成する必要があります。
+2. 自分のアカウントを使用して他のユーザーのファイルから保護を削除するには、スーパーユーザー機能が組織で有効になっている必要があります。また、アカウントは Azure Rights Management のスーパーユーザーとして構成されている必要があります。
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>前提条件 1: Azure Rights Management サービスをアクティブ化する必要がある
 
@@ -123,7 +122,7 @@ Set-AIPAuthentication には、 *AppId* と *appsecret* パラメーターのア
 
 1. 新しいブラウザー ウィンドウで、[Azure Portal](https://portal.azure.com/) にサインインします。
 
-2. Azure Information Protection で使用する Azure AD テナントについては、 **Azure Active Directory**  >  **Manage** アプリの登録] を参照して  >  **App registrations** ください。 
+2. Azure Information Protection で使用する Azure AD テナントについては、 **Azure Active Directory**  >  **Manage** アプリの登録] を参照して  >  ください。 
 
 3. [ **+ 新規登録**] を選択します。 [ **アプリケーションの登録** ] ウィンドウで、次の値を指定し、[ **登録**] をクリックします。
 
@@ -137,7 +136,7 @@ Set-AIPAuthentication には、 *AppId* と *appsecret* パラメーターのア
 
 4. [ **AIP-DelegatedUser** ] ウィンドウで、 **アプリケーション (クライアント) ID** の値をコピーします。 値は次の例のように `77c3c1c3-abf9-404e-8b2b-4652836c8c66` なります。 この値は、Set-AIPAuthentication コマンドレットを実行するときに *AppId* パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
 
-5. サイドバーで、[ **Manage**  >  **証明書 & シークレット** を管理する] を選択します。
+5. サイドバーで、[   >  **証明書 & シークレット** を管理する] を選択します。
 
 6. [ **AIP-DelegatedUser & シークレット** ] ウィンドウの [ **クライアントシークレット** ] セクションで、[ **+ 新しいクライアントシークレット**] を選択します。
 
@@ -150,7 +149,7 @@ Set-AIPAuthentication には、 *AppId* と *appsecret* パラメーターのア
     
     この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用する機密情報と同様に、保存した値を安全に保存し、アクセスを制限します。
 
-9. サイドバーで、[ **Manage**  >  **API のアクセス許可** の管理] を選択します。
+9. サイドバーで、[   >  **API のアクセス許可** の管理] を選択します。
 
 10. [ **AIP-DelegatedUser のアクセス許可** ] ウィンドウで、[ **+ アクセス許可の追加**] を選択します。
 
@@ -196,7 +195,7 @@ Set-AIPAuthentication には、 *AppId* と *appsecret* パラメーターのア
 
     このアカウントのパスワードを入力するように求められます。
 
-2. *OnBeHalfOf* パラメーターを指定して Set-AIPAuthentication コマンドレットを実行します。これは、作成した変数の値として指定します。 また、アプリの登録値、テナント ID、および Azure AD で委任されたユーザーアカウントの名前を指定します。 例:
+2. *OnBeHalfOf* パラメーターを指定して Set-AIPAuthentication コマンドレットを実行します。これは、作成した変数の値として指定します。 また、アプリの登録値、テナント ID、および Azure AD で委任されたユーザーアカウントの名前を指定します。 次に例を示します。
     
     ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
@@ -206,7 +205,7 @@ Set-AIPAuthentication には、 *AppId* と *appsecret* パラメーターのア
 > コンピューターがインターネットにアクセスできない場合は、Azure AD でアプリを作成し、Set-AIPAuthentication を実行する必要はありません。 代わりに、切断された [コンピューター](clientv2-admin-guide-customizations.md#support-for-disconnected-computers)の指示に従います。  
 
 ## <a name="next-steps"></a>次のステップ
-PowerShell セッションでコマンドレットのヘルプを表示するには、「」と入力 `Get-Help <cmdlet name> -online` します。 例: 
+PowerShell セッションでコマンドレットのヘルプを表示するには、「」と入力 `Get-Help <cmdlet name> -online` します。 次に例を示します。 
 
 ```PowerShell
 Get-Help Set-AIPFileLabel -online

@@ -1,11 +1,11 @@
 ---
 title: Windows Server FCI での Azure RMS 保護 - AIP
 description: Rights Management (RMS) クライアントと Azure Information Protection クライアントを使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成するための手順です。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/13/2020
-ms.topic: conceptual
+ms.date: 11/12/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
@@ -13,18 +13,21 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 127682099f082d81c93e5951b149033a96d9504b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e775464efbff26cf6f425bce9d395c5bffc0cce4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570295"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385201"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012、Windows Server 2012 R2*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012、windows server 2012 R2 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Azure Information Protection Classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 この記事では、Azure Information Protection クライアントと PowerShell を使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成する方法とスクリプトを示します。
 
@@ -38,6 +41,7 @@ ms.locfileid: "95570295"
 以下の手順は、Windows Server 2012 R2 または Windows Server 2012 に対するものです。 サポートされている他のバージョンの Windows を使用する場合は、バージョンの違いに合わせてこの記事で説明されている手順の調整が必要な場合があります。
 
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Windows Server FCI での Azure Rights Management 保護の前提条件
+
 次のような前提条件があります。
 
 - ファイル分類インフラストラクチャでファイル リソース マネージャーを実行する各ファイル サーバーでの前提条件:
@@ -296,6 +300,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 FCI で使用する新しいテンプレートを発行し、カスタム ファイル管理タスクの引数行内のテンプレート ID を変更する場合にも、スクリプトでこの行を実行します。
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>選択的にファイルを保護するための手順の変更
+
 上の手順で問題がなければ、さらに高度な構成に変更することが簡単にできます。 たとえば、同じスクリプトを使用して個人識別情報を含むファイルだけを保護し、さらに制限の厳しい権限のテンプレートを選択できます。
 
 この変更を行うには、組み込まれている分類プロパティのいずれかを使用するか (たとえば **[個人を特定できる情報]**)、新しいプロパティを作成します。 そして、このプロパティを使用する新しい規則を作成します。 たとえば、[**コンテンツ分類子**] を選択し、[**個人の身元を特定する情報**] プロパティと値 [**高**] を選択して、このプロパティ用に構成するファイルを識別する文字列または式パターンを構成します (たとえば、文字列"**Date of Birth**")。
@@ -304,4 +309,4 @@ FCI で使用する新しいテンプレートを発行し、カスタム ファ
 
 ## <a name="next-steps"></a>次のステップ
 
-[Windows Server FCI と Azure Information Protection スキャナーの違い](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)についてご説明します。
+[Windows Server FCI と Azure Information Protection スキャナーの違い](../faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)についてご説明します。

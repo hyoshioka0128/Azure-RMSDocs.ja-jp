@@ -1,11 +1,11 @@
 ---
-title: Azure Information Protection ビューアーで保護されたファイルを表示する
-description: Azure Information Protection ビューアーをインストールする必要がある保護されたファイルを表示して使用する方法について説明します。
-author: mlottner
-ms.author: mlottner
+title: Azure Information Protection クラシッククライアントビューアーで保護されたファイルを表示する
+description: Azure Information Protection クラシッククライアントビューアーがインストールされている必要がある、保護されたファイルを表示して使用する方法について説明します。
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 1/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
@@ -13,18 +13,21 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 19ee7b67b7774420e799876e91d1889c5c788888
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 280fb2d86bf4c4c9165c1d74df6c17da69a499c0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570334"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385592"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>ユーザーガイド: Azure Information Protection ビューアーで保護されたファイルを表示する
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-classic-client-viewer"></a>ユーザーガイド: Azure Information Protection 従来のクライアントビューアーで保護されたファイルを表示する
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [ユニファイドクライアントユーザーガイド](clientv2-view-use-files.md)」を参照してください。
+
+>[!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 多くの場合、保護されたファイルは開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 

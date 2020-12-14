@@ -1,6 +1,6 @@
 ---
-title: Azure Information Protection クライアント ファイルと使用状況ログ
-description: Windows 用 Azure Information Protection クライアントのクライアント ファイルと使用状況ログについて説明します。
+title: クラシッククライアントファイルと使用状況ログの Azure Information Protection
+description: クラシッククライアントファイルと、Windows 用の Azure Information Protection クラシッククライアントの使用状況ログについて説明します。
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a8ee6c5f3879786b76a8466b198b0b4040a540f
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 3188392475a9da39f4187c30014ecc189248fd28
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570438"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386119"
 ---
-# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection クライアントのファイルとクライアント使用状況ログ
+# <a name="admin-guide-azure-information-protection-classic-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection 従来のクライアントファイルとクライアントの使用状況ログ
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Azure Information Protection Classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-Azure Information Protection クライアントをインストールした後、どこにファイルがあるかを知り、クライアントがどのように使われているのかを監視することが必要になる場合があります。
+Azure Information Protection クラシッククライアントをインストールしたら、ファイルの場所を確認し、クライアントがどのように使用されているかを監視する必要があります。
 
 ## <a name="file-locations-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントのファイルの場所
 
@@ -43,9 +43,9 @@ Azure Information Protection クライアントをインストールした後、
 
 - 64 ビットおよび 32 ビット オペレーティング システムの場合: **%localappdata%\Microsoft\MSIP**
 
-## <a name="usage-logging-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントの使用状況ログ
+## <a name="usage-logging-for-the-azure-information-protection-classic-client"></a>Azure Information Protection クラシッククライアントの使用状況ログ
 
-クライアントは、ローカルの Windows イベントログの **[アプリケーションとサービスログ**] Azure Information Protection にユーザーアクティビティを記録し  >  **Azure Information Protection** ます。 イベントには次の情報が含まれます。
+クライアントは、ローカルの Windows イベントログの **[アプリケーションとサービスログ**] Azure Information Protection にユーザーアクティビティを記録し  >  ます。 イベントには次の情報が含まれます。
 
 - クライアントのバージョン、ポリシー ID
 
@@ -81,7 +81,7 @@ Azure Information Protection クライアントをインストールした後、
     
 - 操作ソース:
     
-    - マニュアル 
+    - 手動 
     
     - 推奨
     

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 11/18/2020
 ms.author: mbaldwin
 ms.custom: subject-security-benchmark
-ms.openlocfilehash: cddb3ad6bd23a58922a87d27dcd6a0a1e82bd312
-ms.sourcegitcommit: 173f46dd5f14c27911faec737be5986a33407477
+ms.openlocfilehash: 8cdeb7ec7bd30d6b15b832eeb080317d5b26ec08
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "95570983"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384623"
 ---
 # <a name="azure-security-baseline-for-azure-information-protection"></a>Azure Information Protection 用の Azure のセキュリティベースライン
 
@@ -50,11 +50,11 @@ Azure Information Protection 完全に Azure のセキュリティベンチマ�
 
 Azure AD id のセキュリティスコアを確認して、Microsoft のベストプラクティスの推奨事項と比較して、id のセキュリティ体制を評価します。 スコアを使用して、構成がベスト プラクティスの推奨事項とどの程度一致しているかを測定し、セキュリティ体制を強化します。
 
-Azure AD を標準化して、で組織の id およびアクセス管理を管理します。
+Azure AD を標準化して、以下での組織の ID とアクセス管理を統制します。
 
 - Azure portal、Azure Storage、Azure Virtual Machines (Linux と Windows)、Azure Key Vault、サービスとしてのプラットフォーム (PaaS)、サービスとしてのソフトウェア (SaaS) アプリケーションなどの Microsoft Cloud リソース
 
-- Azure 上のアプリケーションや企業ネットワークリソースなどの組織のリソース
+- Azure 上のアプリケーションや企業ネットワーク リソースなどの組織のリソース
 
 Azure AD は、Microsoft アカウントを持たないユーザーが、Microsoft 以外のアカウントを使用してアプリケーションやリソースにサインインできるようにするための外部 id をサポートしています。
 
@@ -64,7 +64,7 @@ Azure AD は、Microsoft アカウントを持たないユーザーが、Microso
 
 - [アプリケーションに外部 ID プロバイダーを使用する](https://docs.microsoft.com/azure/active-directory/b2b/identity-providers)
 
-- [Azure Active Directory での id のセキュリティで保護されたスコア](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
+- [Azure Active Directory の ID セキュリティ スコアとは](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -84,7 +84,7 @@ Azure AD は、Microsoft アカウントを持たないユーザーが、Microso
 
 **ガイダンス**: Azure Information Protection は Azure Active Directory (Azure AD) に統合されています。これは、Azure の既定の id およびアクセス管理サービスです。 
 
-Azure Information Protection は Azure AD を使用して、Azure リソース、クラウドアプリケーション、オンプレミスアプリケーションに id とアクセス管理を提供します。 これには、従業員などのエンタープライズ id だけでなく、パートナー、ベンダー、サプライヤーなどの外部 id も含まれます。 これにより、オンプレミスおよびクラウド内の組織のデータとリソースへのアクセスを管理し、セキュリティで保護するためのシングルサインオンが可能になります。 すべてのユーザー、アプリケーション、およびデバイスを Azure AD に接続して、シームレスで安全なアクセスを実現し、可視性と制御を向上させることができます。
+Azure Information Protection は Azure AD を使用して、Azure リソース、クラウドアプリケーション、オンプレミスアプリケーションに id とアクセス管理を提供します。 これには、従業員などの企業 ID だけでなく、パートナー、ベンダー、サプライヤーなどの外部 ID も含まれます。 これにより、シングル サインオン (SSO) で、オンプレミスとクラウド内の組織のデータとリソースへのアクセスを管理し、セキュリティで保護することができます。 すべてのユーザー、アプリケーション、デバイスを Azure AD に接続することで、シームレスで安全なアクセスを実現し、可視性と制御性を高めることができます。
 
 - [Azure Active Directory で Azure Information Protection にサインインします](https://docs.microsoft.com/azure/information-protection/requirements)
 
@@ -116,13 +116,13 @@ Azure AD に関するその他のガイダンス:
 
 - サインイン-サインインレポートには、マネージアプリケーションとユーザーサインインアクティビティの使用状況に関する情報が表示されます。
 - 監査ログ - Azure AD 内のさまざまな機能によって行われたすべての変更についてログによる追跡可能性を提供します。 監査ログの例には、ユーザー、アプリ、グループ、ロール、ポリシーの追加や削除など、Azure AD 内のリソースに対して行われた変更が含まれます。
-- リスクの高いサインイン-リスクの高いサインインは、ユーザーアカウントの正当な所有者ではないユーザーによって実行された可能性があるサインイン試行の指標です。
+- リスクの高いサインイン - リスクの高いサインインは、ユーザー アカウントの正当な所有者ではない人によってサインインが試行された可能性があることを示す指標です。
 - リスクのフラグ付きユーザー - リスクの高いユーザーは、侵害された可能性があるユーザー アカウントの指標です。
-これらのデータソースは、Azure Monitor、Azure Sentinel、またはサードパーティ製の SIEM システムと統合できます。
+これらのデータ ソースは、Azure Monitor、Azure Sentinel、またはサードパーティの SIEM システムと統合できます。
 
 また Azure Security Center は、失敗した認証試行の数が多すぎる、サブスクリプションで非推奨のアカウントなど、特定の不審なアクティビティについてもアラートを表示できます。
 
-Azure Advanced Threat Protection (ATP) は、Active Directory の信号を使用して、高度な脅威、侵害された id、および悪意のある insider アクションを識別、検出、調査することができるセキュリティソリューションです。
+セキュリティ ソリューションである Azure Advanced Threat Protection (ATP) では、Active Directory シグナルを使用することで、高度な脅威、セキュリティ侵害を受けた ID、および悪意のある内部関係者のアクションを特定、検出、および調査できます。
 
 - [Azure Active Directory の監査アクティビティ レポート](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
@@ -196,13 +196,13 @@ Azure Information Protection には、Azure AD に管理者レベルのロール
 
 Azure AD を使用してリソースを管理し、ユーザーアカウントを確認し、割り当てを定期的にアクセスして、アカウントとそのアクセスが有効であることを確認します。 Azure AD アクセスレビューを実施して、グループメンバーシップ、エンタープライズアプリケーションへのアクセス、およびロールの割り当てを確認します。 Azure AD レポートで古いアカウントを検出します。 Azure AD の Privileged Identity Management 機能を使用してアクセスレビューレポートワークフローを作成し、レビュープロセスを容易にすることができます。
 
-さらに、多数の管理者アカウントが作成されたときにアラートを生成し、古いまたは不適切に構成されている管理者アカウントを特定するように Azure Privileged Identity Management を構成することもできます。 一部の Azure サービスでは、Azure AD によって管理されないローカルユーザーとロールがサポートされていることに注意してください。 お客様は、これらのユーザーを個別に管理する必要があります。
+さらに、過剰な数の管理者アカウントが作成された場合にアラートを発行したり、古い管理者アカウントや不適切に構成されている管理者アカウントを特定するように Azure Privileged Identity Management を構成することもできます。 一部の Azure サービスでは、Azure AD によって管理されないローカルユーザーとロールがサポートされていることに注意してください。 これらのユーザーは、お客様が個別に管理する必要があります。
 
 - [Azure Information Protection 管理者ロール](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
 - [管理者が実行できる操作 Azure Information Protection](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
 
-- [Privileged Identity Management (PIM) で Azure リソースロールのアクセスレビューを作成する](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
+- [Privileged Identity Management (PIM) で Azure リソース ロールのアクセス レビューを作成する](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
 
 - [Azure AD の ID およびアクセス レビューの使用方法](https://docs.microsoft.com/azure/active-directory/governance/access-reviews-overvie)
 
@@ -332,7 +332,7 @@ Azure Information Protection は、組織がラベルを適用してドキュメ
 
 ### <a name="am-1-ensure-security-team-has-visibility-into-risks-for-assets"></a>AM-1:セキュリティ チームが資産のリスクを確実に可視化できるようにする
 
-**ガイダンス**: セキュリティチームが、Azure Security Center を使用してセキュリティ上のリスクを監視できるように、Azure テナントとサブスクリプションにセキュリティ閲覧者のアクセス許可が付与されていることを確認します。 
+**ガイダンス**:セキュリティ チームに Azure テナントとサブスクリプションのセキュリティ閲覧者アクセス許可を付与して、セキュリティ チームが Azure Security Center を使用してセキュリティ上のリスクを監視できるようにします。 
 
 セキュリティ チームの責任がどのように構造化されているかによって、セキュリティ リスクの監視は中央のセキュリティ チームまたはローカル チームの責任になります。 ただし、セキュリティ分析情報とリスクは、常に組織内で一元的に集計する必要があります。 
 
@@ -472,11 +472,11 @@ Azure Monitor ログの使用量と推定コスト機能を使用して、格納
 
 ### <a name="ir-3-detection-and-analysis--create-incidents-based-on-high-quality-alerts"></a>IR-3: 検出と分析 – 高品質のアラートに基づいてインシデントを作成する
 
-**ガイダンス**: 高品質のアラートを作成し、アラートの品質を測定するプロセスがあることを確認します。 これにより、過去のインシデントから教訓を学び、アナリストに対するアラートに優先順位を付けることができるので、擬陽性に時間を無駄にすることがありません。 
+**ガイダンス**:高品質のアラートを作成し、アラートの品質を測定するプロセスがあることを確認します。 これにより、過去のインシデントから教訓を学び、アナリストに対するアラートに優先順位を付けることができるので、擬陽性に時間を無駄にすることがありません。 
 
-高品質のアラートは、過去のインシデントからの経験、検証されたコミュニティソース、融合によってアラートを生成してクリーンアップするように設計されたツール、さまざまなシグナルソースに関連付けられています。 
+高品質のアラートは、過去のインシデントからの経験、検証されたコミュニティ ソース、およびさまざまなシグナル ソースの融合と関連付けによってアラートを生成してクリーンアップするように設計されたツールに基づいて構築できます。 
 
-Azure Security Center は、多数の Azure 資産にわたって高品質のアラートを提供します。 ASC データ コネクタを使用してアラートを Azure Sentinel にストリーミングできます。 Azure Sentinel を使用すると、高度なアラート ルールを作成し、調査のためにインシデントを自動的に生成できます。 
+Azure Security Center では、多数の Azure 資産について高品質のアラートが提供されます。 ASC データ コネクタを使用してアラートを Azure Sentinel にストリーミングできます。 Azure Sentinel を使用すると、高度なアラート ルールを作成し、調査のためにインシデントを自動的に生成できます。 
 
 エクスポート機能を使用して Azure Security Center のアラートと推奨事項をエクスポートし、Azure リソースへのリスクを特定します。 アラートと推奨事項を手動で、または継続した連続的な方法でエクスポートします。
 
@@ -500,7 +500,7 @@ Azure Security Center は、多数の Azure 資産にわたって高品質のア
 
     - Azure 仮想マシンのスナップショット機能を使用して、実行中のシステムのディスクのスナップショットを作成します。 
 
-    - オペレーティング システムのネイティブ メモリ ダンプ機能を使用して、実行中のシステムのメモリのスナップショットを作成します。
+    - オペレーティングシステムの組み込みメモリダンプ機能を使用して、実行中のシステムのメモリのスナップショットを作成します。
 
     - Azure サービスのスナップショット機能またはソフトウェア独自の機能を使用して、実行中のシステムのスナップショットを作成します。
 
@@ -520,7 +520,7 @@ Azure Sentinel により、事実上すべてのログソースに対して広�
 
 ### <a name="ir-5-detection-and-analysis--prioritize-incidents"></a>IR-5: 検出と分析 – インシデントの優先順位を付ける
 
-**ガイダンス**: アラートの重要度と資産の機密度に基づいて、最初に注目するインシデントをアナリストに提供します。 
+**ガイダンス**:アラートの重要度と資産の機密性に基づいて、最初に注目するインシデントについてのコンテキストをアナリストに提供します。 
 
 Azure Security Center によって各アラートに重大度が割り当てられるため、最初に調査する必要があるアラートの優先順位付けに役立ちます。 重要度は、アラートの発行に使用された Security Center の信頼度と、アラートの原因となったアクティビティの背後に悪意のある意図があったかどうかの信頼レベルに基づいて決まります。
 
@@ -536,7 +536,7 @@ Azure Security Center によって各アラートに重大度が割り当てら�
 
 ### <a name="ir-6-containment-eradication-and-recovery--automate-the-incident-handling"></a>IR-6: 包含、根絶、復旧 – インシデントの処理を自動化する
 
-**ガイダンス**: 応答時間を短縮し、アナリストの負担を軽減するために、手動で繰り返されるタスクを自動化します。 手動タスクの実行には時間がかかり、各インシデントの速度が低下し、アナリストが処理できるインシデントの数が減少します。 手動タスクではアナリストの疲労も増加します。これにより、遅延が発生する人的エラーのリスクが増加し、複雑なタスクに効果的に焦点を当てるアナリストの能力が低下します。 Azure Security Center と Azure Sentinel のワークフロー自動化機能を使用して、自動的にアクションをトリガーしたり、プレイブックを実行して受信したセキュリティ アラートに応答したりします。 プレイブックにより、通知の送信、アカウントの無効化、問題のあるネットワークの特定などのアクションが実行されます。 
+**ガイダンス**:手動による反復タスクを自動化して、応答時間を短縮し、アナリストの負担を軽減します。 手動タスクの実行には時間がかかり、各インシデントの速度が低下し、アナリストが処理できるインシデントの数が減少します。 手動タスクではアナリストの疲労も増加します。これにより、遅延が発生する人的エラーのリスクが増加し、複雑なタスクに効果的に焦点を当てるアナリストの能力が低下します。 Azure Security Center と Azure Sentinel のワークフロー自動化機能を使用して、自動的にアクションをトリガーしたり、プレイブックを実行して受信したセキュリティ アラートに応答したりします。 プレイブックにより、通知の送信、アカウントの無効化、問題のあるネットワークの特定などのアクションが実行されます。 
 
 - [Security Center でワークフロー自動化を構成する](https://docs.microsoft.com/azure/security-center/workflow-automation)
 
@@ -590,7 +590,7 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 ### <a name="pv-8-conduct-regular-attack-simulation"></a>PV-8: 定期的に攻撃シミュレーションを実施する
 
-**ガイダンス**: 必要に応じて、Azure リソースに対して侵入テストまたは red team アクティビティを実施し、すべての重要なセキュリティの問題を確実に修復します。
+**ガイダンス**:必要に応じて、Azure リソースの侵入テストまたはレッド チーム アクティビティを実施し、セキュリティに関するすべての重大な調査結果が確実に修復されるようにします。
 お客様の侵入テストが Microsoft のポリシーに違反しないように、Microsoft クラウド侵入テストの実施ルールに従ってください。 Microsoft が管理しているクラウド インフラストラクチャ、サービス、アプリケーションに対する Red Teaming およびライブ サイト侵入テストに関する Microsoft の戦略と実施を活用してください。
 
 - [Azure での侵入テスト](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
@@ -605,7 +605,7 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 ## <a name="backup-and-recovery"></a>バックアップと回復
 
-*詳細については、「 [Azure のセキュリティベンチマーク: バックアップと回復](/azure/security/benchmarks/security-controls-v2-backup-recovery)」を参照してください。*
+*詳細については、[Azure セキュリティ ベンチマークの「バックアップと回復」](/azure/security/benchmarks/security-controls-v2-backup-recovery)を参照してください。*
 
 ### <a name="br-4-mitigate-risk-of-lost-keys"></a>BR-4:キー紛失のリスクを軽減する
 
@@ -638,7 +638,7 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 -   組織のデータ分類に従った必要なアクセス制御戦略
 
--   Azure ネイティブおよびサードパーティのデータ保護機能の使用
+-   Azure 組み込みおよびサードパーティのデータ保護機能の使用
 
 -   転送中および保存中のユース ケースのデータ暗号化要件
 
@@ -680,7 +680,7 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 ### <a name="gs-3-define-security-posture-management-strategy"></a>GS-3: セキュリティ態勢管理の戦略を定義する
 
-**ガイダンス**: 個々の資産とそれらがホストされている環境に対するリスクを継続的に測定し、軽減します。 高い価値を持つ資産と、攻撃に晒される可能性の高い部分 (公開されたアプリケーション、ネットワークのイングレス ポイントとエグレス ポイント、ユーザーと管理者のエンドポイントなど) を優先します。
+**ガイダンス**:個々の資産とそれらがホストされている環境に対するリスクを継続的に測定し、軽減します。 高い価値を持つ資産と、攻撃に晒される可能性の高い部分 (公開されたアプリケーション、ネットワークのイングレス ポイントとエグレス ポイント、ユーザーと管理者のエンドポイントなど) を優先します。
 
 - [Azure セキュリティ ベンチマーク - 体制と脆弱性の管理](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-posture-vulnerability-management)
 
@@ -735,7 +735,7 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 ### <a name="gs-6-define-identity-and-privileged-access-strategy"></a>GS-6: ID と特権アクセス戦略を定義する
 
-**ガイダンス**: 組織全体のセキュリティアクセス制御戦略の一環として、Azure id と特権アクセスの方法を確立します。  
+**ガイダンス**:組織全体のセキュリティ アクセス制御戦略の一環として、Azure の ID と特権アクセス アプローチを確立します。  
 
 この戦略には、次の要素に関する文書化されたガイダンス、ポリシー、標準が含まれている必要があります。 
 
@@ -765,7 +765,7 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 ### <a name="gs-7-define-logging-and-threat-response-strategy"></a>GS-7: ログ記録と脅威対応戦略を定義する
 
-**ガイダンス**:コンプライアンス要件を満たしながら脅威を迅速に検出して修復するための、ログ記録と脅威対応戦略を確立します。 統合と手動の手順ではなく脅威に集中できるように、高度なアラートとシームレスなエクスペリエンスをアナリストに提供します。 
+**ガイダンス**:コンプライアンス要件を満たしながら脅威を迅速に検出して修復するための、ログ記録と脅威対応戦略を確立します。 アナリストが、統合や手動による手順ではなく、脅威の対応に集中できるように、質の高いアラートとシームレスなエクスペリエンスを提供することを優先してください。 
 
 この戦略には、次の要素に関する文書化されたガイダンス、ポリシー、標準が含まれている必要があります。 
 
@@ -775,11 +775,11 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 -   脅威の検出、インシデント対応、コンプライアンスのニーズに対応するためのログのキャプチャと保持
 
--   SIEM、Azure のネイティブ機能、その他のソースを使用した、脅威に関する情報の一元的な可視化と関連付け 
+-   脅威、SIEM、組み込みの Azure 機能、およびその他のソースを使用した、脅威に関する情報の一元的な可視化 
 
 -   顧客、サプライヤー、および関心を持つパブリック パーティに関するコミュニケーションと通知の計画
 
--   ログ記録と脅威の検出、フォレンジクス、攻撃の修復と根絶など、インシデント処理に対する Azure ネイティブおよびサードパーティのプラットフォームの使用
+-   ログ記録と脅威の検出、フォレンジック、攻撃の修復などのインシデント処理に Azure 組み込みおよびサードパーティのプラットフォームを使用
 
 -   インシデントとインシデント発生後のアクティビティを処理するためのプロセス (教訓や証拠の保持など)
 

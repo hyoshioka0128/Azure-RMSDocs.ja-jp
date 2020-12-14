@@ -5,23 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cc54660ce021b2d00a80ad3292ed17c5c13c204a
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 0cb8120f710c3c88b12f539e265bb620f4eae981
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570447"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386357"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 組織に Azure Information Protection を展開する前に、組織のテナントに対し、Azure AD にユーザーとグループのアカウントが用意されていることを確認してください。
 
@@ -155,7 +157,7 @@ Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
 
 **ProxyAddresses** 列にデータが入力されていない場合、**UserPrincipalName** is の値を利用してユーザーに Azure Rights Management サービスの権限が与えられます。
 
-例:
+次に例を示します。
 
 
 |  表示名   |     UserPrincipalName      |                            ProxyAddresses                             |

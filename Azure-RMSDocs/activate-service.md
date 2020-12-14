@@ -13,21 +13,23 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c6f52dac44fc85bec09607bd6832b07484a161ac
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 842f452a5a7a62002b4c0555580258368416d2d3
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95569542"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384181"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Azure Information Protection からの保護サービスのアクティブ化
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > この構成情報は、組織内のすべてのユーザーに適用されるサービスを担当する管理者のためのものです。 特定のアプリケーション用の Rights Management 機能の使用、または権利保護されたファイルや電子メールを開く方法に関するユーザー向けヘルプや情報をお探しの場合は、アプリケーションに付属しているヘルプとガイダンスを使用してください。
 >
-> たとえば、Office アプリケーションの場合、[ヘルプ] アイコンをクリックし、「**Rights Management**」または「**IRM**」などの検索語句を入力します。 Windows 用 Azure Information Protection クライアントについては、「[Azure Information Protection ユーザー ガイド](./rms-client/client-user-guide.md)」を参照してください。
+> たとえば、Office アプリケーションの場合、[ヘルプ] アイコンをクリックし、「**Rights Management**」または「**IRM**」などの検索語句を入力します。 Windows 用 Azure Information Protection クライアントについては、「[Azure Information Protection ユーザー ガイド](./rms-client/clientv2-user-guide.md)」を参照してください。
 >
 > このサービスのテクニカル サポートとその他の質問については、「[サポート オプションとコミュニティ リソース](information-support.md#support-options-and-community-resources)」の情報を参照してください。
 
@@ -38,9 +40,9 @@ Azure Information Protection の保護サービスが組織に対してアクテ
 
 Azure Rights Management を含むサービス プランを持っている場合は、サービスをアクティブにする必要がない可能性があります。
 
-- **Azure Rights Management または Azure Information Protection を含むサブスクリプションが2018年2月以降に取得された場合は、次のようになります。** サービスが自動的にアクティブ化されます。 お客様または組織の他のグローバル管理者が Azure Rights Management を非アクティブ化しない限り、サービスをアクティブ化する必要はありません。
+- **Azure Rights Management または Azure Information Protection が含まれているサブスクリプションが2018年2月以降の終了日に取得された場合**、サービスは自動的にアクティブ化されます。 お客様または組織の他のグローバル管理者が Azure Rights Management を非アクティブ化しない限り、サービスをアクティブ化する必要はありません。
 
-- **Azure Rights Management または Azure Information Protection を含むサブスクリプションを 2018 年 2 月以前に取得した場合** については、Microsoft は、テナントで Exchange Online を使用している場合にこれらのサブスクリプションの Azure Rights Management サービスのアクティブ化を開始しています。 これらのサブスクリプションの場合、サービスがアクティブ化される 2018 年 8 月 1 日から自動アクティブ化のロール アウトが開始されます。ただし、[Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration) を実行するときに **AutomaticServiceUpdateEnabled** が **false** に設定されていない場合に限ります。 
+- **Azure Rights Management または Azure Information Protection を含むサブスクリプションが2018年2月以降に取得された場合**、テナントが Exchange Online を使用している場合、Microsoft はこれらのサブスクリプションに対して azure Rights Management サービスのアクティブ化を開始します。 これらのサブスクリプションの場合、サービスがアクティブ化される 2018 年 8 月 1 日から自動アクティブ化のロール アウトが開始されます。ただし、[Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration) を実行するときに **AutomaticServiceUpdateEnabled** が **false** に設定されていない場合に限ります。 
 
 後続のシナリオがどちらも当てはまらない場合は、保護サービスを手動でアクティブ化する必要があります。 
 

@@ -1,8 +1,8 @@
 ---
 title: Azure Information Protection 統合ラベル付けクライアントを使用してラベルを削除する
 description: Azure Information Protection 統合ラベル付けクライアントを使用して、ファイルと電子メールから機密ラベルと保護を削除する方法について説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
 ms.topic: how-to
@@ -12,22 +12,22 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4009de4e147bd5102602ef946f8b892ab478e542
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: fffc0099d1a018141c15feabb746e4795be18d5b
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95569815"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385371"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>ユーザーガイド: Azure Information Protection によってラベル付けされたファイルと電子メールからラベルと保護を削除する
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8 *
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
-> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [クラシッククライアントユーザーガイド](client-remove-label-protection.md)」を参照してください。 *
 
-Azure Information Protection 統合クライアントが [コンピューターにインストール](install-client-app.md)されている場合は、ファイルと電子メールから機密ラベルと保護を削除できます。
+Azure Information Protection 統合クライアントが [コンピューターにインストール](install-unifiedlabelingclient-app.md)されている場合は、ファイルと電子メールから機密ラベルと保護を削除できます。
 
 削除する感度ラベルが保護を適用するように構成されている場合、この操作によってファイルから保護も削除されます。 ラベルを削除する理由を記録するためにメッセージが表示されることがあります。
 
@@ -72,7 +72,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 ## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
-- [目的に合ったトピックをクリックしてください](client-user-guide.md#what-do-you-want-to-do)
+- [目的に合ったトピックをクリックしてください](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
@@ -13,19 +13,22 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6f095c7cfd7a41663da3fd4f19d47012fa2604b5
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 44de4e40b64cb7d76c2e0b581fd4641f462b9cd4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316689"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386289"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 ドキュメントの「秘密度ラベルの暗号化を使用して、 [秘密度ラベル](/microsoft-365/compliance/sensitivity-labels) の詳細と [コンテンツへのアクセスを制限する](/microsoft-365/compliance/encryption-sensitivity-labels) 」を参照してください。 *
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+>
 
 Azure Information Protection から Azure Rights Management サービスを使用すると、ユーザーがアプリケーションから保護テンプレートを選択できるように、クライアントコンピューターに保護テンプレートが自動的にダウンロードされます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。
 
@@ -39,7 +42,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |Exchange On-Premises と Rights Management コネクタ<br /><br />トランスポート ルールと Outlook Web アプリに該当|自動更新 - 追加の手順は必要ありません。 ただし、Outlook Web アプリは UI を一日キャッシュします。|
 |Office 2019 for Mac と Office 2016 for Mac|保護されたコンテンツを開くと自動的に更新されます。 強制的に更新するには、次のセクションの「 [office 2019 For mac And office 2016 For mac: テンプレートを強制的に更新する方法](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates)」を参照してください。|
 |Mac コンピューター用 RMS 共有アプリ|自動更新 - 追加の手順は必要ありません。|
-|[組み込みラベル](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)付き Office 365 ProPlus|この組み込みラベル付けクライアントは、テンプレートをダウンロードせずにオンラインでアクセスします。追加の手順は必要ありません。|
+|[組み込みラベル](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)付き Office 365 ProPlus|この組み込みのラベル付けソリューションでは、テンプレートはダウンロードされませんが、オンラインでアクセスします。追加の手順は必要ありません。|
 | | |
 
 クライアントアプリケーションがテンプレートをダウンロードする必要がある場合 (最初または変更用に更新)、ダウンロードが完了して新しいテンプレートまたは更新されたテンプレートが完全に機能するまで、最大30分待機するように準備します。 待機時間はテンプレートの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 
@@ -56,19 +59,19 @@ Microsoft 365 アプリ、Office 2019、Office 2016、または Office 2013 を�
     
     - 更新頻度を日単位で設定するには (最短 1 日): **TemplateUpdateFrequency** という名前の新しいレジストリ値を作成し、データの整数値を定義します。これにより、ダウンロードされたテンプレートの変更をダウンロードする周期 (日数) が指定されます。 この新しいレジストリ値を作成する際にレジストリ パスを検索するには、次の情報を使用します。
 
-        **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+        **レジストリパス**: HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **型:** REG_DWORD
+        **種類**:REG_DWORD
 
-        **値:** TemplateUpdateFrequency
+        **値**: TemplateUpdateFrequency
 
     - 更新頻度を秒単位で設定するには (最短 1 秒): **TemplateUpdateFrequencyInSeconds** という名前の新しいレジストリ値を作成し、データの整数値を定義します。これにより、ダウンロードされたテンプレートの変更をダウンロードする周期 (秒数) が指定されます。 この新しいレジストリ値を作成する際にレジストリ パスを検索するには、次の情報を使用します。
 
-        **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+        **レジストリパス**: HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **型:** REG_DWORD
+        **種類**:REG_DWORD
 
-        **値:** TemplateUpdateFrequencyInSeconds
+        **値**: TemplateUpdateFrequencyInSeconds
 
     これらのレジストリ値の両方ではなく、一方のみを作成して設定するようにしてください。 両方が存在する場合、 **TemplateUpdateFrequency** は無視されます。
 
@@ -78,11 +81,11 @@ Microsoft 365 アプリ、Office 2019、Office 2016、または Office 2013 を�
 
 1. レジストリ エディターを使用して、**LastUpdatedTime** 値のデータを削除します。 たとえば、このデータに **2015-04-20T15:52** が表示されている場合、この 2015-04-20T15:52 を削除して、データが表示されないようにします。 次の情報を使用して、このレジストリ値データを削除するレジストリ パスを見つけてください。
 
-   **レジストリパス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\ < *MicrosoftRMS_FQDN*> テンプレート \\ < *user_alias*>
+   **レジストリパス**: HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\ < *MicrosoftRMS_FQDN*> テンプレート \\ < *user_alias*>
 
-   **型:** REG_SZ
+   **種類**: REG_SZ
 
-   **値:** LastUpdatedTime
+   **値**: LastUpdatedTime
 
    > [!TIP]
    > レジストリ パスの <*MicrosoftRMS_FQDN*> は、Microsoft RMS サービスの FQDN を指します。 この値を確認するには:

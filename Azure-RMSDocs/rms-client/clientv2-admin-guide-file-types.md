@@ -4,27 +4,27 @@ description: サポートされているファイルの種類、ファイル名�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b9f8a53135407e91d04542bc53c709b82662a19a
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 754525afeee619f8f336addd5239ea15223f986c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316638"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385524"
 ---
-# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントでサポートされるファイルの種類
+# <a name="file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントでサポートされるファイルの種類
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*>
+>*[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012 **に適用さ** れます。*>
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
-> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [AIP 統合ラベルクライアントのみ](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 クラシッククライアントの場合は、「[従来のクライアントファイルの種類](client-admin-guide-file-types.md)」を参照してください。*
 
 Azure Information Protection の統一されたラベル付けクライアントは、次のものをドキュメントや電子メールに適用できます。
 
@@ -70,7 +70,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 他のファイルの種類では、保護されている場合に分類がサポートされます。 これらのファイルの種類については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」を参照してください。
 
-次に例を示します。
+例 :
 
 - **一般** 秘密度ラベルが分類を適用し、保護を適用しない場合: sales.pdf という名前のファイルに **general** ラベルを適用できますが、このラベルを sales.txt という名前のファイルに適用することはできません。
 
@@ -94,7 +94,7 @@ Azure Information Protection 統合されたラベル付けクライアントま
 
 Azure Information Protection 統合されたラベル付けクライアントが保護のためにサポートする最大ファイルサイズがあります。
 
-- **Office ファイル:**
+- **Office ファイルの場合**:
 
   |                                                     Office アプリケーション                                                      |                                                サポートされる最大ファイル サイズ                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|

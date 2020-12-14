@@ -11,19 +11,23 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a1ac4e5470df68076585d9f328b28c76377a26d
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: ee493790e4997f8be11244490cf6014c17e6c6fd
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95735016"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384232"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題 - Azure Information Protection
 
-Azure Information Protection の機能に関連する既知の問題と制限事項の詳細については、以下の一覧と表を参照してください。
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-> [!NOTE]
-> この記事では、クラシックと統合されたラベル付けクライアントの両方の既知の問題について説明します。 これらのクライアントの違いがわからない場合は、 [Faq](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)を参照してください。
+>[!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+
+Azure Information Protection の機能に関連する既知の問題と制限事項の詳細については、以下の一覧と表を参照してください。
 
 ## <a name="client-support-for-container-files-such-as-zip-files"></a>.Zip ファイルなど、コンテナーファイルのクライアントサポート
 
@@ -39,7 +43,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 ## <a name="known-issues-for-aip-and-exploit-protection"></a>AIP と Exploit Protection の既知の問題
 
-Azure Information Protection クライアントは、 [Exploit Protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっている .net 2 または3のコンピューターではサポートされていません。
+Azure Information Protection クライアントは、 [Exploit Protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっている、.net 2 または3がインストールされているコンピューターではサポートされていません。これにより、Office アプリがクラッシュします。
 
 ご使用のシステムに必要な .NET 4.x バージョンに加えて .NET バージョン2または3がある場合は、AIP をインストールする前に、Exploit protection を無効にしてください。 
 
@@ -65,15 +69,15 @@ Azure Information Protection クライアントと共にインストールされ
 
 ## <a name="aip-known-issues-in-office-applications"></a>Office アプリケーションの AIP に関する既知の問題
 
-|特徴  |既知の問題  |
+|機能  |既知の問題  |
 |---------|---------|
 |**複数のバージョンの Office**    | Azure Information Protection クライアントでは、クラシックでも統合ラベル付けでも、同じコンピューター上で複数のバージョンの Office を使用したり、Office のユーザー アカウントを切り替えたりすることはサポートされていません。       |
-|**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、次のようになります。 <br><br>-Office アプリでパフォーマンスの問題が発生する可能性があります。<br>-Azure Information Protection バーが、1つまたは両方の画面で、Office 画面の中央にフローティングするように見える場合があります。 <br><br>一貫したパフォーマンスを確保し、バーが正しい場所にあることを確認するには、Office アプリケーションの [ **オプション** ] ダイアログを開き、[全般] で **、** [最適化] ではなく [ **互換性のために最適化** ] を選択し **ます。**    |
+|**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、次のようになります。 <br><br>-Office アプリでパフォーマンスの問題が発生する可能性があります。<br>-Azure Information Protection バーが、1つまたは両方の画面で、Office 画面の中央にフローティングするように見える場合があります。 <br><br>一貫したパフォーマンスを確保し、バーが正しい場所にあることを確認するには、Office アプリケーションの [**オプション**] ダイアログを開き、[**全般**] で、[**最適化**] ではなく [**互換性のために最適化**] を選択します。    |
 |**Office 2016 での IRM のサポート**| Office 2016 でメタデータの暗号化を制御する [Drmencryptproperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) レジストリ設定は、Azure Information Protection ラベルではサポートされていません。|
 |**Word のコンテンツのマーキング**    | Microsoft Word のヘッダーまたはフッター内の AIP [コンテンツのマーキング](configure-policy-markings.md) は、オフセットされているか、正しく配置されていないか、同じヘッダーまたはフッターにテーブルが含まれていると、完全に隠れている可能性があります。<br><br>詳細については、「 [視覚的なマーキングが適用されるタイミング](configure-policy-markings.md#when-visual-markings-are-applied)」を参照してください。 |
 |**電子メールに添付されたファイル** |Windows の最新の更新プログラムの制限により、 [Microsoft Outlook が Azure Rights Management によって保護](office-apps-services-support.md)されている場合、電子メールに添付されたファイルは、ファイルを開いた後にロックされる可能性があります。 |
 |**差し込み印刷**    |  Office の[差し込み印刷](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705)機能は、どの Azure Information Protection 機能でもサポートされていません。       |
-| **S/MIME メール** | Outlook の閲覧ウィンドウで S/MIME メールを開くと、パフォーマンスの問題が発生する可能性があります。 <br><br>S/MIME 電子メールのパフォーマンスの問題を回避するには、 [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced プロパティを有効にします。 <br><br>**注:** このプロパティを有効にすると、Outlook の閲覧ウィンドウに AIP バーまたは電子メール分類が表示されなくなります。 |
+| **S/MIME メール** | Outlook の閲覧ウィンドウで S/MIME メールを開くと、パフォーマンスの問題が発生する可能性があります。 <br><br>S/MIME 電子メールのパフォーマンスの問題を回避するには、 [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced プロパティを有効にします。 <br><br>**注**: このプロパティを有効にすると、Outlook の閲覧ウィンドウに AIP バーまたは電子メール分類が表示されなくなります。 |
 |**[ファイルエクスプローラーに送信] オプション** |エクスプローラーでファイルを右クリックして [ **> メール受信者に送信**] を選択した場合は、添付ファイルが添付されている Outlook メッセージに AIP ツールバーが表示されないことがあります。 <br><br>このエラーが発生し、AIP ツールバーオプションを使用する必要がある場合は、Outlook 内から電子メールを開始し、送信するファイルを参照して添付します。|
 | | |
 
@@ -83,7 +87,7 @@ Azure Information Protection クライアントと共にインストールされ
 
 ## <a name="known-issues-in-the-aip-client"></a>AIP クライアントの既知の問題
 
-- **ファイルの最大サイズ。** 2 GB を超えるファイルは保護がサポートされますが、暗号化解除はサポートされていません。
+- **ファイルの最大サイズ。** 2 GB を超える場合、保護はサポートされますが、暗号化解除はサポートされません。
 
 - **AIP ビューアー。** AIP ビューアーでは画像が縦モードで表示され、ワイドビューの画像によっては拡大表示されることがあります。
 
@@ -121,7 +125,7 @@ Azure Information Protection クライアントと共にインストールされ
 
 内部ユーザーのみに対して AIP ベースの条件付きアクセスポリシーを有効にすることをお勧めします。
 
-**AIP の条件付きアクセスポリシーを内部ユーザーのみに有効にします。**
+**AIP の条件付きアクセスポリシーを内部ユーザーのみに有効に** します。
 
 1.  Azure portal で、[ **条件付きアクセス** ] ブレードに移動し、変更する条件付きアクセスポリシーを選択します。 
 2.  [ **割り当て**] で [ **ユーザーとグループ**] を選択し、[ **すべてのユーザー**] を選択します。 [ **すべてのゲストと外部ユーザー** ] オプションが選択されて *いない* ことを確認します。
@@ -131,7 +135,7 @@ Azure Information Protection クライアントと共にインストールされ
 
 詳細については、 [条件付きアクセスのドキュメント](/azure/active-directory/conditional-access/concept-conditional-access-users-groups)を参照してください。
 
-## <a name="more-information"></a>説明を見る
+## <a name="more-information"></a>説明
 
 次の記事は、Azure Information Protection の既知の問題に関する質問に回答する際に役立つ場合があります。
 

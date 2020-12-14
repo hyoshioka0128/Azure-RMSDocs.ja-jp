@@ -1,11 +1,11 @@
 ---
-title: ユーザー向けに Azure Information Protection クライアントをインストールする
-description: 管理者が企業ネットワークに Windows 用 Azure Information Protection クライアントをデプロイするための手順と情報です。
+title: ユーザー用の Azure Information Protection クラシッククライアントをインストールする
+description: 企業ネットワーク上の Windows 用 Azure Information Protection クラシッククライアントを展開するための管理者向けの手順と情報です。
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d16d735f6119617eb12599f110f8c22682992d4
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: 64735f0a4e9343ced3839f9dcdd9f56985c0b2fa
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734999"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386051"
 ---
-# <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
+# <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>管理者ガイド: ユーザー用の Azure Information Protection クラシッククライアントをインストールする
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Azure Information Protection Classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
-> **AIP クラシック クライアントをデプロイするには**、サポート チケットを作成してダウンロード アクセスを取得します。
+> **AIP クラシッククライアントをデプロイするに** は、サポートチケットを開いてダウンロードアクセスを取得します。
 
 企業ネットワークに Azure Information Protection クライアントをインストールする前に、「[Azure Information Protection の要件](../requirements.md)」で Azure Information Protection に必要なオペレーティング システムのバージョンとアプリケーションがコンピューターにインストールされていることを確認してください。
 
@@ -57,7 +57,7 @@ ms.locfileid: "95734999"
 
 - Microsoft Online Services サインイン アシスタント 7.250.4303.0
 
-    Office 2010 を実行するコンピューターには、Microsoft Online Services サインイン アシスタント バージョン 7.250.4303.0 が必要です。 このバージョンは、クライアントのインストールに含まれています。 新しいバージョンのサインイン アシスタントがある場合は、これをアンインストールしてから Azure Information Protection クライアントをインストールしてください。 たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >  **Program and Features**  >  **プログラムのアンインストールまたは変更**] を使用します。
+    Office 2010 を実行するコンピューターには、Microsoft Online Services サインイン アシスタント バージョン 7.250.4303.0 が必要です。 このバージョンは、クライアントのインストールに含まれています。 新しいバージョンのサインイン アシスタントがある場合は、これをアンインストールしてから Azure Information Protection クライアントをインストールしてください。 たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >    >  **プログラムのアンインストールまたは変更**] を使用します。
 
 - KB 4482887
 
@@ -91,7 +91,7 @@ ms.locfileid: "95734999"
 |インストール オプション  |説明  |
 |---------|---------|
 |**クライアント実行可能ファイル (.exe) を実行します。**  <br><br> [手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | インストールを対話形式またはサイレントモードで実行するには、クライアントの .exe バージョンを実行することをお勧めします。<br><br> .Exe ファイルを実行すると、最も柔軟性が高くなります。また、前提条件の多くをチェックし、不足している必須コンポーネントをインストールすることもできるため、このファイルを使用することをお勧めします。 |
-|**クライアントの Windows インストーラー (.msi) を展開する** <br><br> [手順](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Azure Information Protection クライアントの Windows インストーラーは、中央の展開メカニズムを使用するサイレントインストールでのみサポートされています。<br><br> たとえば、グループポリシー、Configuration Manager、Microsoft Intune と共に展開する場合は、.msi ファイルを使用します。<br><br> Intune で管理され、モバイルデバイス管理 (MDM) の .exe ファイルは、これらのコンピューターではサポートされていない Windows 10 Pc に対しては、この方法を使用する必要があります。<br><br>**注:** .Msi のインストールを使用する場合は、前提条件を手動で確認し、必要な依存ソフトウェアをインストールまたはアンインストールする必要があります。 |
+|**クライアントの Windows インストーラー (.msi) を展開する** <br><br> [手順](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Azure Information Protection クライアントの Windows インストーラーは、中央の展開メカニズムを使用するサイレントインストールでのみサポートされています。<br><br> たとえば、グループポリシー、Configuration Manager、Microsoft Intune と共に展開する場合は、.msi ファイルを使用します。<br><br> Intune で管理され、モバイルデバイス管理 (MDM) の .exe ファイルは、これらのコンピューターではサポートされていない Windows 10 Pc に対しては、この方法を使用する必要があります。<br><br>**注**: .msi のインストールを使用する場合は、前提条件を手動で確認し、必要な依存ソフトウェアをインストールまたはアンインストールする必要があります。 |
 
 クライアントをインストールした後、同じインストール方法を繰り返して更新を実行するか、Windows Update を使用してクライアントを自動的に更新します。 新しいバージョンをインストールする前に、レガシバージョンのクライアントをアンインストールする必要はありません。
 
