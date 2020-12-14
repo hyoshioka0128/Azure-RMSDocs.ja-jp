@@ -1,11 +1,11 @@
 ---
 title: Rights Management コネクタのインストールと構成 - AIP
 description: Azure Rights Management (RMS) コネクタをインストールして構成する場合に役立つ情報。 これらの手順では、「Deploying the Azure Rights Management connector」 (Azure Rights Management コネクタのデプロイ) の手順 1 から手順 4 を説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
@@ -13,16 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd8a63f3bc761cd7bcaa7b8b40a3309488385acb
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: ef3a9198af5fb44927438c66262e30acf439f2eb
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570726"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383858"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、2016、2012 R2、および Windows server 2012*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、2016、2012 R2、および Windows server 2012 *
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 以下の情報は、Azure Rights Management (RMS) コネクタをインストールして構成する場合に役立ちます。 これらの手順では、「[Deploying the Azure Rights Management connector](deploy-rms-connector.md)」 (Azure Rights Management コネクタのデプロイ) の手順 1 から手順 4 を説明します。
 
@@ -132,7 +134,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 インストール中に問題が発生した場合は、インストールログ: **%LocalAppData%\Temp\Microsoft Rights Management connector_ \<date and time> ログ** を確認してください。 
 
-たとえば、インストール ログは C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log のようになります。
+例として、インストールログは **は c:\users\administrator\appdata\local\temp\microsoft Rights Management connector_20170803110352** のようになります。
 
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>RMS コネクタを使用するサーバーの承認
 2 台以上のコンピューターに RMS コネクタをインストールしたら、RMS コネクタを使用するサーバーとサービスを承認することができます。 たとえば、Exchange Server 2013 や SharePoint Server 2013 を実行しているサーバーがあるとします。
@@ -173,7 +175,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
         > [!TIP]
         > これらの 2 つのアカウントが異なる場合は、管理オーバーヘッドを最小限に抑えるために、両方のアカウントを含む単一グループを作成することを検討してください。
 
--   ファイル分類インフラストラクチャを使用するファイル サーバーの場合、関連するサービスはローカル システム アカウントとして実行されるため、ファイル サーバーのコンピューター アカウント (SERVERNAME$ など)、またはこれらのコンピューター アカウントを含むグループを承認する必要があります。
+-   ファイル分類インフラストラクチャを使用するファイルサーバーの場合、関連するサービスはローカルシステムアカウントとして実行されるため、ファイルサーバーのコンピューターアカウント ( **SERVERNAME $** など)、またはそれらのコンピューターアカウントを含むグループを承認する必要があります。
 
 一覧へのサーバーの追加が完了したら、[**閉じる**] をクリックします。
 
@@ -191,13 +193,13 @@ DNS で名前を作成して IP アドレスを構成したら、そのアドレ
 
 次の設定を使用して、NLB クラスターを構成します。
 
--   ポート: 80 (HTTP) または 443 (HTTPS)
+-   **ポート**:80 (HTTP の場合) または 443 (HTTPS の場合)
 
     HTTP または HTTPS のどちらを使用するかについては、次のセクションを参照してください。
 
--   アフィニティ:なし
+-   **アフィニティ**: なし
 
--   配布方法: 等しい
+-  **配布方法**: 等しい
 
 (RMS コネクタ サービスを実行しているサーバーの) 負荷分散システム用に定義したこの名前は、組織の RMS コネクタ名です。この名前は、後で Azure RMS を使用するオンプレミス サーバーを構成するときに使用します。
 

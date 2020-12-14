@@ -12,19 +12,18 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cf8cdfd170dc03cb3f2a05cc2ed22ef7b19f9bb7
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: a24332d284c8f1884d357765f4a30c07fb992df0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316383"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382770"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの実行
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
-
->[!NOTE]
-> クラシックスキャナーを使用している場合は、「 [Azure Information Protection クラシックスキャナーのインストールと構成](deploy-aip-scanner-configure-install-classic.md)」を参照してください。
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2019、Windows Server 2016、windows server 2012 R2 *
+>
+>***関連**: [AIP 統合ラベルクライアントのみ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 クラシックスキャナーについては、「 [クラシックスキャナー Azure Information Protection を実行](deploy-aip-scanner-manage-classic.md)する」を参照してください。
 
 [システム要件](deploy-aip-scanner-prereqs.md)を確認し、スキャナーを[構成してインストールし](deploy-aip-scanner-configure-install.md)たら、[検出スキャンを実行](#run-a-discovery-cycle-and-view-reports-for-the-scanner)して作業を開始します。
 
@@ -111,7 +110,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 すべてのファイルを再検査することは、通常、すべてのファイルをレポートに含める場合、すべてのファイルに適用する変更がある場合、およびスキャナーを検出モードで実行する場合に便利です。
 
-**完全な再スキャンを手動で実行するには:**
+**完全な再スキャンを手動で実行するに** は:
 
 1. Azure portal の [ **Azure Information Protection-コンテンツスキャンジョブ** ] ウィンドウに移動します。
 
@@ -135,7 +134,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 > [!IMPORTANT]
 > バージョン [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) 以降にアップグレードした場合、AIP によって更新された設定の完全な再スキャンがスキップされ、パフォーマンスが一貫して保たれます。 アップグレードした場合は、必要に応じて [手動で完全な再スキャンを実行](#rescanning-files) してください。 
 >
-> たとえば、 **ポリシー実施** 設定を [ **強制** ] から **[強制]** に変更した場合は、フルスキャンを実行して、コンテンツ全体にラベルを適用してください。
+> たとえば、 **ポリシー実施** 設定を [ **強制] から** **[強制**] に変更した場合は、フルスキャンを実行して、コンテンツ全体にラベルを適用してください。
 > 
 
 ## <a name="troubleshooting-a-stopped-scan"></a>停止したスキャンのトラブルシューティング
@@ -185,7 +184,5 @@ Start-AIPScannerDiagnostics
 ## <a name="next-steps"></a>次のステップ
 
 - Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
-
-- [Windows Server FCI と Azure Information Protection スキャナーの違いは何ですか](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)。
 
 - また、PowerShell を使用して、デスクトップ コンピューターからファイルを対話的に分類し、保護することができます。 PowerShell を使用するその他のシナリオの詳細については、「 [Azure Information Protection の統合ラベル付けクライアントでの powershell の使用](./rms-client/clientv2-admin-guide-powershell.md)」を参照してください。

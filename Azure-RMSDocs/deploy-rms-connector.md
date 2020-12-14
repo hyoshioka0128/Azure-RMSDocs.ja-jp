@@ -1,11 +1,11 @@
 ---
 title: Rights Management コネクタをデプロイする - AIP
 description: RMS コネクタをデプロイする手順について説明します。RMS コネクタは、Exchange Server、SharePoint Server、または Windows Server とファイル分類インフラストラクチャ (FCI) を使用する既存のオンプレミス デプロイのデータ保護サービスとして機能します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 06/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
@@ -13,21 +13,24 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7de557bcfe7cb06310abc8d662626d86271b8a4e
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: a495ea2ca1cc08da081c10496c8e2b51f7718706
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570271"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382532"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Azure Rights Management コネクタをデプロイする
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、2016、windows Server 2012 R2、windows server 2012 *
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 ここでは、Azure Rights Management コネクタについて説明してから、このコネクタを適切にデプロイする方法について説明します。 このコネクタは、Microsoft **Exchange Server**、 **SharePoint Server**、または Windows Server および **ファイル分類インフラストラクチャ** (fci) を実行するファイルサーバーを使用する既存の内部設置型の配置に対してデータ保護を提供します。
 
 
 ## <a name="overview-of-the-microsoft-rights-management-connector"></a>Microsoft Rights Management コネクタの概要
+
 Microsoft Rights Management (RMS) コネクタを使用すると、既存のオンプレミス サーバーで Information Rights Management (IRM) 機能とクラウドベースの Microsoft Rights Management サービス (Azure RMS) を迅速に使用できるようになります。 この機能により、IT 担当者およびユーザーは、組織の内外にあるドキュメントや画像を簡単に保護することができます。追加のインフラストラクチャをインストールしたり、他の組織との間に信頼関係を確立したりする必要はありません。 
 
 RMS コネクタは、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012 を実行するサーバーに、オンプレミスでインストールする小規模なサービスです。 コネクタは、物理コンピューター上だけでなく、Azure IaaS VM などの仮想マシン上でも実行できます。 デプロイされたコネクタは、次の図に示すように、オンプレミス サーバーとクラウド サービスとの間の通信インターフェイス (リレー) の役割を果たします。 矢印は、ネットワーク接続が開始される方向を示しています。
@@ -56,6 +59,7 @@ Azure RMS の自分のテナント キーを管理する場合 (Bring Your Own K
 このような、テナント キーを独自に管理するシナリオについて詳しくは、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
 ## <a name="prerequisites-for-the-rms-connector"></a>RMS コネクタの前提条件
+
 RMS コネクタをインストールする前に、次の要件を満たしていることを確認してください。
 
 |要件|詳細情報|
@@ -69,21 +73,21 @@ RMS コネクタをインストールする前に、次の要件を満たして�
 
 コネクタは適切にデプロイするために必要なすべての[前提条件](deploy-rms-connector.md#prerequisites-for-the-rms-connector)を自動的にチェックするわけではないため、開始する前に前提条件がすべて満たされていることを確認してください。 コネクタのインストールとコネクタの構成が完了した後で、そのコネクタを使用するサーバーを構成する必要があります。 
 
--   **手順 1.**  [RMS コネクタのインストール](install-configure-rms-connector.md#installing-the-rms-connector)
+-   **手順 1**:  [RMS コネクタをインストールする](install-configure-rms-connector.md#installing-the-rms-connector)
 
--   **手順 2.**  [資格情報の入力](install-configure-rms-connector.md#entering-credentials)
+-   **手順 2**:  [資格情報の入力](install-configure-rms-connector.md#entering-credentials)
 
--   **手順 3.**  [RMS コネクタを使用するサーバーの承認](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)
+-   **手順 3**:  [RMS コネクタを使用するサーバーの承認](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)
 
--   **手順 4 :**  [負荷分散と高可用性の構成](install-configure-rms-connector.md#configuring-load-balancing-and-high-availability)
+-   **手順 4**:  [負荷分散と高可用性を構成する](install-configure-rms-connector.md#configuring-load-balancing-and-high-availability)
 
--   省略可能: [HTTPS を使用するための RMS コネクタの構成](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)
+    -   省略可能: [HTTPS を使用するための RMS コネクタの構成](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)
 
--   省略可能: [Web プロキシ サーバーを使用するための RMS コネクタの構成](install-configure-rms-connector.md#configuring-the-rms-connector-for-a-web-proxy-server)
+    -   省略可能: [Web プロキシ サーバーを使用するための RMS コネクタの構成](install-configure-rms-connector.md#configuring-the-rms-connector-for-a-web-proxy-server)
 
--   省略可能: [管理用コンピューターへの RMS コネクタ管理ツールのインストール](install-configure-rms-connector.md#installing-the-rms-connector-administration-tool-on-administrative-computers)
+    -   省略可能: [管理用コンピューターへの RMS コネクタ管理ツールのインストール](install-configure-rms-connector.md#installing-the-rms-connector-administration-tool-on-administrative-computers)
 
--   **手順 5.**  [RMS コネクタを使用するためのサーバーの構成](configure-servers-rms-connector.md)
+-   **手順 5**:  [RMS コネクタを使用するようにサーバーを構成する](configure-servers-rms-connector.md)
 
     -   [コネクタを使用するように Exchange サーバーを構成する](configure-servers-rms-connector.md#configuring-an-exchange-server-to-use-the-connector)
 

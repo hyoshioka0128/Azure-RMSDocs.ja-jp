@@ -12,20 +12,20 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 35bb27bbb6cbfeb8fa4291c9442c95190b92e28b
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: a8c0d8ae4989a31029979c819ac6c59c390a8f3c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382549"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベル付けスキャナーとは
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2019、Windows Server 2016、windows server 2012 R2 *
+>
+>***関連**: [AIP 統合ラベルクライアントのみ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 クラシッククライアントについては、「 [Azure Information Protection クラシックスキャナーとは](deploy-aip-scanner-classic.md)」を参照してください。*
 
 >[!NOTE] 
-> クラシックスキャナーを使用している場合は、「 [Azure Information Protection クラシックスキャナーとは](deploy-aip-scanner-classic.md)」を参照してください。
->
 > クラウド リポジトリ上のファイルをスキャンおよびラベル付けするには、スキャナーの代わりに [Cloud App Security](/cloud-app-security/) を使用します。
 
 このセクションの情報を使用して、Azure Information Protection 統合されたラベル付けスキャナーについて説明し、正常にインストール、構成、実行、必要に応じてトラブルシューティングを行う方法について説明します。
@@ -113,7 +113,7 @@ AIP スキャナーは、ファイルをスキャンするときに、次の手�
 現在のポート範囲を表示し、必要に応じて増やす方法の詳細については、「 [ネットワークパフォーマンスを向上させるために変更できる設定](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance)」を参照してください。
 
 > [!TIP]
-> 大規模な SharePoint ファームの場合は、リストビューのしきい値を大きくする必要があり **ます。既定値は5000です。**
+> 大規模な SharePoint ファームの場合は、リストビューのしきい値を大きくする必要があります。既定値は **5000** です。
 >
 > 詳細については、「 [SharePoint での大きなリストとライブラリの管理](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)」を参照してください。
 >
@@ -133,7 +133,7 @@ AIP スキャナーは、次の状況でファイルにラベルを付けるこ�
 
     保護 [するファイルの種類を変更](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect)すると、保護のために他の種類のファイルを追加できます。
 
-**例:** .Txt ファイルの種類では分類のみがサポートされていないため、.txt ファイルを検査した後は、[分類のみ] に構成されたラベルをスキャナーで適用することはできません。 
+**例**: .txt ファイルを検査した後、スキャナーは分類のみに構成されたラベルを適用できません。これは、.txt ファイルの種類では分類のみがサポートされていないためです。 
 
 ただし、ラベルが分類と保護の両方に構成されていて、保護するスキャナーに .txt ファイルの種類が含まれている場合は、スキャナーでファイルにラベルを付けることができます。
 
@@ -145,12 +145,10 @@ AIP スキャナーは、次の状況でファイルにラベルを付けるこ�
 - [AIP スキャナーの構成とインストール](deploy-aip-scanner-configure-install.md)
 - [AIP スキャナーを使用したスキャンの実行](deploy-aip-scanner-manage.md)
 
-**詳細情報:**
+**詳細情報**:
 
 - 統合されたラベル付けスキャナーのベストプラクティスに関するブログをご覧ください: [AIP UL スキャナーをデプロイおよび使用するためのベストプラクティス](https://aka.ms/AIPScannerBestPractices)
 
 - Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
 
-- [Windows Server FCI と Azure Information Protection スキャナーの違いは何ですか](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)。
-
-- また、PowerShell を使用して、デスクトップ コンピューターからファイルを対話的に分類し、保護することができます。 PowerShell を使用するその他のシナリオの詳細については、「 [Azure Information Protection 統合されたラベル付けクライアントでの powershell の使用](./rms-client/clientv2-admin-guide-powershell.md)」を参照してください。
+- また、PowerShell を使用して、デスクトップ コンピューターからファイルを対話的に分類し、保護することができます。 PowerShell を使用するその他のシナリオの詳細については、「 [Azure Information Protection の統合ラベル付けクライアントでの powershell の使用](./rms-client/clientv2-admin-guide-powershell.md)」を参照してください。

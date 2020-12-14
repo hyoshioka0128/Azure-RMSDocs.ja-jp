@@ -5,32 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f39ba64ed2702f4f994d5626697fa5185e546f2b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e6eeada66c38a9c3c0095f22165dbf0454d04290
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570478"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383263"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Azure Information Protection で異なる言語のラベルとテンプレートを構成する方法
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについ](/microsoft-365/compliance/sensitivity-labels) て」を参照してください。 機密ラベルに別の言語を構成する[には、LocaleSettings コマンドレット](/powershell/module/exchange/policy-and-compliance/set-label)のパラメーターを使用します。 *
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
-
-> [!NOTE]
-> これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) を参照してください。
-> 
-> 機密ラベル用にさまざまな言語を構成する方法については、Office 365 Security & コンプライアンス PowerShell と、 *LocaleSettings* パラメーター [を使用してください。](/powershell/module/exchange/policy-and-compliance/set-label)
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+>
 
 Azure Information Protection の既定のラベルは複数の言語をサポートしますが、指定するラベルの名前と説明のサポートを構成する必要があります。 この構成では、次のことを行う必要があります。
 
@@ -56,7 +52,7 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
     
     たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
 
-2. [言語 **の管理**  >  **Languages** ] メニューオプションから: [ **Azure Information Protection の言語**] ウィンドウで、[**翻訳する新しい言語を追加する**] を選択します。 追加する言語を選択して、**[OK]** を選択します。 [検索] ボックスに言語の名前を入力するか、使用可能な言語の一覧をスクロールします。
+2. [言語 **の管理**  >   ] メニューオプションから: [ **Azure Information Protection の言語**] ウィンドウで、[**翻訳する新しい言語を追加する**] を選択します。 追加する言語を選択して、**[OK]** を選択します。 [検索] ボックスに言語の名前を入力するか、使用可能な言語の一覧をスクロールします。
 
 3. 選択した言語が [ **Azure Information Protection の言語** ] ウィンドウに表示されるようになりました。
     
@@ -89,13 +85,13 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
 
 他の言語をサポートする Azure Information Protection ポリシーをユーザーがダウンロードする場合、ラベルの名前とヒントでユーザーに表示される言語は、次のロジックに従って決定されます。
 
-**Office アプリの Azure Information Protection バーでユーザーに表示されるラベルとヒント**
+**Office アプリの Azure Information Protection バーでユーザーに表示されるラベルとツールヒントを次に** 示します。
 
 - ユーザーの Office アプリの言語と直接一致する言語がある場合は、その言語を使用してラベルの名前と説明が表示されます。
 
 - ユーザーの Office アプリの言語と一致する言語がない場合は、管理者がすべてのユーザーに対して既定で指定した言語を使用して、ラベルの名前と説明が表示されます。 通常、この言語は、既定のポリシーで使用される英語です。
 
-**ユーザーが右クリックしてファイルまたはフォルダーを分類および保護するときに表示されるラベルとヒント**
+**右クリックを使用してファイルまたはフォルダーを分類および保護するときにユーザーに表示されるラベルとヒントについ** ては、次のとおりです。
 
 - ユーザーのオペレーティング システムの言語と直接一致する言語がある場合は、その言語を使用してラベルの名前と説明が表示されます。
 

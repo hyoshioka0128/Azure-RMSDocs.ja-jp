@@ -1,28 +1,28 @@
 ---
 title: Azure Information Protection の一般的なシナリオの手順
 description: Azure Information Protection を使用して、組織のデータを分類して保護するユースケースを特定します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
-ms.topic: how-to
+ms.date: 11/11/2020
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 56d465d8efbc0b5bc2c6b87e1b60e34cb4e091f8
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 1c81df0928261ea50795837e8e0fe2b542d7b8af
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95569695"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382158"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Azure Information Protection を使用する一般的なシナリオに関する操作ガイド
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***関連**: [Azure Information Protection Windows 用の統一されたラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection を使用して組織のドキュメントや電子メールを分類したり、必要に応じて保護したりするためには、多くの方法があります。 
 
@@ -30,43 +30,28 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 ## <a name="common-scenarios"></a>一般的なシナリオ
 
-|シナリオの目的|Instructions|
-|----------------|---------------|
-|組織がオンプレミスに格納している機密情報を検索する|[クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する](quickstart-findsensitiveinfo.md)|
-|ユーザーが機密情報を含む電子メールを簡単に保護できるようにする|[クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする](quickstart-label-dnf-protectedemail.md)|
-|ユーザーがデータを作成または編集したときに簡単に分類し、機密情報を含む場合は保護できるようにする| [チュートリアル: ポリシーを編集して新しいラベルを作成する](infoprotect-quick-start-tutorial.md)|
-|ユーザーが保護されたドキュメントに対して簡単に共同作業できるようにする|[Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成](secure-collaboration-documents.md)|
-|組織の外部に送信されるユーザーの電子メールを自動的に保護する| [Azure Information Protection ラベルのメール フロー ルールの構成](configure-exo-rules.md)
-|オンプレミスのデータ ストアにある既存のデータを自動的に分類して保護する|[Azure Information Protection スキャナーの展開](deploy-aip-scanner.md)|
-|自分のキーを使用して自分の組織のデータを保護する| [テナント キーの計画と実装](plan-implement-tenant-key.md)|
-|AD RMS から移行する|[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)|
+- [Azure Information Protection (AIP) スキャナーを使用して機密コンテンツを発見する](tutorial-scan-networks-and-content.md) 
+- [組織の外部に送信されるユーザーの電子メールを自動的に保護する](configure-exo-rules.md)
+- [自分のキーを使用して自分の組織のデータを保護する](plan-implement-tenant-key.md)
+- [Azure Information Protection (AIP) クラシッククライアントから、統合されたラベル付けクライアントへの移行](tutorial-migrating-to-ul.md)
+- [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)
 
 ## <a name="additional-deployment-instructions"></a>デプロイの追加手順
 
 [Azure Information Protection テクニカルブログ](https://aka.ms/AIPblog)には、最前線からの追加のガイダンスが含まれています。
 
-たとえば、ビジネスの意思決定者や IT の実装担当者向けのベスト プラクティスを使った方法:
+たとえば、ビジネスの意思決定者と IT 実装者向けのベストプラクティスについては、 [Azure Information Protection 展開の加速](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)に関するガイドを参照してください。
 
-- [Azure Information Protection デプロイの高速化ガイド](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
-
-詳しい手順:
+詳細と詳細な手順については、以下を参照してください。
 
 - [カスタム AIP 追跡ポータルを構築する方法](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-Build-a-Custom-AIP-Tracking-Portal/ba-p/875849)
-
 - [Microsoft Information Protection と Azure AD ログインデータを使用して、より豊富なレポートを作成する](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
-
 - [Microsoft Cloud App Security を活用してクラウドに Azure Information Protection ラベルを適用する](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
-
 - [Azure Information Protection "Cloud Exit" プランを準備する方法](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
-
 - [テナント間のラベルの視覚化](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cross-Tenant-Label-Visualization/ba-p/356588)
-
 - [Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010) (Azure Information Protection を使用して PDF および Adobe Acrobat Reader を保護して表示する)
-
 - [Cataloging your Sensitive Data with AIP, Even Before Configuring Labels!](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cataloging-your-Sensitive-Data-with-AIP-Even-Before-Configuring/ba-p/267241) (AIP を使用してラベルを構成する前に、機密データをカタログ化する)
-
 - [Azure Information Protection Scanner Express Installation](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Scanner-Express-Installation/ba-p/265424) (Azure Information Protection スキャナーの簡易インストール)
-
 - [Discovery of Sensitive Data Using the AIP Scanner (AIP Premium P1)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discovery-of-Sensitive-Data-Using-the-AIP-Scanner-AIP-Premium-P1/ba-p/252040) (AIP スキャナーを使用した機密データの検出 (AIP Premium P1))
 
 ## <a name="next-steps"></a>次のステップ

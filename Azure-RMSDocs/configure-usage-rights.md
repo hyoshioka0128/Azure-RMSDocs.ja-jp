@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -13,23 +13,28 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 46ad00630997afd598d1476cba3c877e1a604864
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 42921437537d7daa93ceda374aa247a8601707d8
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849778"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382889"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Azure Information Protection の使用権限を構成する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 
+> 完全を期すため、この記事には 2018 年 1 月 8 日に廃止された Azure クラシック ポータルの値も含まれています。
 
 暗号化のために感度ラベルまたは保護テンプレートを構成する場合は、ユーザー、管理者、または構成済みのサービスによってラベルまたはテンプレートが選択されたときに自動的に適用される使用権限を選択します。 たとえば、Azure Portal では、使用権限の論理的なグループを構成するロールを選択することも、個別の権限を構成することもできます。 または、ユーザーが使用権限を選択して適用することもできます。
 
 この記事では、使用しているアプリケーションに必要な使用権限を構成し、これらの権限がアプリケーションによって解釈されるように設計された方法を理解するのに役立ちます。 ただし、アプリケーションが権限を実装する方法によって異なる場合があるため、運用環境にデプロイする前に、ユーザーが動作を確認するために使用するアプリケーションについて、常にドキュメントを参照し、独自のテストを実行します。
 
-> [!NOTE] 
-> 完全を期すため、この記事には 2018 年 1 月 8 日に廃止された Azure クラシック ポータルの値も含まれています。
 
 ## <a name="usage-rights-and-descriptions"></a>使用権限と説明
 次の表は、Rights Management でサポートされている使用権限と説明の一覧です。それらの使用方法と解釈方法も示します。 一覧では **共通名** を示しています。これは、通常、使用権限が表示されたり参照されたりするときに使われる名前であり、コード内で使用される単一ワード値 (**ポリシーでのエンコード** 値) よりもわかりやすい名前です。 
@@ -38,7 +43,9 @@ ms.locfileid: "96849778"
 
 - **Api の定数または値** は、MSIPC api 呼び出しの SDK 名であり、使用権限を確認するアプリケーションを作成するとき、またはポリシーに使用権限を追加するときに使用されます。
 
-- **ラベル管理センター** では、機密ラベルを構成する場所を示します。 Microsoft 365 コンプライアンスセンター、Microsoft 365 セキュリティセンター、または Office 365 セキュリティ & コンプライアンスセンターのいずれかになります。
+- **ラベル付け管理センター** は、機密ラベルを構成する場所を示します。これは、Microsoft 365 コンプライアンスセンター、Microsoft 365 セキュリティセンター、または Microsoft 365 セキュリティ & コンプライアンスセンターのいずれかになります。
+
+    クラシッククライアントを使用している場合は、Azure portal でラベルとラベルのポリシーを構成します。
 
 
 |使用権限|説明|実装|
@@ -87,16 +94,6 @@ Windows 用 Azure Information Protection クライアントには適用されま
 ###### <a name="footnote-4"></a>脚注 4
 ラベル管理センター、Azure portal、または Windows 用の Azure Information Protection クライアントには含まれません。
 
-## <a name="rights-included-in-the-default-templates"></a>既定のテンプレートに含まれる権限
-次の表は、既定のテンプレートを作成したときに含まれる使用権限の一覧です。 使用権限は、[共通名](#usage-rights-and-descriptions)で表示されています。
-
-これらの既定のテンプレートは、サブスクリプションを購入したときに作成されます。名前と使用権限は、Azure portal と[PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty)を使用して[変更](configure-policy-templates.md)できます。 
-
-|テンプレートの表示名|使用権限 (2017 年 10 月 6 日から現在)|使用権限 (2017 年 10 月 6 日より前)|
-|----------------|--------------------|----------|
-|\<*organization name> -社外秘、表示のみ * <br /><br />or<br /><br /> *非常に機密性の高い社外秘 \ すべての従業員*|表示、開く、読み取り、コピー、権利の表示、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集|表示、開く、読み取り|
-|\<*organization name>部外 <br /><br />or <br /><br />*社外秘 \ すべての従業員*|表示、開く、読み取り、名前を付けて保存、エクスポート、コピー、権利の表示、権利の変更、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集、フル コントロール|表示、開く、読み取り、名前を付けて保存、エクスポート、コンテンツの編集、編集、権利の表示、マクロの許可、転送、返信、全員に返信|
-
 ## <a name="do-not-forward-option-for-emails"></a>電子メールの [転送不可] オプション
 
 Exchange のクライアントとサービス (Outlook クライアント、Outlook on the web、Exchange メール フロー ルール、Exchange の DLP アクションなど) には、**[転送不可]** というメール用の追加の情報権限保護オプションがあります。 
@@ -129,7 +126,7 @@ Exchange Online で Office 365 Message Encryption の新機能を使用する場
 - **Web 上の Outlook で**
 - メールフロールールの **別の権利保護オプションとして**
 - **Office 365 DLP アクションとして**
-- **Outlook から、** [更新チャネル別の Microsoft 365 アプリのサポートされているバージョンの表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンの [Azure RMS をサポートする Microsoft 365 アプリ](requirements-applications.md#windows-computers-for-information-rights-management-irm)がある場合。 
+- **Outlook から**、 [更新チャネル別の Microsoft 365 アプリのサポートされているバージョンの表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンの [Azure RMS をサポートする Microsoft 365 アプリ](requirements-applications.md#windows-computers-for-information-rights-management-irm)がある場合。 
 
 Encrypt-Only オプションの詳細については、Office チームの次のブログ投稿のお知らせを参照してください。 [office 365 Message Encryption でのロールアウトのみを暗号化](https://aka.ms/omefeb2018)します。
 
@@ -161,7 +158,7 @@ Rights Management 発行者には、常にドキュメントまたは電子メ�
 
 - Rights Management 発行者は取り消されたドキュメントも開くことができます。 
 
-既定では、このアカウントはそのコンテンツの **Rights Management 所有者** でもあります。これは、ドキュメントまたは電子メールを作成したユーザーが保護を開始した場合です。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 例:
+既定では、このアカウントはそのコンテンツの **Rights Management 所有者** でもあります。これは、ドキュメントまたは電子メールを作成したユーザーが保護を開始した場合です。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 次に例を示します。
 
 - 管理者がファイル共有のファイルを一括保護する: Azure AD の管理者アカウントがユーザーのためにドキュメントを保護します。
 
@@ -197,7 +194,20 @@ Azure Rights Management によって保護されたドキュメントまたは�
     
     PowerShell を使用してこの設定を構成するための詳細とガイダンスについては、各コマンドレットのヘルプを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="rights-included-in-the-default-templates"></a>既定のテンプレートに含まれる権限
+
+**関連**: AIP classic client のみ
+
+次の表は、既定のテンプレートを作成したときに含まれる使用権限の一覧です。 使用権限は、[共通名](#usage-rights-and-descriptions)で表示されています。
+
+これらの既定のテンプレートは、サブスクリプションを購入したときに作成されます。名前と使用権限は、Azure portal と[PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty)を使用して[変更](configure-policy-templates.md)できます。 
+
+|テンプレートの表示名|使用権限 (2017 年 10 月 6 日から現在)|使用権限 (2017 年 10 月 6 日より前)|
+|----------------|--------------------|----------|
+|\<*organization name> -社外秘、表示のみ * <br /><br />または<br /><br /> *非常に機密性の高い社外秘 \ すべての従業員*|表示、開く、読み取り、コピー、権利の表示、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集|表示、開く、読み取り|
+|\<*organization name>部外 <br /><br />または <br /><br />*社外秘 \ すべての従業員*|表示、開く、読み取り、名前を付けて保存、エクスポート、コピー、権利の表示、権利の変更、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集、フル コントロール|表示、開く、読み取り、名前を付けて保存、エクスポート、コンテンツの編集、編集、権利の表示、マクロの許可、転送、返信、全員に返信|
+
+## <a name="see-also"></a>参照
 [Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)
 
 [Azure Information Protection と、検出サービスまたはデータ復旧用のスーパー ユーザーの構成](configure-super-users.md)

@@ -4,8 +4,8 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/29/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
@@ -13,16 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b58710ebd4486319126bc2f33266d349d23fa888
-ms.sourcegitcommit: 2085eedf24a6f72cbafcbacad023122a04faccc9
+ms.openlocfilehash: d0c643ea787d8ef9a977930aee270af5023c89a7
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "95570855"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381529"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>移行フェーズ 3 - クライアント側の構成
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 AD RMS から Azure Information Protection への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 7 を説明します。
 
@@ -85,6 +87,7 @@ AD RMS から Azure Information Protection への移行フェーズ 3 では、�
     |**Weight**|0|  
     |**ポート番号**|80|  
     |**このサービスを提供しているホスト**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
+    | | |
 
 2. Microsoft 365 アプリまたは Office 2016 (またはそれ以降) を実行しているユーザーの AD RMS 発行エンドポイントに対する拒否アクセス許可を設定します。
 
@@ -125,7 +128,7 @@ AD RMS から Azure Information Protection への移行フェーズ 3 では、�
 
 - ユーザーがローカルの管理者特権を持つ場合は、ログオン スクリプトを使用します。
 
-ユーザー構成スクリプト (Migrate-User.cmd) は、ユーザー レベルの設定を構成し、クライアントのライセンス ストアをクリーンアップします。 つまり、このスクリプトは、実際のユーザーのコンテキストで実行する必要があります。 例:
+ユーザー構成スクリプト (Migrate-User.cmd) は、ユーザー レベルの設定を構成し、クライアントのライセンス ストアをクリーンアップします。 つまり、このスクリプトは、実際のユーザーのコンテキストで実行する必要があります。 次に例を示します。
 
 - ログオン スクリプトを使用します。
 
@@ -154,7 +157,7 @@ SET Version=20170427
    > [!IMPORTANT]
    > 前と同様に、アドレスの前後に余分なスペースが挿入されないように注意してください。
    > 
-   > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、https://rms.treyresearch.net:443/_wmcs/licensing のように指定します。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、**[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、https://rms.treyresearch.net:<strong>443</strong> のように指定します。 
+   > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 (例: https://rms.treyresearch.net:443/_wmcs/licensing)。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、**[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、https://rms.treyresearch.net:<strong>443</strong> のように指定します。 
     
    Azure Rights Management サービスの *&lt; &gt;* url を取得する必要がある場合は、「」に戻り、 [azure Rights Management サービスの url を確認](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url)してください。
 

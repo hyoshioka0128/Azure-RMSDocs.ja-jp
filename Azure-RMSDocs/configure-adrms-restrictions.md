@@ -5,27 +5,27 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: c5e401f831cfed9080ae1454c6ee73377591c176
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: c02e7195d9edf93401b601e4d7ca243e6a14b702
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570511"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383823"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (HYOK) の詳細を保持する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [二重キー暗号化](plan-implement-tenant-key.md#double-key-encryption-dke)」を参照してください。
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 独自のキー (HYOK) 構成を保持することで、従来のクライアントを使用する AIP のお客様は、キーのフルコントロールを維持しながら、機密性の高いコンテンツを保護することができます。 HYOK は、機密性の高いコンテンツに対してオンプレミスに格納されている追加の顧客保持キー、および他のコンテンツに使用される既定のクラウドベースの保護を使用します。 
 
@@ -37,7 +37,7 @@ ms.locfileid: "95570511"
 
 クラウドベースのキーは Azure Key Vault で管理されます。これにより、次の利点が得られます。
 
-- **サーバーインフラストラクチャの要件はありません。** クラウドソリューションは、オンプレミスソリューションよりも迅速かつコスト効率の高い方法でデプロイおよび保守できます。
+- **サーバーインフラストラクチャの要件はありません**。 クラウドソリューションは、オンプレミスソリューションよりも迅速かつコスト効率の高い方法でデプロイおよび保守できます。
 
 - **クラウドベースの認証** を使用すると、他の組織のパートナーやユーザーと簡単に共有できます。 
 
@@ -102,37 +102,37 @@ HYOK はラベルの管理者構成オプションであり、コンテンツが
 
 ### <a name="windows-application-support-for-hyok"></a>HYOK の Windows アプリケーションサポート
 
-|アプリケーション  |保護  |従量課金  |
+|Application  |保護  |従量課金  |
 |---------|---------|---------|
 |Microsoft 365 アプリ、Office 2019、Office 2016、および Office 2013 を使用する Azure Information Protection クライアント:</br>Word、Excel、PowerPoint、Outlook     | ![はい](media/yes-icon.png)        | ![はい](media/yes-icon.png)        |
 |Azure Information Protection クライアントとファイル エクスプローラー     | ![はい](media/yes-icon.png)        | ![はい](media/yes-icon.png) |
-|Azure Information Protection ビューアー     |   適用なし      |  ![はい](media/yes-icon.png)       |
+|Azure Information Protection ビューアー     |   適用できません      |  ![はい](media/yes-icon.png)       |
 |Azure Information Protection クライアントと PowerShell のラベル付けコマンドレット     | ![はい](media/yes-icon.png)        | ![はい](media/yes-icon.png)        |
 |Azure Information Protection スキャナー     |![はい](media/yes-icon.png)       |   ![はい](media/yes-icon.png)      |
 | | | |
 
 ### <a name="macos-application-support-for-hyok"></a>macOS アプリケーションの HYOK のサポート
 
-|アプリケーション|保護|従量課金|
+|Application|保護|従量課金|
 |----------------------|----------|-----------|
 |Mac 用 Office: </br>Word、Excel、PowerPoint、Outlook|![no](media/no-icon.png)|![はい](media/yes-icon.png)|
 | | | |
 
 ### <a name="ios-application-support-for-hyok"></a>HYOK の iOS アプリケーションのサポート
 
-|アプリケーション|保護|従量課金|
+|Application|保護|従量課金|
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word、Excel、PowerPoint|![no](media/no-icon.png)| ![はい](media/yes-icon.png)|
 |Office Mobile: </br>Outlook のみ|![no](media/no-icon.png)|![no](media/no-icon.png)|
-|Azure Information Protection ビューアー|適用なし|![はい](media/yes-icon.png)|
+|Azure Information Protection ビューアー|適用できません|![はい](media/yes-icon.png)|
 
 ### <a name="android-application-support-for-hyok"></a>HYOK 向けの Android アプリケーションのサポート
 
-|アプリケーション|保護|従量課金|
+|Application|保護|従量課金|
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word、Excel、PowerPoint|![no](media/no-icon.png)| ![はい](media/yes-icon.png)|
 |Office Mobile: </br>Outlook のみ|![no](media/no-icon.png)|![no](media/no-icon.png)|
-|Azure Information Protection ビューアー|適用なし| ![はい](media/yes-icon.png)|
+|Azure Information Protection ビューアー|適用できません| ![はい](media/yes-icon.png)|
 
 
 ## <a name="implementing-hyok"></a>HYOK を実装する
@@ -157,7 +157,7 @@ Azure Information Protection ラベルの HYOK 保護を提供するには、AD 
 |**AD RMS 構成**     |HYOK をサポートするには、AD RMS システムを特定の方法で構成する必要があります。 詳細については、 [以下](#ad-rms-configuration-requirements)を参照してください。          |
 |**ディレクトリ同期**     |オンプレミスの Active Directory と Azure Active Directory の間でディレクトリ同期を構成する必要があります。 </br></br>HYOK protection ラベルを使用するユーザーは、シングルサインオン用に構成する必要があります。         |
 |**明示的に定義された信頼の構成**     |HYOK で保護されたコンテンツを組織外の他のユーザーと共有する場合は、他の組織との直接のポイントツーポイントの関係において、明示的に定義された信頼の AD RMS を構成する必要があります。 </br></br>これは、Active Directory フェデレーションサービス (AD FS) (AD FS) を使用して作成された信頼されたユーザードメイン (TUDs) またはフェデレーション信頼を使用して行います。         |
-|**サポートされるバージョン Microsoft Office**     | HYOK で保護されたコンテンツを保護または使用するユーザーには、次のものが必要です。 </br></br>-Information Rights Management (IRM) をサポートする Office のバージョン </br>-Microsoft Office Professional Plus バージョン2013以降、Windows 7 Service Pack 1 以降で実行されている Service Pack 1。 </br>-Office 2016 Microsoft Installer (.msi) ベースのエディションの場合、 [2018 でリリースされた Microsoft Office 2016 の4018295更新プログラム](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295)が必要です。 </br></br>**注:** Office 2010 と Office 2007 はサポートされていません。        |
+|**サポートされるバージョン Microsoft Office**     | HYOK で保護されたコンテンツを保護または使用するユーザーには、次のものが必要です。 </br></br>-Information Rights Management (IRM) をサポートする Office のバージョン </br>-Microsoft Office Professional Plus バージョン2013以降、Windows 7 Service Pack 1 以降で実行されている Service Pack 1。 </br>-Office 2016 Microsoft Installer (.msi) ベースのエディションの場合、 [2018 でリリースされた Microsoft Office 2016 の4018295更新プログラム](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295)が必要です。 </br></br>**注**: office 2010 および office 2007 はサポートされていません。        |
 
 > [!IMPORTANT]
 > HYOK protection によって提供される高い確実性を実現するために、次のことをお勧めします。
@@ -174,7 +174,7 @@ HYOK をサポートするには、AD RMS システムに次の構成がある�
 
 |要件  |説明  |
 |---------|---------|
-|**Windows バージョン**     |少なくとも、次のいずれかの Windows バージョン。 </br></br>**運用環境:** Windows Server 2012 R2</br>**テスト/評価環境**: Windows Server 2008 R2 Service Pack 1        |
+|**Windows バージョン**     |少なくとも、次のいずれかの Windows バージョン。 </br></br>**運用環境**: Windows Server 2012 R2</br>**テスト/評価環境**: Windows Server 2008 R2 Service Pack 1        |
 |**トポロジ**     |HYOK には、次のいずれかのトポロジが必要です。 </br>-単一のフォレストと1つの AD RMS クラスター </br>-複数のフォレスト。それぞれに AD RMS クラスターがあります。 </br></br>**複数のフォレストのライセンス**</br> 複数のフォレストがある場合、各 AD RMS クラスターは、同じ AD RMS クラスターを指すライセンス URL を共有します。 </br>この AD RMS クラスターで、他のすべての AD RMS クラスターからすべての信頼されたユーザードメイン (TUD) 証明書をインポートします。 </br>このトポロジについて詳しくは、「[Trusted User Domain (信頼されたユーザー ドメイン)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd983944(v=ws.10))」をご覧ください。 </br></br>**複数のフォレストのグローバルポリシーラベル**</br>個々のフォレスト内に複数の AD RMS クラスターがある場合は、HYOK (AD RMS) 保護を適用するグローバル ポリシー内のラベルを削除し、クラスターごとに [スコープ付きポリシー](configure-policy-scope.md) を構成します。 <br>各クラスターのユーザーをスコープ付きポリシーに割り当て、ユーザーが複数のスコープ付きポリシーに割り当てられるようなグループを使用しないようにします。</br>結果として、各ユーザーは 1 つの AD RMS クラスターのみのラベルを持つことになります。          |
 |**暗号化モード**     | AD RMS は、 [暗号化モード 2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10))で構成する必要があります。 </br>AD RMS クラスターのプロパティの **[全般** ] タブを確認して、モードを確認します。        |
 |**証明書 URL の構成**     | 各 AD RMS サーバーは、証明書の URL 用に構成されている必要があります。 </br>詳細については、 [以下](#configuring-ad-rms-servers-to-locate-the-certification-url)を参照してください。        |

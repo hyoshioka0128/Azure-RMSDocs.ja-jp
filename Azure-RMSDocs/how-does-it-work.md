@@ -1,10 +1,10 @@
 ---
 title: Azure RMS のしくみ - Azure Information Protection
 description: Azure RMS の動作のしくみ、使われている暗号化の制御、およびこのプロセスが動作する詳細な手順の図を示します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,18 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9604ca61aff2d01d66e6f328b88ca264ab031785
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 8adba522d85bec9d2d1062c510b10ae9b96368a3
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136649"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381750"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS が動作する しくみ
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 *
 
 Azure RMS の動作方法について理解しておく必要がある重要な点は、Azure Information Protection のこのデータ保護サービスでは、保護プロセスの一環としてユーザーのデータが見られたり保存されたりしないということです。 ユーザーが保護した情報は、ユーザーが Azure に明示的に保存したり、Azure に情報を保存する別のクラウド サービスを使用しない限り、Azure に送信されたり保存されたりすることはありません。 Azure RMS は単に、ドキュメント内のデータを、承認されたユーザーとサービスしか読み取ることができないようにするだけです。
 
@@ -32,7 +34,7 @@ Azure RMS の動作方法について理解しておく必要がある重要な�
 
 次の図は、このプロセスの概要を示したものです。 秘密の調合を含むドキュメントが保護されており、承認されたユーザーまたはサービスによって正常に開かれます。 ドキュメントは、コンテンツ キー (この図では緑の鍵) によって保護されています。 コンテンツ キーはドキュメントごとに固有であり、Azure Information Protection のテナント ルート キー (図では赤の鍵) によって保護されてファイル ヘッダーに配置されています。 Microsoft がテナント キーを生成して管理することも、ユーザーが独自のテナント キーを生成して管理することもできます。
 
-Azure RMS が暗号化および復号化、承認、制限の適用を行う保護プロセス全体を通じて、秘密の調合は Azure に送信されません。
+Azure RMS が暗号化と暗号化解除、承認、制限の適用を行う保護プロセス全体を通じて、秘密の調合が Azure に送信されることはありません。
 
 ![Azure RMS がファイルを保護する方法](./media/AzRMS_SecretColaFormula_final.png)
 
@@ -49,6 +51,7 @@ Azure RMS が使うアルゴリズムとキー長に関する技術的な詳細�
 |アルゴリズム: AES<br /><br />キーの長さ: 128 ビットと 256 ビット [[1]](#footnote-1)|コンテンツの保護|
 |アルゴリズム: RSA<br /><br />キーの長さ: 2048 ビット [[2]](#footnote-2)|キーの保護|
 |SHA-256|証明書の署名|
+| | |
 
 ###### <a name="footnote-1"></a>脚注 1 
 
@@ -80,7 +83,8 @@ Windows デバイスに送信されるライセンスと証明書は、クライ
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Azure RMS の動作のチュートリアル: 初めての使用、コンテンツ保護、コンテンツ消費
-Azure RMS の動作をさらに詳しく理解するため、[Azure Rights Management サービスがアクティブ化](activate-service.md)された後、ユーザーが初めて Windows コンピューター上の Rights Management サービスを使い (**ユーザー環境の初期化**またはブートストラップと呼ばれることもあります)、**コンテンツ (ドキュメントまたはメール) を保護**した後、他のユーザーによって保護されているコンテンツを**消費** (開いて使う) するときの一般的なフローを見ていきます。
+
+Azure RMS の動作をさらに詳しく理解するため、[Azure Rights Management サービスがアクティブ化](activate-service.md)された後、ユーザーが初めて Windows コンピューター上の Rights Management サービスを使い (**ユーザー環境の初期化** またはブートストラップと呼ばれることもあります)、**コンテンツ (ドキュメントまたはメール) を保護** した後、他のユーザーによって保護されているコンテンツを **消費** (開いて使う) するときの一般的なフローを見ていきます。
 
 ユーザー環境が初期化された後、そのユーザーはそのコンピューターでドキュメントを保護したり、保護されているドキュメントを消費したりできます。
 
@@ -94,7 +98,7 @@ Azure RMS の動作をさらに詳しく理解するため、[Azure Rights Manag
 
 **ステップ 1 で行われること**: コンピューター上の RMS クライアントは、最初に、Azure Rights Management サービスに接続し、Azure Active Directory アカウントを使ってユーザーを認証します。
 
-ユーザーのアカウントが Azure Active Directory と統合されている場合、この認証は自動的に行われ、ユーザーが資格情報の入力を求められることはありません。
+ユーザーのアカウントが Azure Active Directory とフェデレーションされていると、この認証は自動的に行われ、ユーザーが資格情報の入力を求められることはありません。
 
 ![RMS クライアント アクティブ化 - ステップ 2: 証明書がクライアントにダウンロードされる](./media/AzRMS_useractivation2.png)
 
@@ -113,7 +117,7 @@ Azure RMS の動作をさらに詳しく理解するため、[Azure Rights Manag
 
 ![RMS ドキュメントの保護 - ステップ 2: ポリシーが作成される](./media/AzRMS_documentprotection2.png)
 
-**ステップ 2 で行われること**: RMS クライアントは、ドキュメントに対するポリシーを含む証明書を作成します。ポリシーには、ユーザーまたはグループに対する[使用権限](configure-usage-rights.md)と、有効期限などの他の制限事項が含まれます。 これらの設定は、それ以前に管理者が構成するテンプレートで定義することも、またはコンテンツを保護するときに指定することも ("アドホック ポリシー" とも呼ばれます) できます。   
+**ステップ 2 で行われること**: RMS クライアントは、ドキュメントに対するポリシーを含む証明書を作成します。ポリシーには、ユーザーまたはグループに対する [使用権限](configure-usage-rights.md)と、有効期限などの他の制限事項が含まれます。 これらの設定は、それ以前に管理者が構成するテンプレートで定義することも、またはコンテンツを保護するときに指定することも ("アドホック ポリシー" とも呼ばれます) できます。   
 
 選択されたユーザーやグループの識別に使われるメインの Azure AD 属性は、Azure AD の ProxyAddresses 属性であり、この属性にはユーザーまたはグループのすべてのメール アドレスが格納されます。 ただし、ユーザー アカウントの AD ProxyAddresses 属性に値が何も含まれない場合は、ユーザーの UserPrincipalName の値が代わりに使われます。
 
@@ -121,7 +125,7 @@ Azure RMS の動作をさらに詳しく理解するため、[Azure Rights Manag
 
 ![RMS ドキュメントの保護 - ステップ 3: ポリシーがドキュメントに埋め込まれる](./media/AzRMS_documentprotection3.png)
 
-**手順3で**行われること: 最後に、RMS クライアントは、以前に暗号化されたドキュメントの本文と共にポリシーをファイルに埋め込みます。これは、保護されたドキュメントを構成します。
+**手順3で** 行われること: 最後に、RMS クライアントは、以前に暗号化されたドキュメントの本文と共にポリシーをファイルに埋め込みます。これは、保護されたドキュメントを構成します。
 
 このドキュメントは、任意の方法を使って、任意の場所に格納したり共有したりでき、ポリシーは暗号化されたドキュメントと共に常に存在します。
 
@@ -155,19 +159,24 @@ Azure RMS の動作をさらに詳しく理解するため、[Azure Rights Manag
 
 - **モバイル デバイス**: モバイル デバイスが Azure Rights Management サービスでファイルを保護または消費するときのプロセス フローはとても簡単です。 モバイル デバイスでは、(コンテンツを保護または消費するための) 各トランザクションが独立しているため、最初にユーザー初期化プロセスを行う必要はありません。 Windows コンピューターと同様に、モバイル デバイスは Azure Rights Management サービスに接続して認証を行います。 コンテンツを保護するには、モバイル デバイスはポリシーを送信し、Azure Rights Management サービスはドキュメントを保護するための発行ライセンスと対称キーを送信します。 コンテンツを消費するには、モバイル デバイスは、Azure Rights Management サービスに接続して認証を行うときに、Azure Rights Management サービスにドキュメント ポリシーを送信し、ドキュメントを消費するための使用ライセンスを要求します。 応答で、Azure Rights Management サービスはモバイル デバイスに必要なキーと制限を送信します。 どちらのプロセスも、TLS を使って、キーの交換およびその他の通信を保護します。
 
-- **RMS コネクタ**: Azure Rights Management サービスが RMS コネクタで使われるときも、プロセス フローは変わりません。 唯一の違いは、コネクタがオンプレミスのサービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化、暗号化、暗号化解除など、いかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーするだけであり、両側で使用されているプロトコルの変換を処理します。 このシナリオでは、Azure Rights Management サービスをオンプレミス サービスと併用できます。
+- **RMS コネクタ**: Azure Rights Management サービスが RMS コネクタで使われるときも、プロセス フローは変わりません。 唯一の違いは、コネクタがオンプレミスのサービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化、暗号化、暗号化解除など、いかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーし、それぞれの側で使われているプロトコル間の変換を処理するだけです。 このシナリオでは、オンプレミスのサービスで Azure Rights Management サービスを使うことができます。
 
 - **一般的な保護 (.pfile)**: Azure Rights Management サービスが一般的にファイルを保護しているときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除き、フローは基本的にコンテンツ保護の場合と同じです。 ファイルが消費されるときは、ターゲット アプリケーションに渡される前にファイルが暗号化解除されます。 このシナリオでは、ファイルが RMS をネイティブにサポートしない場合でも、すべてのファイルを保護できます。
 
 - **Microsoft アカウント**: Microsoft アカウントで認証されていれば、Azure Information Protection で消費用の電子メール アドレスを承認できます。 ただし、Microsoft アカウントが認証に使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合があます。 詳細については、[こちら](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Rights Management サービスについては、「**理解と調査**」セクションの「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」などの他の記事で、既存のアプリケーションを Azure Rights Management と統合して情報保護ソリューションを提供する方法を学習してください。 
 
-「[Azure Information Protection の用語](./terminology.md)」で、Azure Rights Management サービスを構成および使用するときに目にする用語をよく理解してください。また、展開を始める前に、「[Azure Information Protection の要件](requirements.md)」も確認してください。 すぐにご自分で試してみる場合は、[ポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルをご利用ください。
+「[Azure Information Protection の用語](./terminology.md)」で、Azure Rights Management サービスを構成および使用するときに目にする用語をよく理解してください。また、展開を始める前に、「[Azure Information Protection の要件](requirements.md)」も確認してください。 すぐに試してみたい場合は、クイックスタートとチュートリアルを使用してください。
 
-組織へのデータ保護の展開を始める準備ができた場合は、「[Azure Information Protection デプロイ ロードマップ](deployment-roadmap.md)」で、展開の手順と、具体的な操作手順へのリンクをご覧ください。
+- [クイック スタート: 統合ラベル付けクライアントのデプロイ](quickstart-deploy-client.md)
+- [チュートリアル:Azure Information Protection (AIP) 統合ラベル付けスキャナーのインストール](tutorial-install-scanner.md)
+- [チュートリアル: Azure Information Protection (AIP) スキャナーを使用して機密コンテンツを検出する](tutorial-scan-networks-and-content.md)
+- [チュートリアル: Azure Information Protection (AIP) を使用した Outlook での過剰共有の防止](tutorial-preventing-oversharing.md)
+
+組織のデータ保護のデプロイを開始する準備ができたら、AIP デプロイロードマップを使用して、展開の手順と具体的な操作手順へのリンクについて、 [分類、ラベル付け、保護を](deployment-roadmap-classify-label-protect.md) 行います。
 
 > [!TIP]
 > 追加情報やヘルプについては、「[Azure Information Protection の情報とサポート](information-support.md)」のリソースとリンクをご覧ください。

@@ -1,8 +1,8 @@
 ---
 title: Azure RMS AIP を使用するための Microsoft 365 サービスの構成
 description: Azure Information Protection から Azure Rights Management サービスと連携するように Microsoft 365 サービスを構成するための管理者向けの情報と手順。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
@@ -13,20 +13,22 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 30f4789b5f6fcf7c62e5f84f84fc8187acfcff12
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 2caaf42c764b80f0ccba8b9c74191cbd6bd23c88
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383501"
 ---
-# <a name="microsoft365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Microsoft 365: Azure Rights Management サービスを使用するためのオンラインサービスの構成
+# <a name="microsoft-365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Microsoft 365: Azure Rights Management サービスを使用するためのオンラインサービスの構成
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>適用対象 **: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 次のセクションでは、Azure Information Protection から Azure Rights Management サービスを使用するように Exchange Online、Microsoft SharePoint、および Microsoft OneDrive を構成する方法について説明します。
 
-## <a name="exchangeonline-irm-configuration"></a>Exchange Online: IRM 構成
+## <a name="exchange-online-irm-configuration"></a>Exchange Online: IRM の構成
 
 Exchange Online が Azure Rights Management サービスと連携する方法の詳細については、「 [Office アプリケーションおよびサービスが azure Rights Management をサポートする方法](office-apps-services-support.md)」の「 [Exchange Online と exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) 」セクションを参照してください。
 
@@ -533,7 +535,7 @@ SharePoint 管理センターを使用してユーザーの OneDrive 用に IRM 
 
    4. このスクリプトを使用して OneDrive を構成しているので、変数の **ドキュメント** の値は変更しないで `$listTitle` ください。
 
-   5. `ADMIN INSTRUCTIONS` を検索します。 このセクションに変更を加えないと、ユーザーの OneDrive は、"保護されたファイル" というポリシーのタイトルと、"このポリシーは、承認されたユーザーへのアクセスを制限する" という説明で IRM 用に構成されます。  その他の IRM オプションは設定されません。これは、おそらく多くの環境に適しています。 ただし、提示されたポリシー タイトルと説明を変更したり、環境に適したその他の IRM オプションも追加できます。 Set-IrmConfiguration コマンド用に独自のパラメーターのセットを構築する助けとなる、スクリプト内のコメント例を参照してください。
+   5. `ADMIN INSTRUCTIONS` を探します。 このセクションに変更を加えないと、ユーザーの OneDrive は、"保護されたファイル" というポリシーのタイトルと、"このポリシーは、承認されたユーザーへのアクセスを制限する" という説明で IRM 用に構成されます。  その他の IRM オプションは設定されません。これは、おそらく多くの環境に適しています。 ただし、提示されたポリシー タイトルと説明を変更したり、環境に適したその他の IRM オプションも追加できます。 Set-IrmConfiguration コマンド用に独自のパラメーターのセットを構築する助けとなる、スクリプト内のコメント例を参照してください。
 
 5. スクリプトを保存し、署名します。 スクリプトに署名しない場合 (より安全性は高いです)、Windows PowerShell で署名されていないスクリプトを実行できるよう、コンピューターが構成されている必要があります。 これを行うには、Windows PowerShell セッションを **[管理者として実行]** オプションを使用して実行し、「**Set-executionpolicy Unrestricted**」と入力します。 ただし、この構成では、署名されていないすべてのスクリプトが実行されます (セキュリティは低いです)。
 

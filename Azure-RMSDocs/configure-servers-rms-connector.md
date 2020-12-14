@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
@@ -13,21 +13,22 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e5e5e4195f22be28bd290ab3cac9d96e6ca142e2
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 4f1dd3d2c832cebfe8cb8a994570d81e7544d8cf
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316465"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383008"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2016、windows Server 2012 R2、windows server 2012*
-
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーを構成するには、次の情報を活用してください。 これらの手順 [では、「Azure Rights Management コネクタのデプロイ](deploy-rms-connector.md)」の手順5について説明します。
 
-**前提条件:** 開始する前に、次のことを確認してください。
+**前提条件**: 開始する前に、次のことを確認してください。
     - RMS コネクタのインストールと構成
     - コネクタを使用するサーバーに関連する [前提条件](deploy-rms-connector.md#prerequisites-for-the-rms-connector) が確認されました。
 
@@ -63,7 +64,7 @@ RMS コネクタをインストールして構成したら、Azure Rights Manage
 
 Microsoft RMS コネクタのサーバー構成ツールを使用して、レジストリ設定を自動的に編集します。
 
-**次のような長所があります。**
+**利点は** 次のとおりです。
 
 - レジストリを直接編集する必要はありません。 スクリプトを使用して自動構成されます。
 
@@ -78,7 +79,7 @@ Microsoft RMS コネクタのサーバー構成ツールを使用して、レジ
 
 **利点** としては、RMS コネクタを実行しているサーバーへの接続が必要ないことが挙げられます。
 
-**欠点は次のとおりです。**
+**欠点は** 次のとおりです。
 
 - 管理オーバーヘッドが増大し、間違いが発生しやすくなります。
 
@@ -99,7 +100,7 @@ Microsoft RMS コネクタのサーバー構成ツールを使用して、レジ
     |メソッド  |説明  |
     |---------|---------|
     |**ローカル**     |  RMS コネクタと通信するように構成するサーバーから対話形式でツールを実行します。 <br><br>**ヒント**: これは、テスト環境など、1回限りの構成に役立ちます。       |
-    |**ソフトウェアのデプロイ**     |  ツールを実行してレジストリファイルを生成し、それを1つ以上の関連サーバーに展開します。 <br><br>System Center Configuration Manager などのソフトウェアの展開をサポートする systems management アプリケーションを使用して、レジストリファイルを展開します。       |
+    |**ソフトウェアの展開**     |  ツールを実行してレジストリファイルを生成し、それを1つ以上の関連サーバーに展開します。 <br><br>System Center Configuration Manager などのソフトウェアの展開をサポートする systems management アプリケーションを使用して、レジストリファイルを展開します。       |
     |**グループ ポリシー**     | ツールを実行して、構成するサーバーのグループポリシーオブジェクトを作成できる管理者に対して、指定したスクリプトを生成します。 <br><br>このスクリプトを実行すると、構成対象の各サーバー タイプに 1 つのグループ ポリシー オブジェクトが作成されます。その後、管理者は関連するサーバーにそのグループ ポリシーを割り当てることができます。        |
     | | |
 
@@ -114,7 +115,7 @@ Microsoft RMS コネクタのサーバー構成ツールを使用して、レジ
 
 スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 
 
-プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、「 `https:\//connector.contoso.com` 」のように入力します。 
+プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、`https:\//connector.contoso.com` のようにします。 
 
 ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
 
@@ -215,7 +216,7 @@ SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 の
 
 2.  RMS コネクタと通信する SharePoint サーバーで、次のいずれかを実行します。
 
-    -   **Microsoft RMS コネクタのサーバー構成ツールを実行します。** 
+    -   **Microsoft RMS コネクタ用のサーバー構成ツールを実行します。** 
 
         詳細については、「 [MICROSOFT RMS コネクタ用のサーバー構成ツールの使用方法](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector)」を参照してください。
 
@@ -257,7 +258,7 @@ RMS コネクタとファイル分類インフラストラクチャを使用し�
 
 2. ファイル分類インフラストラクチャ用に構成され、RMS コネクタと通信するファイル サーバーで、次のいずれかを実行します。
 
-    -   **Microsoft RMS コネクタのサーバー構成ツールを実行します。** 
+    -   **Microsoft RMS コネクタ用のサーバー構成ツールを実行します。** 
     
         詳細については、「 [MICROSOFT RMS コネクタ用のサーバー構成ツールの使用方法](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector)」を参照してください。
 

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -13,22 +13,29 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 0954f3caa116ee100ed819f71f5be04f36392bd9
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316346"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382175"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection を組織に合わせてデプロイして構成したら、ユーザー、管理者、およびヘルプ デスクにヘルプおよびガイダンスを提供します。
 
 -   **エンドユーザー情報**
     
-    機密情報が含まれるドキュメントおよび電子メールを保護する方法とタイミングについて知らせます。 ユーザーが新しいプロセスを導入するのではなく、既に理解しているプロセスに対して追加の手順を組み込むことができるように、可能な限り、既存のワークフローに対してこの情報を提供します。 組織のビジネスに固有のメリット (およびリスク) を知らせ、どのようなときにファイルおよび電子メールを保護する必要があるかについてのガイダンスを提供します。 [テンプレート](configure-policy-templates.md)を構成した場合、ユーザーがテンプレートの名前と説明だけでは適切なテンプレートを選択できないときにどのテンプレートを選択すればよいのかについてのガイダンスを提供します。
+    機密情報が含まれるドキュメントおよび電子メールを保護する方法とタイミングについて知らせます。 ユーザーが新しいプロセスを導入するのではなく、既に理解しているプロセスに対して追加の手順を組み込むことができるように、可能な限り、既存のワークフローに対してこの情報を提供します。 組織のビジネスに固有のメリット (およびリスク) を知らせ、どのようなときにファイルおよび電子メールを保護する必要があるかについてのガイダンスを提供します。 
+
+    AIP クラシッククライアントを使用していて、 [テンプレート](configure-policy-templates.md)が構成されている場合は、テンプレート名と説明が適切なテンプレートを選択するのに十分でない場合は、どれを選択すればよいかについての説明を提供します。
     
     > [!TIP]
     > エンドユーザー向けの例示ビデオ:
@@ -43,7 +50,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
 -   **ヘルプデスクの情報**
     
-    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)に関するページを参照してください。
+    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの[インストールのチェックとトラブルシューティング](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting)に関するページを参照してください。
     
     保護されたドキュメントに対する完全な権限を持つ正当な要求がある場合は、Azure Information Protection [スーパーユーザー機能](configure-super-users.md)を使用して、ヘルプデスクにこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
     
@@ -61,10 +68,11 @@ Azure Information Protection を組織に合わせてデプロイして構成し
         
         特定のユーザーまたはグループによる、保護されたコンテンツの保護や使用を Azure Active Directory によって承認できることを確認するには、[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)の検証チェックを使用します。
         
-        保護されたコンテンツを開くことはできるが必要な権限を持っていないという報告がユーザーからあった場合、そのユーザーが Rights Management テンプレート用に構成された正しいグループに含まれていないことが問題である可能性があります。 または、そのユーザーまたはグループに[テンプレートの再構成が必要である](configure-policy-templates.md)という問題の場合があります。 
-        
         ユーザーの持つ権限が想定通りでない場合は、[使用権限テーブル](configure-usage-rights.md#usage-rights-and-descriptions)で権限に関する説明とアプリケーション固有の実装について確認してください。
 
+        **従来のクライアントのみ**: 保護されたコンテンツを開くことができても、必要な権限がないことをユーザーが報告した場合、ユーザーが Rights Management テンプレート用に構成されている正しいグループに含まれていない可能性があります。 または、そのユーザーまたはグループに[テンプレートの再構成が必要である](configure-policy-templates.md)という問題の場合があります。 
+        
+        
 次のセクションでは、ドキュメントと電子メールを保護する際に役立つアプリケーション固有の情報を示します。
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの情報保護の使用
@@ -73,11 +81,12 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 
 Azure Information Protection クライアントを使用すると、ユーザーがドキュメントと電子メールを簡単に保護できるだけでなく、保護したドキュメントをユーザー自身で追跡できます。 また、過去に承認済みのユーザーが追跡対象のドキュメントにアクセスする必要がない場合は、そのドキュメントを無効にすることもできます。
 
-この Windows コンピューター用クライアントを使用する手順については、「[Azure Information Protection クライアント ユーザー ガイド](./rms-client/client-user-guide.md)」を参照してください。
+この Windows コンピューター用クライアントを使用する手順については、「[Azure Information Protection クライアント ユーザー ガイド](./rms-client/clientv2-user-guide.md)」を参照してください。
 
 
 ## <a name="using-information-protection-with-office-365-office-2019-office-2016-or-office-2013"></a>Office 365、Office 2019、Office 2016、または Office 2013 での情報保護の使用
-Azure Rights Management サービスを使用していて、Azure Information Protection クライアントをインストールしていない場合、Office デスクトップ アプリに Azure Information Protection バーが表示されません。 リボンには **[保護]** ボタンが表示されず、エクスプローラーに **[分類して保護する]** も表示されません。 これらの追加によって、ユーザーはドキュメントと電子メールを簡単に保護できます。 これらのユーザーについては、次のような手順に従う必要があります。
+
+Azure Rights Management サービスを使用していて、Azure Information Protection クライアントをインストールしていない場合、Office デスクトップ アプリに Azure Information Protection バーが表示されません。 また、リボンに [ **感度** ] ボタンが表示されず、ファイルエクスプローラーから **分類および保護** されます。 これらの追加によって、ユーザーはドキュメントと電子メールを簡単に保護できます。 これらのユーザーについては、次のような手順に従う必要があります。
 
 > [!TIP]
 > これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
@@ -86,7 +95,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Microsoft Word で、ドキュメントを作成します。
 
-2.  [**ファイル**] メニューの [**情報**] [ドキュメントの保護] [アクセスの制限] を使用  >  **Protect Document**  >   **Restrict Access** します。
+2.  [**ファイル**] メニューの [**情報**] [ドキュメントの保護] [アクセスの制限] を使用  >    >   します。
 
 3. テンプレートを選択して適切な使用権限をすぐに適用するか、**[アクセスの制限]** を選択して使用権限を自分で選択します。
 

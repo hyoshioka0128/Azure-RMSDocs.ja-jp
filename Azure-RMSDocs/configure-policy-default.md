@@ -10,26 +10,21 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 6f50cd82076e8906ddf2ecaf0ec2d63350fffc35
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: f68561ed0d3d655dfdeb8feb380941106ea2674c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95570927"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383382"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Azure Information Protection の既定のポリシー
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」を参照してください。 *
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
-
-> [!NOTE]
-> Azure Information Protection ポリシーは Azure Information Protection クライアント (クラシック) に適用され、Azure Information Protection の統合されたラベル付けクライアントには適用されません。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) を参照してください。
-> 
-> 統一されたラベル付けクライアントの秘密度ラベルとポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントの「 [秘密度ラベルについ](/microsoft-365/compliance/sensitivity-labels) て」を参照してください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 以下では、Azure Information Protection の既定のポリシーの構成方法を説明します。
 
@@ -40,7 +35,7 @@ ms.locfileid: "95570927"
 > [!IMPORTANT]
 > 2019年4月以降、既定のラベルは新規顧客に対して自動的に作成されません。 これらのテナントには、統一ラベル付けプラットフォームが自動的にプロビジョニングされるため、Azure portal でラベルを構成した後、それらを移行する必要はありません。
 > 
-> これらのテナントでは、Office 365 セキュリティ & コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで既に作成されている秘密度ラベルが存在しない場合は、Azure Information Protection の現在の既定のポリシーから既定のラベルを作成できます。 これを行うには、[**ラベル**] ウィンドウで [**既定のラベルを生成** する] を選択し、グローバルポリシーにラベルを追加します。 既定のラベルを生成するオプションが表示されない場合は、最初に [統合ラベルの **管理**] ウィンドウで統合ラベルを有効にする必要があり  >  **Unified labeling** ます。 詳しい手順については、「[クイック スタート - Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
+> これらのテナントでは、Office 365 セキュリティ & コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで既に作成されている秘密度ラベルが存在しない場合は、Azure Information Protection の現在の既定のポリシーから既定のラベルを作成できます。 これを行うには、[**ラベル**] ウィンドウで [**既定のラベルを生成** する] を選択し、グローバルポリシーにラベルを追加します。 既定のラベルを生成するオプションが表示されない場合は、最初に [統合ラベルの **管理**] ウィンドウで統合ラベルを有効にする必要があり  >  ます。 詳しい手順については、「[クイック スタート - Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
 
 ## <a name="current-default-policy"></a>最新の既定のポリシー

@@ -12,23 +12,26 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 46d03db1a8e66b0e1753606a4a5e152047e43d22
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 3d376446354e591f9a5742d415b7b7cba75bf887
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849727"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382260"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)です。 詳細については、「 [クラシッククライアントの faq](faqs-classic.md)」も参照してください。 *
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection のデータ保護サービス、Azure Rights Management に関して質問がありますか。 ここで回答を探してみてください。
 
 ## <a name="do-files-have-to-be-in-the-cloud-to-be-protected-by-azure-rights-management"></a>ファイルを Azure Rights Management で保護するには、クラウドに置いておく必要があるのでしょうか。
+
 よくある誤解ですが、そのようなことはありません。 Azure Rights Management サービス (と Microsoft) では、情報保護の一環としてユーザーのデータを閲覧したり、保存したりすることはありません。 ユーザーが保護した情報は、ユーザーが Azure に明示的に保存したり、Azure に情報を保存する別のクラウド サービスを使用しない限り、Azure に送信されたり保存されたりすることはありません。
 
 詳細については、「Azure RMS のしくみ」を参照してください [。内部](./how-does-it-work.md) 設置型で格納され、オンプレミスに格納されている secret cola 式が Azure Rights Management サービスによって保護されていても、オンプレミスのままになっていることを理解するためのものです。
@@ -38,18 +41,6 @@ Azure Information Protection のデータ保護サービス、Azure Rights Manag
 Microsoft はさまざまなシナリオでのデータ保護に合わせて多数の暗号化技術を提供していますが、多くの場合はデータ保護のシナリオが相互補完的です。 たとえば、Microsoft 365 に格納されているデータの保存データの暗号化は、Microsoft 365 によって提供されますが、Azure Information Protection の Azure Rights Management サービスはデータを独立して暗号化し、そのデータがどこに置かれているかまたは送信方法に関係なく保護されるようにします。
 
 これらの暗号化技術は互いに補完するものであり、使用するには各技術を個別に有効にして構成する必要があります。 このときに、暗号化のキーを独自に用意するという選択が可能な場合があり、このようなシナリオは "BYOK" (Bring Your Own Key) とも呼ばれます。 暗号化技術の 1 つについて BYOK を有効にしても、それ以外の技術に影響することはありません。 たとえば、BYOK を Azure Information Protection に使用し、それ以外の暗号化技術には使用しないことも、その逆も可能です。 使用されるキーが暗号化技術ごとに異なるか同一であるかは、管理者が各サービスの暗号化オプションをどのように構成するかによって決まります。
-
-## <a name="whats-the-difference-between-byok-and-hyok-and-when-should-i-use-them"></a>BYOK と HYOK の違いは何ですか。どのような場合に使用すればよいでしょうか。
-
-Azure Information Protection において **独自キーを持ち込む** (BYOK) のは、Azure Rights Management 保護の独自キーをオンプレミスで作成する場合です。 そのキーを Azure Key Vault のハードウェア セキュリティ モジュール (HSM) に転送し、そこでそのキーの所有と管理を続行します。 このようにしない場合、Azure Rights Management 保護では Azure 内で自動的に作成、管理されるキーが使用されます。 この既定の構成は、"顧客管理" (BYOK オプション) ではなく "マイクロソフト管理" と呼ばれます。
-
-BYOK の詳細と、組織でこのキー トポロジを選択するかどうかについては、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
-
-Azure Information Protection において **独自キーを保持する** (HYOK) 機能は、クラウドに格納されているキーで保護することができないドキュメントや電子メールのサブセットを持つような、少数の組織のためのものです。 こうした組織では、BYOK を使用してキーを作成し管理する場合でも、この制限が適用されます。 この制限は多くの場合、規制やコンプライアンス上の理由によるもので、HYOK 構成は "最高機密" 情報のみに適用されます。つまり、組織外には決して共有されず、内部ネットワークのみで利用され、モバイル デバイスからアクセスする必要のない情報です。
-
-これらの例外 (通常は、保護する必要のあるすべてのコンテンツの 10% 未満) については、オンプレミスのソリューションである Active Directory Rights Management サービスを使用して、オンプレミスのキーを作成することができます。 このソリューションでは、コンピューターはクラウドから Azure Information Protection ポリシーを取得しますが、この識別されたコンテンツはオンプレミスのキーを使用して保護することができます。
-
-HYOK の詳細、制限についての正しい理解、およびどのような場合に使用するかのガイダンスについては、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。
 
 ## <a name="can-i-now-use-byok-with-exchange-online"></a>現在、Exchange Online で BYOK を使用できますか。
 
@@ -144,23 +135,7 @@ Azure Rights Management サービスをサポートしているデバイスの�
 
 Azure Rights Management サービスはあらゆる種類のファイルに対応しています。 テキスト、イメージ、Microsoft Office (Word、Excel、PowerPoint) ファイル、.pdf ファイル、他のいくつかのアプリケーションのファイルの種類については、Azure Rights Management は暗号化と権限の適用 (アクセス許可) の両方を含むネイティブな保護を提供します。 他のすべてのアプリケーションとファイルの種類については、ファイルのカプセル化と、ユーザーにファイルを開く権限があるかどうかを確認する認証という一般的な保護機能が提供されます。
 
-Azure Rights Management でネイティブでサポートされているファイル名拡張子の一覧については、「[Azure Information Protection クライアントでサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)」を参照してください。 一覧に含まれていないファイル名拡張子は、汎用的な保護をこれらのファイルに自動的に適用する Azure Information Protection クライアントを使用することによってサポートされます。
-
-## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>ドキュメントを保護および追跡するように Mac コンピューターを構成するにはどうすればよいですか。
-
-まず、https://admin.microsoft.com のソフトウェア インストール リンクから Office for Mac がインストールされていることを確認します。 詳しい手順について [は、「PC または Mac で Microsoft 365 または Office 2019 をダウンロードしてインストールまたは再インストールする](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658)」を参照してください。
-
-Outlook を開き、Microsoft 365 職場または学校アカウントを使用してプロファイルを作成します。 次に新しいメッセージを作成し、次の操作を行って、Azure Rights Management サービスを使用してドキュメントや電子メールを保護できるように Office を構成します。
-
-1. 新規のメッセージで、**[オプション]** タブの **[アクセス許可]** をクリックし、**[資格情報の確認]** をクリックします。
-
-2. メッセージが表示されたら、Microsoft 365 職場または学校アカウントの詳細をもう一度指定し、[ **サインイン**] を選択します。
-
-    これによって Azure Rights Management テンプレートがダウンロードされ、**[資格情報の確認]** が、**[無制限]**、**[転送不可]**、およびテナントに公開されたすべての Azure Rights Management テンプレートを含むオプションで置換されます。 この新しいメッセージは、ここで取り消すことができます。
-
-電子メール メッセージやドキュメントを保護するには、**[オプション]** タブで **[アクセス許可]** をクリックし、電子メールやドキュメントを保護するオプションまたはテンプレートを選択します。
-
-ドキュメントを保護した後、ドキュメントを追跡するには、Azure Information Protection クライアントをインストールした Windows コンピューターから Office アプリケーションまたはエクスプローラーを使用して、ドキュメントをドキュメント追跡サイトに登録します。 手順については、[ドキュメントの追跡と取り消し](./rms-client/client-track-revoke.md)に関するページを参照してください。 Mac コンピューターからは、現在、Web ブラウザーを使用してドキュメント追跡サイト (https://track.azurerms.com)) に移動し、このドキュメントを追跡して取り消すことができます。
+Azure Rights Management でネイティブでサポートされているファイル名拡張子の一覧については、「[Azure Information Protection クライアントでサポートされるファイルの種類](./rms-client/clientv2-admin-guide-file-types.md)」を参照してください。 一覧に含まれていないファイル名拡張子は、汎用的な保護をこれらのファイルに自動的に適用する Azure Information Protection クライアントを使用することによってサポートされます。
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>RMS で保護されている Office ドキュメントを開いた場合、関連付けられている一時ファイルも RMS で保護されますか。
 いいえ。 このシナリオでは、関連付けられた一時ファイルには元のドキュメントのデータは含まれませんが、ファイルが開いている間はユーザーが入力したもののみが含まれます。 元のファイルとは異なり、一時ファイルは明らかに共有用に設計されておらず、BitLocker や EFS などのローカル セキュリティ コントロールによって保護され、デバイス上に残ります。
@@ -185,15 +160,6 @@ Azure Information Protection では、他のユーザーと情報を安全に共
 [スーパー ユーザー機能](configure-super-users.md)を使用してください。この機能により、テナントで保護されているすべてのドキュメントと電子メールに対して承認されたユーザーにフル コントロール使用権限が与えられます。 スーパー ユーザーは常にこの保護されたコンテンツを読み取ることができ、必要に応じて、保護を解除したり、別のユーザーのために再度保護したりすることができます。 また必要であれば、スーパー ユーザー機能を使用して、権限を持つサービスによるファイルのインデックス化と検査を許可することができます。
 
 コンテンツが SharePoint または OneDrive に保存されている場合、管理者は [SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) コマンドレットを実行して、秘密度ラベルと暗号化の両方を削除できます。 詳細については、[Microsoft 365 のドキュメント](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document)を参照してください。
-## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>ドキュメント追跡サイトで失効をテストすると、最大 30 日間はドキュメントにアクセスできるというメッセージが表示されます。この期間を構成することはできますか。
-
-はい。 このメッセージは、その特定のファイルの[使用ライセンス](configure-usage-rights.md#rights-management-use-license)を反映しています。
-
-ファイルを取り消すと、そのアクションは、Azure Rights Management サービスでユーザーを認証する際にのみ適用できます。 そのため、ファイルに 30 日間の使用ライセンス有効期間があり、ユーザーが既にそのドキュメントを開いている場合、ユーザーはその使用ライセンスの期間中は引き続きドキュメントにアクセスすることができます。 使用ライセンスの期限が切れると、ユーザーの再認証が必要になりますが、ドキュメントが取り消されているため、その時点でユーザーのアクセスが拒否されます。
-
-ドキュメントを保護したユーザーである [Rights Management 発行者](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)は、この取り消しから除外されており、常に自分のドキュメントにアクセスできます。
-
-テナントに適用される使用ライセンスの有効期間の既定値は 30 日間です。ラベルまたはテンプレートで、この設定をより制限の厳しい値でオーバーライドできます。 使用ライセンスの詳細および構成方法については、「[Rights Management の使用ライセンス](configure-usage-rights.md#rights-management-use-license)」を参照してください。
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management は画面キャプチャを防止できますか。
 Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows 10 Mobile) および Android で広く使われているさまざまな画面キャプチャ ツールについては、**コピーの** [使用権限](configure-usage-rights.md)を付与しなければ、Rights Management で画面キャプチャを防止できます。 ただし、iOS および Mac デバイスでは、いかなるアプリも画面キャプチャを防止することができません。 さらに、すべてのデバイス上のブラウザーは画面キャプチャを防止することができません。 ブラウザーでは、web 用に Outlook と Office を使用します。

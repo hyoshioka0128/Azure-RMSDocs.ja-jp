@@ -5,23 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 57d8ac29ea58eab7820d642876e246b5ff985c4e
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 8cc07942c5ccb901518957a304c60adfe5c86a8f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570710"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383722"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>AIPService PowerShell モジュールのインストール
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection から保護サービス用の Windows PowerShell モジュールをインストールするには、次の情報を参照してください。 このモジュールの名前は AIPService で、AADRM という名前の以前のバージョンと置き換えられます。
 
@@ -44,7 +46,7 @@ AIPService モジュールは、古いモジュール AADRM を置き換えま�
 
 PowerShell ギャラリーから AADRM モジュールをインストールした場合、アンインストールするには、[ **管理者として実行** ] オプションを使用して PowerShell セッションを開始し、次のように入力します。
 
-```ps
+```PowerShell
 Uninstall-Module -Name AADRM
 ```
 
@@ -62,7 +64,7 @@ PowerShell ギャラリーの AIPService モジュールの詳細を確認する
 
 AIPService モジュールをインストールするには、[ **管理者として実行** ] オプションを使用して PowerShell セッションを開始し、次のように入力します。
 
-```ps
+```PowerShell
 Install-Module -Name AIPService
 ```
 
@@ -70,7 +72,7 @@ Install-Module -Name AIPService
 
 以前のバージョンの AIPService モジュールがギャラリーからインストールされている場合は、次のように入力して最新のバージョンに更新します。
 
-```ps
+```PowerShell
 Update-Module -Name AIPService
 ```
 
@@ -78,7 +80,7 @@ Update-Module -Name AIPService
 
 Windows PowerShell セッションで、インストールされているモジュールのバージョンを確認します。 このチェックは、以前のバージョンからアップグレードした場合に特に重要です。
 
-```ps
+```PowerShell
 (Get-Module AIPService –ListAvailable).Version
 ```
 
@@ -88,13 +90,13 @@ Windows PowerShell セッションで、インストールされているモジ�
 
 使用可能なコマンドレットを確認するには、次のコマンドを入力します。
 
-```ps
+```Powershell
 Get-Command -Module AIPService
 ```
 
-`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、**-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 例:
+`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、**-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 次に例を示します。
 
-```powershell
+```PowerShell
 Get-Help Connect-AipService -online
 ```
 

@@ -1,11 +1,11 @@
 ---
 title: Rights Management コネクタを監視する - AIP
 description: Azure Information Protection からコネクタと組織の Azure Rights Management サービスの使用を監視するのに役立つ情報です。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
@@ -13,16 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab20a68a2895962095bc83904851ef3a9955dd79
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: a440f075e8bbcd4d8c2d8ee8050ef0ab1d203b54
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570390"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381835"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 RMS コネクタのインストールと構成を行うと、以下の方法と情報を使用することで、コネクタと組織の Azure Rights Management サービスの使用状況を Azure Information Protection から監視できます。
 
@@ -171,7 +173,7 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 コネクタを使用する新しいサーバー アカウントを最近追加した場合、確認するとよいカウンターは、**Time since last authorization policy update** です。リストの更新後にコネクタがリストをダウンロードしたことや、もう少し待機する必要があるかどうか (最大 15 分) を確認できます。
 
-## <a name="logging"></a>ログの記録
+## <a name="logging"></a>ログ記録
 
 使用状況ログ記録を使用すると、電子メールやドキュメントが保護および使用された日時を特定できます。 RMS コネクタを使用してコンテンツを保護および使用する際、ログ内のユーザー ID フィールドには **Aadrm_S-1-7-0** のサービス プリンシパル名が含まれます。 この名前は、RMS コネクタ用に自動的に作成されます。
 
@@ -181,17 +183,17 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 1. **%programfiles%\Microsoft Rights Management connector\Web Service** で web.config ファイルを探します。
 
-2. 次の行を見つけます。
+1. 次の行を見つけます。
 
     ```sh
     <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
     ```
 
-3. その行を次のテキストに置き換えます。
+1. その行を次のテキストに置き換えます。
     ```sh
     <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
     ```
 
-4.  IIS を停止してから起動し、トレースをアクティブ化します。 
+1.  IIS を停止してから起動し、トレースをアクティブ化します。 
 
-5.  必要なトレースをキャプチャしたら、手順 3. の行を元に戻し、IIS を停止してから再起動します。
+1.  必要なトレースをキャプチャしたら、手順 3. の行を元に戻し、IIS を停止してから再起動します。

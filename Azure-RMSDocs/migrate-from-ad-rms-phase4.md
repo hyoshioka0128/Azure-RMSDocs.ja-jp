@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e7431ebdf016b89e1750b833dc4fca2d9646b195
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 0b13ccec5c4ca4fcdad1ac145a289a727fddd38a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316723"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382022"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 AD RMS から Azure Information Protection への移行フェーズ 4 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 8 から手順 9 を説明します。
 
@@ -151,13 +152,13 @@ AD RMS で Exchange Server または SharePoint Server の Information Rights Ma
 
 1. **Exchange 2013 と exchange 2016** の両方について、次のレジストリ値を追加します。
 
-    - **レジストリパス:**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **レジストリパス**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **種類:** Reg_SZ
+    - **種類**: Reg_SZ
 
-    - **値:** `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
+    - **値**: `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
 
-    - **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
+    - **データ**: Exchange サーバーから RMS コネクタへの HTTP または HTTPS のどちらを使用しているかに応じて、次のいずれかになります。
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
         
@@ -165,13 +166,13 @@ AD RMS で Exchange Server または SharePoint Server の Information Rights Ma
 
 1. Exchange 2013 の場合は、次のレジストリ値を追加します。
 
-    - **レジストリパス:**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
+    - **レジストリパス**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
 
-    - **種類:** Reg_SZ
+    - **種類**: Reg_SZ
 
-    - **値:** https:// \<AD RMS Extranet Licensing URL\> /_wmcs/ライセンス
+    - **値**: https:// \<AD RMS Extranet Licensing URL\> /_wmcs/ライセンス
 
-    - **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
+    - **データ**: Exchange サーバーから RMS コネクタへの HTTP または HTTPS のどちらを使用しているかに応じて、次のいずれかになります。
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
 

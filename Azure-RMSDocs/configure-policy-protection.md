@@ -5,32 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3ff562aba7243964275314875a52152ec7053fe2
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: 17c60e535e41f5678ca94d3744b487c566a3247d
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95570903"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383110"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 ドキュメントの「秘密度ラベルの暗号化を使用して、 [秘密度ラベル](/microsoft-365/compliance/sensitivity-labels) の詳細と [コンテンツへのアクセスを制限する](/microsoft-365/compliance/encryption-sensitivity-labels) 」を参照してください。 *
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
-
-> [!NOTE]
-> これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) を参照してください。
-> 
-> Rights Management 保護を適用するための秘密度ラベルを構成する方法については、Microsoft 365 のコンプライアンスに関するドキュメントを参照してください。 たとえば、[機密ラベルの暗号化を使用してコンテンツへのアクセスを制限します](/microsoft-365/compliance/encryption-sensitivity-labels)。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+>
 
 Rights Management サービスを使用して、最も機密性の高いドキュメントや電子メールを保護することができます。 このサービスでは、暗号化、ID、承認ポリシーを使用して、データ損失を防止します。 保護は、ドキュメントと電子メールに Rights Management による保護を使用するように構成されたラベルで適用されます。ユーザーは Outlook で **[転送不可]** ボタンを選択することもできます。
 
@@ -104,7 +100,7 @@ Azure Rights Management 保護の詳細とそのしくみについては、「[A
     
     ほとんどの場合、アクセス許可設定には **[Azure (クラウド キー)]** を選択します。 **[HYOK (AD RMS)]** は、この "*Hold Your Own Key*" (HYOK) 構成に付随する前提条件と制限を読んで理解するまで選択しないでください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。 HYOK (AD RMS) の構成を続行するには、手順 9 に進みます。
     
-6. 以下のオプションの 1 つを選択します。
+6. 次のいずれかのオプションを選択します。
     
    - **[アクセス許可を設定する]**: このポータルで新しい保護設定を定義します。
     
@@ -160,7 +156,7 @@ Azure Rights Management 保護の詳細とそのしくみについては、「[A
     
      ###### <a name="information-about-the-protection-settings"></a>保護の設定に関する情報
     
-     |設定|説明を見る|推奨設定
+     |設定|説明|推奨設定
      |-----------|--------------------|--------------------|
      |**[ファイル コンテンツの有効期限]**|これらの設定によって保護されているドキュメントを、選択したユーザーが開けなくなる日付またはそれまでの日数を定義します。 電子メールの場合は、一部の電子メール クライアントで使用されるキャッシュ メカニズムにより、有効期限が常に適用されるとは限りません。<br /><br />日付を指定するか、コンテンツに保護が適用された時点からの日数を指定することができます。<br /><br />日付を指定する場合は、ご利用の現在のタイム ゾーンで午前 0 時に有効になります。|コンテンツに特定の期限を定めた要件がない限り、**コンテンツの有効期限が切れることはありません**。|
      |**オフライン アクセスの許可**|この設定を使用すると、選択されたユーザーはインターネットに接続していないときに保護されたコンテンツを開くことができるため、セキュリティ要件 (失効後のアクセスを含む) のバランスを取ることができます。<br /><br />インターネットに接続されていないときにコンテンツを使用できないように指定するか、コンテンツが指定された日数のみ利用できるように指定した場合、そのしきい値に達すると、ユーザーは再認証される必要があり、アクセスがログに記録されます。 このような場合、ユーザーの資格情報がキャッシュされない場合、ユーザーはドキュメントまたは電子メールを開く前にサインインするように求められます。<br /><br />再認証に加え、ポリシーおよびユーザー グループ メンバーシップが再評価されます。 つまり、ユーザーが最後にコンテンツにアクセスしたときからポリシーまたはグループ メンバーシップが変更された場合、同じドキュメントまたは電子メールに対して、ユーザーが異なるアクセス結果を経験する可能性があります。 ドキュメントが[失効](./rms-client/client-track-revoke.md)している場合は、アクセスが含まれない可能性があります。|コンテンツの機密性に応じて、次の設定を行います。<br /><br />- **インターネットに接続**  =  せずにコンテンツを利用できる日数 **7** 機密ビジネスデータの場合は、承認されていない人物と共有するとビジネスに損害を与える可能性があります。 この推奨設定では、柔軟性とセキュリティのバランスを取ることができます。 例としては、契約書、セキュリティ レポート、予測概要、販売取引データなどがあります。<br /><br />承認されていないユーザーと共有された場合、ビジネスに損害を与える可能性のある非常に機密性の高いビジネス データには、- **[Never]** を設定します。 この推奨設定は、柔軟性よりもセキュリティを優先し、ドキュメントが失効した場合に、すぐにすべての承認されているユーザーがドキュメントを開けないようにします。 例としては、従業員情報と顧客情報、パスワード、ソース コード、発表前の財務レポートなどがあります。|

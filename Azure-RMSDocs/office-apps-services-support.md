@@ -1,8 +1,8 @@
 ---
 title: Office のアプリとサービスが AIP から Azure RMS をサポートするしくみ
 description: Word や Outlook などのエンド ユーザー Office アプリケーションと Exchange や SharePoint などの Office サービスで AIP から Azure Rights Management サービスを使用し、組織のデータを保護するしくみ。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
@@ -12,21 +12,26 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1aba9e7f0d6cea7edde34d66e571a6eef4599555
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 37d6eae1559f34bcbc84edecd3cc42926b4888c4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381597"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 *
+
+>[!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 エンド ユーザー Office アプリケーションと Office サービスで Azure Information Protection から Azure Rights Management サービスを使用し、組織のデータを保護できます。 これらの Office アプリケーションは Word、Excel、PowerPoint、および Outlook です。 Office サービスは Exchange および Microsoft SharePoint です。 Azure Rights Management サービスをサポートする Office 構成では、多くの場合、**IRM (Information Rights Management)** という用語が使用されます。
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Office アプリケーション:Word、Excel、PowerPoint、Outlook
-これらのアプリケーションは Azure Rights Management をネイティブでサポートし、ユーザーは保存済みのドキュメントまたは送信する電子メール メッセージに保護を適用できます。 ユーザーは[テンプレート](configure-policy-templates.md)を適用して保護を適用できます。 あるいは、Word、Excel、PowerPoint の場合、アクセス、権限、使用制限にカスタマイズ設定を選択できます。
+これらのアプリケーションは、組み込みの Azure Rights Management をサポートし、ユーザーは保存されたドキュメントまたは送信される電子メールメッセージに保護を適用できます。 ユーザーはテンプレートを適用して保護を適用できます。 あるいは、Word、Excel、PowerPoint の場合、アクセス、権限、使用制限にカスタマイズ設定を選択できます。
 
 たとえば、組織内の人だけがアクセスできるように Word 文書を設定できます。 あるいは、Excel スプレッドシートを編集可能にしたり、読み取り専用にしたり、印刷禁止にするかどうかを制御できます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を構成できます。 この構成はユーザーが直接行うか、保護テンプレートを適用して行うことができます。 Outlook の場合、ユーザーは、**[転送不可]** オプションを選択して、データの漏えいを防ぐこともできます。
 
@@ -51,8 +56,6 @@ Exchange Online または Exchange Server を使用すると、Azure Information
 
 オンプレミスで Exchange を使用している場合、Azure Rights Management コネクタを展開し、IRM 機能と Azure Rights Management サービスを利用できます。 このコネクタはオンプレミス サーバーと Azure Rights Management サービスの間のリレーとして機能します。
 
-保護テンプレートの詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
-
 メールを保護するためのメール オプションの詳細については、「[電子メールの [転送不可] オプション](configure-usage-rights.md#do-not-forward-option-for-emails)」および「[電子メールの暗号化のみオプション](configure-usage-rights.md#encrypt-only-option-for-emails)」を参照してください。
 
 メールの保護するために Exchange を構成する準備ができたら、次を参照します。
@@ -60,6 +63,12 @@ Exchange Online または Exchange Server を使用すると、Azure Information
 - Exchange Online については、「[Exchange Online: IRM 構成](configure-office365.md#exchangeonline-irm-configuration)」を参照してください。
 
 - Exchange On-Premises については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
+
+詳細については、次を参照してください。
+
+- **統合ラベル付けクライアント**。 ラベル付け管理センターで、秘密度ラベルとラベル付けポリシーを構成します。これには、Microsoft 365 セキュリティセンター、Microsoft 365 コンプライアンスセンター、Microsoft 365 セキュリティ & コンプライアンスセンターなどが含まれます。 詳細については、[Microsoft 365 のドキュメント](/microsoft-365/compliance/sensitivity-labels)を参照してください。
+
+- **クラシッククライアント**。 Azure portal で保護テンプレートを構成します。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 
 
 ## <a name="sharepoint-in-microsoft-365-and-sharepoint-server"></a>Microsoft 365 と SharePoint Server の SharePoint
@@ -107,4 +116,4 @@ Microsoft 365 がある場合は、 [Microsoft 365 でファイル保護ソリ�
 
 他のアプリケーションおよびサービスで Azure Information Protection からの Azure Rights Management サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」をご覧ください。
 
-アプリケーションとサービスの構成など、デプロイを開始する用意ができたら、「[Azure Information Protection デプロイ ロードマップ](deployment-roadmap.md)」を参照してください。
+これらのアプリケーションとサービスの構成を含むデプロイを開始する準備ができたら、 [分類、ラベル付け、および保護のための AIP 展開ロードマップ](deployment-roadmap-classify-label-protect.md)を参照してください。
