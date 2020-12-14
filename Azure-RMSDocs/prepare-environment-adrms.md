@@ -1,8 +1,8 @@
 ---
 title: Azure RMS および AD RMS 用の環境を準備する
 description: Azure Rights Management が AD RMS デプロイされている場合の管理者向けガイダンス。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
@@ -13,23 +13,25 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f4bbef451f161f40d29a7a890161592db76373a5
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 45423a4ac7fa81d5171e260d14170bae07428ad9
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "95569966"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386374"
 ---
-# <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>AD RMS がある場合に Azure Rights Management 用に環境を準備する
+# <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>AD RMS があるときに Azure Rights Management 用に環境を準備する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [Azure Information Protection Windows 用のクライアントと従来のクライアントとの統合](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!IMPORTANT]
 > Active Directory Rights Management サービス (AD RMS) を使用する場合のガイダンス
 
 Azure Rights Management サービスがアクティブ化されていて、かつ AD RMS も使用している場合、この組み合わせには互換性がありません。 追加の手順を行うことなく、一部のコンピューターでは、Azure Rights Management サービスの使用が自動的に開始され、AD RMS クラスターへの接続も行われる場合があります。 このシナリオはサポートされておらず、信頼できる結果が得られないため、追加の手順を実行することが重要です。 
 
-**AD RMS をデプロイしているかどうかを確認するには:**
+**AD RMS を展開したかどうかを確認するに** は:
 
 1. オプションとはいえ、ほとんどの AD RMS デプロイでは、ドメイン コンピューターが AD RMS クラスターを検出できるように Active Directory にサービス接続ポイント (SCP) を発行しています。 
     
