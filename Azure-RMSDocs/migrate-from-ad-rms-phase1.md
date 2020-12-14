@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
@@ -13,16 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 13c63f2e96b27a31b9afb91fbc8c03b9b198f9c1
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: ee761ef8ae12d638df7e05c83a5ed5d635d25b9b
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316825"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384368"
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 AD RMS から Azure Information Protection への移行フェーズ 1 では、次の情報を使用してください。 この手順では「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 1 から 3 について説明し、ユーザーに影響を与えずに移行の環境を準備します。
 
@@ -146,13 +148,13 @@ Exchange on-premises または Exchange Online を AD RMS と統合している�
 
 1. Exchange 2013 または Exchange 2016 を使用している場合は、次のレジストリ値を追加します。
 
-    - **レジストリパス:**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **レジストリパス**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **種類:** Reg_SZ
+    - **種類**: Reg_SZ
 
-    - **値:** `https://\<Your Tenant URL\>/_wmcs/licensing`
+    - **値**: `https://\<Your Tenant URL\>/_wmcs/licensing`
 
-    - **データ:**`https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
+    - **データ**: `https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 
 1. 次の PowerShell コマンドを1つずつ、またはスクリプトで実行します。
 

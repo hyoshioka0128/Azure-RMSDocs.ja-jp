@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -13,20 +13,20 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25dfd0eb9fe2708e90f04a3bc7203dc8ecde5bcc
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 2b4f7842ddc33ae170d756fa132883ac1fe8f07a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385643"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントのカスタム構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
-> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide-customizations.md)」を参照してください。
 
 AIP の統一されたラベル付けクライアントを管理する際に、特定のシナリオまたはユーザーに必要な詳細な構成については、次の情報を参照してください。
 
@@ -36,7 +36,7 @@ AIP の統一されたラベル付けクライアントを管理する際に、�
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Office 365 セキュリティ & コンプライアンスセンター PowerShell を使用してクライアントの詳細設定を構成する方法
 
-Office 365 Security & コンプライアンスセンターの PowerShell を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 例:
+Office 365 Security & コンプライアンスセンターの PowerShell を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 次に例を示します。
 
 - Office アプリの Information Protection バーを表示する設定は、***ラベルポリシーの詳細設定** _ です。
 - ラベルの色を指定する設定は、 _*_ラベルの詳細設定_*_ です。
@@ -331,7 +331,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 ### <a name="additionalpprefixextensions"></a>AdditionalPPrefixExtensions
 
-統一されたラベル付けクライアントは、変更をサポート \<EXT> します。詳細プロパティの AdditionalPPrefixExtensions を使用して、PFILE を P にし \<EXT> ます。 **AdditionalPPrefixExtensions** この詳細プロパティは、右クリック、PowerShell、およびスキャナーでサポートされています。 すべてのアプリの動作は似ています。   
+統一されたラベル付けクライアントは、変更をサポート \<EXT> します。詳細プロパティの AdditionalPPrefixExtensions を使用して、PFILE を P にし \<EXT> ます。  この詳細プロパティは、右クリック、PowerShell、およびスキャナーでサポートされています。 すべてのアプリの動作は似ています。   
 
 - キー: **AdditionalPPrefixExtensions**
 
@@ -447,7 +447,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
 
 - 値: \<**Office application types WXP**> 
 
-次に例を示します。
+例 :
 
 - Word 文書のみを検索するには、**W** を指定します。
 
@@ -524,7 +524,7 @@ PowerPoint のヘッダーとフッターは、図形として実装されます
 また、PowerPoint でカスタムレイアウトが構成されている場合、既定の動作では、カスタムレイアウト内で見つかった図形は無視されます。 カスタムレイアウト内から外部コンテンツマーキングを明示的に削除するには、 **Removeexternalmarkingfromcustomlayouts** 詳細プロパティを true に設定し **ます。**
 
 > [!NOTE]
-> このセクションで説明するクライアントの詳細設定でサポートされている PowerPoint 図形の種類は、 **Msotextbox、** **MsoTextEffect、** および **msotextbox** です。
+> このセクションで説明するクライアントの詳細設定でサポートされている PowerPoint 図形の種類は、 **Msotextbox**、 **MsoTextEffect**、および **msotextbox** です。
 >
 ##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>ヘッダーまたはフッターとして使用している図形の名前を検索する
 
@@ -534,7 +534,7 @@ PowerPoint のヘッダーとフッターは、図形として実装されます
 
 図形の名前を使用して、**PowerPointShapeNameToRemove** キーの文字列値を指定します。 
 
-**例:** 図形名は **fc** です。 この名前の図形を削除するには、値 `fc` を指定します。
+**例**: 図形名は **fc** です。 この名前の図形を削除するには、値 `fc` を指定します。
 
 - キー: **PowerPointShapeNameToRemove**
 
@@ -696,7 +696,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:h
 これらの設定を構成する方法のチュートリアルの例については、ビデオ [Azure Information Protection Outlook のポップアップ構成](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) を参照してください。
 
 > [!TIP]
-> ドキュメントが Outlook の外部から共有されている場合でもポップアップが表示されるようにするには **(ファイル > 共有 > コピーを添付します)、** [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) の詳細設定を構成することもできます。
+> ドキュメントが Outlook の外部から共有されている場合でもポップアップが表示されるようにするには **(ファイル > 共有 > コピーを添付** します)、 [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) の詳細設定を構成することもできます。
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>特定のラベルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
 
@@ -773,7 +773,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollab
 
 たとえば、[**社外秘 \ すべての従業員**] ラベルに **OutlookBlockUntrustedCollaborationLabel** アドバンストクライアント設定を指定したとします。 
 
-ここで、contoso.com を使用して、 **Outlookblocktrusteddomains** の追加のアドバンストクライアント設定を指定し **ます。** その結果、ユーザーは、" `john@sales.contoso.com` **社外秘 \ すべての従業員**" というラベルが付いたときに電子メールをに送信できますが、Gmail アカウントに同じラベルの電子メールを送信することは禁止されます。
+ここで、 **contoso.com** を使用して、 **Outlookblocktrusteddomains** の追加のアドバンストクライアント設定を指定します。 その結果、ユーザーは、" `john@sales.contoso.com` **社外秘 \ すべての従業員**" というラベルが付いたときに電子メールをに送信できますが、Gmail アカウントに同じラベルの電子メールを送信することは禁止されます。
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
@@ -1094,7 +1094,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProp
 
 機密ラベルによって適用されるメタデータに加えて、1つまたは複数のカスタムプロパティをドキュメントまたは電子メールメッセージに適用する場合は、いくつかのシナリオが考えられます。
 
-例:
+次に例を示します。
 
 - セキュリティで保護された島など、 [別のラベル付けソリューションから移行](#migrate-labels-from-secure-islands-and-other-labeling-solutions)しています。 移行中の相互運用性を確保するために、機密ラベルを使用して、他のラベル付けソリューションで使用されるカスタムプロパティを適用することもできます。
 
@@ -1345,7 +1345,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **読み取り専用またはアーカイブ済みのファイルをスキップする**
 
-ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 例:
+ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 次に例を示します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1395,7 +1395,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwne
 
 表示される既定 **の他の** テキストを変更するには、 **JustificationTextForUserText** advanced プロパティを使用して、このコマンドレットを [設定](/powershell/module/exchange/set-labelpolicy) します。 代わりに、使用するテキストに値を設定します。
 
-例:
+次に例を示します。
 
 ``` PowerShell
 
@@ -1416,7 +1416,7 @@ AIP 管理者は、次のように、Outlook でエンドユーザーに表示�
 > 実稼働環境では、**OutlookUnlabeledCollaborationAction** 詳細プロパティを使用してルールを定義する、"*または*" 下記のように定義した json ファイルを使用して複雑なルールを定義する、の "*いずれか*" により、複雑化させないようにすることをお勧めします。
 >
 
-**Outlook ポップアップメッセージをカスタマイズするには、次のようにします。**
+**Outlook ポップアップメッセージをカスタマイズするには、次のようにし** ます。
 
 1. Json ファイルを作成 **します。** 各ファイルには、Outlook によるユーザーへのポップアップメッセージの表示方法を構成するルールがあります。 詳細については、「 [Rule value. json 構文](#rule-value-json-syntax) 」と「 [Sample popup customization](#sample-popup-customization-json-code)」を参照してください。
 
@@ -1444,7 +1444,7 @@ AIP 管理者は、次のように、Outlook でエンドユーザーに表示�
 > [!TIP]
 > 追加の組織の場合は、PowerShell コマンドで使用したキーと同じ文字列でファイルに名前を付けます。 たとえば、ファイルに **OutlookCollaborationRule_1.js** という名前を付け、キーとして **OutlookCollaborationRule_1** を使用します。
 >
-> ドキュメントが Outlook の外部から共有されている場合でもポップアップが表示されるようにするには **(ファイル > 共有 > コピーを添付します)、** [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) の詳細設定を構成することもできます。
+> ドキュメントが Outlook の外部から共有されている場合でもポップアップが表示されるようにするには **(ファイル > 共有 > コピーを添付** します)、 [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) の詳細設定を構成することもできます。
 > 
 
 ### <a name="ordering-your-outlook-customization-rules"></a>Outlook のカスタマイズ規則の順序付け
@@ -1453,7 +1453,7 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 
 特定のルールの一致が見つかると、AIP はルールの処理を停止し、照合ルールに関連付けられたアクションを実行します。 (**最初の一致-> 終了** ロジック)
     
-**例:**
+**例**:
 
 特定の **警告** メッセージを含むすべての **内部** 電子メールを構成するとしますが、通常はこれらをブロックする必要はありません。 ただし、**社内** の電子メールとしてでも、**シークレット** として分類された添付ファイルをユーザーが送信できないようにする必要があります。 
 
@@ -1487,9 +1487,9 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 | **Or**    |すべての子ノードで *または* を実行します       |
 | **Not**   | 独自の子に対し *ては実行されません*      |
 | **除く**    | 独自の子に対して *は not* を返し、 **All** として動作します。        |
-| **に** 渡される **ドメイン: listofdomains**    |次のいずれかを確認します。 <br />-親が Except の場合、は、**すべて** の受信者がいずれかのドメインにあるかどうか **を確認し** ます。<br />-親が他 **の任意の** ものである場合 **を除き、** は、いずれかの受信者がいずれかのドメインにあるかどうかを確認します。   |
-| **Emaillabel、ラベルの** 続き | 次のいずれかです。  <br />-ラベル ID <br />-null (ラベルが付けられていない場合)             |
-| **Attachmentlabel、** **label** 、 **supportedExtensions**    | 次のいずれかです。  <br /><br />**本来** <br />-親が Except の場合、サポートされている拡張子が1つの添付ファイルが **すべて** ラベル内に存在するかどうか **を** 確認します。<br />-親が他の任意のものである場合 **を除き、は、** サポートされている拡張子が1つの添付ファイルがラベル内に存在 **するかどう** かを確認します。 <br />-ラベルが付けられていない場合、 **label = null** <br /><br /> **false:** その他のすべての場合 
+| **に** 渡される **ドメイン: listofdomains**    |次のいずれかを確認します。 <br />-親が **Except** の場合、は、 **すべて** の受信者がいずれかのドメインにあるかどうかを確認します。<br />-親が他の任意のものである場合を **除き**、は、いずれかの受信者がいずれかのドメインに **あるかどう** かを確認します。   |
+| **Emaillabel**、ラベルの続き | 次のいずれか:  <br />-ラベル ID <br />-null (ラベルが付けられていない場合)             |
+| **Attachmentlabel**、 **label** 、 **supportedExtensions**    | 次のいずれか:  <br /><br />**true**: <br />-親が **Except** の場合、サポートされている拡張子が1つの添付ファイルが **すべて** ラベル内に存在するかどうかを確認します。<br />-親が他の任意のものである場合 **を除き、は、** サポートされている拡張子が1つの添付ファイルがラベル内に存在 **するかどう** かを確認します。 <br />-ラベルが付けられていない場合、 **label = null** <br /><br /> **false**: その他すべての場合 
 | | |
 
 #### <a name="rule-action-syntax"></a>ルールアクションの構文
@@ -1843,7 +1843,7 @@ SharePoint バージョン2013以降に長いファイルパスがある場合�
 
 1. **web.config** 構成をバックアップします。 
 
-1. 必要に応じて **maxUrlLength** 値を更新します。 例:
+1. 必要に応じて **maxUrlLength** 値を更新します。 次に例を示します。
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
@@ -1869,8 +1869,8 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPa
 
 Azure Information Protection 統合されたラベル付けクライアントをカスタマイズしたので、このクライアントのサポートに必要な追加情報については、次のリソースを参照してください。
 
-- [クライアントのファイルと使用状況ログ](client-admin-guide-files-and-logging.md)
+- [クライアントのファイルと使用状況ログ](clientv2-admin-guide-files-and-logging.md)
 
-- [サポートされるファイルの種類](client-admin-guide-file-types.md)
+- [サポートされるファイルの種類](clientv2-admin-guide-file-types.md)
 
-- [PowerShell コマンド](client-admin-guide-powershell.md)
+- [PowerShell コマンド](clientv2-admin-guide-powershell.md)

@@ -1,8 +1,8 @@
 ---
 title: Azure Information Protection の保護のみのモード
 description: 保護のみモードで Azure Information Protection クライアントを実行しているユーザーの情報。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 1/13/2020
 ms.topic: conceptual
@@ -13,18 +13,21 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: a91aab5d0d12744fb782bac331cf4b3b4bbc2589
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 9701cba6481271f1ac88beffd0f01a9c0e789485
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570398"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385813"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントの保護のみモード
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Azure Information Protection Classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection クライアントにドキュメントや電子メールを分類するラベルが割り当てられていない場合、このクライアントは **保護のみ** モードで実行されます。 たとえば、このモードでは、Windows ファイル エクスプローラーの使用時に右クリックして **[分類して保護する]** を選択すると、以下が表示される場合があります。
 
@@ -53,13 +56,13 @@ Azure Information Protection クライアントにドキュメントや電子メ
 
 ## <a name="limitations-for-protection-only-mode"></a>保護のみモードの制限
 
-- Office アプリに Azure Information Protection バーは表示されません。 [**保護** する] をクリックすると  >  **Show Bar**、このメニューオプションは使用できません。
+- Office アプリに Azure Information Protection バーは表示されません。 [**保護** する] をクリックすると  >  、このメニューオプションは使用できません。
 
 - エクスプローラーで **[分類と保護 - Azure Information Protection]** ダイアログ ボックスを使用しても、分類のラベルが表示されません。 その代わり、前の図のように、Rights Management (RMS) テンプレートを選択するオプションが表示されます。 
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>保護のみモードでサポートされるタスク
 
-- Office アプリ内からドキュメントや電子メールを保護 (および保護解除) するには、office Information Rights Management (IRM) 機能を使用します。たとえば、[**ファイル**  >  **情報**] [ドキュメントの保護] [アクセスの  >  **Protect Document**  >  **制限**] の順にクリックします。 詳細については、「[Office 365、Office 2019、Office 2016、または Office 2013 での情報保護の使用](../help-users.md#using-information-protection-with-office365-office-2019-office-2016-or-office2013)」を参照してください。
+- Office アプリ内からドキュメントや電子メールを保護 (および保護解除) するには、office Information Rights Management (IRM) 機能を使用します。たとえば、[**ファイル**  >  **情報**] [ドキュメントの保護] [アクセスの  >    >  **制限**] の順にクリックします。 詳細については、「[Office 365、Office 2019、Office 2016、または Office 2013 での情報保護の使用](../help-users.md#using-information-protection-with-office365-office-2019-office-2016-or-office2013)」を参照してください。
 
 - ファイルを保護する (または保護を解除する) には、エクスプローラーを使用します。たとえば、1 つまたは複数のファイルまたはフォルダーを右クリックし、**[分類して保護する]** をクリックします。 管理者が構成した保護を適用するには、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスの **[テンプレートの選択]** をクリックし、使用できるテンプレートのいずれかを選択します。
 

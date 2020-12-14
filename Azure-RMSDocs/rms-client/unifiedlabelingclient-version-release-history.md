@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection 統合されたラベル付けクライアント-バージョン履歴 & サポートポリシー
-description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
+description: Windows 用の Azure Information Protection (AIP) の統合されたラベル付けクライアントの新機能について説明します。
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,20 +12,20 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: af8998f4a96649c6a14522c5f5beb025527ec556
-ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
+ms.openlocfilehash: 8d116c08680372e6a63a93c3c179914f9fe0e464
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "96740624"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385031"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
-> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [AIP 統合ラベルクライアントのみ](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 従来のクライアントについては、「 [AIP クラシッククライアントバージョンのリリース履歴とサポートポリシー](client-version-release-history.md)」を参照してください。
 
 Azure Information Protection 統合されたラベル付けクライアントは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードできます。
 
@@ -67,7 +67,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
+統一されたラベル付けクライアントは、Azure Information Protection のクラシッククライアントに置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けソリューションの比較](use-client.md#compare-the-labeling-solutions-for-windows-computers)」を参照してください。
 
 ## <a name="version-291010-public-preview"></a>バージョン 2.9.101.0 (パブリックプレビュー)
 
@@ -118,7 +118,7 @@ NFS 共有のスキャンをサポートするには、スキャナーコンピ�
 詳細については、「 [コンテンツスキャンジョブの作成](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)」を参照してください。
 
 ### <a name="added-support-for-sensitive-information-types"></a>機密情報の種類のサポートを追加しました
-**オーストラリアの事業番号、** **オーストラリアの会社番号、** **オーストリアの id カード** など、Azure Information Protection でのその他の機密情報の種類のサポートが追加されました。 
+**オーストラリアの事業番号**、**オーストラリアの会社番号**、**オーストリアの id カード** など、Azure Information Protection でのその他の機密情報の種類のサポートが追加されました。 
 
 詳細については、Microsoft 365 のドキュメントで、 [機密情報の種類のエンティティの定義](/microsoft-365/compliance/sensitive-information-type-entity-definitions) を参照してください。
 ### <a name="fixes-and-improvements"></a>修正プログラムと機能強化
@@ -133,7 +133,7 @@ Azure Information Protection 統合された [ラベル付けスキャナー](..
 - SharePoint サーバーのスキャン時の [タイムアウトを回避](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) するためのサポート。
 
 ### <a name="known-issues"></a>既知の問題
-このパブリックプレビューバージョンでは、 [Dke 保護](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) でラベルを適用することは、スキャナーではサポートされていません。
+このパブリックプレビューバージョンでは、 [Dke 保護](../plan-implement-tenant-key.md#double-key-encryption-dke) でラベルを適用することは、スキャナーではサポートされていません。
 
 ## <a name="version-28850"></a>バージョン2.8.85.0
 
@@ -164,7 +164,7 @@ Azure Information Protection 統合された [ラベル付けスキャナー](..
 > [!IMPORTANT]
 > 管理者がポリシーとコンテンツスキャンジョブを変更した場合、その変更がコンテンツに与える影響を理解し、完全な再スキャンが必要かどうかを判断する必要があります。
 > 
-> たとえば、 **ポリシー実施** 設定を [ **強制** ] から **[強制]** に変更した場合は、フルスキャンを実行して、コンテンツ全体にラベルを適用してください。
+> たとえば、 **ポリシー実施** 設定を [ **強制] から** **[強制**] に変更した場合は、フルスキャンを実行して、コンテンツ全体にラベルを適用してください。
 >
 
 #### <a name="configure-sharepoint-timeouts"></a>SharePoint のタイムアウトを構成する
@@ -192,7 +192,7 @@ AIP 管理者は、すべての web 要求とファイル web 要求に対して
     
 1. Azure Information Protection analytics が有効になっていることを確認します。 
 
-    Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー) にアクセスします。** 
+    Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー)** にアクセスします。 
 
     詳細については、「 [Azure Information Protection の中央レポート (パブリックプレビュー)](../reports-aip.md)」を参照してください。
 
@@ -295,7 +295,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 **リリース** 08/23/2020
 
-**ファイル**
+**修正**:
 
 ファイルのフリーズ、クラッシュ、または保護、ウォーターマーク、コンテンツマーキングで構成された必須ラベルに関連付けられた保存の繰り返しが発生した、PPT、Excel、Word ユーザーの問題を修正しました。
 
@@ -305,7 +305,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 **リリース** 07/20/2020
 
-**修正と改善:**
+**修正と改善**:
 
 **新しいラベル** 監査ログのファイルラベル付け操作の問題を修正した。
 
@@ -317,7 +317,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 **リリース** 06/29/2020
 
-**統一されたラベル付けスキャナーの新機能:**
+**統一されたラベル付けスキャナーの新機能**:
 
 - [スキャナーを使用して、推奨される条件に基づいてラベルを適用](../deploy-aip-scanner-prereqs.md)します。 AIP のお客様は、autolabeling のみを実装することを選択できるようになりました。 この機能により、AIP エンドユーザーは、前のシナリオではなく、常に推奨事項に従うことができます。これにより、ユーザー側での自動ラベル付けのみが有効になります。
 
@@ -331,7 +331,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 - これで、ファイル属性に応じて特定のファイルをスキップするように、統一されたラベル付けスキャナーを構成できるようになりました。 新しい **[Scanthe Fsattributestoskip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** 設定を使用してスキップするファイルをトリガーするファイル属性の一覧を定義します。
 
-**統一されたラベル付けクライアントの新機能:**
+**統一されたラベル付けクライアントの新機能**:
 
 - 統一されたラベル付けクライアントの既定のラベルに加えられた変更に対して、[**理由ポップアップ**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)が表示されるようになりました。
     
@@ -391,7 +391,7 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 
 - 複数の Exchange アカウントが構成されていて、Azure Information Protection Outlook クライアントが有効になっている場合、メールは正常にセカンダリアカウントから送信されます。 Outlook で統一されたラベル付けクライアントを構成する方法の詳細については、「 [Azure Information Protection の統合ラベル付けクライアントの追加の前提条件](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)」を参照してください。
 
-- 高いレベルの機密性ラベルを持つドキュメントをドラッグして電子メールにドロップすると、電子メールでは、より高い機密性ラベルが期待どおりに自動的に受信されるようになります。 クライアント機能のラベル付けの詳細については、「 [クライアント比較表](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
+- 高いレベルの機密性ラベルを持つドキュメントをドラッグして電子メールにドロップすると、電子メールでは、より高い機密性ラベルが期待どおりに自動的に受信されるようになります。 クライアント機能のラベル付けの詳細については、「 [クライアント比較表](use-client.md#compare-the-labeling-solutions-for-windows-computers)」を参照してください。
 
 - 電子メールアドレスにアポストロフィ (') とピリオド (.) の両方が含まれている場合、カスタムアクセス許可が意図したとおりに電子メールに適用されるようになりました。Outlook で統一されたラベル付けクライアントを構成する方法の詳細については、「 [Azure Information Protection の統合ラベル付けクライアントの追加の前提条件](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)」を参照してください。
 
@@ -405,7 +405,7 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 
 12/29/2020 でサポート
 
-**新機能:**
+**新機能**:
 
 - [スキャナー](../deploy-aip-scanner.md)の一般公開バージョン。オンプレミスのデータストアのドキュメントを検査してラベル付けします。 
 
@@ -427,7 +427,7 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 
 - 統一されたラベル付けクライアントで Office アプリを使用して、 [オフラインラベル機能](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) のサポートが追加されました。
 
-**修正:**
+**修正内容**:
 
 - RightFax によって作成された、保護された TIFF ファイルと TIFF ファイルを開こうとしてユーザーが失敗したインスタンスでは、TIFF ファイルが開き、予想どおりに安定した状態が維持されるようになりました。  
 - 保護された txt ファイルと PDF ファイルの以前の破損が解決されます。
@@ -439,7 +439,7 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 
 ## <a name="next-steps"></a>次のステップ
 
-統合ラベルが適切なクライアントでインストールされているかどうかわからない場合は、  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
+統合ラベルが適切なクライアントでインストールされているかどうかわからない場合は、  「 [Windows のラベル付けソリューションを選択する」を](use-client.md#choose-your-windows-labeling-solution)参照してください。
 
 統合ラベル付けクライアントのインストールと使用の詳細については、次を参照してください。 
 

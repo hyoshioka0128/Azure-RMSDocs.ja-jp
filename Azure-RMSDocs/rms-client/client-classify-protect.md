@@ -1,11 +1,11 @@
 ---
-title: '& 保護-Azure Information Protection クライアントの分類'
-description: Windows 用 Azure Information Protection クライアントを使用するときに、ドキュメントと電子メールを分類して保護する方法について説明します。
+title: '& 保護-Azure Information Protection classic クライアントの分類'
+description: Azure Information Protection classic client for Windows を使用するときに、ドキュメントと電子メールを分類して保護する方法について説明します。
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: da5c20824af73ed28a602cffb79c3e4167db5bf7
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 154ac93c61da2e4aa8fa44aadd3279a4bfce087d
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570407"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385983"
 ---
-# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>ユーザーガイド: Azure Information Protection クライアントを使用した分類と保護
+# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-classic-client"></a>ユーザーガイド: Azure Information Protection クラシッククライアントを使用して分類および保護する
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Azure Information Protection Classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-> [!NOTE]
+> [!TIP]
 > 次の手順に従って、ドキュメントや電子メールを分類して保護します。 ドキュメントや電子メールを分類するだけで保護する必要がない場合は、[分類のみの手順](client-classify.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
 
 Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、**Outlook**) でドキュメントや電子メールを作成したり編集すると、分類と保護が簡単になります。 
@@ -86,7 +86,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 - 管理者が新しいラベルを構成したばかりの場合は、すべてのインスタンスの Office アプリを終了してから、開き直します。 この操作で、ラベルの変更が確認されます。
 
-- 存在しないラベルで保護を適用すると、Rights Management 保護の適用をサポートしていない Office のエディションになる可能性があります。 確認するには **Protect**、[  >  **ヘルプとフィードバック** の保護] をクリックします。 ダイアログ ボックスで、**[クライアント ステータス]** セクションに **[このクライアントには Office Professional Plus のライセンスがありません]** というメッセージが表示されているかどうかを確認します。 
+- 存在しないラベルで保護を適用すると、Rights Management 保護の適用をサポートしていない Office のエディションになる可能性があります。 確認するには、[  >  **ヘルプとフィードバック** の保護] をクリックします。 ダイアログ ボックスで、**[クライアント ステータス]** セクションに **[このクライアントには Office Professional Plus のライセンスがありません]** というメッセージが表示されているかどうかを確認します。 
     
     Office Professional Plus は、Microsoft 365 App for Business または Microsoft 365 Business Premium (office 365 の場合は Azure Information Protection とも呼ばれます) Rights Management のライセンスがユーザーに割り当てられている場合に、office Professional Plus を必要としません。
 
@@ -149,7 +149,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類と保護を設定します。 
 
-   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていませんが、カスタム アクセス許可で保護できます (手順 3)。 例:
+   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていませんが、カスタム アクセス許可で保護できます (手順 3)。 次に例を示します。
 
      ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
     
@@ -177,7 +177,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 5. **[適用]** をクリックし、**"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、**[閉じる]** をクリックします。
 
-選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 例:
+選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 次に例を示します。
 
 ![Azure Information Protection のロック アイコンが付いた保護されたファイル](../media/Pfile.png)
 

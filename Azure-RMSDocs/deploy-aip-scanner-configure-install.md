@@ -5,26 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: de4c71b6cb7b6836d6757c7cd74bc21e30999a38
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: dbbf7c0644285c56ea34b57eb0b6b6a7894bc17f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316570"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382872"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーの構成とインストール
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
-
->[!NOTE] 
-> AIP クラシックスキャナーを使用している場合は、「 [クラシックスキャナー Azure Information Protection のインストールと構成](deploy-aip-scanner-configure-install-classic.md)」を参照してください。
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2019、Windows Server 2016、windows server 2012 R2 *
+>
+>***関連**: [AIP 統合ラベルクライアントのみ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 クラシックスキャナーについては、「 [Azure Information Protection クラシックスキャナーの構成とインストール](deploy-aip-scanner-configure-install-classic.md)」を参照してください。
 
 Azure Information Protection スキャナーの構成とインストールを開始する前に、システムが [必要な前提条件](deploy-aip-scanner-prereqs.md)に準拠していることを確認してください。 
 
@@ -106,12 +105,12 @@ Azure Information Protection スキャナーの構成とインストールを開
 |前提条件  |説明  |
 |---------|---------|
 |**ネットワーク探索サービスをインストールする**     |   最近スキャナーをアップグレードした場合は、引き続きネットワーク探索サービスをインストールする必要があります。 <br /><br />ネットワークスキャンジョブを有効にするには、 [**MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) コマンドレットを実行します。      |
-|**Azure Information Protection analytics**     | Azure Information Protection analytics が有効になっていることを確認します。 <br /><br />Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー) にアクセスします。** <br /><br />詳細については、「 [Azure Information Protection の中央レポート (パブリックプレビュー)](reports-aip.md)」を参照してください。|
+|**Azure Information Protection analytics**     | Azure Information Protection analytics が有効になっていることを確認します。 <br /><br />Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー)** にアクセスします。 <br /><br />詳細については、「 [Azure Information Protection の中央レポート (パブリックプレビュー)](reports-aip.md)」を参照してください。|
 | | |
 
 #### <a name="creating-a-network-scan-job"></a>ネットワークスキャンジョブの作成
 
-1. Azure portal にログインし、Azure Information Protection にアクセスし **ます。** 左側の [ **スキャナー** ] メニューで、[ **ネットワークスキャンジョブ (プレビュー)** ![ネットワークスキャンジョブ] アイコン](media/i-network-scan-jobs.png "ネットワークスキャンジョブのアイコン")を選択します。
+1. Azure portal にログインし、 **Azure Information Protection** にアクセスします。 左側の [ **スキャナー** ] メニューで、[ **ネットワークスキャンジョブ (プレビュー)** ![ネットワークスキャンジョブ] アイコン](media/i-network-scan-jobs.png "ネットワークスキャンジョブのアイコン")を選択します。
     
 1. [ **Azure Information Protection-ネットワークスキャンジョブ** ] ウィンドウで、 **[追加** ![] アイコン](media/i-add.png "[追加] アイコン")を選択します。
     
@@ -121,10 +120,10 @@ Azure Information Protection スキャナーの構成とインストールを開
     |---------|---------|
     |**ネットワークスキャンジョブ名**     |このジョブのわかりやすい名前を入力します。  このフィールドは必須です。       |
     |**説明**     |   わかりやすい説明を入力します。      |
-    |**クラスターを選択します**     |ドロップダウンリストから、構成したネットワークの場所をスキャンするために使用するクラスターを選択します。  <br /><br />**ヒント:** クラスターを選択するときは、割り当てたクラスター内のノードが SMB 経由で構成済みの IP 範囲にアクセスできることを確認してください。      |
-    |**検出する IP 範囲を構成する**     |   IP アドレスまたは範囲を定義する場合にクリックします。 <br /><br />[ **IP 範囲の選択** ] ウィンドウで、必要に応じて名前を入力し、範囲の開始 ip アドレスと終了 ip アドレスを入力します。 <br /><br />**ヒント:** 特定の IP アドレスのみをスキャンするには、[ **開始 ip** ] フィールドと [ **終了 ip** ] フィールドの両方に同じ ip アドレスを入力します。      |
+    |**クラスターを選択します**     |ドロップダウンリストから、構成したネットワークの場所をスキャンするために使用するクラスターを選択します。  <br /><br />**ヒント**: クラスターを選択するときは、割り当てたクラスター内のノードが SMB 経由で構成された IP 範囲にアクセスできることを確認してください。      |
+    |**検出する IP 範囲を構成する**     |   IP アドレスまたは範囲を定義する場合にクリックします。 <br /><br />[ **IP 範囲の選択** ] ウィンドウで、必要に応じて名前を入力し、範囲の開始 ip アドレスと終了 ip アドレスを入力します。 <br /><br />**ヒント**: 特定の ip アドレスのみをスキャンするには、[ **開始 ip** ] フィールドと [ **終了 ip** ] フィールドの両方に同じ ip アドレスを入力します。      |
     |**スケジュールを設定する**     | このネットワークスキャンジョブを実行する頻度を定義します。  <br /><br />[ **週単位**] を選択すると、 **[ネットワークスキャンジョブを実行** する] 設定が表示されます。 ネットワークスキャンジョブを実行する曜日を選択します。       |
-    |**開始時刻 (UTC) を設定する**     |このネットワークスキャンジョブの実行を開始する日付と時刻を定義します。 ジョブを毎日、毎週、または毎月実行するように選択した場合は、選択した繰り返しで、定義された時刻にジョブが実行されます。 <br /><br />**注**: 月末に日付を任意の日に設定する場合は注意してください。 31を選択した場合 **、** ネットワークスキャンジョブは、30日以内の任意の月に実行されません。    |
+    |**開始時刻 (UTC) を設定する**     |このネットワークスキャンジョブの実行を開始する日付と時刻を定義します。 ジョブを毎日、毎週、または毎月実行するように選択した場合は、選択した繰り返しで、定義された時刻にジョブが実行されます。 <br /><br />**注**: 月末に日付を任意の日に設定する場合は注意してください。 **31** を選択した場合、ネットワークスキャンジョブは、30日以内の任意の月に実行されません。    |
     | | |
 
 1. [ **保存** ![] アイコン](media/qs-tutor/save-icon.png "保存アイコン") を選択して、変更を保存します。
@@ -235,8 +234,8 @@ Azure Information Protection スキャナーの構成とインストールを開
     |パス  |構文  |
     |---------|---------|
     |**ルートパス**     | `http://<SharePoint server name>` <br /><br />スキャナーユーザーに許可されているサイトコレクションも含め、すべてのサイトをスキャンします。 <br />ルートコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です        |
-    |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれかです。 <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
-    |**特定の SharePoint ライブラリ**     | 次のいずれかです。 <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
+    |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれか: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
+    |**特定の SharePoint ライブラリ**     | 次のいずれか: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**特定の SharePoint フォルダー**     | `http://<SharePoint server name>/.../<folder name>`        |
     | | |
     
@@ -264,20 +263,20 @@ Azure Information Protection スキャナーの構成とインストールを開
 1. [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)コマンドレットを実行して、Azure Information Protection スキャナー用のデータベースを作成する SQL Server インスタンスと、前のセクションで指定したスキャナークラスター名を指定します。 
     
     ```PowerShell
-    Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
+    Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
     プロファイル名 **Europe** を使った例:
     
-    - 既定のインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Profile Europe`
+    - 既定のインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
-    - 名前付きインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Profile Europe`
+    - 名前付きインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster Europe`
     
-    - SQL Server Express の場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile Europe`
+    - SQL Server Express の場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
     プロンプトが表示されたら、スキャナーサービスアカウントの資格情報 ( \<domain\user name> ) とパスワードを入力します。
 
-1. **管理ツール** サービスを使用して、サービスがインストールされていることを確認し  >  **Services** ます。 
+1. **管理ツール** サービスを使用して、サービスがインストールされていることを確認し  >  ます。 
     
     インストールされているサービスの名前は **Azure Information Protection スキャナー** で、作成したスキャナー サービス アカウントを使用して実行するように構成されます。
 
@@ -358,13 +357,13 @@ PowerShell コマンドを使用して、必要に応じてこの動作を変更
 
 インターネットにアクセスできるスキャナーの場合、このユーザーアカウントは、Set-AIPAuthentication コマンドで *DelegatedUser* パラメーターに指定したアカウントになります。
 
-**例 1:**  ラベルポリシーが "Scanner" という名前のすべてのファイルの種類を保護するためのスキャナーの PowerShell コマンド:
+**例 1**: すべてのファイルの種類を保護するためのスキャナーの PowerShell コマンド: ラベルポリシーの名前は "scanner" です。
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**例 2:** Office ファイルと PDF ファイルに加えて .xml ファイルと tiff ファイルを保護するためのスキャナー用の PowerShell コマンド。ラベルポリシーには "Scanner" という名前が付けられています。
+**例 2**: スキャナーの PowerShell コマンドを使用して、Office ファイルと PDF ファイルに加えて .xml ファイルと tiff ファイルを保護します。ここで、ラベルポリシーには "scanner" という名前を付けます。
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
@@ -451,7 +450,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 |---------|---------|
 |**スキャナー コンピューターとスキャンされたデータ ストア間のネットワーク接続を高速かつ信頼性の高い接続にする**     |  たとえば、スキャナーコンピューターを同じ LAN、または可能であれば、スキャンしたデータストアと同じネットワークセグメントに配置します。 <br /><br />ネットワーク接続の品質はスキャナーのパフォーマンスに影響します。これは、ファイルを検査するために、スキャナーがファイルの内容をスキャナーサービスを実行しているコンピューターに転送するためです。 <br /><br />データの移動に必要なネットワークホップを減らしたり、削除したりすると、ネットワークの負荷も軽減されます。      |
 |**スキャナー コンピューターに利用可能なプロセッサ リソースがあることを確認する**     | ファイルの内容の検査とファイルの暗号化と復号化は、プロセッサを集中的に処理する操作です。 <br /><br />指定されたデータストアの一般的なスキャンサイクルを監視し、プロセッサリソースの不足がスキャナーのパフォーマンスに悪影響を与えていないかどうかを特定します。        |
-|**スキャナーの複数のインスタンスをインストールする** | スキャナーにカスタムクラスター (プロファイル) 名を指定した場合、Azure Information Protection スキャナーは、同じ SQL server インスタンス上の複数の構成データベースをサポートします。 <br /><br />複数のスキャナーで同じクラスター (プロファイル) を共有することもでき、その結果、スキャン時間が短縮されます。|
+|**スキャナーの複数のインスタンスをインストールする** | スキャナーにカスタムクラスター名を指定した場合、Azure Information Protection スキャナーは、同じ SQL server インスタンス上の複数の構成データベースをサポートします。 <br /><br />複数のスキャナーが同じクラスターを共有することもできるため、スキャン時間が短縮されます。|
 |**別の構成の使用方法を確認する** |[代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのファイルに既定のラベルを適用すると、ファイル内容の検査がスキップされるため、スキャナーの実行速度が速くなります。 <br/><br />[代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのカスタム条件と既知の機密情報の種類を特定すると、スキャナーの実行速度が遅くなりなります。|
 | | |
 
@@ -538,10 +537,8 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 「 [ファイルを自動的に分類して保護するための Azure Information Protection スキャナーの展開](deploy-aip-scanner.md)」も参照してください。
 
-**詳細情報:**
+**詳細情報**:
 
 - Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
-
-- [Windows Server FCI と Azure Information Protection スキャナーの違いは何ですか](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)。
 
 - PowerShell を使用して、デスクトップコンピューターから対話形式でファイルを分類および保護します。 PowerShell を使用するその他のシナリオの詳細については、「 [Azure Information Protection の統合ラベル付けクライアントでの powershell の使用](./rms-client/clientv2-admin-guide-powershell.md)」を参照してください。

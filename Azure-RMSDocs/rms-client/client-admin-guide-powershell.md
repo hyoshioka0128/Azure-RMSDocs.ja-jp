@@ -1,36 +1,36 @@
 ---
-title: Azure Information Protection クライアントで PowerShell を使用する
-description: 管理者が PowerShell を使って Azure Information Protection クライアントを管理するための手順と情報について説明します。
-author: mlottner
-ms.author: mlottner
+title: Azure Information Protection クラシッククライアントで PowerShell を使用する
+description: PowerShell を使用して Azure Information Protection classic クライアントを管理するための管理者向けの手順と情報です。
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7c5f2975b93e907d244db7c95975105f58ed1b94
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: c2c9829154a7efd3bb5aa340e37018d1085105ce
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570430"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386017"
 ---
-# <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
+# <a name="admin-guide-using-powershell-with-the-azure-information-protection-classic-client"></a>管理者ガイド: Azure Information Protection クラシッククライアントでの PowerShell の使用
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Azure Information Protection Classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-Azure Information Protection クライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
+Azure Information Protection クラシッククライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
-コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection を利用するコマンドレットもあります。 例:
+コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection を利用するコマンドレットもあります。 次に例を示します。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -333,7 +333,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test.docx
 ```
 
-フォルダー内のすべてのファイルを保護するには、**-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 例:
+フォルダー内のすべてのファイルを保護するには、**-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 次に例を示します。
 
 ```ps
 Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
@@ -350,7 +350,7 @@ InputFile                          EncryptedFile
 \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 ```
 
-保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも `Get-RMSFileStatus` コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 例:
+保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも `Get-RMSFileStatus` コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 次に例を示します。
 
 ```ps
 Get-RMSFileStatus -File \Server1\Documents\Test1.docx
@@ -364,7 +364,7 @@ FileName                              Status
 \Server1\Documents\Test1.docx         Protected
 ```
 
-ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っている必要があります。 あるいは、スーパー ユーザーとしてコマンドレットを実行する必要があります。 その後、Unprotect コマンドレットを使います。 例:
+ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っている必要があります。 あるいは、スーパー ユーザーとしてコマンドレットを実行する必要があります。 その後、Unprotect コマンドレットを使います。 次に例を示します。
 
 ```ps
 Unprotect-RMSFile C:\test.docx -InPlace
@@ -471,7 +471,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test.docx   
 ```
 
-フォルダー内のすべてのファイルを保護するには、-Folder パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 例:
+フォルダー内のすべてのファイルを保護するには、-Folder パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 次に例を示します。
 
 ```ps
 Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
@@ -488,7 +488,7 @@ InputFile                          EncryptedFile
 \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 ```
 
-保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも Get-RMSFileStatus コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 例: 
+保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも Get-RMSFileStatus コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 次に例を示します。 
 
 ```ps
 Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
@@ -502,7 +502,7 @@ FileName                              Status
 \\Server1\Documents\Test1.docx        Protected
 ```
 
-ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 例:
+ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 次に例を示します。
 
 ```ps
 Unprotect-RMSFile C:\test.docx -InPlace
@@ -541,7 +541,7 @@ C:\Test.docx                          C:\Test.docx
 
 1. 新しいブラウザー ウィンドウで、[Azure Portal](https://portal.azure.com/) にサインインします。
 
-2. Azure Information Protection で使用する Azure AD テナントについては、 **Azure Active Directory**  >  **Manage** アプリの登録] を参照して  >  **App registrations** ください。 
+2. Azure Information Protection で使用する Azure AD テナントについては、 **Azure Active Directory**  >  **Manage** アプリの登録] を参照して  >  ください。 
 
 3. [ **+ 新規登録**] を選択して、Web アプリ/API アプリケーションを作成します。 [ **アプリケーションの登録** ] ウィンドウで、次の値を指定し、[ **登録**] をクリックします。
 
@@ -663,7 +663,7 @@ Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKe
 
 3. 先のセクションの指示に従ってこのコマンドを修正します。**WebAppId**、**WebAppkey**、**NativeAppId** パラメーターに独自の値を指定してください。 今回は **Token** パラメーターの値を指定しません。これは後で指定します。 
 
-    例: 
+    次に例を示します。 
 
     ```ps
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>
@@ -679,7 +679,7 @@ Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKe
     (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
     ```
 
-    例: 
+    次に例を示します。 
 
     ```ps
     (Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
@@ -713,12 +713,12 @@ Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKe
 
 1. トークンがサービスアカウントプロファイルの **%localappdata%\Microsoft\MSIP** フォルダーに格納されていることを確認します。 この値はサービス アカウントによって保護されます。
 
-2. トークン値を含む PowerShell スクリプト (Aipauthentication.ps1 など) を削除 **します。**
+2. トークン値を含む PowerShell スクリプト ( **Aipauthentication.ps1 など)** を削除します。
 
     必要に応じて、タスクを削除します。 トークンの有効期限が切れた場合、この過程を繰り返す必要があります。その場合、構成したタスクを残しておくと便利です。新しい PowerShell スクリプトを新しいトークン値で上書きコピーするとき、すぐに再実行できます。
 
 ## <a name="next-steps"></a>次のステップ
-PowerShell セッションでコマンドレットのヘルプを表示するには `Get-Help <cmdlet name> cmdlet` と入力します。また、最新情報を参照するには -online パラメーターを使用します。 例: 
+PowerShell セッションでコマンドレットのヘルプを表示するには `Get-Help <cmdlet name> cmdlet` と入力します。また、最新情報を参照するには -online パラメーターを使用します。 次に例を示します。 
 
 ```ps
 Get-Help Get-RMSTemplate -online

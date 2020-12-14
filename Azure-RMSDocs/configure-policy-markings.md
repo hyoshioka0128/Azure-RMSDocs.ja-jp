@@ -5,25 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a1ed0a5b10db4ffd0a50b8738cb85cbff973eaa5
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 5454713bc942daa48fc5c33dfdb66bd1bcdec2e0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316417"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383246"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->[!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」を参照してください。 *
+
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+>
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。
 
@@ -64,7 +67,7 @@ ms.locfileid: "96316417"
     この例外は、Microsoft SharePoint、OneDrive for work、学校、または OneDrive for home に保存されているファイルに対して、Office アプリで [自動](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) 保存を使用する場合です。自動保存が有効になっている場合は、 [[詳細](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) 設定] をオンにしている場合を除き、分類をバックグラウンドで継続的に実行します。
 
 > [!NOTE]
-> AIP クライアントでの視覚的なマーキングと、組み込みのラベル付け Office 機能のサポートの詳細については、「 [Windows コンピュータのラベル付けクライアントの比較](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
+> AIP クライアントでの視覚的なマーキングと、組み込みのラベル付け Office 機能のサポートの詳細については、「 [Windows のラベル付けソリューションを選択する](rms-client/use-client.md#choose-your-windows-labeling-solution)」を参照してください。
 > 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>ラベルの視覚的なマーキングを構成するには
@@ -107,7 +110,7 @@ ms.locfileid: "96316417"
 >この構文では、大文字と小文字が区別されます。
 
 >[!TIP]
-> フィールドコードを使用し [て、ラベル名](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) をドキュメントまたはテンプレートに挿入することもできます。
+> フィールドコードを使用し [て、ラベル名](faqs-classic.md#can-i-create-a-document-template-that-automatically-includes-the-classification) をドキュメントまたはテンプレートに挿入することもできます。
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定する
 
@@ -122,21 +125,21 @@ ${If.App.<application type>}<your visual markings text> ${If.End}
 > [!NOTE]
 >このステートメントのこの構文では、大文字と小文字が区別されます。
 
-次に例を示します。
+例 :
 
-- **Word 文書だけにヘッダー テキストを設定する:**
+- **Word 文書のみにヘッダーテキストを設定する**:
 
     `${If.App.Word}This Word document is sensitive ${If.End}`
 
     Word 文書のヘッダーのみに、ラベルは "This Word document is sensitive" (この Word 文書では大文字と小文字が区別されます) という見出しテキストを適用します。 他の Office アプリケーションには、ヘッダー テキストは適用されません。
 
-- **Word、Excel、Outlook と PowerPoint で異なるフッター テキストを設定する:**
+- **Word、Excel、Outlook のフッターテキストと PowerPoint 用の異なるフッターテキストを設定し** ます。
 
     `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
 
     Word、Excel、Outlook で、ラベルは "This content is confidential" (このコンテンツは社外秘です) というフッター テキストを適用します。 PowerPoint では、ラベルは "This presentation is confidential" (このプレゼンテーションは社外秘です) というフッター テキストを適用します。
 
-- **Word と PowerPoint に特定の透かしテキストを設定し、Word、Excel、PowerPoint に透かしテキストを設定する:**
+- **Word および powerpoint の特定の透かしテキストを設定し、word、Excel、powerpoint の透かしテキストを設定** します。
 
     `${If.App.WP}This content is ${If.End}Confidential`
 

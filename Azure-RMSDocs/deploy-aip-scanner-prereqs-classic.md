@@ -12,21 +12,21 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4c466fbbad6314a6b0ea0dddb85d07d359a42467
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 71dd1d8119af741bbafb8173c63622f4e99146d4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95571014"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382634"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Azure Information Protection クラシックスキャナーをインストールして展開するための前提条件
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2019、Windows Server 2016、windows server 2012 R2 *
+>
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 ラベル付けされた統合スキャナーについては、「[統合スキャナーの前提条件](deploy-aip-scanner-prereqs.md)」を参照してください。*
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。 
-> 
-> 統一されたラベル付けスキャナーを使用している場合は、Azure Information Protection 統合された [ラベル付けスキャナーをインストールおよび展開するための前提条件](deploy-aip-scanner-prereqs.md)を参照してください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 オンプレミスの Azure Information Protection スキャナーをインストールする前に、システムが基本的な [Azure Information Protection 要件](requirements.md)に準拠していること、およびスキャナーに固有の次の要件を満たしていることを確認してください。
 
@@ -55,7 +55,7 @@ ms.locfileid: "95571014"
 |**プロセッサ**     |4コアプロセッサ         |
 |**RAM**     |8 GB         |
 |**ディスク領域**     |一時ファイルの場合、10 GB の空き領域 (平均)。 </br></br>スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 </br></br>推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 
-|**オペレーティング システム**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**注:** 非運用環境でのテストまたは評価の目的では、 [Azure Information Protection クライアントでサポート](requirements.md#client-devices)されている任意の Windows オペレーティングシステムを使用することもできます。
+|**オペレーティング システム**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**注**: 非運用環境でテストまたは評価を行う場合は、 [Azure Information Protection クライアントでサポート](requirements.md#client-devices)されている任意の Windows オペレーティングシステムを使用することもできます。
 |**ネットワーク接続**     | スキャナーコンピューターは、スキャンするデータストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。 </br></br> 組織のポリシーのためにインターネット接続ができない場合は、「 [代替構成を使用したスキャナーの展開](#deploying-the-scanner-with-alternative-configurations)」を参照してください。 </br></br>それ以外の場合は、このコンピューターがインターネットに接続されていることを確認し、HTTPS 経由で次の Url を使用できるようにします (ポート 443)。</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.azure.com <br /> -informationprotection.hosting.portal.azure.net <br /> - \*. aria.microsoft.com|
 | ||
 
@@ -73,7 +73,7 @@ Windows Server コンピューターでスキャナーサービスを実行す�
 |---------|---------|
 |**ローカルログオン** ユーザー権利の割り当て     |スキャナーのインストールと構成に必要ですが、スキャンの実行には必要ありません。  </br></br>スキャナーがファイルを検出、分類、保護できることを確認したら、サービスアカウントからこの権限を削除できます。  </br></br>組織のポリシーにより、この権限を短時間でも付与できない場合は、「 [代替構成を使用したスキャナーの展開](#deploying-the-scanner-with-alternative-configurations)」を参照してください。         |
 |**[サービスとしてログオン]** ユーザー権限の割り当て。     |  この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。        |
-|**データリポジトリに対するアクセス許可**     |- **ファイル共有またはローカルファイル:** ファイルをスキャンし、構成どおりに分類と保護を適用するための **読み取り**、 **書き込み**、 **変更** のアクセス許可を付与します。  <br /><br />- **SharePoint:** ファイルをスキャンし、構成どおりに分類と保護を適用するための **フルコントロール** アクセス許可を付与します。  <br /><br />- **検出モード:** スキャナーを検出モードでのみ実行するには、 **読み取り** アクセス許可で十分です。         |
+|**データリポジトリに対するアクセス許可**     |- **ファイル共有またはローカルファイル**: ファイルをスキャンし、構成どおりに分類と保護を適用するための **読み取り**、 **書き込み**、 **変更** のアクセス許可を付与します。  <br /><br />- **SharePoint**: ファイルをスキャンし、構成どおりに分類と保護を適用するための **フルコントロール** アクセス許可を付与します。  <br /><br />- **検出モード**: 検出モードでのみスキャナーを実行するには、 **読み取り** アクセス許可で十分です。         |
 |**保護を再保護または削除するラベルの場合**     | スキャナーが常に保護されたファイルにアクセスできるようにするには、このアカウントを Azure Information Protection の [スーパーユーザー](configure-super-users.md) にして、スーパーユーザー機能が有効になっていることを確認します。 </br></br>さらに、段階的展開の [オンボードコントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) を実装している場合は、構成したオンボードコントロールにサービスアカウントが含まれていることを確認してください。|
 | ||
 
@@ -101,7 +101,7 @@ Windows Server コンピューターでスキャナーサービスを実行す�
 
 - **容量。** 容量のガイダンスについては、「 [SQL Server のストレージ要件と容量計画](#storage-requirements-and-capacity-planning-for-sql-server)」を参照してください。
 
-- **[大文字と小文字を区別しない照合順序](/sql/relational-databases/collations/collation-and-unicode-support)**
+- **[大文字と小文字を区別しない照合順序](/sql/relational-databases/collations/collation-and-unicode-support)。**
 
 > [!NOTE]
 > スキャナーにカスタムクラスター (プロファイル) 名を指定した場合、同じ SQL server 上の複数の構成データベースがサポートされます。
@@ -136,7 +136,7 @@ Windows Server コンピューターに Azure Information Protection クライ�
 
 これらのラベルが構成されていない場合は、「 [代替構成を使用したスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」を参照してください。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [自動および推奨分類の条件を構成する方法](configure-policy-classification.md)
 - [Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)
@@ -227,7 +227,7 @@ Windows 10 および windows Server 2016 は、次の [グループポリシー�
 
     ただし、スキャナーを構成するユーザーアカウントには、スキャナー構成データベースの **db_owner** ロールが必要です。 スキャナーのインストールが完了するまで Sysadmin の役割しかない場合は、 [ユーザーアカウントに db_owner の役割を手動で付与](#create-a-user-and-grant-db_owner-rights-manually)します。
 
-- **Sysadmin ロールをまったく持つことはできません**。 Sysadmin ロールが一時的に付与されていない場合は、スキャナーをインストールする前に、データベースを手動で作成するための Sysadmin 権限をユーザーに要求する必要があります。 
+- **Sysadmin ロールをまったく持つことはできません。** Sysadmin ロールが一時的に付与されていない場合は、スキャナーをインストールする前に、データベースを手動で作成するための Sysadmin 権限をユーザーに要求する必要があります。 
 
     この構成では、 **db_owner** ロールが次のアカウントに割り当てられている必要があります。 
 
@@ -241,7 +241,7 @@ Windows 10 および windows Server 2016 は、次の [グループポリシー�
 
     スキャナーに独自のクラスター (プロファイル) 名を指定しない場合、構成データベースには **AIPScanner_ \<computer_name>** という名前が付けられます。 </br>引き続き、 [ユーザーの作成と、データベースに対する db_owner 権限の付与](#create-a-user-and-grant-db_owner-rights-manually)を行います。 
 
-追加として:
+補足:
 
 - スキャナーを実行するサーバーのローカル管理者である必要があります。
 - スキャナーを実行するサービスアカウントには、次のレジストリキーに対するフルコントロールのアクセス許可が付与されている必要があります。
@@ -298,7 +298,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 - **スキャナーサービスアカウントの** 場合は、ローカルの Windows アカウントまたは Active Directory アカウントを使用します。
 
-- **Azure Active Directory アカウントの場合は、** [Set-Aipauthentication に Token パラメーターを指定して使用](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)します。
+- **Azure Active Directory アカウントの** 場合は、 [Set-Aipauthentication に Token パラメーターを指定して使用](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)します。
 
 #### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>制限: ラベルにオートラベルの条件がありません
 
@@ -316,10 +316,10 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 スキャナーの概要については、「 [ファイルを自動的に分類して保護するための Azure Information Protection スキャナーの展開](deploy-aip-scanner-classic.md)」を参照してください。
 
-**詳細情報:**
+**詳細情報**:
 
 Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
 
-[Windows Server FCI と Azure Information Protection スキャナーの違いは何ですか](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)。
+[Windows Server FCI と Azure Information Protection スキャナーの違いは何ですか](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)。
 
 また、PowerShell を使用して、デスクトップ コンピューターからファイルを対話的に分類し、保護することができます。 PowerShell を使用するその他のシナリオの詳細については、「 [Azure Information Protection クラシッククライアントでの powershell の使用](./rms-client/client-admin-guide-powershell.md)」を参照してください。

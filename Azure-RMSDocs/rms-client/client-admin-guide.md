@@ -1,6 +1,6 @@
 ---
-title: Azure Information Protection クライアント管理者ガイド
-description: Windows 用 Azure Information Protection クライアントのデプロイを担当するエンタープライズ ネットワークの管理者向けの手順および情報です。
+title: Azure Information Protection 従来のクライアント管理者ガイド
+description: Azure Information Protection classic client for Windows の展開を担当するエンタープライズネットワーク上の管理者向けの手順と情報です。
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,27 +13,27 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fc6a8cd4e891e007c9cf23d5dcb9f2381e068ac8
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: aa166cf6968af79ec22a7d3fd2a05e53e025bbe5
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95570422"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386000"
 ---
-# <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
+# <a name="azure-information-protection-classic-client-administrator-guide"></a>Azure Information Protection 従来のクライアント管理者ガイド
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [クライアント管理者ガイド](clientv2-admin-guide.md)」を参照してください。
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
-> **AIP クラシック クライアントをデプロイするには**、サポート チケットを作成してダウンロード アクセスを取得します。
+> **AIP classic クライアントを展開するに** は、サポートチケットを開いてインストールファイルをダウンロードします。
 
 エンタープライズ ネットワークで Azure Information Protection クライアントを担当している場合、または [Azure Information Protection クライアント ユーザー ガイド](client-user-guide.md) に関するページに記載されていない詳細な技術情報が必要な場合は、このガイドの情報をご覧ください。 
 
-例:
+次に例を示します。
 
 - このクライアントのさまざまなコンポーネントについて知り、インストールする必要があるかどうかを理解する
 
@@ -59,7 +59,7 @@ Azure Information Protection クライアントには次のものが含まれま
 
 - エクスプローラー。ユーザーがファイルに分類ラベルと保護を適用するための右クリック オプション。
 
-- ネイティブ アプリケーションで開くことができないときに、保護されたファイルを表示するビューアー。
+- 組み込みアプリケーションで開くことができないときに保護されたファイルを表示するビューアー。
 
 - ファイルに対して分類ラベルと保護を適用および削除するための PowerShell モジュール。 
     
@@ -84,7 +84,7 @@ Microsoft 365 で [機密ラベル](/microsoft-365/compliance/sensitivity-labels
 
 - オンプレミスで保存されているファイルを検出し、分類する (さらに、任意で保護する) サービスを実行することがあります。
 
-- ファイルを表示するネイティブ アプリケーションがインストールされていないか、ドキュメントを開くことができない場合に、保護されているドキュメントを表示したい。
+- ファイルを表示する組み込みアプリケーションがインストールされていない場合、またはドキュメントを開くことができない場合に、保護されたドキュメントを表示します。
 
 - エクスプローラーまたは PowerShell コマンドを使って、単にファイルを保護したい。
 
@@ -177,7 +177,7 @@ Azure Information Protection クライアントは、Microsoft 365 がサポー�
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
-Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 例:
+Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 次に例を示します。
 
 - オンライン ユーザーの手順: [Azure Information Protection ユーザー ガイド](client-user-guide.md)
 
@@ -253,7 +253,7 @@ GA バージョンのスキャナー構成データベースを移動するこ�
 
 3. [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) を使用し、新しい SQL Server インスタンスとプロファイル名を指定してスキャナーをインストールします。
 
-4. **省略可能:** スキャナーですべてのファイルを再スキャンしない場合は、Scanfiles テーブルをエクスポートし、新しいデータベースにインポートします。
+4. **省略可能**: スキャナーですべてのファイルを再スキャンしない場合は、scanfiles テーブルをエクスポートし、新しいデータベースにインポートします。
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Azure Information Protection クライアントのアンインストール
 
