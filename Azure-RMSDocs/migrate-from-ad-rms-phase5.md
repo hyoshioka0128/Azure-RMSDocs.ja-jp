@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: abad66a1e62a4e70bc4d5a9452b47abd7dd23004
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f4ae6c5addbea7293192b085bade9f17b798c23c
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382005"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583593"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -55,9 +55,9 @@ AD RMS サーバーのプロビジョニングを解除した後は、テンプ�
 >[!IMPORTANT]
 > この移行の終了時には、AD RMS クラスターを Azure Information Protection と hold your key ([HYOK](configure-adrms-restrictions.md)) オプションと共に使用することはできません。 HYOK でクラシッククライアントを使用している場合は、リダイレクトが配置されているため、使用する AD RMS クラスターには、移行したクラスターのライセンス Url が異なる必要があります。
 
-### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Office 2010 を実行するコンピューターの追加構成
+### <a name="additional-configuration-for-computers-that-run-office-2010"></a>Office 2010 を実行するコンピューターの追加構成
 
-移行されたクライアントが Office 2010 を実行している場合、AD RMS サーバーがプロビジョニング解除された後、保護されたコンテンツを開くのに遅延が発生する可能性があります。 または、保護されたコンテンツを開くための資格情報がないというメッセージが表示されることがあります。 これらの問題を解決するには、これらのコンピューターに対してネットワークリダイレクトを作成し、AD RMS URL FQDN をコンピューターのローカル IP アドレス (127.0.0.1) にリダイレクトします。 これを行うには、各コンピューターでローカルホストファイルを構成するか、DNS を使用します。
+移行されたクライアントが Office 2010 を実行している場合、AD RMS サーバーがプロビジョニング解除された後で、保護されたコンテンツを開くときにユーザーが遅延することがあります。 または、保護されたコンテンツを開くための資格情報がないというメッセージが表示されることがあります。 これらの問題を解決するには、これらのコンピューターに対してネットワークリダイレクトを作成し、AD RMS URL FQDN をコンピューターのローカル IP アドレス (127.0.0.1) にリダイレクトします。 これを行うには、各コンピューターでローカルホストファイルを構成するか、DNS を使用します。
 
 ローカルホストファイルを使用したリダイレクト:
 
@@ -71,6 +71,7 @@ DNS を使用したリダイレクト:
 
 - AD RMS URL FQDN の新しいホスト (A) レコードを作成します。 IP アドレスは127.0.0.1 です。
 
+AIP と Office 2010 の詳細については、「 [AIP For Windows」および「office バージョン (拡張サポート](known-issues.md#aip-for-windows-and-office-versions-in-extended-support))」を参照してください。
 ## <a name="step-11-complete-client-migration-tasks"></a>手順 11. クライアントの移行タスクを完了する
 
 モバイル デバイス クライアントおよび Mac コンピューターの場合: [AD RMS モバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11))をデプロイするときに作成した DNS SRV レコードを削除します。
@@ -124,7 +125,11 @@ killall cfprefsd
 
     出力で、**License** が **False** と表示され、**SecurityGroupOjbectId** に対して GUID が表示されないことを確認します。
 
-最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所にあります。 **Microsoft**  >  **Windows**  >  **Active Directory Rights Management サービス Client**
+最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 
+
+通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは、 **Microsoft**  >  **Windows**  >  **Active Directory Rights Management サービス Client** の場所にあります。 
+
+詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを再入力する
 

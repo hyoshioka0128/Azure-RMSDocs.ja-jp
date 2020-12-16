@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 26e354c883fd2e8ef5244b77635cb3e63ba9bc8e
-ms.sourcegitcommit: d578b609ddefc2580548cdb0a54a8af0ba69fbf4
+ms.openlocfilehash: e18c18322783a4f953c898cb96232ab35b642dca
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97388390"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583627"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題 - Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "97388390"
 >***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection の機能に関連する既知の問題と制限事項の詳細については、以下の一覧と表を参照してください。
 
@@ -69,7 +69,7 @@ Azure Information Protection クライアントと共にインストールされ
 
 ## <a name="aip-known-issues-in-office-applications"></a>Office アプリケーションの AIP に関する既知の問題
 
-|特徴  |既知の問題  |
+|特徴量  |既知の問題  |
 |---------|---------|
 |**複数のバージョンの Office**    | Azure Information Protection クライアントでは、クラシックでも統合ラベル付けでも、同じコンピューター上で複数のバージョンの Office を使用したり、Office のユーザー アカウントを切り替えたりすることはサポートされていません。       |
 |**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、次のようになります。 <br><br>-Office アプリでパフォーマンスの問題が発生する可能性があります。<br>-Azure Information Protection バーが、1つまたは両方の画面で、Office 画面の中央にフローティングするように見える場合があります。 <br><br>一貫したパフォーマンスを確保し、バーが正しい場所にあることを確認するには、Office アプリケーションの [**オプション**] ダイアログを開き、[**全般**] で、[**最適化**] ではなく [**互換性のために最適化**] を選択します。    |
@@ -87,19 +87,55 @@ Azure Information Protection クライアントと共にインストールされ
 
 ## <a name="known-issues-in-the-aip-client"></a>AIP クライアントの既知の問題
 
-- **ファイルの最大サイズ。** 2 GB を超える場合、保護はサポートされますが、暗号化解除はサポートされません。
+- [ファイルの最大サイズ](#maximum-file-sizes)
+- [AIP ビューアー](#aip-viewer)
+- [ドキュメントアクセスの追跡と取り消し](#tracking-and-revoking-document-access-public-preview)
 
-- **AIP ビューアー。** AIP ビューアーでは画像が縦モードで表示され、ワイドビューの画像によっては拡大表示されることがあります。
+### <a name="maximum-file-sizes"></a>ファイルの最大サイズ
 
-    たとえば、元のイメージは左側に下に表示されます。右側の AIP ビューアーには、拡大した縦のバージョンが表示されます。 
+2 GB を超えるファイルは保護がサポートされますが、暗号化解除はサポートされていません。
+
+### <a name="aip-viewer"></a>AIP ビューアー
+
+AIP ビューアーでは画像が縦モードで表示され、ワイドビューの画像によっては拡大表示されることがあります。
+
+たとえば、元のイメージは左側に下に表示されます。右側の AIP ビューアーには、拡大した縦のバージョンが表示されます。 
     
-    :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="クライアントビューアーで拡大されるイメージ":::
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="クライアントビューアーで拡大されるイメージ":::
     
-    詳細については次を参照してください:
+   詳細については、次を参照してください。
 
-    - [統一された **ラベル付けクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/clientv2-view-use-files.md)
-    - [**従来のクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/client-view-use-files.md)
+- [**従来のクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/client-view-use-files.md)
+- [統一された **ラベル付けクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/clientv2-view-use-files.md)
 
+### <a name="tracking-and-revoking-document-access-public-preview"></a>ドキュメントアクセスの追跡と取り消し (パブリックプレビュー)
+
+統一されたラベル付けクライアントを使用したドキュメントアクセスの追跡と取り消しには、次の既知の問題があります。
+
+- [保護された電子メール内の複数の添付ファイル](#multiple-attachments-in-a-protected-email)
+- [SharePoint 経由でアクセスされるドキュメント](#documents-accessed-via-sharepoint)
+
+詳細については、「[管理者ガイド: Azure Information Protection とユーザーガイドを使用したドキュメントアクセスの追跡と取り消し](rms-client/track-and-revoke-admin.md)」を参照してください。 [Azure Information Protection によるドキュメントアクセスの取り消し](rms-client/revoke-access-user.md)
+
+#### <a name="multiple-attachments-in-a-protected-email"></a>保護された電子メール内の複数の添付ファイル
+
+複数のドキュメントを電子メールに添付し、その電子メールを保護して送信する場合、各添付ファイルは同じ ContentID 値を取得します。 
+
+この ContentID 値は、開かれた最初のファイルに対してのみ返されます。 他の添付ファイルを検索しても、追跡データを取得するために必要な ContentID 値は返されません。      
+
+また、添付ファイルの1つのアクセスを取り消すと、同じ保護された電子メール内の他の添付ファイルのアクセスが取り消されます。
+
+#### <a name="documents-accessed-via-sharepoint"></a>SharePoint 経由でアクセスされるドキュメント
+    
+- SharePoint にアップロードされた保護されたドキュメントの ContentID 値は失われます。 
+
+    これは、データが追跡されず、SharePoint に格納されているファイルに対してアクセスの取り消しが適用されないことを意味します。
+
+- ユーザーが SharePoint からファイルをダウンロードし、ローカルコンピューターからアクセスした場合、新しい ContentID がドキュメントをローカルで開くと、そのドキュメントに適用されます。 
+    
+    元の ContentID 値を使用してデータを追跡する場合、ユーザーのダウンロードファイルに対して実行されるアクセスは含まれません。 また、元の ContentID 値に基づいてアクセスを取り消すと、ダウンロードされたファイルのアクセスが取り消されません。
+
+    このような場合、管理者は PowerShell を使用してダウンロードされたファイルを検索し、アクセスを追跡または取り消すための新しい ContentID 値を見つけることができます。
 
 ## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP for Windows および Office バージョンの拡張サポート
 
@@ -129,13 +165,13 @@ Azure Information Protection クライアントと共にインストールされ
 
 1.  Azure portal で、[ **条件付きアクセス** ] ブレードに移動し、変更する条件付きアクセスポリシーを選択します。 
 2.  [ **割り当て**] で [ **ユーザーとグループ**] を選択し、[ **すべてのユーザー**] を選択します。 [ **すべてのゲストと外部ユーザー** ] オプションが選択されて *いない* ことを確認します。
-3.  変更内容を保存します。 
+3.  変更を保存します。 
  
 また、この潜在的な問題を回避するために、組織で機能が必要でない場合は Azure Information Protection 内で CA を完全に無効にすることもできます。 
 
 詳細については、 [条件付きアクセスのドキュメント](/azure/active-directory/conditional-access/concept-conditional-access-users-groups)を参照してください。
 
-## <a name="more-information"></a>説明
+## <a name="more-information"></a>詳細情報
 
 次の記事は、Azure Information Protection の既知の問題に関する質問に回答する際に役立つ場合があります。
 

@@ -12,28 +12,31 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ca4dfed92aafb690da28e5164496b924c9c3fe7e
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 2da5d348f497a74e88c0bf11da023be6e3cb0152
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383603"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583542"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-Office 2010 を実行しているコンピューターでは、Azure Information Protection クライアントが Azure Information Protection サービスに対して認証を行う必要があります。
+AIP 統合ラベルクライアントは、ユーザーが Office リボンから直接ドキュメントに簡単にラベルを付けて保護できる Office アドインをインストールするため、すべての Windows コンピューターで推奨されます。 
 
-AIP 統合ラベルクライアントは、office リボンから直接ドキュメントに簡単にラベルを付けて保護できる Office アドインをインストールするため、すべての Windows コンピューターに推奨されます。 また、クライアントは、組み込みの保護サービス (Azure Rights Management) でサポートされていないファイルの種類のラベル付けと保護、および Office アプリで開くことができない保護されたファイルのビューアーも提供します。 IOS と Android にも同様のビューアーがあります。
+クライアントは次の機能も提供します。
 
-AIP classic クライアントがインストールされている場合は、ユーザーが保護したファイルを追跡および取り消すためのドキュメント追跡サイトも用意されています。
+- 組み込みの保護サービス (Azure Rights Management) でサポートされていないファイルの種類のラベル付けと保護。
+- Office アプリで開くことができない保護されたファイルのビューアー。 IOS と Android にも同様のビューアーがあります。
+- 保護されたファイルへのアクセスを追跡および取り消すための機能。
 
+Office 2010 を実行しているコンピューターでは、Azure Information Protection クライアントが Azure Information Protection サービスに対して認証を行う必要があります。 詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
 ## <a name="the-azure-information-protection-client-for-windows-installation-and-configuration"></a>Windows 用 Azure Information Protection クライアント: インストールと構成
 
 Windows 用のクライアントのエンタープライズインストールおよび構成については、 [Azure Information Protection 統合されたラベル付けクライアント管理者ガイド](./rms-client/clientv2-admin-guide.md)を参照してください。

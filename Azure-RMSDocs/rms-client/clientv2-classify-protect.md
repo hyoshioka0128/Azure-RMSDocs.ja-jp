@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4b95b8f3242a9200500f8904992a13c4661ca31f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 775eca70267f2caa70599dd3b1d8a33020121a74
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385439"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583474"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>ユーザーガイド: Azure Information Protection 統合されたラベル付けクライアントを使用して分類および保護する
 
@@ -134,7 +134,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
         
     - [**アクセスの有効期限**]: 指定したユーザーが、設定した日付の後に選択したファイルを開くことができないように、時間を区別するファイルに対してのみこのオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(現在のタイム ゾーンで) 設定した日の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
     
-     この設定を Office 2010 アプリのカスタム アクセス許可を使用して構成していた場合、指定した有効期限の日付はこのダイアログ ボックスには表示されませんが、有効期限は依然として有効です。 これは Office 2010 で有効期限を構成していた場合にのみ発生する表示上の問題です。
+     [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)アプリからカスタムアクセス許可を使用してこの設定を構成した場合、指定した有効期限はこのダイアログボックスに表示されませんが、有効期限はまだ設定されていることに注意してください。 これは Office 2010 で有効期限を構成していた場合にのみ発生する表示上の問題です。
 
 5. **[適用]** をクリックし、**"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、**[閉じる]** をクリックします。
 

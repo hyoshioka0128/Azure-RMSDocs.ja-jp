@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4f1dd3d2c832cebfe8cb8a994570d81e7544d8cf
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 43e9731197231c8bccf2c5d00aec81b20ab3c889
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383008"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583559"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
@@ -97,7 +97,7 @@ Microsoft RMS コネクタのサーバー構成ツールを使用して、レジ
 
 3.  ツールの実行方法を決定します。
     
-    |メソッド  |説明  |
+    |Method  |説明  |
     |---------|---------|
     |**ローカル**     |  RMS コネクタと通信するように構成するサーバーから対話形式でツールを実行します。 <br><br>**ヒント**: これは、テスト環境など、1回限りの構成に役立ちます。       |
     |**ソフトウェアの展開**     |  ツールを実行してレジストリファイルを生成し、それを1つ以上の関連サーバーに展開します。 <br><br>System Center Configuration Manager などのソフトウェアの展開をサポートする systems management アプリケーションを使用して、レジストリファイルを展開します。       |
@@ -115,7 +115,7 @@ Microsoft RMS コネクタのサーバー構成ツールを使用して、レジ
 
 スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 
 
-プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、`https:\//connector.contoso.com` のようにします。 
+プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、「 `https:\//connector.contoso.com` 」のように入力します。 
 
 ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
 
@@ -134,10 +134,13 @@ Microsoft RMS コネクタのサーバー構成ツールを使用して、レジ
 
 コネクタを使用するようにサーバーを構成すると、そのサーバーのローカルにインストールされたクライアント アプリケーションで RMS が動作しない場合があります。 この問題が発生するのは、アプリケーションが RMS を直接使用せずにコネクタを使用しようとする (これはサポートされていません) ことが原因です。
 
-さらに、Office 2010 が Exchange server にローカルでインストールされている場合、コネクタを使用するようにサーバーを構成した後、クライアントアプリの IRM 機能がそのコンピューターから機能する可能性がありますが、これはサポートされていません。
+さらに、Office 2010 が Exchange server にローカルでインストールされている場合、コネクタを使用するようにサーバーを構成した後、クライアントアプリの IRM 機能がそのコンピューターから機能する可能性がありますが、これはサポートされていません。 
 
 いずれの場合も、コネクタを使用するように構成されていない別のコンピューターにクライアント アプリケーションをインストールする必要があります。 そうすれば、クライアント アプリケーションで RMS が直接使用されるようになります。
 
+> [!NOTE]
+> AIP と Office 2010 の詳細については、「 [AIP For Windows」および「office バージョン (拡張サポート](known-issues.md#aip-for-windows-and-office-versions-in-extended-support))」を参照してください。
+> 
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>コネクタを使用するための Exchange サーバーの構成
 次の Exchange ロールは RMS コネクタと通信します。
 

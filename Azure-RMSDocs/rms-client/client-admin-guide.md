@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aa166cf6968af79ec22a7d3fd2a05e53e025bbe5
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 1f0b074a1eb766ce266cf7b7fe92f20d9088e43d
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386000"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583440"
 ---
 # <a name="azure-information-protection-classic-client-administrator-guide"></a>Azure Information Protection 従来のクライアント管理者ガイド
 
@@ -27,7 +27,7 @@ ms.locfileid: "97386000"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [クライアント管理者ガイド](clientv2-admin-guide.md)」を参照してください。
 
 > [!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 > **AIP classic クライアントを展開するに** は、サポートチケットを開いてインストールファイルをダウンロードします。
 
@@ -92,7 +92,7 @@ Microsoft 365 で [機密ラベル](/microsoft-365/compliance/sensitivity-labels
 
 - データ回復のために一括してファイルやコンテナーから暗号化を解除 (保護解除) したい。
 
-- Office 2010 を実行していて、Azure Rights Management サービスを使ってドキュメントとメール メッセージを保護したい。
+- [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)を実行していて、Azure Rights Management サービスを使用してドキュメントと電子メールメッセージを保護する場合。 
 
 下の画像では、Office アプリケーションの Azure Information Protection クライアント アドイン、組織の分類ラベル、リボンの新しい **[保護]** ボタンを確認できます。
 

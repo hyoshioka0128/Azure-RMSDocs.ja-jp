@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6846829cec153eb02bb1ad3e6900537f3d0024e2
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: a3c174a8afba4571df1546ebeeebc790bd4cdc99
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97381869"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583576"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -76,9 +76,11 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
     「[Azure Information Protection の要件](./requirements.md)」をご覧ください。
 
-    Office 2010 を実行しているコンピューターがある場合は、 [Azure Information Protection クライアント](rms-client/use-client.md) をインストールして、クラウドサービスに対してユーザーを認証する機能を提供する必要があることに注意してください。 
+    **Office 2010 を実行しているコンピューターがある場合は**、 [Azure Information Protection クライアント](rms-client/use-client.md) をインストールして、クラウドサービスに対してユーザーを認証する機能を提供する必要があります。 詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
 
-    新しいバージョンの Office では、これらのクライアントは分類とラベル付けに必要であり、Azure Information Protection クライアントは省略可能ですが、データの保護のみを行う場合に推奨されます。 詳細については、 [Azure Information Protection 統合ラベル付けクライアント](./rms-client/clientv2-admin-guide.md)の管理者ガイドを参照してください。
+    **新しいバージョンの Office***では、* Azure Information Protection クライアントが分類とラベル付け、および *省略可能ですが*、データの保護のみを行う場合は推奨されます。 
+
+    詳細については、 [Azure Information Protection 統合ラベル付けクライアント](./rms-client/clientv2-admin-guide.md)の管理者ガイドを参照してください。
 
     AD RMS からの移行を行うには、その前に Azure Information Protection のサブスクリプションを用意しておく必要がありますが、移行を始める前にテナントの Rights Management サービスをアクティブにしないことをお勧めします。 このアクティブ化手順は、AD RMS からキーとテンプレートをエクスポートし、それらを Azure Information Protection のテナントにインポートした後で、移行プロセスによって行われます。 ただし、Azure Information Protection が既にアクティブ化されている場合でも、いくつかの追加手順を行って AD RMS から移行することはできます。
 
@@ -217,7 +219,7 @@ iOS 搭載の携帯電話や iPad、Android 携帯電話とタブレット、Win
     
 準備フェーズ中に構成したオンボーディング制御はもう必要ありません。 ただし、段階的な移行ではなく、同時にすべてを移行することを選んだためにオンボーディング制御を使用しなかった場合は、この手順をスキップしてオンボーディング制御を削除することができます。
     
-Windows コンピューターで Office 2010 を実行している場合は、"**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを無効にする必要があるかどうかを確認します。
+Windows コンピューターで Office 2010 を実行している場合は、"**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを無効にする必要があるかどうかを確認します。 詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
 
 **手順 12: Azure Information Protection テナントキーのキーを更新する**
 

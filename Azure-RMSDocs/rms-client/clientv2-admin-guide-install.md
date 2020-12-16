@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 427143c8ee2a93e60be683b3e80b5493c0bab441
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 1c0280de31b36358cd670c1d1b147dd4132ac6ac
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385473"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583423"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -40,7 +40,7 @@ Azure Information Protection 統合されたラベル付けクライアントを
 |**Microsoft .NET Framework 4.5.2**     | Azure Information Protection ビューアーが個別にインストールされている場合、ビューアーアプリケーションには Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。 <br><br>**重要**: このフレームワークがビューアーに表示されていない場合、実行可能ファイルのインストーラーによってダウンロードまたはインストール *されません* 。        |
 |**Windows PowerShell の最小バージョン4.0**     |   クライアントの PowerShell モジュールには、Windows PowerShell 4.0 の最小バージョンが必要です。これは、古いオペレーティングシステムにインストールする必要がある場合があります。 <br><br>詳細については、「[How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 <br><br>**重要**: この前提条件は、インストーラーによって確認またはインストール *されません* 。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。      |
 |**800 x 600 より大きい画面の解像度**    |     解像度が 800 x 600 以下だと、エクスプローラーでファイルやフォルダーを右クリックしても、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを完全に表示できません。    |
-|**Microsoft Online Services サインイン アシスタント 7.250.4303.0**     |   Office 2010 を実行しているコンピューターには、クライアントインストールに含まれている Microsoft Online Services サインインアシスタントバージョン7.250.4303.0 が必要です。 <br><br>新しいバージョンのサインインアシスタントがある場合は、Azure Information Protection 統合ラベル付けクライアントをインストールする前にアンインストールしてください。 <br><br>たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >    >  **プログラムのアンインストールまたは変更**] を使用します。      |
+|**Microsoft Online Services サインイン アシスタント 7.250.4303.0**     |   [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)を実行しているコンピューターには、クライアントインストールに含まれている Microsoft Online Services サインインアシスタントバージョン7.250.4303.0 が必要です。 <br><br>新しいバージョンのサインインアシスタントがある場合は、Azure Information Protection 統合ラベル付けクライアントをインストールする前にアンインストールしてください。 <br><br>たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >    >  **プログラムのアンインストールまたは変更**] を使用します。      |
 |**KB 4482887**     | Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 <br><br>Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。        |
 |**管理者のアクセス許可**| Azure Information Protection の統合ラベル付けクライアントをインストールするには、ローカルの管理アクセス許可が必要です。| 
 |**Exploit protection を無効にする (.NET 2 または3のみ)**   |AIP クライアントは、 [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっている .net 2 または3のコンピューターではサポートされていません。 上記の .NET 4.x バージョンに加えて、コンピューターに .NET 2 または3がある場合は、AIP クライアントをインストールする前に、 [Exploit protection を無効](../known-issues.md#known-issues-for-aip-and-exploit-protection) にしてください。  |
@@ -109,13 +109,17 @@ Microsoft Update カタログを使用していない場合、または Intune �
     
     ヘルプ画面に表示されていない追加のパラメーター:
     
-    - Office 2010 を実行するコンピューターにクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合またはそのユーザーを表示したくない場合は、**ServiceLocation** パラメーターを指定します。 [詳細情報](#more-information-about-the-servicelocation-installation-parameter) 
+    - Office 2010 を実行するコンピューターにクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合またはそのユーザーを表示したくない場合は、**ServiceLocation** パラメーターを指定します。    詳細については、次を参照してください。
+
+        - [**Servicelocation** インストールパラメーターの詳細](#more-information-about-the-servicelocation-installation-parameter) 
+        - [AIP for Windows および Office バージョンの拡張サポート](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)
+
     
     - **AllowTelemetry=0**: このパラメーターは、インストール オプション **[Microsoft に利用状況の統計を送信して、Azure Information Protection の改善に協力します]** を無効にするときに使用します。 
 
 3. インストールを完了するには: 
 
-    - お使いのコンピューターが Office 2010 を実行する場合は、コンピューターを再起動します。 
+    - コンピューターが [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)を実行している場合は、コンピューターを再起動します。 
         
         クライアントが ServiceLocation パラメーターを使用してインストールされなかった場合、Azure Information Protection 統合クライアント (Word など) を使用するいずれかの Office アプリケーションを初めて開くときに、この初回使用時にレジストリを更新するように求めるプロンプトが表示されます。 [サービス検索](client-deployment-notes.md#rms-service-discovery)はレジストリ キーの設定に使用されます。 
     
@@ -131,17 +135,17 @@ Microsoft Update カタログを使用していない場合、または Intune �
 
 #### <a name="more-information-about-the-servicelocation-installation-parameter"></a>ServiceLocation インストール パラメーターの詳細について
 
-Office 2010 を使っていてローカル管理者権限を持たないユーザーのためにクライアントをインストールするときは、ServiceLocation パラメーターと Azure Rights Management サービスの URL を指定します。 このパラメーターと値により、次のレジストリ キーが作成され、設定されます。
+[Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)を使用していて、ローカルの管理アクセス許可を持たないユーザーのクライアントをインストールする場合は、servicelocation パラメーターと Azure Rights Management サービスの URL を指定します。 このパラメーターと値により、次のレジストリ キーが作成され、設定されます。
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation
+`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation`
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing`
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing`
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
-次の手順で、ServiceLocation パラメーターに指定する値を特定します。 
+**Servicelocation** パラメーターに指定する値を特定するには、次の手順に従います。 
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>ServiceLocation パラメーターに指定する値を特定するには
 
@@ -157,7 +161,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
     残りの文字列は、ServiceLocation パラメーターに指定する値です。
 
-Office 2010 と Azure RMS のクライアントのサイレント インストールの例: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
+[Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)および Azure RMS 用にクライアントをサイレントインストールする例を次に示します。`AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
 ### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer"></a>.Msi インストーラーを使用して Azure Information Protection 統合されたラベル付けクライアントをインストールするには
@@ -174,14 +178,13 @@ Office 2010 と Azure RMS のクライアントのサイレント インスト�
     
     |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
     |--------------------|--------------|----------------|---------------------|
-    |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
-    |Office 2016|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|インストール|
-    |Office 2013|サポートされているすべてのバージョン|64 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />バージョン: 1.0|インストール|
-    |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインインアシスタント](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> バージョン: 2.1|インストール|
-    |Office 2010|Windows 8.1 および Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
-    |Office 2010|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
-    
-   
+    |**Office 365 1902 以降を除くすべてのバージョン**|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
+    |**Office 2016**|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|インストール|
+    |**Office 2013**|サポートされているすべてのバージョン|64 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />バージョン: 1.0|インストール|
+    |[**Office 2010**](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|サポートされているすべてのバージョン|[Microsoft Online Services サインインアシスタント](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> バージョン: 2.1|インストール|
+    |[**Office 2010**](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|Windows 8.1 および Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
+    |[**Office 2010**](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
+    | | | | |
 
 1. 既定のインストールでは、`AzInfoProtection_UL.msi /quiet` のように、**/quiet** を付けて .msi を実行します。
 

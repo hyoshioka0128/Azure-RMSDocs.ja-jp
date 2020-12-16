@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: c02e7195d9edf93401b601e4d7ca243e6a14b702
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 2e82b7c4cd99b5e880cc59db77a5a844d0e28030
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383823"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583610"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (HYOK) の詳細を保持する
 
@@ -25,7 +25,7 @@ ms.locfileid: "97383823"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [二重キー暗号化](plan-implement-tenant-key.md#double-key-encryption-dke)」を参照してください。
 
 > [!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 独自のキー (HYOK) 構成を保持することで、従来のクライアントを使用する AIP のお客様は、キーのフルコントロールを維持しながら、機密性の高いコンテンツを保護することができます。 HYOK は、機密性の高いコンテンツに対してオンプレミスに格納されている追加の顧客保持キー、および他のコンテンツに使用される既定のクラウドベースの保護を使用します。 
 
@@ -157,7 +157,7 @@ Azure Information Protection ラベルの HYOK 保護を提供するには、AD 
 |**AD RMS 構成**     |HYOK をサポートするには、AD RMS システムを特定の方法で構成する必要があります。 詳細については、 [以下](#ad-rms-configuration-requirements)を参照してください。          |
 |**ディレクトリ同期**     |オンプレミスの Active Directory と Azure Active Directory の間でディレクトリ同期を構成する必要があります。 </br></br>HYOK protection ラベルを使用するユーザーは、シングルサインオン用に構成する必要があります。         |
 |**明示的に定義された信頼の構成**     |HYOK で保護されたコンテンツを組織外の他のユーザーと共有する場合は、他の組織との直接のポイントツーポイントの関係において、明示的に定義された信頼の AD RMS を構成する必要があります。 </br></br>これは、Active Directory フェデレーションサービス (AD FS) (AD FS) を使用して作成された信頼されたユーザードメイン (TUDs) またはフェデレーション信頼を使用して行います。         |
-|**サポートされるバージョン Microsoft Office**     | HYOK で保護されたコンテンツを保護または使用するユーザーには、次のものが必要です。 </br></br>-Information Rights Management (IRM) をサポートする Office のバージョン </br>-Microsoft Office Professional Plus バージョン2013以降、Windows 7 Service Pack 1 以降で実行されている Service Pack 1。 </br>-Office 2016 Microsoft Installer (.msi) ベースのエディションの場合、 [2018 でリリースされた Microsoft Office 2016 の4018295更新プログラム](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295)が必要です。 </br></br>**注**: office 2010 および office 2007 はサポートされていません。        |
+|**サポートされるバージョン Microsoft Office**     | HYOK で保護されたコンテンツを保護または使用するユーザーには、次のものが必要です。 </br></br>-Information Rights Management (IRM) をサポートする Office のバージョン </br>-Microsoft Office Professional Plus バージョン2013以降、Windows 7 Service Pack 1 以降で実行されている Service Pack 1。 </br>-Office 2016 Microsoft Installer (.msi) ベースのエディションの場合、 [2018 でリリースされた Microsoft Office 2016 の4018295更新プログラム](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295)が必要です。 </br></br>**注**: office 2010 および office 2007 はサポートされていません。  詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。      |
 
 > [!IMPORTANT]
 > HYOK protection によって提供される高い確実性を実現するために、次のことをお勧めします。
@@ -234,4 +234,4 @@ HYOK の保護ラベルを構成するには、AD RMS クラスターのライ�
 
 ## <a name="next-steps"></a>次のステップ
 
-HYOK をサポートするためのシステムの構成が完了したら、HYOK 保護のラベルの構成を続行します。 詳細については、「 [Rights Management 保護のラベルを構成する方法](configure-policy-protection.md)」を参照してください。
+HYOK をサポートするためのシステムの構成が完了したら、HYOK 保護のラベルの構成を続行します。 詳しくは、「[Rights Management による保護を適用するようにラベルを構成する方法](configure-policy-protection.md)」を参照してください。

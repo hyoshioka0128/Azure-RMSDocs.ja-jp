@@ -12,21 +12,21 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 63de1f09defa880d7b639e62a3100b007831bdf7
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 40303d80ef0e1e9274d8b2258b4e400616dd875a
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382481"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583644"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Azure Information Protection の展開ロードマップ (保護のみ)
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***関連**: [Azure Information Protection Classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 > [!TIP]
 > または、次のいずれかの記事を検索することもできます。
@@ -99,7 +99,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
     次の機能のいずれか、または後で構成することを検討してください。
     
-    |機能  |説明  |
+    |特徴量  |説明  |
     |---------|---------|
     |**保護設定のカスタムテンプレート**     |  既定のテンプレートが組織にとって十分でない場合は、カスタムテンプレートを構成します。 </br>詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。       |
     |**使用状況ログの記録**     | 使用状況ログを構成して、組織が保護サービスをどのように使用しているかを監視します。 </br>詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)」を参照してください。        |
@@ -113,7 +113,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
     
     Office 2010 をサポートし、Office ドキュメントや電子メール以外のファイルを保護し、保護されたドキュメントを追跡し、このクライアントのユーザートレーニングを提供するために、ユーザー用のクラシッククライアントをインストールします。 
 
-    詳細については、「 [Azure Information Protection classic client For Windows](./rms-client/aip-client.md)」を参照してください。
+    詳細については、「Windows 用の [クラシッククライアントの Azure Information Protection](./rms-client/aip-client.md) 」および「 [拡張サポートでの windows および Office バージョン用の AIP](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
 
 2. **Office のアプリケーションとサービスを構成する**
     
@@ -145,7 +145,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 これで、データを保護し、会社が保護サービスを使用している方法をログに記録する準備が整いました。 
 
-詳細については、次を参照してください。
+   詳細については、次を参照してください。
 
 - [Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ](./help-users.md)
 - [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)

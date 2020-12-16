@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dbbf7c0644285c56ea34b57eb0b6b6a7894bc17f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e17e42850904590df6a0c223032fd07306e0815b
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382872"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583712"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーの構成とインストール
 
@@ -166,18 +166,20 @@ Azure Information Protection スキャナーの構成とインストールを開
 
 **パブリックアクセス** に **読み取り** または **読み取り/書き込み** 機能があることが判明したリポジトリには、セキュリティで保護する必要がある機密コンテンツが含まれている可能性があります。 **パブリックアクセス** が false の場合、リポジトリはパブリックではアクセスできません。
 
-リポジトリへのパブリックアクセスは、 [**MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)コマンドレットの **StandardDomainsUserAccount** パラメーターに弱いアカウントを設定した場合にのみ報告されます。
+リポジトリへのパブリックアクセスは、 [**MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)または [**MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)コマンドレットの **StandardDomainsUserAccount** パラメーターに弱いアカウントを設定した場合にのみ報告されます。
 
 - これらのパラメーターで定義されているアカウントは、リポジトリへの弱いユーザーのアクセスをシミュレートするために使用されます。 そこで定義されている弱いユーザーがリポジトリにアクセスできる場合は、リポジトリにパブリックにアクセスできることを意味します。 
 
 - パブリックアクセスが正しく報告されるようにするには、これらのパラメーターで指定したユーザーが **Domain Users** グループのメンバーであることを確認してください。
-       
+
 ### <a name="create-a-content-scan-job"></a>コンテンツスキャンジョブの作成
 
 コンテンツを詳しく調べて、特定のリポジトリで機密性の高いコンテンツをスキャンします。 
 
 ネットワーク上のリポジトリを分析するためにネットワークスキャンジョブを実行した後にのみ、この操作を行うことができますが、自分でリポジトリを定義することもできます。
- 
+
+**Azure portal でコンテンツスキャンジョブを作成するには:**
+
 1. 左側の [ **スキャナー** ] メニューで、[ **コンテンツスキャンジョブ**] を選択します。 
    
 1. [ **Azure Information Protection-コンテンツスキャンジョブ** ] ウィンドウで、 **[追加** ![] アイコン](media/i-add.png "保存アイコン")を選択します。
@@ -255,18 +257,20 @@ Azure Information Protection スキャナーの構成とインストールを開
 1. スキャナーを実行する Windows Server コンピューターにサインインします。 ローカル管理者権限と SQL Server マスター データベースに書き込むためのアクセス許可を持つアカウントを使用します。
 
     > [!IMPORTANT]
+    > スキャナーをインストールする前に、コンピューターに AIP 統合ラベルクライアントがインストールされている必要があります。 
+    >
     > 詳細については、「 [Azure Information Protection スキャナーをインストールおよび展開するための前提条件](deploy-aip-scanner-prereqs.md)」を参照してください。
     >
  
 1. **[管理者として実行]** オプションを使用して Windows PowerShell セッションを開きます。
 
-1. [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)コマンドレットを実行して、Azure Information Protection スキャナー用のデータベースを作成する SQL Server インスタンスと、前のセクションで指定したスキャナークラスター名を指定します。 
+1. [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)コマンドレットを実行して、Azure Information Protection スキャナー用のデータベースを作成する SQL Server インスタンスと、[前のセクションで指定](#create-a-scanner-cluster)したスキャナークラスター名を指定します。 
     
     ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
-    プロファイル名 **Europe** を使った例:
+    次の例では、 **ヨーロッパ** のスキャナークラスター名を使用しています。
     
     - 既定のインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
@@ -274,7 +278,9 @@ Azure Information Protection スキャナーの構成とインストールを開
     
     - SQL Server Express の場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
-    プロンプトが表示されたら、スキャナーサービスアカウントの資格情報 ( \<domain\user name> ) とパスワードを入力します。
+    プロンプトが表示されたら、スキャナーサービスアカウントの Active Directory 資格情報を入力します。
+
+    次の構文を使用します `\<domain\user name>` 。 例: `contoso\scanneraccount`
 
 1. **管理ツール** サービスを使用して、サービスがインストールされていることを確認し  >  ます。 
     
@@ -404,6 +410,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 - [データリポジトリ内のすべてのファイルに既定のラベルを適用する](#apply-a-default-label-to-all-files-in-a-data-repository)
 - [データリポジトリ内のすべてのファイルから既存のラベルを削除する](#remove-existing-labels-from-all-files-in-a-data-repository)
 - [すべてのカスタム条件と既知の機密情報の種類を識別する](#identify-all-custom-conditions-and-known-sensitive-information-types)
+
 ### <a name="apply-a-default-label-to-all-files-in-a-data-repository"></a>データリポジトリ内のすべてのファイルに既定のラベルを適用する
 
 この構成では、リポジトリ内のラベルのないすべてのファイルに、リポジトリまたはコンテンツスキャンジョブに指定された既定のラベルが付けられます。 ファイルには検査なしでラベルが付けられます。 
@@ -465,7 +472,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 |**スキャナーモード** (検出/強制)    | 通常、検出モードは、強制モードよりも高いスキャンレートを持ちます。 <br /><br />検出には1つのファイル読み取り操作が必要ですが、強制モードでは読み取りと書き込みの操作が必要です。        |
 |**ポリシーの変更**     |ラベルポリシーで autolabeling を変更した場合、スキャナーのパフォーマンスが影響を受ける可能性があります。 <br /><br />最初のスキャンサイクルでは、スキャナーがすべてのファイルを検査する必要があるときに、既定では、新しいファイルと変更されたファイルのみを検査する後続のスキャンサイクルよりも時間がかかります。 <br /><br />条件または autolabeling の設定を変更すると、すべてのファイルが再度スキャンされます。 詳細については、「ファイルの再 [スキャン](deploy-aip-scanner-manage.md#rescanning-files)」を参照してください。|
 |**Regex の構造**    | スキャナーのパフォーマンスは、カスタム条件の regex 式がどのように構築されるかによって影響を受けます。 <br /><br /> メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 <br /><br />次に例を示します。 <br />-[最長一致の量指定子](/dotnet/standard/base-types/quantifiers-in-regular-expressions)を避けます。 <br />-の代わりに、のような非キャプチャグループを使用し `(?:expression)` ます。 `(expression)`    |
-|**ログレベル**     |  ログレベルのオプションには、スキャナーレポートの [ **デバッグ**]、[ **情報**]、[ **エラー** ]、[ **オフ** ] があります。<br /><br />- **オフ** にすると最適なパフォーマンスが得られる <br />- **デバッグ** によってスキャナーの速度が大幅に低下するため、トラブルシューティングにのみ使用してください。 <br /><br />詳細については、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットの *ReportLevel* パラメーターを参照してください。       |
+|**ログ レベル**     |  ログレベルのオプションには、スキャナーレポートの [ **デバッグ**]、[ **情報**]、[ **エラー** ]、[ **オフ** ] があります。<br /><br />- **オフ** にすると最適なパフォーマンスが得られる <br />- **デバッグ** によってスキャナーの速度が大幅に低下するため、トラブルシューティングにのみ使用してください。 <br /><br />詳細については、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットの *ReportLevel* パラメーターを参照してください。       |
 |**スキャンされるファイル**     |-Excel ファイルを除き、Office ファイルは PDF ファイルよりもすばやくスキャンされます。 <br /><br />-保護されていないファイルは、保護されたファイルよりもスキャンが高速です。 <br /><br />-大きなファイルは、小さいファイルよりもスキャンに時間がかかることが明らかです。         |
 | | |
 
@@ -493,6 +500,10 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 - [MIPNetworkDiscoveryStatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
+- [MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob)
+
+- [MIPScannerRepository](/powershell/module/azureinformationprotection/get-mipscannerrepository)
+
 - [インポート-Aipscanの構成](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
 - [MIPNetworkDiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
@@ -503,6 +514,10 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 - [MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
+- [MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob)
+
+- [MIPScannerRepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository)
+
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
@@ -512,6 +527,10 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
 
 - [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
+
+- [MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
+
+- [MIPScannerRepository](/powershell/module/azureinformationprotection/set-mipscannerrepository)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 
@@ -530,6 +549,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 - [MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
+
 
 ## <a name="next-steps"></a>次のステップ
 

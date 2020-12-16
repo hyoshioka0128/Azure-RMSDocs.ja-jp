@@ -4,7 +4,7 @@ description: Windows 用に Azure Information Protection 統合ラベルクラ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/23/2020
+ms.date: 12/14/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2b4f7842ddc33ae170d756fa132883ac1fe8f07a
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: cbaeca78592e0f5626b183d521644fea6d77084f
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385643"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583457"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントのカスタム構成
 
@@ -130,12 +130,14 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 
 1人のユーザーに対して複数のラベルポリシーが構成されており、それぞれが異なるポリシー設定を持っている場合は、管理センターのポリシーの順序に従って、最後のポリシー設定が適用されます。 詳細については、「[ラベルポリシーの優先度 (順序](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)の問題)」を参照してください。
 
-ラベルポリシーの詳細設定は、最後のポリシー設定を使用して同じロジックを使用して適用されます。 
+ラベルポリシーの詳細設定は、最後のポリシー設定を使用して同じロジックを使用して適用されます。
 
 > [!NOTE]
-> Outlook に別の既定のラベルを設定できるようにするために、 [Outlookdefaultlabel](#set-a-different-default-label-for-outlook) の [詳細ラベル] ポリシー設定には、例外が現在存在しています。
+> 現在の GA バージョンでは、Outlook に別の既定のラベルを設定できるようにするために、 [Outlookdefaultlabel](#set-a-different-default-label-for-outlook) の詳細ラベルポリシー設定の例外が存在します。
 > 
-> OutlookDefaultLabel 設定が競合している場合は、管理センターのポリシーの順序に従って、 *最初* のポリシー設定から構成が取得されます。
+> [Outlookdefaultlabel](#set-a-different-default-label-for-outlook)設定が競合している場合は、管理センターのポリシーの順序に従って、最初のポリシー設定から構成が取得されます。 
+>
+> この例外は、 [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) パブリックプレビューの一部として削除されました。
 
 #### <a name="available-advanced-settings-for-label-policies"></a>ラベルポリシーの使用可能な詳細設定
 
@@ -153,6 +155,7 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 |EnableCustomPermissionsForCustomProtectedFiles|[カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+| Enableoutlookて List膨張 | [Outlook 配布リスト内の受信者にブロックメッセージを実装する](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
 |HideBarByDefault デフォルト)|[Office アプリの Information Protection バーを表示します](#display-the-information-protection-bar-in-office-apps)|
 |JustificationTextForUserText | [変更されたラベルの理由プロンプトテキストをカスタマイズする](#customize-justification-prompt-texts-for-modified-labels) |
 |LogMatchedContent|[情報の種類の一致を Azure Information Protection analytics に送信する](#send-information-type-matches-to-azure-information-protection-analytics)|
@@ -160,6 +163,7 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 |OutlookBlockUntrustedCollaborationLabel|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookCollaborationRule| [Outlook ポップアップメッセージをカスタマイズする](#customize-outlook-popup-messages)|
 |OutlookDefaultLabel|[Outlook に別の既定ラベルを設定する](#set-a-different-default-label-for-outlook)|
+|Outlookgetemの Addressenomeoutmsproperty | [配布リストの受信者にブロックメッセージを実装するときに Outlook で配布リストを展開するためのタイムアウトを変更する](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
 |Outlookジャスト Ifytrusteddomains|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookJustifyUntrustedCollaborationLabel|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Outlook で推奨分類を有効にする](#enable-recommended-classification-in-outlook)|
@@ -170,8 +174,10 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 |OutlookWarnUntrustedCollaborationLabel|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PFileSupportedExtensions|[保護するファイルの種類を変更する](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[必須のラベル付けを使用するときにドキュメントの "後で" を削除する](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
+| PowerPointRemoveAllShapesByShapeName|[図形内のテキストで図形を削除するのではなく、ヘッダーとフッターから特定の図形名のすべての図形を削除する](#remove-all-shapes-of-a-specific-shape-name) |
+|PowerPointShapeNameToRemove |[指定したテキストが含まれ、ヘッダー/フッターではない PowerPoint から図形を削除しない](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) |
 |RemoveExternalContentMarkingInApp|[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)|
-|RemoveExternalMarkingFromCustomLayouts | [PowerPoint でカスタムレイアウトから外部コンテンツマークを削除する](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
+|RemoveExternalMarkingFromCustomLayouts|[PowerPoint カスタムレイアウト内から外部コンテンツマーキングを明示的に削除する](#extend-external-marking-removal-to-custom-layouts) |
 |ReportAnIssueLink|[ユーザー向けの "問題の報告" を追加する](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[バックグラウンドでの分類の継続的実行をオンにする](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[スキャナーで使用されるスレッドの数を制限する](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -179,6 +185,7 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 |SharepointWebRequestTimeout| [SharePoint のタイムアウトを構成する](#configure-sharepoint-timeouts)|
 |SharepointFileWebRequestTimeout |[SharePoint のタイムアウトを構成する](#configure-sharepoint-timeouts)|
 |UseCopyAndPreserveNTFSOwner | [ラベル付け中に NTFS 所有者を保持する](#preserve-ntfs-owners-during-labeling-public-preview)
+| | |
 
 "Global" という名前のラベルポリシーに対してラベルポリシー設定が有効であることを確認する PowerShell コマンドの例を次に示します。
 
@@ -409,7 +416,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave
 
 削除するすべての図形の名前を定義し、リソースを集中的に使用するプロセスであるすべての図形のテキストをチェックしないようにすることで、無視するテキストを含む図形を削除しないようにします。
 
-この追加の詳細プロパティ設定で Word 図形を指定せず、 **Removeexternalcontentmarkinginapp** キー値に word が含まれている場合は、 **Externalcontentmarkingtorclean** 値で指定したテキストのすべての図形がチェックされます。 
+この追加の詳細プロパティ設定で Word 図形を指定せず、 **Removeexternalcontentmarkinginapp** キー値に word が含まれている場合は、 [Externalcontentmarkingtorclean](#how-to-configure-externalcontentmarkingtoremove) 値で指定したテキストのすべての図形がチェックされます。 
 
 使用していて除外する図形の名前を検索するには、次のようにします。
 
@@ -459,7 +466,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 ```
 
-この後、ヘッダーまたはフッターの内容と、その削除または置換方法を指定したりするために、少なくとも 1 つのより詳細なクライアント設定 **ExternalContentMarkingToRemove** が必要です。
+この後、ヘッダーまたはフッターの内容と、その削除または置換方法を指定したりするために、少なくとも 1 つのより詳細なクライアント設定 [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) が必要です。
 
 ### <a name="how-to-configure-externalcontentmarkingtoremove"></a>ExternalContentMarkingToRemove を構成する方法
 
@@ -513,19 +520,66 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="optimization-for-powerpoint"></a>PowerPoint 用の最適化
 
-PowerPoint のヘッダーとフッターは、図形として実装されます。 
+PowerPoint のヘッダーとフッターは、図形として実装されます。 **Msotextbox**、 **msoTextEffect**、 **Msotextbox**、および **msotextbox** 図形の種類では、次の詳細設定によって追加の最適化が提供されます。
 
-ヘッダーまたはフッターでは *なく* 、指定したテキストを含む図形を削除しないようにするには、 **PowerPointShapeNameToRemove** という名前の追加のアドバンストクライアント設定を使用します。 また、すべての図形のテキストのチェックはリソースを消費するプロセスであるため、この設定を使用して回避することをお勧めします。
+- [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)
+- [RemoveExternalMarkingFromCustomLayouts](#extend-external-marking-removal-to-custom-layouts)
 
-- この追加のクライアントの詳細設定を指定せず、PowerPoint が **RemoveExternalContentMarkingInApp** キーの値に含まれている場合、**ExternalContentMarkingToRemove** で指定したテキストがすべての図形でチェックされます。 
+また、 [PowerPointRemoveAllShapesByShapeName](#remove-all-shapes-of-a-specific-shape-name) は、図形の種類に基づいて、任意の図形の種類を削除できます。
 
-- この値が指定されている場合は、図形名の条件を満たす図形だけでなく、 **Externalcontentmarkingtoremove** によって提供された文字列と一致するテキストも削除されます。
+詳細については、「 [ヘッダーまたはフッターとして使用している図形の名前を検索](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer)する」を参照してください。
 
-また、PowerPoint でカスタムレイアウトが構成されている場合、既定の動作では、カスタムレイアウト内で見つかった図形は無視されます。 カスタムレイアウト内から外部コンテンツマーキングを明示的に削除するには、 **Removeexternalmarkingfromcustomlayouts** 詳細プロパティを true に設定し **ます。**
+##### <a name="avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers"></a>指定したテキストが含まれ、ヘッダー/フッターではない PowerPoint から図形を削除しない
+
+ヘッダーまたはフッターではなく、指定したテキストを含む図形を削除しないようにするには、PowerPointShapeNameToRemove という名前の追加のアドバンストクライアント設定を使用し **ます。** 
+
+また、すべての図形のテキストのチェックはリソースを消費するプロセスであるため、この設定を使用して回避することをお勧めします。 
+
+- この追加のクライアントの詳細設定を指定せず、PowerPoint が [RemoveExternalContentMarkingInApp](#remove-headers-and-footers-from-other-labeling-solutions) キーの値に含まれている場合、[ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) で指定したテキストがすべての図形でチェックされます。 
+
+- この値が指定されている場合は、図形名の条件を満たす図形だけでなく、 [Externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) によって提供された文字列と一致するテキストも削除されます。
+
+次に例を示します。
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+```
+
+##### <a name="extend-external-marking-removal-to-custom-layouts"></a>外部のマーク削除をカスタムレイアウトに拡張する
+
+この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの [詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) を使用します。
+
+既定では、外部コンテンツマーキングを削除するために使用されるロジックは、PowerPoint で構成されたカスタムレイアウトを無視します。 このロジックをカスタムレイアウトに拡張するには、 **Removeexternalmarkingfromcustomlayouts** 詳細プロパティを **True** に設定します。
+
+- キー: **Removeexternalmarkingfromcustomlayouts**
+
+- 値: **True**
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
+```
+
+##### <a name="remove-all-shapes-of-a-specific-shape-name"></a>特定の図形名のすべての図形を削除する
+
+PowerPoint カスタムレイアウトを使用していて、ヘッダーとフッターから特定の図形名のすべての図形を削除する場合は、削除する図形の名前を指定して、 **PowerPointRemoveAllShapesByShapeName** 詳細設定を使用します。
+
+**PowerPointRemoveAllShapesByShapeName** 設定を使用すると、図形内のテキストは無視され、代わりに図形名を使用して、削除する図形が識別されます。
+
+次に例を示します。
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
+```
 
 > [!NOTE]
-> このセクションで説明するクライアントの詳細設定でサポートされている PowerPoint 図形の種類は、 **Msotextbox**、 **MsoTextEffect**、および **msotextbox** です。
+> PowerPointRemoveAllShapesByShapeName 設定を定義するには、Externalcontentmarkingtoremove **によって** 提供される機能が不要な場合でも、現在 [Externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove)設定も定義する必要があります。 
 >
+> **PowerPointRemoveAllShapesByShapeName** を定義する場合は、 [Externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove)と [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)の両方を定義して、意図した数よりも多くの図形が削除されないようにすることをお勧めします。
+>
+
+
 ##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>ヘッダーまたはフッターとして使用している図形の名前を検索する
 
 1. PowerPoint の **選択** ウィンドウを表示し、**[書式]** タブ > **[配置]** グループ > **[選択ウィンドウ]** の順に選択します。
@@ -560,21 +614,6 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 ```
 
-##### <a name="remove-external-content-marking-from-custom-layouts-in-powerpoint"></a>PowerPoint でカスタムレイアウトから外部コンテンツマークを削除する
-
-この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの [詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) を使用します。
-
-既定では、外部コンテンツマーキングを削除するために使用されるロジックは、PowerPoint で構成されたカスタムレイアウトを無視します。 このロジックをカスタムレイアウトに拡張するには、 **Removeexternalmarkingfromcustomlayouts** 詳細プロパティを **True** に設定します。
-
-- キー: **Removeexternalmarkingfromcustomlayouts**
-
-- 値: **True**
-
-PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
-
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
-```
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>エクスプローラーでカスタムアクセス許可を無効にする
 
@@ -743,6 +782,10 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedColl
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
 ```
 
+> [!NOTE]
+> Outlook 配布リスト内に受信者がいる場合でも、ブロックメッセージが必要に応じて表示されるようにするには、 [Enableoutlookdistribution listadvanced](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) 設定を追加してください。
+>
+
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>特定のラベル用に構成されたポップアップメッセージのドメイン名を除外するには
 
 これらのポップアップメッセージで指定したラベルについては、特定のドメイン名を除外して、そのドメイン名が電子メールアドレスに含まれている受信者のメッセージがユーザーに表示されないようにすることができます。 この場合、電子メールは中断なく送信されます。 複数のドメインを指定するには、ドメインをコンマで区切って 1 つの文字列として追加します。
@@ -782,6 +825,10 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains=
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
+
+> [!NOTE]
+> Outlook 配布リスト内に受信者がいる場合でも、ブロックメッセージが必要に応じて表示されるようにするには、 [Enableoutlookdistribution listadvanced](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) 設定を追加してください。
+>
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>ラベルのない電子メールまたは添付ファイルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
 
@@ -876,6 +923,28 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+```
+
+### <a name="to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview"></a>Outlook 配布リスト内の受信者にブロックメッセージを実装するには (パブリックプレビュー)
+
+既定では、 [Outlookblocktrusteddomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) と [OutlookBlockUntrustedCollaborationLabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) の詳細設定は、配布リスト以外の電子メールにのみ適用されます。 
+
+これらのブロックメッセージのサポートを Outlook 配布リスト内の受信者に拡張するには、 **Enableoutlookdistribution listextend** 詳細設定を **true** に設定します。
+
+- キー: **Enableoutlook、List膨張**
+- 値: **true**
+
+この詳細プロパティを使用すると、必要に応じてブロックメッセージが表示されるようにするために、Outlook で配布リストを拡張できます。 配布リストを展開する場合の既定のタイムアウトは **2000** 秒です。
+
+このタイムアウトを変更するには、選択したポリシーの次の詳細設定を作成します。
+
+- キー: **Outlookgetemaddressenomeoutmsproperty**
+- 値: *整数 (秒)*
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableOutlookDistributionListExpansion="true"} @{OutlookGetEmailAddressesTimeOutMSProperty="3000"}
 ```
 
 ## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Azure Information Protection analytics への監査データの送信を無効にする
@@ -1206,7 +1275,8 @@ Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7
 Word、Excel、PowerPoint に対して、自動分類はバックグラウンドで継続的に実行されます。
 
 この動作は Outlook でも変わりません。
-Azure Information Protection 統合されたラベル付けクライアントが指定された条件ルールのドキュメントを定期的にチェックすると、この動作により、SharePoint に格納されているドキュメントの自動および推奨の分類と保護が有効になります。 条件規則が既に実行されているため、大きなファイルもすばやく保存されます。
+
+Azure Information Protection 統合されたラベル付けクライアントが指定された条件ルールのドキュメントを定期的にチェックする場合、この動作により、自動保存が有効になっている限り、SharePoint または OneDrive に保存されている Office ドキュメントの自動および推奨される分類と保護が有効になります。 条件ルールが既に実行されているため、大きなファイルもより迅速に保存されます。
 
 条件規則がユーザーの入力と同時にリアルタイムで実行されることはありません。 ドキュメントが変更された場合、バックグラウンド タスクとして定期的に実行されます。
 
@@ -1259,7 +1329,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするためのプロンプトが Office アプリケーションに表示されない場合は、[ **Microsoft Azure Information Protection** ] ダイアログボックスに戻り、[更新された **クライアントステータス**] セクションから [**サインイン**] を選択します。
 
-補足:
+追加として:
 
 - これらの手順を完了した後も、Azure Information Protection 統合されたラベル付けクライアントが古いアカウントでサインインしている場合は、Internet Explorer からすべての cookie を削除してから、手順 1. と 2. を繰り返します。
 
@@ -1487,9 +1557,9 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 | **Or**    |すべての子ノードで *または* を実行します       |
 | **Not**   | 独自の子に対し *ては実行されません*      |
 | **除く**    | 独自の子に対して *は not* を返し、 **All** として動作します。        |
-| **に** 渡される **ドメイン: listofdomains**    |次のいずれかを確認します。 <br />-親が **Except** の場合、は、 **すべて** の受信者がいずれかのドメインにあるかどうかを確認します。<br />-親が他の任意のものである場合を **除き**、は、いずれかの受信者がいずれかのドメインに **あるかどう** かを確認します。   |
-| **Emaillabel**、ラベルの続き | 次のいずれか:  <br />-ラベル ID <br />-null (ラベルが付けられていない場合)             |
-| **Attachmentlabel**、 **label** 、 **supportedExtensions**    | 次のいずれか:  <br /><br />**true**: <br />-親が **Except** の場合、サポートされている拡張子が1つの添付ファイルが **すべて** ラベル内に存在するかどうかを確認します。<br />-親が他の任意のものである場合 **を除き、は、** サポートされている拡張子が1つの添付ファイルがラベル内に存在 **するかどう** かを確認します。 <br />-ラベルが付けられていない場合、 **label = null** <br /><br /> **false**: その他すべての場合 
+| **に** 渡される **ドメイン: listofdomains**    |次のいずれかを確認します。 <br>-親が **Except** の場合、は、 **すべて** の受信者がいずれかのドメインにあるかどうかを確認します。<br>-親が他の任意のものである場合を **除き**、は、いずれかの受信者がいずれかのドメインに **あるかどう** かを確認します。   |
+| **Emaillabel**、ラベルの続き | 次のいずれか:  <br>-ラベル ID <br>-null (ラベルが付けられていない場合)             |
+| **Attachmentlabel**、 **ラベル** 、サポートされる **拡張機能**   | 次のいずれか:  <br><br>**本来** <br>-親が **Except** の場合、サポートされている拡張子が1つの添付ファイルが **すべて** ラベル内に存在するかどうかを確認します。<br>-親が他の任意のものである場合を **除き**、は、サポートされている拡張子が1つの添付ファイルがラベル内に存在 **するかどう** かを確認します。 <br>-ラベルが付けられていない場合、 **label = null** <br><br> **false:** その他のすべての場合 <br><br>**注**: **拡張機能** プロパティが空であるか、または存在しない場合、サポートされているすべてのファイルの種類 (拡張機能) がルールに含まれます。
 | | |
 
 #### <a name="rule-action-syntax"></a>ルールアクションの構文
@@ -1540,7 +1610,9 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 
 この例では、 **89a453df-5df447 9768-8191-259d0cf9560a** が **内部** ラベルの ID であり、内部ドメインに **contoso.com** と **microsoft.com** が含まれています。
 
-```powershell
+特定の拡張機能が指定されていないため、サポートされているすべてのファイルの種類が含まれます。
+
+```PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1590,7 +1662,7 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 
 次の例では、ラベル付けが必要な添付ファイルの一覧は、 **.doc、.docm、.docx、ドット、normal.dotm、.dotx、potm、です。 potx、.pps、ppsm、ppsx、.ppt、.vdw、.vsd、. vsdm、.vsdx、.vss、. vssm、.vst、vstm、vssx、.vstx、.xls、.xlsb、.xlt、.xlsm、.xlsx、xltm、xltm のうち、xltm** を、それぞれに対して、、します。
 
-```powershell
+```PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1674,7 +1746,9 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 
 この種の警告メッセージは、ユーザーが **同意** を選択する必要があるため、厳密には理由として考えられます。
 
-``` powershell
+特定の拡張機能が指定されていないため、サポートされているすべてのファイルの種類が含まれます。
+
+``` PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1729,11 +1803,11 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 
 次の **json コード** は、Outlook が内部電子メールを送信しているときにラベルがなく、特定のラベルを持つ添付ファイルがある場合に、ユーザーに警告します。 
 
-この例では、 **bcbef25a-c4db-446b-9496-1b558d9edd0e** は添付ファイルのラベルの ID です。
+この例では、 **bcbef25a-c4db-446b-9496-1b558d9edd0e** は添付ファイルのラベルの ID であり、この規則は .docx、.xlsx、および .pptx ファイルに適用されます。
 
 既定では、添付ファイルが付いている電子メールは、同じラベルを自動的に受信しません。
 
-```powershell
+```PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1766,6 +1840,8 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 #### <a name="example-5-prompt-for-a-justification-with-two-predefined-options-and-an-extra-free-text-option"></a>例 5: 2 つの定義済みオプションと追加のフリーテキストオプションを使用して、理由を確認する
 
 次の json コードを使用すると、ユーザーにアクションの理由を求めるメッセージが表示され **ます。** 理由テキストには、3つの自由テキストオプションと共に、2つの定義済みオプションがあります。
+
+特定の拡張機能が指定されていないため、サポートされているすべてのファイルの種類が含まれます。
 
 ```PowerShell
 {   
