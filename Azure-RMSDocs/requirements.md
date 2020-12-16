@@ -13,16 +13,18 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d750edb4aef5bf0b2c546598bb3007f609e50cf4
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 2b621f78610d411a7ab980429fcb1dd960cbebff
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849699"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386221"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>****適用対象** _: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)_
+>
+>***関連する内容**: [AIP の統合ラベル付けクライアントと AIP のクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。*
 
 Azure Information Protection をデプロイする前に、システムが次の前提条件を満たしていることを確認してください。
 
@@ -36,7 +38,7 @@ Azure Information Protection をデプロイする前に、システムが次の
 
 使用する Azure Information Protection の機能に応じて、次のいずれかを持っている必要があります。
 
-- **[Azure Information Protection プラン](https://azure.microsoft.com/pricing/details/information-protection/)** 。 Azure Information Protection スキャナーまたはクライアント (クラシック、または統合ラベル付け) を使用した分類、ラベル付け、保護に必要です
+- **[Azure Information Protection プラン](https://azure.microsoft.com/pricing/details/information-protection/)** 。 Azure Information Protection スキャナーまたはクライアントを使用した分類、ラベル付け、保護に必要です。
 
 - **[Azure Information Protection を含む Office 365 プラン](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)** 。 保護のみの場合に必要です。
 
@@ -85,7 +87,7 @@ Office 2010 を使用する場合、証明書ベースまたは多要素認証�
 
 ### <a name="supported-operating-systems-for-client-devices"></a>クライアント デバイスでサポートされるオペレーティング システム
 
-次のオペレーティング システムでは、Azure Information Protection 統合ラベル付けと Azure Information Protection クライアントの両方がサポートされています。 
+Windows 用の Azure Information Protection クライアントは、次のオペレーティング システムでサポートされています。
 
 - **Windows 10** (x86、x64)。 Windows 10 RS4 ビルド以降では、手書きはサポートされていません。
  
@@ -98,8 +100,6 @@ Office 2010 を使用する場合、証明書ベースまたは多要素認証�
 - **Windows Server 2016**
 
 - **Windows Server 2012 R2** および **Windows Server 2012**
-
-[どちらのクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)でも、ユーザーがドキュメントや電子メールを分類してラベル付けすることができます。
 
 以前のバージョンの Windows におけるサポートについて詳しくは、お使いの Microsoft アカウントまたはサポート担当者にお問い合わせください。
 
@@ -152,13 +152,13 @@ Azure Information Protection クライアントでは、次のいずれかの Of
 
 Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションでは、Azure Information Protection は分類のみのサポートで、保護を適用するラベルはユーザーに表示されません。 
 
-それ以外の場合、これらのラベルは Azure Information Protection バーまたは Office リボンの統合ラベル付けクライアントに表示されます (クラシック クライアントの場合 **[保護]** ボタンから、統合ラベル付けクライアントの場合 **[秘密度]** ボタンから)。 
+ラベルは、Office ドキュメントの上部に表示されるバーに表示されます。統合ラベル付けクライアントの **[検出感度]** ボタンまたはクラシック クライアントの **[保護]** ボタンからアクセスできます。
 
 詳細については、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」をご覧ください。
 
 ### <a name="office-features-and-capabilities-not-supported"></a>サポートされていない Office の特徴と機能
 
-- Azure Information Protection クライアントでは、クラシックでも統合ラベル付けでも、同じコンピューター上で複数のバージョンの Office を使用したり、Office のユーザー アカウントを切り替えたりすることはサポートされていません。
+- Windows 用の Azure Information Protection クライアントでは、同じコンピューター上で複数のバージョンの Office を使用したり、Office のユーザー アカウントを切り替えたりすることはサポートされていません。
 
 - Office の[差し込み印刷](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705)機能は、どの Azure Information Protection 機能でもサポートされていません。
 
@@ -174,10 +174,10 @@ Azure Information Protection には、次の追加要件があります。
 
     プロキシを使用してトークンを取得するときに **Proxy.pac** ファイルをサポートするには、次の新しいレジストリ キーを追加します。
 
-    - **パス:** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
-    - **キー:** `UseDefaultCredentialsInProxy`
-    - **種類:** `DWORD`
-    - **値:** `1`
+    - **パス**: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **キー**: `UseDefaultCredentialsInProxy`
+    - **型**: `DWORD`
+    - **値**: `1`
     
 - **TLS クライアント/サービス間接続**。 **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえば、パケット レベルの検査を実行するためなど)。 この操作によって、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA と共に使用されているものです。
      

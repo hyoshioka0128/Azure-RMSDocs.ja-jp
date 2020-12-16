@@ -1,6 +1,6 @@
 ---
 title: アプリケーションでの Azure Information Protection の RMS データ保護のサポート
-description: Azure Rights Management (Azure RMS) サービスがネイティブでサポートされるアプリケーションとソリューションを特定します。 Azure RMS によって、Azure Information Protection (AIP) のデータ保護が提供されます。
+description: Azure Rights Management (Azure RMS) サービスが組み込みでサポートされるアプリケーションとソリューションを特定します。 Azure RMS によって、Azure Information Protection (AIP) のデータ保護が提供されます。
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,18 +13,21 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f25b020a72a48e79b24840a597aefd4cc9e594af
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 0c86d31ef5dbfe3afd7e901bc43758c61ee0ba67
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849706"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386255"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連する内容**: [AIP の統合ラベル付けクライアントと AIP のクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。*
 
-このページに一覧表示されているアプリケーションとソフトウェアにより、Azure Information Protection のデータ保護を提供する Azure Rights Management (Azure RMS) サービスがネイティブでサポートされます。
+
+このページに一覧表示されているアプリケーションとソフトウェアにより、Azure Information Protection のデータ保護を提供する Azure Rights Management (Azure RMS) サービスが組み込みでサポートされます。
 
 これらのアプリケーションとソリューションは、"RMS 対応" と呼ばれ、Rights Management および[使用制限](configure-usage-rights.md)が Rights Management API を使用して密接に統合されています。
 
@@ -40,7 +43,7 @@ ms.locfileid: "96849706"
 |---------|---------|
 |**Word、Excel、PowerPoint**    | - [Microsoft 365 アプリ](#microsoft-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office for the web (保護されたドキュメントの表示)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web ブラウザー](#web-browser-support)        |
 |[**電子メール**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Microsoft 365 Apps for Enterprise の Outlook<br />- [Web ブラウザー](#web-browser-support)<br />- [Windows メール](#email-clients-using-exchange-activesync-irm)|
-|[**他のファイルの種類**](#supported-text-and-image-file-types)    |  - Microsoft 365 アプリ、Office 2019、および Office 2016 の Visio: **.vsdm、** **.vsdx、** **.vssm**、 **.vstm**、 **.vssx**、 **.vstx** <br />- Windows 用 Azure Information Protection クライアント: テキスト、画像、**pfile** <br />- AutoCAD 用 SealPath RMS プラグイン: **.dwg**       |
+|[**他のファイルの種類**](#supported-text-and-image-file-types)    |  - Microsoft 365 アプリ、Office 2019、および Office 2016 の Visio: **.vsdm**、 **.vsdx**、 **.vssm**、 **.vstm**、 **.vssx**、 **.vstx** <br />- Windows 用 Azure Information Protection クライアント: テキスト、画像、**pfile** <br />- AutoCAD 用 SealPath RMS プラグイン: **.dwg**       |
 | | |
 
 ## <a name="macos-rms-enlightened-applications"></a>macOS RMS 対応アプリケーション
@@ -112,7 +115,7 @@ ms.locfileid: "96849706"
 
 ### <a name="supported-text-and-image-file-types"></a>サポートされているテキスト ファイルと画像ファイルの種類
 
-Office ファイルや電子メール メッセージ以外のファイルの種類には、テキストおよび画像ファイルの種類が含まれ、 **.txt、** **.xml、** **.jpg、** 、 **.jpeg** などの拡張子が付いています。 
+Office ファイルや電子メール メッセージ以外のファイルの種類には、テキストおよび画像ファイルの種類が含まれ、 **.txt**、 **.xml**、 **.jpg**、 **.jpeg** などの拡張子が付いています。 
 
 これらのファイルは、Rights Management によってネイティブで保護された後に、そのファイル名拡張子が変更され、読み取り専用になります。 
 
@@ -207,7 +210,7 @@ Office Professional Plus 2010 Service Pack 2 または Office Professional 2010 
 Office for Mac 2019 および Office for Mac 2016 のすべてのエディションで、保護されたコンテンツの使用がサポートされます。
 
 > [!TIP]
-> Office for Mac を使用してドキュメントの保護を開始するには、次の FAQ が役に立ちます: [ドキュメントを保護および追跡するように Mac コンピューターを設定するにはどうすればよいのですか?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
+> Mac コンピューターでクラシック クライアントを使用している場合は、次の FAQ が役に立つことがあります。[ドキュメントを保護および追跡するように Mac コンピューターを設定するにはどうすればよいのですか?](faqs-classic.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
 > 
 ## <a name="azure-information-protection-apps-for-ios-and-android"></a>iOS 用と Android 用の Azure Information Protection
 
@@ -219,24 +222,37 @@ iOS デバイスや Android デバイスを Microsoft Intune で登録してい�
 
 ## <a name="the-azure-information-protection-client-for-windows"></a>Windows 用 Azure Information Protection クライアント
 
-Azure Information Protection (AIP) クライアントには 2 つのバージョンが含まれており、バージョンごとに管理者およびユーザー ガイドがあります。
+Azure Information Protection を使用するには、AIP クライアントをシステム全体でデプロイする必要があります。 
 
-- **統合ラベル付けクライアント**:
-    - [管理者ガイド](./rms-client/clientv2-admin-guide.md)
-    - [ユーザー ガイド](./rms-client/clientv2-user-guide.md)
+統合ラベル付けクライアントのインストールは、[Microsoft Azure Information Protection のページ](https://go.microsoft.com/fwlink/?LinkId=303970)からダウンロードできます。 
 
-- **クラシック クライアント**:
-    - [管理者ガイド](./rms-client/client-admin-guide.md)
-    - [ユーザー ガイド](./rms-client/client-user-guide.md)
+詳細については、次を参照してください。
 
-[Microsoft Azure Information Protection のページ](https://go.microsoft.com/fwlink/?LinkId=303970)から関連アプリをダウンロードします。
+- [クライアント側での Azure Information Protection](rms-client/use-client.md)
+- [統合ラベル付けクライアントの管理者ガイド](./rms-client/clientv2-admin-guide.md)
+- [統合ラベル付けクライアントのユーザー ガイド](./rms-client/clientv2-user-guide.md)
+
+### <a name="aips-classic-client"></a>AIP のクラシック クライアント
+
+まだアップグレードしていない場合は、従来の [Azure Information Protection のクラシック クライアント](./rms-client/aip-client.md)がデプロイされたままになっている可能性があります。
+
+クラシック クライアントのデプロイと使用の詳細については、以下を参照してください。
+
+- [AIP クラシック クライアント](./rms-client/aip-client.md)
+- [クラシック クライアントの管理者ガイド](./rms-client/client-admin-guide.md)
+- [クラシック クライアントのユーザー ガイド](./rms-client/client-user-guide.md)。
 
 > [!NOTE]
-> これら 2 つのバージョンの違いがよくわかりませんか? 関連する [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) を参照してください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 
+>
+> このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けソリューションに移行することができます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+>
 > 
+>
+
 ## <a name="rights-management-sharing-app"></a>Rights Management 共有アプリ
 
-Mac コンピューターの場合、Rights Management 共有アプリにより、保護された PDF ファイル **(.ppdf)** 、保護されたテキスト イメージ、および一般的に保護されたファイル用のビューアーが提供されます。 イメージ ファイルも保護できますが、他のファイルを保護することはできません。 これらのコンピューターで Office ファイルを保護するには、Office for Mac または Microsoft 365 Apps for Enterprise を使用します。 
+Mac コンピューターの場合、Rights Management 共有アプリにより、保護された PDF ファイル ( **.ppdf**)、保護されたテキスト イメージ、および一般的に保護されたファイル用のビューアーが提供されます。 イメージ ファイルも保護できますが、他のファイルを保護することはできません。 これらのコンピューターで Office ファイルを保護するには、Office for Mac または Microsoft 365 Apps for Enterprise を使用します。 
 
 詳細については、[モバイル プラットフォーム用 Microsoft Rights Management 共有アプリケーションの FAQ](/previous-versions/msdn10/dn451248(v=msdn.10)) に関するページを参照してください
 

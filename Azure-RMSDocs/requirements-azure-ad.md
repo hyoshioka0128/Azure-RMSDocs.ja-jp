@@ -12,16 +12,18 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 1dfb6879533e4bb567f97d56a88cd1df2915e338
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 43aaafadaabbf26309c4a40926b970d90aeadc47
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178173"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386238"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Azure Information Protection に対する Azure AD の追加要件
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連する内容**: [AIP の統合ラベル付けクライアントと AIP のクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。*
 
 Azure Information protection を使用するには、[Azure AD が必要](requirements.md#azure-active-directory)です。 Azure AD ディレクトリのアカウントを使用して Azure portal にサインインし、Azure Information Protection の設定を構成できます。
 
@@ -31,9 +33,16 @@ Azure Information Protection または Azure Rights Management を含むサブ�
 
 ## <a name="computers-running-office-2010"></a>Office 2010 を実行しているコンピューター
 
-Azure AD アカウントに加えて Microsoft Office 2010 を実行しているコンピューターでは、Azure Information Protection とそのデータ保護サービス、Azure Rights Management を認証するために [Azure Information Protection 統合ラベル付けクライアント](./rms-client/aip-clientv2.md)または [Azure Information Protection クラシック クライアント](./rms-client/aip-client.md)が必要です。
+Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行うには、Azure AD アカウントに加えて、Microsoft 2010 を実行するコンピューターに Windows 用の Azure Information Protection クライアントが必要です。 
 
 ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、これらのコンピューターで Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
+
+Azure Information Protection 統合ラベル付けクライアントをデプロイすることをお勧めします。 まだアップグレードしていない場合は、[Azure Information Protection のクラシック クライアント](./rms-client/aip-client.md)がデプロイされたままになっている可能性があります。 詳しくは、「[クライアント側での Azure Information Protection](rms-client/use-client.md)」をご覧ください。
+
+> [!NOTE]
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 
+>
+> このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けソリューションに移行することができます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 ## <a name="support-for-certificate-based-authentication-cba"></a>証明書ベースの認証 (CBA) のサポート
 
@@ -92,7 +101,7 @@ UPN 値を変更できない場合は、関連するユーザーの代替 ID を
 
 詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
-## <a name="authenticating-on-premises-using-adfs-or-another-authentication-provider"></a>AD FS または別の認証プロバイダーを使用したオンプレミスの認証
+## <a name="authenticating-on-premises-using-ad-fs-or-another-authentication-provider"></a>AD FS または別の認証プロバイダーを使用したオンプレミスの認証
 
 AD FS または同等の認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターを使用している場合は、次のいずれかの構成で AD FS を使用する必要があります。
 
