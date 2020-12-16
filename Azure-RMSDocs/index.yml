@@ -8,16 +8,16 @@ metadata:
   ms.service: information-protection
   ms.topic: landing-page
   ms.collection: M365-security-compliance
-  author: mlottner
-  ms.author: mlottner
+  author: batamig
+  ms.author: bagol
   manager: rkarlin
-  ms.date: 04/02/2019
-  ms.openlocfilehash: a2f73c9aa0207af5b7ba77b3b53c271eb8722cb2
-  ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+  ms.date: 12/08/2020
+  ms.openlocfilehash: ef5cc6624b8d6e1af2750ebf1f4fbb5c54f72dd2
+  ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/09/2020
-  ms.locfileid: "94379165"
+  ms.lasthandoff: 12/14/2020
+  ms.locfileid: "97382141"
 landingContent:
 - title: Azure Information Protection について
   linkLists:
@@ -27,12 +27,10 @@ landingContent:
       url: what-is-information-protection.md
     - text: よく寄せられる質問
       url: faqs.md
-- title: 作業開始
-  linkLists:
-  - linkListType: overview
-    links:
     - text: 要件
       url: requirements.md
+- title: 作業開始
+  linkLists:
   - linkListType: quickstart
     links:
     - text: 統合ラベル付けクライアントのデプロイ
@@ -45,28 +43,38 @@ landingContent:
       url: tutorial-scan-networks-and-content.md
     - text: 過剰共有を禁止する
       url: tutorial-preventing-oversharing.md
+  - linkListType: how-to-guide
+    links:
+    - text: 保護された Office 以外のファイルを表示する
+      url: ./rms-client/clientv2-view-use-files.md
+    - text: 一般的なシナリオの管理方法
+      url: how-to-guides.md
 - title: 最新のままにする
   linkLists:
   - linkListType: whats-new
     links:
-    - text: 上位 5 つの推奨される Ignite セッション
-      url: what-is-information-protection.md#additional-resources
-    - text: 最新の統合ラベル クライアント バージョン
+    - text: 上位の推奨される Ignite セッション
+      url: what-is-information-protection.md#top-ignite-sessions
+    - text: AIP 統合ラベル付けクライアントの新機能
       url: ./rms-client/unifiedlabelingclient-version-release-history.md
 - title: オンプレミスのデータ ストアのデータを分類および保護する
   linkLists:
+  - linkListType: overview
+    links:
+    - text: オンプレミス スキャナーについて
+      url: deploy-aip-scanner.md
   - linkListType: how-to-guide
     links:
-    - text: スキャナーのデプロイ
-      url: deploy-aip-scanner.md
+    - text: スキャナーを構成してインストールする
+      url: deploy-aip-scanner-configure-install.md
+    - text: スキャナーを実行する
+      url: deploy-aip-scanner-manage.md
 - title: クライアントのカスタマイズ
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 統合ラベル付けクライアント:詳細設定
+    - text: 統合ラベル付けクライアントの詳細設定
       url: ./rms-client/clientv2-admin-guide-customizations.md
-    - text: クラシック クライアント:詳細設定
-      url: ./rms-client/client-admin-guide-customizations.md
 - title: Microsoft Information Protection SDK
   linkLists:
   - linkListType: overview
@@ -87,15 +95,21 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: ラベル付けクライアントを選択する
-      url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
+    - text: Windows のラベル付けソリューションを選択する
+      url: ./rms-client/use-client.md#choose-your-windows-labeling-solution
+  - linkListType: tutorial
+    links:
+    - text: 統合ラベル付けソリューションへの移行
+      url: tutorial-migrating-to-ul.md
   - linkListType: how-to-guide
     links:
-    - text: 統合ラベル付けクライアントへの移行
-      url: tutorial-migrating-to-ul.md
+    - text: AIP ラベルを統合秘密度ラベルに移行する
+      url: configure-policy-migrate-labels.md
 - title: ラベルの使用状況の監視と機密情報の検出
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: 中央レポート
       url: reports-aip.md
+    - text: 監査ログ リファレンス
+      url: audit-logs.md

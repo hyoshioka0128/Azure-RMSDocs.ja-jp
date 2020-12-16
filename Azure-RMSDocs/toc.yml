@@ -1,9 +1,12 @@
 - name: Azure Information Protection のドキュメント
   href: index.yml
 - name: 概要
+  expanded: true
   items:
     - name: Azure Information Protection とは
       href: what-is-information-protection.md
+    - name: AIP の新機能
+      href: ./rms-client/unifiedlabelingclient-version-release-history.md
     - name: AIP の要件
       items:
         - name: 概要
@@ -12,10 +15,13 @@
           href: requirements-azure-ad.md
         - name: アプリケーションでの保護のサポート
           href: requirements-applications.md
+        - name: サポートされるファイルの種類
+          href: ./rms-client/clientv2-admin-guide-file-types.md
+        - name: オンプレミス スキャナーの要件
+          href: deploy-aip-scanner-prereqs.md
     - name: AIP は ... とも呼ばれます
       href: aka.md
 - name: クイックスタート
-  expanded: true
   items:
     - name: クライアントのデプロイ
       href: quickstart-deploy-client.md
@@ -33,10 +39,10 @@
   items:
     - name: AIP の分類と保護
       href: aip-classification-and-protection.md
-    - name: Azure Information Protection Rights Management
-      href: what-is-azure-rms.md
-    - name: Rights Management の保護
+    - name: Azure Rights Management
       items:
+        - name: 概要
+          href: what-is-azure-rms.md
         - name: Rights Management 保護のしくみ
           href: how-does-it-work.md
         - name: アプリケーションで Azure Rights Management 保護をサポートする方法
@@ -45,25 +51,47 @@
               href: applications-support.md
             - name: Office アプリケーションおよびサービス
               href: office-apps-services-support.md
-            - name: Windows Server を実行し、ファイル分類インフラストラクチャを使用するファイル サーバー
-              href: file-server-support.md
             - name: RMS API をサポートするその他のアプリケーション
               href: api-support.md
-    - name: 個人用 RMS と Azure Information Protection
-      href: rms-for-individuals.md
-    - name: Azure Information Protection と AD RMS
-      items:
-        - name: オンプレミスと AD RMS の比較
+        - name: 個人用 RMS と Azure Information Protection
+          href: rms-for-individuals.md
+        - name: Azure Information Protection と AD RMS
           href: compare-on-premise.md
+        - name: RMS クライアントのデプロイに関する注意事項
+          href: ./rms-client/client-deployment-notes.md
+    - name: Azure Information Protection テナント キー
+      href: plan-implement-tenant-key.md
+- name: 攻略ガイド
+  items:
+    - name: 一般的なシナリオの操作方法
+      href: how-to-guides.md
+    - name: サービスの計画と準備
+      items:
+        - name: デプロイ ロードマップ
+          href: deployment-roadmap-classify-label-protect.md
+        - name: Bring Your Own Key (BYOK) 保護の構成
+          href: byok-price-restrictions.md
+        - name: テナントのルート キーを使ってみる
+          href: get-started-tenant-root-keys.md
+        - name: テナント キーに対する操作
+          items:
+            - name: 概要
+              href: operations-tenant-key.md
+            - name: マイクロソフト管理
+              href: operations-microsoft-managed-tenant-key.md
+            - name: お客様が管理
+              href: operations-customer-managed-tenant-key.md
+        - name: ユーザーとグループの準備
+          href: prepare.md
         - name: Active Directory モバイル デバイス拡張機能の管理
           href: active-directory-rights-manage-mobile-device.md
         - name: AD RMS からの移行
           items:
             - name: 概要
               href: migrate-from-ad-rms-to-azure-rms.md
-            - name: 準備
+            - name: フェーズ 1 - 準備
               href: migrate-from-ad-rms-phase1.md
-            - name: サーバー側の構成
+            - name: フェーズ 2 - サーバー側の構成
               items:
                 - name: 概要
                   href: migrate-from-ad-rms-phase2.md
@@ -73,44 +101,12 @@
                   href: migrate-hsmkey-to-hsmkey.md
                 - name: ソフトウェア キーから HSM キーへ
                   href: migrate-softwarekey-to-hsmkey.md
-            - name: クライアント側の構成
+            - name: フェーズ 3 - クライアント側の構成
               href: migrate-from-ad-rms-phase3.md
-            - name: サポート サービスの構成
+            - name: フェーズ 4 - サポート サービスの構成
               href: migrate-from-ad-rms-phase4.md
-            - name: 移行後のタスク
+            - name: フェーズ 5 - 移行後のタスク
               href: migrate-from-ad-rms-phase5.md
-    - name: Azure Information Protection ポリシー
-      href: overview-policy.md
-    - name: セキュリティ
-      items:
-        - name: セキュリティ ベースライン
-          href: security-baseline.md
-- name: 操作方法ガイド
-  items:
-    - name: 一般的なシナリオの操作方法
-      href: how-to-guides.md
-    - name: サービスの計画と準備
-      items:
-        - name: デプロイ ロードマップ
-          items:
-            - name: 概要
-              href: deployment-roadmap.md
-            - name: 分類、ラベル付け、保護のロードマップ
-              href: deployment-roadmap-classify-label-protect.md
-            - name: 保護のみのロードマップ (クラシック クライアント)
-              href: deployment-roadmap-protect-only.md
-        - name: テナント キーの計画と実装
-          items:
-            - name: サポートされているキーの種類
-              href: plan-implement-tenant-key.md
-            - name: Bring Your Own Key (BYOK) 保護の構成
-              href: byok-price-restrictions.md
-            - name: Hold Your Own Key (HYOK) 保護の構成
-              href: configure-adrms-restrictions.md
-            - name: テナントのルート キーを使ってみる
-              href: get-started-tenant-root-keys.md
-        - name: ユーザーとグループの準備
-          href: prepare.md
     - name: サービスの構成と使用
       items:
         - name: 保護のアクティブ化
@@ -135,9 +131,91 @@
           href: configure-usage-rights.md
         - name: 探索サービスまたはデータの回復用のスーパー ユーザーの構成
           href: configure-super-users.md
-        - name: Azure Information Protection ポリシーの構成
+        - name: オンプレミスの統合ラベル付けスキャナーのデプロイ
           items:
             - name: 概要
+              href: deploy-aip-scanner.md
+            - name: 統合ラベル付けスキャナーを構成してインストールする
+              href: deploy-aip-scanner-configure-install.md
+            - name: 統合ラベル付けスキャナーを実行する
+              href: deploy-aip-scanner-manage.md
+        - name: RMS コネクタのデプロイ
+          items:
+            - name: 概要
+              href: deploy-rms-connector.md
+            - name: コネクタのインストールと構成
+              href: install-configure-rms-connector.md
+            - name: サーバーの構成
+              items:
+                - name: 概要
+                  href: configure-servers-rms-connector.md
+                - name: レジストリの設定
+                  href: rms-connector-registry-settings.md
+            - name: コネクタの監視
+              href: monitor-rms-connector.md
+        - name: Azure Rights Management サービスの検証
+          href: verify.md
+        - name: Azure Information Protection レポートの使用
+          href: reports-aip.md
+        - name: ユーザーにファイルを保護するためのヘルプを提供する
+          href: help-users.md
+        - name: ログ記録と使用状況の分析
+          href: log-analyze-usage.md
+        - name: Azure Information Protection の個人データの管理
+          href: manage-personal-data.md
+        - name: 使用停止と非アクティブ化
+          href: decommission-deactivate.md
+        - name: PowerShell での管理
+          items:
+            - name: 概要
+              href: administer-powershell.md
+            - name: AIPService PowerShell モジュールのインストール
+              href: install-powershell.md
+    - name: クライアントのデプロイと使用
+      items:
+        - name: 概要
+          href: ./rms-client/use-client.md
+        - name: 統合ラベル付けクライアントの管理者ガイド
+          items:
+            - name: 概要
+              href: ./rms-client/clientv2-admin-guide.md
+            - name: ユーザー向けクライアントのインストール
+              href: ./rms-client/clientv2-admin-guide-install.md
+            - name: カスタマイズ
+              href: ./rms-client/clientv2-admin-guide-customizations.md
+            - name: クライアントのファイルと使用状況ログ
+              href: ./rms-client/clientv2-admin-guide-files-and-logging.md
+            - name: PowerShell コマンド
+              href: ./rms-client/clientv2-admin-guide-powershell.md
+        - name: 統合ラベル付けクライアントのユーザー ガイド
+          items:
+            - name: 概要
+              href: ./rms-client/clientv2-user-guide.md
+            - name: クライアントのダウンロードとインストール
+              href: ./rms-client/install-unifiedlabelingclient-app.md
+            - name: ファイルや電子メールを分類する
+              href: ./rms-client/clientv2-classify.md
+            - name: ファイルや電子メールを分類して保護する
+              href: ./rms-client/clientv2-classify-protect.md
+            - name: 保護されているファイルを開く
+              href: ./rms-client/clientv2-view-use-files.md
+            - name: ラベルと保護の削除
+              href: ./rms-client/clientv2-remove-label-protection.md
+        - name: iOS 用と Android 用の Azure Information Protection
+          href: ./rms-client/mobile-app-faq.md
+        - name: 保護された PDF リーダー
+          href: ./rms-client/protected-pdf-readers.md
+    - name: クラシック クライアント シナリオの操作方法
+      items:
+        - name: 保護のみの場合のロードマップ
+          href: deployment-roadmap-protect-only.md
+        - name: Hold Your Own Key (HYOK) 保護の構成
+          href: configure-adrms-restrictions.md
+        - name: Azure Information Protection ポリシーの構成
+          items:
+            - name: AIP ポリシーについて
+              href: overview-policy.md
+            - name: ポリシー構成の概要
               href: configure-policy.md
             - name: 既定のポリシー
               href: configure-policy-default.md
@@ -177,16 +255,6 @@
           href: secure-collaboration-documents.md
         - name: Azure Information Protection ラベルのメール フロー ルールの構成
           href: configure-exo-rules.md
-        - name: Azure Information Protection 統合ラベル付けスキャナー
-          items:
-            - name: 概要
-              href: deploy-aip-scanner.md
-            - name: 統合ラベル付けスキャナーの前提条件
-              href: deploy-aip-scanner-prereqs.md
-            - name: 統合ラベル付けスキャナーを構成してインストールする
-              href: deploy-aip-scanner-configure-install.md
-            - name: 統合ラベル付けスキャナーを実行する
-              href: deploy-aip-scanner-manage.md
         - name: Azure Information Protection クラシック スキャナー
           items:
             - name: 概要
@@ -197,137 +265,55 @@
               href: deploy-aip-scanner-configure-install-classic.md
             - name: クラシック スキャナーを実行する
               href: deploy-aip-scanner-manage-classic.md
-        - name: Azure Information Protection のレポート
-          href: reports-aip.md
-        - name: RMS コネクタのデプロイ
+            - name: Azure Information Protection スキャナー - 以前のバージョン
+              href: deploy-aip-scanner-previousversions.md
+        - name: Azure Information Protection クラシック クライアント
           items:
             - name: 概要
-              href: deploy-rms-connector.md
-            - name: コネクタのインストールと構成
-              href: install-configure-rms-connector.md
-            - name: サーバーの構成
+              href: ./rms-client/aip-client.md
+            - name: バージョン履歴
+              href: ./rms-client/client-version-release-history.md
+            - name: 管理者ガイド
               items:
                 - name: 概要
-                  href: configure-servers-rms-connector.md
-                - name: レジストリの設定
-                  href: rms-connector-registry-settings.md
-            - name: コネクタの監視
-              href: monitor-rms-connector.md
-        - name: Azure Rights Management サービスの検証
-          href: verify.md
-        - name: ユーザーにファイルを保護するためのヘルプを提供する
-          href: help-users.md
-        - name: ログ記録と使用状況の分析
-          href: log-analyze-usage.md
-        - name: テナント キーに対する操作
-          items:
-            - name: 概要
-              href: operations-tenant-key.md
-            - name: マイクロソフト管理
-              href: operations-microsoft-managed-tenant-key.md
-            - name: お客様が管理
-              href: operations-customer-managed-tenant-key.md
-        - name: Azure Information Protection の個人データの管理
-          href: manage-personal-data.md
-        - name: 使用停止と非アクティブ化
-          href: decommission-deactivate.md
-        - name: PowerShell での管理
-          items:
-            - name: 概要
-              href: administer-powershell.md
-            - name: AIPService PowerShell モジュールのインストール
-              href: install-powershell.md
-    - name: クライアントのデプロイと使用
-      items:
-        - name: クライアントのデプロイ ソリューション
-          items:
-            - name: 概要
-              href: ./rms-client/use-client.md
-            - name: Azure Information Protection 統合ラベル付けクライアント
+                  href: ./rms-client/client-admin-guide.md
+                - name: ユーザー向けクライアントのインストール
+                  href: ./rms-client/client-admin-guide-install.md
+                - name: カスタマイズ
+                  href: ./rms-client/client-admin-guide-customizations.md
+                - name: クライアントのファイルと使用状況ログ
+                  href: ./rms-client/client-admin-guide-files-and-logging.md
+                - name: ドキュメント追跡
+                  href: ./rms-client/client-admin-guide-document-tracking.md
+                - name: サポートされるファイルの種類
+                  href: ./rms-client/client-admin-guide-file-types.md
+                - name: PowerShell コマンド
+                  href: ./rms-client/client-admin-guide-powershell.md
+            - name: ユーザー ガイド
               items:
                 - name: 概要
-                  href: ./rms-client/aip-clientv2.md
-                - name: バージョン履歴
-                  href: ./rms-client/unifiedlabelingclient-version-release-history.md
-                - name: 管理者ガイド
-                  items:
-                    - name: 概要
-                      href: ./rms-client/clientv2-admin-guide.md
-                    - name: ユーザー向けクライアントのインストール
-                      href: ./rms-client/clientv2-admin-guide-install.md
-                    - name: カスタマイズ
-                      href: ./rms-client/clientv2-admin-guide-customizations.md
-                    - name: クライアントのファイルと使用状況ログ
-                      href: ./rms-client/clientv2-admin-guide-files-and-logging.md
-                    - name: サポートされるファイルの種類
-                      href: ./rms-client/clientv2-admin-guide-file-types.md
-                    - name: PowerShell コマンド
-                      href: ./rms-client/clientv2-admin-guide-powershell.md
-                - name: ユーザー ガイド
-                  items:
-                    - name: 概要
-                      href: ./rms-client/clientv2-user-guide.md
-                    - name: クライアントのダウンロードとインストール
-                      href: ./rms-client/install-unifiedlabelingclient-app.md
-                    - name: ファイルや電子メールを分類する
-                      href: ./rms-client/clientv2-classify.md
-                    - name: ファイルや電子メールを分類して保護する
-                      href: ./rms-client/clientv2-classify-protect.md
-                    - name: 保護されているファイルを開く
-                      href: ./rms-client/clientv2-view-use-files.md
-                    - name: ラベルと保護の削除
-                      href: ./rms-client/clientv2-remove-label-protection.md
-            - name: Azure Information Protection クライアント (クラシック)
-              items:
-                - name: 概要
-                  href: ./rms-client/aip-client.md
-                - name: バージョン履歴
-                  href: ./rms-client/client-version-release-history.md
-                - name: 管理者ガイド
-                  items:
-                    - name: 概要
-                      href: ./rms-client/client-admin-guide.md
-                    - name: ユーザー向けクライアントのインストール
-                      href: ./rms-client/client-admin-guide-install.md
-                    - name: カスタマイズ
-                      href: ./rms-client/client-admin-guide-customizations.md
-                    - name: クライアントのファイルと使用状況ログ
-                      href: ./rms-client/client-admin-guide-files-and-logging.md
-                    - name: ドキュメント追跡
-                      href: ./rms-client/client-admin-guide-document-tracking.md
-                    - name: サポートされるファイルの種類
-                      href: ./rms-client/client-admin-guide-file-types.md
-                    - name: PowerShell コマンド
-                      href: ./rms-client/client-admin-guide-powershell.md
-                - name: ユーザー ガイド
-                  items:
-                    - name: 概要
-                      href: ./rms-client/client-user-guide.md
-                    - name: クライアントのダウンロードとインストール
-                      href: ./rms-client/install-client-app.md
-                    - name: ファイルや電子メールを分類する
-                      href: ./rms-client/client-classify.md
-                    - name: ファイルや電子メールを分類して保護する
-                      href: ./rms-client/client-classify-protect.md
-                    - name: ドキュメントを追跡および取り消す
-                      href: ./rms-client/client-track-revoke.md
-                    - name: 保護されているファイルを開く
-                      href: ./rms-client/client-view-use-files.md
-                    - name: ラベルと保護の削除
-                      href: ./rms-client/client-remove-label-protection.md
-                    - name: 保護のみモード
-                      href: ./rms-client/client-protection-only-mode.md
-                    - name: RMS 共有アプリケーションで実行していたタスク
-                      href: ./rms-client/upgrade-client-app.md
-        - name: iOS 用と Android 用の Azure Information Protection モバイル アプリ
-          href: ./rms-client/mobile-app-faq.md
-        - name: 保護された PDF リーダー
-          href: ./rms-client/protected-pdf-readers.md
-        - name: RMS クライアントのデプロイに関する注意事項
-          href: ./rms-client/client-deployment-notes.md
+                  href: ./rms-client/client-user-guide.md
+                - name: クライアントのダウンロードとインストール
+                  href: ./rms-client/install-client-app.md
+                - name: ファイルや電子メールを分類する
+                  href: ./rms-client/client-classify.md
+                - name: ファイルや電子メールを分類して保護する
+                  href: ./rms-client/client-classify-protect.md
+                - name: ドキュメントを追跡および取り消す
+                  href: ./rms-client/client-track-revoke.md
+                - name: 保護されているファイルを開く
+                  href: ./rms-client/client-view-use-files.md
+                - name: ラベルと保護の削除
+                  href: ./rms-client/client-remove-label-protection.md
+                - name: 保護のみモード
+                  href: ./rms-client/client-protection-only-mode.md
+                - name: RMS 共有アプリケーションで実行していたタスク
+                  href: ./rms-client/upgrade-client-app.md
         - name: Windows Server FCI での RMS 保護
           items:
-            - name: 概要
+            - name: Windows Server を実行し、ファイル分類インフラストラクチャを使用するファイル サーバー
+              href: file-server-support.md
+            - name: ファイル分類インフラストラクチャの構成
               href: ./rms-client/configure-fci.md
             - name: PowerShell スクリプト
               href: ./rms-client/fci-script.md
@@ -481,6 +467,8 @@
           href: faqs-infoprotect.md
         - name: よくあるご質問 - データ保護
           href: faqs-rms.md
+        - name: よくあるご質問 - クラシック クライアントのみ
+          href: faqs-classic.md
     - name: 既知の問題
       href: known-issues.md
     - name: 情報とサポート
