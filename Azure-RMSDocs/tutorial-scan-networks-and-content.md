@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 432004443bf684967849b5b91acd9052cbf07eec
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 17ee31a93e21314d9881af14feafc81ddb550092
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94924977"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384640"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>チュートリアル: Azure Information Protection (AIP) スキャナーを使用して機密コンテンツを検出する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***関連する内容**:[Windows 用の Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection クライアントには、システム管理者がオンプレミスのファイル リポジトリをスキャンして機密コンテンツを検出できるようにするためのオンプレミスのスキャナーが用意されています。 
 
@@ -38,7 +38,7 @@ Azure Information Protection クライアントには、システム管理者が
 > このバージョンのクライアントおよびスキャナーがインストールされていない場合は、[チュートリアルの前提条件](#tutorial-prerequisites)を確認してから、「[コンテンツ スキャン ジョブを定義して実行する](#define-and-run-your-content-scan-job)」に進んでください。
 
 
-**必要な時間:** この構成は 15 分で完了します。
+**必要な時間**:この構成は 15 分で完了します。
 
 ## <a name="tutorial-prerequisites"></a>チュートリアルの前提条件
 
@@ -64,7 +64,7 @@ Azure Information Protection クライアントには、システム管理者が
 > この機能は、バージョン [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) 以降でのみ使用することができ、現在プレビュー段階にあります。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。
 > 
 
-**ネットワーク スキャン ジョブを作成するには:**
+**ネットワーク スキャン ジョブを作成するには**:
 
 1. [サポートされている管理者](#tutorial-prerequisites)として [Azure portal](https://portal.azure.com/) にサインインし、 **[Azure Information Protection]** 領域に移動します。
         
@@ -177,7 +177,7 @@ Azure Information Protection クライアントには、システム管理者が
 > [!TIP]
 > 結果が空である場合に、意味のあるスキャンを実行したいときは、コンテンツ スキャン ジョブに含まれているリポジトリの 1 つに **支払い情報** という名前のファイルを作成します。 次の内容を含むファイルを保存します。
 > 
-> **クレジット カード:** 2384 2328 5436 3489
+> **クレジット カード**:2384 2328 5436 3489
 >
 > スキャンをもう一度実行して、結果の違いを確認します。
 > 
@@ -191,7 +191,7 @@ Azure Information Protection クライアントには、システム管理者が
 |Type  |説明  |
 |---------|---------|
 |**.txt 概要ファイル**     |  スキャンにかかった時間、スキャンされたファイルの数、情報の種類と一致したファイルの数が含まれています。       |
-|**.csv 詳細ファイル。**     | スキャンされた各ファイルの詳細な説明が含まれます。 ディレクトリには、スキャン サイクルごとに最大で 60 のレポートを保持できます。         |
+|**.csv 詳細ファイル**     | スキャンされた各ファイルの詳細な説明が含まれます。 ディレクトリには、スキャン サイクルごとに最大で 60 のレポートを保持できます。         |
 |     |         |
 
 ## <a name="next-steps"></a>次のステップ
@@ -201,7 +201,7 @@ Azure Information Protection クライアントには、システム管理者が
 - [チュートリアル: Azure Information Protection (AIP) を使用した過剰共有の防止](tutorial-preventing-oversharing.md)
 - [チュートリアル: Azure Information Protection (AIP) クラシック クライアントから統合ラベル付けクライアントへの移行](tutorial-migrating-to-ul.md)
 
-**関連項目:**
+**関連項目**:
 
 - [Azure Information Protection 統合ラベル付けスキャナーとは](deploy-aip-scanner.md)
 - [Azure Information Protection 統合ラベル付けスキャナーをインストールおよびデプロイするための前提条件](deploy-aip-scanner-prereqs.md)

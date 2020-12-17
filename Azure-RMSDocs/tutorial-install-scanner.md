@@ -10,22 +10,22 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: a645e8e6cbda725a167f789481579be070e3c99c
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 73bcb5e636b8a5e4456ad80f8435a27dfc898339
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503691"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384776"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>チュートリアル:Azure Information Protection (AIP) 統合ラベル付けスキャナーのインストール
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *[Windows 用 Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)の場合の手順*
+> ***関連する内容**:[Windows 用の Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 このチュートリアルでは、Azure Information Protection (AIP) オンプレミス スキャナーをインストールする方法について説明します。 このスキャナーを使用すると、AIP 管理者は、自分たちのネットワークやコンテンツ共有をスキャンして機密データがないかを調べ、自分の組織のポリシーで構成されているように分類および保護のラベルを適用することができます。
 
-**必要な時間:** このチュートリアルは 30 分で完了できます。
+**必要な時間**:このチュートリアルは 30 分で完了できます。
 
 ## <a name="tutorial-prerequisites"></a>チュートリアルの前提条件
 
@@ -154,7 +154,7 @@ Azure Information Protection が Azure portal で使用できないこともあ�
 
 「[非対話形式でファイルに Azure Information Protection のラベル付けをする方法](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
 
-**スキャナー用の Azure AD トークンを取得するには:**
+**スキャナー用の Azure AD トークンを取得するには**:
 
 1. Azure portal で、認証用のアクセス トークンを指定するための Azure AD アプリケーションを作成します。
 
@@ -193,7 +193,7 @@ AIP 統合ラベル付けクライアントのバージョン [2.8.85.0](rms-cli
 > [!NOTE]
 > 現在、この機能はプレビュー段階にあります。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。
 
-**ネットワーク探索サービスをインストールするには:**
+**ネットワーク探索サービスをインストールするには**:
 
 1. スキャナー コンピューター上で、管理者として PowerShell セッションを開きます。
 
@@ -247,7 +247,7 @@ AIP 統合ラベル付けクライアントのバージョン [2.8.85.0](rms-cli
 >危険性の高いリポジトリをスキャンして機密データがないかを調べてから、そのデータを分類して外部ユーザーから保護を行うには、検出されたリポジトリの詳細でコンテンツ スキャン ジョブを更新します。
 >
 
-**関連項目:**
+**関連項目**:
 
 - [Azure Information Protection 統合ラベル付けスキャナーとは](deploy-aip-scanner.md)
 - [Azure Information Protection 統合ラベル付けスキャナーをインストールおよびデプロイするための前提条件](deploy-aip-scanner-prereqs.md)

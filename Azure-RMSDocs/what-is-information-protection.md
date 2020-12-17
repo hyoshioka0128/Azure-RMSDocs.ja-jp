@@ -9,19 +9,21 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-ms.openlocfilehash: 7ee4c5c26792a56c2637d62a67e2921df8c99a61
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: aa41b20152df55f7153f4c8cedd013041460b596
+ms.sourcegitcommit: ad2b3e0b6f438f9ffc0bca975653bd13f1b7d131
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94924953"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514934"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection (AIP) はクラウドベースのソリューションです。これにより、組織はコンテンツにラベルを適用してドキュメントや電子メールの検出、分類、および保護を行うことができます。
 
@@ -65,19 +67,19 @@ Azure Information Protection オンプレミス スキャナーを使用する�
 
 ## <a name="microsoft-information-protection-sdk"></a>Microsoft Information Protection SDK
 
-Microsoft Information Protection SDK により、機密ラベルの対象がサードパーティのアプリおよびサービスまで拡張されます。 開発者は SDK を使用して、ファイルにラベルと保護を適用するためのネイティブ サポートを構築することができます。
+Microsoft Information Protection SDK により、機密ラベルの対象がサードパーティのアプリおよびサービスまで拡張されます。 開発者は SDK を使用して、ファイルにラベルと保護を適用するための組み込みのサポートを構築することができます。
 
 たとえば、次の場合に MIP SDK を使用できます。
 
 - エクスポート時に分類ラベルをファイルに適用する基幹業務アプリケーション。
-- CAD/CAM 設計プリケーションが、Microsoft Information Protection のラベル作成に対して、ネイティブ サポートを提供する。
+- CAD/CAM 設計アプリケーションにより、Microsoft Information Protection のラベル作成に対して、組み込みのサポートを提供する。
 - Cloud Access Security Broker またはデータ損失防止ソリューションが、Azure Information Protection で暗号化されたデータに対して推論する。
 
 詳細については、[Microsoft Information Protection SDK の概要](/information-protection/develop/overview)に関するページを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
-**AIP の使用を開始するには、** 統合ラベル付けクライアントとスキャナーをダウンロードしてインストールします。
+**AIP の使用を開始する** には、統合ラベル付けクライアントとスキャナーをダウンロードしてインストールします。
 
 - [無料評価版にサインアップする](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)  (Enterprise Mobility + Security E5)
 - [クライアントのダウンロード](https://www.microsoft.com/download/details.aspx?id=53018)
@@ -101,10 +103,20 @@ Microsoft Information Protection SDK により、機密ラベルの対象がサ�
 |**FAQ と既知の問題**     | [Azure Information Protection に関してよく寄せられる質問](faqs.md) </br> [既知の問題 - Azure Information Protection](known-issues.md)       |
 |**サポート オプション**     | [Azure Information Protection のサポート オプション](information-support.md)        |
 |**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
-|**Ignite 2020**     |  - [クラウド、オンプレミス、エンドポイント、およびリモート ワークの環境にわたって情報の保護と統制を強化する](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)</br>- [インテリジェントなデータ保護およびコンプライアンス ソリューションを使用してリスク管理のヒーローになる](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)</br>- [Microsoft Information Protection でデータの把握、保護を行い、データ損失を防ぐ](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)</br>- [エキスパートに質問する: 情報保護と統制、インサイダー リスク、コンプライアンス管理など、Microsoft コンプライアンスに関することを何でも質問してください。](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)       |
 |**新機能**     | Microsoft 365 および SharePoint 管理センターでの AIP に関連する新機能については、以下をご覧ください。   </br>- [Microsoft 365 管理センターの新機能](/microsoft-365/admin/whats-new-in-preview) </br>- [SharePoint 管理センターの新機能](/sharepoint/what-s-new-in-admin-center)     |
 |     |         |
 
+#### <a name="top-ignite-sessions"></a>上位の Ignite セッション
+
+Ignite 2020 の次の録画されたセッションをご覧ください。
+
+- [クラウド、オンプレミス、エンドポイント、およびリモート ワークの環境にわたって情報の保護と統制を強化する](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
+
+- [インテリジェントなデータ保護およびコンプライアンス ソリューションを使用してリスク管理のヒーローになる](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)
+
+- [Microsoft Information Protection でデータの把握、保護を行い、データ損失を防ぐ](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
+
+- [エキスパートに質問する:情報保護と統制、インサイダー リスク、コンプライアンス管理など、Microsoft コンプライアンスに関することを何でも質問してください。](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
 ## <a name="aips-classic-client"></a>AIP のクラシック クライアント
 
 Azure Information Protection クラシック クライアントは、AIP の以前のバージョンで、管理者は Azure portal 内で分類ラベルを直接管理することができます。
@@ -114,6 +126,6 @@ Azure portal 内で管理される AIP ラベルは、統合ラベル付けプ�
 これらの機能に加えて、SharePoint、Microsoft 365 アプリ、Web およびモバイル デバイス用 Outlook、PowerBI データ保護などをサポートする統合ラベルに移行することをお勧めします。 詳細については、「[チュートリアル:  Azure Information Protection (AIP) クラシック クライアントから、統合ラベル付けクライアントへの移行](tutorial-migrating-to-ul.md)」を参照してください。
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 
 >
 > このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けソリューションを使用する統一されたラベル付けに移行することができます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。

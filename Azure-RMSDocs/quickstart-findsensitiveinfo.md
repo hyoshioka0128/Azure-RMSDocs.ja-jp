@@ -4,28 +4,31 @@ description: Azure Information Protection スキャナーを使用して、オ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/19/2020
+ms.date: 11/10/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 0ab3f66437882f6c458b3e4793be935d5f14686d
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 2b5bc28e18778a3ad7d4304632611df102577f92
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503657"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386408"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用の Azure Information Protection クラシック クライアントまたは統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE]
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 このクイックスタートでは、SharePoint によるスキャンの許可を有効にし、また Azure Information Protection スキャナーのインストールと構成を行って、オンプレミスのデータ ストアに格納している機密情報を検索します。
 
-**必要な時間:** この構成は 15 分未満で完了します。
+**必要な時間**:この構成は 15 分未満で完了します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -191,10 +194,7 @@ Uninstall-AIPScanner
 
 このコマンドでは以下の項目は削除されません。このクイック スタートの後にこれらを削除する場合は、手動で削除する必要があります。
 
-- Azure Information Protection スキャナーをインストールしたときに、Install-AIPScanner コマンドレットを実行することによって作成された SQL Server データベース:
-
-    - クラシック クライアントの場合: **AIPScanner_\<profile>**
-    - 統合ラベル付けクライアントの場合: **AIPScannerUL_\<profile_name>**
+- Azure Information Protection スキャナーをインストールしたときに、Install-AIPScanner コマンドレットを実行することによって作成された SQL Server データベース: **AIPScanner_\<profile>**
 
 - **%*localappdata*%\Microsoft\MSIP\Scanner\Reports** にあるスキャナー レポート。
 
@@ -206,12 +206,5 @@ Uninstall-AIPScanner
 
 機密情報が含まれているファイルを分類して保護する場合は、自動的な分類と保護のためにラベルを構成する必要があります。
 
-**クラシック クライアントの場合:**
-
 - [Azure Information Protection 用の自動および推奨分類の条件を構成する方法](configure-policy-classification.md)
 - [Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)
-
-**統合ラベル付けクライアントの場合:**
-
-- [機密ラベルをコンテンツに自動的に適用する](/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [機密ラベルの暗号化を使用してコンテンツへのアクセスを制限する](/microsoft-365/compliance/encryption-sensitivity-labels)

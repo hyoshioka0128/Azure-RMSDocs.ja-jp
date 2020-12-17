@@ -1,5 +1,5 @@
 ---
-title: チュートリアル - Azure Information Protection (AIP) クラシック クライアントから統合ラベル付けクライアントへの移行
+title: チュートリアル - Azure Information Protection (AIP) クラシック クライアントから統合ラベル付けソリューションへの移行
 description: Azure Information Protection (AIP) クラシック クライアントから統合ラベル付けクライアントへの移行に関するステップバイステップのチュートリアルです。
 author: batamig
 ms.author: bagol
@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f988ba63671164463a4ad1b566daab7df123e057
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 649983dd43145b5752ed4d65f257e3def4278533
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503640"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384657"
 ---
-# <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-the-unified-labeling-client"></a>チュートリアル:Azure Information Protection (AIP) クラシック クライアントから統合ラベル付けクライアントへの移行
+# <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-unified-labeling-solution"></a>チュートリアル:Azure Information Protection (AIP) クラシック クライアントから統合ラベル付けソリューションへの移行
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の Azure Information Protection のクラシック クライアントとラベル管理は、2021 年 3 月 31 日をもって非推奨になります。
@@ -29,9 +29,9 @@ ms.locfileid: "94503640"
 > この期間に、Azure Information Protection クラシック クライアントの現在のすべてのお客様が、Microsoft Information Protection の統合ラベル付けソリューションを使用する AIP 統合ラベル付けに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 
-このチュートリアルでは、組織の Azure Information Protection デプロイをクラシック クライアントから統合ラベル付けクライアントに移行する方法について説明します。
+このチュートリアルでは、クラシック クライアントから組織の Azure Information Protection のデプロイを、および Azure portal でのラベルとラベル付けポリシーの管理を、統合ラベル付けソリューションと [Microsoft 365 の秘密度ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)に移行する方法について説明します。
 
-**必要な時間:** 移行を完了するために必要な時間は、お使いのポリシーの複雑さと使用する AIP 機能によって異なります。 バックグラウンドで移行する間は、クラシック クライアントを使用し続けることができます。
+**必要な時間**:移行を完了するために必要な時間は、お使いのポリシーの複雑さと使用する AIP 機能によって異なります。 バックグラウンドで移行する間は、クラシック クライアントを使用し続けることができます。
 
 このチュートリアルでは、各手順の概要について説明し、詳細については、Microsoft ドキュメントの他の場所にある関連セクションを参照してください。
 
@@ -43,9 +43,9 @@ ms.locfileid: "94503640"
 > * ポリシーを統合ラベル付けプラットフォームにコピーする
 > * 統合ラベル付けクライアントのデプロイ
 
-## <a name="why-migrate-to-the-unified-labeling-platform"></a>統合ラベル付けプラットフォームに移行する理由
+## <a name="why-migrate-to-the-unified-labeling-solution"></a>統合ラベル付けソリューションへ移行する理由
 
-[クラシック クライアントの非推奨化が予定されている](https://aka.ms/aipclassicsunset)ことに加えて、統合ラベル付けクライアントに移行することで、デジタル資産全体の機密データを効果的に保護できます。 移行が完了したら、Microsoft 365 クラウド サービス、オンプレミス、サードパーティの SaaS アプリケーションで Microsoft Information Protection (MIP) を使用します。
+[クラシック クライアントの非推奨化が予定されている](https://aka.ms/aipclassicsunset)ことに加えて、統合ラベル付けソリューションに移行することで、デジタル資産全体の機密データを効果的に保護できます。 移行が完了したら、Microsoft 365 クラウド サービス、オンプレミス、サードパーティの SaaS アプリケーションで Microsoft Information Protection (MIP) を使用します。
 
 MIP では、多くの基本的な情報保護機能に対して組み込みのラベル付けサービスをサポートしているため、組み込みのラベル付けでサポートされていない追加機能に対してのみクライアントの使用を予約できます。
 
@@ -64,7 +64,7 @@ AIP クラシック クライアントで使用できるほとんどの機能は
 統合ラベル付けクライアント使用時に、使用する Information Protection の機能がどのように異なるかを理解するには、次の記事を確認してください。
 
 - [Microsoft 365 の組み込みラベル付け機能の詳細](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
-- [クラシックおよび統合ラベル付けクライアントのサポートの比較](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Windows コンピューターのラベル付けソリューションを比較する](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [統合ラベル付け管理センターで、既定ではサポートされていないラベル設定を管理する方法の詳細](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers)
 
 > [!TIP]
@@ -147,7 +147,7 @@ Azure portal に保存しているすべてのポリシーを統合ラベル付�
     |考慮事項  |説明  |
     |---------|---------|
     |**ポリシーをコピーすると、"*すべて*" のポリシーがコピーされる**     |     ポリシーのコピーで、特定のポリシーだけをコピーすることはできません。現在は、すべてのポリシーをコピーするか、まったくしないのどちらかです。   |
-    |**コピーすると、ポリシーが自動的に発行される**     |  統合ラベル付けクライアントにコピーしたポリシーは、統合ラベル付けがサポートされているすべてのクライアントに自動的に発行されます。 <br /><br />   **重要:** ポリシーを発行しない場合は、コピーしないでください。     |
+    |**コピーすると、ポリシーが自動的に発行される**     |  統合ラベル付けクライアントにコピーしたポリシーは、統合ラベル付けがサポートされているすべてのクライアントに自動的に発行されます。 <br /><br />   **重要**:ポリシーを発行しない場合は、コピーしないでください。     |
     |**コピーすると、同じ名前の既存のポリシーが上書きされる**     |   管理センターに同じ名前のポリシーが既に存在する場合、ポリシーをコピーすると、そのポリシーで定義されているすべての設定が上書きされます。   <br /><br />Azure portal からコピーされるすべてのポリシーには、`AIP_<policy name>` という構文で名前が付けられます。    |
     |**一部のクライアント設定はコピーされない**     | 一部のクライアント設定は、統合ラベル付けプラットフォームにコピーされないため、移行後に手動で構成する必要があります。 <br /><br />詳細については、「[ラベル付け詳細設定を構成する](#configuring-advanced-labeling-settings)」を参照してください|
     | | |
@@ -261,7 +261,7 @@ Microsoft 365 Apps for Enterprise がインストールされている Windows �
 
 詳細については、次を参照してください。 
 
-- [Windows コンピューターのラベル付けクライアントの比較](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Windows コンピューターのラベル付けソリューションを比較する](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [クイック スタート: Azure Information Protection (AIP) 統合ラベル付けクライアントのデプロイ](quickstart-deploy-client.md)
 
 Azure Information Protection 統合ラベル付けクライアントは、[Microsoft ダウンロード センター](https://aka.ms/aipclient)からダウンロードできます。 

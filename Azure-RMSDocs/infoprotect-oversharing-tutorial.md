@@ -10,23 +10,23 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 6bb35700a025105b584b93b5a38219b567dbe99c
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: ff00e9731041344aac8a11b990f990efb113074e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264431"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381818"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>チュートリアル:Azure Information Protection を構成して Outlook を使用した情報の過剰な共有を制御する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[クラシック クライアントのみ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
-> **AIP クラシック クライアントをデプロイするには**、サポート チケットを作成してダウンロード アクセスを取得します。
+> **AIP クラシック クライアントをデプロイする** には、サポート チケットを作成してダウンロードへのアクセスを取得します。
 
 このチュートリアルでは、以下の内容を学習します。
 > [!div class="checklist"]
@@ -55,7 +55,7 @@ ms.locfileid: "88264431"
 
 1. Windows (Windows 7 Service Pack 1 以降) を搭載しているコンピューター。また、このコンピューターで Outlook にサインインできる。 このチュートリアル中に Outlook を複数回再起動する準備をしておいてください。
 
-1. ご利用の Windows コンピューター (Windows 7 Service Pack 1 以降) にインストールされている Azure Information Protection クライアント (クラシック)。 
+1. ご利用の Windows コンピューター (Windows 7 Service Pack 1 以降) にインストールされている Azure Information Protection クラシック クライアント。 
 
 > [!TIP]
 > Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
@@ -100,7 +100,7 @@ ms.locfileid: "88264431"
 
 1. **[Azure Information Protection - ポリシー]** ペインで、**[新しいポリシーの追加]** を選択します。 既存のグローバル ポリシーからラベルと設定を示す **[ポリシー]** ペインが表示されます。
 
-2. **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** のポリシー名を指定し、必要に応じて、**Outlook を使用した過剰な共有を制御するクライアントの詳細設定**という説明を指定します。
+2. **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** のポリシー名を指定し、必要に応じて、**Outlook を使用した過剰な共有を制御するクライアントの詳細設定** という説明を指定します。
 
 3. **[Specify which users/groups get this policy]\(このポリシーを取得するユーザー/グループを指定する\)** を選択し、後のペインを使用して、自分のユーザー アカウントを指定します。
 
@@ -440,4 +440,4 @@ Outlook を再起動すると、このチュートリアルで構成した設定
 
 テストを速く済ませるために、このチュートリアルでは、添付ファイルのない、1 人の受信者への電子メール メッセージを使用しました。 しかし、複数の受信者、複数のラベルを含む同じメソッドを適用し、ユーザーにとってラベル付けの状態がわかりにくい添付ファイルにも同じロジックを適用することもできます。 たとえば、電子メール メッセージ自体には [公開] のラベルが付けられていますが、添付の PowerPoint プレゼンテーションには [全般] のラベルが付けられています。 構成オプションについて詳しくは、管理者ガイドの次のセクションをご覧ください。[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
-管理者ガイドには、クライアントの動作のカスタマイズに使用できるその他のクライアントの詳細設定に関する情報も含まれます。 完全なリストについては、「[使用可能なクライアントの詳細設定](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings)」を参照してください。
+管理者ガイドには、クライアントの動作のカスタマイズに使用できるその他のクライアントの詳細設定に関する情報も含まれます。 完全なリストについては、「[使用可能なクライアントの詳細設定](./rms-client/client-admin-guide-customizations.md#available-advanced-classic-client-settings)」を参照してください。

@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 851bc48926c6634fc7d5a529aa2910e11974f3a7
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 10f142fb09d8ad65b773f5e02f03233b454da240
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503419"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384538"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>チュートリアル:Azure Information Protection (AIP) を使用した Outlook での過剰共有の防止
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>**適用対象*:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->*手順:[Windows 用の Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***関連する内容**:[Windows 用の Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 システム管理者は、組織のコンテンツがセキュリティで保護され、信頼されたユーザーとのみ共有されるように保証する必要があります。 ユーザーがコンテンツを不適切に共有する最も一般的な方法の 1 つが、電子メールです。 特定のユーザーのみにアクセスを制限する、信頼された外部ユーザーとのみコンテンツを共有するなど、Outlook を使用した過剰共有を防ぐようにポリシーを構成します。
 
@@ -316,9 +316,9 @@ ms.locfileid: "94503419"
 
 実行したテストごとにログに記録された情報イベントが表示されます。メッセージとユーザー応答の両方の詳細が含まれます。
 
-- **警告メッセージ:** 情報 ID 301
-- **理由メッセージ:** 情報 ID 302
-- **ブロック メッセージ:** 情報 ID 303
+- **警告メッセージ**:情報 ID 301
+- **理由メッセージ**:情報 ID 302
+- **ブロック メッセージ**:情報 ID 303
 
 次に例を示します。
 
