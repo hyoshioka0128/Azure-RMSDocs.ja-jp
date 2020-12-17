@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2b621f78610d411a7ab980429fcb1dd960cbebff
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: b5e64f9537ee9c8f7f684e708c5de35ec28f3400
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386221"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583372"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -69,10 +69,11 @@ Azure Information Protection の認証と承認をサポートするには、Azu
 
 条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、次をご覧ください。[条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか。](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Office 2010 を使用する場合、証明書ベースまたは多要素認証を使用する場合、UPN 値がユーザーのメール アドレスと一致しない場合など、特定のシナリオには追加の前提条件が必要です。 詳細については、「[Azure Information Protection に対する Azure AD の追加要件](requirements-azure-ad.md)」をご覧ください。
+証明書ベースまたは多要素認証を使用する場合、UPN 値がユーザーのメール アドレスと一致しない場合、[Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support) を使用する場合など、特定のシナリオには追加の前提条件が必要です。
 
-詳細については、次をご覧ください。
+   詳細については、次を参照してください。
 
+- [Azure Information Protection に対する Azure AD の追加要件](requirements-azure-ad.md)
 - [What is Azure AD Directory? (Azure AD ディレクトリとは)](/azure/active-directory/fundamentals/active-directory-whatis)
 - [オンプレミスの Active Directory ドメインと Azure Active Directory を統合する](/azure/architecture/reference-architectures/identity/azure-ad)。
 
@@ -154,7 +155,7 @@ Office の他のエディションは、Rights Management サービスを使用�
 
 ラベルは、Office ドキュメントの上部に表示されるバーに表示されます。統合ラベル付けクライアントの **[検出感度]** ボタンまたはクラシック クライアントの **[保護]** ボタンからアクセスできます。
 
-詳細については、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」をご覧ください。
+詳細については、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」および「[拡張サポートでの Windows および Office のバージョン用の AIP](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
 
 ### <a name="office-features-and-capabilities-not-supported"></a>サポートされていない Office の特徴と機能
 

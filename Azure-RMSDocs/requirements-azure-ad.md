@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 43aaafadaabbf26309c4a40926b970d90aeadc47
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 7ac67d72d329f9782a80c434f936cadad3e13882
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386238"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583355"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Azure Information Protection に対する Azure AD の追加要件
 
@@ -37,7 +37,9 @@ Azure Information Protection とそのデータ保護サービスである Azure
 
 ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、これらのコンピューターで Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
 
-Azure Information Protection 統合ラベル付けクライアントをデプロイすることをお勧めします。 まだアップグレードしていない場合は、[Azure Information Protection のクラシック クライアント](./rms-client/aip-client.md)がデプロイされたままになっている可能性があります。 詳しくは、「[クライアント側での Azure Information Protection](rms-client/use-client.md)」をご覧ください。
+Azure Information Protection 統合ラベル付けクライアントをデプロイすることをお勧めします。 まだアップグレードしていない場合は、[Azure Information Protection のクラシック クライアント](./rms-client/aip-client.md)がデプロイされたままになっている可能性があります。 
+
+詳細については、「[Azure Information Protection のクライアント側](rms-client/use-client.md)」および「[拡張サポートでの Windows および Office バージョンの AIP](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
 
 > [!NOTE]
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 
