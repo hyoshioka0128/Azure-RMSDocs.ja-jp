@@ -181,6 +181,8 @@
               href: ./rms-client/clientv2-admin-guide.md
             - name: ユーザー向けクライアントのインストール
               href: ./rms-client/clientv2-admin-guide-install.md
+            - name: アクセスの追跡と取り消し
+              href: ./rms-client/track-and-revoke-admin.md
             - name: カスタマイズ
               href: ./rms-client/clientv2-admin-guide-customizations.md
             - name: クライアントのファイルと使用状況ログ
@@ -201,6 +203,8 @@
               href: ./rms-client/clientv2-view-use-files.md
             - name: ラベルと保護の削除
               href: ./rms-client/clientv2-remove-label-protection.md
+            - name: ドキュメント アクセスの取り消し
+              href: ./rms-client/revoke-access-user.md
         - name: iOS 用と Android 用の Azure Information Protection
           href: ./rms-client/mobile-app-faq.md
         - name: 保護された PDF リーダー
