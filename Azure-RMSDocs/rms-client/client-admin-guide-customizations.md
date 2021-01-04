@@ -9,16 +9,17 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
+ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 994b4ae32424fe4994cbb8e7b77ed4acc5867bdb
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3c7105d93f396380c47711611b83d24909431cbc
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386204"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807486"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-classic-client"></a>管理者ガイド: Azure Information Protection クラシッククライアントのカスタム構成
 
@@ -27,7 +28,7 @@ ms.locfileid: "97386204"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [クライアント管理者ガイド](clientv2-admin-guide-customizations.md)」を参照してください。
 
 > [!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 以下の情報を使用して、詳細構成を行います。これらの構成は、Azure Information Protection クライアントを管理する際に、特定のシナリオまたはユーザーのサブセットで必要となる場合があります。
 
@@ -111,7 +112,7 @@ ms.locfileid: "97386204"
 
 2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするように求めるプロンプトが Office アプリケーションで表示されない場合、**[Microsoft Azure Information Protection]** ダイアログ ボックスに戻り、更新された **[クライアント ステータス]** セクションの **[サインイン]** をクリックします。
 
-補足:
+追加として:
 
 - これらの手順を完了した後も Azure Information Protection クライアントがまだ古いアカウントを使用してサインインしている場合は、Internet Explorer からすべての cookie を削除してから、手順 1 と 2 をもう一度実行します。
 
@@ -607,7 +608,7 @@ Azure Information Protection クライアントに新しい設定のクライア
 
 PowerShell コマンドを使用して既存の .ppdf ファイルを保護された .pdf ファイルに変換するには、PDF の暗号化に ISO 標準を使用します。
 
-1. .ppdf ファイルに [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) を使用します。 次に例を示します。
+1. .ppdf ファイルに [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) を使用します。 例:
     
     ```ps
     Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
@@ -621,13 +622,13 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
     
    - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** に表示される値) に対してラベルを削除し、元のカスタム アクセス許可と共にそれを再適用することを依頼するかどうかを決定します。
 
-3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の [ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 次に例を示します。 
+3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の [ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 例: 
 
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
     ```
 
-4. 手順 1 で指定したラベルの値を指定して、元のラベルを最適用します。 次に例を示します。
+4. 手順 1 で指定したラベルの値を指定して、元のラベルを最適用します。 例:
     
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
@@ -693,7 +694,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 要件: "社外秘" というセキュリティ保護された島ラベルを持つドキュメントは、Azure Information Protection によって "社外秘" というラベルが付けられます。
 
-この例では、次のように記述されています。
+次の点に注意してください。
 
 - 使用する Azure Information Protection のラベルは **Confidential** という名前が付けられ、ラベル ID は **1ace2cc3-14bc-4142-9125-bf946a70542c** です。 
 
@@ -710,7 +711,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 要件: セキュリティで保護されたアイランドによって "機微な" というラベルが付けられたドキュメントは、Azure Information Protection によって "機密性の高い" というラベルに再設定する
 
-この例では、次のように記述されています。
+次の点に注意してください。
 
 - 使用する Azure Information Protection のラベルは **Highly Confidential** という名前が付けられ、ラベル ID は **3e9df74d-3168-48af-8b11-037e3021813f** です。
 
@@ -728,7 +729,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 要件: "Internal" という語を含む2つのセキュリティ保護された島々ラベルがあり、これらのセキュリティ保護された島々ラベルのいずれかを持つドキュメントを、Azure Information Protection によって "General" というラベルに書き換えます。
 
-この例では、次のように記述されています。
+次の点に注意してください。
 
 - 使用する Azure Information Protection のラベルは **General** という名前が付けられ、ラベル ID は **2beb8fe7-8293-444c-9768-7fdc6f75014d** です。
 
@@ -886,7 +887,7 @@ Office アプリで Azure Information Protection クライアントが使用さ�
 
 この高度なクライアント設定を設定した場合でも、クライアントから監査情報を送信できますが、情報はラベル付けアクティビティに限定されます。
 
-次に例を示します。
+例:
 
 - この設定を使用すると、" **Confidential \ Sales**" というラベルが付いた Financial.docx にアクセスしたユーザーが表示されます。
 
@@ -1009,11 +1010,11 @@ Outlook Mobile では、Exchange のメッセージ分類がサポートされ�
 
 2. ラベルごとに Exchange メール フロー ルールを作成します。メッセージのプロパティに構成した分類が含まれる場合はルールを適用し、メッセージ プロパティを変更してメッセージ ヘッダーを設定します。 
 
-     メッセージヘッダーについては、Azure Information Protection ラベルを使用して送信および分類した電子メールのインターネットヘッダーを調べることによって、指定する情報を見つけることができます。 ヘッダー **msip_labels** と、セミコロンを含めて、その直後に続く文字列を探します。 次に例を示します。
+     メッセージヘッダーについては、Azure Information Protection ラベルを使用して送信および分類した電子メールのインターネットヘッダーを調べることによって、指定する情報を見つけることができます。 ヘッダー **msip_labels** と、セミコロンを含めて、その直後に続く文字列を探します。 例:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled = True**
     
-    ルール内のメッセージ ヘッダーの場合は、ヘッダーとして **msip_labels** を指定し、ヘッダー値としてこの文字列の残りの部分を指定します。 次に例を示します。
+    ルール内のメッセージ ヘッダーの場合は、ヘッダーとして **msip_labels** を指定し、ヘッダー値としてこの文字列の残りの部分を指定します。 例:
     
     ![例: 特定の Azure Information Protection ラベルのメッセージ ヘッダーを設定する Exchange Online メール フロー ルール](../media/exchange-rule-for-message-header.png)
     

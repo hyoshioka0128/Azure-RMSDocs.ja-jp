@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: cc8b2f4d969e24451110a6838ce10c8eea39abd9
-ms.sourcegitcommit: 54e742defb0b8dca35047b34498ec66e61602fa6
+ms.openlocfilehash: 688fe04d993ae1d286458fa9d41b0915838e6406
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96577050"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701681"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート: クライアント アプリケーションの初期化 (C++) 
 
@@ -350,13 +350,6 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
 
 4. アプリケーションの最終ビルドを行い、任意のエラーを解決します。 ご自分のコードで正常にビルドされますが、次のクイック スタートを完了するまでは、まだ正しく実行されません。 アプリケーションを実行すると、次のような出力が表示されます。 次のクイック スタートを完了するまで、提供するアクセス トークンはありません。
 
-   ```console
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account:
-   Enter access token:
-   ```
 
 ## <a name="next-steps"></a>次の手順
 

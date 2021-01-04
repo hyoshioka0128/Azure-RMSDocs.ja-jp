@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: a9edf2faf674968edf0121b677a79be39ec86cc7
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: e71b4c59c15f0c4435f72187006de1ecdc2bffb2
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535860"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701749"
 ---
 # <a name="file-api-re-publishing-quickstart-c"></a>ファイル API の再発行に関するクイックスタート (C++)
 
@@ -144,14 +144,7 @@ if (protectionHandler->AccessCheck("Edit")) {
 
 2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireOAuth2Token()` メソッドを呼び出すたびに、アプリケーションによりアクセス トークンが求められます。 「秘密度ラベルの設定および取得」クイックスタートで前に実行したとおり、ご自分の PowerShell スクリプトを実行し、$authority と $resourceUrl に指定された値を使用して、都度トークンを取得します。
 
-  ```console
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
-
+  ```console   
     Sensitivity labels for your organization:
     Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
     Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
@@ -162,14 +155,7 @@ if (protectionHandler->AccessCheck("Edit")) {
 
     Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to C:\Test\Test.docx
     Committing changes
-
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
-
+    
     Label committed to file: C:\Test\Test_labeled.docx
     Press any key to continue . . .
 

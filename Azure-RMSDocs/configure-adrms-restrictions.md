@@ -9,23 +9,24 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
+ROBOTS: NOINDEX
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 2e82b7c4cd99b5e880cc59db77a5a844d0e28030
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 4f96e1f19d38df201aab9b05cd046e8f49a16c2e
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583610"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805837"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (HYOK) の詳細を保持する
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [二重キー暗号化](plan-implement-tenant-key.md#double-key-encryption-dke)」を参照してください。
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 独自のキー (HYOK) 構成を保持することで、従来のクライアントを使用する AIP のお客様は、キーのフルコントロールを維持しながら、機密性の高いコンテンツを保護することができます。 HYOK は、機密性の高いコンテンツに対してオンプレミスに格納されている追加の顧客保持キー、および他のコンテンツに使用される既定のクラウドベースの保護を使用します。 
 
@@ -106,7 +107,7 @@ HYOK はラベルの管理者構成オプションであり、コンテンツが
 |---------|---------|---------|
 |Microsoft 365 アプリ、Office 2019、Office 2016、および Office 2013 を使用する Azure Information Protection クライアント:</br>Word、Excel、PowerPoint、Outlook     | ![はい](media/yes-icon.png)        | ![はい](media/yes-icon.png)        |
 |Azure Information Protection クライアントとファイル エクスプローラー     | ![はい](media/yes-icon.png)        | ![はい](media/yes-icon.png) |
-|Azure Information Protection ビューアー     |   適用できません      |  ![はい](media/yes-icon.png)       |
+|Azure Information Protection ビューアー     |   適用なし      |  ![はい](media/yes-icon.png)       |
 |Azure Information Protection クライアントと PowerShell のラベル付けコマンドレット     | ![はい](media/yes-icon.png)        | ![はい](media/yes-icon.png)        |
 |Azure Information Protection スキャナー     |![はい](media/yes-icon.png)       |   ![はい](media/yes-icon.png)      |
 | | | |
@@ -124,7 +125,7 @@ HYOK はラベルの管理者構成オプションであり、コンテンツが
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word、Excel、PowerPoint|![no](media/no-icon.png)| ![はい](media/yes-icon.png)|
 |Office Mobile: </br>Outlook のみ|![no](media/no-icon.png)|![no](media/no-icon.png)|
-|Azure Information Protection ビューアー|適用できません|![はい](media/yes-icon.png)|
+|Azure Information Protection ビューアー|適用なし|![はい](media/yes-icon.png)|
 
 ### <a name="android-application-support-for-hyok"></a>HYOK 向けの Android アプリケーションのサポート
 
@@ -132,7 +133,7 @@ HYOK はラベルの管理者構成オプションであり、コンテンツが
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word、Excel、PowerPoint|![no](media/no-icon.png)| ![はい](media/yes-icon.png)|
 |Office Mobile: </br>Outlook のみ|![no](media/no-icon.png)|![no](media/no-icon.png)|
-|Azure Information Protection ビューアー|適用できません| ![はい](media/yes-icon.png)|
+|Azure Information Protection ビューアー|適用なし| ![はい](media/yes-icon.png)|
 
 
 ## <a name="implementing-hyok"></a>HYOK を実装する

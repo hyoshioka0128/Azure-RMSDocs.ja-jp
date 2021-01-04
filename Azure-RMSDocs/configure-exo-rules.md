@@ -9,26 +9,27 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
+ROBOTS: NOINDEX
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cbb6b583c45ac735f99e4cc51ac91e0401612f88
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: ca365962d470d009411e4e02de885acd2e7fb043
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383620"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806925"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 ドキュメントから「機密ラベルと[DLP ラベル](/microsoft-365/compliance/dlp-sensitivity-label-as-condition)[について](/microsoft-365/compliance/sensitivity-labels)」を参照してください。 *
 
 > [!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 次に例を示します。
+Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 例:
 
 - 既定のラベルは **[全般]** で、保護は適用されません。 このラベルを含む外部からの電子メールには、追加の [転送不可] 保護アクションが適用されます。
 
@@ -90,7 +91,7 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
     
     ルールの構成は、次のようになります。  ![ Azure Information Protection ラベルに構成されている Exchange Online メールフロールール-例1](./media/aip-exo-rule-ex1.png)
 
-7. **[保存]** を選択します。 
+7. **[保存]** を選択する 
 
 [転送不可] オプションについて詳しくは、「[電子メールの [転送不可] オプション](configure-usage-rights.md#do-not-forward-option-for-emails)」をご覧ください。
 
@@ -120,7 +121,7 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
     
     ルールの構成は、次のようになります。  ![ Azure Information Protection ラベルに構成された Exchange Online メールフロールール-例2](./media/aip-exo-rule-ex2.png)
 
-6. **[保存]** を選択します。 
+6. **[保存]** を選択する 
 
 暗号化オプションについて詳しくは、「[電子メールの暗号化のみオプション](configure-usage-rights.md#encrypt-only-option-for-emails)」をご覧ください。
 

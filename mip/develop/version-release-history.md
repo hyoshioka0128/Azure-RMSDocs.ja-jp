@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 3e58c7efe669aa6c3405a5fd1c2056e96a933ff6
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: fe246ceb2f54d24318373b95c36733a977b560dc
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566632"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701732"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) ソフトウェア開発キット (SDK) バージョンリリース履歴とサポートポリシー
 
 ## <a name="servicing"></a>サービス
 
-各一般公開 (GA) バージョンは、次の GA バージョンがリリースされると6か月間サポートされます。 ドキュメントには、サポートされていないバージョンに関する情報が含まれない場合があります。 修正プログラムと新機能は、最新の GA バージョンにのみ適用されます。
+各一般公開 (GA) バージョンは、次の GA バージョンがリリースされると1年間サポートされます。 ドキュメントには、サポートされていないバージョンに関する情報が含まれない場合があります。 修正プログラムと新機能は、最新の GA バージョンにのみ適用されます。
 
 プレビューバージョンを運用環境にデプロイすることはできません。 代わりに、最新のプレビューバージョンを使用して、次の GA バージョンに含まれる新しい機能や修正をテストします。 最新のプレビューバージョンのみがサポートされています。
 
@@ -27,9 +27,25 @@ ms.locfileid: "95566632"
 サポートされているリリースの新機能と変更点については、次の情報を参照してください。 最新のリリースは一番上に表示されます。
 
 > [!NOTE]
-> マイナー修正は記載されていないので、SDK に問題が発生した場合は、最新の GA リリースで修正されているかどうかを確認することをお勧めします。 問題が解決されていない場合は、最新のプレビュー バージョンを確認します。
+> 軽微な修正プログラムは記載されていません。 SDK で問題が発生した場合は、最新の GA リリースで修正されているかどうかを確認することをお勧めします。 問題が解決されていない場合は、最新のプレビュー バージョンを確認します。
 >  
 > テクニカルサポートについては、 [Stack Overflow Microsoft Information Protection フォーラム](https://stackoverflow.com/questions/tagged/microsoft-information-protection)を参照してください。
+
+## <a name="version-17147"></a>バージョン1.7.147
+
+### <a name="file-sdk"></a>ファイル SDK
+
+- .PBIX ファイル形式のマイナーバグ修正。
+
+## <a name="version-17145"></a>バージョン1.7.145
+
+**リリース日:** 2020年11月13日
+
+### <a name="general-changes"></a>一般的な変更
+
+- NuGet パッケージを更新して、常にではなく更新時にのみ依存関係をコピーするようにしました。
+- .NET でのデバッグ構成では、ネイティブライブラリのリリースバージョンが使用されます。 リモートサーバーにデバッグモードで .NET ソリューションを展開するお客様は、VC + + デバッグランタイムをインストールする必要がありましたが、これは簡単ではありませんでした。 ネイティブライブラリにデバッグする必要がある場合は、SDK の再頒布可能パッケージからプロジェクトフォルダーに Dll をコピーしてください (https://ala.ms/mipsdkbins)
+- .NET Core プロジェクトの警告を生成したバグを修正しました。
 
 ## <a name="version-17133"></a>バージョン1.7.133
 
@@ -187,7 +203,7 @@ ms.locfileid: "95566632"
   - mip::P olicyHandler:: IsLabeled 付き ()
   - 偽陽性の軽微なリスク (たとえば、コンテンツにゾンビラベルのメタデータが含まれている場合)
 - ラベルポリシーキャッシュ TTL
-  - 既定値:30 日
+  - 既定:30 日
   - Mip::P olicyProfile:: SetCustomSettings () を使用して構成可能
 - **重大な変更**
   - 列挙型のリストから nullable ビットフィールドに更新されました。
