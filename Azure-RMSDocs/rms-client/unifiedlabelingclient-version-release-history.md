@@ -4,7 +4,7 @@ description: Windows 用の Azure Information Protection (AIP) の統合され�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/15/2020
+ms.date: 12/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7da6699fb2640791f78972f4271a6d846405731a
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: e4193a0345708d4c90e3469df8b1102d45a85af7
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583678"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805956"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -45,6 +45,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 |クライアントのバージョン|リリース日|
 |--------------|-------------|
+|2.6.111.0 | 03/09/2020|
 |2.5.33.0 |2019/10/23|
 |2.2.21.0|09/03/2019|
 |2.2.19.0|08/06/2019|
@@ -143,11 +144,19 @@ NFS 共有のスキャンをサポートするには、スキャナーコンピ�
 
 アップグレードすると、エンドユーザーは保護されているドキュメントへのアクセスを取り消すこともできます。 Microsoft Office アプリからのアクセスを取り消すには、[**秘密度**] メニューの [新しい **取り消しアクセス**] オプションを使用します。
 
-   詳細については、次を参照してください。
+詳細については、次を参照してください。
 
 - [管理者ガイド: Azure Information Protection を使用したドキュメントアクセスの追跡と取り消し](track-and-revoke-admin.md)
 - [ユーザーガイド: Azure Information Protection を使用したドキュメントアクセスの取り消し](revoke-access-user.md)
-- [ドキュメントアクセスの追跡と取り消しに関する既知の問題](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [ドキュメントアクセスの追跡と取り消しに関する既知の問題](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
+
+組織または地域でドキュメント追跡機能を無効にする必要があるプライバシー要件がある場合は、「 [管理者の追跡と取り消し](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant)」の手順を参照してください。
+
+**クラシッククライアントからのアップグレード**
+
+AIP classic クライアントは、 [Microsoft 追跡ポータル](client-track-revoke.md#using-a-web-browser-to-track-and-revoke-documents-that-you-have-registered)を使用した機能の追跡と取り消しをサポートしています。 この追跡ポータルは、統合されたラベル付けクライアントを使用する場合には関係ありません。
+ 
+統一されたラベル付けクライアントを使用して追跡データを表示するには、 [管理者ガイド](track-and-revoke-admin.md)の説明に従って、PowerShell コマンドのみを使用します。
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-scanner"></a>統一されたラベル付けスキャナーの修正と機能強化
 
@@ -171,11 +180,11 @@ Azure Information Protection 統合された [ラベル付けスキャナー](..
 
 - Outlook プレビューモードで[検出イベントの監査ログ](../audit-logs.md#discover-audit-logs)が生成されるようになりました
 
-- [推奨](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) されるラベルと [ウォーターマーク](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) は、Outlook で想定どおりに適用されます。 
+- [推奨ラベル](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) と [視覚的なマーキング](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) は、Outlook で想定どおりに適用されます。 
 
-- 配布リストの連絡先の [Outlookblocktrusteddomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) と [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) 設定のサポートが追加されました。
+- [Outlookblocktrusteddomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels)と[OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings が構成されている場合など、 [Outlook 配布リストの受信者を検索](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview)するためのサポートが追加されました。
 
-    これを構成するには、 [Enableoutlookの List膨張](clientv2-admin-guide-customizations.md#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) の値を **true** に設定します。 また、 [Outlookgetemの Addressenomeoutmsproperty](clientv2-admin-guide-customizations.md#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) 設定で定義されている既定のタイムアウト値を上げることもできます。
+    この機能を有効にする場合は、 [Outlookgetemの Addressenomeoutmsproperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) 設定で定義されている既定のタイムアウト値も発生させることをお勧めします。
 
 - 複数のラベルポリシーが1人のユーザーに対して構成されており、それぞれの詳細設定が競合している場合に使用される [優先順位の](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) 更新。
 
@@ -245,13 +254,13 @@ AIP 管理者は、すべての web 要求とファイル web 要求に対して
 
 **ネットワーク探索サービスを使用するには**
 
-1. スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。    詳細については、次を参照してください。
+1. スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。 詳細については、次を参照してください。
     - [スキャナーをアップグレードする](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [スキャナークラスターを作成する](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
 1. Azure Information Protection analytics が有効になっていることを確認します。
 
-    Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー) にアクセスします。**
+    Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー)** にアクセスします。
 
     詳細については、「 [Azure Information Protection の中央レポート (パブリックプレビュー)](../reports-aip.md)」を参照してください。
 
@@ -305,7 +314,7 @@ AIP 管理者は、エンドユーザーがドキュメントや電子メール�
 
 Azure Information Protection は、スキャナーでのダブルキー暗号化 (DKE) テンプレートベースのラベル付けと、エクスプローラーと PowerShell の使用をサポートするようになりました。
 
-   詳細については、次を参照してください。
+詳細については、次を参照してください。
 
 - [Azure Information Protection テナント キーを計画して実装する](../plan-implement-tenant-key.md)
 - Microsoft 365 ドキュメントの[二重キー暗号化](/microsoft-365/compliance/double-key-encryption)
@@ -379,7 +388,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 - [エラー発生時にスキャナーからレポートを取得して、アクションイベントを適用](../reports-aip.md#friendly-schema-reference-for-event-functions)します。 レポートを使用して、失敗したアクションイベントの詳細を確認し、今後発生しないようにする方法を見つけます。
 
-- 一般的なスキャナーエラーの検出と分析を行うための AIP scanner diagnostics analyzer ツールの導入。 AIP スキャナー診断の使用を開始するには、 [新しい **Start-Aipscan** コマンドレットを実行](../deploy-aip-scanner-manage.md#troubleshooting-using-the-scanner-diagnostic-tool)します。
+- 一般的なスキャナーエラーの検出と分析を行うための AIP scanner diagnostics analyzer ツールの導入。 AIP スキャナー診断の使用を開始するには、 [ **Start-Aipscan** コマンドレットを実行](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool)します。
 
 - スキャナーコンピューターの最大 CPU 消費量を管理し、制限できるようになりました。 100% の CPU 使用率を防ぎ、CPU 使用率を管理する方法について説明します。 [2 つの新しい詳細設定である [ **Scan@ cpu**] と [ **scan、cpu**](./clientv2-admin-guide-customizations.md#limit-cpu-consumption)] を使用します。
 
@@ -403,7 +412,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 スキャン済みのファイルが削除されたことをスキャナーが検出するたびに、監査ログが生成されるようになりました。
 
-   詳細については、次を参照してください。
+詳細については、次を参照してください。
 
 - [ファイルが削除された監査ログ](../audit-logs.md#file-removed-audit-logs)
 - [Azure Information Protection の Central Reporting](../reports-aip.md)
@@ -444,53 +453,16 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 
 - オート分類規則の適用に使用されていた PDF コンテンツの最初のページのみが解決され、PDF のすべてのコンテンツに基づく自動分類が期待どおりに実行されるようになりました。 分類とラベル付けの詳細については、「 [分類とラベル付け](../faqs-infoprotect.md)に関する FAQ」を参照してください。
 
-- 複数の Exchange アカウントが構成されていて、Azure Information Protection Outlook クライアントが有効になっている場合、メールは正常にセカンダリアカウントから送信されます。 Outlook で統一されたラベル付けクライアントを構成する方法の詳細については、「 [Azure Information Protection の統合ラベル付けクライアントの追加の前提条件](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)」を参照してください。
+- 複数の Exchange アカウントが構成されていて、Azure Information Protection Outlook クライアントが有効になっている場合、メールは正常にセカンダリアカウントから送信されます。 Outlook で統一されたラベル付けクライアントを構成する方法の詳細については、「 [AIP を無効にするためのグループポリシーの構成](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip)」を参照してください。
 
 - 高いレベルの機密性ラベルを持つドキュメントをドラッグして電子メールにドロップすると、電子メールでは、より高い機密性ラベルが期待どおりに自動的に受信されるようになります。 クライアント機能のラベル付けの詳細については、「 [クライアント比較表](use-client.md#compare-the-labeling-solutions-for-windows-computers)」を参照してください。
 
-- 電子メールアドレスにアポストロフィ (') とピリオド (.) の両方が含まれている場合、カスタムアクセス許可が意図したとおりに電子メールに適用されるようになりました。Outlook で統一されたラベル付けクライアントを構成する方法の詳細については、「 [Azure Information Protection の統合ラベル付けクライアントの追加の前提条件](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)」を参照してください。
+- 電子メールアドレスにアポストロフィ (') とピリオド (.) の両方が含まれている場合、カスタムアクセス許可が意図したとおりに電子メールに適用されるようになりました。Outlook で統一されたラベル付けクライアントを構成する方法の詳細については、「 [AIP を無効にするためのグループポリシーの構成](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip)」を参照してください。
+
 
 - 既定では、ファイルの NTFS 所有者は、統一されたラベル付けスキャナー、PowerShell、またはエクスプローラーの拡張機能によってラベルが付けられたときに失われます。 これで、新しい **[UseCopyAndPreserveNTFSOwner](clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview)** advanced 設定を **true** に設定して、ファイルの NTFS 所有者を保持するようにシステムを構成できます。
 
     **UseCopyAndPreserveNTFSOwner** の詳細設定では、スキャナーとスキャンされたリポジトリの間に、待機時間が短く、信頼性の高いネットワーク接続が必要です。
-
-## <a name="version-261110"></a>バージョン2.6.111.0
-
-**リリース** 03/09/2020
-
-12/29/2020 でサポート
-
-### <a name="new-features-version-261110"></a>新機能、バージョン2.6.111.0
-
-- [スキャナー](../deploy-aip-scanner.md)の一般公開バージョン。オンプレミスのデータストアのドキュメントを検査してラベル付けします。
-
-- [スキャナー](../deploy-aip-scanner.md) 関連:
-    - [SharePoint オンプレミスおよびサブサイトの検出が容易に](../quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories)なりました。 各サイトの設定は必須ではなくなりました。
-    - [SQL チャンクのサイズ変更](../deploy-aip-scanner-prereqs.md#storage-requirements-and-capacity-planning-for-sql-server)の詳細プロパティが追加されました。
-    - 管理者は、既定のラベルが変更された場合に、 [既存のスキャンを停止し、再スキャンを実行](../deploy-aip-scanner-manage.md#stopping-a-scan) できるようになりました。
-    - 既定では、スキャナーは、高速なスキャンのために最小のテレメトリを設定し、ログのサイズを小さくし、情報の種類をデータベースにキャッシュするようになりました。 [スキャナーの最適化](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)の詳細についてはこちらをご覧ください。
-    - スキャナーはデータベースとサービスの個別の配置をサポートするようになりましたが、 **Sysadmin** 権限はデータベースの配置にのみ必要です。
-    - スキャナーのパフォーマンスが向上しました。
-
-- PST、rar、7zip、および MSG ファイルからの保護の削除を有効にするための [PowerShell](./clientv2-admin-guide-powershell.md) コマンドレットの **set-aipfilelabel** の変更。 この機能は既定で無効になっており、[ここで](./clientv2-admin-guide-customizations.md#enable-removal-of-protection-from-compressed-files)説明するように、 [Set labelpolicy](./clientv2-admin-guide-customizations.md)コマンドレットを使用して有効にする必要があります。  
-
-- Azure Information Protection の管理者がファイルに対して pfile 拡張機能を使用するかどうかを制御できるようになりました。 [保護されたファイルの種類の変更](./clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)に関する詳細情報。
-
-- アプリケーションと変数に対して動的な視覚的マーキングのサポートが追加されました。 [視覚的なマーキングのラベルを構成](../configure-policy-markings.md)する方法については、こちらを参照してください。
-
-- [自動および推奨ラベルに対するカスタマイズ可能なポリシーのヒント](use-client.md)が強化されました。
-
-- 統一されたラベル付けクライアントで Office アプリを使用して、 [オフラインラベル機能](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) のサポートが追加されました。
-
-### <a name="fixes-and-improvements-version-261110"></a>修正プログラムと機能強化、バージョン2.6.111.0
-
-- RightFax によって作成された、保護された TIFF ファイルと TIFF ファイルを開こうとしてユーザーが失敗したインスタンスでは、TIFF ファイルが開き、予想どおりに安定した状態が維持されるようになりました。  
-- 保護された txt ファイルと PDF ファイルの以前の破損が解決されます。
-- Log Analytics の **自動** と **手動** の間に一貫性のないラベル付けが修正されました。
-- 新しいメールとユーザーの最後に開いた電子メールの間で、予期しない継承の問題が解決されました。  
-- **.Msg ファイルの保護** が正常に機能 **するようになりました**。
-- Office ユーザー定義の設定から追加された共同所有者のアクセス許可が、期待どおりに適用されるようになりました。
-- [アクセス許可のダウングレードを入力する] をオンにすると、他のオプションが既に選択されている場合はテキストを入力できなくなります。
 
 ## <a name="next-steps"></a>次のステップ
 

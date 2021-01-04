@@ -9,27 +9,28 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
+ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c14750bd4cbdbbc160b711640fc87d16ecce56f7
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: a4545fdf75cdf6a9516887210f75e36ca8255f36
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583389"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807316"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>管理者ガイド: ユーザー用の Azure Information Protection クラシッククライアントをインストールする
 
 >***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
->***関連**: [Azure Information Protection Classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
-> **AIP クラシッククライアントをデプロイするに** は、サポートチケットを開いてダウンロードアクセスを取得します。
+> **AIP クラシック クライアントをデプロイする** には、サポート チケットを作成してダウンロードへのアクセスを取得します。
 
 企業ネットワークに Azure Information Protection クライアントをインストールする前に、「[Azure Information Protection の要件](../requirements.md)」で Azure Information Protection に必要なオペレーティング システムのバージョンとアプリケーションがコンピューターにインストールされていることを確認してください。
 
@@ -95,7 +96,7 @@ ms.locfileid: "97583389"
 
 次のいずれかのオプションを使用して、ユーザーのクライアントをインストールします。
 
-|インストール オプション  |説明  |
+|インストール オプション  |[説明]  |
 |---------|---------|
 |**クライアント実行可能ファイル (.exe) を実行します。**  <br><br> [手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | インストールを対話形式またはサイレントモードで実行するには、クライアントの .exe バージョンを実行することをお勧めします。<br><br> .Exe ファイルを実行すると、最も柔軟性が高くなります。また、前提条件の多くをチェックし、不足している必須コンポーネントをインストールすることもできるため、このファイルを使用することをお勧めします。 |
 |**クライアントの Windows インストーラー (.msi) を展開する** <br><br> [手順](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Azure Information Protection クライアントの Windows インストーラーは、中央の展開メカニズムを使用するサイレントインストールでのみサポートされています。<br><br> たとえば、グループポリシー、Configuration Manager、Microsoft Intune と共に展開する場合は、.msi ファイルを使用します。<br><br> この方法は、Intune で管理されている Windows 10 Pc に対して使用する必要があります。また、これらのコンピューターでは、.exe ファイルとしてのモバイルデバイス管理 (MDM) はサポートされていません。<br><br>**注**: .msi のインストールを使用する場合は、前提条件を手動で確認し、必要な依存ソフトウェアをインストールまたはアンインストールする必要があります。 |

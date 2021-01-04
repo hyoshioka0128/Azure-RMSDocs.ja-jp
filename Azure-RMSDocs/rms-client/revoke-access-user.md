@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: abb96719d51658226211653b4ab4d171fcaa6b2e
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: f834aa10a522336067cc68ce9edd20284488b888
+ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97592759"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764103"
 ---
 # <a name="user-guide-revoke-document-access-with-azure-information-protection-public-preview"></a>ユーザーガイド: Azure Information Protection を使用したドキュメントアクセスの取り消し (パブリックプレビュー)
 
@@ -51,7 +51,7 @@ Word、Excel、または PowerPoint からのアクセスを取り消すには:
  
 1. 確認メッセージが表示されたら、[ **はい** ] をクリックして続行します。
 
-アクセスが取り消され、他のユーザーがドキュメントにアクセスできなくなります。
+アクセスが取り消され、他のユーザーがドキュメントにアクセスできなくなります。 [オフラインアクセス](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now)が許可されている場合、ユーザーは、オフラインポリシーの期限が切れるまで失効したドキュメントに引き続きアクセスすることができます。 
 
 ### <a name="dont-see-the-revoke-access-option"></a>Revoke アクセスオプションが表示されない場合は、
 
@@ -64,6 +64,8 @@ Word、Excel、または PowerPoint からのアクセスを取り消すには:
 - 最新の AIP のラベル付けクライアントバージョンがインストールされていないか、インストール後に Office アプリまたはコンピューターの再起動が必要になる可能性があります。 
 
     詳細については、「 [ユーザーガイド: Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)」を参照してください。
+
+- 管理者が組織の [追跡機能を無効](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant) にしている可能性があります。
 
 ## <a name="revoking-access-where-the-document-protection-has-been-changed-on-a-copy"></a>コピーでドキュメント保護が変更されたアクセス権を取り消す
 
@@ -80,4 +82,4 @@ Word、Excel、または PowerPoint からのアクセスを取り消すには:
 
 - [AIP 統合ラベルクライアントユーザーガイド](clientv2-user-guide.md)
 - [AIP 統一されたラベル付けクライアント管理者ガイド](clientv2-admin-guide.md)
-- [ドキュメントアクセスの追跡と取り消しに関する既知の問題](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [機能の追跡と取り消しに関する既知の問題](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)

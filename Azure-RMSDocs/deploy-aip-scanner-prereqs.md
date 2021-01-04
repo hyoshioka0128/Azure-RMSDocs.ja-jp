@@ -4,7 +4,7 @@ description: Azure Information Protection 統合されたラベル付けスキ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/03/2020
+ms.date: 12/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 49c614e4d124e7001a446c784a816b42ec91e111
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: a3b4f110b1958ec055720da218c52cce4c3fc0f4
+ms.sourcegitcommit: f944025b6c026906f0010c9e7f9d8d54f20a6be7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382583"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97705719"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーをインストールおよび展開するための要件
 
@@ -188,7 +188,7 @@ Office ドキュメントをスキャンするには、ドキュメントは次�
 
 260文字を超えるファイルパスを使用してファイルをスキャンするには、次のいずれかのバージョンの Windows がインストールされているコンピューターにスキャナーをインストールし、必要に応じてコンピューターを構成します。
 
-|Windows のバージョン  |説明  |
+|Windows のバージョン  |[説明]  |
 |---------|---------|
 |**Windows 2016 以降**     |   長いパスをサポートするようにコンピューターを構成する      |
 |**Windows 10 または Windows Server 2016**     | 次の [グループポリシー設定](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10)を定義します。**ローカルコンピューターポリシー**  >  **コンピューターの構成**  >  **管理用テンプレート**  >  **すべての設定** で、  >  **Win32 の長いパスを有効に** します。    </br></br>これらのバージョンでのファイルパスのサポートの詳細については、Windows 10 開発者ドキュメントの「 [パスの最大長の制限](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) 」セクションを参照してください。    |
@@ -318,62 +318,80 @@ PowerShell のみを使用して切断されたコンピューターをサポー
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>制限: Sysadmin の付与が認められない、または手動でデータベースを作成し構成する必要がある
 
+データベースを手動で作成し、必要に応じて **db_owner** ロールを付与するには、次の手順に従います。
+
+- [スキャナーデータベースの手順](#manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights)
+- [ネットワーク探索データベースの手順](#manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights)
+
 スキャナーをインストールするために Sysadmin の役割を *一時的* に付与できる場合は、スキャナーのインストールが完了したらこの役割を削除できます。
 
 組織の要件に応じて、次のいずれかの操作を行います。
 
-- **Sysadmin ロールを一時的に持つことができます。** Sysadmin ロールを一時的に持っている場合は、データベースが自動的に作成され、スキャナーのサービスアカウントに必要なアクセス許可が自動的に付与されます。
+|Restriction  |[説明]  |
+|---------|---------|
+|**Sysadmin ロールを一時的に持つことができます。**     |  Sysadmin ロールを一時的に持っている場合は、データベースが自動的に作成され、スキャナーのサービスアカウントに必要なアクセス許可が自動的に付与されます。 <br><br>ただし、スキャナーを構成するユーザーアカウントには、スキャナー構成データベースの **db_owner** ロールが必要です。 スキャナーのインストールが完了するまで Sysadmin の役割しかない場合は、ユーザーアカウントに **db_owner** の役割を手動で付与します。       |
+|**Sysadmin ロールをまったく持つことはできません。**     |  Sysadmin ロールが一時的に付与されていない場合は、スキャナーをインストールする前に、データベースを手動で作成するための Sysadmin 権限をユーザーに要求する必要があります。 <br><br>この構成では、 **db_owner** ロールが次のアカウントに割り当てられている必要があります。 <br>-スキャナーのサービスアカウント<br>-スキャナーインストール用のユーザーアカウント<br>-スキャナー構成のユーザーアカウント <br><br>通常、スキャナーのインストールと構成には同じユーザー アカウントを使用します。 異なるアカウントを使用する場合は、どちらもスキャナー構成データベースの **db_owner** ロールが必要です。 必要に応じて、このユーザーと権限を作成します。 独自のクラスター名を指定した場合、構成データベースの名前は **cluster_name>AIPScannerUL_<** になります。  |
+| | |
 
-    ただし、スキャナーを構成するユーザーアカウントには、スキャナー構成データベースの **db_owner** ロールが必要です。 スキャナーのインストールが完了するまで Sysadmin の役割しかない場合は、 [ユーザーアカウントに db_owner の役割を手動で付与](#create-a-user-and-grant-db_owner-rights-manually)します。
-
-- **Sysadmin ロールをまったく持つことはできません**。 Sysadmin ロールが一時的に付与されていない場合は、スキャナーをインストールする前に、データベースを手動で作成するための Sysadmin 権限をユーザーに要求する必要があります。
-
-    この構成では、 **db_owner** ロールが次のアカウントに割り当てられている必要があります。
-
-    - スキャナーのサービス アカウント
-    - スキャナーのインストール用のユーザーアカウント
-    - スキャナーの構成用のユーザー アカウント
-
-    通常、スキャナーのインストールと構成には同じユーザー アカウントを使用します。 異なるアカウントを使用する場合は、どちらもスキャナー構成データベースの db_owner ロールが必要です。 必要に応じて、このユーザーと権限を作成します。 独自のクラスター名を指定した場合、構成データベースの名前は **cluster_name>AIPScannerUL_<** になります。
-
-補足:
+追加として:
 
 - スキャナーを実行するサーバーのローカル管理者である必要があります。
 - スキャナーを実行するサービスアカウントには、次のレジストリキーに対するフルコントロールのアクセス許可が付与されている必要があります。
 
-    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
-    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server`
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server`
 
 これらのアクセス許可を構成した後、スキャナーをインストールするときにエラーが表示される場合は、エラーを無視して、スキャナーサービスを手動で開始することができます。
 
-#### <a name="create-a-user-and-grant-db_owner-rights-manually"></a>ユーザーを作成し、手動で db_owner 権限を付与する
+#### <a name="manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights"></a>スキャナー用のデータベースとユーザーを手動で作成し、db_owner 権限を付与する
 
-このデータベースに対してユーザーを作成し db_owner 権限を付与するには、Sysadmin に次の手順を実行するよう依頼します。
+手動でスキャナーデータベースを作成したり、ユーザーを作成してデータベースに **db_owner** 権限を付与したりする必要がある場合は、次の手順を実行するように Sysadmin に依頼してください。
 
-1. スキャナー用の DB を作成します。
+1. スキャナー用のデータベースを作成します。
 
-    ```cli
+    ```sql
     **CREATE DATABASE AIPScannerUL_[clustername]**
 
     **ALTER DATABASE AIPScannerUL_[clustername] SET TRUSTWORTHY ON**
     ```
 
-2. インストールコマンドを実行するユーザーに権限を付与し、スキャナー管理コマンドを実行するために使用します。
-
-    SQL スクリプト:
+2. インストールコマンドを実行するユーザーに権限を付与し、スキャナー管理コマンドを実行するために使用します。 次のスクリプトを実行します。
 
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
     ```
 
-3. スキャナーサービスアカウントに権限を付与します。
+3. スキャナーサービスアカウントに権限を付与します。 次のスクリプトを実行します。
 
-    SQL スクリプト:
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     ```
 
+#### <a name="manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights"></a>ネットワーク探索サービスのデータベースとユーザーを手動で作成し、db_owner 権限を付与する
+
+[ネットワーク探索](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview)データベースを手動で作成する必要がある場合、またはユーザーを作成してデータベースに **db_owner** 権限を付与する必要がある場合は、次の手順を実行するように Sysadmin に依頼してください。
+
+1. ネットワーク探索サービスのデータベースを作成します。
+
+    ```sql
+    **CREATE DATABASE AIPNetworkDiscovery_[clustername]**
+
+    **ALTER DATABASE AIPNetworkDiscovery_[clustername] SET TRUSTWORTHY ON**
+    ```
+
+2. インストールコマンドを実行するユーザーに権限を付与し、スキャナー管理コマンドを実行するために使用します。 次のスクリプトを実行します。
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+    ```
+
+3. スキャナーサービスアカウントに権限を付与します。 次のスクリプトを実行します。
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    ```
 ### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>制限: スキャナーのサービス アカウントに **ローカル ログオン** 権限を付与できない
 
 組織のポリシーでサービスアカウントに **ローカルでログオン** する権限が禁止されている場合は、Set-AIPAuthentication で *OnBehalfOf* パラメーターを使用します。
@@ -392,7 +410,7 @@ PowerShell のみを使用して切断されたコンピューターをサポー
 
 ラベルに自動ラベルの条件がない場合は、スキャナーを構成するときに、次のいずれかのオプションを使用することを計画します。
 
-|オプション  |説明  |
+|オプション  |[説明]  |
 |---------|---------|
 |**すべての情報の種類を検出**     |  [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)で、[情報の **種類**] を [検出済み]**に設定します。** </br></br>このオプションは、すべての機密情報の種類についてコンテンツをスキャンするようにコンテンツスキャンジョブを設定します。      |
 |**推奨ラベルの使用**     |  [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)で、[**推奨ラベルを自動的** に処理する] オプションを **[オン**] に設定します。</br></br> この設定により、推奨されるすべてのラベルがコンテンツに自動的に適用されるようにスキャナーが構成されます。      |

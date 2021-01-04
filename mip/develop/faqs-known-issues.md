@@ -6,18 +6,24 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 9b0f9e3fa619762e08d32fb17da576d58f92071d
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 0fbb704024a87cbee30016a2f5130d788609cea3
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95570031"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701562"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 
 この記事では、よく寄せられる質問 (FAQ) に対する回答と、既知の問題と一般的なエラーに関するトラブルシューティングのガイダンスを示します。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問 
+
+### <a name="file-parsing"></a>ファイルの解析
+
+**質問**: 現在ファイル SDK で読み込んでいるのと同じファイルに書き込むことはできますか。
+
+MIP SDK は、同じファイルの読み取りと書き込みを同時にサポートしていません。 ラベルが付けられたファイルは、ラベルアクションが適用された入力ファイルの *コピー* になります。 アプリケーションでは、元のファイルをラベル付きファイルに置き換える必要があります。 
 
 ### <a name="sdk-string-handling"></a>SDK 文字列の処理
 
@@ -72,9 +78,3 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 > "Proxyauthentication Atonerror: プロキシ認証がサポートされていません"
 
 MIP SDK は、認証されたプロキシの使用をサポートしていません。 このメッセージを修正するには、プロキシ管理者は、プロキシをバイパスするように Microsoft Information Protection サービスエンドポイントを設定する必要があります。 これらのエンドポイントの一覧については、「 [Office 365 の url と IP アドレス範囲](/office365/enterprise/urls-and-ip-address-ranges) 」ページを参照してください。 MIP SDK で `*.protection.outlook.com` は、(行 9) と Azure Information Protection サービスエンドポイント (行 73) がプロキシ認証をバイパスする必要があります。
-
-### <a name="issues-in-net-core"></a>.NET Core での問題
-
-**質問**: NuGet パッケージは .net Core で動作しますか。 
-
-NuGet パッケージは .NET Core プロジェクトにインストールされますが、実行は失敗します。 Windows での修正に取り組んでいますが、現在、他のプラットフォームをサポートするタイムラインがありません。
