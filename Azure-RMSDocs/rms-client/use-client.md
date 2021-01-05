@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 536811aa07df108a0c5cbb44bad5ba5ff2e6f292
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 37d626fc3cf907191aed9760d1452082d732044f
+ms.sourcegitcommit: 0f76655985b49b4b8868d5f8893e20978f4dc4da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384878"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97747139"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -25,10 +25,10 @@ ms.locfileid: "97384878"
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 
 Azure Information Protection の統一されたラベル付けクライアントは、組織のドキュメントや電子メールを保護するのに役立つクライアントサーバーソリューションを提供します。これは、 [Microsoft Office 用の組み込みのラベル付けソリューション](/microsoft-365/compliance/sensitivity-labels)の代替手段です。 
@@ -70,7 +70,7 @@ Windows ラベル付けソリューションを選択する場合は、次の基
 
 - [組み込みの Office ラベル付けソリューション](#built-in-office-labeling-solution)
 - [Azure Information Protection 統合ラベル付けクライアント](#azure-information-protection-unified-labeling-client)
-- [クラシッククライアントを Azure Information Protection する](#azure-information-protection-classic-client)
+- [Azure Information Protection クラシック クライアント](#azure-information-protection-classic-client)
 - [同じ環境での複数のクライアントの使用](#using-multiple-clients-in-the-same-environment)
 
 詳細については、「AIP のクライアントと[機能](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)[の詳細な比較](#detailed-comparisons-for-the-azure-information-protection-clients)」を参照してください。
@@ -100,7 +100,7 @@ Microsoft Office に組み込まれているラベル付けソリューション
 
 統一されたラベル [付けストアにまだ移行](../configure-policy-migrate-labels.md)していない Azure portal でラベルを構成している場合は、統一されたラベル付けクライアントを **使用しない** でください。
 
-### <a name="azure-information-protection-classic-client"></a>クラシッククライアントを Azure Information Protection する
+### <a name="azure-information-protection-classic-client"></a>Azure Information Protection クラシック クライアント
 
 従来のクライアントは AIP のレガシクライアントであり、統一されたラベル付けクライアントと同様の機能をサポートします。また、Office アプリに対して個別にインストールする必要があります。 
 
@@ -176,8 +176,8 @@ Windows コンピューターの3つのラベル付けソリューションで�
 |**HYOK のサポート**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**イベントビューアーの使用状況ログ**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)| ![no](../media/no-icon.png)|
 |**Outlook の [転送不可] ボタンを表示する**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
-|**保護されたトラックの文書化**| ![はい](../media/yes-icon.png) | ![可 ](../media/yes-icon.png) <sup>5</sup> |  ![no](../media/no-icon.png)|
-|**保護されたドキュメントの取り消し**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
+|**保護されたドキュメントの追跡**| ![可 ](../media/yes-icon.png) <sup>5</sup> | ![可 ](../media/yes-icon.png) <sup>5</sup> |  ![no](../media/no-icon.png)|
+|**保護されたドキュメントの取り消し**| ![可 ](../media/yes-icon.png) <sup>5</sup> |  ![可 ](../media/yes-icon.png) <sup>5</sup>|  ![no](../media/no-icon.png)|
 |**保護のみモード** (ラベルなし)| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**アカウントの切り替えのサポート**|  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)| ![はい](../media/yes-icon.png) |
 |**リモートデスクトップサービスのサポート**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |
@@ -191,13 +191,13 @@ Windows コンピューターの3つのラベル付けソリューションで�
 
 <sup>1</sup> これらの設定は、 [Azure portal で構成するアドバンストクライアント設定](client-admin-guide-customizations.md#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal)としてサポートされています。
 
-<sup>2</sup> これらの設定とその他の多くは、 [PowerShell で構成する詳細設定](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)としてサポートされています。
+<sup>2</sup> これらの設定とその他の多くは、 [PowerShell で構成する詳細設定](clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell)としてサポートされています。
 
 <sup>3</sup> ファイルエクスプローラーと PowerShell でサポートされます。 Office アプリでは、ユーザーは **ファイル情報**[ドキュメントの保護] [アクセスの制限] を選択でき  >    >  ます。
 
 <sup>4</sup> ファイルエクスプローラーと PowerShell コマンドについては、ユーザーがファイルを保護するためにインターネットに接続されている必要があります。
 
-<sup>5</sup> 従来のクライアントでサポートされているドキュメント追跡サイトは、統一されたラベル付けクライアントでサポートされていません。 ただし、ドキュメントを追跡するために最初に登録する必要がない場合は、 [中央レポート](../reports-aip.md) を使用して、Windows コンピューターから文書化されている保護されているかどうか、およびアクセスが許可または拒否されたかどうかを識別できます。 
+<sup>5</sup>詳細については、「**統合ラベル付けクライアント**:[管理者ガイド (パブリック](track-and-revoke-admin.md)プレビュー)  |   [ユーザーガイド (パブリックプレビュー)](revoke-access-user.md)」を参照してください。 追跡は、グローバル管理者のみがサポートしています。 **従来のクライアント**:[管理者ガイド](client-admin-guide-document-tracking.md)  |  [ユーザーガイド](client-track-revoke.md)。 管理者は、 [中央レポート](../reports-aip.md) を使用して、Windows コンピューターから保護されたドキュメントにアクセスするかどうか、およびアクセスを許可または拒否するかどうかを指定することもできます。
 
 <sup>6</sup> ラベル付けおよび保護操作はサポートされていません。 ただし、AD RMS 展開の場合、 [Active Directory Rights Management サービスモバイルデバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))を使用すると、ビューアーは保護されたドキュメントを開くことができます。
 
@@ -257,7 +257,7 @@ Azure Information Protection classic クライアントは、サブラベルを�
 
 パリティについて、Azure Information Protection 統合ラベル付けクライアントでも、管理センターでこれらのラベルを選択できる場合でも、サブラベルのある親ラベルの適用はサポートされていません。 このシナリオでは、Azure Information Protection 統合ラベル付けクライアントで親ラベルが適用されません。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection 統合ラベル付けクライアントをインストールして構成するには、次を参照してください。
 
