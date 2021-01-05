@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: fa795fa29e39bc9fe5abc9a68febcd168a5bb502
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 468cbe031b22ba07127b75295da98ee9a081048a
+ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386340"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762334"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>クイック スタート: Azure Information Protection (AIP) 統合ラベル付けクライアントのデプロイ
 
@@ -33,23 +33,23 @@ Azure Information Protection (AIP) 統合ラベル付けクライアントは、
 
 以下のリンク先の記事を参照すれば、組織内で Azure Information Protection 統合ラベル付けをデプロイするための前提条件を容易に把握できます。
 
-- **[Azure Information Protection の要件](requirements.md)** Azure Information Protection サブスクリプションや Azure Active Directory など、組織に AIP クライアントをデプロイするためのシステム要件を詳細に説明します。 また、サポートされているクライアント デバイスとサポートされているアプリケーションの一覧も示します。
+- **[Azure Information Protection の要件](requirements.md)** 。 Azure Information Protection サブスクリプションや Azure Active Directory など、組織に AIP クライアントをデプロイするためのシステム要件を詳細に説明します。 また、サポートされているクライアント デバイスとサポートされているアプリケーションの一覧も示します。
 
-- **[統合ラベル付けクライアントの前提条件](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).** AIP クライアントがインストールされるコンピューターごとのシステム要件を一覧にします。
+- **[統合ラベル付けクライアントの要件](./rms-client/reqs-ul-client.md)** 。 AIP クライアントがインストールされるコンピューターごとのシステム要件を一覧にします。
 
 ## <a name="install-the-aip-client"></a>AIP クライアントをインストールする
 
 AIP には、次のクライアント インストール オプションが用意されています。
 
-- **[.exe ファイルをダウンロードして実行する。](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)** このインストールは、ほとんどのユース ケースで推奨されるオプションです。 インストールは、対話形式でもサイレント モードでも実行することができます。
+- **[.exe ファイルをダウンロードして実行する。](rms-client/clientv2-admin-guide-install.md#install-the-aip-unified-labeling-client-using-the-executable-installer)** このインストールは、ほとんどのユース ケースで推奨されるオプションです。 インストールは、対話形式でもサイレント モードでも実行することができます。
 
     インストールが完了すると、コンピューターまたは Office ソフトウェアの再起動を求めるメッセージが表示される場合があります。 必要に応じて再起動して続行します。
 
-- **[.msi ファイルをダウンロードして実行する。](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer)** グループ ポリシー、構成マネージャー、Microsoft Intune など、一元的なデプロイ メカニズムを使用するサイレント インストールの場合にサポートされます。
+- **[.msi ファイルをダウンロードして実行する。](rms-client/clientv2-admin-guide-install.md#install-the-unified-labeling-client-using-the-msi-installer)** グループ ポリシー、構成マネージャー、Microsoft Intune など、一元的なデプロイ メカニズムを使用するサイレント インストールの場合にサポートされます。
 
 AIP クライアント インストール ファイルは、[Microsoft ダウンロード サイト](https://www.microsoft.com/download/details.aspx?id=53018)から入手できます。 
 
-詳細については、[AIP クライアントをインストールするためのオプション](rms-client/clientv2-admin-guide-install.md#options-to-install-the-azure-information-protection-unified-labeling-client-for-users)に関するページを参照してください。
+詳細については、「[管理者ガイド:ユーザー向けに Azure Information Protection 統合ラベル付けクライアントをインストールする](rms-client/clientv2-admin-guide-install.md)」を参照してください。
 
 > [!TIP]
 > AIP クライアントで利用可能な最新の機能をテスト実行するには、テスト システムにパブリック プレビュー バージョンをデプロイしてください。 詳細については、AIP 統合ラベル付けクライアントの[バージョン リリース履歴](rms-client/unifiedlabelingclient-version-release-history.md)を参照してください。

@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b5e64f9537ee9c8f7f684e708c5de35ec28f3400
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 229b67b152845cfb1e0499f1df9eb08ba28b49df
+ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583372"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762311"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -129,11 +129,11 @@ Azure Information Protection クライアントとリモート デスクトッ�
 
 ### <a name="additional-requirements-per-client"></a>クライアントごとの追加要件
 
-各 Azure Information Protection クライアントには追加の前提条件があります。 詳細については、次の情報を参照してください。
+各 Azure Information Protection クライアントには追加の要件があります。 詳細については、次の情報を参照してください。
 
-- [Azure Information Protection 統合ラベル付けクライアントの前提条件](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- [Azure Information Protection 統合ラベル付けクライアントの要件](./rms-client/reqs-ul-client.md)
 
-- [Azure Information Protection クライアントの前提条件](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- [Azure Information Protection クライアントの要件](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
 ## <a name="applications"></a>アプリケーション
 

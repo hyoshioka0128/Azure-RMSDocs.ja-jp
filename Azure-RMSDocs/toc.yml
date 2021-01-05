@@ -17,6 +17,8 @@
           href: requirements-applications.md
         - name: サポートされるファイルの種類
           href: ./rms-client/clientv2-admin-guide-file-types.md
+        - name: 統合ラベル付けクライアントの要件
+          href: ./rms-client/reqs-ul-client.md
         - name: オンプレミス スキャナーの要件
           href: deploy-aip-scanner-prereqs.md
     - name: AIP は ... とも呼ばれます
@@ -139,6 +141,8 @@
               href: deploy-aip-scanner-configure-install.md
             - name: 統合ラベル付けスキャナーを実行する
               href: deploy-aip-scanner-manage.md
+            - name: スキャナーのトラブルシューティング
+              href: deploy-aip-scanner-tsg.md
         - name: RMS コネクタのデプロイ
           items:
             - name: 概要
