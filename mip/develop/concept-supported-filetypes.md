@@ -1,17 +1,17 @@
 ---
 title: サポートされるファイルの種類-Microsoft Information Protection SDK
 description: サポートされているファイルの種類、ファイル名拡張子、および Microsoft Information Protection ソフトウェア開発キットを担当する管理者の保護レベルに関する技術的な詳細。
-author: Pathak-Aniket
-ms.author: v-anikep
+author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 08/16/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: ecd0a1ba426cc8b0e1f037d929b3082133fc1fdb
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: e247a31b364c40f270538d73815464491fca7647
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566745"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864857"
 ---
 # <a name="file-types-supported-by-the-microsoft-information-protection-sdk"></a>Microsoft Information Protection SDK でサポートされるファイルの種類
 
