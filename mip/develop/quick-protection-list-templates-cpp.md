@@ -1,18 +1,18 @@
 ---
 title: クイック スタート - C++ MIP SDK を利用し、Microsoft Information Protection (MIP) テナントの認証ユーザーが利用できる保護テンプレートを一覧表示する
 description: Microsoft Information Protection C++ SDK 保護 API を使用し、ユーザーが利用できる保護テンプレートを一覧表示する方法 (C++) について説明するクイック スタート
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
-ms.author: v-anikep
+ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: d319af8e65e2eae958ef215d30dfa84c09ae7145
-ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
+ms.openlocfilehash: 62f694248da10c7663c551240b204711b52163d5
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97701647"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865074"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>クイック スタート:保護テンプレートを一覧表示する (C++)
 

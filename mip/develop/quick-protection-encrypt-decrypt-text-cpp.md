@@ -2,17 +2,17 @@
 title: クイック スタート - C++ MIP SDK 保護 API を使用してテキストを暗号化し、復号する
 description: C++ Microsoft Information Protection SDK 保護 API を使用し、保護テンプレートでアドホック テキストを暗号化し、復号する方法 (C++) について説明するクイック スタート
 services: information-protection
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
-ms.openlocfilehash: 1258bfcd6c47611b439a29406ed0e78b644a5803
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.author: mbaldwin
+ms.openlocfilehash: 2875af45fb33a89398548cff45d1d6481c3a7ed7
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535843"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865146"
 ---
 # <a name="quickstart-encryptdecrypt-text-using-mip-sdk-c"></a>クイック スタート:MIP SDK (C++) を使用して暗号化し、復号する
 

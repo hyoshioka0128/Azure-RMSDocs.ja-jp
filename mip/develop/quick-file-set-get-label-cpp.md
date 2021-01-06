@@ -7,12 +7,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 6923bdf83f76a3e2a30e49bae27e9f7be963a623
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 41c91ed1453b0819be727d333e15987ee9b3da3a
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556029"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865163"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート: 機密ラベルの設定および取得 (C++)
 
@@ -35,14 +35,14 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
 
 2. header/.h ファイルと implementation/.cpp ファイルの両方を作成する、新しいクラスをご自分のプロジェクトに追加します。
 
-   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
+   - **ソリューション エクスプローラー** でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
    - **[クラスの追加]** ダイアログで以下の操作を行います。
      - **[クラス名]** フィールドに「filehandler_observer」と入力します。 入力した名前に基づき、 **[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
      - 完了したら、 **[OK]** ボタンをクリックします。
 
 3. クラスの .h ファイルおよび .cpp ファイルを作成すると、両ファイルは [エディター グループ] タブに表示されます。 ここで各ファイルを更新して、新しいオブザーバー クラスを実装します。
 
-   - 生成した `filehandler_observer` クラスを選択および削除して、「filehandler_observer.h」を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `filehandler_observer` クラスを選択および削除して、「filehandler_observer.h」を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      #include <memory>
@@ -60,7 +60,7 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
      };
      ```
 
-   - 生成した `filehandler_observer` クラス実装を選択および削除して、「filehandler_observer.cpp」を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `filehandler_observer` クラス実装を選択および削除して、「filehandler_observer.cpp」を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      void FileHandlerObserver::OnCreateFileHandlerSuccess(const std::shared_ptr<mip::FileHandler>& fileHandler, const std::shared_ptr<void>& context) {
@@ -90,7 +90,7 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
 
 ファイル エンジン オブジェクトを使用し、ファイルに機密ラベルを設定および取得するためのロジックを追加します。 
 
-1. **ソリューション エクスプローラー**を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。 
+1. **ソリューション エクスプローラー** を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。 
 
 2. 次の `#include` と `using` ディレクティブをファイルの上部の対応する既存のディレクティブの下に追加します。
 
@@ -138,7 +138,7 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
    {
         cout << "An exception occurred... did you specify a valid label ID?\n\n" << e.what() << "'\n";
         system("pause");
-        return 1;
+        return 1; 
    }
 
    // Commit changes, save as a different/output file
@@ -220,7 +220,7 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
    | [プレースホルダ] | 値 |
    |:----------- |:----- |
    | \<input-file-path\> | テスト入力ファイルへの完全なパス。たとえば `"c:\\Test\\Test.docx"`。 |
-   | \<content-identifier\> | コンテンツに対する人間が判読できる識別子。 例: <ul><li>ファイルの場合は、path\filename を検討してください: `"c:\Test\Test.docx"`</li><li>電子メールの場合は、subject:sender を検討してください: `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | コンテンツに対する人間が判読できる識別子。 次に例を示します。 <ul><li>ファイルの場合は、path\filename を検討してください: `"c:\Test\Test.docx"`</li><li>電子メールの場合は、subject:sender を検討してください: `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | 前のクイック スタートでコンソールの出力からコピーした機密ラベル ID。たとえば `"f42a3342-8706-4288-bd31-ebb85995028z"`。 |
    | \<output-file-path\> | 入力ファイルのラベル付きコピーである出力ファイルへの完全なパス。たとえば、`"c:\\Test\\Test_labeled.docx"`。 |
 
@@ -234,11 +234,6 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
-   Press any key to continue . . .
 
    Sensitivity labels for your organization:
    Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
@@ -251,21 +246,7 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
    Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\Test\Test.docx
    Committing changes
 
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://aadrm.com
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
-   Press any key to continue . . .
-
    Label committed to file: c:\Test\Test_labeled.docx
-   Press any key to continue . . .
-
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/94f69844-8d34-4794-bde4-3ac89ad2b664/oauth2/authorize
-   Set $resourceUrl to: https://aadrm.com
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
    Press any key to continue . . .
 
    Getting the label committed to file: c:\Test\Test_labeled.docx

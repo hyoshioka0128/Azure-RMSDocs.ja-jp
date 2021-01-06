@@ -1,18 +1,18 @@
 ---
 title: クイック スタート - MIP SDK C# ラッパーを利用し、Microsoft Information Protection (MIP) テナントの認証ユーザーが利用できる保護テンプレートを一覧表示する
 description: Microsoft Information Protection SDK 保護 API C# ラッパーを使用し、ユーザーが利用できる保護テンプレートを一覧表示する方法 (C#) について説明するクイック スタート
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 88c385d783df55b8270740357372c6345da8701a
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 28de8cb2b14aef158707dc0b4dd7cb2e3f8a6947
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535927"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865066"
 ---
 # <a name="quickstart-list-templates-c"></a>クイック スタート:テンプレートを一覧表示する (C#)
 

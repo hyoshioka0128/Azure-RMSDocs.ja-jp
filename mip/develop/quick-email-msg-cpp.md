@@ -1,17 +1,17 @@
 ---
 title: ファイル API - 電子メール .msg ファイルの処理 (C++)
 description: この記事は、MIP SDK ファイル API を使用して .msg ファイルを処理する方法 (C++) のシナリオを理解するうえで役立ちます。
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
-ms.author: v-anikep
-ms.openlocfilehash: b070a8ef35ff1bb71a6a87b19621f347626ef085
-ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
+ms.author: mbaldwin
+ms.openlocfilehash: 111b928538dd6222da55cb2ee5664549e272f785
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97701613"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865316"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>ファイル API - 電子メール .msg ファイルの処理 (C++)
 

@@ -1,17 +1,17 @@
 ---
 title: 方法 - 再発行のシナリオ (C++)
 description: この記事は、シナリオの再発行に保護ハンドラーを再利用する方法 (C++) のシナリオを理解するうえで役立ちます。
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
-ms.author: v-anikep
-ms.openlocfilehash: e71b4c59c15f0c4435f72187006de1ecdc2bffb2
-ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
+ms.author: mbaldwin
+ms.openlocfilehash: 657a8a3e7650b8afb8c4d8384fc078e48eb64f36
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97701749"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865231"
 ---
 # <a name="file-api-re-publishing-quickstart-c"></a>ファイル API の再発行に関するクイックスタート (C++)
 
