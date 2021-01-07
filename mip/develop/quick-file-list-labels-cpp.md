@@ -1,18 +1,18 @@
 ---
 title: クイック スタート - C++ MIP SDK を使用した Microsoft Information Protection (MIP) テナントの機密ラベルの列挙
-description: Microsoft Information Protection C++ SDK を使用して、テナントの秘密度ラベルを列挙する方法 (C++) を説明するクイック スタート。
+description: Microsoft Information Protection C++ SDK を使用して、テナントの機密ラベルを列挙する方法を説明するクイック スタート。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: d13ddcfd2a01501a8c2428ea6cf4c3cf9e575a09
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 14b36ecee7fc49c5b50d627e6ef1ab95d436d7ee
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96536047"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865265"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>クイック スタート:機密ラベルの一覧表示 (C++)
 
@@ -85,19 +85,9 @@ ms.locfileid: "96536047"
 
 2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireOAuth2Token()` メソッドを呼び出すたびに、アプリケーションによりアクセス トークンが求められます。 複数回求められ、要求される値が同じ場合は、前に生成したトークンを再利用できます。
 
-   ```console
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token:
-   ```
-
 3. プロンプトのアクセス トークンを生成するには、PowerShell スクリプトに戻り、次を実行します。
 
    - `$authority` と `$resourceUrl` の変数を更新します。 これは、手順 2 番のコンソールの出力で指定した値と一致している必要があります。 これらの値は、MIP SDK の `AcquireOAuth2Token()` の `challenge` パラメーターによって提供されます。
-     - `$authority` は、`https://login.windows.net/common/oauth2/authorize` である必要があります。
-     - `$resourceUrl` は、`https://syncservice.o365syncservice.com/` または `https://aadrm.com` である必要があります。
    - PowerShell スクリプトを実行します。 `Get-ADALToken` コマンドレットにより、次の例と似た Azure AD 認証プロンプトがトリガーされます。 手順 2 番のコンソール出力と同じアカウントを指定します。 サインインに成功すると、アクセス トークンがクリップボードに配置されます。
 
      [![Visual Studio のトークンでのサインインの取得](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
@@ -122,15 +112,6 @@ ms.locfileid: "96536047"
    > 次のクイック スタートで使用するので、(たとえば、`f42a3342-8706-4288-bd31-ebb85995028z` のように) 1 つ以上の機密ラベルの ID をコピーして保存します。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
-
-### <a name="problems-during-execution-of-powershell-script"></a>PowerShell スクリプトの実行時の問題
-
-| [概要] | エラー メッセージ | 解決策: |
-|---------|---------------|----------|
-| アプリケーションの登録または PowerShell スクリプトに不正なリダイレクト URI (AADSTS50011) |*AADSTS50011: 要求で指定した応答 URL がアプリケーションに構成されている応答 URL と一致しません: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* | 次のいずれかの手順を完了し、使用しているリダイレクト URI を確認してください。<br><br><li>Azure AD のアプリケーションの構成のリダイレクト URI が PowerShell のスクリプトと一致するように更新します。 リダイレクト URI のプロパティが正しく構成されていることを、「[MIP SDK setup and configuration](setup-configure-mip.md#register-a-client-application-with-azure-active-directory)」 (MIP SDK の設定と構成) で確認します。<br><li>PowerShell スクリプトの `redirectUri` 変数が、アプリケーションの登録と一致していることを確認します。 |
-| 不正なサインイン アカウント (AADSTS50020) | *AADSTS50020: ID プロバイダー 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/ ' のユーザー アカウント 'user@domain.com ' がテナントの '組織名' になく、そのテナントのアプリケーション '0edbblll-8773-44de-b87c-b8c6276d41eb' にアクセスできません。* | 次のいずれかを完了します。<br><br><li>PowerShell スクリプトを再実行します。その際、Azure AD アプリケーションが登録されたのと同じテナントのアカウントを使用してください。<br><li>サインイン アカウントが正しい場合、PowerShell のホスト セッションが既に別のアカウントで認証されている可能性があります。 この場合、スクリプト ホストを終了し、再度開き、再度実行します。<br><li>(ネイティブではなく) Web アプリでこのクイック スタートを使用しており、別のテナントのアカウントを使用してサインインする必要がある場合、Azure AD アプリケーションの登録がマルチテナントで使用できるよう、有効になっていることを確認します。 アプリケーションの登録の「マニフェストの編集」機能を使用して、これが `"availableToOtherTenants": true,` を指定していることを確認することで確認できます。 |
-| アプリケーションの登録での不正なアクセス許可 (AADSTS65005) | *AADSTS65005: 無効なリソースです。クライアントのアプリケーションの登録で要求されたアクセス許可にないリソースに、クライアントがアクセスを求めました。クライアント アプリ ID: 0edbblll-8773-44de-b87c-b8c6276d41eb。要求のリソース値: https://syncservice.o365syncservice.com/ 。リソース アプリ ID: 870c4f2e-85b6-4d43-bdda-6ed9a579b725。アプリの登録で有効なリソースの一覧: 00000002-0000-0000-c000-000000000000。* | Azure AD のアプリケーションの構成の権限要求を更新します。 アプリケーションの登録で権限要求が正しく構成されていることを確認するには、「[MIP SDK setup and configuration](setup-configure-mip.md#register-a-client-application-with-azure-active-directory)」 (MIP SDK の設定と構成) を参照してください。 |
-
 ### <a name="problems-during-execution-of-c-application"></a>C++ アプリケーションの実行時の問題
 
 | [概要] | エラー メッセージ | 解決策: |
