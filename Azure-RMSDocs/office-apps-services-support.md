@@ -12,21 +12,21 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37d6eae1559f34bcbc84edecd3cc42926b4888c4
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 758fb47d41a4ca15e202fb5f18e3b94706bbb493
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97381597"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164608"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 *
+>***関連する内容**: [AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。*
 
 >[!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 エンド ユーザー Office アプリケーションと Office サービスで Azure Information Protection から Azure Rights Management サービスを使用し、組織のデータを保護できます。 これらの Office アプリケーションは Word、Excel、PowerPoint、および Outlook です。 Office サービスは Exchange および Microsoft SharePoint です。 Azure Rights Management サービスをサポートする Office 構成では、多くの場合、**IRM (Information Rights Management)** という用語が使用されます。
 
@@ -56,7 +56,7 @@ Exchange Online または Exchange Server を使用すると、Azure Information
 
 オンプレミスで Exchange を使用している場合、Azure Rights Management コネクタを展開し、IRM 機能と Azure Rights Management サービスを利用できます。 このコネクタはオンプレミス サーバーと Azure Rights Management サービスの間のリレーとして機能します。
 
-メールを保護するためのメール オプションの詳細については、「[電子メールの [転送不可] オプション](configure-usage-rights.md#do-not-forward-option-for-emails)」および「[電子メールの暗号化のみオプション](configure-usage-rights.md#encrypt-only-option-for-emails)」を参照してください。
+電子メールの保護に使用できる電子メールオプションの詳細については、「電子メールの [ [転送不可]](configure-usage-rights.md#do-not-forward-option-for-emails) オプション」と「電子メール [の暗号化専用オプション](configure-usage-rights.md#encrypt-only-option-for-emails)」を参照してください。
 
 メールの保護するために Exchange を構成する準備ができたら、次を参照します。
 

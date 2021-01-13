@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 016dfba5d945c0411b3c6858922a2e919282e94e
-ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
+ms.openlocfilehash: 69cf01252a95476a41ac5f82f7d0546afe285041
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762351"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164506"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -24,7 +24,7 @@ ms.locfileid: "97762351"
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
->***手順**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide-install.md)」を参照してください。
+>***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide-install.md)」を参照してください。
 
 Azure Information Protection 統合されたラベル付けクライアントをエンタープライズネットワークにインストールする前に、コンピューターに必要なオペレーティングシステムのバージョンとアプリケーションがインストールされていることを確認してください。 Azure Information Protection: [Azure Information Protection の要件](../requirements.md) と、 [エンタープライズネットワークに統一されたラベル付けクライアントをインストールするための追加の要件](reqs-ul-client.md)があります。
 
@@ -51,7 +51,7 @@ Office の他のエディション ( **standard** など) では、Rights Manage
 
 ユーザー向けにクライアントをインストールするオプションは次の 2 つです。
 
-|オプション  |[説明]  | I
+|オプション  |説明  | I
 |---------|---------|
 |**クライアントの実行可能 (.exe) バージョンを実行する**     |   対話形式またはサイレント モードで実行できるお勧めのインストール方法です。 <br><br>この方法ではインストーラーが前提条件の多くを確認し、満たされていない前提条件を自動的にインストールできるため、柔軟性に優れたお勧めの方法です。 <br><br>詳細については、「 [実行可能ファイルのインストーラーを使用して AIP 統合ラベルクライアントをインストール](#install-the-aip-unified-labeling-client-using-the-executable-installer)する」を参照してください。|
 |**Windows インストーラー (.msi) バージョンのクライアントを展開する**     |     グループ ポリシー、構成マネージャー、Microsoft Intune などの一元的な展開メカニズムを使用するサイレント インストールでのみサポートされています。 <br><br>Intune とモバイル デバイス管理 (MDM) で管理されている Windows 10 PC では、インストールで実行可能ファイルがサポートされていないため、この方法が必要です。 <br><br> ただし、このインストール方法を使用する場合は、依存関係にあるソフトウェアの確認と、インストールまたはアンインストールを手動で行う必要があります。実行可能ファイルのインストーラーであれば、各コンピューターでインストーラーによってこの作業が実行されます。 <br><br>詳細については、「 [.msi インストーラーを使用して、統合されたラベル付けクライアントをインストール](#install-the-unified-labeling-client-using-the-msi-installer)する」を参照してください。 |
@@ -85,7 +85,7 @@ Microsoft Update カタログを使用して *いない* 場合、または Intu
     
     ヘルプ画面に表示されていない追加のパラメーター:
         
-    |パラメーター  |[説明]  |
+    |パラメーター  |説明  |
     |---------|---------|
     |**AllowTelemetry = 0**     |    このパラメーターは、インストール オプション **[Microsoft に利用状況の統計を送信して、Azure Information Protection の改善に協力します]** を無効にするときに使用します。     |
     |**ServiceLocation**     |  このパラメーターは、Office 2010 を実行しているコンピューターにクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合またはそのユーザーにプロンプトを表示したくない場合に使用します。 <br><br>詳細については、次を参照してください。 <br>- [**Servicelocation** インストールパラメーターの詳細](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP for Windows および Office バージョンの拡張サポート](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |

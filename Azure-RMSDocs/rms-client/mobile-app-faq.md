@@ -12,24 +12,24 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 69a0f87bd47e164f709dee4159a810141515a343
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 4b936baf799808fadbdaaefc0ae1fd55a6853fb2
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583695"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164456"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>IOS または Android 用の Azure Information Protection アプリとは
 
 >***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 IOS および Android 用の Azure Information Protection (AIP) モバイルアプリは、保護された電子メールメッセージ、Pdf、画像、テキストファイルを表示できるビューアーアプリです。これらのファイルの種類の通常のアプリで保護がサポートされていない場合に便利です。 
 
 たとえば、保護された電子メールが通常の電子メールモバイルアプリに添付ファイルとして表示される場合は、AIP モバイルアプリを使用してその電子メールを表示できます。
 
-詳細については、「[Azure Rights Management データ保護をサポートするアプリケーション](../requirements-applications.md)」をご覧ください。
+アプリでサポートされている保護機能の詳細については、 [Azure Rights Management データ保護をサポートするアプリケーション](../requirements-applications.md)」を参照してください。 
 
 > [!NOTE]
 > AIP mobile apps は *閲覧者のみで* あり、新しい電子メールを作成したり、電子メールに返信したり、保護されたファイルを作成または編集したりすることはできません。 AIP mobile apps では、保護された Pdf または電子メールの添付ファイルを開くこともできません。
@@ -39,26 +39,19 @@ IOS および Android 用の Azure Information Protection (AIP) モバイルア�
 
 次のいずれかの場所から AIP mobile apps をダウンロードしてインストールします。
 
-**iTunes**
+**iTunes**:
 
-:::image type="content" source="../media/develop/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::
+:::image type="content" source="../media/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::  
 
-**Google Play**
+**Google Play**:
 
-:::image type="content" source="../media/develop/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false":::
+:::image type="content" source="../media/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false"::: 
 
-**AIP のダウンロードページ**
-
-:::image type="content" source="../media/aip-icon.png" alt-text="Azure Information Protection のダウンロードページ" border="false":::
-
-[**モバイルデバイス**] セクションで、 [IOS](https://apps.apple.com/app/microsoft-rights-management/id689516635)または [Android](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)のアイコンを選択します。
-
-**会社のポータル**
+**会社のポータル**:
 
 モバイルデバイスが Microsoft Intune によって管理されている場合は、ポータルサイトから AIP mobile アプリをダウンロードできます。 
 
-詳細については、システム管理者にお問い合わせください。
-
+詳細については、システム管理者にお問い合わせください。 
 ## <a name="ios-view-protected-files-on-your-device"></a>iOS: デバイス上の保護されたファイルを表示する
 
 [AIP モバイルアプリをインストール](#download-and-install-the-aip-app-for-your-device)したら、保護された電子メールまたはファイルを開きます。 
@@ -67,7 +60,7 @@ IOS および Android 用の Azure Information Protection (AIP) モバイルア�
 
     [**ファイルを共有**] を選択し、[ **AIP ビューアーにコピー** ] を選択します。
 
-    次に例を示します。
+    例:
 
     :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="IOS の AIP ビューアーに共有する" border="false":::
 
@@ -108,7 +101,7 @@ IOS および Android 用の AIP mobile apps では、次のファイルの種�
 
     たとえば、次の権利で保護されたファイルのいずれかを自分で送信します。
 
-    |ファイルの種類  |手順  |
+    |ファイルの種類  |Instructions  |
     |---------|---------|
     |**電子メール (rpq msg)**     | Windows コンピューターの Outlook などの別のデバイスを使用して、権限で保護された電子メールメッセージを自分宛てに送信し、モバイルデバイスからアクセスできるようにします。  |
     |**PDF**     | 1. Windows コンピューターから、AIP クライアントを使用して [PDF ファイルを保護](clientv2-classify-protect.md) します。 </br>2. 保護された PDF を自分で送信するか、SharePoint で保護されたライブラリにアップロードして、自分の電子メールアドレスに共有します。        |

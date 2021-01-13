@@ -4,7 +4,7 @@ description: エンドユーザーが AIP クライアントを使用して、�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f834aa10a522336067cc68ce9edd20284488b888
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: 294d93666eed55616bbe033215abef0e9dcf62b7
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764103"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163775"
 ---
 # <a name="user-guide-revoke-document-access-with-azure-information-protection-public-preview"></a>ユーザーガイド: Azure Information Protection を使用したドキュメントアクセスの取り消し (パブリックプレビュー)
 
@@ -26,7 +26,7 @@ ms.locfileid: "97764103"
 >
 >***関連**: [AIP 統合ラベルクライアントのみ](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 従来のクライアントについては、「 [ユーザーガイド: AIP classic client を使用してドキュメントを追跡および取り消す](client-track-revoke.md)」を参照してください。
 
-この記事では、Microsoft Office から保護したドキュメントへのアクセスを取り消す方法について説明します。
+この記事では、Microsoft Office から保護したドキュメントへのアクセスを取り消す方法について説明します。 保護されたドキュメントがラベル付けされていない場合でも、追跡と取り消しはサポートされます。
 
 保護されたドキュメントへのアクセスを取り消すと、前にアクセス権を付与した場合でも、他のユーザーがドキュメントにアクセスできなくなります。 詳細については、「 [ユーザーガイド: 分類と保護」を参照して Azure Information Protection 統合ラベルクライアントを](clientv2-classify-protect.md)参照してください。
 

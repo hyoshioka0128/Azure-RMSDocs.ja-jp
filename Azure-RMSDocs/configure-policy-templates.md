@@ -14,12 +14,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c4b88b2c0e2bbdff7f77d4eb36256a771dc9f5b6
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 03a1f0d7d28db24614bb92fa78de41fdd11a12f9
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806330"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163690"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -42,7 +42,7 @@ ms.locfileid: "97806330"
 - テナントのテンプレートは、[ **Azure Information Protection ラベル**] ウィンドウの [**保護テンプレート**] セクションに表示されます。 このペインに移動するには、[**分類**  >  **ラベル**] メニューオプションを選択します。 ラベルは表示されません。 分類とラベル付けに固有の構成設定も表示されますが、これらの設定はテンプレートには反映されず、構成することはできません。 
 
 >[!NOTE]
->一部のアプリケーションやサービスでは、[[転送不可]](configure-usage-rights.md#do-not-forward-option-for-emails) や [[暗号化のみ]](configure-usage-rights.md#encrypt-only-option-for-emails) (または **[暗号化]**) がテンプレートとして表示される場合があります。 これらは編集したり削除したりできるテンプレートではなく、Exchange サービスでの既定のオプションです。
+>アプリケーションやサービスによっては、[ [転送不可](configure-usage-rights.md#do-not-forward-option-for-emails) ] と [ [暗号化のみ](configure-usage-rights.md#encrypt-only-option-for-emails) (**暗号化**)] がテンプレートとして表示される場合があります。 これらは編集したり削除したりできるテンプレートではなく、Exchange サービスでの既定のオプションです。
 
 ## <a name="default-templates"></a>既定のテンプレート
 

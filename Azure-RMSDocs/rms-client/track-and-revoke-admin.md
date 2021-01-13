@@ -4,7 +4,7 @@ description: 管理者が保護されたドキュメントのドキュメント�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/24/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 6c83aa89c06dbf7c6cab5ac014db72eed5e91f06
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: 7b60438ad3d1e8a971c58a7f29b2f8b41dd84c91
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764137"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163741"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>管理者ガイド: Azure Information Protection を使用したドキュメントアクセスの追跡と取り消し (パブリックプレビュー)
 
@@ -26,7 +26,7 @@ ms.locfileid: "97764137"
 >
 >***関連**: [AIP 統合ラベルクライアントのみ](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 従来のクライアントについては、「 [管理者ガイド: AIP でのドキュメント追跡の構成と使用](client-admin-guide-document-tracking.md)」を参照してください。
 
-[バージョン 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview)以降にアップグレードした場合、追跡用にまだ登録されていない保護されたドキュメントは、AIP 統合ラベルクライアントを使用して次回開いたときに自動的に登録されます。
+[バージョン 2.9.111.0](unifiedlabelingclient-version-release-history.md#version-291110)以降にアップグレードした場合、追跡用にまだ登録されていない保護されたドキュメントは、AIP 統合ラベルクライアントを使用して次回開いたときに自動的に登録されます。 保護されたドキュメントがラベル付けされていない場合でも、追跡と取り消しはサポートされます。
 
 ドキュメントを追跡対象として登録すると、 [Microsoft 365 のグローバル管理者](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) は、成功したアクセスイベントと拒否された試行を含むアクセスの詳細を追跡し、必要に応じてアクセス権を取り消すことができます。 
 

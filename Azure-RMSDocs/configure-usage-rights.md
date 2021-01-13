@@ -13,21 +13,21 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 42921437537d7daa93ceda374aa247a8601707d8
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 39fedde68cfe771d29e9fda1be4a9f2883cf1ede
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382889"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164251"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Azure Information Protection の使用権限を構成する
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 > 
 > 完全を期すため、この記事には 2018 年 1 月 8 日に廃止された Azure クラシック ポータルの値も含まれています。
 
@@ -119,7 +119,7 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 ## <a name="encrypt-only-option-for-emails"></a>電子メールの暗号化のみオプション
 
-Exchange Online で Office 365 Message Encryption の新機能を使用する場合、新しい電子メール オプション (**暗号化のみ**) を利用できます。
+Exchange Online が Office 365 Message Encryption の新機能を使用する場合、追加の制限なしでデータを暗号化するために、新しい [電子メールの **暗号化** ] オプションが使用できるようになります。
 
 このオプションは、Exchange Online を使用するテナントで使用でき、次のように選択できます。
 
@@ -128,7 +128,7 @@ Exchange Online で Office 365 Message Encryption の新機能を使用する場
 - **Office 365 DLP アクションとして**
 - **Outlook から**、 [更新チャネル別の Microsoft 365 アプリのサポートされているバージョンの表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンの [Azure RMS をサポートする Microsoft 365 アプリ](requirements-applications.md#windows-computers-for-information-rights-management-irm)がある場合。 
 
-Encrypt-Only オプションの詳細については、Office チームの次のブログ投稿のお知らせを参照してください。 [office 365 Message Encryption でのロールアウトのみを暗号化](https://aka.ms/omefeb2018)します。
+[暗号化のみ] オプションの詳細については、Office チームの次のブログ投稿のお知らせを参照してください。 [office 365 Message Encryption でのロールアウトのみを暗号化](https://aka.ms/omefeb2018)します。
 
 このオプションが選択されると、電子メールが暗号化され、受信者は認証される必要があります。 すると、受信者には **名前を付けて保存、エクスポート** と **フル コントロール** を除くすべての使用権限が割り当てられます。 この使用権限の組み合わせは、保護を削除できないこと以外は、受信者には制限がないということです。 たとえば、受信者は電子メールをコピー、印刷、および転送することができます。 
 
@@ -158,7 +158,7 @@ Rights Management 発行者には、常にドキュメントまたは電子メ�
 
 - Rights Management 発行者は取り消されたドキュメントも開くことができます。 
 
-既定では、このアカウントはそのコンテンツの **Rights Management 所有者** でもあります。これは、ドキュメントまたは電子メールを作成したユーザーが保護を開始した場合です。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 次に例を示します。
+既定では、このアカウントはそのコンテンツの **Rights Management 所有者** でもあります。これは、ドキュメントまたは電子メールを作成したユーザーが保護を開始した場合です。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 例:
 
 - 管理者がファイル共有のファイルを一括保護する: Azure AD の管理者アカウントがユーザーのためにドキュメントを保護します。
 

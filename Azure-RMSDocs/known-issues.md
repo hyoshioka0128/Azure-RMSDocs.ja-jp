@@ -4,19 +4,19 @@ description: Azure Information Protection の既知の問題と制限を検索�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/29/2020
+ms.date: 01/12/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1ee51978452a4f420478f2938020578166f49335
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 5a512bd03a627fb80503f07b98e4340d8ea9fce4
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805990"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164353"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題 - Azure Information Protection
 
@@ -74,6 +74,7 @@ Azure Information Protection クライアントと共にインストールされ
 |**複数のバージョンの Office**    | Azure Information Protection クライアントでは、クラシックでも統合ラベル付けでも、同じコンピューター上で複数のバージョンの Office を使用したり、Office のユーザー アカウントを切り替えたりすることはサポートされていません。       |
 |**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、次のようになります。 <br><br>-Office アプリでパフォーマンスの問題が発生する可能性があります。<br>-Azure Information Protection バーが、1つまたは両方の画面で、Office 画面の中央にフローティングするように見える場合があります。 <br><br>一貫したパフォーマンスを確保し、バーが正しい場所にあることを確認するには、Office アプリケーションの [**オプション**] ダイアログを開き、[**全般**] で、[**最適化**] ではなく [**互換性のために最適化**] を選択します。    |
 |**Office 2016 での IRM のサポート**| Office 2016 でメタデータの暗号化を制御する [Drmencryptproperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) レジストリ設定は、Azure Information Protection ラベルではサポートされていません。|
+|**Outlook オブジェクトモデルへのアクセス** | -Outlook オブジェクトモデルを使用してアドレス帳にアクセスしたときに表示されるプロンプトを制御する [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) レジストリ設定は、Azure Information Protection ラベルではサポートされていません。 <br><br>- [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) レジストリ設定は、プログラムがアドレス情報を読み取るときに表示されるプロンプトを制御しますが、Azure Information Protection ラベルではサポートされていません。|
 |**Word のコンテンツのマーキング**    | Microsoft Word のヘッダーまたはフッター内の AIP [コンテンツのマーキング](configure-policy-markings.md) は、オフセットされているか、正しく配置されていないか、同じヘッダーまたはフッターにテーブルが含まれていると、完全に隠れている可能性があります。<br><br>詳細については、「 [視覚的なマーキングが適用されるタイミング](configure-policy-markings.md#when-visual-markings-are-applied)」を参照してください。 |
 |**電子メールに添付されたファイル** |Windows の最新の更新プログラムの制限により、 [Microsoft Outlook が Azure Rights Management によって保護](office-apps-services-support.md)されている場合、電子メールに添付されたファイルは、ファイルを開いた後にロックされる可能性があります。 |
 |**差し込み印刷**    |  Office の[差し込み印刷](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705)機能は、どの Azure Information Protection 機能でもサポートされていません。       |
@@ -170,7 +171,7 @@ AIP ビューアーでは画像が縦モードで表示され、ワイドビュ�
 
 詳細については、 [条件付きアクセスのドキュメント](/azure/active-directory/conditional-access/concept-conditional-access-users-groups)を参照してください。
 
-## <a name="more-information"></a>説明
+## <a name="more-information"></a>詳細情報
 
 次の記事は、Azure Information Protection の既知の問題に関する質問に回答する際に役立つ場合があります。
 

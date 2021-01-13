@@ -13,18 +13,18 @@ ROBOTS: NOINDEX
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 873d000a7ce6ce67588f82b98f2ed570d55805ad
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 293ed29ba70ae5f4adff5530d782ecb661a6f9dd
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806007"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164115"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Azure Information Protection の展開ロードマップ (保護のみ)
 
 >***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、 [分類、ラベル付け、保護に関する AIP の展開ロードマップ](deployment-roadmap-classify-label-protect.md)を参照してください。 *
 
 > [!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -41,7 +41,7 @@ ms.locfileid: "97806007"
 
 ## <a name="deployment-process"></a>デプロイ プロセス
 
-次の手順を実行します。
+次の手順に従います。
 
 1. [AIP protection サービスを含むサブスクリプションがあることを確認します。](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) 
 1. [Azure Information Protection を使用するためのテナントを用意する](#prepare-your-tenant-to-use-azure-information-protection)
@@ -108,7 +108,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 ## <a name="install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management"></a>Azure Information Protection クラシックとクライアントをインストールする Rights Management 用のアプリケーションとサービスを構成する
 
-次の手順を実行します。
+次の手順に従います。
 
 1. **Azure Information Protection クラシッククライアントを展開する**
     

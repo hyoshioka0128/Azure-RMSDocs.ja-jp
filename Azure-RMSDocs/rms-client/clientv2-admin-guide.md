@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3514e97bb454c599fef40660d952f201e18323c2
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 4f09b4cc9df3b50468d6de05ca283c99ea2e9df0
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385456"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164421"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合ラベル付けクライアント管理者ガイド
 
@@ -24,11 +24,11 @@ ms.locfileid: "97385456"
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
->***手順**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide.md)」を参照してください。
+>***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide.md)」を参照してください。
 
 このガイドの情報は、エンタープライズネットワーク上で Azure Information Protection 統合されたラベル付けクライアントを担当している場合、または、「 [Azure Information Protection ユニファイドラベルクライアントユーザーガイド](clientv2-user-guide.md)」に記載されている技術情報が必要な場合に使用します。 
 
-次に例を示します。
+例:
 
 - このクライアントのさまざまなコンポーネントについて知り、インストールする必要があるかどうかを理解する
 

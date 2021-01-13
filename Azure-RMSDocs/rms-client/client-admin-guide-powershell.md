@@ -13,18 +13,18 @@ ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7dbd776121f8f3a76890a5fa287de2912572b477
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: cd07207751a3ad7f6bf929f0d94d9f8802f15436
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807333"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164557"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-classic-client"></a>管理者ガイド: Azure Information Protection クラシッククライアントでの PowerShell の使用
 
 >***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
->***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [クライアント管理者ガイド](clientv2-admin-guide-powershell.md)」を参照してください。
 
 > [!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -73,7 +73,7 @@ Azure Information Protection クラシッククライアントをインストー
 組織が分類と保護に Azure Information Protection を使用しているとき、あるいはデータ保護に Azure Rights Management サービスを使用しているとき、PowerShell コマンドを使い始める前にこのセクションをお読みください。
 
 
-### <a name="prerequisites"></a>[前提条件]
+### <a name="prerequisites"></a>前提条件
 
 AzureInformationProtection モジュールのインストールに関する前提条件に加えて、Azure Information Protection ラベル付けと Azure Rights Management データ保護サービスに関する追加の前提条件があります。
 
@@ -386,7 +386,7 @@ Rights Management テンプレートが変更された場合は、もう一度 `
 Active Directory Rights Management サービスだけを使っている場合は、PowerShell コマンドを使ってファイルを保護または保護解除する前に、このセクションをお読みください。
 
 
-### <a name="prerequisites"></a>[前提条件]
+### <a name="prerequisites"></a>前提条件
 
 AzureInformationProtection モジュールをインストールするための前提条件に加えて、ファイルの保護と保護解除に使用するアカウントには、ServerCertification.asmx にアクセスする読み取り許可と実行許可を与える必要があります。
 

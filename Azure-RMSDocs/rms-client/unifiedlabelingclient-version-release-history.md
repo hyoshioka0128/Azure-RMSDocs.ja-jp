@@ -4,7 +4,7 @@ description: Windows 用の Azure Information Protection (AIP) の統合され�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/29/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e4193a0345708d4c90e3469df8b1102d45a85af7
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: ce99003d95edd8202a1fddb2bb5eae2559100055
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805956"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164404"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -69,33 +69,33 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 統一されたラベル付けクライアントは、Azure Information Protection のクラシッククライアントに置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けソリューションの比較](use-client.md#compare-the-labeling-solutions-for-windows-computers)」を参照してください。
 
-## <a name="version-291090-public-preview"></a>バージョン 2.9.109.0 (パブリックプレビュー)
+## <a name="version-291110"></a>バージョン2.9.111.0
 
-統一されたラベル付けスキャナーとクライアントバージョン2.9.109.0
+統一されたラベル付けスキャナーとクライアントバージョン2.9.111.0
 
-**リリース** 12/16/2020
+**リリース** 1/13/2021
 
 このバージョンには、統合されたラベル付けスキャナーとクライアントの次の新機能、修正プログラム、および拡張機能が含まれています。
 
 - **スキャナーの新機能**:
 
     - [接続されていないスキャナーサーバーに対する PowerShell のサポート](#powershell-support-for-disconnected-scanner-servers)
-    - [コンテンツスキャンジョブでの NFS リポジトリのサポート](#support-for-nfs-repositories-in-content-scan-jobs)
+    - [コンテンツスキャンジョブでの NFS リポジトリのサポート](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
     - [追加の機密情報の種類のサポートを追加しました](#added-support-for-additional-sensitive-information-types)
 
 - **クライアントの新機能**:
 
-    - [ドキュメントへのアクセスを追跡し、アクセスを取り消す](#track-document-access-and-revoke-access)
+    - [ドキュメントへのアクセスを追跡し、アクセスを取り消す](#track-document-access-and-revoke-access-public-preview)
     - [追加の機密情報の種類のサポートを追加しました](#added-support-for-additional-sensitive-information-types)
 
-- **修正と改善:**
+- **修正と改善**:
 
     - [統一されたラベル付けスキャナーの修正と機能強化](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [統一されたラベル付けクライアントの修正と機能強化](#fixes-and-improvements-for-the-unified-labeling-client)
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>接続されていないスキャナーサーバーに対する PowerShell のサポート
 
-[オンプレミスの Azure Information Protection スキャナー](../deploy-aip-scanner.md)は、PowerShell 経由で、インターネットに接続できないスキャナーサーバーのコンテンツスキャンジョブの管理をサポートするようになりました。
+[オンプレミスの Azure Information Protection スキャナー](../deploy-aip-scanner.md)では、 [Azure 中国の21vianet スキャナーサーバー](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs)など、インターネットに接続できないスキャナーサーバーの PowerShell を使用したコンテンツスキャンジョブの管理がサポートされるようになりました。
 
 接続されていないスキャナーサーバーをサポートするために、次の新しいコマンドレットを追加しました。
 
@@ -114,7 +114,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 詳細については、「 [スキャナーサーバーがインターネットに接続できない場合](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) 」と「 [スキャナーを構成](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)する」を参照してください。
 
-### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>コンテンツスキャンジョブでの NFS リポジトリのサポート
+### <a name="support-for-nfs-repositories-in-content-scan-jobs-public-preview"></a>コンテンツスキャンジョブでの NFS リポジトリのサポート (パブリックプレビュー)
 
 これで、SMB ファイル共有と SharePoint リポジトリに加えて、コンテンツスキャンジョブに NFS リポジトリを追加できるようになりました。
 
@@ -136,9 +136,9 @@ NFS 共有のスキャンをサポートするには、スキャナーコンピ�
 
 詳細については、Microsoft 365 のドキュメントで、 [機密情報の種類のエンティティの定義](/microsoft-365/compliance/sensitive-information-type-entity-definitions) を参照してください。
 
-### <a name="track-document-access-and-revoke-access"></a>ドキュメントへのアクセスを追跡し、アクセスを取り消す
+### <a name="track-document-access-and-revoke-access-public-preview"></a>ドキュメントアクセスの追跡とアクセスの取り消し (パブリックプレビュー)
 
-バージョン2.9.109.0 にアップグレードすると、まだ追跡用に登録されていないドキュメントは、AIP 統合ラベルクライアントがインストールされているコンピューターで次回開いたときに登録されます。
+バージョン2.9.111.0 にアップグレードした後、追跡用にまだ登録されていない保護されたドキュメントは、AIP 統合ラベルクライアントがインストールされているコンピューターで次回開いたときに登録されます。 保護されたドキュメントがラベル付けされていない場合でも、追跡と取り消しはサポートされます。
 
 ドキュメントを追跡用に登録すると、管理者は PowerShell を使用してドキュメントへのアクセスを追跡し、必要に応じてアクセスを取り消すことができます。
 
@@ -160,14 +160,13 @@ AIP classic クライアントは、 [Microsoft 追跡ポータル](client-track
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-scanner"></a>統一されたラベル付けスキャナーの修正と機能強化
 
-Azure Information Protection 統合された [ラベル付けスキャナー](../deploy-aip-scanner.md)のバージョン2.9.109.0 では、次の修正プログラムが提供されました。
+Azure Information Protection 統合された [ラベル付けスキャナー](../deploy-aip-scanner.md)のバージョン2.9.111.0 では、次の修正プログラムが提供されました。
 
 - **-**[スキャナーデータベース](../deploy-aip-scanner-prereqs.md)名にハイフン () のサポートを追加しました
 - **[[コンテンツに基づくラベルファイル](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)**] オプションが **オフ** に設定されている場合のレポートの更新
 - 大量の情報の種類の一致による[メモリ消費の向上](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
 - スラッシュ () で終わる [SharePoint オンプレミス](../deploy-aip-scanner-prereqs.md#sharepoint-requirements)パスのサポート **/**
 - SharePoint のスキャン[速度](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)の向上
-
 - SharePoint サーバーのスキャン時の [タイムアウトを回避](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) するためのサポート。
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-client"></a>統一されたラベル付けクライアントの修正と機能強化
@@ -182,9 +181,9 @@ Azure Information Protection 統合された [ラベル付けスキャナー](..
 
 - [推奨ラベル](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) と [視覚的なマーキング](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) は、Outlook で想定どおりに適用されます。 
 
-- [Outlookblocktrusteddomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels)と[OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings が構成されている場合など、 [Outlook 配布リストの受信者を検索](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview)するためのサポートが追加されました。
+- [Outlookblocktrusteddomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels)と[OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings が構成されている場合など、 [Outlook 配布リストの受信者を検索](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients)するためのサポートが追加されました。
 
-    この機能を有効にする場合は、 [Outlookgetemの Addressenomeoutmsproperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) 設定で定義されている既定のタイムアウト値も発生させることをお勧めします。
+    この機能を有効にする場合は、 [Outlookgetemの Addressenomeoutmsproperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients) 設定で定義されている既定のタイムアウト値も発生させることをお勧めします。
 
 - 複数のラベルポリシーが1人のユーザーに対して構成されており、それぞれの詳細設定が競合している場合に使用される [優先順位の](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) 更新。
 

@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: bdaa80ba38a98a53dc4781bf7aadf15b23fbda3a
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: becf3190cd919e90fe6428660953ded586e7d9e7
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384895"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163724"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>ユーザー ガイド: RMS 共有アプリケーションを使用して実行するタスク
 
 >***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、Windows 7 SP1、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
->**関連**: [Azure Information Protection Classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 ここでは、最近、Rights Management 共有アプリケーション (単に "RMS 共有アプリ" ともいう) から Azure Information Protection クライアントにアップグレードした場合に役立つ情報を提供します。 
 

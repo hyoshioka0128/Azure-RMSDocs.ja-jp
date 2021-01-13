@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3b4f110b1958ec055720da218c52cce4c3fc0f4
-ms.sourcegitcommit: f944025b6c026906f0010c9e7f9d8d54f20a6be7
+ms.openlocfilehash: 3f0093e2877ffe15232ed5704dcf2567b8ed99c4
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97705719"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164183"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーをインストールおよび展開するための要件
 
@@ -188,7 +188,7 @@ Office ドキュメントをスキャンするには、ドキュメントは次�
 
 260文字を超えるファイルパスを使用してファイルをスキャンするには、次のいずれかのバージョンの Windows がインストールされているコンピューターにスキャナーをインストールし、必要に応じてコンピューターを構成します。
 
-|Windows のバージョン  |[説明]  |
+|Windows Version  |説明  |
 |---------|---------|
 |**Windows 2016 以降**     |   長いパスをサポートするようにコンピューターを構成する      |
 |**Windows 10 または Windows Server 2016**     | 次の [グループポリシー設定](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10)を定義します。**ローカルコンピューターポリシー**  >  **コンピューターの構成**  >  **管理用テンプレート**  >  **すべての設定** で、  >  **Win32 の長いパスを有効に** します。    </br></br>これらのバージョンでのファイルパスのサポートの詳細については、Windows 10 開発者ドキュメントの「 [パスの最大長の制限](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) 」セクションを参照してください。    |
@@ -287,7 +287,11 @@ Azure portal から切断されたコンピューターをサポートするに�
 
 #### <a name="use-powershell-with-a-disconnected-computer"></a>接続されていないコンピューターで PowerShell を使用する
 
-PowerShell のみを使用して切断されたコンピューターをサポートするには、次の手順を実行します。
+切断されたコンピューターを PowerShell を使用してのみサポートするには、次の手順を実行します。
+
+> [!IMPORTANT]
+> [Azure 中国の 21vianet](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs)の管理者は、コンテンツのスキャンジョブを管理するために、この手順を使用する *必要があり* ます。
+> 
 
 **PowerShell のみを使用してコンテンツスキャンジョブを管理し** ます。
 
@@ -327,7 +331,7 @@ PowerShell のみを使用して切断されたコンピューターをサポー
 
 組織の要件に応じて、次のいずれかの操作を行います。
 
-|Restriction  |[説明]  |
+|Restriction  |説明  |
 |---------|---------|
 |**Sysadmin ロールを一時的に持つことができます。**     |  Sysadmin ロールを一時的に持っている場合は、データベースが自動的に作成され、スキャナーのサービスアカウントに必要なアクセス許可が自動的に付与されます。 <br><br>ただし、スキャナーを構成するユーザーアカウントには、スキャナー構成データベースの **db_owner** ロールが必要です。 スキャナーのインストールが完了するまで Sysadmin の役割しかない場合は、ユーザーアカウントに **db_owner** の役割を手動で付与します。       |
 |**Sysadmin ロールをまったく持つことはできません。**     |  Sysadmin ロールが一時的に付与されていない場合は、スキャナーをインストールする前に、データベースを手動で作成するための Sysadmin 権限をユーザーに要求する必要があります。 <br><br>この構成では、 **db_owner** ロールが次のアカウントに割り当てられている必要があります。 <br>-スキャナーのサービスアカウント<br>-スキャナーインストール用のユーザーアカウント<br>-スキャナー構成のユーザーアカウント <br><br>通常、スキャナーのインストールと構成には同じユーザー アカウントを使用します。 異なるアカウントを使用する場合は、どちらもスキャナー構成データベースの **db_owner** ロールが必要です。 必要に応じて、このユーザーと権限を作成します。 独自のクラスター名を指定した場合、構成データベースの名前は **cluster_name>AIPScannerUL_<** になります。  |
@@ -410,7 +414,7 @@ PowerShell のみを使用して切断されたコンピューターをサポー
 
 ラベルに自動ラベルの条件がない場合は、スキャナーを構成するときに、次のいずれかのオプションを使用することを計画します。
 
-|オプション  |[説明]  |
+|オプション  |説明  |
 |---------|---------|
 |**すべての情報の種類を検出**     |  [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)で、[情報の **種類**] を [検出済み]**に設定します。** </br></br>このオプションは、すべての機密情報の種類についてコンテンツをスキャンするようにコンテンツスキャンジョブを設定します。      |
 |**推奨ラベルの使用**     |  [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)で、[**推奨ラベルを自動的** に処理する] オプションを **[オン**] に設定します。</br></br> この設定により、推奨されるすべてのラベルがコンテンツに自動的に適用されるようにスキャナーが構成されます。      |

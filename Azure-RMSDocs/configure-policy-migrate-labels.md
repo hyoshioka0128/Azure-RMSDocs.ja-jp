@@ -12,18 +12,18 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f124e6c1bbf8b77760744885492e1c5663d02443
-ms.sourcegitcommit: 0f76655985b49b4b8868d5f8893e20978f4dc4da
+ms.openlocfilehash: 9e72c64fe59626f5f670712a2503308047e1aff8
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97747122"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164302"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
-> **適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+> ***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> [Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)**に関連***
+> *[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)**に関連***
 
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -171,7 +171,7 @@ Azure Information Protection クライアント (クラシック) は、Azure po
 
 ###### <a name="footnote-1"></a>脚注 1
 
-Outlook では、保護が保持されます。ただし、Encrypt-Only オプションを使用して電子メールが保護されている場合、その保護は削除されます。
+Outlook では、保護は保持されます。ただし、暗号化のみのオプション (**暗号化**) を使用して電子メールが保護されている場合、その保護は削除されます。
 
 
 ###### <a name="footnote-2"></a>脚注 2

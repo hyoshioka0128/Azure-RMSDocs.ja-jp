@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3deab3f361667a79905ab91842361d270b4323d7
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: ccedda605f736647766a0a5b2465e9ef90f2dbcc
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764171"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164149"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントのカスタム構成
 
@@ -159,13 +159,6 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 
 ラベルポリシーの詳細設定は、最後のポリシー設定を使用して同じロジックを使用して適用されます。
 
-> [!NOTE]
-> 現在の GA バージョンでは、Outlook に別の既定のラベルを設定できるようにするために、 [Outlookdefaultlabel](#set-a-different-default-label-for-outlook) の詳細ラベルポリシー設定の例外が存在します。
-> 
-> [Outlookdefaultlabel](#set-a-different-default-label-for-outlook)設定が競合している場合は、管理センターのポリシーの順序に従って、最初のポリシー設定から構成が取得されます。 
->
-> この例外は、 [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) パブリックプレビューの一部として削除されました。
-
 ## <a name="advanced-setting-references"></a>詳細設定の参照
 
 次のセクションでは、ラベルポリシーとラベルに使用できる詳細設定について説明します。
@@ -179,7 +172,7 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 
 |機能  |詳細設定  |
 |---------|---------|
-|**Outlook および電子メールの設定**     | - [Outlook で S/MIME 保護を適用するようにラベルを構成する](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Outlook ポップアップメッセージをカスタマイズする](#customize-outlook-popup-messages) <br>- [Outlook で推奨分類を有効にする](#enable-recommended-classification-in-outlook)<br> - [必須ラベルから Outlook メッセージを除外する](#exempt-outlook-messages-from-mandatory-labeling) <br>- [添付ファイル付きの電子メールの場合は、それらの添付ファイルの最上位の分類に一致するラベルを適用します。](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [電子メールの受信者を検索するときに Outlook 配布リストを展開する](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) <br>- [電子メールの送信を警告、ブロック、またはブロックするポップアップメッセージを Outlook に実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [S/MIME メールで Outlook のパフォーマンスの問題を回避する](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Outlook に別の既定のラベルを設定する](#set-a-different-default-label-for-outlook) |
+|**Outlook および電子メールの設定**     | - [Outlook で S/MIME 保護を適用するようにラベルを構成する](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Outlook ポップアップメッセージをカスタマイズする](#customize-outlook-popup-messages) <br>- [Outlook で推奨分類を有効にする](#enable-recommended-classification-in-outlook)<br> - [必須ラベルから Outlook メッセージを除外する](#exempt-outlook-messages-from-mandatory-labeling) <br>- [添付ファイル付きの電子メールの場合は、それらの添付ファイルの最上位の分類に一致するラベルを適用します。](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [電子メールの受信者を検索するときに Outlook 配布リストを展開する](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [電子メールの送信を警告、ブロック、またはブロックするポップアップメッセージを Outlook に実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [S/MIME メールで Outlook のパフォーマンスの問題を回避する](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Outlook に別の既定のラベルを設定する](#set-a-different-default-label-for-outlook)     |
 |**PowerPoint の設定** | - [指定したテキストが含まれ、ヘッダー/フッターではない PowerPoint から図形を削除しない](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [PowerPoint カスタムレイアウト内から外部コンテンツマーキングを明示的に削除する](#extend-external-marking-removal-to-custom-layouts)<br>- [図形内のテキストで図形を削除するのではなく、ヘッダーとフッターから特定の図形名のすべての図形を削除する](#remove-all-shapes-of-a-specific-shape-name)  |
 |**エクスプローラーの設定**     | - [エクスプローラーでユーザーにカスタムアクセス許可を常に表示する](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) <br>  - [エクスプローラーでカスタムアクセス許可を無効にする](#disable-custom-permissions-in-file-explorer)      |
 |**パフォーマンスの向上の設定**     | - [CPU 消費量の制限](#limit-cpu-consumption) <br>- [スキャナーによって使用されるスレッドの数を制限する](#limit-the-number-of-threads-used-by-the-scanner) <br>- [S/MIME メールで Outlook のパフォーマンスの問題を回避する](#prevent-outlook-performance-issues-with-smime-emails)        |
@@ -205,7 +198,7 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 |**EnableCustomPermissionsForCustomProtectedFiles**|[カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |**EnableLabelByMailHeader**|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |**EnableLabelBySharePointProperties**|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-| **Enableoutlookて List膨張** | [電子メールの受信者を検索するときに Outlook 配布リストを展開する](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) |
+| **Enableoutlookて List膨張** | [電子メールの受信者を検索するときに Outlook 配布リストを展開する](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
 | **EnableTrackAndRevoke** | [ドキュメント追跡機能を無効にする (パブリックプレビュー)](#turn-off-document-tracking-features-public-preview) |
 |**HideBarByDefault デフォルト)**|[Office アプリの Information Protection バーを表示します](#display-the-information-protection-bar-in-office-apps)|
 |**JustificationTextForUserText** | [変更されたラベルの理由プロンプトテキストをカスタマイズする](#customize-justification-prompt-texts-for-modified-labels) |
@@ -214,7 +207,7 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 |**OutlookBlockUntrustedCollaborationLabel**|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookCollaborationRule**| [Outlook ポップアップメッセージをカスタマイズする](#customize-outlook-popup-messages)|
 |**OutlookDefaultLabel**|[Outlook に別の既定ラベルを設定する](#set-a-different-default-label-for-outlook)|
-|**Outlookgetemの Addressenomeoutmsproperty** | [配布リストの受信者にブロックメッセージを実装するときに Outlook で配布リストを展開するためのタイムアウトを変更する](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) |
+|**Outlookgetemの Addressenomeoutmsproperty** | [配布リストの受信者にブロックメッセージを実装するときに Outlook で配布リストを展開するためのタイムアウトを変更する](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
 |**Outlookジャスト Ifytrusteddomains**|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookJustifyUntrustedCollaborationLabel**|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookRecommendationEnabled**|[Outlook で推奨分類を有効にする](#enable-recommended-classification-in-outlook)|
@@ -465,7 +458,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave
 
 他のラベル付けソリューションから分類を削除するには、次の2つの方法があります。
 
-|設定  |[説明]  |
+|設定  |説明  |
 |---------|---------|
 |**WordShapeNameToRemove**     |  図形名が **WordShapeNameToRemove** advanced プロパティで定義されている名前と一致する Word 文書から、任意の図形を削除します。  <br><br>詳細については、「 [Use The WordShapeNameToRemove advanced property](#use-the-wordshapenametoremove-advanced-property)」を参照してください。     |
 |**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    では、テキストベースのヘッダーまたはフッターを、Word、Excel、PowerPoint のドキュメントから削除または置換できます。 <br><br>詳細については、次を参照してください。 <br>- [RemoveExternalContentMarkingInApp 詳細設定プロパティの使用](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [ExternalContentMarkingToRemove 構成する方法について説明](#how-to-configure-externalcontentmarkingtoremove)します。    |
@@ -816,7 +809,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:h
 
 これらの条件が満たされると、ユーザーには、次のいずれかの操作を含むポップアップメッセージが表示されます。
 
-|Type  |[説明]  |
+|Type  |説明  |
 |---------|---------|
 |**呼びかけ**     | ユーザーは確認して電子メールを送信またはキャンセルできます。        |
 |**揃え**     |  ユーザーは理由 (定義済みオプションまたは自由形式) を求められ、ユーザーは電子メールを送信または取り消しできます。 <br>ジャスティフィケーションテキストは、データ損失防止 (DLP) サービスなどの他のシステムで読み取ることができるように、電子メールの x ヘッダーに書き込まれます。       |
@@ -874,7 +867,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollab
 >詳細については、「 [Outlook ポップアップメッセージをカスタマイズ](#customize-outlook-popup-messages)する」を参照してください。
 > 
 > [!TIP]
-> Outlook 配布リスト内に受信者がいる場合でも、ブロックメッセージが必要に応じて表示されるようにするには、 [Enableoutlookdistribution listadvanced](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) 設定を追加してください。
+> Outlook 配布リスト内に受信者がいる場合でも、ブロックメッセージが必要に応じて表示されるようにするには、 [Enableoutlookdistribution listadvanced](#expand-outlook-distribution-lists-when-searching-for-email-recipients) 設定を追加してください。
 >
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>特定のラベル用に構成されたポップアップメッセージのドメイン名を除外するには
@@ -908,7 +901,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomain
 ```
 
 > [!NOTE]
-> Outlook 配布リスト内に受信者がいる場合でも、ブロックメッセージが必要に応じて表示されるようにするには、 [Enableoutlookdistribution listadvanced](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) 設定を追加してください。
+> Outlook 配布リスト内に受信者がいる場合でも、ブロックメッセージが必要に応じて表示されるようにするには、 [Enableoutlookdistribution listadvanced](#expand-outlook-distribution-lists-when-searching-for-email-recipients) 設定を追加してください。
 >
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>ラベルのない電子メールまたは添付ファイルのポップアップメッセージの警告、ジャスティファイ、またはブロックを実装するには
@@ -984,7 +977,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 ```
 
-## <a name="expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview"></a>電子メールの受信者を検索するときに Outlook 配布リストを展開する (パブリックプレビュー)
+## <a name="expand-outlook-distribution-lists-when-searching-for-email-recipients"></a>電子メールの受信者を検索するときに Outlook 配布リストを展開する
 
 この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの [詳細設定](#configuring-advanced-settings-for-the-client-via-powershell) を使用します。
 
@@ -1663,7 +1656,7 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 
 すべてのテキストでは、次の動的パラメーターがサポートされています。 
 
-|パラメーター  |[説明]  |
+|パラメーター  |説明  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | 条件 **に** 対する文字列の最後の一致       |
 | `${MatchedLabelName}`      | ポリシーのローカライズされた名前を持つメール/添付ファイルの **ラベル**               |

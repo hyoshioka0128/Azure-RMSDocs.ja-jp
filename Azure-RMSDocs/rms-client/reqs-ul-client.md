@@ -4,19 +4,19 @@ description: エンタープライズネットワークに統一されたラベ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/27/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c93b0a338f25b058e517c4c2bb746ccaa6e41a69
-ms.sourcegitcommit: 0ac52ea741f205692406f0f82c74c65c23ee3467
+ms.openlocfilehash: dbd9d86e1ce2103f144e51314950cf67be31eef6
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2020
-ms.locfileid: "97792315"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164387"
 ---
 # <a name="additional-requirements-for-installing-the-unified-labeling-client-on-enterprise-networks"></a>エンタープライズネットワークに統一されたラベル付けクライアントをインストールするための追加の要件
 
@@ -24,7 +24,7 @@ ms.locfileid: "97792315"
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
->***手順**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide-install.md)」を参照してください。
+>***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide-install.md)」を参照してください。
 
 Azure Information Protection 統合されたラベル付けクライアントをエンタープライズネットワークにインストールする前に、コンピューターに必要なオペレーティングシステムのバージョンとアプリケーションがあることを確認してください。 Azure Information Protection: [Azure Information Protection の要件](../requirements.md)を確認してください。 
 
@@ -100,7 +100,6 @@ AIP に次のプログラム識別子 (ProgID) を指定し、オプションを
 |PowerPoint     |   `MSIP.PowerPointAddin`      |
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
-    
 
 ## <a name="next-steps"></a>次のステップ
 

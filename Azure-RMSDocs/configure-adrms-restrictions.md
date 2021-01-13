@@ -12,12 +12,12 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ROBOTS: NOINDEX
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 4f96e1f19d38df201aab9b05cd046e8f49a16c2e
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 9b608b8f38c157320558cf5ae5011ef601773b2e
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805837"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164234"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (HYOK) の詳細を保持する
 
@@ -81,7 +81,7 @@ HYOK protection を適用する必要があるユーザーのみが HYOK に構�
 
 Microsoft 365 サービスやその他のオンラインサービスは、HYOK で保護されたコンテンツの暗号化を解除できません。
 
-電子メールの場合、この機能が失われるのは、マルウェアスキャナー、Encrypt-Only 保護、データ損失防止 (DLP) ソリューション、メールルーティングルール、ジャーナル、電子情報開示、アーカイブソリューション、および Exchange ActiveSync です。
+電子メールの場合、この機能が失われるのは、マルウェアスキャナー、暗号化のみの保護、データ損失防止 (DLP) ソリューション、メールルーティングルール、ジャーナリング、電子情報開示、アーカイブソリューション、および Exchange ActiveSync です。
 
 HYOK で保護された電子メールを開けないデバイスがある理由をユーザーが理解していない可能性があります。 電子メールで HYOK protection を構成するときは、これらの重大な制限事項に注意してください。
 
