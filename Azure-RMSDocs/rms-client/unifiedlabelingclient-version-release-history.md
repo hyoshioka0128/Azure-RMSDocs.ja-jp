@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ce99003d95edd8202a1fddb2bb5eae2559100055
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 3e5a34268b2b0144c49c7ce6150d725b642184e5
+ms.sourcegitcommit: d68537b88ac6b43846d574359938fb45277cb850
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164404"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98195417"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -80,12 +80,12 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 - **スキャナーの新機能**:
 
     - [接続されていないスキャナーサーバーに対する PowerShell のサポート](#powershell-support-for-disconnected-scanner-servers)
-    - [コンテンツスキャンジョブでの NFS リポジトリのサポート](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
+    - [コンテンツスキャンジョブでの NFS リポジトリのサポート](#support-for-nfs-repositories-in-content-scan-jobs-public-preview) (パブリックプレビュー)
     - [追加の機密情報の種類のサポートを追加しました](#added-support-for-additional-sensitive-information-types)
 
 - **クライアントの新機能**:
 
-    - [ドキュメントへのアクセスを追跡し、アクセスを取り消す](#track-document-access-and-revoke-access-public-preview)
+    - [ドキュメントアクセスの追跡とアクセスの取り消し](#track-document-access-and-revoke-access-public-preview) (パブリックプレビュー)
     - [追加の機密情報の種類のサポートを追加しました](#added-support-for-additional-sensitive-information-types)
 
 - **修正と改善**:
@@ -95,9 +95,9 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>接続されていないスキャナーサーバーに対する PowerShell のサポート
 
-[オンプレミスの Azure Information Protection スキャナー](../deploy-aip-scanner.md)では、 [Azure 中国の21vianet スキャナーサーバー](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs)など、インターネットに接続できないスキャナーサーバーの PowerShell を使用したコンテンツスキャンジョブの管理がサポートされるようになりました。
+[オンプレミスの Azure Information Protection スキャナー](../deploy-aip-scanner.md)では、PowerShell、インターネットに接続できないスキャナーサーバー、または[Azure 中国の21Vianet 環境 (中国ソブリン cloud)](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs)のスキャナーに対するコンテンツスキャンジョブの管理がサポートされるようになりました。
 
-接続されていないスキャナーサーバーをサポートするために、次の新しいコマンドレットを追加しました。
+Disconnected または Azure 中国の 21Vianet scanner サーバーをサポートするために、次の新しいコマンドレットを追加しました。
 
 |コマンドレット  |説明  |
 |---------|---------|
@@ -144,7 +144,7 @@ NFS 共有のスキャンをサポートするには、スキャナーコンピ�
 
 アップグレードすると、エンドユーザーは保護されているドキュメントへのアクセスを取り消すこともできます。 Microsoft Office アプリからのアクセスを取り消すには、[**秘密度**] メニューの [新しい **取り消しアクセス**] オプションを使用します。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [管理者ガイド: Azure Information Protection を使用したドキュメントアクセスの追跡と取り消し](track-and-revoke-admin.md)
 - [ユーザーガイド: Azure Information Protection を使用したドキュメントアクセスの取り消し](revoke-access-user.md)
@@ -198,6 +198,8 @@ Azure Information Protection 統合された [ラベル付けスキャナー](..
 統一されたラベル付けスキャナーとクライアントバージョン2.8.85.0
 
 **リリース** 09/22/2020
+
+7/13/2021 **でサポート**
 
 このバージョンには、統合されたラベル付けスキャナーとクライアントの次の新機能、修正プログラム、および拡張機能が含まれています。
 
@@ -253,7 +255,7 @@ AIP 管理者は、すべての web 要求とファイル web 要求に対して
 
 **ネットワーク探索サービスを使用するには**
 
-1. スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。 詳細については、次を参照してください。
+1. スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。 詳細については次を参照してください:
     - [スキャナーをアップグレードする](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [スキャナークラスターを作成する](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
@@ -313,7 +315,7 @@ AIP 管理者は、エンドユーザーがドキュメントや電子メール�
 
 Azure Information Protection は、スキャナーでのダブルキー暗号化 (DKE) テンプレートベースのラベル付けと、エクスプローラーと PowerShell の使用をサポートするようになりました。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [Azure Information Protection テナント キーを計画して実装する](../plan-implement-tenant-key.md)
 - Microsoft 365 ドキュメントの[二重キー暗号化](/microsoft-365/compliance/double-key-encryption)
@@ -352,6 +354,8 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 **リリース** 08/23/2020
 
+3/22/2021 **でサポート**
+
 **修正**:
 
 ファイルのフリーズ、クラッシュ、または保護、ウォーターマーク、コンテンツマーキングで構成された必須ラベルに関連付けられた保存の繰り返しが発生した、PPT、Excel、Word ユーザーの問題を修正しました。
@@ -361,6 +365,8 @@ Azure Information Protection 統合されたラベル付けクライアントの
 統一されたラベル付けスキャナーとクライアントバージョン2.7.99.0
 
 **リリース** 07/20/2020
+
+2/23/2021 **でサポート**
 
 **修正と改善**:
 
@@ -373,6 +379,8 @@ Azure Information Protection 統合されたラベル付けクライアントの
 統一されたラベル付けスキャナーとクライアントバージョン2.7.96.0
 
 **リリース** 06/29/2020
+
+1/20/2021 **でサポート**
 
 - [統一されたラベル付けクライアントバージョン2.7.96.0 の新機能](#new-features-for-the-unified-labeling-client-version-27960)
 - [統一されたラベル付けスキャナーの新機能、バージョン2.7.96.0](#new-features-for-the-unified-labeling-scanner-version-27960)
@@ -411,7 +419,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 スキャン済みのファイルが削除されたことをスキャナーが検出するたびに、監査ログが生成されるようになりました。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [ファイルが削除された監査ログ](../audit-logs.md#file-removed-audit-logs)
 - [Azure Information Protection の Central Reporting](../reports-aip.md)
@@ -463,7 +471,7 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 
     **UseCopyAndPreserveNTFSOwner** の詳細設定では、スキャナーとスキャンされたリポジトリの間に、待機時間が短く、信頼性の高いネットワーク接続が必要です。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 統合ラベルが適切なクライアントでインストールされているかどうかわからない場合は、  「 [Windows のラベル付けソリューションを選択する」を](use-client.md#choose-your-windows-labeling-solution)参照してください。
 
