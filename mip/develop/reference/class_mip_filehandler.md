@@ -1,17 +1,17 @@
 ---
 title: クラス FileHandler
 description: 'Microsoft Information Protection (MIP) SDK の filehandler:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: bf3866fb1ec06156ebf40b2efed8c44f8af4a4ce
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 77b94fdd79334b842cc2ad1f19cf9a17ddc04439
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566961"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211500"
 ---
 # <a name="class-filehandler"></a>クラス FileHandler 
 すべてのファイル処理関数のインターフェイス。
@@ -22,8 +22,8 @@ ms.locfileid: "95566961"
 public std:: shared_ptr \<ContentLabel\> getlabel ()  |  ファイルからの機密ラベルの取得を開始します。
 public std:: vector \<std::pair\<std::string, std::string\> \> GetProperties (uint32_t version)  |  Retrievs は、バージョンに応じてファイルを適切に試行します。
 public std:: shared_ptr \<ProtectionHandler\> getprotection ()  |  ファイルからの保護ポリシーの取得を開始します。
-public std:: shared_ptr \<AsyncControl\> RegisterContentForTrackingAndRevocationAsync (Bool isOwnerNotificationEnabled, const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー, const std:: shared_ptr \<void\>& context)  |  # # # # パラメーター
-public std:: shared_ptr \<AsyncControl\> RevokeContentAsync (const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー、const std:: shared_ptr \<void\>& context)  |  コンテンツの失効を実行します。
+public void RegisterContentForTrackingAndRevocationAsync (bool isOwnerNotificationEnabled, const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー, const std:: shared_ptr \<void\>& context)  |  # # # # パラメーター
+public void RevokeContentAsync (const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー、const std:: shared_ptr \<void\>& context)  |  コンテンツの失効を実行します。
 public void Classid (const std:: shared_ptr \<void\>& context)  |  ハンドラーで規則を実行し、実行するアクションの一覧を返します。
 public void InspectAsync (const std:: shared_ptr \<void\>& context)  |  互換性のあるファイル形式からファイルの内容を取得するために使用するファイルインスペクタオブジェクトを作成します。
 public void SetLabel (const std:: shared_ptr \<Label\>& label、Const labelingoptions& labelingoptions、Const protectionsettings& protectionsettings)  |  機密ラベルをファイルに設定します。

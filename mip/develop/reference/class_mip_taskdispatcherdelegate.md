@@ -1,17 +1,17 @@
 ---
 title: TaskDispatcherDelegate クラス
 description: 'Microsoft Information Protection (MIP) SDK の taskdispatcherdelegate:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 057ba0d4de58ab4dedf8d3e2f8b2a42b0e5f969a
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: f8f84b51200ff630b6158f7b02ca88e2a3d21e25
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567033"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212877"
 ---
 # <a name="class-taskdispatcherdelegate"></a>TaskDispatcherDelegate クラス 
 MIP SDK タスクディスパッチャーへのインターフェイスを定義するクラス。

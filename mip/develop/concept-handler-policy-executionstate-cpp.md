@@ -7,12 +7,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: c3973488cb8c3ec109a5a11dea1e540f09db92d4
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 732ca5e87b83f578dad3b40f842e31ea29e95c08
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555706"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212724"
 ---
 # <a name="implement-executionstate"></a>ExecutionState を実装する
 
@@ -27,7 +27,7 @@ ms.locfileid: "75555706"
 
 `ExecutionState` では、次の仮想メンバーが公開されます。 各メンバーからポリシー エンジンに何らかのコンテキストが渡されると、アプリケーションによって実行される必要があるアクションに関する情報が返されます。 さらに、この情報は、Azure Information Protection レポート機能に監査情報を提供するために、使用される場合もあります。
 
-| Member                                                                             | 戻り値                                                                                                              |
+| メンバー                                                                             | 戻り値                                                                                                              |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `std::shared_ptr<mip::Label> GetNewLabel()`                                        | オブジェクトに適用するラベルを返します。                                                                       |
 | `mip::DataState GetDataState()`                                                    | オブジェクトの mip::D ataState を返します。                                                                            |
@@ -38,7 +38,7 @@ ms.locfileid: "75555706"
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | ドキュメントに適用されるカスタム メタデータを含む文字列の std::pairs の std::vector が返されます。 |
 | `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | 現在のコンテンツのメタデータを含む文字列の std::pairs の std::vector が返されます。                               |
 | `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`             | mip::ProtectionDescriptor にポインターが返されます。                                                                     |
-| `mip::ContentFormat GetContentFormat()`                                            | mip::ContentFormat が返されます。                                                                                           |
+| `std::string GetContentFormat()`                                            | 文字列を返します                                                                                           |
 | `mip::ActionType GetSupportedActions()`                                            | ラベルの mip::ActionTypes が返されます。                                                                              |
 | `std::shared_ptr<mip::ClassificationResults>`                                      | 実装されている場合、分類の結果の一覧を返します。                                                            |
 
@@ -57,7 +57,7 @@ struct ExecutionStateOptions {
     bool isDowngradeJustified = false;
     std::string downgradeJustification;
     std::string templateId;
-    mip::ContentFormat contentFormat = mip::ContentFormat::DEFAULT;
+    std::string contentFormat = mip::GetFileContentFormat();
     mip::ActionType supportedActions;
     bool generateAuditEvent;
 };
@@ -65,7 +65,7 @@ struct ExecutionStateOptions {
 
 アプリケーションによって各プロパティが設定され、次に、`mip::ExecutionState` から派生したクラスのコンストラクターに `ExecutionStateOptions` が渡されます。 この情報は、実行するアクションを決定するために使用されます。 `mip::ExecutionState` 内に指定されたデータは、Azure Information Protection Analytics にも表示されます。
 
-### <a name="next-steps"></a>次のステップ
+### <a name="next-steps"></a>次の手順
 
-- 現在の状態と目的の状態に基づいて、[新規または既存のラベルの計算アクション](concept-handler-policy-computeactions-cpp.md)を確認する方法について説明します。
+- 現在の状態と目的の状態に基づいて、 [新規または既存のラベルの計算アクション](concept-handler-policy-computeactions-cpp.md)を確認する方法について説明します。
 - [GitHub からポリシー Api サンプルをダウンロードし、ポリシー api を試す](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

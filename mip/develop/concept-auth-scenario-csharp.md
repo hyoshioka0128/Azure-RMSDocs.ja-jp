@@ -1,29 +1,29 @@
 ---
 title: 概念-Microsoft Information Protection (MIP) SDK C# クライアントの認証シナリオ
 description: Microsoft Information Protection SDK C# クライアントアプリケーションの認証シナリオに関する技術的な詳細。
-author: msmbaldwin
-ms.author: mbaldwin
+author: Pathak-Aniket
+ms.author: v-anikep
 ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: 7a22bc297b3330b3cdb738ff16e013d0d1f0dc87
-ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
+ms.openlocfilehash: bee7cb6854aa58f6d5c3c6781984875c8ee347a1
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865333"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212622"
 ---
 # <a name="quickstart-public-and-confidential-clients-c"></a>クイックスタート: パブリックおよび機密クライアント (C#)
 
-MIP SDK を使用してアプリケーションをビルドする場合、2つの一般的なシナリオが使用されます。 1つのシナリオでは、ユーザーが Azure AD に対して直接認証することを確認します。この場合、アプリケーションは、秘密のサービスプリンシパルキーまたは証明書を使用して認証を行います。
+MIP SDK を使用してアプリケーションをビルドする場合、2つの一般的なシナリオが使用されます。 最初のシナリオでは、ユーザーが Azure AD に対して直接認証を行っていることを確認します。 2つ目のアプリケーションは、秘密のサービスプリンシパルキーまたは証明書を使用して認証を行います。
 
 ## <a name="public-client-applications"></a>パブリッククライアントアプリケーション
 
-これらは一般的にデスクトップアプリケーションまたはモバイルアプリケーションで、デバイス上で実行されているアプリケーションがユーザーに認証を求めるプロンプトを表示し、ユーザーはバックエンド MIP サービスに直接接続します。 このシナリオでは、認証ライブラリを使用して、ユーザーが Azure AD にサインインできること、多要素または条件付きアクセス要件を満たしていること、および適切なリソースの OAuth2 トークンを取得できることを確認する必要があります。
+これらのアプリケーションは、デバイス上で実行されているアプリケーションがユーザーに認証を求めるメッセージを表示するデスクトップアプリケーションまたはモバイルアプリケーションです。 ユーザーは、バックエンド MIP サービスに直接接続します。 このシナリオでは、認証ライブラリを使用して、ユーザーが Azure AD にサインインできること、多要素または条件付きアクセス要件を満たしていること、および適切なリソースの OAuth2 トークンを取得できることを確認する必要があります。
 
-詳細については、Azure AD[パブリッククライアントの認証フロー](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-public-client-application-from-configuration-options)に関するドキュメントを参照してください。
+詳細については、[パブリッククライアントの認証フローに関するドキュメント](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-public-client-application-from-configuration-options)を参照してください。
 
-Microsoft 認証ライブラリ (MSAL) を使用した Microsoft Information Protection SDK クライアントアプリケーションのパブリッククライアント認証フローを示す、クイックコード領域を次に示します。
+Microsoft 認証ライブラリ (MSAL) を使用して、Microsoft Information Protection SDK クライアントアプリケーションのパブリッククライアント認証フローを示す、クイックコード領域を次に示します。
 
 ```csharp
 
@@ -45,15 +45,28 @@ public string AcquireToken(Identity identity, string authority, string resource,
 }
 ```
 
-テナント GUID は Azure AD テナントのテナント GUID を表し、アプリケーション ID は Azure AD ポータルのアプリケーション登録のアプリケーション ID です。
+**テナント guid** は、Azure AD テナントの一意のテナント guid です。
+**アプリケーション id** は Azure AD ポータルのアプリケーション登録のアプリケーション id です。
 
 ## <a name="confidential-client-applications"></a>機密クライアントアプリケーション
 
-これらは一般に、ユーザーがバックエンド MIP サービスに直接接続しない、クラウドまたはサービスベースのアプリケーションですが、サービスは、MIP 対応コンテンツのラベル付け、保護、または保護解除を行う必要があります。 このシナリオでは、アプリケーションは Azure AD の認証に使用する証明書またはアプリケーションシークレットを格納し、そのシークレットを使用してバックエンド MIP サービスのトークンを取得する必要があります。 その後、MIP SDK の委任機能を使用して、認証されたユーザーの代わりにコンテンツを保護または使用することができます。
+これらのアプリケーションは、ユーザーがバックエンド MIP サービスに直接接続していないクラウドまたはサービスベースのアプリケーションです。 このサービスでは、MIP 対応コンテンツのラベル付け、保護、または保護解除を行う必要があります。 このシナリオでは、アプリケーションは証明書またはアプリケーションシークレットを格納する必要があります。 これらのシークレットは、Azure AD するための認証に使用され、そのシークレットを使用してバックエンド MIP サービスのトークンをフェッチします。 その後、MIP SDK の委任機能を使用して、認証されたユーザーの代わりにコンテンツを保護または使用することができます。
 
-詳細については、Azure AD[社外秘クライアント認証フロー](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-confidential-client-application-from-code)に関するドキュメントを参照してください。
+MIP SDK とサービスベースのアプリケーションを統合するには、クライアント資格情報付与フローを使用する必要があります。 Microsoft Authentication Library (MSAL) を使用すると、パブリッククライアントアプリケーションに表示されるものと同様のパターンでこれを実装できます。 この記事では、 `IAuthDelegate` このフローを使用してサービスベースのアプリケーションの認証を実行するために、.net で MIP SDK を更新する方法について簡単に説明します。 発行時には、C++ 用の MSAL のバージョンはありませんが、 [DIRECT REST 呼び出し](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token)を使用してこのフローを実装することは可能です。
+
+詳細については、 [confidential クライアント認証フロー](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-confidential-client-application-from-code)に関するドキュメントを参照してください。
 
 次に示すのは、microsoft 認証ライブラリ (MSAL) を使用して Microsoft Information Protection SDK クライアントアプリケーションの機密クライアント認証フローをデモンストレーションするクイックコード領域です。 アプリケーションは、AD 証明書またはクライアントシークレットを使用して認証できます。
+
+> [!NOTE]
+> 次のサンプルでは、この行に特に注意を払ってください。 
+>
+> ```csharp
+> string[] scopes = new string[] { resource[resource.Length - 1].Equals('/') ? $"{resource}.default" : $"{resource}/.default" };
+> ```
+> これにより、メソッドに提供されたリソースから MSAL スコープが構築され `AcquireToken()` ます。 
+
+### <a name="msal-confidential-client-example"></a>MSAL Confidential クライアントの例
 
 ```csharp
 public string AcquireToken(Identity identity, string authority, string resource, string claim)
@@ -99,5 +112,5 @@ public string AcquireToken(Identity identity, string authority, string resource,
 }
 
 ```
-
-テナント GUID は Azure AD テナントのテナント GUID を表し、アプリケーション ID は Azure AD ポータルのアプリケーション登録のアプリケーション ID です。
+**テナント guid** は、Azure AD テナントの一意のテナント guid です。
+**アプリケーション id** は Azure AD ポータルのアプリケーション登録のアプリケーション id です。

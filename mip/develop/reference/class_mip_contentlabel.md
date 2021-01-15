@@ -1,17 +1,17 @@
 ---
 title: クラス ContentLabel
 description: 'Microsoft Information Protection (MIP) SDK の contentlabel:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: a60244b9db9b3087dde71cbdbcf63ba170cb06c3
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 9263f9ecd926cafe4aedd578804912aed9faa128
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95569183"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211687"
 ---
 # <a name="class-contentlabel"></a>クラス ContentLabel 
 コンテンツの一部 (通常はドキュメント) に適用される Microsoft Information Protection ラベルの抽象化。

@@ -1,17 +1,17 @@
 ---
 title: Httpresponse.cache クラス
 description: 'Microsoft Information Protection (MIP) SDK の httpresponse.cache:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0a08b2bea4834375a01897b3d657772112463b89
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 8e4a8c392c6e18197e3b9b376482f3145d1ecd3f
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566874"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211398"
 ---
 # <a name="class-httpresponse"></a>Httpresponse.cache クラス 
 HttpDelegate をオーバーライドするときに、クライアント アプリによって実装される 1 つの HTTP 要求を表すインターフェイス。

@@ -1,17 +1,17 @@
 ---
 title: クラス ApplicationActionState
 description: 'Microsoft Information Protection (MIP) SDK の applicationactionstate:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 936f64f24211f000dc26153f17bd094f4d7d3c8d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: ef62674d4586b967a822ccfb25612a491d157bf4
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95569310"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212282"
 ---
 # <a name="class-applicationactionstate"></a>クラス ApplicationActionState 
   

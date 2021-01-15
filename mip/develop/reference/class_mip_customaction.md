@@ -1,17 +1,17 @@
 ---
 title: CustomAction クラス
 description: 'Microsoft Information Protection (MIP) SDK の customaction:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: fc67920b517f3a9f75c395b42350cec9d75b23b3
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: d1fb231d76ba2b5f076d42bbeeff95618c7386f3
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95569151"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211704"
 ---
 # <a name="class-customaction"></a>CustomAction クラス 
 CustomAction は、アクションのすべてのサブプロパティをプロパティバッグとしてキャプチャする汎用アクションクラスです。 呼び出し元は、アクションの意味を理解する必要があります。

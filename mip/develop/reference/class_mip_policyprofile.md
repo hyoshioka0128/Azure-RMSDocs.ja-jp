@@ -1,17 +1,17 @@
 ---
 title: クラス PolicyProfile
 description: 'Microsoft Information Protection (MIP) SDK の policyprofile:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0cd8c300aa2c6edb0e06c6cd8306c48d2cb8dafa
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 89bac003d9a4924d5b854826b53eaa787f770a7c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95569423"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213370"
 ---
 # <a name="class-policyprofile"></a>クラス PolicyProfile 
 PolicyProfile クラスは、Microsoft Information Protection 操作を使用するためのルート クラスです。 一般的なアプリケーションでは PolicyProfile は 1 つしか必要ありませんが、必要に応じて複数のプロファイルを作成できます。

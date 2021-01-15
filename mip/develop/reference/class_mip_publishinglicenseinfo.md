@@ -1,17 +1,17 @@
 ---
 title: クラス発行 Licenseinfo
 description: 'Microsoft Information Protection (MIP) SDK の発行 licenseinfo:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 362a5fe810a5244feef723563dfed910d0c88e62
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: b16c58d7faeea7b91ced99f0a1fc786701ad12a2
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567074"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213285"
 ---
 # <a name="class-publishinglicenseinfo"></a>クラス発行 Licenseinfo 
 保護ハンドラーを作成するために使用する発行ライセンスの詳細を保持します。
@@ -38,60 +38,60 @@ public const std:: map \<std::string, std::string\>& GetDoubleKeyApplicationData
 ## <a name="members"></a>メンバー
   
 ### <a name="publishinglicenseinfo-function"></a>Licenseinfo 関数の発行
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="publishinglicenseinfo-function"></a>Licenseinfo 関数の発行
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="setparseddata-function"></a>SetParsedData 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="setdoublekeydata-function"></a>SetDoubleKeyData 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getserializedpublishinglicense-function"></a>GetSerializedPublishingLicense 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getprelicense-function"></a>GetPreLicense 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getdomains-function"></a>GetDomains 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getserverpubliccertificate-function"></a>GetServerPublicCertificate 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getissuerid-function"></a>GetIssuerId 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getcontentid-function"></a>GetContentId 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="islicenseparsed-function"></a>IsLicenseParsed 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="hasprelicense-function"></a>HasPreLicense 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getisdoublekeylicense-function"></a>GetIsDoubleKeyLicense 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getdoublekeyalgorithm-function"></a>GetDoubleKeyAlgorithm 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getdoublekeyapplicationdata-function"></a>GetDoubleKeyApplicationData 関数
-まだ文書化されていません。
+_まだ文書化されていません。_

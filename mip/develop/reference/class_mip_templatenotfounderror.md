@@ -1,17 +1,17 @@
 ---
 title: クラス Templatenotfound エラー
 description: 'Microsoft Information Protection (MIP) SDK の templatenotfound error:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0ba4eae1c1c3d846c5e696a55a8a089b18a583ed
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 48182ae5d821aeed65e8c28b086dce0349b9af03
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95569447"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212860"
 ---
 # <a name="class-templatenotfounderror"></a>クラス Templatenotfound エラー 
 テンプレート ID は RMS サービスによって認識されません。
@@ -36,15 +36,15 @@ public const std:: map \<std::string, std::string\>& GetDebugInfo () const  |  �
 ## <a name="members"></a>メンバー
   
 ### <a name="mmessage"></a>mMessage
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="mdebuginfo"></a>mDebugInfo
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="mname"></a>mName
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="geterrorcode-function"></a>GetErrorCode 関数
@@ -110,9 +110,9 @@ public const std:: map \<std::string, std::string\>& GetDebugInfo () const  |  �
   
 ### <a name="errorcode-enum"></a>ErrorCode 列挙型
 
+無効な入力エラーの ErrorCode。
+
  値                         | 説明                                
 --------------------------------|---------------------------------------------
 全般            | 一般的な無効な入力エラー
 FileIsTooLargeForProtection            | ファイルが大きすぎて保護されません
-
-無効な入力エラーの ErrorCode。
