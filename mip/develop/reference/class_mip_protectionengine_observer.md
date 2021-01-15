@@ -1,17 +1,17 @@
 ---
 title: 'クラス ProtectionEngine:: オブザーバー'
 description: 'Microsoft Information Protection (MIP) SDK の protectionengine:: observer クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 7a576882376caa8cc5f9c5c1b3d3036ee7e57b21
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: b9243a1b7d9addaceaec907a368f7e651c99fbd5
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95569119"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214628"
 ---
 # <a name="class-protectionengineobserver"></a>クラス ProtectionEngine:: オブザーバー 
 ProtectionEngine に関連する通知を受け取るインターフェイス。
@@ -30,6 +30,8 @@ public virtual void OnRegisterContentForTrackingAndRevocationSuccess (const std:
 public virtual void OnRegisterContentForTrackingAndRevocationFailure (const std:: exception_ptr& error、const std:: shared_ptr \<void\>& context)  |  追跡 & の失効に向けたコンテンツの登録が失敗したときに呼び出されます。
 public virtual void OnRevokeContentSuccess (const std:: shared_ptr \<void\>& context)  |  の失効が正常に終了したときに呼び出されます。
 public virtual void OnRevokeContentFailure (const std:: exception_ptr& error、const std:: shared_ptr \<void\>& context)  |  コンテンツの失効が失敗したときに呼び出されます。
+public virtual void OnCreateDelegatedLicensesSuccess (std:: vector \<std::shared_ptr\<DelegationLicense\> \> delegatedLicenses, const std:: shared_ptr \<void\>& context)  |  委任されたライセンスの作成が成功したときに呼び出されます。
+public virtual void OnCreateDelegatedLicensesFailure (const std:: exception_ptr& error、const std:: shared_ptr \<void\>& context)  |  委任されたライセンスの作成に失敗したときに呼び出されます。
   
 ## <a name="members"></a>メンバー
   
@@ -143,3 +145,24 @@ public virtual void OnRevokeContentFailure (const std:: exception_ptr& error、c
 
 
 アプリケーションは任意の種類のコンテキスト (std::p romise、std:: function など) を ProtectionEngine:: RevokeContentAsync に渡すことができます。また、同じコンテキストは、ProtectionEngine:: Observer:: OnRevokeContentSuccess または ProtectionEngine:: Observer:: OnRevokeContentFailure にそのまま転送されます。
+  
+### <a name="oncreatedelegatedlicensessuccess-function"></a>OnCreateDelegatedLicensesSuccess 関数
+委任されたライセンスの作成が成功したときに呼び出されます。
+
+パラメーター:  
+* **コンテキスト**: protectionengine:: CreateDelegationLicensesAsync に渡されたのと同じコンテキスト。
+
+
+アプリケーションは任意の種類のコンテキスト (たとえば、std::p romise、std:: function) を ProtectionEngine:: CreateDelegationLicensesAsync に渡すことができ、同じコンテキストは、ProtectionEngine:: Observer:: OnCreateDelegatedLicensesSuccess または ProtectionEngine:: Observer:: OnCreateDelegatedLicensesFailure にそのまま転送されます。
+  
+### <a name="oncreatedelegatedlicensesfailure-function"></a>OnCreateDelegatedLicensesFailure 関数
+委任されたライセンスの作成に失敗したときに呼び出されます。
+
+パラメーター:  
+* **エラー**: 発生したエラー 
+
+
+* **コンテキスト**: protectionengine:: CreateDelegationLicensesAsync に渡されたものと同じコンテキスト
+
+
+アプリケーションは任意の種類のコンテキスト (std::p romise、std:: function など) を ProtectionEngine:: CreateDelegationLicensesAsync に渡すことができます。また、同じコンテキストは、ProtectionEngine:: Observer:: OnCreateDelegatedLicensesSuccess または ProtectionEngine:: Observer:: OnCreateDelegatedLicensesFailure にそのまま転送されます。

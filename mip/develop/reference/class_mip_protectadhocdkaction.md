@@ -1,17 +1,17 @@
 ---
 title: ProtectAdhocDkAction クラス
 description: 'Microsoft Information Protection (MIP) SDK の protectadhocdkaction:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: bf0c8645bd51890660e8c0ea6cc6145820d2b138
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 346462d9b0d5fbb8fcacbac0aa234253fdf11526
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566601"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214934"
 ---
 # <a name="class-protectadhocdkaction"></a>ProtectAdhocDkAction クラス 
 アドホックダブルキー保護を文書に追加することを指定するアクションクラス。

@@ -1,17 +1,17 @@
 ---
 title: クラス ProtectionHandler::P ublishingSettings
 description: Microsoft Information Protection (MIP) SDK の protectionhandler::p ublishingsettings クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: c5edcb9eca5e14d0f0f611f32e2f91d9ed2fcb25
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: bbefbe143d434669692b6e60734698d7bd4b575f
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567114"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214526"
 ---
 # <a name="class-protectionhandlerpublishingsettings"></a>クラス ProtectionHandler::P ublishingSettings 
 新しいコンテンツを保護する ProtectionHandler を作成するために使用される設定。
@@ -43,7 +43,7 @@ public const std:: string& GetPreLicenseUserEmail () const  |  ライセンス�
 
   
 ### <a name="getprotectiondescriptor-function"></a>GetProtectionDescriptor 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getisauditedextractionallowed-function"></a>GetIsAuditedExtractionAllowed 関数

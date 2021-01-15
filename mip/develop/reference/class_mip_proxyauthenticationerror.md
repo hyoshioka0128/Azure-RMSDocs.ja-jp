@@ -1,17 +1,17 @@
 ---
 title: クラス ProxyAuthenticationError
 description: 'Microsoft Information Protection (MIP) SDK の proxyauthenticationerror:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d4468fe243f7120630d0a34d453ff4e9a5bf6527
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 04915e74cc09f271a2ca3bb256b906bc442bb3fd
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567081"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214305"
 ---
 # <a name="class-proxyauthenticationerror"></a>クラス ProxyAuthenticationError 
 プロキシ認証エラーです。
@@ -39,6 +39,8 @@ HTTP 応答のステータスコードを取得します。
   
 ### <a name="category-enum"></a>カテゴリの列挙型
 
+ネットワークエラーのカテゴリ。
+
  値                         | 説明                                
 --------------------------------|---------------------------------------------
 Unknown            | 不明なネットワークエラー
@@ -52,5 +54,3 @@ SSL            | SSL エラー
 オフライン            | 操作にはネットワーク接続が必要です
 Throttled            | サーバートラフィックの調整により HTTP 操作に失敗しました
 キャンセル            | HTTP 操作はアプリケーションによって取り消されました
-
-ネットワークエラーのカテゴリ。

@@ -1,17 +1,17 @@
 ---
 title: クラス HttpDelegate
 description: 'Microsoft Information Protection (MIP) SDK の httpdelegate:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d52752538aae982f8f5b0138aaf26deefa0d98a3
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 9240f0ed4eca43d7a6dcd5045c80f9724dc2a11b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566889"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215257"
 ---
 # <a name="class-httpdelegate"></a>クラス HttpDelegate 
 HTTP の処理をオーバーライドするインターフェイス。

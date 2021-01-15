@@ -1,17 +1,17 @@
 ---
 title: ProtectByTemplateAction クラス
 description: 'Microsoft Information Protection (MIP) SDK の protectbytemplateaction:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 17ae0749a56254d0ce4769c6cd3bf56ecd881fe7
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: cc8b9c62738a7edb24a04f2e68265aa416833a76
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566572"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214866"
 ---
 # <a name="class-protectbytemplateaction"></a>ProtectByTemplateAction クラス 
 テンプレートによる保護をドキュメントに追加することを指定するアクション クラス。
@@ -31,4 +31,4 @@ public bool IsDoubleKey (std:: string& doubleKeyUrl) const  | _まだ文書化�
 **戻り値**: 保護テンプレート ID。
   
 ### <a name="isdoublekey-function"></a>IsDoubleKey 関数
-まだ文書化されていません。
+_まだ文書化されていません。_

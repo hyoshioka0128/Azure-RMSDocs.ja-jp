@@ -1,17 +1,17 @@
 ---
 title: ServiceDisabledError クラス
 description: 'Microsoft Information Protection (MIP) SDK の servicedisablederror:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: b4ccba889ce025f343293d458f76ae7d63457f4f
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: e7f3ec6e3e02047607f696acd0a14cd632b5b0e9
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567050"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214288"
 ---
 # <a name="class-servicedisablederror"></a>ServiceDisabledError クラス 
 サービスが無効になっているため、ユーザーはコンテンツにアクセスできませんでした。
@@ -32,11 +32,11 @@ ms.locfileid: "95567050"
   
 ### <a name="extent-enum"></a>エクステント列挙型
 
+サービスを無効にする範囲について説明します。
+
  値                         | 説明                                
 --------------------------------|---------------------------------------------
 User            | ユーザーのサービスが無効になっています。
 Device            | デバイスのサービスが無効になっています。
 プラットフォーム            | プラットフォームでサービスが無効になっています。
 Tenant            | テナントのサービスが無効になっています。
-
-サービスを無効にする範囲について説明します。

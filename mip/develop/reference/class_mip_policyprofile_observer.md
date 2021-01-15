@@ -1,17 +1,17 @@
 ---
 title: 'クラス PolicyProfile:: オブザーバー'
 description: 'Microsoft Information Protection (MIP) SDK の policyprofile:: observer クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 35768afacc22202721fb093c91e4a28a02a99d65
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 978597bcc90386a53ca35271cb862b9f0f0465a7
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95569422"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215070"
 ---
 # <a name="class-policyprofileobserver"></a>クラス PolicyProfile:: オブザーバー 
 クライアントがプロファイル関連のイベントに関する通知を取得するための Observer インターフェイス。

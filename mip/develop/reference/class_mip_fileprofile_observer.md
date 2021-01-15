@@ -1,17 +1,17 @@
 ---
 title: 'クラス FileProfile:: オブザーバー'
 description: 'Microsoft Information Protection (MIP) SDK の fileprofile:: observer クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 62e578f8f3527a4749fedfc88a2b32de5c6e95db
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 56bad4dfc1fde5f6cfe2d390fef1555ba0afe6d7
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566937"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215274"
 ---
 # <a name="class-fileprofileobserver"></a>クラス FileProfile:: オブザーバー 
 クライアントがプロファイル関連のイベントに関する通知を取得するための Observer インターフェイス。
@@ -38,7 +38,7 @@ protected Observer()  | _まだ文書化されていません。_
 ## <a name="members"></a>メンバー
   
 ### <a name="observer-function"></a>~ オブザーバー関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="onloadsuccess-function"></a>OnLoadSuccess 関数
@@ -84,4 +84,4 @@ protected Observer()  | _まだ文書化されていません。_
 この省略可能なコールバックは、AddEngineAsync 操作の完了に HTTP 操作が必要かどうかを通知するために、アプリケーションによって使用される場合があります。
   
 ### <a name="observer-function"></a>オブザーバー関数
-まだ文書化されていません。
+_まだ文書化されていません。_

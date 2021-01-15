@@ -1,17 +1,17 @@
 ---
 title: 'クラス ProtectionHandler:: ConsumptionSettings'
 description: 'Microsoft Information Protection (MIP) SDK の protectionhandler:: consumptionsettings クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 627845405fc0d4fc2523e958e2226d343d0013cc
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 8ac0e4d3067528d6e860244abca2d70f0cf6a530
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566577"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214594"
 ---
 # <a name="class-protectionhandlerconsumptionsettings"></a>クラス ProtectionHandler:: ConsumptionSettings 
 既存のコンテンツを使用する ProtectionHandler を作成するために使用される設定。
@@ -91,7 +91,7 @@ ProtectionHandler の作成でオンライン HTTP 操作が許可されるか�
 委任されたユーザーは、他のユーザーの代理として認証を行うユーザーまたはアプリケーションが動作するときに指定します。
   
 ### <a name="setcontentname-function"></a>SetContentName 関数
-まだ文書化されていません。
+_まだ文書化されていません。_
 
   
 ### <a name="getdelegateduseremail-function"></a>GetDelegatedUserEmail 関数
@@ -101,4 +101,4 @@ ProtectionHandler の作成でオンライン HTTP 操作が許可されるか�
 **戻り値**: 委任されたユーザー: 認証を行っているユーザーまたはアプリケーションが別のユーザーの代理で動作しているときに、委任されたユーザーを指定します。
   
 ### <a name="getcontentname-function"></a>GetContentName 関数
-まだ文書化されていません。
+_まだ文書化されていません。_

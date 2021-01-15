@@ -1,17 +1,17 @@
 ---
 title: クラス ProtectionHandler
 description: 'Microsoft Information Protection (MIP) SDK の protectionhandler:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: e38aaf0e4dfee1d10f67f175eb50119fe3aa484d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: d70e32793ede4a1184672f3f8755112766ba571b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95569095"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214611"
 ---
 # <a name="class-protectionhandler"></a>クラス ProtectionHandler 
 特定の保護構成のための保護に関連するアクションを管理します。
@@ -213,9 +213,9 @@ ProtectionHandler を発行ライセンス (PL) にシリアル化します
   
 ### <a name="prelicenseformat-enum"></a>PreLicenseFormat 列挙型
 
+ライセンス前の形式。
+
  値                         | 説明                                
 --------------------------------|---------------------------------------------
-Xml            | MSIPC で使用されるレガシ XML/SOAP 形式
+xml            | MSIPC で使用されるレガシ XML/SOAP 形式
 Json            | MIP SDK および RMS SDK で使用される JSON/REST 形式
-
-ライセンス前の形式。

@@ -1,17 +1,17 @@
 ---
 title: クラス MsgInspector
 description: 'Microsoft Information Protection (MIP) SDK の msginspector:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 9f19c53a2c6eca82cdf1469c63436ad56112dc52
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: aaf9cc6803e0111cd37960f356d8a6bb19fd60a5
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95570182"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215172"
 ---
 # <a name="class-msginspector"></a>クラス MsgInspector 
   
@@ -39,7 +39,7 @@ Txt、html 本文形式に関連する、本文エンコードコードページ
   
 は、符号なしのコードページ **を返し** ます。 
   
-**関連** 項目: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](/windows/win32/intl/code-page-identifiers)
+**関連** 項目: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
   
 ### <a name="getbodytype-function"></a>GetBodyType 関数
 本文の種類を取得します。

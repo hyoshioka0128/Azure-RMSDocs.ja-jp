@@ -1,17 +1,17 @@
 ---
 title: クラス MetadataVersion
 description: 'Microsoft Information Protection (MIP) SDK の metadataversion:: undefined クラスに関するドキュメントを示します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 05154ec7777fb94478c2065f6e637dea47d58d28
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 35ed3ef28cd4a1a822c11f64b422a474edcd4b53
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566769"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213608"
 ---
 # <a name="class-metadataversion"></a>クラス MetadataVersion 
 MetadataVersion のインターフェイスです。 MetadataVersion は、アクティブなメタデータとその処理方法を決定します。

@@ -1,17 +1,17 @@
 ---
 title: クラスラベル
 description: 'Microsoft Information Protection (MIP) SDK の label:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 6a0bd370dd8a0f08156861995c498f4f3710e9e2
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 726c61d1b73389bfdc10afb961177659e5a137d4
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566857"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213897"
 ---
 # <a name="class-label"></a>クラスラベル 
 単一の Microsoft Information Protection ラベルの抽象化。
@@ -31,6 +31,7 @@ public std::weak_ptr\<Label\> GetParent() const  |  親ラベルを取得しま�
 public const std:: vector \<std::shared_ptr\<Label\> \>& getchildren () const  |  現在のラベルの子ラベルを取得します。
 public const std:: vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  ラベルのカスタム設定を取得します。
 public ActionSource GetActionSource() const  |  ラベルのアクションソースを取得します。
+public const std:: vector \<std::string\>& getcontentformats () const  |  コンテンツタイプを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -106,3 +107,9 @@ public ActionSource GetActionSource() const  |  ラベルのアクションソ�
 
   
 **戻り値**: アクションソース
+  
+### <a name="getcontentformats-function"></a>GetContentFormats 関数
+コンテンツタイプを取得します。
+
+  
+<Returns>

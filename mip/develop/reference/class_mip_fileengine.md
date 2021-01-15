@@ -1,17 +1,17 @@
 ---
 title: クラス FileEngine
 description: 'Microsoft Information Protection (MIP) SDK の fileengine:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 5cb3e5142c6dd154b2c4a39324cccf82f3e41a8d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 5b9c3d33fe538810975d4f156aef36280fdd4bda
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566978"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215325"
 ---
 # <a name="class-fileengine"></a>クラス FileEngine 
 このクラスは、すべてのエンジン関数のインターフェイスを提供します。
@@ -23,15 +23,15 @@ public const Settings& GetSettings() const  |  エンジンの設定を返しま
 public const std:: vector \<std::shared_ptr\<SensitivityTypesRulePackage\> \>& ListSensitivityTypes () const  |  ポリシーエンジンに関連付けられている感度の種類を一覧表示します。
 public const std:: shared_ptr \<Label\> GetDefaultSensitivityLabel () const  |  既定の機密ラベルを取得します。
 public std:: shared_ptr \<Label\> GetLabelById (const std:: string& id) const  |  指定された id に従ってラベルを取得します。
-public const std:: vector \<std::shared_ptr\<Label\> \>& ListSensitivityLabels ()  |  機密ラベルの一覧を返します。
+public const std:: vector \<std::shared_ptr\<Label\> \> ListSensitivityLabels ()  |  機密ラベルの一覧を返します。
 public const std::string& GetMoreInfoUrl() const  |  ポリシー/ラベルに関する詳細情報を検索するための URL を提供します。
 public const std:: string& GetPolicyFileId () const  |  ポリシーファイル ID を取得します。
 public const std:: string& GetSensitivityFileId () const  |  感度ファイル ID を取得します。
 public bool IsLabelingRequired() const  |  ドキュメントにラベルを付ける必要があることを、ポリシーで指示するかどうかを確認します。
 public std:: chrono:: time_point \<std::chrono::system_clock\> getlastpolicyfetchtime () const  |  ポリシーが最後にフェッチされた時刻を取得します。
 public const std:: string& GetPolicyDataXml () const  |  このポリシーに関連付けられている設定、ラベル、および規則を記述するポリシーデータ XML を取得します。
-public std:: shared_ptr \<AsyncControl\> createfileハンドラ async (const std:: string& inputFilePath、const std:: string& actualFilePath、Bool isAuditDiscoveryEnabled、const std:: shared_ptr \<FileHandler::Observer\>& Fileハンドラオブザーバー、const std:: shared_ptr \<void\>& context、const std:: Shared_ptr& \<FileExecutionState\> fileexecutionstate)  |  指定されたファイル パスのファイル ハンドラーの作成を開始します。
-public std:: shared_ptr \<AsyncControl\> createfileハンドラ async (const std:: shared_ptr \<Stream\>& inputStream、const std:: String& actualfilepath、Bool isAuditDiscoveryEnabled、const std:: shared_ptr& \<FileHandler::Observer\> fileハンドラオブザーバー、const std:: shared_ptr& \<void\> context、const std:: shared_ptr& \<FileExecutionState\> fileexecutionstate)  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
+public std:: shared_ptr \<AsyncControl\> createfileハンドラ async (const std:: string& inputfilepath、const std:: string& actualFilePath、Bool isAuditDiscoveryEnabled、const std:: shared_ptr \<FileHandler::Observer\>& Fileハンドラオブザーバー、const std:: shared_ptr& \<void\> context、const std:: Shared_ptr \<FileExecutionState\>& fileexecutionstate、bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  指定されたファイル パスのファイル ハンドラーの作成を開始します。
+public std:: shared_ptr \<AsyncControl\> createfileハンドラ async (const std:: shared_ptr \<Stream\>& inputStream、const std:: String& actualfilepath、Bool isAuditDiscoveryEnabled、const std:: shared_ptr& \<FileHandler::Observer\> fileハンドラオブザーバー、const std:: shared_ptr& \<void\> context、const std:: shared_ptr& \<FileExecutionState\> Fileexecutionstate、bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  アプリケーションに固有のイベントを監査パイプラインにログを記録します。
 public const std:: vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  カスタム設定の一覧を取得します。
 public bool HasClassificationRules () const  |  ポリシーに自動または推奨規則があるかどうかを取得します。
@@ -116,6 +116,9 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
 * **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。 
 
 
+* **isGetSensitivityLabelAuditDiscoveryEnabled**: getSensitivityLabel で監査検出がトリガーされるかどうかを表します。 
+
+
 
   
 **戻り値**: Async control オブジェクト。
@@ -137,6 +140,9 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
 
 
 * **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。 
+
+
+* **isGetSensitivityLabelAuditDiscoveryEnabled**: getSensitivityLabel で監査検出がトリガーされるかどうかを表します。 
 
 
 

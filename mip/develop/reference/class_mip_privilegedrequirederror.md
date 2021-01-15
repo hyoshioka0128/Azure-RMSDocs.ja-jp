@@ -1,17 +1,17 @@
 ---
 title: PrivilegedRequiredError クラス
 description: 'Microsoft Information Protection (MIP) SDK の privilegedrequirederror:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: e5942cfbd67911d426d83ffb2c9001f28fb142c8
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 14df33c5c62acd88f0915b901a8e3d2522133f84
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566613"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215036"
 ---
 # <a name="class-privilegedrequirederror"></a>PrivilegedRequiredError クラス 
 現在のラベルは特権操作 (管理者の操作と同等) として割り当てられています。このため、オーバーライドできません。
@@ -21,4 +21,4 @@ ms.locfileid: "95566613"
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>メンバー
-まだ文書化されていません。
+_まだ文書化されていません。_
