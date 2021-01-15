@@ -12,21 +12,21 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 71f07f5ffb9167ab61653cef10c610968ff74786
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3465bdb2eaf1efce3524d2f28332b094ba31db5d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384198"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240854"
 ---
 # <a name="azure-information-protection-aip-labeling-classification-and-protection"></a>Azure Information Protection (AIP) ラベル付け、分類、保護
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > ***関連**: [Azure Information Protection Windows 用のクライアントと従来のクライアントとの統合](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection (AIP) は、組織がドキュメントや電子メールにラベルを適用して、分類および保護できるようにするクラウドベースのソリューションです。 
 
@@ -110,7 +110,7 @@ AIP クライアントにより、Office アプリケーションに Information
 **[分類して保護する]** メニュー オプションは、Office アプリケーションの Information Protection バーと同様に機能し、ユーザーがラベルを選択したり、カスタムのアクセス許可を設定したりできるようになります。
 
 > [!TIP]
-> パワー ユーザーまたは管理者は、PowerShell コマンドを使用すれば、複数のファイルの分類と保護をより効率的に管理して設定できることに気付くかもしれません。 クライアントには[関連する PowerShell コマンド](https://docs.microsoft.com/powershell/module/azureinformationprotection)が含まれており、個別にインストールすることもできます。
+> パワー ユーザーまたは管理者は、PowerShell コマンドを使用すれば、複数のファイルの分類と保護をより効率的に管理して設定できることに気付くかもしれません。 クライアントには[関連する PowerShell コマンド](/powershell/module/azureinformationprotection)が含まれており、個別にインストールすることもできます。
 
 ユーザーと管理者は、ドキュメント追跡サイトを使用して、保護されたドキュメントを監視したり、誰がいつアクセスしたかを観察したりできます。 不正使用が疑われる場合、これらの文書に対するアクセスを取り消すことも可能です。 次に例を示します。
 
@@ -150,7 +150,7 @@ Exchange Online で AIP を使用すると、保護された電子メールが�
 
     または、スキャナーを使用してファイルの内容を検査せずに、データ リポジトリ内のすべてのドキュメントに既定のラベルを適用します。 スキャナーを報告モードのみで使用して、所持していたことを知らなかった機密情報を発見することもできます。
 
-- **クラウド データ ストレージ**: [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/azip-integration) を使用して、Box、SharePoint、OneDrive 内にあるドキュメントにラベルを適用します。 チュートリアルについては、「[Azure Information Protection 分類ラベルの自動適用](https://docs.microsoft.com/cloud-app-security/use-case-information-protection)」を参照してください 
+- **クラウド データ ストレージ**: [Microsoft Cloud App Security](/cloud-app-security/azip-integration) を使用して、Box、SharePoint、OneDrive 内にあるドキュメントにラベルを適用します。 チュートリアルについては、「[Azure Information Protection 分類ラベルの自動適用](/cloud-app-security/use-case-information-protection)」を参照してください 
 
 
 ## <a name="next-steps"></a>次のステップ

@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.date: 11/18/2020
 ms.author: mbaldwin
 ms.custom: subject-security-benchmark
-ms.openlocfilehash: 8cdeb7ec7bd30d6b15b832eeb080317d5b26ec08
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 376dcff12fe493c18da827dcfa67b12d2389b4f8
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384623"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240786"
 ---
 # <a name="azure-security-baseline-for-azure-information-protection"></a>Azure Information Protection 用の Azure のセキュリティベースライン
 
-このセキュリティベースラインは、 [Azure セキュリティベンチマークバージョン 2.0](https://docs.microsoft.com/azure/security/benchmarks/overview) から Azure Information Protection へのガイダンスを適用します。 Azure セキュリティ ベンチマークには、Azure 上のクラウド ソリューションをセキュリティで保護する方法に関する推奨事項がまとめてあります。 コンテンツは、Azure セキュリティベンチマークで定義されている **セキュリティコントロール** と、Azure Information Protection に適用される関連ガイダンスによってグループ化されています。 Azure Information Protection に適用できない **コントロール** は除外されています。
+このセキュリティベースラインは、 [Azure セキュリティベンチマークバージョン 2.0](/azure/security/benchmarks/overview) から Azure Information Protection へのガイダンスを適用します。 Azure セキュリティ ベンチマークには、Azure 上のクラウド ソリューションをセキュリティで保護する方法に関する推奨事項がまとめてあります。 コンテンツは、Azure セキュリティベンチマークで定義されている **セキュリティコントロール** と、Azure Information Protection に適用される関連ガイダンスによってグループ化されています。 Azure Information Protection に適用できない **コントロール** は除外されています。
 
 Azure Information Protection 完全に Azure のセキュリティベンチマークにマップする方法については、「 [完全な Azure Information Protection のセキュリティベースラインマッピングファイル](https://github.com/MicrosoftDocs/SecurityBenchmarks/tree/master/Azure%20Offer%20Security%20Baselines)」を参照してください。
 
@@ -32,9 +32,9 @@ Azure Information Protection 完全に Azure のセキュリティベンチマ�
 
 サービス タグに含まれるアドレス プレフィックスの管理は Microsoft が行い、アドレスが変化するとサービス タグは自動的に更新されます。
 
-- [サービス タグとその使用方法の概要](https://docs.microsoft.com/azure/virtual-network/service-tags-overview)
+- [サービス タグとその使用方法の概要](/azure/virtual-network/service-tags-overview)
 
-- [Azure Information Protection サービスタグ](https://docs.microsoft.com/azure/information-protection/requirements#service-tags)
+- [Azure Information Protection サービスタグ](./requirements.md#service-tags)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -58,13 +58,13 @@ Azure AD を標準化して、以下での組織の ID とアクセス管理を�
 
 Azure AD は、Microsoft アカウントを持たないユーザーが、Microsoft 以外のアカウントを使用してアプリケーションやリソースにサインインできるようにするための外部 id をサポートしています。
 
-- [Azure Active Directory のテナント](https://docs.microsoft.com/azure/active-directory/develop/single-and-multi-tenant-apps)
+- [Azure Active Directory のテナント](/azure/active-directory/develop/single-and-multi-tenant-apps)
 
-- [Azure AD インスタンスを作成して構成する方法](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
+- [Azure AD インスタンスを作成して構成する方法](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
-- [アプリケーションに外部 ID プロバイダーを使用する](https://docs.microsoft.com/azure/active-directory/b2b/identity-providers)
+- [アプリケーションに外部 ID プロバイダーを使用する](/azure/active-directory/b2b/identity-providers)
 
-- [Azure Active Directory の ID セキュリティ スコアとは](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
+- [Azure Active Directory の ID セキュリティ スコアとは](/azure/active-directory/fundamentals/identity-secure-score)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -74,7 +74,7 @@ Azure AD は、Microsoft アカウントを持たないユーザーが、Microso
 
 **ガイダンス**: Azure Information Protection は Azure Active Directory (Azure AD) に統合されています。これは、Azure の id およびアクセス管理サービスです。 Azure Rights Management サービスは、Bring Your Own Key (BYOK) シナリオの Azure Key Vault に格納されている顧客のキーにアクセスするときに、Azure AD アプリケーション id を使用します。 キーにアクセスするために Azure Rights Management サービスを承認するには Azure Key Vault アクセスポリシーを構成します。これは Azure portal を使用するか、PowerShell を使用して行うことができます。
 
-- [BYOK のために Azure Rights Management サービスを承認する](https://docs.microsoft.com/azure/information-protection/byok-price-restrictions#authorizing-the-azure-rights-management-service-to-use-your-key)
+- [BYOK のために Azure Rights Management サービスを承認する](./byok-price-restrictions.md#authorizing-the-azure-rights-management-service-to-use-your-key)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -86,7 +86,7 @@ Azure AD は、Microsoft アカウントを持たないユーザーが、Microso
 
 Azure Information Protection は Azure AD を使用して、Azure リソース、クラウドアプリケーション、オンプレミスアプリケーションに id とアクセス管理を提供します。 これには、従業員などの企業 ID だけでなく、パートナー、ベンダー、サプライヤーなどの外部 ID も含まれます。 これにより、シングル サインオン (SSO) で、オンプレミスとクラウド内の組織のデータとリソースへのアクセスを管理し、セキュリティで保護することができます。 すべてのユーザー、アプリケーション、デバイスを Azure AD に接続することで、シームレスで安全なアクセスを実現し、可視性と制御性を高めることができます。
 
-- [Azure Active Directory で Azure Information Protection にサインインします](https://docs.microsoft.com/azure/information-protection/requirements)
+- [Azure Active Directory で Azure Information Protection にサインインします](./requirements.md)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -102,7 +102,7 @@ Azure Information Protection は Azure AD を使用して、Azure リソース�
 
 詳細については、次のリファレンスを参照してください。
 
-- [Azure Active Directory を使用した認証の Azure Information Protection](https://docs.microsoft.com/azure/information-protection/requirements)
+- [Azure Active Directory を使用した認証の Azure Information Protection](./requirements.md)
 
 **Azure Security Center の監視**: はい
 
@@ -124,17 +124,17 @@ Azure AD に関するその他のガイダンス:
 
 セキュリティ ソリューションである Azure Advanced Threat Protection (ATP) では、Active Directory シグナルを使用することで、高度な脅威、セキュリティ侵害を受けた ID、および悪意のある内部関係者のアクションを特定、検出、および調査できます。
 
-- [Azure Active Directory の監査アクティビティ レポート](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs) 
+- [Azure Active Directory の監査アクティビティ レポート](/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
-- [Azure AD の危険なサインインを表示する方法](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-risky-sign-ins) 
+- [Azure AD の危険なサインインを表示する方法](/azure/active-directory/reports-monitoring/concept-risky-sign-ins) 
 
-- [危険なアクティビティのフラグが設定された Azure AD ユーザーを識別する方法](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-user-at-risk) 
+- [危険なアクティビティのフラグが設定された Azure AD ユーザーを識別する方法](/azure/active-directory/reports-monitoring/concept-user-at-risk) 
 
-- [Azure Security Center でユーザーの ID およびアクセス アクティビティを監視する方法](https://docs.microsoft.com/azure/security-center/security-center-identity-access) 
+- [Azure Security Center でユーザーの ID およびアクセス アクティビティを監視する方法](/azure/security-center/security-center-identity-access) 
 
-- [Azure Security Center の脅威インテリジェンス保護モジュールでのアラート](https://docs.microsoft.com//azure/security-center/alerts-reference) 
+- [Azure Security Center の脅威インテリジェンス保護モジュールでのアラート](//azure/security-center/alerts-reference) 
 
-- [Azure アクティビティ ログを Azure Monitor に統合する方法](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+- [Azure アクティビティ ログを Azure Monitor に統合する方法](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -164,13 +164,13 @@ Azure Information Protection には、Azure AD に管理者レベルのロール
 
 この特権を持つユーザーは、Azure 環境内のすべてのリソースを直接または間接的に読み取り、変更することができるため、高い特権を持つアカウントまたはロールの数を制限し、これらのアカウントを管理者特権で保護することができます。 Privileged Identity Management (PIM) を使用して、Azure リソースへのジャストインタイム (JIT) 特権アクセスと Azure AD を有効にします。 ジャストインタイムアクセスは、ユーザーが必要とする場合にのみ特権タスクを実行するための一時的なアクセス許可を付与します。 PIM を使用すると、Azure AD 組織に不審なアクティビティや安全でないアクティビティがある場合に、セキュリティ アラートを生成することもできます。
 
-- [Azure Information Protection 管理者ロール](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
+- [Azure Information Protection 管理者ロール](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
-- [Azure AD での管理者ロールのアクセス許可](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
+- [Azure AD での管理者ロールのアクセス許可](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
 
-- [Azure Privileged Identity Management のセキュリティ アラートを使用する](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
+- [Azure Privileged Identity Management のセキュリティ アラートを使用する](/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
 
-- [Azure AD でのハイブリッドおよびクラウド デプロイ用の特権アクセスをセキュリティで保護する](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
+- [Azure AD でのハイブリッドおよびクラウド デプロイ用の特権アクセスをセキュリティで保護する](/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -182,9 +182,9 @@ Azure Information Protection には、Azure AD に管理者レベルのロール
 
 Azure Information Protection には、Azure AD に管理者レベルのロールが含まれています。 管理者ロールに割り当てられたユーザーには、Azure Information Protection サービスでの完全なアクセス許可が付与されます。 管理者ロールを使用して、Azure Information Protection ポリシーのラベルの構成、保護テンプレートの管理、保護のアクティブ化を行うことができます。 管理者ロールでは、Identity Protection Center、Privileged Identity Management、Monitor Microsoft 365 Service Health、または Office 365 セキュリティコンプライアンスセンターでのアクセス許可は付与されません &amp; 。
 
-- [Azure Information Protection 管理者ロール](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
+- [Azure Information Protection 管理者ロール](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
-- [管理者が実行できる操作 Azure Information Protection](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
+- [管理者が実行できる操作 Azure Information Protection](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -198,13 +198,13 @@ Azure AD を使用してリソースを管理し、ユーザーアカウント�
 
 さらに、過剰な数の管理者アカウントが作成された場合にアラートを発行したり、古い管理者アカウントや不適切に構成されている管理者アカウントを特定するように Azure Privileged Identity Management を構成することもできます。 一部の Azure サービスでは、Azure AD によって管理されないローカルユーザーとロールがサポートされていることに注意してください。 これらのユーザーは、お客様が個別に管理する必要があります。
 
-- [Azure Information Protection 管理者ロール](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
+- [Azure Information Protection 管理者ロール](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
-- [管理者が実行できる操作 Azure Information Protection](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
+- [管理者が実行できる操作 Azure Information Protection](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
 
-- [Privileged Identity Management (PIM) で Azure リソース ロールのアクセス レビューを作成する](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
+- [Privileged Identity Management (PIM) で Azure リソース ロールのアクセス レビューを作成する](/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
 
-- [Azure AD の ID およびアクセス レビューの使用方法](https://docs.microsoft.com/azure/active-directory/governance/access-reviews-overvie)
+- [Azure AD の ID およびアクセス レビューの使用方法](/azure/active-directory/governance/access-reviews-overvie)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -216,7 +216,7 @@ Azure AD を使用してリソースを管理し、ユーザーアカウント�
 
 緊急アクセス用アカウントの資格情報 (パスワード、証明書、スマート カードなど) は安全に保管し、緊急時にのみそれらを使うことを許可された個人のみに知らせる必要があります。
 
-- [Azure AD で緊急アクセス用アカウントを管理する](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-emergency-access)
+- [Azure AD で緊急アクセス用アカウントを管理する](/azure/active-directory/users-groups-roles/directory-emergency-access)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -228,9 +228,9 @@ Azure AD を使用してリソースを管理し、ユーザーアカウント�
 
 Azure AD には、アクセス権の割り当て、レビュー、有効期限など、アクセス要求ワークフローを自動化するための資格管理機能が用意されています。 2 段階または複数段階の承認もサポートされています。
 
-- [Azure AD アクセス レビューとは](https://docs.microsoft.com/azure/active-directory/governance/access-reviews-overview) 
+- [Azure AD アクセス レビューとは](/azure/active-directory/governance/access-reviews-overview) 
 
-- [Azure AD エンタイトルメント管理とは](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-overview)
+- [Azure AD エンタイトルメント管理とは](/azure/active-directory/governance/entitlement-management-overview)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -244,11 +244,11 @@ Azure AD には、アクセス権の割り当て、レビュー、有効期限�
 
 管理タスクに高度にセキュリティ保護されたユーザー ワークステーションや Azure Bastion を使用します。 Azure Active Directory、Microsoft Defender Advanced Threat Protection (ATP)、または Microsoft Intune を使用して、管理タスクのためにセキュリティで保護されたマネージド ユーザー ワークステーションを展開します。 セキュリティで保護されたワークステーションを一元管理して、強力な認証、ソフトウェアとハードウェアのベースライン、制限された論理アクセスとネットワーク アクセスなどのセキュリティで保護された構成を実施できます。
 
-- [Azure Information Protection 用の PowerShell の使用に関するガイダンス](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-powershell)
+- [Azure Information Protection 用の PowerShell の使用に関するガイダンス](./rms-client/client-admin-guide-powershell.md)
 
-- [特権アクセス ワークステーションを理解する](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-managed-workstation) 
+- [特権アクセス ワークステーションを理解する](/azure/active-directory/devices/concept-azure-managed-workstation) 
 
-- [特権アクセス ワークステーションを展開する](https://docs.microsoft.com/azure/active-directory/devices/howto-azure-managed-workstation)
+- [特権アクセス ワークステーションを展開する](/azure/active-directory/devices/howto-azure-managed-workstation)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -262,17 +262,17 @@ Azure Information Protection には、Azure AD に管理者レベルのロール
 
 この特権を持つユーザーは、Azure 環境内のすべてのリソースを直接または間接的に読み取り、変更することができるため、高い特権を持つアカウントまたはロールの数を制限し、これらのアカウントを管理者特権で保護することができます。 Privileged Identity Management (PIM) を使用して、Azure リソースへのジャストインタイム (JIT) 特権アクセスと Azure AD を有効にします。 ジャストインタイムアクセスは、ユーザーが必要とする場合にのみ特権タスクを実行するための一時的なアクセス許可を付与します。 PIM を使用すると、Azure AD 組織に不審なアクティビティや安全でないアクティビティがある場合に、セキュリティ アラートを生成することもできます。
 
-- [Azure Information Protection のアクセス許可レベルに含まれる権限](https://docs.microsoft.com/azure/information-protection/configure-usage-rights#rights-included-in-permissions-levels)
+- [Azure Information Protection のアクセス許可レベルに含まれる権限](./configure-usage-rights.md#rights-included-in-permissions-levels)
 
-- [Rights Management 発行者と Rights Management 所有者](https://docs.microsoft.com/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner)
+- [Rights Management 発行者と Rights Management 所有者](./configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)
 
-- [Azure Information Protection 管理者ロール](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
+- [Azure Information Protection 管理者ロール](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
-- [Azure AD での管理者ロールのアクセス許可](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
+- [Azure AD での管理者ロールのアクセス許可](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
 
-- [Azure Privileged Identity Management のセキュリティ アラートを使用する](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
+- [Azure Privileged Identity Management のセキュリティ アラートを使用する](/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
 
-- [Azure AD でのハイブリッドおよびクラウド デプロイ用の特権アクセスをセキュリティで保護する](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
+- [Azure AD でのハイブリッドおよびクラウド デプロイ用の特権アクセスをセキュリティで保護する](/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -282,7 +282,7 @@ Azure Information Protection には、Azure AD に管理者レベルのロール
 
 **ガイダンス**: Azure Information Protection は、Azure カスタマーロックボックスをサポートして、データアクセス要求を確認、承認、および拒否したり、要求を確認したりできるようにします。 
 
-- [ロックボックスの概要](https://docs.microsoft.com/azure/security/fundamentals/customer-lockbox-overview)
+- [ロックボックスの概要](/azure/security/fundamentals/customer-lockbox-overview)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -298,9 +298,9 @@ Azure Information Protection には、Azure AD に管理者レベルのロール
 
 Azure Information Protection は、組織がラベルを適用してドキュメントや電子メールを分類および保護できるようにするクラウドベースのソリューションです。 ラベルの適用は、ルールと条件を使用して管理者が自動で実行するか、ユーザーが手動で実行するか、その組み合わせ (ユーザーに提示するレコメンデーションを管理者が定義する) で行うことができます。
 
-- [Azure Information Protection の概要](https://docs.microsoft.com/azure/information-protection/)
+- [Azure Information Protection の概要](./index.yml)
 
-- [統一されたラベル付けクライアントをセットアップする方法に関するガイダンス](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-user-guide)
+- [統一されたラベル付けクライアントをセットアップする方法に関するガイダンス](./rms-client/clientv2-user-guide.md)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -310,7 +310,7 @@ Azure Information Protection は、組織がラベルを適用してドキュメ
 
 **ガイダンス**: Azure Information Protection は、機密情報にラベルを付け、暗号化によってそのデータを保護する機能を提供することによって、データ保護を提供します。 保護は、Azure Rights Management サービスによって提供されます。
 
-- [Azure Rights Management](https://docs.microsoft.com/azure/information-protection/what-is-azure-rms)
+- [Azure Rights Management](./what-is-azure-rms.md)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -320,7 +320,7 @@ Azure Information Protection は、組織がラベルを適用してドキュメ
 
 **ガイダンス**: Azure Information Protection を使用すると、追跡と取り消しの機能を使用して、機密データの不正な転送を監視することができます。 追跡と取り消しを使用すると、ユーザーが送信したドキュメントをどのように使用しているかを追跡し、ユーザーがアクセスできなくなった場合にアクセスを取り消すことができます。 
 
-- [追跡と取り消しに関するガイダンス](https://docs.microsoft.com/azure/information-protection/rms-client/client-track-revoke)
+- [追跡と取り消しに関するガイダンス](./rms-client/client-track-revoke.md)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -340,9 +340,9 @@ Azure Information Protection は、組織がラベルを適用してドキュメ
 
 注:ワークロードとサービスを可視化するには、追加のアクセス許可が必要になることがあります。 
 
-- [セキュリティ閲覧者ロールの概要](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#security-reader)
+- [セキュリティ閲覧者ロールの概要](/azure/role-based-access-control/built-in-roles#security-reader)
 
-- [Azure 管理グループの概要](https://docs.microsoft.com/azure/governance/management-groups/overview)
+- [Azure 管理グループの概要](/azure/governance/management-groups/overview)
 
 **Azure Security Center の監視**: 現在は使用できません
 
@@ -352,7 +352,7 @@ Azure Information Protection は、組織がラベルを適用してドキュメ
 
 **ガイダンス**: Azure Information Protection は Azure Resource Manager デプロイをサポートしていないか、または "リソースの許可" や "リソースの拒否" などの組み込みの Azure Policy 定義を使用してデプロイを制限する機能をお客様に許可します。 ただし、お客様は、セキュリティとコンプライアンスセンターでポリシーのラベル付けによって、Azure Information Protection の使用を制限することができます。 
 
-- [セキュリティとコンプライアンスセンターを使用して情報保護を管理する](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide&amp;preserve-view=true)
+- [セキュリティとコンプライアンスセンターを使用して情報保護を管理する](/microsoft-365/compliance/protect-information?amp;preserve-view=true&view=o365-worldwide)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -380,11 +380,11 @@ Azure Information Protection は、組織がラベルを適用してドキュメ
 
 また Azure Security Center は、失敗した認証試行の数が多すぎるなど、特定の疑わしいアクティビティについてもアラートを表示し、サブスクリプションでは非推奨のアカウントを警告することもできます。 基本的なセキュリティの検疫の監視に加えて、Security Center の脅威保護モジュールは、個々の Azure コンピューティングリソース (仮想マシン、コンテナー、app service など)、データリソース (SQL DB やストレージなど)、Azure サービスレイヤーから、さらに詳細なセキュリティアラートを収集することもできます。 この機能を使用すると、個々のリソース内でアカウントの異常を確認できます。
 
-- [Azure AD でアクティビティ レポートを監査する](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs)
+- [Azure AD でアクティビティ レポートを監査する](/azure/active-directory/reports-monitoring/concept-audit-logs)
 
-- [Azure Identity Protection を有効にする](https://docs.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection)
+- [Azure Identity Protection を有効にする](/azure/active-directory/identity-protection/overview-identity-protection)
 
-- [Azure Security Center での脅威の防止](https://docs.microsoft.com/azure/security-center/threat-protection)
+- [Azure Security Center での脅威の防止](/azure/security-center/threat-protection)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -406,7 +406,7 @@ Azure Information Protection によって生成されるログの種類は次の
 
 保護の使用状況ログを使用して、保護されたデータにアクセスしているユーザー、' その ' デバイス、および ' where ' を識別できます。 ログでは、保護されたコンテンツを正常に読み取ることができるかどうか、および保護された重要なドキュメントを読んだ相手を特定することができます。 
 
-- [Azure Information Protection からの保護の使用状況のログと分析](https://docs.microsoft.com/azure/information-protection/log-analyze-usage)
+- [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -420,9 +420,9 @@ Azure Information Protection によって生成されるログの種類は次の
 
 Azure Sentinel により、事実上すべてのログソースに対して広範な Data Analytics と、インシデントのライフサイクル全体を管理するためのケース管理ポータルが提供されます。 調査中のインテリジェンス情報を、追跡とレポートのためにインシデントに関連付けることができます。 
 
-- [Azure Information Protection からの保護の使用状況のログと分析](https://docs.microsoft.com/azure/information-protection/log-analyze-usage)
+- [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)
 
-- [Azure Sentinel でインシデントを調査します](https://docs.microsoft.com/azure/sentinel/tutorial-investigate-cases)
+- [Azure Sentinel でインシデントを調査します](/azure/sentinel/tutorial-investigate-cases)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -436,9 +436,9 @@ Azure Information Protection ワークスペースに収集して格納されて
 
 Azure Monitor ログの使用量と推定コスト機能を使用して、格納されているデータの量を見積もり、確認したり、Log Analytics ワークスペースのデータ保有期間を制御したりすることができます。 
 
-- [Azure Information Protection からの保護の使用状況のログと分析](https://docs.microsoft.com/azure/information-protection/log-analyze-usage)
+- [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)
 
-- [Azure Monitor ログで使用量とコストを管理する](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage)
+- [Azure Monitor ログで使用量とコストを管理する](/azure/azure-monitor/platform/manage-cost-storage)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -452,9 +452,9 @@ Azure Monitor ログの使用量と推定コスト機能を使用して、格納
 
 **ガイダンス**:組織において、セキュリティ インシデントに対応するためのプロセスが用意されていること、Azure のこれらのプロセスが更新されていること、それらのプロセスを定期的に使用して準備されていることを確認します。
 
-- [企業環境全体にセキュリティを実装する](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+- [企業環境全体にセキュリティを実装する](/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
 
-- [インシデント対応のリファレンス ガイド](https://docs.microsoft.com/microsoft-365/downloads/IR-Reference-Guide.pdf)
+- [インシデント対応のリファレンス ガイド](/microsoft-365/downloads/IR-Reference-Guide.pdf)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -464,7 +464,7 @@ Azure Monitor ログの使用量と推定コスト機能を使用して、格納
 
 **ガイダンス**:Azure Security Center でセキュリティ インシデントの連絡先情報を設定します。 この連絡先情報は、Microsoft Security Response Center (MSRC) でユーザーのデータが違法または権限のないユーザーによってアクセスされたことが検出された場合に、Microsoft からの連絡先として使用されます。 また、インシデント対応のニーズに応じて、異なる Azure サービスでインシデント アラートと通知をカスタマイズするオプションもあります。 
 
-- [Azure Security Center のセキュリティ連絡先を設定する方法](https://docs.microsoft.com/azure/security-center/security-center-provide-security-contact-details)
+- [Azure Security Center のセキュリティ連絡先を設定する方法](/azure/security-center/security-center-provide-security-contact-details)
 
 **Azure Security Center の監視**: はい
 
@@ -480,9 +480,9 @@ Azure Security Center では、多数の Azure 資産について高品質のア
 
 エクスポート機能を使用して Azure Security Center のアラートと推奨事項をエクスポートし、Azure リソースへのリスクを特定します。 アラートと推奨事項を手動で、または継続した連続的な方法でエクスポートします。
 
-- [エクスポートを構成する方法](https://docs.microsoft.com/azure/security-center/continuous-export)
+- [エクスポートを構成する方法](/azure/security-center/continuous-export)
 
-- [Azure Sentinel にアラートをストリーミングする方法](https://docs.microsoft.com/azure/sentinel/connect-azure-security-center)
+- [Azure Sentinel にアラートをストリーミングする方法](/azure/sentinel/connect-azure-security-center)
 
 **Azure Security Center の監視**: 現在は使用できません
 
@@ -506,13 +506,13 @@ Azure Security Center では、多数の Azure 資産について高品質のア
 
 Azure Sentinel により、事実上すべてのログソースに対して広範な Data Analytics と、インシデントのライフサイクル全体を管理するためのケース管理ポータルが提供されます。 調査中のインテリジェンス情報を、追跡とレポートのためにインシデントに関連付けることができます。 
 
-- [Windows マシンのディスクのスナップショットを作成する](https://docs.microsoft.com/azure/virtual-machines/windows/snapshot-copy-managed-disk)
+- [Windows マシンのディスクのスナップショットを作成する](/azure/virtual-machines/windows/snapshot-copy-managed-disk)
 
-- [Linux マシンのディスクのスナップショットを作成する](https://docs.microsoft.com/azure/virtual-machines/linux/snapshot-copy-managed-disk)
+- [Linux マシンのディスクのスナップショットを作成する](/azure/virtual-machines/linux/snapshot-copy-managed-disk)
 
 - [Microsoft Azure サポートの診断情報とメモリ ダンプ コレクション](https://azure.microsoft.com/support/legal/support-diagnostic-information-collection/) 
 
-- [Azure Sentinel でインシデントを調査します](https://docs.microsoft.com/azure/sentinel/tutorial-investigate-cases)
+- [Azure Sentinel でインシデントを調査します](/azure/sentinel/tutorial-investigate-cases)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -526,9 +526,9 @@ Azure Security Center によって各アラートに重大度が割り当てら�
 
 さらに、タグを使用してリソースをマークし、Azure リソース (特に、機密データを処理するもの) を識別して分類するための命名システムを作成します。  インシデントが発生した Azure リソースと環境の重要度に基づいて、アラートの修復に優先順位を付けることは、お客様の責任です。
 
-- [Security alerts in Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-alerts-overview)
+- [Security alerts in Azure Security Center](/azure/security-center/security-center-alerts-overview)
 
-- [タグを使用した Azure リソースの整理](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags)
+- [タグを使用した Azure リソースの整理](/azure/azure-resource-manager/resource-group-using-tags)
 
 **Azure Security Center の監視**: 現在は使用できません
 
@@ -538,11 +538,11 @@ Azure Security Center によって各アラートに重大度が割り当てら�
 
 **ガイダンス**:手動による反復タスクを自動化して、応答時間を短縮し、アナリストの負担を軽減します。 手動タスクの実行には時間がかかり、各インシデントの速度が低下し、アナリストが処理できるインシデントの数が減少します。 手動タスクではアナリストの疲労も増加します。これにより、遅延が発生する人的エラーのリスクが増加し、複雑なタスクに効果的に焦点を当てるアナリストの能力が低下します。 Azure Security Center と Azure Sentinel のワークフロー自動化機能を使用して、自動的にアクションをトリガーしたり、プレイブックを実行して受信したセキュリティ アラートに応答したりします。 プレイブックにより、通知の送信、アカウントの無効化、問題のあるネットワークの特定などのアクションが実行されます。 
 
-- [Security Center でワークフロー自動化を構成する](https://docs.microsoft.com/azure/security-center/workflow-automation)
+- [Security Center でワークフロー自動化を構成する](/azure/security-center/workflow-automation)
 
-- [Azure Security Center で脅威への自動対応を設定する](https://docs.microsoft.com/azure/security-center/tutorial-security-incident#triage-security-alerts)
+- [Azure Security Center で脅威への自動対応を設定する](/azure/security-center/tutorial-security-incident#triage-security-alerts)
 
-- [Azure Sentinel で脅威への自動対応を設定します](https://docs.microsoft.com/azure/sentinel/tutorial-respond-threats-playbook)
+- [Azure Sentinel で脅威への自動対応を設定します](/azure/sentinel/tutorial-respond-threats-playbook)
 
 **Azure Security Center の監視**: 現在は使用できません
 
@@ -576,13 +576,13 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 詳細については、次のリファレンスを参照してください。
 
-- [セキュリティとコンプライアンスセンターの機密ラベルを使ってみる](https://docs.microsoft.com/microsoft-365/compliance/get-started-with-sensitivity-labels?view=o365-worldwide&amp;preserve-view=true)
+- [セキュリティとコンプライアンスセンターの機密ラベルを使ってみる](/microsoft-365/compliance/get-started-with-sensitivity-labels?amp;preserve-view=true&view=o365-worldwide)
 
-- [秘密度ラベルの作成と発行](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels?view=o365-worldwide&amp;preserve-view=true)
+- [秘密度ラベルの作成と発行](/microsoft-365/compliance/create-sensitivity-labels?amp;preserve-view=true&view=o365-worldwide)
 
-- [機密ラベルに暗号化を適用する](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide&amp;preserve-view=true)
+- [機密ラベルに暗号化を適用する](/microsoft-365/compliance/encryption-sensitivity-labels?amp;preserve-view=true&view=o365-worldwide)
 
-- [Azure Information Protection 用 PowerShell](https://docs.microsoft.com/azure/information-protection/administer-powershell)
+- [Azure Information Protection 用 PowerShell](./administer-powershell.md)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -593,7 +593,7 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 **ガイダンス**:必要に応じて、Azure リソースの侵入テストまたはレッド チーム アクティビティを実施し、セキュリティに関するすべての重大な調査結果が確実に修復されるようにします。
 お客様の侵入テストが Microsoft のポリシーに違反しないように、Microsoft クラウド侵入テストの実施ルールに従ってください。 Microsoft が管理しているクラウド インフラストラクチャ、サービス、アプリケーションに対する Red Teaming およびライブ サイト侵入テストに関する Microsoft の戦略と実施を活用してください。
 
-- [Azure での侵入テスト](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
+- [Azure での侵入テスト](/azure/security/fundamentals/pen-testing)
 
 - [侵入テストの実施ルール](https://www.microsoft.com/msrc/pentest-rules-of-engagement?rtc=1) 
 
@@ -611,8 +611,8 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 **ガイダンス**: Azure Information Protection を使用すると、ユーザーは Bring Your Own Key (byok) を使用して独自のキーを使用してテナントを構成することができます。 ユーザーが生成したキーは、保護のために Azure Key Vault に保存する必要があります。 Azure Key Vault を使用すると、論理的な削除、役割の分離、および分離されたセキュリティドメインによってキーが失われるのを防ぐことができます。 
 
-- [Azure Information Protection Bring Your Own Key と Azure Key Vault との統合](https://docs.microsoft.com/azure/information-protection/byok-price-restrictions)
-- [Key Vault での論理的な削除の有効化](https://docs.microsoft.com/azure/storage/blobs/storage-blob-soft-delete?tabs=azure-portal)
+- [Azure Information Protection Bring Your Own Key と Azure Key Vault との統合](./byok-price-restrictions.md)
+- [Key Vault での論理的な削除の有効化](/azure/storage/blobs/storage-blob-soft-delete?tabs=azure-portal)
 
 **Azure Security Center の監視**: はい
 
@@ -646,15 +646,15 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 詳細については、次のリファレンスを参照してください。
 
-- [Azure セキュリティ アーキテクチャに関する推奨事項 - ストレージ、データ、暗号化](https://docs.microsoft.com/azure/architecture/framework/security/storage-data-encryption?toc=/security/compass/toc.json&amp;bc=/security/compass/breadcrumb/toc.json)
+- [Azure セキュリティ アーキテクチャに関する推奨事項 - ストレージ、データ、暗号化](/azure/architecture/framework/security/storage-data-encryption?amp;bc=%2fsecurity%2fcompass%2fbreadcrumb%2ftoc.json&toc=%2fsecurity%2fcompass%2ftoc.json)
 
-- [Azure のセキュリティの基礎 - Azure のデータ セキュリティ、暗号化、ストレージ](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview)
+- [Azure のセキュリティの基礎 - Azure のデータ セキュリティ、暗号化、ストレージ](/azure/security/fundamentals/encryption-overview)
 
-- [クラウド導入フレームワーク - Azure のデータ セキュリティと暗号化のベスト プラクティス](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices?toc=/azure/cloud-adoption-framework/toc.json&amp;bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [クラウド導入フレームワーク - Azure のデータ セキュリティと暗号化のベスト プラクティス](/azure/security/fundamentals/data-encryption-best-practices?amp;bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
 
-- [Azure セキュリティ ベンチマーク - アセット管理](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-asset-management)
+- [Azure セキュリティ ベンチマーク - アセット管理](/azure/security/benchmarks/security-benchmark-v2-asset-management)
 
-- [Azure セキュリティ ベンチマーク - データ保護](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-data-protection)
+- [Azure セキュリティ ベンチマーク - データ保護](/azure/security/benchmarks/security-benchmark-v2-data-protection)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -668,11 +668,11 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 セグメント化戦略は、ネットワーク セキュリティ、ID とアクセス モデル、アプリケーション アクセス許可とアクセス モデル、人的プロセスの制御など、あらゆるコントロールの種類を対象として確実に一貫性をもって実装します。
 
-- [Azure のセグメント化戦略に関するガイド (動画)](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151)
+- [Azure のセグメント化戦略に関するガイド (動画)](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151)
 
-- [Azure のセグメント化戦略に関するガイド (ドキュメント)](https://docs.microsoft.com/security/compass/governance#enterprise-segmentation-strategy)
+- [Azure のセグメント化戦略に関するガイド (ドキュメント)](/security/compass/governance#enterprise-segmentation-strategy)
 
-- [ネットワークのセグメント化を企業のセグメント化戦略に合わせる](https://docs.microsoft.com/security/compass/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
+- [ネットワークのセグメント化を企業のセグメント化戦略に合わせる](/security/compass/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -682,7 +682,7 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 **ガイダンス**:個々の資産とそれらがホストされている環境に対するリスクを継続的に測定し、軽減します。 高い価値を持つ資産と、攻撃に晒される可能性の高い部分 (公開されたアプリケーション、ネットワークのイングレス ポイントとエグレス ポイント、ユーザーと管理者のエンドポイントなど) を優先します。
 
-- [Azure セキュリティ ベンチマーク - 体制と脆弱性の管理](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-posture-vulnerability-management)
+- [Azure セキュリティ ベンチマーク - 体制と脆弱性の管理](/azure/security/benchmarks/security-benchmark-v2-posture-vulnerability-management)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -692,11 +692,11 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 **ガイダンス**:セキュリティ組織における役割と責任に関する明確な戦略が文書化されて伝えられるようにします。 セキュリティに関する決定についてわかりやすく説明すること、共有される責任モデルについて全員に教育すること、クラウドをセキュリティで保護するテクノロジについて技術チームに教育することを優先とします。
 
-- [Azure のセキュリティのベスト プラクティス 1 – 人: クラウド セキュリティに関する取り組みについてチームを教育する](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#1-people-educate-teams-about-the-cloud-security-journey)
+- [Azure のセキュリティのベスト プラクティス 1 – 人: クラウド セキュリティに関する取り組みについてチームを教育する](/azure/cloud-adoption-framework/security/security-top-10#1-people-educate-teams-about-the-cloud-security-journey)
 
-- [Azure のセキュリティのベスト プラクティス 2 - 人: クラウド セキュリティ テクノロジについてチームを教育する](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#2-people-educate-teams-on-cloud-security-technology)
+- [Azure のセキュリティのベスト プラクティス 2 - 人: クラウド セキュリティ テクノロジについてチームを教育する](/azure/cloud-adoption-framework/security/security-top-10#2-people-educate-teams-on-cloud-security-technology)
 
-- [Azure のセキュリティのベスト プラクティス 3 - プロセス: クラウドのセキュリティに関する意思決定のアカウンタビリティを割り当てる](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+- [Azure のセキュリティのベスト プラクティス 3 - プロセス: クラウドのセキュリティに関する意思決定のアカウンタビリティを割り当てる](/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -721,13 +721,13 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 -   最新のネットワーク セキュリティ成果物 (例: ネットワーク図、参照ネットワーク アーキテクチャ)
 
 詳細については、次のリファレンスを参照してください。
-- [Azure のセキュリティのベスト プラクティス 11 - アーキテクチャ。単一の統合セキュリティ戦略](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
+- [Azure のセキュリティのベスト プラクティス 11 - アーキテクチャ。単一の統合セキュリティ戦略](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
 
-- [Azure セキュリティ ベンチマーク - ネットワーク セキュリティ](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-network-security)
+- [Azure セキュリティ ベンチマーク - ネットワーク セキュリティ](/azure/security/benchmarks/security-benchmark-v2-network-security)
 
-- [Azure のネットワーク セキュリティの概要](https://docs.microsoft.com/azure/security/fundamentals/network-overview)
+- [Azure のネットワーク セキュリティの概要](/azure/security/fundamentals/network-overview)
 
-- [エンタープライズ ネットワーク アーキテクチャ戦略](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/architecture)
+- [エンタープライズ ネットワーク アーキテクチャ戦略](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -751,13 +751,13 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 詳細については、次のリファレンスを参照してください。
 
-- [Azure セキュリティ ベンチマーク - ID 管理](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-identity-management)
+- [Azure セキュリティ ベンチマーク - ID 管理](/azure/security/benchmarks/security-benchmark-v2-identity-management)
 
-- [Azure セキュリティ ベンチマーク - 特権アクセス](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-privileged-access)
+- [Azure セキュリティ ベンチマーク - 特権アクセス](/azure/security/benchmarks/security-benchmark-v2-privileged-access)
 
-- [Azure のセキュリティのベスト プラクティス 11 - アーキテクチャ。単一の統合セキュリティ戦略](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
+- [Azure のセキュリティのベスト プラクティス 11 - アーキテクチャ。単一の統合セキュリティ戦略](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
 
-- [Azure ID 管理のセキュリティの概要](https://docs.microsoft.com/azure/security/fundamentals/identity-management-overview)
+- [Azure ID 管理のセキュリティの概要](/azure/security/fundamentals/identity-management-overview)
 
 **Azure Security Center の監視**: 適用なし
 
@@ -785,15 +785,15 @@ PowerShell を使用するには、AIPService PowerShell モジュールをイ�
 
 詳細については、次のリファレンスを参照してください。
 
-- [Azure セキュリティ ベンチマーク - ログと脅威検出](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-logging-threat-detection)
+- [Azure セキュリティ ベンチマーク - ログと脅威検出](/azure/security/benchmarks/security-benchmark-v2-logging-threat-detection)
 
-- [Azure セキュリティ ベンチマーク - インシデント対応](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-incident-response)
+- [Azure セキュリティ ベンチマーク - インシデント対応](/azure/security/benchmarks/security-benchmark-v2-incident-response)
 
-- [Azure のセキュリティのベスト プラクティス 4 - プロセス: クラウドのインシデント対応プロセスを更新する](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+- [Azure のセキュリティのベスト プラクティス 4 - プロセス: クラウドのインシデント対応プロセスを更新する](/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
 
-- [Azure 導入フレームワーク、ログ、およびレポートの決定ガイド](https://docs.microsoft.com/azure/cloud-adoption-framework/decision-guides/logging-and-reporting/)
+- [Azure 導入フレームワーク、ログ、およびレポートの決定ガイド](/azure/cloud-adoption-framework/decision-guides/logging-and-reporting/)
 
-- [Azure のエンタープライズ スケーリング、管理、監視](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
+- [Azure のエンタープライズ スケーリング、管理、監視](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
 
 **Azure Security Center の監視**: 適用なし
 
