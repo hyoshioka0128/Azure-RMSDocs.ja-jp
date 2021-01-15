@@ -6,13 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
-manager: barbkess
-ms.openlocfilehash: fe246ceb2f54d24318373b95c36733a977b560dc
-ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
+ms.openlocfilehash: 3e3d32dd5e66ee6948567bc43ebd5ecfa16154b6
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97701732"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215512"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) ソフトウェア開発キット (SDK) バージョンリリース履歴とサポートポリシー
 
@@ -31,11 +30,70 @@ ms.locfileid: "97701732"
 >  
 > テクニカルサポートについては、 [Stack Overflow Microsoft Information Protection フォーラム](https://stackoverflow.com/questions/tagged/microsoft-information-protection)を参照してください。
 
+## <a name="version-1886"></a>バージョン1.8.86
+
+**リリース日:** 2021年1月13日
+
+### <a name="general-changes"></a>一般的な変更
+
+- ARM での Mac のサポートが追加されました。
+- Mac 用のすべての .dylib ファイルが署名されています。
+- すべてのクラウドは、3つの Sdk すべてで完全にサポートされています。
+- `TelemetryConfiguration` の名前を `DiagnosticConfiguration` に変更します。
+- で `MipContext` はなくを受け入れるように更新されました `DiagnosticConfiguration` `TelemetryConfiguration` 。
+- 新しいとが公開さ `TelemetryDelegate` `AuditDelegate` れています。
+- いくつかのカスタム設定の名前が変更され、バージョン1.9 で削除される予定です。 これらは、バージョン1.8 の更新プログラムの名前と同時に機能します。 
+
+| 新しい名前          | 古い名前                   |
+| ----------------- | -------------------------- |
+| is_debug_audit    | is_debug_telemetry         |
+| is_audit_disabled | is_built_in_audit_disabled |
+
+### <a name="file-sdk"></a>ファイル SDK
+
+- 2つのキー暗号化を使用したユーザー定義ラベルのサポートが追加されました。
+- `MsgInspector.BodyType`メッセージファイルの本文エンコードの種類を公開する API を追加しました。
+- User-Defined のアクセス許可を持つ二重キー暗号化をサポートするための Api を追加しました。
+- のフラグが追加されました。これにより `mip::FileHandler` 、呼び出し元は監査検出イベントの送信を無効にできます。 これにより、API を使用すると重複する検出イベントが発生するシナリオが修正さ `ClassifyAsync()` れます。
+- 次のようなバグを修正します。 
+  - XPS ファイルの保護の設定に失敗しました。
+  - SharePoint Online からアップロード/ダウンロードした後、またはカスタムのアクセス許可を削除した後に、ファイルを開くことはできません。
+  - `RemoveProtection()` 関数は、メッセージを受信します。 "rpq msg" と入力します。 では、メッセージファイルのみが受け入れられるようになりました。
+  - 保護されていないファイルを追跡または失効しようとしたときに発生したクラッシュ。
+
+### <a name="policy-sdk"></a>ポリシー SDK
+
+- `ActionId`Microsoft Office と SharePoint Online のラベル付きドキュメントの一貫性を確保するために、既定のメタデータプロパティから削除されました。
+- Azure 管理範囲固有のラベルのサポートが追加されました。
+- 各のデリゲートを使用してテレメトリと監査の両方をオーバーライドする機能が追加されました。
+  - Audit delegate は、AIP 監査イベントを AIP Analytics 以外の宛先または AIP Analytics に送信する機能を提供します。
+- `mip::PolicyHandler`呼び出し元が監査検出イベントの送信を検出できるようにするフラグをに追加しました。 これにより、API を使用すると重複する検出イベントが発生するシナリオが修正さ `ClassifyAsync()` れます。
+- 特定のシナリオで暗号化されたポリシーデータベースを開くことができなかったバグを修正しました。
+- `AuditDelegate`開発者が既定の MIPMAP SDK 監査パイプラインをオーバーライドし、独自のインフラストラクチャにイベントを送信できるようにする新しい機能が追加されています。 
+- `mip::ClassifierUniqueIdsAndContentFormats` で `GetContentFormat()` はなくが返されるようになりました `std::string` `mip::ContentFormat` 。 この変更は、.NET ラッパーと Java ラッパーでレプリケートされます。 
+- `ContentFormat.Default` がになりました `ContentFormat.File` 。
+
+### <a name="protection-sdk"></a>保護 SDK
+
+- True の `ProtectionEngineSettings.SetAllowCloudServiceOnly` 場合に Active Directory Rights Management サービスクラスターへの接続を禁止するプロパティが追加されました。 クラウド環境のみが使用されます。
+- 委任ライセンスを取得するためのサポートを追加しました。
+  - 委任ライセンスを使用すると、サービスはユーザーに代わってコンテンツのライセンスを取得できます。
+  - これにより、サービスに対して追加の呼び出しを行わずに、サービスが権限のデータを表示し、ユーザーの代わりに復号化できるようになります。  
+
+### <a name="java-wrapper-public-preview"></a>Java ラッパー (パブリックプレビュー)
+
+- Java ラッパーの追跡と取り消しのサポートを追加しました。
+- Java ラッパーにストリームサポートを追加しました
+
+### <a name="c-api"></a>C API
+
+- C API から **MIP_FLIGHTING_FEATURE_KEEP_PDF_LINEARIZATION** フラグが削除されました。
+
 ## <a name="version-17147"></a>バージョン1.7.147
 
 ### <a name="file-sdk"></a>ファイル SDK
 
-- .PBIX ファイル形式のマイナーバグ修正。
+- .PBIX ファイル形式のマイナーバグ修正。 
 
 ## <a name="version-17145"></a>バージョン1.7.145
 
@@ -83,7 +141,7 @@ ms.locfileid: "97701732"
 
 - キャッシュされた `mip::Identity` エンジンから正常に読み込まれなかったバグを修正しました。
 - 新しく作成された発行ライセンスの暗黙的な登録が追加されました。
-- Office ファイルでの DKE のサポートに使用される cyptographic アルゴリズムのサポートが追加されました。
+- Office ファイルでの DKE のサポートに使用される暗号化アルゴリズムのサポートが追加されました。
 - 作成 `documentId` さ `owner` れたパラメーターとパラメーター (省略可能)。
 
 ### <a name="c-apis"></a>C Api
@@ -116,15 +174,15 @@ ms.locfileid: "97701732"
 ### <a name="general-sdk-changes"></a>一般的な SDK の変更
 
 - TLS 1.2 は、ADRMS 以外のすべての HTTP 通信に適用されます。
-- IOS/MacOS HTTP 実装を Nn 接続から Nの Lsession に移行した。
+- IOS/macOS HTTP 実装を Nn 接続から Nの Lsession に移行した。
 - Aria SDK から 1DS SDK に移行された iOS テレメトリコンポーネント。
-- テレメトリコンポーネントでは、iOS、MacOs、Linux で MIP の HttpDelegate が使用されるようになりました。 (以前は win32 のみ)。
+- テレメトリコンポーネントでは、iOS、macOs、Linux で MIP の HttpDelegate が使用されるようになりました。 (以前は win32 のみ)。
 - C API のタイプセーフが改善されました。
 - C++、C#、および Java Api で、プロファイルからの AuthDelegate をエンジンに移動しました。
 - AuthDelegate がのコンストラクターから `Profile::Settings` に移動しました `Engine::Settings` 。
 - ポリシー同期に失敗した理由に関する詳細情報を提供するために、カテゴリを NoPolicyError に追加しました。
 - `PolicyEngine::GetTenantId`メソッドを追加しました。
-- 明示的なソブリン cloud のサポートが追加されました。
+- すべてのクラウドの明示的なサポートが追加されました。
   - `Engine::Settings::SetCloud`ターゲットクラウド (GCC High、21 Vianet など) を設定する新しいメソッド。
   - `Engine::Settings::SetCloudEndpointBaseUrl`認識されたクラウドでは、既存のメソッド呼び出しは不要になりました。
 - IOS バイナリのビットコードを有効にしました。
@@ -161,7 +219,7 @@ ms.locfileid: "97701732"
 
 - ドキュメント追跡の登録と取り消しの新しいサポート。
 - 発行時に事前ライセンスを生成するための新しいサポート。
-- 保護サービスによって使用される公開された Microsoft SSL 証明書を公開します。
+- 保護サービスによって使用される公開済みの Microsoft TLS 証明書。
    - `GetMsftCert` および `GetMsftCertPEM`
    - アプリケーションが `HttpDelegate` インターフェイスをオーバーライドする場合は、この CA によって発行されたサーバー証明書を信頼する必要があります。
    - この要件は、2020の後半で削除される予定です。    
@@ -276,7 +334,7 @@ ms.locfileid: "97701732"
 - パフォーマンスの向上とバグの修正
 - StorageType 列挙型を CacheStorageType に変更しました
 - Gnustl ではなく、libc + + への Android リンク
-- 廃止された、非推奨の Api を削除しました
+- 以前に非推奨とされた Api の削除
   - ファイル/ポリシー/プロファイル:: 設定は MipContext を使用して初期化する必要があります
   - ファイル/ポリシー/プロファイル:: 設定パス、アプリケーション情報、ロガーデリゲート、テレメトリ、およびログレベルの getter/setter が削除されました。 これらのプロパティは MipContext によって管理されます。
 - Apple プラットフォームでのスタティックライブラリのサポートの強化
@@ -306,7 +364,7 @@ ms.locfileid: "97701732"
 
 ### <a name="protection-sdk"></a>保護 SDK
 
-- 廃止された、非推奨の Api を削除しました
+- 以前に非推奨とされた Api の削除
   - ProtectionEngine:: Createprotectionハンドラ Fromdescriptor [Async] を削除しました (ProtectionEngine:: Createprotectionハンドラ Forpublishing [Async] を使用します)
   - ProtectionEngine:: Createprotectionハンドラ From発行ライセンス [Async] (ProtectionEngine:: Createprotectionハンドラ For従量課金の使用 [Async]) が削除されました
 - 完全な C# API
@@ -348,7 +406,7 @@ ms.locfileid: "97701732"
 - 保護された MSG ファイルの暗号化解除がサポートされるようになりました。
 - メッセージの検査。およびでサポートされて `mip::FileInspector` い `mip::FileHandler::InspectAsync()` ます。
 - ディスク上のキャッシュが必要に応じて暗号化されるようになりました。
-- 保護 SDK で中国ソブリン cloud がサポートされるようになりました。
+- 保護 SDK が中国語のクラウドのお客様をサポートするようになりました。
 - Android での Arm64 のサポート。
 - IOS での Arm64e のサポート。
 - エンドユーザーライセンス (使用可能) のキャッシュを無効にすることができるようになりました。
@@ -482,7 +540,7 @@ ms.locfileid: "97701732"
       - mip::FileHandler
       - mip::ProtectionHandler
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - サポートされているプラットフォームなどの詳細については [、MIP SDK に関する faq と問題](faqs-known-issues.md) を参照してください。
 - MIP SDK の使用を開始する方法については、「 [MIP sdk のセットアップと構成](setup-configure-mip.md) 」を参照してください。

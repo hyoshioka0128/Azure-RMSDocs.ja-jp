@@ -1,17 +1,17 @@
 ---
 title: 'クラス FileEngine:: Settings'
 description: 'Microsoft Information Protection (MIP) SDK の fileengine:: settings クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 05fb06ec06943b39209c980236643e50d873d451
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 56b4bf62af04b3b84c5ed291ce9ccb0fa0d3ee28
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566977"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215427"
 ---
 # <a name="class-fileenginesettings"></a>クラス FileEngine:: Settings 
   
@@ -45,10 +45,8 @@ public void SetDelegatedUserEmail (const std:: string& delegatedUserEmail)  |  �
 public const std:: string& GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
 public void SetLabelFilter (const std:: vector \<LabelFilterType\>& deprecatedLabelFilters)  |  ラベルフィルターを設定します。
 public const std:: vector \<LabelFilterType\>& getlabelfilter () const  |  非推奨の関数 SetLabelFilter によって設定されたラベルフィルターを取得します。
-public void ConfigureFunctionality (LabelFilterType labelFilterType, bool enabled)  |  機能を有効または無効にします。
-public const std:: map \<LabelFilterType, bool\>& GetConfiguredFunctionality () const  |  構成済みの機能を取得します。
-public void SetClassifierEnabled (分類子 classifierType、bool enabled)  |  分類の種類のサポートを有効または無効にします。
-public const std:: map \<Classifier, bool\>& GetConfiguredClassifierSupport () const  |  サポートされている分類子のオーバーライドを取得します。
+public void ConfigureFunctionality (FunctionalityFilterType functionalityFilterType, bool enabled)  |  機能を有効または無効にします。
+public const std:: map \<FunctionalityFilterType, bool\>& GetConfiguredFunctionality () const  |  構成済みの機能を取得します。
 public void SetAuthDelegate (const std:: shared_ptr \<AuthDelegate\>& authdelegate)  |  エンジン認証デリゲートを設定します。
 public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  エンジン認証デリゲートを取得します。
   
@@ -229,7 +227,7 @@ public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  エンジン�
 機能を有効または無効にします。
 
 パラメーター:  
-* **labelFilterType**: 機能の種類。 
+* **functionalityFilterType**: 機能の種類。 
 
 
 * **enabled**: 有効にする場合は True、無効にする場合は false
@@ -242,24 +240,6 @@ HyokProtection、DoubleKeyProtection、DoubleKeyUserDefinedProtection は既定�
 
   
 **戻り** 値: 型が有効になっているかどうかを示すブール値へのマップ。
-  
-### <a name="setclassifierenabled-function"></a>SetClassifierEnabled 関数
-分類の種類のサポートを有効または無効にします。
-
-パラメーター:  
-* **classifierType**: 分類子の種類 
-
-
-* **enabled**: 有効にする場合は True、無効にする場合は false
-
-
-SensitiveInformation classifers のみが既定で有効になっています
-  
-### <a name="getconfiguredclassifiersupport-function"></a>GetConfiguredClassifierSupport 関数
-サポートされている分類子のオーバーライドを取得します。
-
-  
-**返さ** れる: サポートで上書きされたかどうかを示すブール値への型のマップ
   
 ### <a name="setauthdelegate-function"></a>SetAuthDelegate 関数
 エンジン認証デリゲートを設定します。

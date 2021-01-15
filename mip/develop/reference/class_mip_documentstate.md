@@ -1,17 +1,17 @@
 ---
 title: クラス DocumentState
 description: 'Microsoft Information Protection (MIP) SDK の documentstate:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: ad1c99a76c3078c86ec80a4ec6e1cc7d244cbbeb
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 1d584ba1f0c66c51646b6fe6fc4dd4fa9a6ccf0d
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567009"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215478"
 ---
 # <a name="class-documentstate"></a>クラス DocumentState 
   
@@ -22,7 +22,7 @@ public std::string GetContentIdentifier() const  |  ドキュメントを説明�
 パブリック仮想 DataState GetDataState () const  |  アプリケーションで操作中のコンテンツの状態を取得します。
 public std:: vector \<MetadataEntry\> getcontentmetadata (const std:: vector \<std::string\>& names, const std:: Vector \<std::string\>& nameprefixes) const  |  コンテンツからメタデータ項目を取得します。
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  保護記述子を取得します。
-public ContentFormat GetContentFormat() const  |  コンテンツの形式を取得します。
+public std:: string GetContentFormat () const  |  コンテンツの形式を取得します。
 パブリック仮想 MetadataVersion GetContentMetadataVersion () const  |  テナントのアプリケーションでサポートされている最大のメタデータバージョンを取得します。
 public virtual std:: shared_ptr \<ClassificationResults\> GetClassificationResults (const std:: vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  分類結果のマップを返します。
 public virtual std:: map \<std::string, std::string\> getauditmetadata () const  |  アプリケーション固有のキーと値のペアのマップを返します。
@@ -61,9 +61,7 @@ public virtual std:: chrono:: time_point \<std::chrono::system_clock\> GetLastMo
 コンテンツの形式を取得します。
 
   
-**戻り値**: DEFAULT、EMAIL 
-  
-**次も参照**: mip::ContentFormat
+**戻り値**: コンテンツ形式
   
 ### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion 関数
 テナントのアプリケーションでサポートされている最大のメタデータバージョンを取得します。

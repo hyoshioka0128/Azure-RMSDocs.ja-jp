@@ -1,17 +1,17 @@
 ---
 title: クラス ExecutionState
 description: 'Microsoft Information Protection (MIP) SDK の executionstate:: undefined クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: f73c3e366f1be0647d2c9a7de78f37b6a9a95549
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 543b46f8ceb731e7ea7c4e513f1a42c25a080521
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566993"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215461"
 ---
 # <a name="class-executionstate"></a>クラス ExecutionState 
 エンジンの実行に必要なすべての状態のインターフェイス。
@@ -28,7 +28,7 @@ public AssignmentMethod GetNewLabelAssignmentMethod() const  |  新しいラベ�
 パブリック仮想 std:: vector \<std::pair\<std::string, std::string\> \> getnewlabelextendedproperties () const  |  新しいラベルの拡張プロパティを返します。
 public std:: vector \<MetadataEntry\> getcontentmetadata (const std:: vector \<std::string\>& names, const std:: Vector \<std::string\>& nameprefixes) const  |  コンテンツからメタデータ項目を取得します。
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  保護記述子を取得します。
-public ContentFormat GetContentFormat() const  |  コンテンツの形式を取得します。
+public std:: string GetContentFormat () const  |  コンテンツの形式を取得します。
 パブリック仮想 MetadataVersion GetContentMetadataVersion () const  |  テナントのアプリケーションでサポートされている最大のメタデータバージョンを取得します。
 public ActionType GetSupportedActions() const  |  サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
 public virtual std:: shared_ptr \<ClassificationResults\> GetClassificationResults (const std:: vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  分類結果のマップを返します。
@@ -93,9 +93,7 @@ public virtual std:: map \<std::string, std::string\> getauditmetadata () const 
 コンテンツの形式を取得します。
 
   
-**戻り値**: DEFAULT、EMAIL 
-  
-**次も参照**: mip::ContentFormat
+**戻り値**: コンテンツ形式
   
 ### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion 関数
 テナントのアプリケーションでサポートされている最大のメタデータバージョンを取得します。
