@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 69cf01252a95476a41ac5f82f7d0546afe285041
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 8c2441a9272e62577fcaf88c14fb7e6bb6cdbdde
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164506"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540163"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -78,7 +78,7 @@ Microsoft Update カタログを使用して *いない* 場合、または Intu
 
     すべてのインストールオプションを表示するには、まず、 **/help** を使用して実行可能ファイルを実行します。 `AzInfoProtection_UL.exe /help`
 
-    例: 
+    次に例を示します。 
     - クライアントをサイレントインストールするには、次のようにします。 `AzInfoProtection_UL.exe /quiet`
     
     - PowerShell コマンドレットだけをサイレントインストールするには、次のようにします。 `AzInfoProtection_UL.exe  PowerShellOnly=true /quiet`
@@ -88,8 +88,7 @@ Microsoft Update カタログを使用して *いない* 場合、または Intu
     |パラメーター  |説明  |
     |---------|---------|
     |**AllowTelemetry = 0**     |    このパラメーターは、インストール オプション **[Microsoft に利用状況の統計を送信して、Azure Information Protection の改善に協力します]** を無効にするときに使用します。     |
-    |**ServiceLocation**     |  このパラメーターは、Office 2010 を実行しているコンピューターにクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合またはそのユーザーにプロンプトを表示したくない場合に使用します。 <br><br>詳細については、次を参照してください。 <br>- [**Servicelocation** インストールパラメーターの詳細](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP for Windows および Office バージョンの拡張サポート](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |
-
+    |**ServiceLocation**     |  このパラメーターは、Office 2010 を実行しているコンピューターにクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合またはそのユーザーにプロンプトを表示したくない場合に使用します。 <br><br>詳細については次を参照してください: <br>- [**Servicelocation** インストールパラメーターの詳細](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP for Windows および Office バージョンの拡張サポート](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |
     | | |
 
 1. インストールを完了するには: 
@@ -167,7 +166,7 @@ AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-4
 
     たとえば、 **.msi** バージョンのクライアントを使用してパッケージ化するか、次の依存関係を満たすコンピューターにのみ展開します。
     
-    |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
+    |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
     |--------------------|--------------|----------------|---------------------|
     |**Office 365 1902 以降を除くすべてのバージョン**|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
     |**Office 2016**|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|インストール|

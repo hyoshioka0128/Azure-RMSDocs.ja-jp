@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d9eadd907059bd128ac08c761128e0f1926c9f81
-ms.sourcegitcommit: 0ac52ea741f205692406f0f82c74c65c23ee3467
+ms.openlocfilehash: 16a8eb244cf920c9ebd9b2ee0a6a023b7782c25a
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2020
-ms.locfileid: "97792298"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540100"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>統合されたオンプレミスのスキャナー展開のトラブルシューティング
 
@@ -90,7 +90,7 @@ Start-AIPScannerDiagnostics
 
 [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)コマンドが失敗した場合は、Azure portal で権限を正しく定義していることを確認してください。
 
-詳細については、「 [Set-AIPAuthentication 用の Azure AD アプリケーションの作成と構成](rms-client/clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication)」を参照してください。
+詳細については、「 [Set-AIPAuthentication の Azure AD アプリケーションの作成と構成](rms-client/clientv2-admin-guide-powershell.md#create-and-configure-azure-ad-applications-for-set-aipauthentication)」を参照してください。
 
 ### <a name="authentication-token-missing"></a>認証トークンがありません
 
@@ -112,7 +112,7 @@ Start-AIPScannerDiagnostics
 
 [Set AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)コマンドを実行するときは、スキャナーユーザーの代わりに token パラメーターを使用してください。
 
-例:
+次に例を示します。
 
 ```powershell
 $pscreds = Get-Credential CONTOSO\scanner
@@ -150,7 +150,7 @@ MIP ラベルとラベルポリシーの詳細については、Microsoft 365 �
 
 次のいずれかまたはすべての問題を確認します。
 
-|解決策  |詳細  |
+|解答  |詳細  |
 |---------|---------|
 |**コンテンツスキャンジョブの設定を確認する**     | Azure Portal で、次の操作を行います。 <br> <br>- [[**探索する情報の種類**] を [**すべて**] に設定します。](deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types)  <br>- [スキャン時に適用される既定のラベルを定義する](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository)      |
 |**ラベル付けポリシーの設定を確認する**     |  Microsoft 365 セキュリティ & コンプライアンスセンターなどのラベル付け管理センターで、次の操作を行います。 <br> <br>- [既定の秘密度ラベルを定義する](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)  <br> - [自動/推奨のラベル付け規則を定義する](/microsoft-365/compliance/apply-sensitivity-label-automatically)       |

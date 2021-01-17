@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e17e42850904590df6a0c223032fd07306e0815b
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 8cc4a6123a9b292212f573c75f2807905c646675
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583712"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540204"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーの構成とインストール
 
@@ -158,7 +158,7 @@ Azure Information Protection スキャナーの構成とインストールを開
     |![列アイコン](media/i-columns.png "列アイコン")    | **列** を選択して、表示されるテーブルの列を変更します。        |
     |![更新アイコン](media/i-refresh.png "更新アイコン")   | スキャナーでネットワークスキャンの結果を最近実行した場合は、[ **更新** ] を選択してページを更新します。      |
     |![[追加] アイコン](media/i-add.png "[追加] アイコン")   | 表に一覧表示されている1つ以上のリポジトリを選択し、[ **選択した項目の割り当て** ] を選択して、それらをコンテンツスキャンジョブに割り当てます。          |
-    |**Assert**     |   フィルター行には、現在適用されているすべてのフィルター条件が表示されます。 表示されたいずれかの条件を選択して設定を変更するか、[ **フィルターの追加** ] を選択して新しいフィルター条件を追加します。 <br /><br />[ **フィルター** ] を選択して変更を適用し、更新されたフィルターを使用してテーブルを更新します。       |
+    |**フィルター**     |   フィルター行には、現在適用されているすべてのフィルター条件が表示されます。 表示されたいずれかの条件を選択して設定を変更するか、[ **フィルターの追加** ] を選択して新しいフィルター条件を追加します。 <br /><br />[ **フィルター** ] を選択して変更を適用し、更新されたフィルターを使用してテーブルを更新します。       |
     |![Log Analytics アイコン](media/i-log-analytics.png "Log Analytics アイコン") |[管理されていないリポジトリ] グラフの右上隅にある **Log Analytics** アイコンをクリックして、これらのリポジトリの Log Analytics データに移動します。 |
     | | |
 
@@ -325,6 +325,8 @@ Azure AD トークンを取得するには:
 
 最初の検出スキャンを実行したら、引き続き [分類と保護を適用するようにスキャナーを構成](#configure-the-scanner-to-apply-classification-and-protection)します。
 
+> [!NOTE]
+> 詳細については、「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>スキャナーを構成して分類と保護を適用する
 
 既定の設定では、スキャナーが1回だけ実行され、レポート専用モードで実行されるように構成されています。
