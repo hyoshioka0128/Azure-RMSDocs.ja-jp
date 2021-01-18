@@ -13,18 +13,18 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b26e06a20e35bd56c44f4a44f0ffbc019a99865e
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 7ffa9a2d6725f4cc70b2cb50cc2218a4d05960e9
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583525"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559729"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Azure Information Protection の使用停止と非アクティブ化
 
 >***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection から Azure Rights Management サービスを使用することで、組織でコンテンツを保護するかどうかを常に制御できます。 この情報保護サービスを使用しないことに決定した場合、以前に保護されていたコンテンツから締め出されることはありません。
 
@@ -41,9 +41,9 @@ Azure Information Protection テナントキーと TPD がある場合は Rights
 
 |条件|… 手順|
 |----------------------------|--------------|
-|すべてのユーザーに Rights Management を引き続き利用させたいが、Azure Information Protection ではなくオンプレミス ソリューションを利用する場合    →|Office 2016 または Office 2013 の **LicensingRedirection** レジストリキーを使用して、オンプレミスのデプロイにクライアントをリダイレクトします。 手順については、「RMS クライアントのデプロイに関する注意事項」の「 [サービスの検出」セクション](./rms-client/client-deployment-notes.md) を参照してください。 <br><br>Office 2010 の場合は、「 [Office レジストリ設定](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))」で説明されているように、office 2010 の **licenseserverredirection** レジストリキーを使用します。 詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。|
+|すべてのユーザーに Rights Management を引き続き利用させたいが、Azure Information Protection ではなくオンプレミス ソリューションを利用する場合    →|Office 2016 または Office 2013 の **LicensingRedirection** レジストリキーを使用して、オンプレミスのデプロイにクライアントをリダイレクトします。 手順については、「RMS クライアントのデプロイに関する注意事項」の「 [サービスの検出」セクション](./rms-client/client-deployment-notes.md) を参照してください。 <br><br>Office 2010 の場合は、「 [Office レジストリ設定](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))」で説明されているように、office 2010 の **licenseserverredirection** レジストリキーを使用します。 <br><br>**重要**: Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。|
 |Rights Management テクノロジの使用を完全に停止する場合|指定の管理者に[スーパー ユーザー権限](configure-super-users.md)を付与し、このユーザー用の [Azure Information Protection クライアント](./rms-client/client-admin-guide-install.md)をインストールします。<br /><br />この管理者は、このクライアントから PowerShell モジュールを使用して、Azure Information Protection によって保護されていたフォルダー内のファイルの一括暗号化解除を行うことができます。 ファイルは保護のない状態に戻り、Azure Information Protection や AD RMS など、Rights Management テクノロジなしで読めるようになります。 この PowerShell モジュールは Azure Information Protection と AD RMS の両方で使用できるため、Azure Information Protection から保護サービスを非アクティブ化する前または後にファイルを復号化するか、またはその組み合わせを選択できます。|
-|Azure Information Protection によって保護されていたすべてのファイルを識別することはできません。 あるいは、読み取れなかった保護ファイルをすべてのユーザーが自動的に読み取れるようにする場合。    →|RMS クライアントデプロイノートの [「サービス検出」セクション](./rms-client/client-deployment-notes.md)で説明されているように、office 2016 および office 2013 の **LicensingRedirection** レジストリキーを使用して、すべてのクライアントコンピューターにレジストリ設定を展開します。 <br><br>**Office 2010 の場合:** <br>-「 [Office レジストリ設定](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))」で説明されているように、 **licenseserverredirection** レジストリキーを使用します。 <br>-別のレジストリ設定を展開して、ユーザーが新しいファイルを保護できないようにするには、「 [Office Registry Settings (Office レジストリ設定](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10)))」の説明に従って **DisableCreation** を **1** に設定します。 <br><br>AIP と Office 2010 の詳細については、「 [AIP For Windows」および「office バージョン (拡張サポート](known-issues.md#aip-for-windows-and-office-versions-in-extended-support))」を参照してください。|
+|Azure Information Protection によって保護されていたすべてのファイルを識別することはできません。 あるいは、読み取れなかった保護ファイルをすべてのユーザーが自動的に読み取れるようにする場合。    →|RMS クライアントデプロイノートの [「サービス検出」セクション](./rms-client/client-deployment-notes.md)で説明されているように、office 2016 および office 2013 の **LicensingRedirection** レジストリキーを使用して、すべてのクライアントコンピューターにレジストリ設定を展開します。 <br><br>**Office 2010 の場合**: <br>-「 [Office レジストリ設定](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))」で説明されているように、 **licenseserverredirection** レジストリキーを使用します。 <br>-別のレジストリ設定を展開して、ユーザーが新しいファイルを保護できないようにするには、「 [Office Registry Settings (Office レジストリ設定](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10)))」の説明に従って **DisableCreation** を **1** に設定します。 <br><br>**重要**: Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。|
 |読み取れなかったファイルに、制御された手動回復サービスを実行する場合|データ回復グループの指定のユーザーに[スーパー ユーザー権限](configure-super-users.md)を付与し、それらのユーザー用の [Azure Information Protection クライアント](./rms-client/client-admin-guide-install.md)をインストールして、標準ユーザーから要求されたときにそれらのユーザーがファイルの保護を解除できるようにします。<br /><br />すべてのコンピューターで、「 [Office レジストリ設定](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))」に説明されているように、 **DisableCreation** を **1** に設定して、ユーザーが新しいファイルを保護できないように、レジストリ設定を展開します。|
 | | |
 

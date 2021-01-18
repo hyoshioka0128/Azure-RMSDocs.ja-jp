@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 754525afeee619f8f336addd5239ea15223f986c
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 40b2a6de06fb20f8fab0d1a1d7e8a774fe2b54fc
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385524"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560188"
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントでサポートされるファイルの種類
 
 >*[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012 **に適用さ** れます。*>
 >
->*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
+>*Windows 7 または Office 2010 を使用している場合は、「 [AIP and Legacy Windows And office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。*
 >
 >***関連**: [AIP 統合ラベルクライアントのみ](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。 クラシッククライアントの場合は、「[従来のクライアントファイルの種類](client-admin-guide-file-types.md)」を参照してください。*
 
@@ -94,22 +94,28 @@ Azure Information Protection 統合されたラベル付けクライアントま
 
 Azure Information Protection 統合されたラベル付けクライアントが保護のためにサポートする最大ファイルサイズがあります。
 
-- **Office ファイルの場合**:
+**Office ファイルの場合**:
 
-  |                                                     Office アプリケーション                                                      |                                                サポートされる最大ファイル サイズ                                                 |
-  |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-  |             Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 ビット: 512 MB<br /><br />64 ビット: 512 MB                                          |
-  |           Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 ビット: 2 GB<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます                       |
-  | PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 ビット: 使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます |
+|                                                     Office アプリケーション                                                      |                                                サポートされる最大ファイル サイズ                                                 |
+|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+|             Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 ビット: 512 MB<br /><br />64 ビット: 512 MB                                          |
+|           Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 ビット: 2 GB<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます                       |
+| PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 ビット: 使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます |
+| | |
 
-- **その他のすべてのファイル**:
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+>
 
-  - その他のファイルの種類を保護し、これらのファイルの種類を Azure Information Protection ビューアーで開く場合: ファイルの最大サイズは、使用可能なディスク領域とメモリによってのみ制限されます。
+**その他のすべてのファイル**:
 
-  - [Unprotect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを使用してファイルの保護を解除する場合: .pst ファイル向けにサポートされるファイルの最大サイズは 5 GB です。 その他のファイルの種類の場合は、使用可能なディスク領域とメモリによってのみ制限されます。
+- **他のファイルの種類を保護** し、Azure Information Protection ビューアーでこれらのファイルの種類を開くには: 最大ファイルサイズは、使用可能なディスク領域とメモリによってのみ制限されます。
 
-    ヒント: 大きな .pst ファイルの保護された項目を検索したり復元する必要がある場合、「[Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」 (電子情報開示での Unprotect-RMSFile の使用に関するガイダンス) を参照してください。
+- [Protect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile)コマンドレットを使用して **ファイルの保護を解除するに** は: .pst ファイルでサポートされる最大ファイルサイズは 5 GB です。 その他のファイルの種類の場合は、使用可能なディスク領域とメモリによってのみ制限されます。
 
+> [!TIP]
+> 大規模な .pst ファイルの保護された項目を検索または回復するには、 [電子情報開示に Unprotect-RMSFile を使用するためのガイダンス](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)を参照してください。
+> 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 
 次の表に、Azure Information Protection 統合されたラベル付けクライアントによるネイティブ保護をサポートするファイルの種類のサブセットを示します。これは、分類することもできます。

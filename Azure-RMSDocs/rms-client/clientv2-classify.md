@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f5096aa3eaf9b51bd929b25bdf69d42dbcaea50c
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 5c95995477e05ba1cd7bfea2b517b762bfa6748b
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164489"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559984"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>ユーザーガイド: Windows 用の Azure Information Protection 統合ラベル付けクライアントを使用してファイルまたは電子メールを分類する
 
 >***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8 *
 >
->*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
+>*Windows 7 または Office 2010 を使用している場合は、「 [AIP and Legacy Windows And office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。*
 >
 >***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [クラシッククライアントユーザーガイド](client-classify.md)」を参照してください。 *
 
@@ -35,11 +35,11 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Office アプリを使用してドキュメントや電子メールを分類する
 
-[ **ホーム** ] タブで、リボンの [ **感度** ] ボタンを選択し、構成されているラベルのいずれかを選択します。 例:
+[ **ホーム** ] タブで、リボンの [ **感度** ] ボタンを選択し、構成されているラベルのいずれかを選択します。 次に例を示します。
 
 ![感度ボタンの例](../media/sensitivity-not-set-callout.png)
 
-または、[**感度**] ボタンから [**バーの表示**] を選択した場合は、Azure Information Protection バーからラベルを選択できます。 例:
+または、[**感度**] ボタンから [**バーの表示**] を選択した場合は、Azure Information Protection バーからラベルを選択できます。 次に例を示します。
 
 ![Azure Information Protection バーの例](../media/info-protect-barv2-not-set-callout.png)
 
@@ -88,7 +88,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類を設定します。 
     
-    選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 例:
+    選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 次に例を示します。
     
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/v2info-protect-dialog-labels-dimmed.png)
 

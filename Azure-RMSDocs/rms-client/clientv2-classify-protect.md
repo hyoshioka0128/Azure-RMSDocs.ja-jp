@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 775eca70267f2caa70599dd3b1d8a33020121a74
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 73ed28791e0a4bde8349e4e500f7e5b40fad5918
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583474"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560001"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>ユーザーガイド: Azure Information Protection 統合されたラベル付けクライアントを使用して分類および保護する
 
 >***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8 *
 >
->*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
+>*Windows 7 または Office 2010 を使用している場合は、「 [AIP and Legacy Windows And office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。*
 >
 >***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [クラシッククライアントユーザーガイド](client-classify-protect.md)」を参照してください。 *
 
@@ -126,15 +126,13 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 4. カスタムのアクセス許可オプションを選択した場合は、次の項目を指定します。
 
-   - **アクセス許可の選択**: 選択したファイルを保護する場合のユーザーのアクセス レベルを選択します。
-    
-   - **ユーザー、グループ、および組織の選択**: ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザー全員について、組織で使用する完全なメール アドレス、グループ メール アドレス、ドメイン名を入力します。 
-    
-     あるいは、アドレス帳アイコンを使用して、Outlook のアドレス帳からユーザーまたはグループを選択できます。
-        
-    - [**アクセスの有効期限**]: 指定したユーザーが、設定した日付の後に選択したファイルを開くことができないように、時間を区別するファイルに対してのみこのオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(現在のタイム ゾーンで) 設定した日の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
-    
-     [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)アプリからカスタムアクセス許可を使用してこの設定を構成した場合、指定した有効期限はこのダイアログボックスに表示されませんが、有効期限はまだ設定されていることに注意してください。 これは Office 2010 で有効期限を構成していた場合にのみ発生する表示上の問題です。
+    |オプション  |説明  |
+    |---------|---------|
+    |**アクセス許可の選択**     | 選択したファイルを保護する場合のユーザーのアクセス レベルを選びます。        |
+    |**ユーザー、グループ、または組織を選択する**     |  ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザー全員について、組織で使用する完全なメール アドレス、グループ メール アドレス、ドメイン名を入力します。 <br><br>あるいは、アドレス帳アイコンを使用して、Outlook のアドレス帳からユーザーまたはグループを選択できます。       |
+    |**アクセスの有効期限**     |  このオプションは、指定したユーザーが、設定した日付の後に選択したファイルを開くことができないように、時間を区別するファイルに対してのみ選択します。 自分は元のファイルを引き続き開くことができますが、(現在のタイム ゾーンで) 設定した日の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。 <br><br>**注**: この設定が Office 2010 アプリからカスタムアクセス許可を使用して構成されている場合、指定された有効期限はこのダイアログボックスに表示されませんが、有効期限はまだ設定されています。 これは Office 2010 で有効期限を構成していた場合にのみ発生する表示上の問題です。<br><br>   **重要**: Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。       |
+    |     |         |
+
 
 5. **[適用]** をクリックし、**"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、**[閉じる]** をクリックします。
 

@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: adfc8fcb0ce9ea8c227aad74e7d686a96d081b8c
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 49f80d17e62bbe7e520696460ec39df396e439e4
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807350"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560358"
 ---
 # <a name="azure-information-protection-classic-client-administrator-guide"></a>Azure Information Protection 従来のクライアント管理者ガイド
 
@@ -34,7 +34,7 @@ ms.locfileid: "97807350"
 
 エンタープライズ ネットワークで Azure Information Protection クライアントを担当している場合、または [Azure Information Protection クライアント ユーザー ガイド](client-user-guide.md) に関するページに記載されていない詳細な技術情報が必要な場合は、このガイドの情報をご覧ください。 
 
-例:
+次に例を示します。
 
 - このクライアントのさまざまなコンポーネントについて知り、インストールする必要があるかどうかを理解する
 
@@ -93,8 +93,10 @@ Microsoft 365 で [機密ラベル](/microsoft-365/compliance/sensitivity-labels
 
 - データ回復のために一括してファイルやコンテナーから暗号化を解除 (保護解除) したい。
 
-- [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)を実行していて、Azure Rights Management サービスを使用してドキュメントと電子メールメッセージを保護する場合。 
+- Office 2010 を実行していて、Azure Rights Management サービスを使ってドキュメントとメール メッセージを保護したい。 
 
+    Office 2010 の拡張サポートは、2020年10月13日に終了したことに注意してください。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+    
 下の画像では、Office アプリケーションの Azure Information Protection クライアント アドイン、組織の分類ラベル、リボンの新しい **[保護]** ボタンを確認できます。
 
 ![Azure Information Protection バーと既定のポリシー](../media/word2016-calloutsv2.png)
@@ -178,7 +180,7 @@ Azure Information Protection クライアントは、Microsoft 365 がサポー�
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
-Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 例:
+Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 次に例を示します。
 
 - オンライン ユーザーの手順: [Azure Information Protection ユーザー ガイド](client-user-guide.md)
 

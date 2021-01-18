@@ -13,18 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3c174a8afba4571df1546ebeeebc790bd4cdc99
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 80a1a42642ab0d611c64da34e3bf5a86a219f447
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583576"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560409"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
 >***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Active Directory Rights Management サービス (AD RMS) デプロイを Azure Information Protection に移行するには、以下の一連の手順を使います。 
 
@@ -70,19 +70,30 @@ Azure Information Protection への移行を始める前に、次の前提条件
         
       - 複数フォレスト、複数 RMS クラスター
         
-    注: 既定では、複数の AD RMS クラスターが Azure Information Protection の 1 つのテナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数のテナントにインポートすることはできません。
-
+    > [!NOTE]
+    > 既定では、複数の AD RMS クラスターが Azure Information Protection の 1 つのテナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数のテナントにインポートすることはできません。
+    >
+ 
 - **Azure Information Protection のサブスクリプション (Azure Rights Management サービスはアクティブ化されていません) を含む Azure Information Protection を実行するためのすべての要件** は次のとおりです。
 
     「[Azure Information Protection の要件](./requirements.md)」をご覧ください。
 
-    **Office 2010 を実行しているコンピューターがある場合は**、 [Azure Information Protection クライアント](rms-client/use-client.md) をインストールして、クラウドサービスに対してユーザーを認証する機能を提供する必要があります。 詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
-
-    **新しいバージョンの Office***では、* Azure Information Protection クライアントが分類とラベル付け、および *省略可能ですが*、データの保護のみを行う場合は推奨されます。 
+    Azure Information Protection クライアントは、分類とラベル付け、および *省略可能ですが*、データを保護する場合にのみ推奨 *され* ます。 
 
     詳細については、 [Azure Information Protection 統合ラベル付けクライアント](./rms-client/clientv2-admin-guide.md)の管理者ガイドを参照してください。
 
-    AD RMS からの移行を行うには、その前に Azure Information Protection のサブスクリプションを用意しておく必要がありますが、移行を始める前にテナントの Rights Management サービスをアクティブにしないことをお勧めします。 このアクティブ化手順は、AD RMS からキーとテンプレートをエクスポートし、それらを Azure Information Protection のテナントにインポートした後で、移行プロセスによって行われます。 ただし、Azure Information Protection が既にアクティブ化されている場合でも、いくつかの追加手順を行って AD RMS から移行することはできます。
+    AD RMS からの移行を行うには、その前に Azure Information Protection のサブスクリプションを用意しておく必要がありますが、移行を始める前にテナントの Rights Management サービスをアクティブにしないことをお勧めします。 
+
+    このアクティブ化手順は、AD RMS からキーとテンプレートをエクスポートし、それらを Azure Information Protection のテナントにインポートした後で、移行プロセスによって行われます。 ただし、Azure Information Protection が既にアクティブ化されている場合でも、いくつかの追加手順を行って AD RMS から移行することはできます。
+
+    **Office 2010 のみ**: 
+
+    Office 2010 を実行しているコンピューターがある場合は、 [Azure Information Protection クライアント](rms-client/use-client.md) をインストールして、クラウドサービスに対してユーザーを認証する機能を提供する必要があります。 
+
+    > [!IMPORTANT]
+    > Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+    >  
+    
 
 
 - **Azure Information Protection の準備**:
@@ -219,7 +230,10 @@ iOS 搭載の携帯電話や iPad、Android 携帯電話とタブレット、Win
     
 準備フェーズ中に構成したオンボーディング制御はもう必要ありません。 ただし、段階的な移行ではなく、同時にすべてを移行することを選んだためにオンボーディング制御を使用しなかった場合は、この手順をスキップしてオンボーディング制御を削除することができます。
     
-Windows コンピューターで Office 2010 を実行している場合は、"**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを無効にする必要があるかどうかを確認します。 詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
+Windows コンピューターで Office 2010 を実行している場合は、"**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを無効にする必要があるかどうかを確認します。
+
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
 
 **手順 12: Azure Information Protection テナントキーのキーを更新する**
 

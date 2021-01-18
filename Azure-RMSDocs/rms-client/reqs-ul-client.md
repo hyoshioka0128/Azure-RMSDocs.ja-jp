@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dbd9d86e1ce2103f144e51314950cf67be31eef6
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: f9915049894e0892ead767f2ddf392575eb8a99d
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164387"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560289"
 ---
 # <a name="additional-requirements-for-installing-the-unified-labeling-client-on-enterprise-networks"></a>エンタープライズネットワークに統一されたラベル付けクライアントをインストールするための追加の要件
 
 >***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
->*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
+>*Windows 7 または Office 2010 を使用している場合は、「 [AIP and Legacy Windows And office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。*
 >
 >***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide-install.md)」を参照してください。
 
@@ -83,6 +83,10 @@ Office 2010 を実行しているコンピューターには、クライアン�
 
 たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >    >  **プログラムのアンインストールまたは変更**] を使用します。 
 
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+>
+
 Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。    
 
 ## <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>AIP が無効にならないようにグループポリシーを構成する
@@ -105,7 +109,7 @@ AIP に次のプログラム識別子 (ProgID) を指定し、オプションを
 
 引き続き管理者ガイドを参照してください  [。 Azure Information Protection 統合されたラベル付けクライアントをユーザーにインストール](clientv2-admin-guide-install.md)します。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [クライアントのファイルと使用状況ログ](clientv2-admin-guide-files-and-logging.md)
 

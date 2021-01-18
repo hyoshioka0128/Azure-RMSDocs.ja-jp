@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 293ed29ba70ae5f4adff5530d782ecb661a6f9dd
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 404e3d9db620011befb1a5d9a79f8186a8721cb7
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164115"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559423"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Azure Information Protection の展開ロードマップ (保護のみ)
 
@@ -100,7 +100,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
     次の機能のいずれか、または後で構成することを検討してください。
     
-    |機能  |説明  |
+    |特徴量  |説明  |
     |---------|---------|
     |**保護設定のカスタムテンプレート**     |  既定のテンプレートが組織にとって十分でない場合は、カスタムテンプレートを構成します。 </br>詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。       |
     |**使用状況ログの記録**     | 使用状況ログを構成して、組織が保護サービスをどのように使用しているかを監視します。 </br>詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)」を参照してください。        |
@@ -112,10 +112,8 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 1. **Azure Information Protection クラシッククライアントを展開する**
     
-    Office 2010 をサポートし、Office ドキュメントや電子メール以外のファイルを保護し、保護されたドキュメントを追跡し、このクライアントのユーザートレーニングを提供するために、ユーザー用のクラシッククライアントをインストールします。 
-
-    詳細については、「Windows 用の [クラシッククライアントの Azure Information Protection](./rms-client/aip-client.md) 」および「 [拡張サポートでの windows および Office バージョン用の AIP](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
-
+    Office ドキュメントや電子メール以外のファイルを保護し、保護されたドキュメントを追跡し、このクライアントのユーザートレーニングを提供するために、ユーザー用のクラシッククライアントをインストールします。 詳細については、「 [Azure Information Protection classic client For Windows](./rms-client/aip-client.md)」を参照してください。
+ 
 2. **Office のアプリケーションとサービスを構成する**
     
     SharePoint または Exchange Online で information rights management (IRM) 機能を使用するように Office アプリケーションとサービスを構成します。 
@@ -146,7 +144,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 これで、データを保護し、会社が保護サービスを使用している方法をログに記録する準備が整いました。 
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ](./help-users.md)
 - [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)

@@ -14,12 +14,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c96fa834e53c044c88393fc9ba2000be89c6a112
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 35968d8e7c22fa4ad0bb232dae9d2b6dd8362286
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807418"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560255"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
@@ -39,7 +39,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |**Azure Information Protection クラシック クライアント**|Azure Information Protection ポリシーがクライアントに更新されるたびに自動的に更新されます。<br /><br /> - Azure Information Protection バーをサポートしている Office アプリケーションが開いたとき。 <br /><br /> - ファイルまたはフォルダーを分類して保護するために右クリックしたとき。 <br /><br /> - ラベル付けおよび保護のために PowerShell コマンドレット (Get-AIPFileStatus および Set-AIPFileLabel) を実行するとき。<br /><br /> - Azure Information Protection スキャナー サービスが開始され、ローカル ポリシーが 1 時間前よりも古いとき。 また、スキャナー サービスは 1 時間おきに変更を確認し、次のスキャン サイクルには変更を適用します。<br /><br /> - 24 時間ごと。<br /><br /> また、このクライアントは Office と緊密に統合されているため、Microsoft 365 アプリ、Office 2019、Office 2016、または Office 2013 の更新されたテンプレートも Azure Information Protection クライアントに対して更新されます。|
 |**Azure Information Protection 統合ラベル付けクライアント**|Office アプリの場合、テンプレートはアプリが開かれるたびに自動的に更新されます。<br /><br /> また、このクライアントは Office と緊密に統合されているため、Microsoft 365 アプリ、Office 2019、Office 2016、または Office 2013 用に更新されたテンプレートも Azure Information Protection 統合されたラベル付けクライアントに対して更新されます。<br /><br /> ファイルエクスプローラー、PowerShell、およびスキャナーの場合、クライアントはテンプレートをダウンロードせず、オンラインでアクセスします。追加の手順は必要ありません。|
 |**Microsoft 365 アプリ、Office 2019、Office 2016、および Office 2013**|自動更新 - スケジュールどおりに更新されます。<br /><br />- 以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />スケジュールよりも早く強制的に更新するには、次の「 [Microsoft 365 アプリ、office 2019、office 2016、および office 2013: テンプレートを強制的に更新する方法](#microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates)」セクションを参照してください。|
-|**Office 2010**|ユーザーが Windows からサインアウトして、もう一度サインインし、最大で 1 時間待つと自動的に更新されます。 <br><br>詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。|
+|**Office 2010**|ユーザーが Windows からサインアウトして、もう一度サインインし、最大で 1 時間待つと自動的に更新されます。 <br><br>**重要**: Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。|
 |**Exchange On-Premises と Rights Management コネクタ**<br /><br />トランスポート ルールと Outlook Web アプリに該当|自動更新 - 追加の手順は必要ありません。 ただし、Outlook Web アプリは UI を一日キャッシュします。|
 |**Office 2019 for Mac と Office 2016 for Mac**|保護されたコンテンツを開くと自動的に更新されます。 強制的に更新するには、次のセクションの「 [office 2019 For mac And office 2016 For mac: テンプレートを強制的に更新する方法](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates)」を参照してください。|
 |**Mac コンピューター用 RMS 共有アプリ**|自動更新 - 追加の手順は必要ありません。|

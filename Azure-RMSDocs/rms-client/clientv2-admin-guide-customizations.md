@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ccedda605f736647766a0a5b2465e9ef90f2dbcc
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 9f4cc024066769c750f2fef946d9c5581cb99314
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164149"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560341"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントのカスタム構成
 
@@ -30,7 +30,7 @@ FUTURE task - reorganize this topic by feature type so that admins can read rela
 
 >***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
->*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
+>*Windows 7 または Office 2010 を使用している場合は、「 [AIP and Legacy Windows And office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。*
 >
 >***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [従来のクライアント管理者ガイド](client-admin-guide-customizations.md)」を参照してください。
 
@@ -51,7 +51,7 @@ Microsoft 365 セキュリティ & コンプライアンスセンターの Power
 > [!IMPORTANT]
 > 文字列値に空白を使用しないでください。 これらの文字列値に白い文字列を使用すると、ラベルが適用されなくなります。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [ラベルポリシーの詳細設定の構文](#label-policy-advanced-settings)
 - [ラベルの詳細設定の構文](#label-advanced-settings)
@@ -170,7 +170,7 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 
 次のセクションでは、このページに記載されている詳細設定を製品と機能の統合別に示します。
 
-|機能  |詳細設定  |
+|特徴量  |詳細設定  |
 |---------|---------|
 |**Outlook および電子メールの設定**     | - [Outlook で S/MIME 保護を適用するようにラベルを構成する](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Outlook ポップアップメッセージをカスタマイズする](#customize-outlook-popup-messages) <br>- [Outlook で推奨分類を有効にする](#enable-recommended-classification-in-outlook)<br> - [必須ラベルから Outlook メッセージを除外する](#exempt-outlook-messages-from-mandatory-labeling) <br>- [添付ファイル付きの電子メールの場合は、それらの添付ファイルの最上位の分類に一致するラベルを適用します。](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [電子メールの受信者を検索するときに Outlook 配布リストを展開する](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [電子メールの送信を警告、ブロック、またはブロックするポップアップメッセージを Outlook に実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [S/MIME メールで Outlook のパフォーマンスの問題を回避する](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Outlook に別の既定のラベルを設定する](#set-a-different-default-label-for-outlook)     |
 |**PowerPoint の設定** | - [指定したテキストが含まれ、ヘッダー/フッターではない PowerPoint から図形を削除しない](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [PowerPoint カスタムレイアウト内から外部コンテンツマーキングを明示的に削除する](#extend-external-marking-removal-to-custom-layouts)<br>- [図形内のテキストで図形を削除するのではなく、ヘッダーとフッターから特定の図形名のすべての図形を削除する](#remove-all-shapes-of-a-specific-shape-name)  |
@@ -461,7 +461,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave
 |設定  |説明  |
 |---------|---------|
 |**WordShapeNameToRemove**     |  図形名が **WordShapeNameToRemove** advanced プロパティで定義されている名前と一致する Word 文書から、任意の図形を削除します。  <br><br>詳細については、「 [Use The WordShapeNameToRemove advanced property](#use-the-wordshapenametoremove-advanced-property)」を参照してください。     |
-|**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    では、テキストベースのヘッダーまたはフッターを、Word、Excel、PowerPoint のドキュメントから削除または置換できます。 <br><br>詳細については、次を参照してください。 <br>- [RemoveExternalContentMarkingInApp 詳細設定プロパティの使用](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [ExternalContentMarkingToRemove 構成する方法について説明](#how-to-configure-externalcontentmarkingtoremove)します。    |
+|**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    では、テキストベースのヘッダーまたはフッターを、Word、Excel、PowerPoint のドキュメントから削除または置換できます。 <br><br>詳細については次を参照してください: <br>- [RemoveExternalContentMarkingInApp 詳細設定プロパティの使用](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [ExternalContentMarkingToRemove 構成する方法について説明](#how-to-configure-externalcontentmarkingtoremove)します。    |
 |     |         |
 
 ### <a name="use-the-wordshapenametoremove-advanced-property"></a>WordShapeNameToRemove advanced プロパティを使用する
@@ -557,7 +557,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
 ```
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [複数行のヘッダーまたはフッター](#multiline-headers-or-footers)
 - [PowerPoint 用の最適化](#optimization-for-powerpoint)
@@ -605,7 +605,7 @@ PowerPoint のヘッダーとフッターは、図形として実装されます
 
 - この値が指定されている場合は、図形名の条件を満たす図形だけでなく、 [Externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) によって提供された文字列と一致するテキストも削除されます。
 
-例:
+次に例を示します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
@@ -633,7 +633,7 @@ PowerPoint カスタムレイアウトを使用していて、ヘッダーとフ
 
 **PowerPointRemoveAllShapesByShapeName** 設定を使用すると、図形内のテキストは無視され、代わりに図形名を使用して、削除する図形が識別されます。
 
-例:
+次に例を示します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
@@ -645,7 +645,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesBy
 > **PowerPointRemoveAllShapesByShapeName** を定義する場合は、 [Externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove)と [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)の両方を定義して、意図した数よりも多くの図形が削除されないようにすることをお勧めします。
 >
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [ヘッダーまたはフッターとして使用している図形の名前を検索する](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer)
 - [PowerPoint でカスタムレイアウトから外部コンテンツマークを削除する](#remove-external-content-marking-from-custom-layouts-in-powerpoint)
@@ -809,7 +809,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:h
 
 これらの条件が満たされると、ユーザーには、次のいずれかの操作を含むポップアップメッセージが表示されます。
 
-|Type  |説明  |
+|種類  |説明  |
 |---------|---------|
 |**呼びかけ**     | ユーザーは確認して電子メールを送信またはキャンセルできます。        |
 |**揃え**     |  ユーザーは理由 (定義済みオプションまたは自由形式) を求められ、ユーザーは電子メールを送信または取り消しできます。 <br>ジャスティフィケーションテキストは、データ損失防止 (DLP) サービスなどの他のシステムで読み取ることができるように、電子メールの x ヘッダーに書き込まれます。       |
@@ -823,7 +823,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:h
 > [!TIP]
 > ドキュメントが Outlook の外部から共有されている場合でもポップアップが表示されるようにするには **(ファイル > 共有 > コピーを添付** します)、 [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) の詳細設定を構成することもできます。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [特定のラベルに対して警告、配置、またはブロックポップアップメッセージを実装するには](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels)
 - [ラベルのない電子メールまたは添付ファイルのポップアップメッセージの警告、ジャスティファイ、またはブロックを実装するには](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)
@@ -1238,7 +1238,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProp
 
 機密ラベルによって適用されるメタデータに加えて、1つまたは複数のカスタムプロパティをドキュメントまたは電子メールメッセージに適用する場合は、いくつかのシナリオが考えられます。
 
-例:
+次に例を示します。
 
 - セキュリティで保護された島など、 [別のラベル付けソリューションから移行](#migrate-labels-from-secure-islands-and-other-labeling-solutions)しています。 移行中の相互運用性を確保するために、機密ラベルを使用して、他のラベル付けソリューションで使用されるカスタムプロパティを適用することもできます。
 
@@ -1266,7 +1266,7 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 > [!IMPORTANT]
 > 文字列に空白を使用すると、ラベルの適用ができなくなります。
 
-例:
+次に例を示します。
 
 - [例 1: ラベルに対して1つのカスタムプロパティを追加する](#example-1-add-a-single-custom-property-for-a-label)
 - [例 2: ラベルに対して複数のカスタムプロパティを追加する](#example-2-add-multiple-custom-properties-for-a-label)
@@ -1492,7 +1492,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **読み取り専用またはアーカイブ済みのファイルをスキップする**
 
-ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 例:
+ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 次に例を示します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1617,7 +1617,7 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 "nodes" : []
 ```
 
-少なくとも2つのノード、最初のノードがルールの条件を表し、最後のノードがルールのアクションを表している必要があります。 詳細については、次を参照してください。
+少なくとも2つのノード、最初のノードがルールの条件を表し、最後のノードがルールのアクションを表している必要があります。 詳細については次を参照してください:
 
 - [ルール条件の構文](#rule-condition-syntax)
 - [ルールアクションの構文](#rule-action-syntax)
@@ -1643,7 +1643,7 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 
 ルールアクションには、次のいずれかを指定できます。
 
-|アクション  |構文  |サンプル メッセージ  |
+|操作  |構文  |サンプル メッセージ  |
 |---------|---------|---------|
 |**ブロック**     |    `Block (List<language, [title, body]>)`     |    **_メールがブロック_* されました _<br /><br />  _You は、**シークレット** として分類されたコンテンツを1つ以上の信頼されていない受信者に送信しようとしています: *<br />* `rsinclair@contoso.com` *<br /><br />* 組織のポリシーでは、この操作が許可されて これらの受信者を削除するか、コンテンツを置き換えることを検討してください。 *|
 |**呼びかけ**     | `Warn (List<language,[title,body]>)`        |  **_確認が必要_* _<br /><br />_You は、**一般** に分類されたコンテンツを1つ以上の信頼されていない受信者に送信しようとしています *<br />* `rsinclair@contoso.com` *<br /><br />* 。組織のポリシーでは、このコンテンツの送信を確認する必要があります。 *       |
@@ -1998,7 +1998,7 @@ SharePoint バージョン2013以降に長いファイルパスがある場合�
 
 1. **web.config** 構成をバックアップします。 
 
-1. 必要に応じて **maxUrlLength** 値を更新します。 例:
+1. 必要に応じて **maxUrlLength** 値を更新します。 次に例を示します。
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />

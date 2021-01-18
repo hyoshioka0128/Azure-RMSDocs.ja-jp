@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5a512bd03a627fb80503f07b98e4340d8ea9fce4
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 8064138db9d3d8356c9b12eef769bebabfd5a556
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164353"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559644"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題 - Azure Information Protection
 
@@ -69,7 +69,7 @@ Azure Information Protection クライアントと共にインストールされ
 
 ## <a name="aip-known-issues-in-office-applications"></a>Office アプリケーションの AIP に関する既知の問題
 
-|機能  |既知の問題  |
+|特徴量  |既知の問題  |
 |---------|---------|
 |**複数のバージョンの Office**    | Azure Information Protection クライアントでは、クラシックでも統合ラベル付けでも、同じコンピューター上で複数のバージョンの Office を使用したり、Office のユーザー アカウントを切り替えたりすることはサポートされていません。       |
 |**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、次のようになります。 <br><br>-Office アプリでパフォーマンスの問題が発生する可能性があります。<br>-Azure Information Protection バーが、1つまたは両方の画面で、Office 画面の中央にフローティングするように見える場合があります。 <br><br>一貫したパフォーマンスを確保し、バーが正しい場所にあることを確認するには、Office アプリケーションの [**オプション**] ダイアログを開き、[**全般**] で、[**最適化**] ではなく [**互換性のために最適化**] を選択します。    |
@@ -98,7 +98,7 @@ AIP ビューアーでは画像が縦モードで表示され、ワイドビュ�
     
 :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="クライアントビューアーで拡大されるイメージ":::
     
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [**従来のクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/client-view-use-files.md)
 - [統一された **ラベル付けクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/clientv2-view-use-files.md)
@@ -135,7 +135,7 @@ AIP ビューアーでは画像が縦モードで表示され、ワイドビュ�
 機密ラベルが適用された OneDrive にドキュメントが保存されていて、管理者がラベル付けポリシーのラベルを変更して保護を追加した場合、新しく適用された保護は、ラベル付きドキュメントに自動的には適用されません。 
 
 このような場合は、必要に応じて保護を適用するために、手動でドキュメントにラベルを再設定します。
-## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP for Windows および Office バージョンの拡張サポート
+## <a name="aip-and-legacy-windows-and-office-versions"></a>AIP とレガシ Windows および Office のバージョン
 
 - [**Windows 7 の拡張サポートは、2020年1月14日に終了しまし**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)た。 
 
@@ -165,13 +165,13 @@ AIP ビューアーでは画像が縦モードで表示され、ワイドビュ�
 
 1.  Azure portal で、[ **条件付きアクセス** ] ブレードに移動し、変更する条件付きアクセスポリシーを選択します。 
 2.  [ **割り当て**] で [ **ユーザーとグループ**] を選択し、[ **すべてのユーザー**] を選択します。 [ **すべてのゲストと外部ユーザー** ] オプションが選択されて *いない* ことを確認します。
-3.  変更を保存します。 
+3.  変更内容を保存します。 
  
 また、この潜在的な問題を回避するために、組織で機能が必要でない場合は Azure Information Protection 内で CA を完全に無効にすることもできます。 
 
 詳細については、 [条件付きアクセスのドキュメント](/azure/active-directory/conditional-access/concept-conditional-access-users-groups)を参照してください。
 
-## <a name="more-information"></a>詳細情報
+## <a name="more-information"></a>説明
 
 次の記事は、Azure Information Protection の既知の問題に関する質問に回答する際に役立つ場合があります。
 

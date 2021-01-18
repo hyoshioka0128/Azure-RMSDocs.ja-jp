@@ -12,18 +12,18 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 37d626fc3cf907191aed9760d1452082d732044f
-ms.sourcegitcommit: 0f76655985b49b4b8868d5f8893e20978f4dc4da
+ms.openlocfilehash: 0019699301b68df2d6ee4fd05d29a0e64734fc6e
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97747139"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559865"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
 >***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows Server 2016、Windows server 2012 R2、windows server 2012 *
 >
->*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
+>*Windows 7 または Office 2010 を使用している場合は、「 [AIP and Legacy Windows And office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。*
 >
 >***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -148,7 +148,7 @@ Windows コンピューターの3つのラベル付けソリューションで�
 - [Azure Information Protection クライアントの詳細な比較](#detailed-comparisons-for-the-azure-information-protection-clients)
 - [Azure Information Protection 統合されたラベル付けクライアントに含まれていない機能](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)
 
-|機能|従来のクライアント|統一されたラベル付けクライアント|Office 組み込みラベル付けソリューション|
+|特徴量|従来のクライアント|統一されたラベル付けクライアント|Office 組み込みラベル付けソリューション|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |**手動によるラベル付け**| ![はい](../media/yes-icon.png)   | ![はい](../media/yes-icon.png)   |![はい](../media/yes-icon.png) |
 |**既定のラベル**| ![はい](../media/yes-icon.png)| ![はい](../media/yes-icon.png)| ![はい](../media/yes-icon.png)|
@@ -257,7 +257,7 @@ Azure Information Protection classic クライアントは、サブラベルを�
 
 パリティについて、Azure Information Protection 統合ラベル付けクライアントでも、管理センターでこれらのラベルを選択できる場合でも、サブラベルのある親ラベルの適用はサポートされていません。 このシナリオでは、Azure Information Protection 統合ラベル付けクライアントで親ラベルが適用されません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection 統合ラベル付けクライアントをインストールして構成するには、次を参照してください。
 

@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: fa5b1bb2d88691e7862de0c678c746ff327ad820
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: df5328b94112342276028e2a74da02de14170418
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805973"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560241"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-classic-client"></a>ユーザーガイド: Azure Information Protection クラシッククライアントをダウンロードしてインストールする
 
@@ -52,13 +52,19 @@ AIP クラシック クライアントをデプロイするには、サポート
 
 1. 続行を確認するメッセージが表示されたら、**[はい]** をクリックしてインストールが完了するまで待機します。    
 
-1. **[閉じる]** をクリックします。 Azure Information Protection クライアントの使用を開始する前に次の操作を行います。    
+1. **[閉じる]** をクリックします。 
 
-    - **コンピューターで Office 2010 を実行している場合は**、コンピューターを再起動してから、 [次のセクション](#installing-the-azure-information-protection-client-with-office-2010) の最後の手順に進みます。  
-        
-    - **他のバージョンの office** の場合は、すべての office アプリケーションとエクスプローラーのすべてのインスタンスを再起動します。 インストールはこれで完了となります。クライアントを使用して、ドキュメントや電子メールにラベルを付けたり、保護したりできます。    
+    Azure Information Protection クライアントの使用を開始する前に、すべての Office アプリケーションとエクスプローラーのすべてのインスタンスを再起動します。 インストールはこれで完了となります。クライアントを使用して、ドキュメントや電子メールにラベルを付けたり、保護したりできます。
 
-### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Office 2010 で Azure Information Protection クライアントをインストールする    
+    > [!NOTE]
+    > コンピューターで Office 2010 を実行している場合は、コンピューターを再起動してから、 [次のセクション](#installing-the-azure-information-protection-client-with-office-2010) の最後の手順に進みます。  
+
+### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Office 2010 で Azure Information Protection クライアントをインストールする
+
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+> 
+
 前の指示に従い、Azure Information Protection クライアントをインストールしたら、次の操作を行います。    
 
 1. Microsoft Word を開きます。 Azure Information Protection クライアントのインストール後に初めて Office 2010 アプリケーションを実行した場合、[**Microsoft Azure Information Protection**] ダイアログ ボックスが表示されます。 このダイアログ ボックスには、サインイン プロセスを完了するには管理者の資格情報が必要であることが記されています。
@@ -68,8 +74,6 @@ AIP クラシック クライアントをデプロイするには、サポート
 3. [**ユーザーアクセス制御**] ダイアログ ボックスが表示された場合、[**はい**] をクリックします。Azure Information Protection でレジストリが更新されます。
 
 インストールはこれで完了となります。Azure Information Protection を利用し、文書や電子メールにラベルを付けたり、保護したりできます。
-
-詳細については、「 [AIP For Windows And Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
 
 ## <a name="other-instructions"></a>その他の手順    
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。

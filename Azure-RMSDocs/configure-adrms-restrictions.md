@@ -12,12 +12,12 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ROBOTS: NOINDEX
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 9b608b8f38c157320558cf5ae5011ef601773b2e
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 129c07876106d02174b1bab1d4eea82205160b69
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164234"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559576"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (HYOK) の詳細を保持する
 
@@ -158,7 +158,7 @@ Azure Information Protection ラベルの HYOK 保護を提供するには、AD 
 |**AD RMS 構成**     |HYOK をサポートするには、AD RMS システムを特定の方法で構成する必要があります。 詳細については、 [以下](#ad-rms-configuration-requirements)を参照してください。          |
 |**ディレクトリ同期**     |オンプレミスの Active Directory と Azure Active Directory の間でディレクトリ同期を構成する必要があります。 </br></br>HYOK protection ラベルを使用するユーザーは、シングルサインオン用に構成する必要があります。         |
 |**明示的に定義された信頼の構成**     |HYOK で保護されたコンテンツを組織外の他のユーザーと共有する場合は、他の組織との直接のポイントツーポイントの関係において、明示的に定義された信頼の AD RMS を構成する必要があります。 </br></br>これは、Active Directory フェデレーションサービス (AD FS) (AD FS) を使用して作成された信頼されたユーザードメイン (TUDs) またはフェデレーション信頼を使用して行います。         |
-|**サポートされるバージョン Microsoft Office**     | HYOK で保護されたコンテンツを保護または使用するユーザーには、次のものが必要です。 </br></br>-Information Rights Management (IRM) をサポートする Office のバージョン </br>-Microsoft Office Professional Plus バージョン2013以降、Windows 7 Service Pack 1 以降で実行されている Service Pack 1。 </br>-Office 2016 Microsoft Installer (.msi) ベースのエディションの場合、 [2018 でリリースされた Microsoft Office 2016 の4018295更新プログラム](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295)が必要です。 </br></br>**注**: office 2010 および office 2007 はサポートされていません。  詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。      |
+|**サポートされるバージョン Microsoft Office**     | HYOK で保護されたコンテンツを保護または使用するユーザーには、次のものが必要です。 </br></br>-Information Rights Management (IRM) をサポートする Office のバージョン </br>-Microsoft Office Professional Plus バージョン2013以降、Windows 7 Service Pack 1 以降で実行されている Service Pack 1。 </br>-Office 2016 Microsoft Installer (.msi) ベースのエディションの場合、 [2018 でリリースされた Microsoft Office 2016 の4018295更新プログラム](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295)が必要です。 </br></br>**注**: office 2010 および office 2007 はサポートされていません。  詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。      |
 
 > [!IMPORTANT]
 > HYOK protection によって提供される高い確実性を実現するために、次のことをお勧めします。

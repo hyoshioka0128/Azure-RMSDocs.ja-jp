@@ -13,18 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: f4ae6c5addbea7293192b085bade9f17b798c23c
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: fd030502c6d6583e72be63fa424ff8186ebaadc7
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583593"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560307"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
 >***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 AD RMS から Azure Information Protection への移行フェーズ 5 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 10 から手順 12 を説明します。
 
@@ -53,25 +53,26 @@ AD RMS サーバーのプロビジョニングを解除した後は、テンプ�
 クラシッククライアントを使用している場合は、Azure portal を使用します。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
 
 >[!IMPORTANT]
-> この移行の終了時には、AD RMS クラスターを Azure Information Protection と hold your key ([HYOK](configure-adrms-restrictions.md)) オプションと共に使用することはできません。 HYOK でクラシッククライアントを使用している場合は、リダイレクトが配置されているため、使用する AD RMS クラスターには、移行したクラスターのライセンス Url が異なる必要があります。
-
+> この移行の終了時には、AD RMS クラスターを Azure Information Protection と hold your key ([HYOK](configure-adrms-restrictions.md)) オプションと共に使用することはできません。 
+>
+> HYOK でクラシッククライアントを使用している場合は、リダイレクトが配置されているため、使用する AD RMS クラスターには、移行したクラスターのライセンス Url が異なる必要があります。
+>
 ### <a name="additional-configuration-for-computers-that-run-office-2010"></a>Office 2010 を実行するコンピューターの追加構成
+
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+> 
 
 移行されたクライアントが Office 2010 を実行している場合、AD RMS サーバーがプロビジョニング解除された後で、保護されたコンテンツを開くときにユーザーが遅延することがあります。 または、保護されたコンテンツを開くための資格情報がないというメッセージが表示されることがあります。 これらの問題を解決するには、これらのコンピューターに対してネットワークリダイレクトを作成し、AD RMS URL FQDN をコンピューターのローカル IP アドレス (127.0.0.1) にリダイレクトします。 これを行うには、各コンピューターでローカルホストファイルを構成するか、DNS を使用します。
 
-ローカルホストファイルを使用したリダイレクト:
-
-- ローカルホストファイルに次の行を追加し `<AD RMS URL FQDN>` ます。を AD RMS クラスターの値に置き換えます。プレフィックスや web ページは使用しません。
+- **ローカルホストファイルを使用** したリダイレクト: ローカルホストファイルに次の行を追加します。を `<AD RMS URL FQDN>` AD RMS クラスターの値に置き換えます。プレフィックスや web ページは含まれません。
 
     ```sh
     127.0.0.1 <AD RMS URL FQDN>
     ```
 
-DNS を使用したリダイレクト:
+- **DNS を使用** したリダイレクト: AD RMS URL FQDN の新しいホスト (a) レコードを作成します。このレコードには、IP アドレス127.0.0.1 が使用されています。
 
-- AD RMS URL FQDN の新しいホスト (A) レコードを作成します。 IP アドレスは127.0.0.1 です。
-
-AIP と Office 2010 の詳細については、「 [AIP For Windows」および「office バージョン (拡張サポート](known-issues.md#aip-for-windows-and-office-versions-in-extended-support))」を参照してください。
 ## <a name="step-11-complete-client-migration-tasks"></a>手順 11. クライアントの移行タスクを完了する
 
 モバイル デバイス クライアントおよび Mac コンピューターの場合: [AD RMS モバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11))をデプロイするときに作成した DNS SRV レコードを削除します。
@@ -129,7 +130,8 @@ killall cfprefsd
 
 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは、 **Microsoft**  >  **Windows**  >  **Active Directory Rights Management サービス Client** の場所にあります。 
 
-詳細については、「 [AIP For Windows And Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを再入力する
 

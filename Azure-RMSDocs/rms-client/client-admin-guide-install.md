@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2efab361e4ea1b74fdedf6cc6cc9735338d3633b
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 5eab2eee3fb0117bc3efd21c2605fc8d0293178d
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164098"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560375"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>管理者ガイド: ユーザー用の Azure Information Protection クラシッククライアントをインストールする
 
@@ -62,8 +62,9 @@ ms.locfileid: "98164098"
 
     新しいバージョンのサインイン アシスタントがある場合は、これをアンインストールしてから Azure Information Protection クライアントをインストールしてください。 たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >    >  **プログラムのアンインストールまたは変更**] を使用します。
 
-    詳細については、「 [AIP For Windows And Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
-
+    > [!IMPORTANT]
+    > Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+    >
 
 - **KB 4482887**
 
@@ -121,27 +122,23 @@ Microsoft Update カタログを使用していない場合、または Intune �
     PowerShell コマンドレットだけをサイレント インストールする例: `AzInfoProtection.exe  PowerShellOnly=true /quiet`
 
     ヘルプ画面に表示されていない追加のパラメーター:
-
-    - Office 2010 を実行するコンピューターにクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合またはそのユーザーを表示したくない場合は、**ServiceLocation** パラメーターを指定します。 
-    
-        詳細については、「 [ServiceLocation インストールパラメーターの詳細](#more-information-about-the-servicelocation-installation-parameter) 」と「 [拡張サポートでの Windows および Office バージョンの AIP](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
-
+ 
     - **DowngradeDotNetRequirement**: MICROSOFT.NET Framework 4.6.2 のバージョンの要件を省略する場合にこのパラメーターを使用します。 [詳細情報](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
 
     - **AllowTelemetry=0**: このパラメーターは、インストール オプション **[Microsoft に利用状況の統計を送信して、Azure Information Protection の改善に協力します]** を無効にするときに使用します。
 
+    - Office 2010 を実行するコンピューターにクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合またはそのユーザーを表示したくない場合は、**ServiceLocation** パラメーターを指定します。  詳細については、「 [ServiceLocation インストールパラメーターの詳細](#more-information-about-the-servicelocation-installation-parameter)」を参照してください。 
+    
+        > [!IMPORTANT]
+        > Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+        >
+
 1. 対話形式でインストールする場合は、Microsoft 365 または Azure Active Directory に接続できなくても、デモンストレーション目的でローカルポリシーを使用して Azure Information Protection のクライアント側を表示して操作する場合は、 **デモポリシー** をインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。
 
-1. インストールを完了するには:
+1. インストールを完了するには、すべての Office アプリケーションとエクスプローラーのすべてのインスタンスを再起動します。
 
-    - **コンピューターが Office 2010 を実行している場合は**、コンピューターを再起動します。
-
-        クライアントが **Servicelocation** パラメーターを使用してインストールされていない場合、Azure Information Protection バーを使用するいずれかの Office アプリケーションを初めて開くとき (Word など) は、この初回使用時にレジストリを更新するように求めるプロンプトを確認する必要があります。 [サービス検索](client-deployment-notes.md#rms-service-discovery)はレジストリ キーの設定に使用されます。
-
-        詳細については、「 [AIP For Windows And Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
-
-
-    - **他のバージョンの office** の場合は、すべての office アプリケーションとエクスプローラーのすべてのインスタンスを再起動します。
+    **Office 2010 のみ**: コンピューターで [office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions)を実行している場合は、コンピューターを再起動します。 クライアントが **Servicelocation** パラメーターを使用してインストールされていない場合、Azure Information Protection バーを使用するいずれかの Office アプリケーションを初めて開くとき (Word など) は、この初回使用時にレジストリを更新するように求めるプロンプトを確認する必要があります。 [サービス検索](client-deployment-notes.md#rms-service-discovery)はレジストリ キーの設定に使用されます。
+    
 
 1. 既定で %temp% フォルダーに作成されるインストール ログ ファイルを確認することで、インストールが成功したか確認できます。 インストール パラメーター **/log** を使用してこの場所を変更できます。
 
@@ -153,7 +150,14 @@ Microsoft Update カタログを使用していない場合、または Intune �
 
 #### <a name="more-information-about-the-servicelocation-installation-parameter"></a>ServiceLocation インストール パラメーターの詳細について
 
-Office 2010 を使用していて、ローカルの管理アクセス許可を持たないユーザーのクライアントをインストールする場合は、 **Servicelocation** パラメーターと Azure Rights Management サービスの URL を指定します。 このパラメーターと値により、次のレジストリ キーが作成され、設定されます。
+Office 2010 を使用していて、ローカルの管理アクセス許可を持たないユーザーのクライアントをインストールする場合は、 **Servicelocation** パラメーターと Azure Rights Management サービスの URL を指定します。 
+
+    
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+>
+
+このパラメーターと値により、次のレジストリ キーが作成され、設定されます。
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation`
 
@@ -164,8 +168,6 @@ Office 2010 を使用していて、ローカルの管理アクセス許可を�
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
 **Servicelocation** パラメーターに指定する値を特定するには、[次の手順](#to-identify-the-value-to-specify-for-the-servicelocation-parameter)に従います。
-
-詳細については、「 [AIP For Windows And Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>ServiceLocation パラメーターに指定する値を特定するには
 
@@ -181,7 +183,7 @@ Office 2010 を使用していて、ローカルの管理アクセス許可を�
 
     残りの文字列は、 **Servicelocation** パラメーターに指定する値です。
 
-[Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)および Azure RMS 用にクライアントをサイレントインストールする例を次に示します。 
+[Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions)および Azure RMS 用にクライアントをサイレントインストールする例を次に示します。 
 
 `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
@@ -205,7 +207,7 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 1. **.Msi** ファイルを実行するコンピューターごとに、次のソフトウェアの依存関係が配置されていることを確認する必要があります。 たとえば、 **.msi** バージョンのクライアントを使用してパッケージ化するか、次の依存関係を満たすコンピューターにのみ展開します。
     
-    |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
+    |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
     |--------------------|--------------|----------------|---------------------|
     |**Office 365 1902 以降を除くすべてのバージョン**|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
     |**Office 2013**|サポートされているすべてのバージョン|64 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />バージョン: 1.0|インストール|
@@ -215,12 +217,14 @@ Windows Update を使用して Azure Information Protection クライアント�
     |**Office 2010**|Windows 8.1 および Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
     |**Office 2010**|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
     | | | | |
-
-    AIP と Office 2010 の詳細については、「 [AIP For Windows」および「office バージョン (拡張サポート](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support))」を参照してください。
+    
+    > [!IMPORTANT]
+    > Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+    >
 
 1. 既定のインストールでは、`AzInfoProtection.msi /quiet` のように、**/quiet** を付けて .msi を実行します。 ただし、[実行可能ファイルのインストーラーの手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)に記載されている追加のインストール パラメーターを指定する必要がある場合があります。
 
-    > [!NOTE]
+    > [!TIP]
     > 既定では、[ **使用状況の統計情報を Microsoft インストールに送信して Azure Information Protection を向上させる** ] オプションが有効になっています。 このオプションを無効にするには、次のいずれかを実行してください。
     >
     >- インストール中に、 **Allowtelemetry = 0** を指定します。
