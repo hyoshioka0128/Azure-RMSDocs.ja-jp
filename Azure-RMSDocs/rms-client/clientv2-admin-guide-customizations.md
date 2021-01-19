@@ -4,7 +4,7 @@ description: Windows 用に Azure Information Protection 統合ラベルクラ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/23/2020
+ms.date: 01/18/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9f4cc024066769c750f2fef946d9c5581cb99314
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 553646119c5e83bbc475d77ab35a83ce5866e858
+ms.sourcegitcommit: d2fdba748daf47ee9aeadbdf3ce154ef399eadaf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560341"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98569097"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントのカスタム構成
 
@@ -40,6 +40,8 @@ AIP の統一されたラベル付けクライアントを管理する際に、�
 > これらの設定を行うには、レジストリを編集するか、詳細設定を指定する必要があります。 詳細設定では、 [Office 365 セキュリティ & コンプライアンスセンターの PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell)を使用します。
 > 
 
+
+
 ## <a name="configuring-advanced-settings-for-the-client-via-powershell"></a>PowerShell を使用したクライアントの詳細設定の構成
 
 Microsoft 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して、ラベルポリシーとラベルをカスタマイズするための詳細設定を構成します。 
@@ -51,15 +53,16 @@ Microsoft 365 セキュリティ & コンプライアンスセンターの Power
 > [!IMPORTANT]
 > 文字列値に空白を使用しないでください。 これらの文字列値に白い文字列を使用すると、ラベルが適用されなくなります。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [ラベルポリシーの詳細設定の構文](#label-policy-advanced-settings)
-- [ラベルの詳細設定の構文](#label-advanced-settings)
+- [ラベルポリシーの詳細設定の構文](#label-policy-advanced-settings-syntax)
+- [ラベルの詳細設定の構文](#label-advanced-settings-syntax)
+- [現在の詳細設定を確認しています](#checking-your-current-advanced-settings)
 - [詳細設定の設定例](#examples-for-setting-advanced-settings)
 - [ラベルポリシーまたはラベル id の指定](#specifying-the-label-policy-or-label-identity)
 - [優先順位-競合する設定の解決方法](#order-of-precedence---how-conflicting-settings-are-resolved)
 - [詳細設定の参照](#advanced-setting-references)
-### <a name="label-policy-advanced-settings"></a>ラベルポリシーの詳細設定
+### <a name="label-policy-advanced-settings-syntax"></a>ラベルポリシーの詳細設定の構文
 
 ラベルポリシーの詳細設定の例として、Office アプリの Information Protection バーを表示する設定があります。
 
@@ -75,7 +78,7 @@ Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
-### <a name="label-advanced-settings"></a>ラベルの詳細設定
+### <a name="label-advanced-settings-syntax"></a>ラベルの詳細設定の構文
 
 ラベルの詳細設定の例としては、ラベルの色を指定する設定があります。
 
@@ -91,27 +94,49 @@ Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
+
+
+### <a name="checking-your-current-advanced-settings"></a>現在の詳細設定を確認しています
+
+有効な現在の詳細設定設定を確認するには、次のコマンドを実行します。
+
+***ラベルポリシー* の詳細設定を確認するに** は、次の構文を使用します。
+
+**Global** という名前のラベルポリシーの場合:
+
+```PowerShell
+(Get-LabelPolicy -Identity Global).settings
+```
+
+***ラベル* の詳細設定を確認するに** は、次の構文を使用します。
+
+**Public** という名前のラベルの場合:
+
+```powershell
+(Get-Label -Identity Public).settings
+```
+
 ### <a name="examples-for-setting-advanced-settings"></a>詳細設定の設定例
 
-**例 1:** 1つの文字列値のラベルポリシーの詳細設定を設定します。
+**例 1**: 1 つの文字列値のラベルポリシーの詳細設定を設定します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
-**例 2:** 1つの文字列値に対して、ラベルの詳細設定を設定します。
+**例 2**: 1 つの文字列値に対して、ラベルの詳細設定を設定します。
 
 ```PowerShell
 Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 ```
 
-**例 3:** 複数の文字列値に対して、ラベルの詳細設定を設定します。
+**例 3**: 複数の文字列値に対して、ラベルの詳細設定を設定します。
 
 ```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
-**例 4:** Null 文字列値を指定して、ラベルポリシーの詳細設定を削除します。
+**例 4**: null 文字列値を指定して、ラベルポリシーの詳細設定を削除します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
@@ -233,12 +258,6 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 |**UseCopyAndPreserveNTFSOwner** | [ラベル付け中に NTFS 所有者を保持する](#preserve-ntfs-owners-during-labeling-public-preview)
 | | |
 
-#### <a name="check-label-policy-settings"></a>ラベルポリシー設定の確認
-"Global" という名前のラベルポリシーに対してラベルポリシー設定が有効であることを確認する PowerShell コマンドの例を次に示します。
-
-```PowerShell
-(Get-LabelPolicy -Identity Global).settings
-```
 
 ### <a name="label-advanced-setting-reference"></a>ラベルの詳細設定のリファレンス
 
@@ -253,13 +272,6 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 |**SMimeEncrypt**|[ラベルを構成して Outlook で S/MIME 保護を適用する](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |**SMimeSign**|[ラベルを構成して Outlook で S/MIME 保護を適用する](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
-#### <a name="check-label-settings"></a>ラベル設定の確認
-
-"Public" という名前のラベルに対して有効なラベル設定を確認する PowerShell コマンドの例を次に示します。
-
-```PowerShell
-(Get-Label -Identity Public).settings
-```
 
 ## <a name="display-the-information-protection-bar-in-office-apps"></a>Display the Information Protection bar in Office apps\(Office アプリの Information Protection バーを表示する\)
 
@@ -371,13 +383,13 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 |Convertto-html (".jpg", ".png")|Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。 | Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。
 | | | |
 
-**例 1:**  ラベルポリシーが "Scanner" という名前のすべてのファイルの種類を保護するためのスキャナーの PowerShell コマンド:
+**例 1**: すべてのファイルの種類を保護するためのスキャナーの PowerShell コマンド: ラベルポリシーの名前は "scanner" です。
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**例 2:** Office ファイルと PDF ファイルに加えて .txt ファイルと .csv ファイルを保護するためのスキャナー用の PowerShell コマンド。ラベルポリシーには "Scanner" という名前が付けられています。
+**例 2**: スキャナーの PowerShell コマンドを使用して、Office ファイルと PDF ファイルに加え、.txt ファイルと .csv ファイルを保護します。ここで、ラベルポリシーには "scanner" という名前を付けます。
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -401,23 +413,23 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 |\<null value>| 既定値は、既定の保護値のように動作します。|
 |Convertto-html (".dwg", ".zip")|前の一覧に加えて、".dwg" と ".zip" は P になります。\<EXT>| 
 
-この設定では、次の拡張機能は常に P: "になり **\<EXT> ます。** .txt"、".xml"、".bmp"、"jfif"、".jpg"、".jpeg"、". jpe"、"jpe"、"..."、". jpe"、".png"、".tif"、"tiff"、".gif")。 注目すべき除外とは、"ptxt" が "pfile" にならないことです。 
+この設定では、次の拡張機能は常に **P \<EXT>**: "になります。 .txt"、".xml"、".bmp"、"jfif"、".jpg"、".jpeg"、". jpe"、"jpe"、"..."、". jpe"、".png"、".tif"、"tiff"、".gif")。 注目すべき除外とは、"ptxt" が "pfile" にならないことです。 
 
 **AdditionalPPrefixExtensions** は、advanced プロパティ- [**Pfilesupportedexテンション**](#pfilesupportedextension) が有効になっている場合にのみ機能します。 
 
-**例 1:** 保護 ".dwg" が "pfile" になる既定の動作と同じように動作する PowerShell コマンド。
+**例 1**: 保護 ".dwg" が "pfile" になる既定の動作と同じように動作する PowerShell コマンド。
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-**例 2:**  ファイルが保護されている場合に、すべての PFile 拡張機能を汎用保護 (PFile) からネイティブ保護 (. pdwg) に変更する PowerShell コマンド:
+**例 2**: ファイルが保護されている場合に、すべての PFile 拡張機能を汎用保護 (PFile) からネイティブ保護 (. pdwg) に変更する PowerShell コマンド:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
 ```
 
-**例 3:** このサービスを使用するときに ".dwg" を "pdwg" に変更する PowerShell コマンドは、このファイルを保護します。
+**例 3**: このサービスを使用するときに ".dwg" を ". pdwg" に変更する PowerShell コマンドを次のように保護します。
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
@@ -461,7 +473,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave
 |設定  |説明  |
 |---------|---------|
 |**WordShapeNameToRemove**     |  図形名が **WordShapeNameToRemove** advanced プロパティで定義されている名前と一致する Word 文書から、任意の図形を削除します。  <br><br>詳細については、「 [Use The WordShapeNameToRemove advanced property](#use-the-wordshapenametoremove-advanced-property)」を参照してください。     |
-|**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    では、テキストベースのヘッダーまたはフッターを、Word、Excel、PowerPoint のドキュメントから削除または置換できます。 <br><br>詳細については次を参照してください: <br>- [RemoveExternalContentMarkingInApp 詳細設定プロパティの使用](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [ExternalContentMarkingToRemove 構成する方法について説明](#how-to-configure-externalcontentmarkingtoremove)します。    |
+|**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    では、テキストベースのヘッダーまたはフッターを、Word、Excel、PowerPoint のドキュメントから削除または置換できます。 <br><br>詳細については、次を参照してください。 <br>- [RemoveExternalContentMarkingInApp 詳細設定プロパティの使用](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [ExternalContentMarkingToRemove 構成する方法について説明](#how-to-configure-externalcontentmarkingtoremove)します。    |
 |     |         |
 
 ### <a name="use-the-wordshapenametoremove-advanced-property"></a>WordShapeNameToRemove advanced プロパティを使用する
@@ -478,7 +490,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave
 > この追加の詳細プロパティ設定で Word 図形を指定せず、 **Removeexternalcontentmarkinginapp** キー値に word が含まれている場合は、 [Externalcontentmarkingtorclean](#how-to-configure-externalcontentmarkingtoremove) 値で指定したテキストのすべての図形がチェックされます。 
 >
 
-**使用していて除外する図形の名前を検索するには、次のようにします。**
+**使用していて除外する図形の名前を検索するには、次のように** します。
 
 1. Word で、**選択** ウィンドウを表示します。 [**ホーム**] タブ >**編集** グループ > 選択] ウィンドウの [オプション > 選択 **] ウィンドウ****を選択** します。
 
@@ -557,7 +569,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [複数行のヘッダーまたはフッター](#multiline-headers-or-footers)
 - [PowerPoint 用の最適化](#optimization-for-powerpoint)
@@ -645,7 +657,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesBy
 > **PowerPointRemoveAllShapesByShapeName** を定義する場合は、 [Externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove)と [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)の両方を定義して、意図した数よりも多くの図形が削除されないようにすることをお勧めします。
 >
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [ヘッダーまたはフッターとして使用している図形の名前を検索する](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer)
 - [PowerPoint でカスタムレイアウトから外部コンテンツマークを削除する](#remove-external-content-marking-from-custom-layouts-in-powerpoint)
@@ -809,7 +821,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:h
 
 これらの条件が満たされると、ユーザーには、次のいずれかの操作を含むポップアップメッセージが表示されます。
 
-|種類  |説明  |
+|Type  |説明  |
 |---------|---------|
 |**呼びかけ**     | ユーザーは確認して電子メールを送信またはキャンセルできます。        |
 |**揃え**     |  ユーザーは理由 (定義済みオプションまたは自由形式) を求められ、ユーザーは電子メールを送信または取り消しできます。 <br>ジャスティフィケーションテキストは、データ損失防止 (DLP) サービスなどの他のシステムで読み取ることができるように、電子メールの x ヘッダーに書き込まれます。       |
@@ -823,7 +835,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:h
 > [!TIP]
 > ドキュメントが Outlook の外部から共有されている場合でもポップアップが表示されるようにするには **(ファイル > 共有 > コピーを添付** します)、 [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) の詳細設定を構成することもできます。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [特定のラベルに対して警告、配置、またはブロックポップアップメッセージを実装するには](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels)
 - [ラベルのない電子メールまたは添付ファイルのポップアップメッセージの警告、ジャスティファイ、またはブロックを実装するには](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)
@@ -1098,11 +1110,11 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8
 
 この構成オプションの結果として、次のように、Azure Information Protection 統合ラベル付けクライアントによって新しい感度ラベルが適用されます。
 
-- **Office ドキュメントの場合:** デスクトップアプリでドキュメントを開くと、新しい秘密度ラベルが設定済みとして表示され、ドキュメントの保存時に適用されます。
+- **Office ドキュメントの** 場合: デスクトップアプリでドキュメントを開くと、新しい秘密度ラベルが設定済みとして表示され、ドキュメントの保存時に適用されます。
 
-- **PowerShell の場合:** [set-aipfilelabel](/powershell/module/azureinformationprotection/set-aipfilelabel) と [AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) で新しい秘密度ラベルを適用できます。
+- **PowerShell の場合**: [set-aipfilelabel](/powershell/module/azureinformationprotection/set-aipfilelabel) と [AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) で新しい秘密度ラベルを適用できます。
 
-- **エクスプローラーの場合:** [Azure Information Protection] ダイアログボックスで、新しい秘密度ラベルが表示されますが、設定されていません。
+- **エクスプローラーの場合**: [Azure Information Protection] ダイアログボックスで、新しい秘密度ラベルが表示されますが、設定されていません。
 
 この構成では、古いラベルにマップする各機密ラベルに対して、 **labelByCustomProperties** という名前の高度な設定を指定する必要があります。 次に、各エントリに対して、次の構文を使用して値を設定します。
 
@@ -1424,7 +1436,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 一定期間インターネットに接続できないコンピューターがある場合は、統一されたラベル付けクライアントのポリシーを手動で管理するファイルをエクスポートしてコピーできます。
 
-**統一されたラベル付けクライアントからの切断されたコンピューターをサポートするには:**
+**統一されたラベル付けクライアントからの切断されたコンピューターをサポートするに** は:
 
 1. 切断されたコンピューターで使用するラベルおよびポリシー設定をダウンロードするために使用する Azure AD でユーザーアカウントを選択または作成します。
 
@@ -1617,7 +1629,7 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 "nodes" : []
 ```
 
-少なくとも2つのノード、最初のノードがルールの条件を表し、最後のノードがルールのアクションを表している必要があります。 詳細については次を参照してください:
+少なくとも2つのノード、最初のノードがルールの条件を表し、最後のノードがルールのアクションを表している必要があります。 詳細については、次を参照してください。
 
 - [ルール条件の構文](#rule-condition-syntax)
 - [ルールアクションの構文](#rule-action-syntax)
@@ -1636,14 +1648,14 @@ AIP は、入力したキーのシリアル番号を使用して、ルールが�
 | **除く**    | 独自の子に対して *は not* を返し、 **All** として動作します。        |
 | **に** 渡される **ドメイン: listofdomains**    |次のいずれかを確認します。 <br>-親が **Except** の場合、は、 **すべて** の受信者がいずれかのドメインにあるかどうかを確認します。<br>-親が他の任意のものである場合を **除き**、は、いずれかの受信者がいずれかのドメインに **あるかどう** かを確認します。   |
 | **Emaillabel**、ラベルの続き | 次のいずれか:  <br>-ラベル ID <br>-null (ラベルが付けられていない場合)             |
-| **Attachmentlabel**、 **ラベル** 、サポートされる **拡張機能**   | 次のいずれか:  <br><br>**本来** <br>-親が **Except** の場合、サポートされている拡張子が1つの添付ファイルが **すべて** ラベル内に存在するかどうかを確認します。<br>-親が他の任意のものである場合を **除き**、は、サポートされている拡張子が1つの添付ファイルがラベル内に存在 **するかどう** かを確認します。 <br>-ラベルが付けられていない場合、 **label = null** <br><br> **false:** その他のすべての場合 <br><br>**注**: **拡張機能** プロパティが空であるか、または存在しない場合、サポートされているすべてのファイルの種類 (拡張機能) がルールに含まれます。
+| **Attachmentlabel**、 **ラベル** 、サポートされる **拡張機能**   | 次のいずれか:  <br><br>**true**: <br>-親が **Except** の場合、サポートされている拡張子が1つの添付ファイルが **すべて** ラベル内に存在するかどうかを確認します。<br>-親が他の任意のものである場合を **除き**、は、サポートされている拡張子が1つの添付ファイルがラベル内に存在 **するかどう** かを確認します。 <br>-ラベルが付けられていない場合、 **label = null** <br><br> **false**: その他すべての場合 <br><br>**注**: **拡張機能** プロパティが空であるか、または存在しない場合、サポートされているすべてのファイルの種類 (拡張機能) がルールに含まれます。
 | | |
 
 #### <a name="rule-action-syntax"></a>ルールアクションの構文
 
 ルールアクションには、次のいずれかを指定できます。
 
-|操作  |構文  |サンプル メッセージ  |
+|アクション  |構文  |サンプル メッセージ  |
 |---------|---------|---------|
 |**ブロック**     |    `Block (List<language, [title, body]>)`     |    **_メールがブロック_* されました _<br /><br />  _You は、**シークレット** として分類されたコンテンツを1つ以上の信頼されていない受信者に送信しようとしています: *<br />* `rsinclair@contoso.com` *<br /><br />* 組織のポリシーでは、この操作が許可されて これらの受信者を削除するか、コンテンツを置き換えることを検討してください。 *|
 |**呼びかけ**     | `Warn (List<language,[title,body]>)`        |  **_確認が必要_* _<br /><br />_You は、**一般** に分類されたコンテンツを1つ以上の信頼されていない受信者に送信しようとしています *<br />* `rsinclair@contoso.com` *<br /><br />* 。組織のポリシーでは、このコンテンツの送信を確認する必要があります。 *       |
@@ -1994,7 +2006,7 @@ SharePoint バージョン2013以降に長いファイルパスがある場合�
 
 この値は、構成の **Httpruntimesection** クラスで定義され `ASP.NET` ます。 
 
-**HttpRuntimeSection 講義クラスを更新するに** は: * *
+**HttpRuntimeSection 更新するには、次のようにし** ます。
 
 1. **web.config** 構成をバックアップします。 
 
