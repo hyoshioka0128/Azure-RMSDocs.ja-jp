@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 17ee31a93e21314d9881af14feafc81ddb550092
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e3b8c14c63c3ac6300c84349212db0e177a0dd7d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384640"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240888"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>チュートリアル: Azure Information Protection (AIP) スキャナーを使用して機密コンテンツを検出する
 
@@ -50,7 +50,7 @@ Azure Information Protection クライアントには、システム管理者が
 |**コンテンツ スキャン ジョブ** | テストに使用できる基本的なコンテンツ スキャン ジョブがあることを確認します。 [スキャナーのインストール](tutorial-install-scanner.md)時に作成済みである可能性があります。<br /><br />ここで作成する必要がある場合は、「[Azure portal で Azure Information Protection を構成する](tutorial-install-scanner.md#configure-azure-information-protection-in-the-azure-portal)」に記載の手順を参照してください。 基本的なコンテンツ スキャン ジョブがある場合は、ここに戻り、このチュートリアルを完了してください。 |
 |**SQL Server**     | スキャナーを実行するには、スキャナー コンピューター上に SQL Server がインストールされている必要があります。 <br /><br /> インストールするには、[SQL Server のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-downloads)に移動し、インストールするインストール オプションの下にある **[今すぐダウンロード]** を選択します。 インストーラーで、 **[基本]** をインストールの種類に選択します。 <br /><br />**注**:SQL Server Enterprise は運用環境に、そして Express はテスト専用にインストールすることをお勧めします。    |
 |**Azure Active Directory アカウント**     |  標準的なクラウド接続で作業する場合は、使用するドメイン アカウントを [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)に同期させる必要があります。 これは、オフラインで作業する場合には必要ありません。 <br /><br />ご自身のアカウントについて不明な場合は、いずれかのシステム管理者に問い合わせて同期の状態を確認してください。 詳細については、「[代替構成でのスキャナーのデプロイ](deploy-aip-scanner-prereqs.md#deploying-the-scanner-with-alternative-configurations)」を参照してください。  |
-|**秘密度ラベルと公開されたポリシー** |スキャナー サービス アカウント用に、秘密度ラベルを作成し、少なくとも 1 つのラベルが付いたポリシーをラベル付け管理センターに公開している必要があります。 <br /><br />Microsoft 365 コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 セキュリティ/コンプライアンス センターを含む、ご利用のラベル付け管理センター内で秘密度ラベルを構成します。 詳細については、[Microsoft 365 のドキュメント](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels)を参照してください。 |
+|**秘密度ラベルと公開されたポリシー** |スキャナー サービス アカウント用に、秘密度ラベルを作成し、少なくとも 1 つのラベルが付いたポリシーをラベル付け管理センターに公開している必要があります。 <br /><br />Microsoft 365 コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 セキュリティ/コンプライアンス センターを含む、ご利用のラベル付け管理センター内で秘密度ラベルを構成します。 詳細については、[Microsoft 365 のドキュメント](/microsoft-365/compliance/create-sensitivity-labels)を参照してください。 |
 | | | 
 
 

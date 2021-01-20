@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c001f032281e323c6a4ca72530b1f005c3a1c268
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 50f8a118327f5a04748c4327175298694b0c84f4
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164574"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560273"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -69,7 +69,7 @@ Azure Information Protection の認証と承認をサポートするには、Azu
 
 条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、次をご覧ください。[条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか。](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-証明書ベースまたは多要素認証を使用する場合、UPN 値がユーザーのメール アドレスと一致しない場合、[Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support) を使用する場合など、特定のシナリオには追加の前提条件が必要です。
+証明書ベースまたは多要素認証を使用する場合や、UPN 値がユーザーのメール アドレスと一致しない場合など、特定のシナリオには追加の前提条件が必要です。
 
    詳細については、次を参照してください。
 
@@ -155,7 +155,11 @@ Office の他のエディションは、Rights Management サービスを使用�
 
 ラベルは、Office ドキュメントの上部に表示されるバーに表示されます。統合ラベル付けクライアントの **[検出感度]** ボタンまたはクラシック クライアントの **[保護]** ボタンからアクセスできます。
 
-詳細については、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」および「[拡張サポートでの Windows および Office のバージョン用の AIP](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
+詳細については、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」をご覧ください。
+
+> [!IMPORTANT]
+> Office 2010 の延長サポートは、2020 年 10 月 13 日に終了しました。 詳細については、「[AIP と従来の Windows および Office バージョン](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+> 
 
 ### <a name="office-features-and-capabilities-not-supported"></a>サポートされていない Office の特徴と機能
 

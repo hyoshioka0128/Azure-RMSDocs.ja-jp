@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 10f142fb09d8ad65b773f5e02f03233b454da240
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 6936402c9b58bf46b94e71ab597ce04c0391f59d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384538"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240820"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>チュートリアル:Azure Information Protection (AIP) を使用した Outlook での過剰共有の防止
 
@@ -41,7 +41,7 @@ ms.locfileid: "97384538"
 |---------|---------|
 |**コンピューターの要件**     | 次のことを確認してください。 <br /><br />- Windows コンピューターに Azure Information Protection 統合ラベル付けクライアントがインストールされている。 詳細については、「[クイック スタート: Azure Information Protection (AIP) 統合ラベル付けクライアントのデプロイ](quickstart-deploy-client.md)」を参照してください。 <br /><br />- PowerShell がインストールされており、PowerShell を管理者として実行できる。 <br /><br />- Outlook にサインインできる。 このチュートリアル中に Outlook を複数回再起動する準備をしておいてください。     |
 |**Azure Information Protection のサブスクリプション**     |   [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含む Azure サブスクリプションが必要です。 <br /><br />これらのサブスクリプションのいずれかがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成してください。       |
-|**秘密度ラベルとテスト ポリシー**     |  ポリシーで構成されている **全般** 秘密度ラベル。 <br /><br />ラベル付け管理センター (Microsoft 365 コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 セキュリティ/コンプライアンス センター) で秘密度ラベルを構成します。 詳細については、[Microsoft 365 のドキュメント](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels)を参照してください。 <br /><br />このチュートリアルでは、ライブ ポリシーに影響を与えないように、テスト ポリシーを使用することをお勧めします。 <br />お使いのポリシーの名前と **全般** ラベルの GUID が手元にあることを確認します。   |
+|**秘密度ラベルとテスト ポリシー**     |  ポリシーで構成されている **全般** 秘密度ラベル。 <br /><br />ラベル付け管理センター (Microsoft 365 コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 セキュリティ/コンプライアンス センター) で秘密度ラベルを構成します。 詳細については、[Microsoft 365 のドキュメント](/microsoft-365/compliance/create-sensitivity-labels)を参照してください。 <br /><br />このチュートリアルでは、ライブ ポリシーに影響を与えないように、テスト ポリシーを使用することをお勧めします。 <br />お使いのポリシーの名前と **全般** ラベルの GUID が手元にあることを確認します。   |
 | | |
 
 始めましょう。 
@@ -399,7 +399,7 @@ Action Source:
 
 ポリシーを削除する場合は、それを作成した管理センター (Microsoft 365 コンプライアンスセンター、Microsoft 365 セキュリティセンター、または Microsoft 365 セキュリティ/コンプライアンス センター) で行います。
 
-詳細については、[Microsoft 365 のドキュメント](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)を参照してください
+詳細については、[Microsoft 365 のドキュメント](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)を参照してください
 
 削除したら、このチュートリアルで定義した設定で構成されることがなくなるように、クライアント コンピューターの Outlook を再起動します。
 

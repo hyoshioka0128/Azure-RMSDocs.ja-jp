@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 746e1a8763c94a3193b7719d5af9326c2d274347
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 177c877cc1963d40be336bf8ec979a03b7e890c1
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805922"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240837"
 ---
 # <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-unified-labeling-solution"></a>チュートリアル:Azure Information Protection (AIP) クラシック クライアントから統合ラベル付けソリューションへの移行
 
@@ -29,7 +29,7 @@ ms.locfileid: "97805922"
 > この期間に、Azure Information Protection クラシック クライアントの現在のすべてのお客様が、Microsoft Information Protection の統合ラベル付けソリューションを使用する AIP 統合ラベル付けに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 
-このチュートリアルでは、クラシック クライアントから組織の Azure Information Protection のデプロイを、および Azure portal でのラベルとラベル付けポリシーの管理を、統合ラベル付けソリューションと [Microsoft 365 の秘密度ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)に移行する方法について説明します。
+このチュートリアルでは、クラシック クライアントから組織の Azure Information Protection のデプロイを、および Azure portal でのラベルとラベル付けポリシーの管理を、統合ラベル付けソリューションと [Microsoft 365 の秘密度ラベル](/microsoft-365/compliance/sensitivity-labels)に移行する方法について説明します。
 
 **必要な時間**:移行を完了するために必要な時間は、お使いのポリシーの複雑さと使用する AIP 機能によって異なります。 バックグラウンドで移行する間は、クラシック クライアントを使用し続けることができます。
 
@@ -63,7 +63,7 @@ AIP クラシック クライアントで使用できるほとんどの機能は
 
 統合ラベル付けクライアント使用時に、使用する Information Protection の機能がどのように異なるかを理解するには、次の記事を確認してください。
 
-- [Microsoft 365 の組み込みラベル付け機能の詳細](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Microsoft 365 の組み込みラベル付け機能の詳細](/microsoft-365/compliance/sensitivity-labels-office-apps)
 - [Windows コンピューターのラベル付けソリューションを比較する](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [統合ラベル付け管理センターで、既定ではサポートされていないラベル設定を管理する方法の詳細](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers)
 
@@ -137,7 +137,7 @@ Azure portal に保存しているすべてのポリシーを統合ラベル付�
 現在のところ、この機能はプレビュー段階です。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。
 
 > [!NOTE]
-> ポリシーのコピーには、一定の制限があります。 一から始めて、ラベル付け管理センターで手動でポリシーを作成することもできます。 詳細については、[Microsoft 365 のドキュメント](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)を参照してください。
+> ポリシーのコピーには、一定の制限があります。 一から始めて、ラベル付け管理センターで手動でポリシーを作成することもできます。 詳細については、[Microsoft 365 のドキュメント](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)を参照してください。
 > 
 
 **ポリシーをコピーするには**、次のようにします。 
@@ -184,7 +184,7 @@ Azure portal に保存しているすべてのポリシーを統合ラベル付�
 
 ### <a name="configure-advanced-labeling-settings-in-powershell"></a>PowerShell でラベル付け詳細設定を構成する
 
-1. Office 365 セキュリティ/コンプライアンス センター PowerShell モジュールに接続します。 詳細については、[セキュリティ/コンプライアンス センター PowerShell のドキュメント](https://docs.microsoft.com/powershell/exchange/connect-to-scc-powershell)をご覧ください。
+1. Office 365 セキュリティ/コンプライアンス センター PowerShell モジュールに接続します。 詳細については、[セキュリティ/コンプライアンス センター PowerShell のドキュメント](/powershell/exchange/connect-to-scc-powershell)をご覧ください。
 
 1. ラベル付け詳細設定を定義するには、**Set-Label** コマンドレットを使用し、**AdvancedSettings** パラメーター、設定を適用するラベル、および設定を定義するためのキーと値のペアを指定します。
     
@@ -205,7 +205,7 @@ Azure portal に保存しているすべてのポリシーを統合ラベル付�
     - [親ラベルに既定のサブラベルを指定する](rms-client/clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [ラベルを構成して Outlook で S/MIME 保護を適用する](rms-client/clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
     - [カスタム プロパティを使用してラベルを定義する](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions) 
-    - [ラベルの翻訳を定義する](https://docs.microsoft.com/powershell/module/exchange/set-label)。 
+    - [ラベルの翻訳を定義する](/powershell/module/exchange/set-label)。 
 
     使用できる詳細構成の詳細については、「[管理者ガイド:Azure Information Protection 統合ラベル付けクライアントのカスタム構成](rms-client/clientv2-admin-guide-customizations.md)」を参照してください。
 
@@ -225,10 +225,10 @@ Azure portal に保存しているすべてのポリシーを統合ラベル付�
 - Microsoft 365 セキュリティ センター
 - Microsoft 365 セキュリティ/コンプライアンス センター
 
-詳細については、Microsoft 365 のドキュメントの[秘密度ラベルでできること](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do)に関する記事をご覧ください。
+詳細については、Microsoft 365 のドキュメントの[秘密度ラベルでできること](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do)に関する記事をご覧ください。
 
 > [!TIP]
-> Office 365 DLP または Microsoft Cloud App Security で使用するために作成されたカスタムの機密情報の種類がある場合は、それらをそのまま統合ラベル付けに適用します。 詳細については、[Microsoft 365 のドキュメント](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)を参照してください。
+> Office 365 DLP または Microsoft Cloud App Security で使用するために作成されたカスタムの機密情報の種類がある場合は、それらをそのまま統合ラベル付けに適用します。 詳細については、[Microsoft 365 のドキュメント](/microsoft-365/compliance/apply-sensitivity-label-automatically)を参照してください。
 >  
 
 ## <a name="deploy-a-unified-labeling-client"></a>統合ラベル付けクライアントをデプロイする
@@ -294,7 +294,7 @@ Azure Information Protection クラシック クライアントを使用して�
  
 ## <a name="next-steps"></a>次のステップ
 
-ラベル、ポリシー、およびデプロイされたクライアントを必要に応じて移行した後は、Microsoft 365 コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 セキュリティ/コンプライアンス センターなどの[ラベル付け管理センターでラベル付けとラベル付けポリシーを管理](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels)します。
+ラベル、ポリシー、およびデプロイされたクライアントを必要に応じて移行した後は、Microsoft 365 コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 セキュリティ/コンプライアンス センターなどの[ラベル付け管理センターでラベル付けとラベル付けポリシーを管理](/microsoft-365/compliance/create-sensitivity-labels)します。
 
 統合ラベル付けプラットフォームを使用すると、Azure portal の Azure Information Protection 領域に戻るだけで、次のことができます。
 

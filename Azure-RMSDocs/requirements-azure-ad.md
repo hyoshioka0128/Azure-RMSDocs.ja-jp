@@ -1,6 +1,6 @@
 ---
 title: Azure AD および Azure Information Protection の追加の前提条件
-description: 多要素、または証明書ベースの認証、Office 2010 を使用するコンピューターなど、特定のシナリオでの Azure Information Protection に対する Azure AD の追加要件について説明します。
+description: 多要素、または証明書ベースの認証など、特定のシナリオでの Azure Information Protection に対する Azure AD の追加要件について説明します。
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 7ac67d72d329f9782a80c434f936cadad3e13882
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 7ba843beac002261cd1ada865767b414e22560ae
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583355"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560392"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Azure Information Protection に対する Azure AD の追加要件
 
@@ -25,26 +25,16 @@ ms.locfileid: "97583355"
 >
 >***関連する内容**: [AIP の統合ラベル付けクライアントと AIP のクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。*
 
+> [!NOTE]
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 
+>
+> このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けソリューションに移行することができます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+
 Azure Information protection を使用するには、[Azure AD が必要](requirements.md#azure-active-directory)です。 Azure AD ディレクトリのアカウントを使用して Azure portal にサインインし、Azure Information Protection の設定を構成できます。
 
 Azure Information Protection または Azure Rights Management を含むサブスクリプションをお持ちの場合は、必要に応じて Azure AD ディレクトリが自動的に作成されます。
 
 次のセクションでは、特定のシナリオに関する追加の AIP と Azure AD の要件について説明します。 
-
-## <a name="computers-running-office-2010"></a>Office 2010 を実行しているコンピューター
-
-Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行うには、Azure AD アカウントに加えて、Microsoft 2010 を実行するコンピューターに Windows 用の Azure Information Protection クライアントが必要です。 
-
-ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、これらのコンピューターで Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
-
-Azure Information Protection 統合ラベル付けクライアントをデプロイすることをお勧めします。 まだアップグレードしていない場合は、[Azure Information Protection のクラシック クライアント](./rms-client/aip-client.md)がデプロイされたままになっている可能性があります。 
-
-詳細については、「[Azure Information Protection のクライアント側](rms-client/use-client.md)」および「[拡張サポートでの Windows および Office バージョンの AIP](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。
-
-> [!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 
->
-> このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けソリューションに移行することができます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 ## <a name="support-for-certificate-based-authentication-cba"></a>証明書ベースの認証 (CBA) のサポート
 
@@ -110,5 +100,18 @@ AD FS または同等の認証プロバイダーを使用してオンプレミ�
 - **Windows Server 2012 R2** の最小サーバー バージョン
 - OAuth 2.0 プロトコルをサポートする代替の認証プロバイダー
 
+## <a name="computers-running-office-2010"></a>Office 2010 を実行しているコンピューター
+
+> [!IMPORTANT]
+> Office 2010 の延長サポートは、2020 年 10 月 13 日に終了しました。 詳細については、「[AIP と従来の Windows および Office バージョン](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+> 
+
+Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行うには、Azure AD アカウントに加えて、Microsoft 2010 を実行するコンピューターに Windows 用の Azure Information Protection クライアントが必要です。 
+
+ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、これらのコンピューターで Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
+
+Azure Information Protection 統合ラベル付けクライアントをデプロイすることをお勧めします。 まだアップグレードしていない場合は、[Azure Information Protection のクラシック クライアント](./rms-client/aip-client.md)がデプロイされたままになっている可能性があります。 
+
+詳しくは、「[クライアント側での Azure Information Protection](rms-client/use-client.md)」をご覧ください。
 ## <a name="next-steps"></a>次の手順
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
