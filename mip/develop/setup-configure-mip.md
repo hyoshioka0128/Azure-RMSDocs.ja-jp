@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 44636616cf410f0976a51afa4bd110e0531de85c
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 5daada951fb888fc7aa01071236af751ec38e002
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535554"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215529"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成
 
@@ -102,7 +102,7 @@ ms.locfileid: "96535554"
 
    **Tar.gz/.Zip のダウンロード**
 
-   Tar.gz と .Zip のダウンロードには、API ごとに追加の圧縮されたファイルが 1 つ含まれています。 圧縮されたファイルは次のように命名されます。\<API\> = `file`、`protection`、または `upe`。\<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`。 たとえば、Debian での保護 API のバイナリとヘッダーのファイルは次のようになります。`mip_sdk_protection_debian9_1.0.0.0.tar.gz` 含まれているそれぞれの .tar.gz/.zip は次の 3 つのディレクトリに分かれています。
+   Tar.gz と .Zip のダウンロードには、API ごとに圧縮されたファイルが 1 つ含まれています。 圧縮されたファイルは次のように命名されます。\<API\> = `file`、`protection`、または `upe`。\<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`。 たとえば、Debian での保護 API のバイナリとヘッダーのファイルは次のようになります。`mip_sdk_protection_debian9_1.0.0.0.tar.gz` 含まれているそれぞれの .tar.gz/.zip は次の 3 つのディレクトリに分かれています。
 
    - **Bins:** 各プラットフォーム アーキテクチャのコンパイル済みバイナリ (該当する場合)。
    - **Include:** ヘッダー ファイル (C++)。
@@ -155,7 +155,7 @@ Microsoft 365 サブスクリプションのプロビジョニング プロセ�
 
 1. 「[Register an app with Azure AD, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal)」(Azure AD によるアプリの登録、新しいアプリケーションの登録) のセクションに示されている手順を行います。 テスト目的のため、ガイドの手順を進めるときに、指定されたプロパティに次の値を使用します。
     - **[サポートされているアカウントの種類]** - [この組織ディレクトリのみに含まれるアカウント] を選択します。
-    - **[リダイレクト URI]** - リダイレクト URI の種類を [パブリック クライアント (モバイルとデスクトップ)] に設定します。 SDK ではシンプルなコンソール クライアント アプリケーションが使用されるため、`<app-name>://authorize` という形式の URI を使用します。
+    - **[リダイレクト URI]** - リダイレクト URI の種類を [パブリック クライアント (モバイルとデスクトップ)] に設定します。 アプリケーションで Microsoft 認証ライブラリ (MSAL) を使用している場合は、`http://localhost` を使用します。 それ以外の場合は、`<app-name>://authorize` という形式のものを使用します。
 
 2. 完了すると、新しいアプリケーションを登録するため、 **[登録されているアプリ]** ページに戻ります。 **[アプリケーション (クライアント) ID]** フィールド内の GUID をコピーして保存します。これはクイック スタートで必要になります。
 
@@ -164,7 +164,7 @@ Microsoft 365 サブスクリプションのプロビジョニング プロセ�
 4. 次に、実行時にアプリケーションで要求される MIP API とアクセス許可を追加します。
    - **[API を選択します]** ページで、**Azure Rights Management サービス** をクリックします。
    - **Azure Rights Management サービス** の API ページで、 **[委任されたアクセス許可]** をクリックします。
-   - **[アクセス許可の選択]** セクションで、**user_impersonation** アクセス許可をオンにします。 これにより、アプリケーションがユーザーに代わって、保護されたコンテンツの作成やアクセスを行うことが可能になります。
+   - **[アクセス許可の選択]** セクションで、**user_impersonation** アクセス許可をオンにします。 この権限により、アプリケーションがユーザーに代わって、保護されたコンテンツの作成やアクセスを行うことが可能になります。
    - **[アクセス許可の追加]** をクリックして保存します。
 
 5. 手順 4 を繰り返しますが、今回は **[API の選択]** ページで API を検索する必要があります。
@@ -177,7 +177,7 @@ Microsoft 365 サブスクリプションのプロビジョニング プロセ�
 
 完了すると、アプリケーションの登録と API のアクセス許可は、次の例のようになるはずです。
 
-   [![Azure AD アプリの登録](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Azure AD アプリのアクセス許可](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
+   [![Azure AD アプリの登録](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Azure AD アプリの登録](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 登録に API とアクセス許可を追加する方法の詳細については、「[Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)」(Web API にアクセスするためのクライアント アプリケーションを構成する) を参照してください。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。
 
