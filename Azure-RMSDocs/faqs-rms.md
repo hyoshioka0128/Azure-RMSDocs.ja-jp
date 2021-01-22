@@ -12,21 +12,21 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d376446354e591f9a5742d415b7b7cba75bf887
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 31202876b035f7b5266abd006cfcd943e8eb6690
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382260"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659019"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)です。 詳細については、「 [クラシッククライアントの faq](faqs-classic.md)」も参照してください。 *
 
 >[!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection のデータ保護サービス、Azure Rights Management に関して質問がありますか。 ここで回答を探してみてください。
 
@@ -50,7 +50,7 @@ Microsoft はさまざまなシナリオでのデータ保護に合わせて多�
 
 ## <a name="where-can-i-find-information-about-third-party-solutions-that-integrate-with-azure-rms"></a>Azure RMS と統合するサード パーティのソリューションに関する情報はどこで入手できますか。
 
-既に多くのソフトウェア ベンダーが、Azure Rights Management と統合するソリューションを持っているか、そのソリューションを実装中であり、そのようなベンダーが増え続けています。 [対応アプリケーション](requirements-applications.md#)の一覧を確認し、Twitter の[Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility)から最新の更新プログラムを入手すると便利な場合があります。 さらに、[開発者ガイド](./develop/developers-guide.md)を参照したり、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)に統合の具体的な質問を投稿したりすることができます。
+既に多くのソフトウェア ベンダーが、Azure Rights Management と統合するソリューションを持っているか、そのソリューションを実装中であり、そのようなベンダーが増え続けています。 [対応アプリケーション](requirements-applications.md#)の一覧を確認し、Twitter の[Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility)から最新の更新プログラムを入手すると便利な場合があります。 Azure Information Protection [Yammer サイト](https://www.yammer.com/AskIPTeam)では、特定の統合に関する質問を投稿できます。
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>RMS コネクタには管理パックまたは同様の監視メカニズムがありますか。
 

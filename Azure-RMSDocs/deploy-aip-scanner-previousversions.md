@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 514eaf2f935d4ec454b57dbaf2ce1c97c029c4b8
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 6dffbe4480d5b6d1c2a01813d982e2a36ce81933
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806245"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659155"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-classic-client-scanner"></a>以前のバージョンの Azure Information Protection 従来のクライアントスキャナーを展開する
 
@@ -149,7 +149,7 @@ USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals
     Install-AIPScanner -SqlServerInstance <name>
     ```
 
-    例:
+    次に例を示します。
 
     - 既定のインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
 
@@ -340,7 +340,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 ### <a name="editing-the-registry-for-the-scanner"></a>スキャナーのレジストリの編集
 
-Office ファイルと PDF 以外のファイルの種類を保護するためにスキャナーの既定の動作を変更するには、レジストリを手動で編集し、保護する他のファイルの種類と、保護の種類 (ネイティブまたは汎用) を指定する必要があります。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
+Office ファイルと PDF 以外のファイルの種類を保護するためにスキャナーの既定の動作を変更するには、レジストリを手動で編集し、保護する他のファイルの種類と、保護の種類 (ネイティブまたは汎用) を指定する必要があります。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
 
 - スキャナーには独自の既定の動作があります。既定では、Office ファイル形式と PDF ドキュメントのみが保護されます。 レジストリを変更しない場合、その他のファイル形式は、スキャナーによってラベル付けまたは保護されません。
 
@@ -426,7 +426,7 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 - カスタム条件に対する正規表現式の構築
 
-    メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 例:
+    メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 次に例を示します。
 
     - [最長の量指定子](/dotnet/standard/base-types/quantifiers-in-regular-expressions)を開始します
 

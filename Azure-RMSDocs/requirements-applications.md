@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0c86d31ef5dbfe3afd7e901bc43758c61ee0ba67
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 13454e0642cfaf60ed3bd742050cd3eb0d3a38dc
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386255"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659138"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -263,8 +263,6 @@ Mac コンピューターの場合、Rights Management 共有アプリにより�
 上に一覧表示されているアプリケーションだけでなく、Azure Rights Management サービスの API をサポートするアプリケーションはすべて、Azure Information Protection と統合することができます。 
 
 例として、社内で作成された基幹業務アプリケーションや、RSM SDK を使用して作成されたソフトウェア ベンダーのアプリケーションが挙げられます。
-
-詳細については、「[Azure Information Protection 開発者ガイド](./develop/developers-guide.md)」を参照してください。
 
 ## <a name="applications-that-are-not-supported-by-azure-rms"></a>Azure RMS でサポートされていないアプリケーション
 

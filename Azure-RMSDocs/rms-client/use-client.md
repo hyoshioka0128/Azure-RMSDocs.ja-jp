@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2020
+ms.date: 01/20/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0019699301b68df2d6ee4fd05d29a0e64734fc6e
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: fcd21a58dabe65f1de88694f97dc57975bc19450
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98559865"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659070"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -148,7 +148,7 @@ Windows コンピューターの3つのラベル付けソリューションで�
 - [Azure Information Protection クライアントの詳細な比較](#detailed-comparisons-for-the-azure-information-protection-clients)
 - [Azure Information Protection 統合されたラベル付けクライアントに含まれていない機能](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)
 
-|特徴量|従来のクライアント|統一されたラベル付けクライアント|Office 組み込みラベル付けソリューション|
+|機能|従来のクライアント|統一されたラベル付けクライアント|Office 組み込みラベル付けソリューション|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |**手動によるラベル付け**| ![はい](../media/yes-icon.png)   | ![はい](../media/yes-icon.png)   |![はい](../media/yes-icon.png) |
 |**既定のラベル**| ![はい](../media/yes-icon.png)| ![はい](../media/yes-icon.png)| ![はい](../media/yes-icon.png)|
@@ -184,7 +184,7 @@ Windows コンピューターの3つのラベル付けソリューションで�
 |**AD RMS のサポート**| ![はい](../media/yes-icon.png) |  ![× ](../media/no-icon.png) <sup>6</sup> |  ![no](../media/no-icon.png)|
 |**Microsoft Office 97-2003 形式のサポート**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |  ![](../media/no-icon.png) <sup>8</sup>なし|
 |**二重キーの暗号化**|  ![no](../media/no-icon.png)| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
-|**政府機関向けコミュニティクラウド** | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**政府機関向けコミュニティクラウド** | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png)|
 | | | | |
 
 **脚注**:
