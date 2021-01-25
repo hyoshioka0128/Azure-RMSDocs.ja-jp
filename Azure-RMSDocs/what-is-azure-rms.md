@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: de6aa96fefb8dbd2fd10c8ea265e509f20aef2d4
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f23d9da0aae7d3cae681c829187f8371c84ca167
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384453"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659087"
 ---
 # <a name="what-is-azure-rights-management"></a>Azure Rights Management とは
 
@@ -93,7 +93,7 @@ Azure RMS により、次のような広範なプラットフォームとアプ�
 |---------|---------|
 |**一般的に使用されるデバイス** </br>Windows コンピューターだけではありません     | 次のような[クライアント デバイス](requirements.md#client-devices): </br></br>- Windows コンピューターと携帯電話 </br>- Mac コンピューター </br>- iOS タブレットと携帯電話 </br>- Android タブレットと携帯電話        |
 |**オンプレミスのサービス**     | Azure Rights Management は、[Office 365 とシームレスに](office-apps-services-support.md)連携するだけでなく、[RMS コネクタ](deploy-rms-connector.md)をデプロイして、次のオンプレミス サービスでも使用します </br></br>- Exchange Server </br>- SharePoint Server </br>- ファイル分類インフラストラクチャを実行する Windows Server        |
-|**アプリケーションの拡張性**     |Azure Rights Management は Microsoft Office のアプリケーションやサービスと緊密に統合されており、[Azure Information Protection クライアント](./rms-client/use-client.md )を使うことで、他のアプリケーションにもサポートを広げることができます。 </br></br>[Azure Information Protection SDK](./develop/developers-guide.md) により、Azure Information Protection をサポートするカスタム アプリケーションを作成するための API が社内開発者やソフトウェア ベンダーに提供されます。 </br></br>詳しくは、「[Rights Management API をサポートするその他のアプリケーション](api-support.md)」をご覧ください。         |
+|**アプリケーションの拡張性**     |Azure Rights Management は Microsoft Office のアプリケーションやサービスと緊密に統合されており、[Azure Information Protection クライアント](./rms-client/use-client.md )を使うことで、他のアプリケーションにもサポートを広げることができます。 </br></br>[Microsoft Information Protection SDK](/information-protection/develop/) により、Azure Information Protection をサポートするカスタム アプリケーションを作成するための API が社内開発者やソフトウェア ベンダーに提供されます。 </br></br>詳しくは、「[Rights Management API をサポートするその他のアプリケーション](api-support.md)」をご覧ください。         |
 | | |
 
 ### <a name="infrastructure-features"></a>インフラストラクチャ機能
