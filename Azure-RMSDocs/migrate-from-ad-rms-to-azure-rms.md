@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/11/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 80a1a42642ab0d611c64da34e3bf5a86a219f447
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 04534d6bce6c0db554a30b3690957c8aeeae433d
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560409"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809440"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -91,7 +91,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
     Office 2010 を実行しているコンピューターがある場合は、 [Azure Information Protection クライアント](rms-client/use-client.md) をインストールして、クラウドサービスに対してユーザーを認証する機能を提供する必要があります。 
 
     > [!IMPORTANT]
-    > Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+    > Office 2010 の延長サポートは、2020 年 10 月 13 日に終了しました。 詳細については、「[AIP と従来の Windows および Office バージョン](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
     >  
     
 
@@ -123,7 +123,7 @@ AD RMS クラスターが現在暗号化モード 1 の場合は、移行を開�
 
 Windows Server 2012 R2 および Windows 2012 の AD RMS 暗号化モードを確認するには **AD RMS クラスター** のプロパティ > **全般** ] タブを使用します。 
 
-### <a name="migration-limitations"></a>移行の上限
+### <a name="migration-limitations"></a>移行の制限
 
 - Azure Information Protection によって使用されている Rights Management サービスによってサポートされていないソフトウェアやクライアントは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「 [Azure Information Protection の要件](./requirements.md)」の「サポートされているアプリケーションとクライアント」セクションを必ず確認してください。
 
@@ -233,7 +233,7 @@ iOS 搭載の携帯電話や iPad、Android 携帯電話とタブレット、Win
 Windows コンピューターで Office 2010 を実行している場合は、"**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを無効にする必要があるかどうかを確認します。
 
 > [!IMPORTANT]
-> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+> Office 2010 の延長サポートは、2020 年 10 月 13 日に終了しました。 詳細については、「[AIP と従来の Windows および Office バージョン](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
 
 **手順 12: Azure Information Protection テナントキーのキーを更新する**
 

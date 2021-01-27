@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/10/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3a616092ac1b74c2ae530898c69a61f071e93ea1
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: e07d4f634d774be91df03c279705f52e9bee6c8c
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98559797"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809676"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
@@ -139,7 +139,7 @@ Microsoft RMS コネクタのサーバー構成ツールを使用して、レジ
 いずれの場合も、コネクタを使用するように構成されていない別のコンピューターにクライアント アプリケーションをインストールする必要があります。 そうすれば、クライアント アプリケーションで RMS が直接使用されるようになります。
 
 > [!IMPORTANT]
-> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+> Office 2010 の延長サポートは、2020 年 10 月 13 日に終了しました。 詳細については、「[AIP と従来の Windows および Office バージョン](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
 > 
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>コネクタを使用するための Exchange サーバーの構成
 次の Exchange ロールは RMS コネクタと通信します。

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ROBOTS: NOINDEX
@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6dffbe4480d5b6d1c2a01813d982e2a36ce81933
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: b0fc60219636412feaf3f1558da2d229201f0154
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659155"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809558"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-classic-client-scanner"></a>以前のバージョンの Azure Information Protection 従来のクライアントスキャナーを展開する
 
@@ -27,7 +27,7 @@ ms.locfileid: "98659155"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 検出されていないラベル付けクライアントのスキャナーについては、「 [AIP の統合ラベル付けスキャナーとは](deploy-aip-scanner.md)」を参照してください。*
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 > この記事は、バージョン **1.48.204.0** より前の Azure Information Protection スキャナーのバージョンであり、まだサポートされています。 以前のバージョンを現在のバージョンにアップグレードするには、「 [Azure Information Protection スキャナーをアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)する」を参照してください。
 
@@ -100,7 +100,7 @@ Azure Information Protection スキャナーをインストールする前に、
 
 Sysadmin ロールが一時的に付与されていない場合は、スキャナーをインストールする前に、Sysadmin 権限を持つユーザーに、AzInfoProtectionScanner という名前のデータベースを手動で作成するように依頼する必要があります。 この構成では、次のロールを割り当てる必要があります。
 
-|アカウント|データベースレベルのロール|
+|Account|データベースレベルのロール|
 |--------------------------------|---------------------|
 |スキャナーのサービス アカウント|db_owner|
 |スキャナーのインストール用のユーザー アカウント|db_owner|
@@ -115,7 +115,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 ```
 
-追加として:
+補足:
 
 - スキャナーを実行するサーバーのローカル管理者である必要があります。
 - スキャナーを実行するサービスアカウントには、次のレジストリキーに対するフルコントロールのアクセス許可が付与されている必要があります。
@@ -444,7 +444,7 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
     - 大きいファイルは明らかに小さいファイルよりも時間がかかります。
 
-- 追加として:
+- 補足:
 
     - スキャナーを実行するサービスアカウントに、「 [スキャナーの前提条件](#prerequisites-for-the-azure-information-protection-scanner) 」セクションに記載されている権限のみがあることを確認し、 [詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) を構成して、スキャナーの低整合性レベルを無効にします。
 

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/11/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
@@ -13,21 +13,21 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 06b32848bd1e2b0fa939474e74c174a674427eec
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: fb948fcfabd9456aa77f96465c59b572869ab10e
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384385"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809468"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Azure Information Protection からの保護の使用状況のログと分析
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 この情報は、Azure Information Protection から保護サービス (Azure Rights Management) の使用状況ログを使用する方法を理解するのに役立ちます。 この保護サービスは、組織のドキュメントと電子メールのデータ保護を提供し、すべての要求をログに記録できます。 これらの要求には、ユーザーがドキュメントや電子メールを保護していて、このコンテンツも利用している場合に、このサービスのために管理者が実行した操作や、Azure Information Protection のデプロイをサポートするために Microsoft オペレーターが実行した操作が含まれます。 
 
@@ -145,7 +145,7 @@ Azure Information Protection は、ログを一連の blob として書き込み
 | **公開日** | Date          | ドキュメントが保護された日付。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。                                                                                                                                                                                           | 2015-10-15T21:37:00                                                                                                                 |
 | **c-info**         | String        | 要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。                                                                                                            | 'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64' |
 | **c-ip**           | Address       | 要求を行ったクライアントの IP アドレス。                                                                                                                                                                                                                                                     | 64。51。202。144                                                                                                                       |
-| **admin-action**   | Bool          | 管理者が管理者モードでドキュメント追跡サイトにアクセスしたかどうかを示します。                                                                                                                                                                                                              | 正                                                                                                                                |
+| **admin-action**   | Bool          | 管理者が管理者モードでドキュメント追跡サイトにアクセスしたかどうかを示します。                                                                                                                                                                                                              | はい                                                                                                                                |
 | **acting-as-user** | String        | 管理者がドキュメント追跡サイトにアクセスする場合に使用するユーザーの電子メール アドレス。                                                                                                                                                                                                     | 'joe@contoso.com'                                                                                                                   |
 |                    |               |                                                                                                                                                                                                                                                                                                      |                                                                                                                                     |
 

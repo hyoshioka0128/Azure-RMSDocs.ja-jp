@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 23fa2b6b52355f87a135234b218bcef6d5517ca7
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: b3fe9b0cbe0a709ffd5a256abf1d65af4ec4b535
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560222"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808622"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-classic-client"></a>ユーザーガイド: Azure Information Protection クラシッククライアントを使用して分類および保護する
 
@@ -28,7 +28,7 @@ ms.locfileid: "98560222"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [ユニファイドクライアントユーザーガイド](clientv2-classify-protect.md)」を参照してください。
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 > [!TIP]
 > 次の手順に従って、ドキュメントや電子メールを分類して保護します。 ドキュメントや電子メールを分類するだけで保護する必要がない場合は、[分類のみの手順](client-classify.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
@@ -150,7 +150,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類と保護を設定します。 
 
-   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていませんが、カスタム アクセス許可で保護できます (手順 3)。 次に例を示します。
+   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていませんが、カスタム アクセス許可で保護できます (手順 3)。 以下に例を示します。
 
      ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
     
@@ -166,17 +166,17 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 4. [カスタムアクセス許可] オプションを選択した場合は、次のオプションを指定します。
     
-    |オプション  |説明  |
+    |Options  |説明  |
     |---------|---------|
     |**アクセス許可の選択**     |    選択したファイルを保護する場合のユーザーのアクセス レベルを選びます。     |
     |**ユーザー、グループ、または組織を選択する**     |  ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザー全員について、組織で使用する完全なメール アドレス、グループ メール アドレス、ドメイン名を入力します。 </br>あるいは、アドレス帳アイコンを使用して、Outlook のアドレス帳からユーザーまたはグループを選択できます。       |
-    |**アクセスの有効期限**     |  ファイルの期間が限定されていて、設定した日付を過ぎた後は指定したユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。自分は元のファイルを引き続き開くことができますが、(使用中のタイム ゾーンで) 設定した日付の深夜を過ぎた後は、指定したユーザーはファイルを開くことができなくなります。  <br><br>**注**: この設定が Office 2010 アプリからカスタムアクセス許可を使用して構成されている場合、指定された有効期限はこのダイアログボックスに表示されませんが、有効期限はまだ設定されています。 これは Office 2010 で有効期限を構成していた場合にのみ発生する表示上の問題です。 <br><br>**重要**: Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。     |
+    |**アクセスの有効期限**     |  ファイルの期間が限定されていて、設定した日付を過ぎた後は指定したユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。自分は元のファイルを引き続き開くことができますが、(使用中のタイム ゾーンで) 設定した日付の深夜を過ぎた後は、指定したユーザーはファイルを開くことができなくなります。  <br><br>**注**: この設定が Office 2010 アプリからカスタムアクセス許可を使用して構成されている場合、指定された有効期限はこのダイアログボックスに表示されませんが、有効期限はまだ設定されています。 これは Office 2010 で有効期限を構成していた場合にのみ発生する表示上の問題です。 <br><br>**重要**: Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「[AIP と従来の Windows および Office バージョン](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。     |
     |     |         |
 
 
 5. **[適用]** をクリックし、**"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、**[閉じる]** をクリックします。
 
-選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 次に例を示します。
+選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 以下に例を示します。
 
 ![Azure Information Protection のロック アイコンが付いた保護されたファイル](../media/Pfile.png)
 

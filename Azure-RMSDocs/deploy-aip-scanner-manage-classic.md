@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 06/29/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ROBOTS: NOINDEX
@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c23eb1770063bd0df18582125855580aa762b750
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: b23273fee458846ba639bdd141110fb6578f11fe
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806262"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809600"
 ---
 # <a name="running-the-azure-information-protection-classic-scanner"></a>Azure Information Protection クラシックスキャナーの実行
 
@@ -27,7 +27,7 @@ ms.locfileid: "97806262"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [Azure Information Protection スキャナーを実行する](deploy-aip-scanner-manage.md)」を参照してください。
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 [システム要件](deploy-aip-scanner-prereqs-classic.md)を確認し、スキャナーを[構成してインストールし](deploy-aip-scanner-configure-install-classic.md)たら、[検出スキャンを実行](#run-a-discovery-cycle-and-view-reports-for-the-scanner)して作業を開始します。
 

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 01/18/2021
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 553646119c5e83bbc475d77ab35a83ce5866e858
-ms.sourcegitcommit: d2fdba748daf47ee9aeadbdf3ce154ef399eadaf
+ms.openlocfilehash: 925ef5dda1f470dbba6f173df427d4672b853167
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98569097"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809924"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントのカスタム構成
 
@@ -195,7 +195,7 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 
 次のセクションでは、このページに記載されている詳細設定を製品と機能の統合別に示します。
 
-|特徴量  |詳細設定  |
+|機能  |詳細設定  |
 |---------|---------|
 |**Outlook および電子メールの設定**     | - [Outlook で S/MIME 保護を適用するようにラベルを構成する](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Outlook ポップアップメッセージをカスタマイズする](#customize-outlook-popup-messages) <br>- [Outlook で推奨分類を有効にする](#enable-recommended-classification-in-outlook)<br> - [必須ラベルから Outlook メッセージを除外する](#exempt-outlook-messages-from-mandatory-labeling) <br>- [添付ファイル付きの電子メールの場合は、それらの添付ファイルの最上位の分類に一致するラベルを適用します。](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [電子メールの受信者を検索するときに Outlook 配布リストを展開する](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [電子メールの送信を警告、ブロック、またはブロックするポップアップメッセージを Outlook に実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [S/MIME メールで Outlook のパフォーマンスの問題を回避する](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Outlook に別の既定のラベルを設定する](#set-a-different-default-label-for-outlook)     |
 |**PowerPoint の設定** | - [指定したテキストが含まれ、ヘッダー/フッターではない PowerPoint から図形を削除しない](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [PowerPoint カスタムレイアウト内から外部コンテンツマーキングを明示的に削除する](#extend-external-marking-removal-to-custom-layouts)<br>- [図形内のテキストで図形を削除するのではなく、ヘッダーとフッターから特定の図形名のすべての図形を削除する](#remove-all-shapes-of-a-specific-shape-name)  |
@@ -377,7 +377,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 
 次の表を使用して、指定する文字列値を指定します。
 
-| 文字列値| クライアント| スキャナー|
+| 文字列値| Client| スキャナー|
 |-------------|-------|--------|
 |\*|既定値: すべてのファイルの種類に保護を適用します。|すべてのファイルの種類に保護を適用する|
 |Convertto-html (".jpg", ".png")|Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。 | Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。
@@ -617,7 +617,7 @@ PowerPoint のヘッダーとフッターは、図形として実装されます
 
 - この値が指定されている場合は、図形名の条件を満たす図形だけでなく、 [Externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) によって提供された文字列と一致するテキストも削除されます。
 
-次に例を示します。
+以下に例を示します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
@@ -645,7 +645,7 @@ PowerPoint カスタムレイアウトを使用していて、ヘッダーとフ
 
 **PowerPointRemoveAllShapesByShapeName** 設定を使用すると、図形内のテキストは無視され、代わりに図形名を使用して、削除する図形が識別されます。
 
-次に例を示します。
+以下に例を示します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
@@ -1250,7 +1250,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProp
 
 機密ラベルによって適用されるメタデータに加えて、1つまたは複数のカスタムプロパティをドキュメントまたは電子メールメッセージに適用する場合は、いくつかのシナリオが考えられます。
 
-次に例を示します。
+以下に例を示します。
 
 - セキュリティで保護された島など、 [別のラベル付けソリューションから移行](#migrate-labels-from-secure-islands-and-other-labeling-solutions)しています。 移行中の相互運用性を確保するために、機密ラベルを使用して、他のラベル付けソリューションで使用されるカスタムプロパティを適用することもできます。
 
@@ -1278,7 +1278,7 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 > [!IMPORTANT]
 > 文字列に空白を使用すると、ラベルの適用ができなくなります。
 
-次に例を示します。
+以下に例を示します。
 
 - [例 1: ラベルに対して1つのカスタムプロパティを追加する](#example-1-add-a-single-custom-property-for-a-label)
 - [例 2: ラベルに対して複数のカスタムプロパティを追加する](#example-2-add-multiple-custom-properties-for-a-label)
@@ -1417,7 +1417,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするためのプロンプトが Office アプリケーションに表示されない場合は、[ **Microsoft Azure Information Protection** ] ダイアログボックスに戻り、[更新された **クライアントステータス**] セクションから [**サインイン**] を選択します。
 
-追加として:
+補足:
 
 |シナリオ  |説明  |
 |---------|---------|
@@ -1504,7 +1504,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **読み取り専用またはアーカイブ済みのファイルをスキップする**
 
-ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 次に例を示します。
+ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 以下に例を示します。
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -2010,7 +2010,7 @@ SharePoint バージョン2013以降に長いファイルパスがある場合�
 
 1. **web.config** 構成をバックアップします。 
 
-1. 必要に応じて **maxUrlLength** 値を更新します。 次に例を示します。
+1. 必要に応じて **maxUrlLength** 値を更新します。 以下に例を示します。
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />

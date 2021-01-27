@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/23/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
@@ -14,12 +14,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2224aa0ff69eeb29da0accb6bded70dbe94c60db
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 57f26f92535560a86377a34dcdfbb00a3453d73e
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806976"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809822"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -28,7 +28,7 @@ ms.locfileid: "97806976"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」を参照してください。 *
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 
 Azure Information Protection では、承認済みユーザーのコラボレーション機能を損なうことなく、ドキュメントを保護できます。 1 人のユーザーが作成し、表示や編集の権限を他のユーザーと共有するドキュメントの多くは、Word、Excel、PowerPoint の Office ドキュメントになります。 これらのドキュメントでは、保護機能がネイティブにサポートされます。つまり、認証と暗号化の機能だけでなく、より詳細に制御するための制限付き権限もサポートされます。 
@@ -85,7 +85,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ラベルを構成したら、次に示す各種の方法でラベルをドキュメントに適用できます。
 
-|ラベルの適用方法|説明|
+|ラベルの適用方法|詳細情報|
 |---------------|----------|
 |Office アプリケーションでのドキュメント作成時に、手動でラベルを選択する。|Office リボンの **[保護]** ボタンか、Azure Information Protection バーからラベルを選択します。|
 |新規ドキュメントの保存時に、ラベルを選択するように求められる。|**[すべてのドキュメントとメールにラベルを付ける]** という Azure Information Protection [ポリシー設定](configure-policy-settings.md)を構成した場合です。|
@@ -103,7 +103,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ## <a name="opening-and-editing-the-protected-document"></a>保護されたドキュメントを開いて編集する
 
-承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 例:
+承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 次に例を示します。
 
 ![Azure Information Protection の権限に関する情報バナーの例](./media/example-restricted-access-banner.png)
 

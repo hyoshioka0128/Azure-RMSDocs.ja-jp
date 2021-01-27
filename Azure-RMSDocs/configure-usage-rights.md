@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 39fedde68cfe771d29e9fda1be4a9f2883cf1ede
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 16cc8ae0424f307ae7f0ed864ca36f1a91230977
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164251"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809640"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Azure Information Protection の使用権限を構成する
 
@@ -27,7 +27,7 @@ ms.locfileid: "98164251"
 >***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 > 
 > 完全を期すため、この記事には 2018 年 1 月 8 日に廃止された Azure クラシック ポータルの値も含まれています。
 
@@ -158,7 +158,7 @@ Rights Management 発行者には、常にドキュメントまたは電子メ�
 
 - Rights Management 発行者は取り消されたドキュメントも開くことができます。 
 
-既定では、このアカウントはそのコンテンツの **Rights Management 所有者** でもあります。これは、ドキュメントまたは電子メールを作成したユーザーが保護を開始した場合です。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 例:
+既定では、このアカウントはそのコンテンツの **Rights Management 所有者** でもあります。これは、ドキュメントまたは電子メールを作成したユーザーが保護を開始した場合です。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 以下に例を示します。
 
 - 管理者がファイル共有のファイルを一括保護する: Azure AD の管理者アカウントがユーザーのためにドキュメントを保護します。
 
@@ -204,8 +204,8 @@ Azure Rights Management によって保護されたドキュメントまたは�
 
 |テンプレートの表示名|使用権限 (2017 年 10 月 6 日から現在)|使用権限 (2017 年 10 月 6 日より前)|
 |----------------|--------------------|----------|
-|\<*organization name> -社外秘、表示のみ * <br /><br />または<br /><br /> *非常に機密性の高い社外秘 \ すべての従業員*|表示、開く、読み取り、コピー、権利の表示、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集|表示、開く、読み取り|
-|\<*organization name>部外 <br /><br />または <br /><br />*社外秘 \ すべての従業員*|表示、開く、読み取り、名前を付けて保存、エクスポート、コピー、権利の表示、権利の変更、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集、フル コントロール|表示、開く、読み取り、名前を付けて保存、エクスポート、コンテンツの編集、編集、権利の表示、マクロの許可、転送、返信、全員に返信|
+|\<*organization name> -社外秘、表示のみ * <br /><br />or<br /><br /> *非常に機密性の高い社外秘 \ すべての従業員*|表示、開く、読み取り、コピー、権利の表示、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集|表示、開く、読み取り|
+|\<*organization name>部外 <br /><br />or <br /><br />*社外秘 \ すべての従業員*|表示、開く、読み取り、名前を付けて保存、エクスポート、コピー、権利の表示、権利の変更、マクロの許可、印刷、転送、返信、全員に返信、保存、コンテンツの編集、編集、フル コントロール|表示、開く、読み取り、名前を付けて保存、エクスポート、コンテンツの編集、編集、権利の表示、マクロの許可、転送、返信、全員に返信|
 
 ## <a name="see-also"></a>参照
 [Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)

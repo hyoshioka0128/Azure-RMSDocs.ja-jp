@@ -5,24 +5,24 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/28/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 874a73480e8d15380d9e69a532a1b8ff39d38eb7
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3fca14f82db5cd78727b14cc417517921baa0f7b
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384164"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808582"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Active Directory Rights Management Services モバイル デバイス拡張機能
 
 >***適用対象**: Windows Server 2019、2016、2012 R2、および 2012 *
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Active Directory Rights Management サービス (AD RMS) モバイルデバイス拡張機能を [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=43738) からダウンロードし、この拡張機能を既存の AD RMS 展開の上にインストールすることができます。 これにより、デバイスが最新の API 対応アプリをサポートしているときに、ユーザーが機微なデータを保護および使用できるようになります。 たとえば、ユーザーは次の操作を実行できます。
 - Azure Information Protection アプリを使用して、さまざまな形式 (.txt、.csv、.xml など) で保護されたテキストファイルを使用します。
@@ -225,7 +225,7 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |------|------|
 |Domain|_tcp. contoso .com
 |サービス|_rmsdisco
-|プロトコル|_http
+|Protocol|_http
 |Priority|0
 |Weight|0
 |ポート番号|443
@@ -235,7 +235,7 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |------|------|
 |Domain|_tcp. fabrikam .com
 |サービス|_rmsdisco
-|プロトコル|_http
+|Protocol|_http
 |Priority|0
 |Weight|0
 |ポート番号|443
@@ -252,7 +252,7 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |------|------|
 |Domain|_tcp. contoso .com
 |サービス|_rmsdisco
-|プロトコル|_http
+|Protocol|_http
 |Priority|0
 |Weight|0
 |ポート番号|443

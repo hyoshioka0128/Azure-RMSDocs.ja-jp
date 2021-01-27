@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 ms.date: 08/17/2020
 manager: rkarlin
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
@@ -14,12 +14,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6112682c202d32632e5d3678c4f7b0434018a4fb
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: d0d62ebbe7d1b50d99e2fc5191041f9f7e4274f8
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806313"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809696"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -28,7 +28,7 @@ ms.locfileid: "97806313"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」を参照してください。 *
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 クラシッククライアントの分類、ラベル付け、保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、Azure Information Protection クライアントがインストールされたコンピューターにダウンロードされます。
 

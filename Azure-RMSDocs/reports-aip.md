@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 ms.date: 11/09/2020
 manager: rkarlin
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
@@ -13,21 +13,21 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25ea3c8e008334ec50f81f0c5fcef15690132ef6
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 99c1fa6379f346477431caa884b687d39d500b7a
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386272"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808810"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Azure Information Protection の中央レポート (パブリックプレビュー)
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection analytics for central reporting を使用すると、組織のデータを分類して保護するラベルの導入を追跡するのに役立ちます。 さらに:
 
@@ -124,7 +124,7 @@ Azure Information Protection を使用すると、機密情報の種類 (定義�
 
 既定では Azure Information Protection クライアントはコンテンツの一致を送信しません。 コンテンツの一致が送信されるようにこの動作を変更するには:
 
-|クライアント  |Instructions  |
+|Client  |Instructions  |
 |---------|---------|
 |**統合ラベル付けクライアント**      |  ラベルポリシーの [詳細設定](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) を構成します。       |
 |**従来のクライアント**      |   Azure Information Protection analytics の [構成](#configure-a-log-analytics-workspace-for-the-reports) の一部としてチェックボックスをオンにします。 このチェックボックスを **オンにすると、機微なデータに対してより深い分析を行う** ことができます。 <br><br> このクライアントを使用しているほとんどのユーザーがコンテンツの一致を送信できないが、一部のユーザーがコンテンツの一致を送信できないようにする場合は、チェックボックスをオンにして、ユーザーのサブセットのスコープポリシーの [ [詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) ] を構成します。     |
@@ -169,7 +169,7 @@ Azure Information Protection analytics] ウィンドウにアクセスするに�
 - ワークスペースが作成された後、次のロールを使用して、収集されるデータを表示するアクセス許可を減らすことができます。
     
     - **セキュリティ閲覧者**
-    - **グローバルリーダー**
+    - **グローバル閲覧者**
 
 #### <a name="required-azure-log-analytics-roles"></a>必要な Azure Log Analytics ロール
 
@@ -264,7 +264,7 @@ Azure Information Protection のログに記録されたデータは、テーブ
 |列名|説明|
 |-----------|-----------|
 |**Time**|イベント時間: YYYY-MM-YYYY-MM-DDTHH: MM: SS 形式の UTC|
-|**User**|User: UPN または DOMAIN\USER の形式を設定します。|
+|**ユーザー**|User: UPN または DOMAIN\USER の形式を設定します。|
 |**ItemPath**|アイテムの完全なパスまたは電子メールの件名|
 |**ItemName**|ファイル名または電子メールの件名 |
 |**方法**|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|

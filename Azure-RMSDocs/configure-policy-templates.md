@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/16/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
@@ -14,12 +14,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 03a1f0d7d28db24614bb92fa78de41fdd11a12f9
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 761927f4815460b5b83b17e7f7481e1ff3a0cf9e
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98163690"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809718"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -28,7 +28,7 @@ ms.locfileid: "98163690"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 ドキュメントの「秘密度ラベルの暗号化を使用して、 [秘密度ラベル](/microsoft-365/compliance/sensitivity-labels) の詳細と [コンテンツへのアクセスを制限する](/microsoft-365/compliance/encryption-sensitivity-labels) 」を参照してください。 *
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 
 保護テンプレート (Rights Management テンプレート) は、Azure Information Protection 用の管理者が定義した保護設定のグループです。 これらの設定には、承認されたユーザー向けの選択した[使用権限](configure-usage-rights.md)や、有効期限やオフライン アクセス向けのアクセス制御が含まれます。 これらのテンプレートは Azure Information Protection ポリシーに統合されています。 

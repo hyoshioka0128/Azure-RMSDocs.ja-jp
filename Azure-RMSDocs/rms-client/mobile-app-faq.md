@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/24/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4b936baf799808fadbdaaefc0ae1fd55a6853fb2
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 94fc34bc7e1ec5c1802c78f3bf4347bfac75371f
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164456"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809895"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>IOS または Android 用の Azure Information Protection アプリとは
 
@@ -60,7 +60,7 @@ IOS および Android 用の Azure Information Protection (AIP) モバイルア�
 
     [**ファイルを共有**] を選択し、[ **AIP ビューアーにコピー** ] を選択します。
 
-    例:
+    次に例を示します。
 
     :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="IOS の AIP ビューアーに共有する" border="false":::
 
@@ -88,7 +88,7 @@ IOS および Android 用の AIP mobile apps では、次のファイルの種�
 |---------|---------|
 |**サポートされている OS のバージョン**     | 最小モバイル OSs には次のものが含まれます。 </br>-iOS 11  </br>-Android 6.0 </br></br>**注**: AIP モバイルアプリは Intel cpu ではサポートされていません。  |
 |**サポートされているサインイン資格情報**     | 次のいずれかを使用して、AIP mobile apps にサインインします。 </br></br>**職場または学校の資格情報。** 職場または学校の資格情報でログインしてみてください。 ご不明な点がある場合は、管理者に連絡して、組織がモバイルデバイス拡張機能を使用してオンプレミスで AD RMS ているか、Azure Information Protection を使用しているかを確認してください。 </br></br>**Microsoft アカウント。** 個人用の電子メールアドレスを使用してファイルを保護していた場合は、 [Microsoft アカウント](https://signup.live.com)でサインインします。 Microsoft アカウントに適用する必要がある場合は、独自の Hotmail、Gmail、またはその他の電子メールアドレスを使用できます。 </br></br>**注**: Microsoft アカウントで保護されたコンテンツを開くことができないアプリケーションもあります。 詳細については、「保護され [たドキュメントを開くためのサポートされるシナリオ](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)」を参照してください。|
-|**サポートされているファイルの種類**     | サポートされているファイルの種類には、保護された電子メールメッセージ、PDF ファイル、画像、テキストファイルなどがあります。 </br></br>たとえば、次のような拡張子が含まれています: **rpq msg**、 **.pdf**、 **ppdf**、 **pjpg**、 **pjpg**、 **pjpg**、. **ppdf**、 **pjpg**、 **pjpg** </br></br>サポートされているファイルの種類の完全な一覧については、 [AIP クライアント管理者ガイド](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)を参照してください。|
+|**サポートされるファイルの種類**     | サポートされているファイルの種類には、保護された電子メールメッセージ、PDF ファイル、画像、テキストファイルなどがあります。 </br></br>たとえば、次のような拡張子が含まれています: **rpq msg**、 **.pdf**、 **ppdf**、 **pjpg**、 **pjpg**、 **pjpg**、. **ppdf**、 **pjpg**、 **pjpg** </br></br>サポートされているファイルの種類の完全な一覧については、 [AIP クライアント管理者ガイド](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)を参照してください。|
 | | |
 
 ## <a name="admins-testing-the-aip-mobile-apps"></a>管理者: AIP mobile アプリのテスト

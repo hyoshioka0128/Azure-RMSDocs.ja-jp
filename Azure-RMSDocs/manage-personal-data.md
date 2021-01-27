@@ -5,28 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/04/2019
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 128989642e78ab0d7d45f53e5fc72a2c85bbf28f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 985f567189cbc65920b53af3f797d5c62d2671c5
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384266"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809448"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
->***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマーエクスペリエンスを提供するために、 **Azure Information Protection クラシッククライアント** および Azure Portal での **ラベル管理** は **、2021年3月31日** に **非推奨** となっています。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection を構成して使用すると、Azure Information Protection サービスによって電子メール アドレスと IP アドレスが格納され、使用されます。 これらの個人データは、次の項目に使用されます。
 
@@ -241,7 +241,7 @@ Azure Portal で表示および指定する個人データは、次のいずれ�
 
 - **グローバル管理者**
 
-- **グローバルリーダー**
+- **グローバル閲覧者**
 
 AIPService モジュール (または以前のモジュール AADRM) を使用して表示および指定する個人データにアクセスできるのは、 **Azure Information Protection 管理者**、 **コンプライアンス管理者**、 **コンプライアンスデータ管理者**、または Azure Active Directory の **グローバル管理者** ロールが割り当てられたユーザー、または保護サービスのグローバル管理者ロールです。
 

@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/29/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8cc4a6123a9b292212f573c75f2807905c646675
-ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
+ms.openlocfilehash: ba1c39f50e6861b134d09b3ba0ec2de870437962
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2021
-ms.locfileid: "98540204"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809610"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーの構成とインストール
 
@@ -158,7 +158,7 @@ Azure Information Protection スキャナーの構成とインストールを開
     |![列アイコン](media/i-columns.png "列アイコン")    | **列** を選択して、表示されるテーブルの列を変更します。        |
     |![更新アイコン](media/i-refresh.png "更新アイコン")   | スキャナーでネットワークスキャンの結果を最近実行した場合は、[ **更新** ] を選択してページを更新します。      |
     |![[追加] アイコン](media/i-add.png "[追加] アイコン")   | 表に一覧表示されている1つ以上のリポジトリを選択し、[ **選択した項目の割り当て** ] を選択して、それらをコンテンツスキャンジョブに割り当てます。          |
-    |**フィルター**     |   フィルター行には、現在適用されているすべてのフィルター条件が表示されます。 表示されたいずれかの条件を選択して設定を変更するか、[ **フィルターの追加** ] を選択して新しいフィルター条件を追加します。 <br /><br />[ **フィルター** ] を選択して変更を適用し、更新されたフィルターを使用してテーブルを更新します。       |
+    |**Assert**     |   フィルター行には、現在適用されているすべてのフィルター条件が表示されます。 表示されたいずれかの条件を選択して設定を変更するか、[ **フィルターの追加** ] を選択して新しいフィルター条件を追加します。 <br /><br />[ **フィルター** ] を選択して変更を適用し、更新されたフィルターを使用してテーブルを更新します。       |
     |![Log Analytics アイコン](media/i-log-analytics.png "Log Analytics アイコン") |[管理されていないリポジトリ] グラフの右上隅にある **Log Analytics** アイコンをクリックして、これらのリポジトリの Log Analytics データに移動します。 |
     | | |
 
@@ -233,7 +233,7 @@ Azure Information Protection スキャナーの構成とインストールを開
 
     SharePoint パスを追加するときは、次の構文を使用します。
     
-    |パス  |構文  |
+    |Path  |構文  |
     |---------|---------|
     |**ルートパス**     | `http://<SharePoint server name>` <br /><br />スキャナーユーザーに許可されているサイトコレクションも含め、すべてのサイトをスキャンします。 <br />ルートコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です        |
     |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれか: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |

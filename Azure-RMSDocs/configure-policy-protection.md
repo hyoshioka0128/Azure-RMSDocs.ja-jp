@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: fc02a679cfbc389cb4f09e72018f0b96a30a8b0a
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 4687241aa49bd760b3d246300f2e5004fe756591
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164320"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809725"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -26,7 +26,7 @@ ms.locfileid: "98164320"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 ドキュメントの「秘密度ラベルの暗号化を使用して、 [秘密度ラベル](/microsoft-365/compliance/sensitivity-labels) の詳細と [コンテンツへのアクセスを制限する](/microsoft-365/compliance/encryption-sensitivity-labels) 」を参照してください。 *
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 
 Rights Management サービスを使用して、最も機密性の高いドキュメントや電子メールを保護することができます。 このサービスでは、暗号化、ID、承認ポリシーを使用して、データ損失を防止します。 保護は、ドキュメントと電子メールに Rights Management による保護を使用するように構成されたラベルで適用されます。ユーザーは Outlook で **[転送不可]** ボタンを選択することもできます。

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cd07207751a3ad7f6bf929f0d94d9f8802f15436
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 7df480389741a900326477e8d6088ac9dc6da596
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164557"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808668"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-classic-client"></a>管理者ガイド: Azure Information Protection クラシッククライアントでの PowerShell の使用
 
@@ -27,11 +27,11 @@ ms.locfileid: "98164557"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [クライアント管理者ガイド](clientv2-admin-guide-powershell.md)」を参照してください。
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection クラシッククライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
-コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection を利用するコマンドレットもあります。 例:
+コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection を利用するコマンドレットもあります。 次に例を示します。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -334,7 +334,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test.docx
 ```
 
-フォルダー内のすべてのファイルを保護するには、**-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 例:
+フォルダー内のすべてのファイルを保護するには、**-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 次に例を示します。
 
 ```ps
 Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
@@ -351,7 +351,7 @@ InputFile                          EncryptedFile
 \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 ```
 
-保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも `Get-RMSFileStatus` コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 例:
+保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも `Get-RMSFileStatus` コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 次に例を示します。
 
 ```ps
 Get-RMSFileStatus -File \Server1\Documents\Test1.docx
@@ -365,7 +365,7 @@ FileName                              Status
 \Server1\Documents\Test1.docx         Protected
 ```
 
-ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っている必要があります。 あるいは、スーパー ユーザーとしてコマンドレットを実行する必要があります。 その後、Unprotect コマンドレットを使います。 例:
+ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っている必要があります。 あるいは、スーパー ユーザーとしてコマンドレットを実行する必要があります。 その後、Unprotect コマンドレットを使います。 次に例を示します。
 
 ```ps
 Unprotect-RMSFile C:\test.docx -InPlace
@@ -472,7 +472,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test.docx   
 ```
 
-フォルダー内のすべてのファイルを保護するには、-Folder パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 例:
+フォルダー内のすべてのファイルを保護するには、-Folder パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 次に例を示します。
 
 ```ps
 Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
@@ -489,7 +489,7 @@ InputFile                          EncryptedFile
 \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 ```
 
-保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも Get-RMSFileStatus コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 例: 
+保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも Get-RMSFileStatus コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 次に例を示します。 
 
 ```ps
 Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
@@ -503,7 +503,7 @@ FileName                              Status
 \\Server1\Documents\Test1.docx        Protected
 ```
 
-ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 例:
+ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 次に例を示します。
 
 ```ps
 Unprotect-RMSFile C:\test.docx -InPlace
@@ -622,7 +622,7 @@ C:\Test.docx                          C:\Test.docx
 
 26. [ **Api のアクセス許可の要求** ] ウィンドウで、[ **マイ api**] を選択します。
 
-27. [ **API の選択** ] セクションで [ **apionbehalfof**] を選択し、アクセス許可として [ **ユーザー偽装**] のチェックボックスをオンにします。 **[アクセス許可の追加]** を選択します. 
+27. [ **API の選択** ] セクションで [ **apionbehalfof**] を選択し、アクセス許可として [ **ユーザー偽装**] のチェックボックスをオンにします。 **[アクセス許可の追加]** を選択します。 
 
 28. [API の **アクセス許可**] ウィンドウに戻り、[**同意** する] セクションで、[**管理者の同意を許可 \<*your tenant name*> する**] を選択し、確認プロンプトで [**はい]** を選択します。
 
@@ -664,7 +664,7 @@ Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKe
 
 3. 先のセクションの指示に従ってこのコマンドを修正します。**WebAppId**、**WebAppkey**、**NativeAppId** パラメーターに独自の値を指定してください。 今回は **Token** パラメーターの値を指定しません。これは後で指定します。 
 
-    例: 
+    次に例を示します。 
 
     ```ps
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>
@@ -680,7 +680,7 @@ Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKe
     (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
     ```
 
-    例: 
+    次に例を示します。 
 
     ```ps
     (Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
@@ -719,7 +719,7 @@ Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKe
     必要に応じて、タスクを削除します。 トークンの有効期限が切れた場合、この過程を繰り返す必要があります。その場合、構成したタスクを残しておくと便利です。新しい PowerShell スクリプトを新しいトークン値で上書きコピーするとき、すぐに再実行できます。
 
 ## <a name="next-steps"></a>次のステップ
-PowerShell セッションでコマンドレットのヘルプを表示するには `Get-Help <cmdlet name> cmdlet` と入力します。また、最新情報を参照するには -online パラメーターを使用します。 例: 
+PowerShell セッションでコマンドレットのヘルプを表示するには `Get-Help <cmdlet name> cmdlet` と入力します。また、最新情報を参照するには -online パラメーターを使用します。 次に例を示します。 
 
 ```ps
 Get-Help Get-RMSTemplate -online
