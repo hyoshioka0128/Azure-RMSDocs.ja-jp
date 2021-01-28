@@ -4,7 +4,7 @@ description: Windows 用の Azure Information Protection (AIP) の統合され�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/07/2021
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 91f8975ddd3fe262a1ca7a0df1a7392fbda59a6a
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 30ed80c43494db6b9ad8c33827d138d3c7ae2065
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98559780"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958144"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -45,6 +45,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 |クライアントのバージョン|リリース日|
 |--------------|-------------|
+| 2.7.96  |01/20/2021 |
 |2.6.111.0 | 03/09/2020|
 |2.5.33.0 |2019/10/23|
 |2.2.21.0|09/03/2019|
@@ -144,7 +145,7 @@ NFS 共有のスキャンをサポートするには、スキャナーコンピ�
 
 アップグレードすると、エンドユーザーは保護されているドキュメントへのアクセスを取り消すこともできます。 Microsoft Office アプリからのアクセスを取り消すには、[**秘密度**] メニューの [新しい **取り消しアクセス**] オプションを使用します。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [管理者ガイド: Azure Information Protection を使用したドキュメントアクセスの追跡と取り消し](track-and-revoke-admin.md)
 - [ユーザーガイド: Azure Information Protection を使用したドキュメントアクセスの取り消し](revoke-access-user.md)
@@ -255,7 +256,7 @@ AIP 管理者は、すべての web 要求とファイル web 要求に対して
 
 **ネットワーク探索サービスを使用するには**
 
-1. スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。 詳細については次を参照してください:
+1. スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。 詳細については、次を参照してください。
     - [スキャナーをアップグレードする](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [スキャナークラスターを作成する](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
@@ -315,7 +316,7 @@ AIP 管理者は、エンドユーザーがドキュメントや電子メール�
 
 Azure Information Protection は、スキャナーでのダブルキー暗号化 (DKE) テンプレートベースのラベル付けと、エクスプローラーと PowerShell の使用をサポートするようになりました。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [Azure Information Protection テナント キーを計画して実装する](../plan-implement-tenant-key.md)
 - Microsoft 365 ドキュメントの[二重キー暗号化](/microsoft-365/compliance/double-key-encryption)
@@ -419,7 +420,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 
 スキャン済みのファイルが削除されたことをスキャナーが検出するたびに、監査ログが生成されるようになりました。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [ファイルが削除された監査ログ](../audit-logs.md#file-removed-audit-logs)
 - [Azure Information Protection の Central Reporting](../reports-aip.md)

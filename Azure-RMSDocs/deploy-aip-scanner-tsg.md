@@ -4,7 +4,7 @@ description: 統合されたオンプレミスのスキャナー展開のトラ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/27/2020
+ms.date: 01/26/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 16a8eb244cf920c9ebd9b2ee0a6a023b7782c25a
-ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
+ms.openlocfilehash: 46a994c5191e82d68f318e4900e0a5d45c1e176b
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2021
-ms.locfileid: "98540100"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958076"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>統合されたオンプレミスのスキャナー展開のトラブルシューティング
 
@@ -74,7 +74,7 @@ Start-AIPScannerDiagnostics
 |**認証エラー**     |  - [認証トークンが受け入れられません](#authentication-token-not-accepted) <br>  - [認証トークンがありません](#authentication-token-missing)|
 |**ポリシー エラー**     |  - [ポリシーがありません](#policy-missing) <br>- [ポリシーに自動ラベル付け条件が含まれていません](#policy-doesnt-include-any-automatic-labeling-condition)      |
 |**DB/スキーマエラー**     |  - [データベースエラー](#database-errors) <br> - [不一致または古いスキーマ](#mismatched-or-outdated-schema)  |
-|**その他のエラー**     |  - [スキャナープロセスをスタックする](#stuck-scanner-processes) <br>- [リモートサーバーに接続できません](#unable-to-connect-to-remote-server) <br>- [要求の送信中にエラーが発生しました](#error-occurred-while-sending-the-request) <br>- [コンテンツスキャンジョブまたはプロファイルがありません](#missing-content-scan-job-or-profile) <br>- [リポジトリが構成されていません](#no-repositories-configured) <br>- [クラスターが見つかりませんでした](#no-cluster-found)   |
+|**その他のエラー**     |  - [基になる接続が閉じられました](#underlying-connection-was-closed) <br> - [スキャナープロセスをスタックする](#stuck-scanner-processes) <br>- [リモートサーバーに接続できません](#unable-to-connect-to-remote-server) <br>- [要求の送信中にエラーが発生しました](#error-occurred-while-sending-the-request) <br>- [コンテンツスキャンジョブまたはプロファイルがありません](#missing-content-scan-job-or-profile) <br>- [リポジトリが構成されていません](#no-repositories-configured) <br>- [クラスターが見つかりませんでした](#no-cluster-found)   |
 |     |         |
 
 
@@ -112,7 +112,7 @@ Start-AIPScannerDiagnostics
 
 [Set AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)コマンドを実行するときは、スキャナーユーザーの代わりに token パラメーターを使用してください。
 
-次に例を示します。
+例:
 
 ```powershell
 $pscreds = Get-Credential CONTOSO\scanner
@@ -150,7 +150,7 @@ MIP ラベルとラベルポリシーの詳細については、Microsoft 365 �
 
 次のいずれかまたはすべての問題を確認します。
 
-|解答  |詳細  |
+|解決策  |詳細  |
 |---------|---------|
 |**コンテンツスキャンジョブの設定を確認する**     | Azure Portal で、次の操作を行います。 <br> <br>- [[**探索する情報の種類**] を [**すべて**] に設定します。](deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types)  <br>- [スキャン時に適用される既定のラベルを定義する](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository)      |
 |**ラベル付けポリシーの設定を確認する**     |  Microsoft 365 セキュリティ & コンプライアンスセンターなどのラベル付け管理センターで、次の操作を行います。 <br> <br>- [既定の秘密度ラベルを定義する](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)  <br> - [自動/推奨のラベル付け規則を定義する](/microsoft-365/compliance/apply-sensitivity-label-automatically)       |
@@ -193,6 +193,20 @@ MIP ラベルとラベルポリシーの詳細については、Microsoft 365 �
 
 
 <!--Other errors-->
+
+### <a name="underlying-connection-was-closed"></a>基になる接続が閉じられました
+
+**エラー メッセージ**
+
+`System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Authentication failed because the remote party has closed the transport stream.`
+
+**ソリューション**
+
+このエラーは、通常、TLS 1.2 が有効になっていないことを示します。
+
+詳細については、「 [ファイアウォールとネットワークインフラストラクチャ](requirements.md#firewalls-and-network-infrastructure)」を参照してください。 
+
+TLS 1.2 を有効にする方法については、Enterprise Mobility + Security のドキュメントの「 [tls 1.2 を有効にする方法](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) 」を参照してください。
 
 ### <a name="stuck-scanner-processes"></a>スキャナープロセスをスタックする
 

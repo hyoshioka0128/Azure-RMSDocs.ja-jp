@@ -4,7 +4,7 @@ description: Azure Information Protection 統合されたラベル付けスキ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/17/2020
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3f0093e2877ffe15232ed5704dcf2567b8ed99c4
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 1ef4eb6a25a61f385b1f02b6a32925f6c83c6224
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164183"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958093"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーをインストールおよび展開するための要件
 
@@ -37,7 +37,6 @@ ms.locfileid: "98164183"
 - [SharePoint の要件](#sharepoint-requirements)
 - [Microsoft Office の要件](#microsoft-office-requirements)
 - [ファイルパスの要件](#file-path-requirements)
-- [使用状況の統計情報の要件](#usage-statistics-requirements)
 
 組織のポリシーによって禁止されているため、スキャナーに記載されているすべての要件を満たすことができない場合は、「 [代替構成](#deploying-the-scanner-with-alternative-configurations) 」セクションを参照してください。
 
@@ -195,13 +194,6 @@ Office ドキュメントをスキャンするには、ドキュメントは次�
 |**Windows 10 バージョン 1607 以降**     |  更新された **MAX_PATH** 機能を選択します。 詳細については、「 [Windows 10 バージョン1607以降での長いパスの有効化](/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later)」を参照してください。      |
 | | |
 
-## <a name="usage-statistics-requirements"></a>使用状況の統計情報の要件
-
-次のいずれかの方法を使用して使用状況の統計を無効にします。
-
-- [Allowtelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer)パラメーターを0に設定しています
-
-- スキャナーのインストールプロセス中に、[ **使用状況の統計を Microsoft に送信して Azure Information Protection を改善** する] オプションが選択されていないことを確認します。
 
 ## <a name="deploying-the-scanner-with-alternative-configurations"></a>代替構成でのスキャナーのデプロイ
 
@@ -337,7 +329,7 @@ Azure portal から切断されたコンピューターをサポートするに�
 |**Sysadmin ロールをまったく持つことはできません。**     |  Sysadmin ロールが一時的に付与されていない場合は、スキャナーをインストールする前に、データベースを手動で作成するための Sysadmin 権限をユーザーに要求する必要があります。 <br><br>この構成では、 **db_owner** ロールが次のアカウントに割り当てられている必要があります。 <br>-スキャナーのサービスアカウント<br>-スキャナーインストール用のユーザーアカウント<br>-スキャナー構成のユーザーアカウント <br><br>通常、スキャナーのインストールと構成には同じユーザー アカウントを使用します。 異なるアカウントを使用する場合は、どちらもスキャナー構成データベースの **db_owner** ロールが必要です。 必要に応じて、このユーザーと権限を作成します。 独自のクラスター名を指定した場合、構成データベースの名前は **cluster_name>AIPScannerUL_<** になります。  |
 | | |
 
-追加として:
+補足:
 
 - スキャナーを実行するサーバーのローカル管理者である必要があります。
 - スキャナーを実行するサービスアカウントには、次のレジストリキーに対するフルコントロールのアクセス許可が付与されている必要があります。

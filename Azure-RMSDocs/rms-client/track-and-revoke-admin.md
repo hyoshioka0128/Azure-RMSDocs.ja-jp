@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: e3d9c81c42c202fc09dd6ab11559c915bdfeafef
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: fc9b1f4f3e23302832c55eea4c871a27d11b6813
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809848"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958110"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>管理者ガイド: Azure Information Protection を使用したドキュメントアクセスの追跡と取り消し (パブリックプレビュー)
 
@@ -57,7 +57,7 @@ ms.locfileid: "98809848"
 
 1. ドキュメントの **ContentID** と共に [Get AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog)コマンドレットを使用して、追跡データを返します。
 
-    以下に例を示します。
+    例:
     
     ```PowerShell
     Get-AipServiceTrackingLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
@@ -73,7 +73,7 @@ ms.locfileid: "98809848"
     
     [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog)を使用して、保護を適用したユーザーのファイル名や電子メールアドレスを使用してドキュメントを検索します。
     
-    以下に例を示します。
+    例:
         
     ```PowerShell
     Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
@@ -88,7 +88,7 @@ ms.locfileid: "98809848"
 
 1. ドキュメントの ContentID によって設定された [AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) を使用して、アクセスを取り消します。
 
-    以下に例を示します。
+    例:
 
     ```PowerShell
     Set-AipServiceDocumentRevoked -ContentId 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
@@ -105,9 +105,12 @@ ms.locfileid: "98809848"
 
 特定のドキュメントへのアクセスを誤って取り消した場合は、 [Clear-AipServiceDocumentRevoked](/powershell/module/aipservice/clear-aipservicedocumentrevoked)コマンドレットで同じ **ContentID** 値を使用して、アクセスを取り消します。 
 
-以下に例を示します。
+**クリア-AipServiceDocumentRevoked** コマンドレットを使用するには、最初に **AipService.dll** を読み込む必要があります。
+
+例:
 
 ```PowerShell
+Import-Module -Name "C:\Program Files\WindowsPowerShell\Modules\AIPService\1.0.0.4\AipService.dll"
 Clear-AipServiceDocumentRevoked -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
 ```
 
