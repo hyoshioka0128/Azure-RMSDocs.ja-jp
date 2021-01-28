@@ -1,18 +1,18 @@
 ---
 title: クイック スタート - C++ MIP SDK を使用したファイルの機密ラベルの設定および取得
-description: Microsoft Information Protection C++ SDK を使用して、ファイルに機密ラベルを設定および取得する方法を説明するクイック スタート。
+description: Microsoft Information Protection C++ SDK を使用して、ファイルの秘密度ラベルを設定および取得する方法について説明するクイック スタート (C++)
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 41c91ed1453b0819be727d333e15987ee9b3da3a
-ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
+ms.openlocfilehash: 101e99790c09acb52841d81e139802b039adb710
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865163"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659172"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート: 機密ラベルの設定および取得 (C++)
 
