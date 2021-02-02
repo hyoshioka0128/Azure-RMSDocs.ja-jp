@@ -4,7 +4,7 @@ description: Windows 用の Azure Information Protection (AIP) の統合され�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/27/2021
+ms.date: 02/02/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 30ed80c43494db6b9ad8c33827d138d3c7ae2065
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 065007e14f96c0d4cfddf4ea93a680c5e6bdf138
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958144"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473023"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -93,6 +93,14 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
     - [統一されたラベル付けスキャナーの修正と機能強化](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [統一されたラベル付けクライアントの修正と機能強化](#fixes-and-improvements-for-the-unified-labeling-client)
+
+- **既知の問題**: 最新の GA バージョン (2.9.111) で問題が特定されました。一部のユーザーは、次のシナリオで保護されたファイルを表示できません。
+    
+    - 保護されたファイルが、外部ユーザーなどの AIP ポリシーが構成されていないユーザーと共有されている場合。 この問題は、 [AIP Viewer アプリ](clientv2-view-use-files.md)でのみ発生します。
+
+    - スコープが指定されているラベルのコンテンツが、ラベルのスコープに含まれていないユーザーまたはグループと共有されている場合。 この問題は、 [AIP Viewer アプリ](clientv2-view-use-files.md) と、 [エクスプローラー](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files)を使用して共有コンテンツを表示または分類する場合の両方で発生します。
+    
+    この問題に対して積極的に取り組んでおり、修正プログラムの配信計画を更新しました。
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>接続されていないスキャナーサーバーに対する PowerShell のサポート
 
@@ -208,7 +216,7 @@ Azure Information Protection 統合された [ラベル付けスキャナー](..
 
     - [検出された変更のフル再スキャン (オプション)](#optional-full-rescans-for-changes-detected)
     - [SharePoint のタイムアウトを構成する](#configure-sharepoint-timeouts)
-    - [ネットワーク探索のサポート](#network-discovery-support)
+    - [ネットワーク探索のサポート](#network-discovery-support-public-preview) (パブリックプレビュー)
 
 - **クライアントの新機能**:
 
@@ -245,14 +253,14 @@ AIP 管理者は、すべての web 要求とファイル web 要求に対して
 
 詳細については、「 [SharePoint のタイムアウトを構成する](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts)」を参照してください。
 
-### <a name="network-discovery-support"></a>ネットワーク探索のサポート
+### <a name="network-discovery-support-public-preview"></a>ネットワーク探索のサポート (パブリックプレビュー)
 
 統一されたラベル付けスキャナーに新しい **ネットワーク探索** サービスが含まれるようになりました。これにより、機密性の高いコンテンツを持つ可能性のあるネットワークファイル共有の指定した IP アドレスまたは範囲をスキャンできます。
 
 **ネットワーク探索** サービスは、検出されたアクセス許可とアクセス権に基づいて、リスクがある可能性のある共有の場所の一覧を使用して **リポジトリ** のレポートを更新します。 更新された **リポジトリ** レポートで、スキャンする必要があるすべてのリポジトリがコンテンツスキャンジョブに含まれていることを確認します。
 
 > [!TIP]
-> 詳細については、「 [ネットワーク探索のコマンドレット](#network-discovery-cmdlets)」を参照してください。
+> 詳細については、「 [ネットワーク探索のコマンドレット](#network-discovery-cmdlets-public-preview)」を参照してください。
 
 **ネットワーク探索サービスを使用するには**
 
@@ -277,7 +285,7 @@ AIP 管理者は、すべての web 要求とファイル web 要求に対して
 
 1. [新しい [**リポジトリ**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) ] ウィンドウで生成されたレポートを使用して、危険にさらされる可能性のある追加のネットワークファイル共有を見つけます。 リスクの高いファイル共有を [コンテンツスキャンジョブ](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) に追加して、追加されたリポジトリで機微なコンテンツをスキャンします。
 
-#### <a name="network-discovery-cmdlets"></a>ネットワーク探索のコマンドレット
+#### <a name="network-discovery-cmdlets-public-preview"></a>ネットワーク探索のコマンドレット (パブリックプレビュー)
 
 ネットワーク探索用に追加された PowerShell コマンドレットは次のとおりです。
 

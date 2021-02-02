@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1ef4eb6a25a61f385b1f02b6a32925f6c83c6224
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 767438db1703c60a545f0b38234f4d7c57b9b569
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958093"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473006"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーをインストールおよび展開するための要件
 
@@ -267,7 +267,7 @@ Azure portal から切断されたコンピューターをサポートするに�
     
     **ネットワークスキャンジョブのオフライン管理を有効にする**:
 
-    1. ネットワーク探索サービスをオフラインモードで機能するように設定するには、 [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) コマンドレットを使用します。
+    1. [MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration)コマンドレットを使用して、ネットワーク探索サービス (パブリックプレビュー) をオフラインモードで機能するように設定します。
 
     1. Azure portal でネットワークスキャンジョブを構成します。 詳細については、「 [ネットワークスキャンジョブの作成](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job)」を参照してください。
     

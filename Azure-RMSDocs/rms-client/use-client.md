@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e715ca9f5131095e38e0fb9589494924ae36210f
-ms.sourcegitcommit: b82640b2af14b383a3d4d73692f3da907dc0f191
+ms.openlocfilehash: fd76ce1c8efa79050869a93a311f0ae80d59d0b4
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98711871"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473040"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -28,7 +28,7 @@ ms.locfileid: "98711871"
 >***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 
 Azure Information Protection の統一されたラベル付けクライアントは、組織のドキュメントや電子メールを保護するのに役立つクライアントサーバーソリューションを提供します。これは、 [Microsoft Office 用の組み込みのラベル付けソリューション](/microsoft-365/compliance/sensitivity-labels)の代替手段です。 
@@ -157,33 +157,33 @@ Windows コンピューターの3つのラベル付けソリューションで�
 |**ラベルに対するユーザー定義のアクセス許可**: <br />メールに転送しない| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |
 |**ラベルに対するユーザー定義のアクセス許可**: <br />Word、Excel、PowerPoint のカスタムアクセス許可| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |
 |**複数言語によるラベルのサポート**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |![はい](../media/yes-icon.png) |
-|**電子メールの添付ファイルからのラベルの継承**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png)  | ![いいえ](../media/no-icon.png)|
-|次 **のようなカスタマイズが含ま** れます。<br />- メールの既定のラベル<br />-Outlook でメッセージをポップアップ表示する <br />- S/MIME のサポート<br />- [問題の報告] オプション| ![はい ](../media/yes-icon.png) <sup>1</sup> | ![はい ](../media/yes-icon.png) <sup>2</sup> |  ![いいえ](../media/no-icon.png)|
-|**オンプレミスのデータストアのスキャナー**| ![はい](../media/yes-icon.png) |  ![はい](../media/yes-icon.png) |  ![いいえ](../media/no-icon.png)|
-|**中央レポート (分析)**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |  ![いいえ](../media/no-icon.png)|
-|**ラベルとは別に設定するカスタムアクセス許可**| ![はい](../media/yes-icon.png) | ![はい ](../media/yes-icon.png) <sup>3</sup>|  ![いいえ](../media/no-icon.png)|
-|**Office アプリの Information Protection バー**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png)|  ![いいえ](../media/no-icon.png)|
+|**電子メールの添付ファイルからのラベルの継承**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png)  | ![no](../media/no-icon.png)|
+|次 **のようなカスタマイズが含ま** れます。<br />- メールの既定のラベル<br />-Outlook でメッセージをポップアップ表示する <br />- S/MIME のサポート<br />- [問題の報告] オプション| ![はい ](../media/yes-icon.png) <sup>1</sup> | ![はい ](../media/yes-icon.png) <sup>2</sup> |  ![no](../media/no-icon.png)|
+|**オンプレミスのデータストアのスキャナー**| ![はい](../media/yes-icon.png) |  ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**中央レポート (分析)**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**ラベルとは別に設定するカスタムアクセス許可**| ![yes](../media/yes-icon.png) | ![はい ](../media/yes-icon.png) <sup>3</sup>|  ![no](../media/no-icon.png)|
+|**Office アプリの Information Protection バー**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 |**ラベルアクションとしての視覚的なマーキング**<br> (ヘッダー、フッター、透かし)| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png)|
 |**アプリごとの視覚的マーキング**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![はい ](../media/yes-icon.png) <sup>9</sup>|
 |**変数を使用した動的な視覚的マーキング**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![はい ](../media/yes-icon.png) <sup>9</sup>|
-|**アプリ内の外部コンテンツマークの削除**| ![はい](../media/yes-icon.png)| ![はい](../media/yes-icon.png)| ![いいえ](../media/no-icon.png)|
-|**ファイルエクスプローラーでラベルを付ける**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |  ![いいえ](../media/no-icon.png)|
-|**保護されたファイルのビューアー** <br> (テキスト、画像、PDF、. pfile)| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![いいえ](../media/no-icon.png)|
-|**ラベルを適用するための PPDF のサポート**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![いいえ](../media/no-icon.png)|
-|**PowerShell のラベル付けコマンドレット**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png)  |  ![いいえ](../media/no-icon.png)|
-|**保護アクションのオフラインサポート**| ![はい](../media/yes-icon.png) | ![はい ](../media/yes-icon.png) <sup>4</sup> | ![はい](../media/yes-icon.png) |
-|**切断されたコンピューターのポリシーファイルの手動管理**| ![はい](../media/yes-icon.png) |![はい](../media/yes-icon.png)|  ![いいえ](../media/no-icon.png)|
-|**HYOK のサポート**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![いいえ](../media/no-icon.png)|
-|**イベントビューアーの使用状況ログ**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)| ![いいえ](../media/no-icon.png)|
-|**Outlook の [転送不可] ボタンを表示する**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![いいえ](../media/no-icon.png)|
-|**保護されたドキュメントの追跡**| ![可 ](../media/yes-icon.png) <sup>5</sup> | ![可 ](../media/yes-icon.png) <sup>5</sup> |  ![いいえ](../media/no-icon.png)|
-|**保護されたドキュメントの取り消し**| ![可 ](../media/yes-icon.png) <sup>5</sup> |  ![可 ](../media/yes-icon.png) <sup>5</sup>|  ![いいえ](../media/no-icon.png)|
-|**保護のみモード** (ラベルなし)| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![いいえ](../media/no-icon.png)|
-|**アカウントの切り替えのサポート**|  ![no](../media/no-icon.png)|  ![いいえ](../media/no-icon.png)| ![はい](../media/yes-icon.png) |
+|**アプリ内の外部コンテンツマークの削除**| ![はい](../media/yes-icon.png)| ![はい](../media/yes-icon.png)| ![no](../media/no-icon.png)|
+|**ファイルエクスプローラーでラベルを付ける**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**保護されたファイルのビューアー** <br> (テキスト、画像、PDF、. pfile)| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![no](../media/no-icon.png)|
+|**ラベルを適用するための PPDF のサポート**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
+|**PowerShell のラベル付けコマンドレット**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png)  |  ![no](../media/no-icon.png)|
+|**保護アクションのオフラインサポート**| ![yes](../media/yes-icon.png) | ![はい ](../media/yes-icon.png) <sup>4</sup> | ![yes](../media/yes-icon.png) |
+|**切断されたコンピューターのポリシーファイルの手動管理**| ![はい](../media/yes-icon.png) |![はい](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
+|**HYOK のサポート**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
+|**イベントビューアーの使用状況ログ**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)| ![no](../media/no-icon.png)|
+|**Outlook の [転送不可] ボタンを表示する**| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
+|**保護されたドキュメントの追跡**| ![可 ](../media/yes-icon.png) <sup>5</sup> | ![可 ](../media/yes-icon.png) <sup>5</sup> |  ![no](../media/no-icon.png)|
+|**保護されたドキュメントの取り消し**| ![可 ](../media/yes-icon.png) <sup>5</sup> |  ![可 ](../media/yes-icon.png) <sup>5</sup>|  ![no](../media/no-icon.png)|
+|**保護のみモード** (ラベルなし)| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
+|**アカウントの切り替えのサポート**|  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)| ![はい](../media/yes-icon.png) |
 |**リモートデスクトップサービスのサポート**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |
-|**AD RMS のサポート**| ![はい](../media/yes-icon.png) |  ![× ](../media/no-icon.png) <sup>6</sup> |  ![いいえ](../media/no-icon.png)|
+|**AD RMS のサポート**| ![yes](../media/yes-icon.png) |  ![× ](../media/no-icon.png) <sup>6</sup> |  ![no](../media/no-icon.png)|
 |**Microsoft Office 97-2003 形式のサポート**| ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) |  ![](../media/no-icon.png) <sup>8</sup>なし|
-|**二重キーの暗号化**|  ![いいえ](../media/no-icon.png)| ![はい](../media/yes-icon.png) |  ![いいえ](../media/no-icon.png)|
+|**二重キーの暗号化**|  ![no](../media/no-icon.png)| ![はい](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
 |**政府機関向けコミュニティクラウド** | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png) | ![はい](../media/yes-icon.png)|
 | | | | |
 
@@ -227,7 +227,7 @@ Azure Information Protection クラシッククライアントと Azure Informat
 |**添付ファイルに対するサブラベルのサポートの注文** | [クライアントの詳細設定](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments)で有効 | 既定で有効になっています。構成は必要ありません|
 |**ファイルの種類の既定の保護動作を変更する**| [レジストリの編集](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)を使用して、ネイティブ保護と汎用保護の既定値を上書きする | [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)を使用して保護するファイルの種類を変更する|
 |**自動再スキャン** | スキャナーがポリシーまたはラベル設定の変更を検出するたびに、フルスキャンが自動的に実行されます。 | バージョン [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850)以降では、ポリシーまたはコンテンツスキャンジョブの設定を変更した後、完全な再スキャンをスキップするように管理者が選択できます。 |
-|**ネットワーク検出** |クラシックスキャナーではネットワーク探索機能を使用できません | 管理者は、指定された IP アドレスまたは範囲をスキャンすることで、他の危険なリポジトリを検出できます。|
+|**ネットワーク探索** (パブリックプレビュー) |クラシックスキャナーではネットワーク探索機能を使用できません | 管理者は、指定された IP アドレスまたは範囲をスキャンすることで、他の危険なリポジトリを検出できます。|
 | | | |
 
 ### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合されたラベル付けクライアントに含まれていない機能
@@ -257,7 +257,7 @@ Azure Information Protection classic クライアントは、サブラベルを�
 
 パリティについて、Azure Information Protection 統合ラベル付けクライアントでも、管理センターでこれらのラベルを選択できる場合でも、サブラベルのある親ラベルの適用はサポートされていません。 このシナリオでは、Azure Information Protection 統合ラベル付けクライアントで親ラベルが適用されません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection 統合ラベル付けクライアントをインストールして構成するには、次を参照してください。
 
