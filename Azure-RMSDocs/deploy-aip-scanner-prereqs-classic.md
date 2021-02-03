@@ -4,7 +4,7 @@ description: Azure Information Protection クラシックスキャナーをイ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/27/2020
+ms.date: 02/03/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e68879b51d53862744cdeebbae587c5db7b74daa
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: fb1d7a7ce57eb6ae8659b7e268726143d4ca4028
+ms.sourcegitcommit: 1aba7f2d5c15f2657d1db293118f6670bf99323d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806177"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505273"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Azure Information Protection クラシックスキャナーをインストールして展開するための前提条件
 
@@ -27,7 +27,7 @@ ms.locfileid: "97806177"
 >***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 ラベル付けされた統合スキャナーについては、「[統合スキャナーの前提条件](deploy-aip-scanner-prereqs.md)」を参照してください。*
 
 > [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 オンプレミスの Azure Information Protection スキャナーをインストールする前に、システムが基本的な [Azure Information Protection 要件](requirements.md)に準拠していること、およびスキャナーに固有の次の要件を満たしていることを確認してください。
 
@@ -39,7 +39,6 @@ ms.locfileid: "97806177"
 - [SharePoint の要件](#sharepoint-requirements)
 - [Microsoft Office の要件](#microsoft-office-requirements)
 - [ファイルパスの要件](#file-path-requirements)
-- [使用状況の統計情報の要件](#usage-statistics-requirements)
 
 組織のポリシーによって禁止されているためにテーブル内のすべての要件を満たすことができない場合は、「 [代替構成](#deploying-the-scanner-with-alternative-configurations) 」セクションを参照してください。
 
@@ -175,15 +174,6 @@ Windows 10 および windows Server 2016 は、次の [グループポリシー�
 
 長いファイルのパスのサポートについて詳しくは、Windows 10 開発者向けドキュメントの「[Maximum Path Length Limitation (パスの最大長の制限)](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」をご覧ください。
 
-## <a name="usage-statistics-requirements"></a>使用状況の統計情報の要件
-
-次のいずれかの方法を使用して使用状況の統計を無効にします。
-
-- [Allowtelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer)パラメーターを0に設定しています
-
-- スキャナーのインストールプロセス中に、[ **使用状況の統計を Microsoft に送信して Azure Information Protection を改善** する] オプションが選択されていないことを確認します。
-
-
 ## <a name="deploying-the-scanner-with-alternative-configurations"></a>代替構成でのスキャナーのデプロイ
 
 上記の前提条件は、スキャナー展開の既定の要件であり、最も単純なスキャナー構成をサポートしているため推奨されています。
@@ -242,7 +232,7 @@ Windows 10 および windows Server 2016 は、次の [グループポリシー�
 
     スキャナーに独自のクラスター (プロファイル) 名を指定しない場合、構成データベースには **AIPScanner_ \<computer_name>** という名前が付けられます。 </br>引き続き、 [ユーザーの作成と、データベースに対する db_owner 権限の付与](#create-a-user-and-grant-db_owner-rights-manually)を行います。 
 
-追加として:
+補足:
 
 - スキャナーを実行するサーバーのローカル管理者である必要があります。
 - スキャナーを実行するサービスアカウントには、次のレジストリキーに対するフルコントロールのアクセス許可が付与されている必要があります。
@@ -305,7 +295,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 ラベルに自動ラベルの条件がない場合は、スキャナーを構成するときに、次のいずれかのオプションを使用することを計画します。
 
-|オプション  |[説明]  |
+|オプション  |説明  |
 |---------|---------|
 |**すべての情報の種類を検出**     |  [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)で、[情報の **種類**] を [検出済み]**に設定します。** </br></br>このオプションは、すべての機密情報の種類についてコンテンツをスキャンするようにコンテンツスキャンジョブを設定します。      |
 |**既定のラベルを定義する**     |   [ポリシー](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do)、[コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)、または[リポジトリ](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository)で既定のラベルを定義します。 </br></br>この場合、スキャナーは、見つかったすべてのファイルに既定のラベルを適用します。       |
