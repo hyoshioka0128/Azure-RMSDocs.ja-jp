@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: e3b8c14c63c3ac6300c84349212db0e177a0dd7d
-ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
+ms.openlocfilehash: db57d4cdcf0d9153af2c6c1310019e8d1700e96c
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240888"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473074"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>チュートリアル: Azure Information Protection (AIP) スキャナーを使用して機密コンテンツを検出する
 
@@ -94,7 +94,7 @@ Azure Information Protection クライアントには、システム管理者が
 :::image type="content" source="media/qs-tutor/scanned-network.png" alt-text="更新されたネットワーク スキャン ジョブ":::
 
 > [!TIP]
-> ネットワーク スキャン ジョブが実行されない場合は、スキャナー コンピューター上に[ネットワーク探索サービスが正しくインストールされている](tutorial-install-scanner.md#install-the-network-discovery-service)ことを確認してください。
+> ネットワーク スキャン ジョブが実行されない場合は、スキャナー コンピューター上に[ネットワーク探索サービスが正しくインストールされている](tutorial-install-scanner.md#install-the-network-discovery-service-public-preview)ことを確認してください。
 
 「[危険なリポジトリをコンテンツ スキャン ジョブに追加する](#add-risky-repositories-to-a-content-scan-job)」に進みます。
 

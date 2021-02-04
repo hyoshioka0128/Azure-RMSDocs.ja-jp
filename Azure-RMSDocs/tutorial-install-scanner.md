@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 54bb64810e2dc71f6356dfe60c0443dccfb87315
-ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
+ms.openlocfilehash: e9c6769781c81e03c6ed47f12b62eb3afefb40a7
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240871"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473057"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>チュートリアル:Azure Information Protection (AIP) 統合ラベル付けスキャナーのインストール
 
@@ -180,9 +180,9 @@ Azure Information Protection が Azure portal で使用できないこともあ�
 
 これで、Azure AD への認証を行うためのトークンがスキャナーに与えられました。 このトークンは、Azure Active Directory 内で構成されている限り有効です。 トークンの有効期限が切れた場合は、この手順を繰り返す必要があります。
 
-[オプションのネットワーク探索サービスのインストール](#install-the-network-discovery-service)に関するセクションに進みます。それに従えば、ネットワーク リポジトリをスキャンして危険にさらされるおそれがあるコンテンツがないかを調べてから、それらのリポジトリをコンテンツ スキャン ジョブに追加することができます。
+[オプションのネットワーク探索サービスのインストール](#install-the-network-discovery-service-public-preview)に関するセクションに進みます。それに従えば、ネットワーク リポジトリをスキャンして危険にさらされるおそれがあるコンテンツがないかを調べてから、それらのリポジトリをコンテンツ スキャン ジョブに追加することができます。
 
-## <a name="install-the-network-discovery-service"></a>ネットワーク探索サービスをインストールする
+## <a name="install-the-network-discovery-service-public-preview"></a>ネットワーク探索サービスをインストールする (パブリック プレビュー)
 
 AIP 統合ラベル付けクライアントのバージョン [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) 以降、管理者は AIP スキャナーを使用してネットワーク リポジトリをスキャンして、危険にさらされるおそれがあると考えられるリポジトリをコンテンツ スキャン ジョブに追加することができます。
 
