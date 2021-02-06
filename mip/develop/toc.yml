@@ -123,6 +123,8 @@
           href: concept-classification-labels.md
         - name: ラベルと保護の動作
           href: concept-labeling-and-protection.md
+        - name: ユーザー定義のアクセス許可
+          href: concept-user-defined-permissions.md
     - name: メタデータ
       href: concept-mip-metadata.md
     - name: 非同期のオブザーバー (C++)
