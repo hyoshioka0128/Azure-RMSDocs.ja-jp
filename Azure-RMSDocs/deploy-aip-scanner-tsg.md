@@ -4,7 +4,7 @@ description: 統合されたオンプレミスのスキャナー展開のトラ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/26/2021
+ms.date: 02/01/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 46a994c5191e82d68f318e4900e0a5d45c1e176b
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 84b2434004149c03888d15fdec34d2910b45ae9d
+ms.sourcegitcommit: 7aa72a673a97d84a7aac36d912b118d68b4a5228
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958076"
+ms.lasthandoff: 02/07/2021
+ms.locfileid: "99804421"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>統合されたオンプレミスのスキャナー展開のトラブルシューティング
 
@@ -112,7 +112,7 @@ Start-AIPScannerDiagnostics
 
 [Set AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)コマンドを実行するときは、スキャナーユーザーの代わりに token パラメーターを使用してください。
 
-例:
+次に例を示します。
 
 ```powershell
 $pscreds = Get-Credential CONTOSO\scanner
@@ -204,9 +204,11 @@ MIP ラベルとラベルポリシーの詳細については、Microsoft 365 �
 
 このエラーは、通常、TLS 1.2 が有効になっていないことを示します。
 
-詳細については、「 [ファイアウォールとネットワークインフラストラクチャ](requirements.md#firewalls-and-network-infrastructure)」を参照してください。 
+詳細については、次を参照してください。
 
-TLS 1.2 を有効にする方法については、Enterprise Mobility + Security のドキュメントの「 [tls 1.2 を有効にする方法](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) 」を参照してください。
+- [ファイアウォールとネットワークインフラストラクチャの要件](requirements.md#firewalls-and-network-infrastructure)
+- [TLS 1.2 を有効にする方法](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) 
+- [Office Online Server で TLS 1.1 および TLS 1.2 のサポートを有効にする](/officeonlineserver/enable-tls-1-1-and-tls-1-2-support-in-office-online-server)
 
 ### <a name="stuck-scanner-processes"></a>スキャナープロセスをスタックする
 
@@ -268,9 +270,11 @@ TLS 1.2 を有効にする方法については、Enterprise Mobility + Security
 
 このエラーは、通常、TLS 1.2 が有効になっていないことを示します。
 
-詳細については、「 [ファイアウォールとネットワークインフラストラクチャ](requirements.md#firewalls-and-network-infrastructure)」を参照してください。 
+詳細については、次を参照してください。
 
-TLS 1.2 を有効にする方法については、Enterprise Mobility + Security のドキュメントの「 [tls 1.2 を有効にする方法](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) 」を参照してください。
+- [ファイアウォールとネットワークインフラストラクチャの要件](requirements.md#firewalls-and-network-infrastructure)
+- [TLS 1.2 を有効にする方法](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) 
+- [Office Online Server で TLS 1.1 および TLS 1.2 のサポートを有効にする](/officeonlineserver/enable-tls-1-1-and-tls-1-2-support-in-office-online-server)
 
 
 ### <a name="missing-content-scan-job-or-profile"></a>コンテンツスキャンジョブまたはプロファイルがありません
