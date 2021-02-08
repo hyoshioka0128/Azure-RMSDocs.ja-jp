@@ -4,19 +4,19 @@ description: Azure Information Protection の既知の問題と制限を検索�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/12/2021
+ms.date: 02/08/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 675f0a3f9a8ef3c3614bb1c59e0508ee028cbae8
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 87ed3e51e063baa864d0e58f391777aa9b4426ee
+ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958127"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99817824"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題 - Azure Information Protection
 
@@ -109,7 +109,7 @@ AIP ビューアーでは画像が縦モードで表示され、ワイドビュ�
 
 - [パスワードで保護されたドキュメント](#password-protected-documents)
 - [保護された電子メール内の複数の添付ファイル](#multiple-attachments-in-a-protected-email)
-- [SharePoint 経由でアクセスされるドキュメント](#documents-accessed-via-sharepoint)
+- [SharePoint または OneDrive 経由でアクセスされるドキュメント](#documents-accessed-via-sharepoint-or-onedrive)
 
 詳細については、「 [管理者ガイド](rms-client/track-and-revoke-admin.md) 」および「 [ユーザーガイド](rms-client/revoke-access-user.md) 」を参照してください。
 
@@ -124,11 +124,11 @@ AIP ビューアーでは画像が縦モードで表示され、ワイドビュ�
 
 また、添付ファイルの1つのアクセスを取り消すと、同じ保護された電子メール内の他の添付ファイルのアクセスが取り消されます。
 
-#### <a name="documents-accessed-via-sharepoint"></a>SharePoint 経由でアクセスされるドキュメント
+#### <a name="documents-accessed-via-sharepoint-or-onedrive"></a>SharePoint または OneDrive 経由でアクセスされるドキュメント
     
-- SharePoint にアップロードされた保護されたドキュメントの **ContentID** 値は失われ、アクセスを追跡したり取り消したりすることはできません。
+- SharePoint または OneDrive にアップロードされた保護されたドキュメントの **ContentID** 値が失われ、アクセスを追跡したり取り消したりすることはできません。
 
-- ユーザーが SharePoint からファイルをダウンロードし、ローカルコンピューターからアクセスした場合、新しい **ContentID** がドキュメントをローカルで開くと、そのドキュメントに適用されます。 
+- ユーザーが SharePoint または OneDrive からファイルをダウンロードし、ローカルコンピューターからアクセスした場合、新しい **ContentID** がローカルで開かれると、ドキュメントに適用されます。 
     
     元の **ContentID** 値を使用してデータを追跡する場合、ユーザーのダウンロードファイルに対して実行されるアクセスは含まれません。 また、元の **ContentID** 値に基づいてアクセスを取り消すと、ダウンロードされたファイルのアクセスが取り消されません。
 
@@ -175,7 +175,7 @@ AIP ビューアーでは画像が縦モードで表示され、ワイドビュ�
 
 詳細については、 [条件付きアクセスのドキュメント](/azure/active-directory/conditional-access/concept-conditional-access-users-groups)を参照してください。
 
-## <a name="more-information"></a>詳細情報
+## <a name="more-information"></a>説明
 
 次の記事は、Azure Information Protection の既知の問題に関する質問に回答する際に役立つ場合があります。
 

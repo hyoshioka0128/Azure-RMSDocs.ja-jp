@@ -4,7 +4,7 @@ description: Windows 用の Azure Information Protection (AIP) の統合され�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/02/2021
+ms.date: 02/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 065007e14f96c0d4cfddf4ea93a680c5e6bdf138
-ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
+ms.openlocfilehash: 3bfd20785f1af97352a6e8094f224a3647474ba6
+ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99473023"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99817807"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -65,16 +65,31 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 > [!NOTE]
 > マイナー修正は記載されていないので、統一されたラベル付けクライアントで問題が発生した場合は、最新の GA リリースで修正されているかどうかを確認することをお勧めします。 問題が引き続き発生する場合は、現在のプレビューバージョン (使用可能な場合) を確認します。
->  
+>
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
 統一されたラベル付けクライアントは、Azure Information Protection のクラシッククライアントに置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けソリューションの比較](use-client.md#compare-the-labeling-solutions-for-windows-computers)」を参照してください。
 
+## <a name="version-29116"></a>バージョン2.9.116 
+
+統一されたラベル付けスキャナーとクライアントバージョン2.9.116 
+
+**リリース** 02/08/2021
+
+**修正** 済みの問題次のシナリオでは、ユーザーは保護されたファイルを想定どおりに表示できるようになりました。
+
+- 保護されたファイルが、外部ユーザーなどの AIP ポリシーが構成されていないユーザーと共有されている場合。 この問題は、 [AIP Viewer アプリ](clientv2-view-use-files.md)でのみ発生しました。
+
+- スコープが指定されているラベルのコンテンツが、ラベルのスコープに含まれていないユーザーまたはグループと共有されている場合。 この問題は、 [AIP Viewer アプリ](clientv2-view-use-files.md) と、 [エクスプローラー](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files)を使用して共有コンテンツを表示または分類するときの両方で発生しました。
+
+詳細については、「 [AIP ユニファイドクライアントユーザーガイド](clientv2-user-guide.md)」を参照してください。
 ## <a name="version-291110"></a>バージョン2.9.111.0
 
 統一されたラベル付けスキャナーとクライアントバージョン2.9.111.0
 
-**リリース** 1/13/2021
+**リリース** 01/13/2021
+
+08/08/2021 **でサポート**
 
 このバージョンには、統合されたラベル付けスキャナーとクライアントの次の新機能、修正プログラム、および拡張機能が含まれています。
 
@@ -94,13 +109,11 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
     - [統一されたラベル付けスキャナーの修正と機能強化](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [統一されたラベル付けクライアントの修正と機能強化](#fixes-and-improvements-for-the-unified-labeling-client)
 
-- **既知の問題**: 最新の GA バージョン (2.9.111) で問題が特定されました。一部のユーザーは、次のシナリオで保護されたファイルを表示できません。
-    
+- **既知の問題**: 最新の GA バージョン (2.9.111) で問題が特定されました。一部のユーザーは、次のシナリオで保護されたファイルを表示できませんでした。
+
     - 保護されたファイルが、外部ユーザーなどの AIP ポリシーが構成されていないユーザーと共有されている場合。 この問題は、 [AIP Viewer アプリ](clientv2-view-use-files.md)でのみ発生します。
 
     - スコープが指定されているラベルのコンテンツが、ラベルのスコープに含まれていないユーザーまたはグループと共有されている場合。 この問題は、 [AIP Viewer アプリ](clientv2-view-use-files.md) と、 [エクスプローラー](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files)を使用して共有コンテンツを表示または分類する場合の両方で発生します。
-    
-    この問題に対して積極的に取り組んでおり、修正プログラムの配信計画を更新しました。
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>接続されていないスキャナーサーバーに対する PowerShell のサポート
 
@@ -480,7 +493,7 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 
     **UseCopyAndPreserveNTFSOwner** の詳細設定では、スキャナーとスキャンされたリポジトリの間に、待機時間が短く、信頼性の高いネットワーク接続が必要です。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 統合ラベルが適切なクライアントでインストールされているかどうかわからない場合は、  「 [Windows のラベル付けソリューションを選択する」を](use-client.md#choose-your-windows-labeling-solution)参照してください。
 
