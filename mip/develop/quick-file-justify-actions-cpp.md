@@ -1,17 +1,17 @@
 ---
 title: '方法: 理由を必要とするラベルのダウングレードまたは削除 ( C++ )'
 description: この記事では、理由を必要とするラベルをダウングレードまたは削除する方法のシナリオについて説明します。
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
-ms.author: v-anikep
-ms.openlocfilehash: 96bd94398c2a5c0bbe2cd87c12ec8e6a0af7e18b
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.author: mbaldwin
+ms.openlocfilehash: d6ffccc19a5d2343fdb175b3c59ec52be5c7ad0f
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135676"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865282"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Information Protection SDK File API - ファイルの秘密度ラベルを下げるアクションの理由 (C++)
 
@@ -164,16 +164,9 @@ system("pause");
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
-2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireOAuth2Token()` メソッドを呼び出すたびに、アプリケーションによりアクセス トークンが求められます。 「秘密度ラベルの設定および取得」クイック スタートで前に実行したとおり、ご自分の PowerShell スクリプトを実行し、$authority と $resourceUrl に指定された値を使用して、都度トークンを取得します。
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireOAuth2Token()` メソッドを呼び出すたびに、アプリケーションによりアクセス トークンが求められます。 
 
-  ```console
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
-
+  ```console   
     Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
     Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
     General : f42a3342-8706-4288-bd31-ebb85995028z
@@ -184,12 +177,6 @@ system("pause");
     Applying Label ID f55c2dea-db0f-47cd-8520-a52e1590fb6z to c:\Test\Test.docx
     Committing changes
 
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
 
     Label committed to file: c:\Test\Test.docx
     Press any key to continue . . .
@@ -204,7 +191,7 @@ system("pause");
     Getting the label committed to file: c:\Test\Test_labeled.docx
     Name: Highly Confidential
     Id: f55c2dea-db0f-47cd-8520-a52e1590fb6z
-    Press any key to continue . . .
+    Press any key to continue . . . 
 
     Applying new Label ID f42a3342-8706-4288-bd31-ebb85995028z to c:\Test\Test_labeled.docx
     Please provide justification for downgrading a label:

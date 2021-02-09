@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 516b6ea2e3282ac17e4a17da979285ea23d76d05
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 0073ea8549b7aed065f5fbd0b7d961aa35212474
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764312"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212894"
 ---
 # <a name="class-syncfilepolicydata"></a>クラス SyncFilePolicyData 
   
@@ -19,9 +19,9 @@ ms.locfileid: "81764312"
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const LabelGroupData * GetLabelGroupData () const  | _まだ文書化されていません。_
-public const std:: vector\<std:: unique_ptr\<policypackagedata\> \>& getpoliciespackagedata () const  | _まだ文書化されていません。_
+public const std:: vector \<std::unique_ptr\<PolicyPackageData\> \>& getの packagedata () const  | _まだ文書化されていません。_
 public const std:: string& GetUpn () const  | _まだ文書化されていません。_
-public const std:: unordered_map\<std:: string、std:: String\>& GetClassificationList () const  | _まだ文書化されていません。_
+public const std:: shared_ptr \<ClassifierUniqueIdsAndContentFormats\>& GetClassificationList () const  | _まだ文書化されていません。_
 public const std:: string& GetUserObjectId () const  | _まだ文書化されていません。_
 パブリック仮想 ~ SyncFilePolicyData ()  | _まだ文書化されていません。_
   

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 6e37613adce0397ed543c4df793a59e74795fb26
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 8e4a8c392c6e18197e3b9b376482f3145d1ecd3f
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762465"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211398"
 ---
 # <a name="class-httpresponse"></a>Httpresponse.cache クラス 
 HttpDelegate をオーバーライドするときに、クライアント アプリによって実装される 1 つの HTTP 要求を表すインターフェイス。
@@ -21,8 +21,8 @@ HttpDelegate をオーバーライドするときに、クライアント アプ
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  応答 ID を取得します。
 public int32_t GetStatusCode() const  |  応答の状態コードを取得します。
-public const std:: vector\<Uint8_t\>& getbody () const  |  要求本文を取得します。
-public const std:: map\<std:: string、std:: String、CaseInsensitiveComparator\>& GetHeaders () const  |  要求ヘッダーを取得します。
+public const std:: vector \<uint8_t\>& getbody () const  |  要求本文を取得します。
+public const std:: map \<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders () const  |  要求ヘッダーを取得します。
   
 ## <a name="members"></a>メンバー
   

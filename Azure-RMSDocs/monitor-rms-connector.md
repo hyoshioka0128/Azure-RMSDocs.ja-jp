@@ -1,10 +1,10 @@
 ---
 title: Rights Management コネクタを監視する - AIP
 description: Azure Information Protection からコネクタと組織の Azure Rights Management サービスの使用を監視するのに役立つ情報です。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 01/20/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,22 +13,24 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fec116c8bd0c8f02d57a9772bacf87a11d0966ac
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: cfa8a6892fe7f6146b2f6a76d00530a1a83cb18d
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136965"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809422"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
+>
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 RMS コネクタのインストールと構成を行うと、以下の方法と情報を使用することで、コネクタと組織の Azure Rights Management サービスの使用状況を Azure Information Protection から監視できます。
 
 ## <a name="application-event-log-entries"></a>アプリケーション イベント ログ エントリ
 
-RMS コネクタは、アプリケーション イベント ログを使用して、**Microsoft RMS コネクタ**のエントリを記録します。 
+RMS コネクタは、アプリケーション イベント ログを使用して、**Microsoft RMS コネクタ** のエントリを記録します。 
 
 たとえば、次のような情報イベントです。
 
@@ -163,35 +165,39 @@ HTTPS 接続用の RMS コネクタを構成する方法については、「[HT
 
 ## <a name="performance-counters"></a>パフォーマンス カウンター
 
-RMS コネクタをインストールすると、**Microsoft Rights Management コネクタ**のパフォーマンス カウンターが自動的に作成されます。これによって、Azure Rights Management サービスの使用に関するパフォーマンスを監視や改善することができ、役に立ちます。 
+RMS コネクタをインストールすると、**Microsoft Rights Management コネクタ** のパフォーマンス カウンターが自動的に作成されます。これによって、Azure Rights Management サービスの使用に関するパフォーマンスを監視や改善することができ、役に立ちます。 
 
 たとえば、ドキュメントまたは電子メールが保護されている場合は、定期的に遅延が発生します。 あるいは、保護されているドキュメントまたは電子メールが開かれるとき、遅延が発生します。 このような場合は、パフォーマンス カウンターによって、遅延の原因がコネクタの処理時間や Azure Rights Management サービスの処理時間なのか、それともネットワークの遅延なのかを判断できます。 
 
-遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 例: **Licensing Successful Batched Request Average Connector Response Time**。
+遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および **コネクタ応答時間** の平均カウントが含まれているカウンターを調べます。 例: **Licensing Successful Batched Request Average Connector Response Time**。
 
 コネクタを使用する新しいサーバー アカウントを最近追加した場合、確認するとよいカウンターは、**Time since last authorization policy update** です。リストの更新後にコネクタがリストをダウンロードしたことや、もう少し待機する必要があるかどうか (最大 15 分) を確認できます。
 
-## <a name="logging"></a>ログの記録
+## <a name="logging"></a>ログ記録
 
 使用状況ログ記録を使用すると、電子メールやドキュメントが保護および使用された日時を特定できます。 RMS コネクタを使用してコンテンツを保護および使用する際、ログ内のユーザー ID フィールドには **Aadrm_S-1-7-0** のサービス プリンシパル名が含まれます。 この名前は、RMS コネクタ用に自動的に作成されます。
 
 使用状況ログの詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](log-analyze-usage.md)」を参照してください。
 
-診断のためにより詳細なログを記録する必要がある場合は、Windows Sysinternals の [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) を使用できます。 IIS の既定サイトの web.config ファイルを変更することにより、RMS コネクタのトレースを有効にします。
+診断のためにより詳細なログ記録が必要な場合は、Windows Sysinternals の [Debugview](/sysinternals/downloads/debugview) を使用して、ログをデバッグパイプに出力します。 
 
-1. **%programfiles%\Microsoft Rights Management connector\Web Service** で web.config ファイルを探します。
+1. 管理者として debugview を起動し、 **[capture**  >  **capture Global Win32**] を選択します。
 
-2. 次の行を見つけます。
+1. IIS で既定のサイトの **web.config** ファイルを変更して、RMS コネクタのトレースを有効にします。
 
-    ```sh
-    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. **%Programfiles%\Microsoft Rights Management Connector\Web Service** フォルダーで、 **web.config** ファイルを見つけます。
 
-3. その行を次のテキストに置き換えます。
-    ```sh
-    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. 次の行を見つけます。
 
-4.  IIS を停止してから起動し、トレースをアクティブ化します。 
+        ```sh
+        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
 
-5.  必要なトレースをキャプチャしたら、手順 3. の行を元に戻し、IIS を停止してから再起動します。
+    1. その行を次のテキストに置き換えます。
+        ```sh
+        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
+
+1.  IIS を停止してから起動し、トレースをアクティブ化します。 
+
+1.  DebugView で必要なトレースをキャプチャしたら、手順 3. の行を元に戻し、IIS を停止してから再度起動します。

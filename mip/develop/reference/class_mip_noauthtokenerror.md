@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 9835f99fc80c902370dd512026fb05f7c1857a29
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: bef043d2892982a52bb6dfd2eb3dd13ac9f696e1
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761423"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215155"
 ---
 # <a name="class-noauthtokenerror"></a>クラス NoAuthTokenError 
 認証トークンがないため、ユーザーはコンテンツにアクセスできませんでした。

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b6f4f45c9532cb4c87bbe97cedd294184573c873
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: be3c4bffba1f3aa996a8e4968628db8b7b710d25
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764372"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212996"
 ---
 # <a name="class-sensitivitytypesrulepackage"></a>SensitivityTypesRulePackage クラス 
   

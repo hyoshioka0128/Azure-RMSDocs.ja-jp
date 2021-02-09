@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: f0b9ef139762621205f69d46094a6729f3ec19d9
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 0521d1c14081527f760a24e773edad0a07685fac
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763889"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214373"
 ---
 # <a name="class-protectionprofilesettings"></a>クラス ProtectionProfile:: Settings 
 作成時および有効期間全体にわたって ProtectionProfile によって使用される設定。
@@ -19,22 +19,22 @@ ms.locfileid: "81763889"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: shared_ptr\<mipContext\>& MipContext、cacheStorageType cachestoragetype、const std:: shared_ptr\<conのデリゲート\>& con delegate、const Std:: shared_ptr\<protectionprofile:: observer\>& オブザーバー)  |  非同期操作に使用されるオブザーバーを指定する ProtectionProfile::Settings コンストラクター。
-パブリック設定 (const std:: shared_ptr\<mipContext\>& MipContext、cachestoragetype cachestoragetype、const std:: shared_ptr\<con delegate\>& conのデリゲート)  |  同期操作に使用される、ProtectionProfile::Settings コンストラクター。
+パブリック設定 (const std:: shared_ptr \<MipContext\>& mipContext、cacheStorageType cacheStorageType、const std:: shared_ptr \<ConsentDelegate\>& conて delegate、const std:: shared_ptr \<ProtectionProfile::Observer\>& オブザーバー)  |  非同期操作に使用されるオブザーバーを指定する ProtectionProfile::Settings コンストラクター。
+パブリック設定 (const std:: shared_ptr \<MipContext\>& mipContext、cacheStorageType cachestoragetype、const std:: shared_ptr \<ConsentDelegate\>& conのデリゲート)  |  同期操作に使用される、ProtectionProfile::Settings コンストラクター。
 パブリック CacheStorageType GetCacheStorageType () const  |  キャッシュをメモリまたはディスクのどちらに格納するかを取得します。
-public std:: shared_ptr\<con、delegate\> getconの delegate () const  |  サービスに接続するために使用する同意委任を取得します。
-public std:: shared_ptr\<protectionprofile:: Observer\> GetObserver () const  |  ProtectionProfile に関連するイベントの通知を受信するオブザーバーを取得します。
-public std:: shared_ptr\<MipContext\> GetMipContext () const  |  すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
-public std:: shared_ptr\<httpdelegate\> GetHttpDelegate () const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
-public void SetHttpDelegate (const std:: shared_ptr\<httpdelegate\>& httpdelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
-public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
-public void SetTaskDispatcherDelegate (const std:: shared_ptr\<taskDispatcherDelegate\>& TaskDispatcherDelegate)  |  クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
+public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  サービスに接続するために使用する同意委任を取得します。
+public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  ProtectionProfile に関連するイベントの通知を受信するオブザーバーを取得します。
+public std:: shared_ptr \<MipContext\> GetMipContext () const  |  すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
+public std:: shared_ptr \<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
+public void SetTaskDispatcherDelegate (const std:: shared_ptr \<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
 public void SetSessionId(const std::string& sessionId)  |  セッション ID を設定します。
 public const std::string& GetSessionId() const  |  セッション ID を取得します。
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  エンドユーザーライセンス (Eul) がローカルにキャッシュされるかどうかを構成します。
 public bool CanCacheLicenses () const  |  エンドユーザーライセンス (Eul) がローカルにキャッシュされているかどうかを取得します。
-public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\> \>& customsettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
-public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
+public void SetCustomSettings (const std:: vector \<std::pair\<std::string, std::string\> \>& customsettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
+public const std:: vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -117,7 +117,7 @@ ProtectionProfile に関連するイベントの通知を受信するオブザ�
 アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
 
   
-は、非同期タスクの実行に使用される taskdispatcher デリゲートを**返し**ます。
+は、非同期タスクの実行に使用される taskdispatcher デリゲートを **返し** ます。
   
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate 関数
 クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。

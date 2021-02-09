@@ -7,22 +7,22 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: e1c223744a8651a4318abbf0f532d76a771bde16
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 5daada951fb888fc7aa01071236af751ec38e002
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971678"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215529"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成
 
-クイック スタートとチュートリアルの記事では、MIP SDK ライブラリと API を使用するアプリケーションのビルドを中心に説明しています。 この記事では、SDK を使用するための準備として、Office 365 サブスクリプションとクライアント ワークステーションをセットアップして構成する方法を示します。
+クイック スタートとチュートリアルの記事では、MIP SDK ライブラリと API を使用するアプリケーションのビルドを中心に説明しています。 この記事では、SDK を使用するための準備として、Microsoft 365 サブスクリプションとクライアント ワークステーションをセットアップして構成する方法を示します。
 
 ## <a name="prerequisites"></a>[前提条件]
 
 開始する前に、次のトピックを確認してください。
 
-- [Office 365 セキュリティとコンプライアンス センターとは](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
+- [Office 365 セキュリティとコンプライアンス センターとは](/office365/securitycompliance/security-and-compliance)
 - [Azure Information Protection とは](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Azure Information Protection での保護のしくみ](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
@@ -102,7 +102,7 @@ ms.locfileid: "82971678"
 
    **Tar.gz/.Zip のダウンロード**
 
-   Tar.gz と .Zip のダウンロードには、API ごとに追加の圧縮されたファイルが 1 つ含まれています。 圧縮されたファイルは次のように命名されます。`mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`: ここで、\<API\> = `file`、`protection`、または `upe` で、\<OS\> = プラットフォームです。 たとえば、Debian での保護 API のバイナリとヘッダーのファイルは次のようになります。`mip_sdk_protection_debian9_1.0.0.0.tar.gz` 含まれているそれぞれの .tar.gz/.zip は次の 3 つのディレクトリに分かれています。
+   Tar.gz と .Zip のダウンロードには、API ごとに圧縮されたファイルが 1 つ含まれています。 圧縮されたファイルは次のように命名されます。\<API\> = `file`、`protection`、または `upe`。\<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`。 たとえば、Debian での保護 API のバイナリとヘッダーのファイルは次のようになります。`mip_sdk_protection_debian9_1.0.0.0.tar.gz` 含まれているそれぞれの .tar.gz/.zip は次の 3 つのディレクトリに分かれています。
 
    - **Bins:** 各プラットフォーム アーキテクチャのコンパイル済みバイナリ (該当する場合)。
    - **Include:** ヘッダー ファイル (C++)。
@@ -125,13 +125,13 @@ ms.locfileid: "82971678"
    - 左下にある Windows アイコンをクリックします。
    - 「パス」と入力して Enter キーを押すと、 **[Edit the system environment variables]\(システム環境変数の編集\)** 項目が表示されます。
    - **[システムのプロパティ]** ダイアログで、 **[環境変数]** をクリックします。
-   - **[環境変数]** ダイアログで、 **[User variables for \<user\>]\(<ユーザー> のユーザー変数\)** の下で **[パス]** 変数行をクリックして、 **[編集]** をクリックします。
+   - **[環境変数]** ダイアログの **[User variables for \<user\>]\(<ユーザー> のユーザー変数\)** の下で **[パス]** 変数行をクリックして、 **[編集]** をクリックします。
    - **[環境変数の編集]** ダイアログで、新しい編集可能な行を作成する **[新規]** をクリックします。 `file\bins\debug\amd64`、`protection\bins\debug\amd64`、`upe\bins\debug\amd64` の各サブディレクトリへの完全なパスを使用して、それぞれに新しい行を追加します。 SDK ディレクトリは `<API>\bins\<target>\<platform>` の形式で格納されます。
-     - \<API\> = `file`、`protection`、`upe`
-     - \<target\> = `debug`、`release`
+     - \<API\> = `file`, `protection`, `upe`
+     - \<target\> = `debug`, `release`
      - \<platform\> = `amd64` (x64)、`x86` など。
 
-   - **パス**変数の更新が完了したら、 **[OK]** をクリックします。 **[環境変数]** ダイアログに戻ったら、 **[OK]** をクリックします。
+   - **パス** 変数の更新が完了したら、 **[OK]** をクリックします。 **[環境変数]** ダイアログに戻ったら、 **[OK]** をクリックします。
 
 6. GitHub から SDK サンプルをダウンロードします (省略可能)。
 
@@ -143,9 +143,9 @@ ms.locfileid: "82971678"
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Azure Active Directory へのクライアント アプリケーションの登録
 
-Office 365 サブスクリプションのプロビジョニング プロセスの一環として、関連付けられた Azure Active Directory (Azure AD) テナントが作成されます。 Azure AD テナントでは、Office 365 *ユーザー アカウント*と*アプリケーション アカウント*の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
+Microsoft 365 サブスクリプションのプロビジョニング プロセスの一環として、関連付けられた Azure Active Directory (Azure AD) テナントが作成されます。 Azure AD テナントでは、Microsoft 365 "*ユーザー アカウント*" と "*アプリケーション アカウント*" の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
 
-実行時の認証と承認では、アカウントの ID 情報から派生した*セキュリティ プリンシパル*によってアカウントが表されます。 アプリケーション アカウントを表すセキュリティ プリンシパルは、[*サービス プリンシパル*](/azure/active-directory/develop/developer-glossary#service-principal-object)と呼ばれます。
+実行時の認証と承認では、アカウントの ID 情報から派生した *セキュリティ プリンシパル* によってアカウントが表されます。 アプリケーション アカウントを表すセキュリティ プリンシパルは、[*サービス プリンシパル*](/azure/active-directory/develop/developer-glossary#service-principal-object)と呼ばれます。
 
 クイック スタートおよび MIP SDK のサンプルで使用するために Azure AD でアプリケーション アカウントを登録するには、次の手順を実行します。
 
@@ -155,21 +155,21 @@ Office 365 サブスクリプションのプロビジョニング プロセス�
 
 1. 「[Register an app with Azure AD, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal)」(Azure AD によるアプリの登録、新しいアプリケーションの登録) のセクションに示されている手順を行います。 テスト目的のため、ガイドの手順を進めるときに、指定されたプロパティに次の値を使用します。
     - **[サポートされているアカウントの種類]** - [この組織ディレクトリのみに含まれるアカウント] を選択します。
-    - **[リダイレクト URI]** - リダイレクト URI の種類を [パブリック クライアント (モバイルとデスクトップ)] に設定します。 SDK ではシンプルなコンソール クライアント アプリケーションが使用されるため、`<app-name>://authorize` という形式の URI を使用します。
+    - **[リダイレクト URI]** - リダイレクト URI の種類を [パブリック クライアント (モバイルとデスクトップ)] に設定します。 アプリケーションで Microsoft 認証ライブラリ (MSAL) を使用している場合は、`http://localhost` を使用します。 それ以外の場合は、`<app-name>://authorize` という形式のものを使用します。
 
 2. 完了すると、新しいアプリケーションを登録するため、 **[登録されているアプリ]** ページに戻ります。 **[アプリケーション (クライアント) ID]** フィールド内の GUID をコピーして保存します。これはクイック スタートで必要になります。
 
 3. 次に、 **[API のアクセス許可]** をクリックして、クライアントがアクセスする必要がある API とアクセス許可を追加します。 **[アクセス許可の追加]** をクリックして、[API アクセス許可の要求] ブレードを開きます。
 
 4. 次に、実行時にアプリケーションで要求される MIP API とアクセス許可を追加します。
-   - **[API を選択します]** ページで、**Azure Rights Management サービス**をクリックします。
-   - **Azure Rights Management サービス**の API ページで、 **[委任されたアクセス許可]** をクリックします。
-   - **[アクセス許可の選択]** セクションで、**user_impersonation** アクセス許可をオンにします。 これにより、アプリケーションがユーザーに代わって、保護されたコンテンツの作成やアクセスを行うことが可能になります。
+   - **[API を選択します]** ページで、**Azure Rights Management サービス** をクリックします。
+   - **Azure Rights Management サービス** の API ページで、 **[委任されたアクセス許可]** をクリックします。
+   - **[アクセス許可の選択]** セクションで、**user_impersonation** アクセス許可をオンにします。 この権限により、アプリケーションがユーザーに代わって、保護されたコンテンツの作成やアクセスを行うことが可能になります。
    - **[アクセス許可の追加]** をクリックして保存します。
 
 5. 手順 4 を繰り返しますが、今回は **[API の選択]** ページで API を検索する必要があります。
    - **[API を選択します]** ページで、 **[所属する組織で使用している API]** をクリックした後、検索ボックスに「**Microsoft Information Protection 同期サービス**」と入力して、それを選択します。
-   - **Microsoft Information Protection 同期サービス**の API ページで、 **[委任されたアクセス許可]** をクリックします。
+   - **Microsoft Information Protection 同期サービス** の API ページで、 **[委任されたアクセス許可]** をクリックします。
    - **[UnifiedPolicy]** ノードを展開し、 **[UnifiedPolicy.User.Read]** をオンにします。
    - **[アクセス許可の追加]** をクリックして保存します。
 
@@ -187,7 +187,7 @@ MIP を使用して開発したアプリケーションをリリースする前�
 
 1. 次の情報を記載した電子メールを [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) に送信して、IPIA を入手します。
 
-   **件名:** *会社名*の IPIA 申し込み
+   **件名:** *会社名* の IPIA 申し込み
 
    電子メールの本文に、次の情報を含めます。
    - アプリケーションと製品名
@@ -204,7 +204,7 @@ MIP を使用して開発したアプリケーションをリリースする前�
    - 会社のアプリケーションの名前
    - アプリケーションの簡単な説明
    - *Azure テナント ID*
-   - アプリケーションの*アプリ ID*
+   - アプリケーションの *アプリ ID*
    - 緊急時の会社の連絡先、電子メール アドレス、および電話番号
 
 3. フォームが受信されると、デジタル署名を行うための最終的な IPIA リンクがお客様に送信されます。 お客様の署名後、適切な Microsoft 担当者が署名することで、契約が締結されます。

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cc38a50ee1bbeb79fc4f0bc74598b7ea3e03c4b0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 6d33d8d24e6bc21033ac1651d9ebc0ed76b34a52
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763827"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212588"
 ---
 # <a name="class-accessdeniederror"></a>AccessDeniedError クラス 
 ユーザーがコンテンツにアクセスできませんでした。 例: アクセス許可がない、コンテンツが取り消された。

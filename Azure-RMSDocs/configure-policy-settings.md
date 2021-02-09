@@ -1,36 +1,32 @@
 ---
 title: Azure Information Protection のポリシー設定を構成する - AIP
 description: すべてのユーザーとデバイスに適用される Azure Information Protection ポリシーを設定します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3a58a256bb000b43314a098d99d76347045a475b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 06b54317abbd5258bddd43ee18febc6470c1ba89
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048155"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809738"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」を参照してください。 *
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
-
-> [!NOTE]
-> これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) を参照してください。
-> 
-> 統一されたラベル付けクライアントのポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントを参照してください。 たとえば、[機密ラベルについて説明](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)します。
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Information Protection バーに表示されるタイトルとヒントのほかに、ラベルから個別に構成できる Azure Information Protection ポリシーにはいくつかの設定があります。
 
@@ -48,25 +44,25 @@ Azure Information Protection のサブスクリプションを購入した時期
     
     構成する設定が[スコープ ポリシー](configure-policy-scope.md)にあり、選択したユーザーだけに適用される場合は、代わりにスコープ ポリシーを選びます。
 
-3. [**ポリシー** ] ウィンドウで、次の設定を構成します。
+3. [ **ポリシー** ] ウィンドウで、次の設定を構成します。
     
    - **Select the default label** (既定のラベルを選択します): このオプションを設定した場合、ラベルを持たないドキュメントや電子メールに割り当てるラベルを選択します。 サブラベルがあるラベルは、既定値として設定することはできません。
         
         この設定は、Office アプリとスキャナーに適用されます。 これはエクスプローラーや PowerShell には適用されません。
     
-    - **Azure Information Protection analytics に監査データを送信**する: azure [Information Analytics](reports-aip.md)用の azure Log Analytics ワークスペースを作成する前に、この設定の値は [**オフ**] になっており、構成されて**いません**。 ワークスペースを作成すると、値が **[オフ]** および **[オン]** に変わります。
+    - **Azure Information Protection analytics に監査データを送信** する: azure [Information Analytics](reports-aip.md)用の azure Log Analytics ワークスペースを作成する前に、この設定の値は [ **オフ** ] になっており、構成されて **いません**。 ワークスペースを作成すると、値が **[オフ]** および **[オン]** に変わります。
         
-        この設定を**オン**にすると、中央レポートをサポートするクライアントは、Azure Information Protection サービスにデータを送信します。 この情報には、どのラベルが適用されるか、ユーザーが下位の分類でラベルを選択したとき、またはラベルを削除したときの情報が含まれます。 送信および格納される情報の詳細については、中央レポートのドキュメントの「[収集して Microsoft に送信する](reports-aip.md#information-collected-and-sent-to-microsoft)情報」セクションを参照してください。 このデータが送信されないようにするには、このポリシー設定を**Off**に設定します。
+        この設定を **オン** にすると、中央レポートをサポートするクライアントは、Azure Information Protection サービスにデータを送信します。 この情報には、どのラベルが適用されるか、ユーザーが下位の分類でラベルを選択したとき、またはラベルを削除したときの情報が含まれます。 送信および格納される情報の詳細については、中央レポートのドキュメントの「 [収集して Microsoft に送信する](reports-aip.md#information-collected-and-sent-to-microsoft) 情報」セクションを参照してください。 このデータが送信されないようにするには、このポリシー設定を **Off** に設定します。
     
     - **All documents and emails must have a label** (すべてのドキュメントと電子メールにラベルを設定する必要があります): このオプションを **[オン]** に設定した場合は、すべての保存されるドキュメントと送信される電子メールにラベルを適用する必要があります。 ラベル付けは、ユーザーが手動で割り当てる、[条件](configure-policy-classification.md)の結果として自動的に割り当てる、または (**[Select the default label]** (既定のラベルを選択) オプションを設定することで) 既定で割り当てることができます。
         
-       ユーザーがドキュメントを保存または電子メールを送信するときにラベルが割り当てられなかった場合は、ラベルの選択を求めるメッセージが表示されます。 次に例を示します。
+       ユーザーがドキュメントを保存または電子メールを送信するときにラベルが割り当てられなかった場合は、ラベルの選択を求めるメッセージが表示されます。 以下に例を示します。
         
        ![ラベル付けが必須である場合の Azure Information Protection のプロンプト](./media/info-protect-enforce-labelv2.png)
         
        [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)PowerShell コマンドレットと *RemoveLabel* パラメーターを使用してラベルを削除する場合、このオプションは適用されません。
         
-   - **分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります**: このオプションが **[オン]** に設定されているときは、ユーザーがこれらの操作を行うと (たとえば **[Public (パブリック)]** ラベルを **[Personal (個人用)]** に変更)、その操作の理由を入力する画面が表示されます。 たとえば、ユーザーは、「このドキュメントにはもう秘密情報が含まれていない」という説明を入力します。 アクションとその理由は、ローカルの Windows イベントログの [**アプリケーションとサービスログ**] Azure Information Protection に記録され  >  **Azure Information Protection**ます。  
+   - **分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります**: このオプションが **[オン]** に設定されているときは、ユーザーがこれらの操作を行うと (たとえば **[Public (パブリック)]** ラベルを **[Personal (個人用)]** に変更)、その操作の理由を入力する画面が表示されます。 たとえば、ユーザーは、「このドキュメントにはもう秘密情報が含まれていない」という説明を入力します。 アクションとその理由は、ローカルの Windows イベントログの [**アプリケーションとサービスログ**] Azure Information Protection に記録され  >  ます。  
         
        ![新しい分類が下位の場合の Azure Information Protection のプロンプト](./media/info-protect-lower-justification.png)
         
@@ -82,7 +78,7 @@ Azure Information Protection のサブスクリプションを購入した時期
         
        この設定をオンにしているときに、ユーザーがバーを表示しないことを選択する場合、[Azure Information Protection バーを永久に非表示](./rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)にできるように、この設定をクライアントの詳細設定と共に使用できます。 **[保護]** ボタンから **[バーの表示]** オプションをクリアして、この操作を行うことができます。
     
-   - **Add the Do Not Forward button to the Outlook ribbon (Outlook リボンに [転送不可] ボタンを追加する)**: この設定をオンにすると、ユーザーは Outlook メニューから **[転送不可]** オプションを選択できるほか、Outlook リボンの **[保護]** グループからもこのボタンを選択できます。 ユーザーが電子メールを分類して保護できるようにするには、このボタンを追加するのではなく、[保護用にラベルを構成](configure-policy-protection.md)し、ユーザーに Outlook のアクセス許可を定義することをお勧めします。 この保護設定は、**[転送不可]** ボタンの選択と同様に機能しますが、この機能にラベルが含まれる場合は、メールは分類され、保護されます。
+   - **Add the Do Not Forward button to the Outlook ribbon (Outlook リボンに [転送不可] ボタンを追加する)**: この設定をオンにすると、ユーザーは Outlook メニューから **[転送不可]** オプションを選択できるほか、Outlook リボンの **[保護]** グループからもこのボタンを選択できます。 ユーザーが電子メールを分類して保護できるようにするには、このボタンを追加するのではなく、 [保護用にラベルを構成](configure-policy-protection.md) し、ユーザーに Outlook のアクセス許可を定義することをお勧めします。 この保護設定は、**[転送不可]** ボタンの選択と同様に機能しますが、この機能にラベルが含まれる場合は、メールは分類され、保護されます。
     
        このポリシー設定は、[クライアントのカスタマイズ](./rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)としてクライアントの詳細設定を使って構成することもできます。
     
@@ -94,7 +90,7 @@ Azure Information Protection のサブスクリプションを購入した時期
         
        - Office アプリケーション: リボンから **[ホーム]** タブ > **[保護]** グループ > **[保護]** > **[カスタムのアクセス許可]**
         
-       - エクスプローラーから: > 右クリックし**て、**  >  **カスタムアクセス許可**を分類して保護する
+       - エクスプローラーから: > 右クリックし **て、**  >  **カスタムアクセス許可** を分類して保護する
     
    - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page (Azure Information Protection クライアントの "詳細情報を表示する" Web ページのカスタム URL を入力する)**: このリンクは、**[Microsoft Azure Information Protection]** ダイアログ ボックスの **[ヘルプとフィードバック]** セクションにあり、ユーザーが Office アプリケーションの **[ホーム]** タブで **[保護]** > **[ヘルプとフィードバック]** を選択したときに表示されます。 このリンクの既定のリンク先は [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) Web サイトです。 このリンクをクリックしたときに別の Web ページが表示されるようにするには、HTTP または HTTPS (推奨) の URL を入力します。 入力されたカスタム URL がどのデバイスでもアクセス可能で正しく表示できるかどうかの確認は行われません。
         
@@ -109,4 +105,3 @@ Azure Information Protection のサブスクリプションを購入した時期
 このような一部のポリシー設定を連携させる方法を確認するには、チュートリアル「[Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)](infoprotect-settings-tutorial.md)」をご覧ください。
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
-

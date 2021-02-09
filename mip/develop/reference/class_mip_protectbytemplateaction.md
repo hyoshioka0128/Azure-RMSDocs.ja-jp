@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 37b6db52239f4140a3da5df56f712466c0d96853
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: cc8b9c62738a7edb24a04f2e68265aa416833a76
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764014"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214866"
 ---
 # <a name="class-protectbytemplateaction"></a>ProtectByTemplateAction クラス 
 テンプレートによる保護をドキュメントに追加することを指定するアクション クラス。
@@ -20,6 +20,7 @@ ms.locfileid: "81764014"
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetTemplateId() const  |  アクションに関連付けられている保護テンプレート ID を取得します。
+public bool IsDoubleKey (std:: string& doubleKeyUrl) const  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   
@@ -28,3 +29,6 @@ public const std::string& GetTemplateId() const  |  アクションに関連付�
 
   
 **戻り値**: 保護テンプレート ID。
+  
+### <a name="isdoublekey-function"></a>IsDoubleKey 関数
+_まだ文書化されていません。_

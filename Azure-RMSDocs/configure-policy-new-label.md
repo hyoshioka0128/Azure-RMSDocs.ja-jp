@@ -1,31 +1,32 @@
 ---
 title: Azure Information Protection の新しいラベル - AIP
 description: Azure Information Protection にはカスタマイズできる既定のラベルが付属していますが、Information Protection バーに表示される独自のラベルを作成することもできます。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 1d3632f402cb691a7df6212f699de62ccc1f182b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 0a191dbdba3ceb2408757284847e4565d9338950
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048087"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806585"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Azure Information Protection の新しいラベルを作成する方法
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」を参照してください。 *
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection にはカスタマイズできる既定のラベルが付属していますが、独自のラベルを作成することもできます。
 
@@ -47,13 +48,13 @@ Azure Information Protection ポリシーに追加できる新しいラベルを
     
     - 新しいサブラベルを作成するには: サブラベルを作成するラベルを右クリックするかコンテキスト メニュー (**...**) をクリックし、**[サブラベルの追加]** をクリックします。
 
-3. [**ラベル**] または [**サブラベル**] ペインで、この新しいラベルに使用するオプションを選択し、[**保存**] をクリックします。
+3. [ **ラベル** ] または [ **サブラベル** ] ペインで、この新しいラベルに使用するオプションを選択し、[ **保存**] をクリックします。
     
     表示名を指定する際、一部の文字 (円記号やアンパサンドなど) は使用できません。Azure Information Protection を使用するすべてのサービスとアプリケーションで、これらの文字をサポートできるとは限らないためです。 ブロックされている文字に加えて、文字を指定しないでください **#** 。    
     
     新しいラベルには自動的に黒色が割り当てられます。 識別のための色を一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力します。 たとえば、**#DAA520** と入力します。 これらのコードの参照が必要な場合は、MSDN web docs のページにある役に立つテーブルを確認でき [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) ます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
-4. 新しいラベルをユーザーが使用できるようにするには: [**分類**  >  **ポリシー** ] メニューオプションで、新しいラベルを含めるポリシーを選択します。 **[ラベルの追加または削除]** を選択します。 [**ポリシー: ラベルの追加または削除**] ウィンドウでラベルを選択し、[ **OK**] を選択して [**保存**] を選択します。
+4. 新しいラベルをユーザーが使用できるようにするには: [**分類**  >  **ポリシー** ] メニューオプションで、新しいラベルを含めるポリシーを選択します。 **[ラベルの追加または削除]** を選択します。 [ **ポリシー: ラベルの追加または削除** ] ウィンドウでラベルを選択し、[ **OK**] を選択して [ **保存**] を選択します。
     
     >[!TIP]
     >新しいラベルについては、まず、テストに使用するスコープ ポリシーに追加することを検討してください。 結果に満足したら、このテスト スコープからラベルを削除し、運用環境で使用するポリシーにラベルを追加します。     

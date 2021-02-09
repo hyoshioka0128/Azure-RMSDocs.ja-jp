@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 744b3971d0f0025d868faa77542434aa9d8e085b
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 42ca95c80162bdc61a5b1d1b5ed0576e618fc159
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761232"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213557"
 ---
 # <a name="class-notsupportederror"></a>クラス NotSupportedError 
 アプリケーションによって要求された操作は、SDK ではサポートされていません。

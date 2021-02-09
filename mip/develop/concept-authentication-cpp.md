@@ -6,16 +6,16 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e4f734560c4d3942995f7547f41648bd765bb1b1
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 9cc8d3b874e4971907770ee18508f331acf1ea2d
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555842"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701630"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK - 認証の概念
 
-MIP SDK での認証は、クラス `mip::AuthDelegate` を拡張して目的の認証方法を実装することによって実行されます。 `mip::AuthDelegate` には次の項目が含まれています。
+MIP SDK での認証は、クラス `mip::AuthDelegate` を拡張して目的の認証方法を実装することによって実行されます。 `mip::AuthDelegate` の内容:
 
 - `mip::AuthDelegate::OAuth2Challenge` - OAuth2 権限の情報を管理し、クライアント アプリケーションに提供するクラス。
 - `mip::AuthDelegate::OAuth2Token` - (クライアント アプリケーションからの) OAuth2 アクセス トークンの取得、およびトークンの記憶域を管理するクラス。
@@ -24,7 +24,7 @@ MIP SDK での認証は、クラス `mip::AuthDelegate` を拡張して目的の
 `mip::AuthDelegate::AcquireOAuth2Token` は、次のパラメーターを受け取り、トークンの取得に成功したかどうかを示すブール値を返します。
 
 - `mip::Identity`: 認証されるユーザーまたはサービスの ID (既知の場合)。
-- `mip::AuthDelegate::OAuth2Challenge`: 4 つのパラメーター、**権限**、**リソース**、**要求**、および**スコープ**を受け取ります。 **Authority** は、トークンが生成される対象のサービスです。 **Resource** は、アクセスしようとしている対象のサービスです。 SDK は、呼び出されたときにこれらのパラメーターをデリゲートに渡す処理を行います。 **要求**は、保護サービスに必要なラベル固有の要求です。 **スコープ**は、リソースにアクセスするために必要な Azure AD のアクセス許可スコープです。 
+- `mip::AuthDelegate::OAuth2Challenge`: 4 つのパラメーター、 **権限**、 **リソース**、 **要求**、および **スコープ** を受け取ります。 **Authority** は、トークンが生成される対象のサービスです。 **Resource** は、アクセスしようとしている対象のサービスです。 SDK は、呼び出されたときにこれらのパラメーターをデリゲートに渡す処理を行います。 **要求** は、保護サービスに必要なラベル固有の要求です。 **スコープ** は、リソースにアクセスするために必要な Azure AD のアクセス許可スコープです。 
 - `mip::AuthDelegate::OAuth2Token`: トークンの結果はこのオブジェクトに書き込まれます。 エンジンが読み込まれるときに SDK によって使用されます。 認証実装の外部では、いずれの場所でもこの値を取得または設定する必要はありません。
 
 **重要:** アプリケーションは `AcquireOAuth2Token` を直接呼び出しません。 必要に応じて SDK がこの関数を呼び出します。
@@ -33,8 +33,8 @@ MIP SDK での認証は、クラス `mip::AuthDelegate` を拡張して目的の
 
 Azure AD では、アプリケーションが、セキュリティで保護されたリソース/API にアカウントの ID でアクセスする権限を付与される前に、同意を取得する必要があります。 同意は、特定のアカウント (ユーザーの同意) またはすべてのアカウント (管理者の同意) について、アカウントのテナントでのアクセス許可の永続的な確認として記録されます。 アクセスされる API、アプリケーションが求めるアクセス許可、およびサインインに使用されるアカウントに基づいて、次のさまざまなシナリオで同意が行われます。 
 
-- お客様または管理者が、[アクセス許可の付与] 機能を使用して事前にアクセスに明示的に同意しなかった場合、アプリケーションが登録されている*同じテナント*のアカウント。
-- アプリケーションがマルチテナントとして登録されており、テナント管理者が事前にすべてのユーザーに対して同意していない場合、*別のテナント*のアカウント。
+- お客様または管理者が、[アクセス許可の付与] 機能を使用して事前にアクセスに明示的に同意しなかった場合、アプリケーションが登録されている *同じテナント* のアカウント。
+- アプリケーションがマルチテナントとして登録されており、テナント管理者が事前にすべてのユーザーに対して同意していない場合、*別のテナント* のアカウント。
 
 `mip::Consent` 列挙型クラスは、アプリケーション開発者が、SDK によってアクセスされるエンドポイントに基づいてカスタムの同意エクスペリエンスを提供できる、使いやすいアプローチを実装します。 通知により、収集されるデータのユーザー、データを削除する方法、または法律またはコンプライアンス ポリシーで要求されるその他の情報を通知できます。 ユーザーが同意すると、アプリケーションが続行できます。 
 
@@ -101,7 +101,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-テストと開発を目的として、次のような単純な `ConsentDelegate` を実装できます。
+テストと開発を目的として、次のような単純なを `ConsentDelegate` 実装できます。
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -111,9 +111,8 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 
 ただし、運用環境のコードでは、地域または業務上の要件や規制に応じて、ユーザーに同意するかどうかを選択するよう求められる場合があります。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 わかりやすくするため、デリゲートを示すサンプルで、外部のスクリプトを呼び出すことによってトークンの取得を実装します。 このスクリプトは、他の任意の種類のスクリプト、オープン ソースの OAuth2 ライブラリ、またはカスタムの OAuth2 ライブラリに置き換えられます。
 
-- [PowerShell を使用してアクセス トークンを取得する](concept-authentication-acquire-token-ps.md)
 - [Python を使用してアクセス トークンを取得する](concept-authentication-acquire-token-py.md)

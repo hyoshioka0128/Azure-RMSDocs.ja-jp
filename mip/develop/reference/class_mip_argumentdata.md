@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: d7ae47ddb7b955c3940530324a52c8a0ea1e62d2
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 08f45a9d008e219ebee32a222df102204b4e267b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763637"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212231"
 ---
 # <a name="class-argumentdata"></a>クラス引数データ 
   
@@ -20,7 +20,7 @@ ms.locfileid: "81763637"
 --------------------------------|---------------------------------------------
 public const std:: string& GetValue () const  | _まだ文書化されていません。_
 public const std:: string& GetKey () const  | _まだ文書化されていません。_
-public const std:: vector\<std:: String\>& GetValues () const  | _まだ文書化されていません。_
+public const std:: vector \<std::string\>& GetValues () const  | _まだ文書化されていません。_
 パブリック仮想 ~ ArgumentData ()  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: bbff817578bb5ba1fe143c850632e25df8f78708
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: ef881f184fd370665006c8fb4d73138b7c5e2f3c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764205"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214135"
 ---
 # <a name="class-userroles"></a>クラス UserRoles 
 ユーザーのグループおよびそれらに関連付けられているロール。
@@ -19,9 +19,9 @@ ms.locfileid: "81764205"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public UserRoles (const std:: vector\<std:: string\>& users, const std:: vector\<std:: string\>& roles)  |  UserRoles コンストラクター。
-public const std:: vector\<std:: String\>& Users () const  |  ロールのセットに関連付けられているユーザーを取得します。
-public const std:: vector\<std:: String\>& Roles () const  |  ユーザーのグループに関連付けられているロールを取得します。
+public UserRoles (const std:: vector \<std::string\>& users、const std:: vector \<std::string\>& ロール)  |  UserRoles コンストラクター。
+public const std:: vector \<std::string\>& Users () const  |  ロールのセットに関連付けられているユーザーを取得します。
+public const std:: vector \<std::string\>& Roles () const  |  ユーザーのグループに関連付けられているロールを取得します。
   
 ## <a name="members"></a>メンバー
   

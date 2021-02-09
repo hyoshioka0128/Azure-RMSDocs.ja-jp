@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 948db155cbeca6c36c10bac76f26d42952e11e90
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: d70e32793ede4a1184672f3f8755112766ba571b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764490"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214611"
 ---
 # <a name="class-protectionhandler"></a>クラス ProtectionHandler 
 特定の保護構成のための保護に関連するアクションを管理します。
@@ -19,22 +19,23 @@ ms.locfileid: "81764490"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<stream\> CreateProtectedStream (const std:: Shared_ptr\<stream\>& Backingstream、int64_t contentStartPosition、int64_t contentsize)  |  コンテンツの暗号化/暗号化解除を可能にする、保護されたストリームを作成します。
+public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  コンテンツの暗号化/暗号化解除を可能にする、保護されたストリームを作成します。
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  バッファーを暗号化します。
 public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  バッファーを暗号化解除します。
 public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  この ProtectionHandler を使用して暗号化される場合は、コンテンツのサイズ (バイト) を計算します。
 public int64_t GetBlockSize()  |  この ProtectionHandler で使用される暗号モードのブロック サイズ (バイト) を取得します。
-public std:: vector\<std:: string\> getrights () const  |  この ProtectionHandler に関連付けられているユーザー/ID に付与された権限を取得します。
+public std:: vector \<std::string\> getrights () const  |  この ProtectionHandler に関連付けられているユーザー/ID に付与された権限を取得します。
 public bool AccessCheck(const std::string& right) const  |  保護ハンドラーが指定された権限へのアクセス権をユーザーに付与するかどうかを確認します。
 public const std::string GetIssuedTo()  |  保護ハンドラーに関連付けられているユーザーを取得します。
 public const std::string GetOwner()  |  コンテンツ所有者のメール アドレスを取得します。
 public bool IsIssuedToOwner()  |  現在のユーザーがコンテンツの所有者かどうかを取得します。
-public std:: shared_ptr\<protectiondescriptor\> getprotectiondescriptor ()  |  保護の詳細を取得します。
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor()  |  保護の詳細を取得します。
 public const std::string GetContentId()  |  ドキュメント/コンテンツの一意識別子を取得します。
 public bool DoesUseDeprecatedAlgorithms()  |  保護ハンドラーで、下位互換性を実現するために非推奨の暗号アルゴリズム (ECB) を使用するかどうかを取得します。
 public bool IsAuditedExtractAllowed()  |  保護ハンドラーでユーザーに '監査済み抽出' 権限を付与するかどうかを取得します。
-public const std:: vector\<Uint8_t\>& GetSerializedPublishingLicense () const  |  ProtectionHandler を発行ライセンス (PL) にシリアル化します
-public const std:: vector\<Uint8_t\>& GetSerializedPreLicense (prelicenseformat format) const  |  ライセンスを取得します。
+public const std:: vector \<uint8_t\>& GetSerializedPublishingLicense () const  |  ProtectionHandler を発行ライセンス (PL) にシリアル化します
+public const std:: vector \<uint8_t\>& GetSerializedPreLicense (PreLicenseFormat 形式) const  |  ライセンスを取得します。
+public CipherMode GetCipherMode () const  |  保護ハンドラーの暗号モードを取得します。
 enum PreLicenseFormat  |  ライセンス前の形式。
   
 ## <a name="members"></a>メンバー
@@ -202,11 +203,19 @@ ProtectionHandler を発行ライセンス (PL) にシリアル化します
 
 
   
-は、シリアル化されたライセンスの事前ライセンスを**取得**します。これにより、ユーザーは追加の HTTP 呼び出しを行うことなく、すぐにコンテンツを使用できます。 ProtectionHandler [::P ublishingsettings:: SetPreLicenseUserEmail](class_mip_protectionhandler_publishingsettings.md)値を使用して作成されている必要があります。そうしないと、空のベクターが返されます。
+は、シリアル化されたライセンスの事前ライセンスを **取得** します。これにより、ユーザーは追加の HTTP 呼び出しを行うことなく、すぐにコンテンツを使用できます。 ProtectionHandler::P ublishingSettings:: SetPreLicenseUserEmail 値を使用して作成されている必要があります。そうしないと、空のベクターが返されます。
+  
+### <a name="getciphermode-function"></a>GetCipherMode 関数
+保護ハンドラーの暗号モードを取得します。
+
+  
+**戻り値**: 暗号モード
   
 ### <a name="prelicenseformat-enum"></a>PreLicenseFormat 列挙型
+
+ライセンス前の形式。
+
  値                         | 説明                                
 --------------------------------|---------------------------------------------
 xml            | MSIPC で使用されるレガシ XML/SOAP 形式
 Json            | MIP SDK および RMS SDK で使用される JSON/REST 形式
-ライセンス前の形式。

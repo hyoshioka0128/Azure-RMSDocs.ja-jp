@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: d72213c4ef6b8f10eddd3000562099fd6ce1a982
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 6966d61821c84df6944c1c33dc70fcd6cbd0775b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763795"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212520"
 ---
 # <a name="class-actiondata"></a>クラス ActionData 
   

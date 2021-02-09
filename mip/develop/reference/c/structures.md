@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 4/16/2020
-ms.openlocfilehash: 0d24a2fedad93ecca3b4d5a48f5434746a7a7c4e
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 9/22/2020
+ms.openlocfilehash: 2939a4c64ab3e1a47704811875c6a7e941bcfe3c
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763837"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569382"
 ---
 # <a name="structures"></a>構造体
 
@@ -62,7 +62,7 @@ MIP オブジェクトへの非透過ハンドル
 | フィールド | 説明 |
 |---|---|
 | typeId | 特定のハンドルの種類を一意に識別するマジック番号  |
-| data | 未処理のハンドルデータ  |
+| [データ] | 未処理のハンドルデータ  |
 
 
 ```c
@@ -90,7 +90,7 @@ typedef struct {
 
 | フィールド | 説明 |
 |---|---|
-| key | Key  |
+| key | キー  |
 | value | 値  |
 
 
@@ -150,7 +150,7 @@ HTTP 要求
 | フィールド | 説明 |
 |---|---|
 | id | 一意の要求 ID--mip_cc_http_response の同じプロパティと相関しています  |
-| type | HTTP 要求の種類 (GET、POST など)  |
+| 型 | HTTP 要求の種類 (GET、POST など)  |
 | url | HTTP 要求 URL  |
 | bodySize | HTTP 要求本文のサイズ (バイト単位)  |
 | body | Buffer 格納 HTTP 要求本文  |
@@ -178,7 +178,7 @@ HTTP 応答
 | フィールド | 説明 |
 |---|---|
 | id | 一意の要求 ID--mip_cc_http_request の同じプロパティと相関しています  |
-| StatusCode | HTTP 応答の状態コード  |
+| statusCode | HTTP 応答の状態コード  |
 | bodySize | HTTP 応答本文のサイズ (バイト単位)  |
 | body | Buffer 格納 HTTP 応答本文  |
 | headersCount | HTTP 応答ヘッダーの数  |
@@ -240,7 +240,7 @@ typedef struct {
 | フィールド | 説明 |
 |---|---|
 | users | ユーザーの一覧  |
-| ユーザ数 | ユーザーの数  |
+| ユーザ数 | ユーザー数  |
 | 権限 | 権限の一覧  |
 | rightsCount | 権限の数  |
 
@@ -262,7 +262,7 @@ typedef struct {
 | フィールド | 説明 |
 |---|---|
 | users | ユーザーの一覧  |
-| ユーザ数 | ユーザーの数  |
+| ユーザ数 | ユーザー数  |
 | roles | ロールの一覧  |
 | ロール数 | ロール数  |
 
@@ -283,7 +283,7 @@ typedef struct {
 
 | フィールド | 説明 |
 |---|---|
-| id | [タスク ID]  |
+| id | タスク ID  |
 | delayMs | タスクの実行までの遅延時間 (ミリ秒)  |
 | executeOnIndependentThread | このタスクを完全に独立したスレッドで実行するか、共有スレッドを再利用できるかを指定します。  |
 
@@ -327,51 +327,38 @@ typedef struct {
 
 ## <a name="mip_cc_document_state"></a>mip_cc_document_state
 
-名前/プレフィックスでフィルター処理されたドキュメント metatdata を取得するためのコールバック関数定義
+名前/プレフィックスでフィルター処理されたドキュメント metatdata を取得するためのコールバック関数定義。
+
+| フィールド | 説明 |
+|---|---|
+| dataState | アプリケーションと対話するときのドキュメントデータの状態。 |
+| contentMetadataCallback | ドキュメントメタデータのコールバック。 |
+| protectionDescriptor | ドキュメントが現在保護されている場合は保護記述子、それ以外の場合は null。  |
+| contentFormat | ドキュメントの形式 (ファイルと電子メール)。  |
+| auditMetadata | 監査レポートを送信するときに使用される、アプリケーション固有のオプションのメタデータ。 認識される値: "送信者": 送信者の電子メールアドレス。' 受信者 ': 電子メールの受信者の JSON 配列です。' Lastmodified ': ドキュメントを最後に変更したユーザーの電子メールアドレス。' LastModifiedDate ': ドキュメントが最後に変更された日付  |
+| contentMetadataVersion | ドキュメントメタデータのバージョン。既定値は0です。  |
+| contentMetadataVersionFormat | メタデータのバージョン管理の処理方法について説明します。  |
 
 ```c
 typedef struct {
-  /**
-   * Human-readable document description visible in tenant audit portal
-   *     Example for a file: [path\filename]
-   *     Example for an email: [Subject:Sender]
-   */
+
   const char* contentId;
 
-  /**
-   * State of document data as application interacts with it
-   */
+
   mip_cc_data_state dataState;
 
-  /**
-   * Document metadata callback
-   */
   mip_cc_metadata_callback contentMetadataCallback;
 
-  /**
-   * Protection descriptor if document is currently protected, else null
-   */
   mip_cc_protection_descriptor protectionDescriptor;
 
-  /**
-   * Format of document (file vs. email)
-   */
   mip_cc_content_format contentFormat;
 
-  /**
-   * Optional application-specific metadata that is used when sending audit reports
-   *     Recognized values:
-   *       'Sender': Sender email address
-   *       'Recipients': JSON array of email recipients
-   *       'LastModifiedBy': Email address of the user who last modified a document
-   *       'LastModifiedDate': Date a document was last modified
-   */
   mip_cc_dictionary auditMetadata;
-  
-  /**
-   * Document metadata version, default should be 0.
-   */
-  unsigned int contentMetadataVersion;
+
+  uint32_t contentMetadataVersion;
+
+  mip_cc_metadata_version_format contentMetadataVersionFormat;
+
 } mip_cc_document_state;
 
 ```

@@ -4,27 +4,34 @@ description: 組織用の Microsoft Azure Information Protection ポリシーを
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 239b441705ce7d90b7960babf44ac32513db4bfd
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 112c4ecdf06c94d6cff250764f397587738cf129
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927507"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806228"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>チュートリアル:Azure Information Protection ポリシーの設定を構成して新しいラベルを作成する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+>
+> **AIP クラシック クライアントをデプロイする** には、サポート チケットを作成してダウンロードへのアクセスを取得します。
+
+> [!TIP]
+> クラシック クライアントとは別のラベル付けクライアントを使用している場合は、このチュートリアルと同等の手順について [Microsoft 365 のコンプライアンス ドキュメント](/microsoft-365/compliance/sensitivity-labels)を参照してください。
+> 
 
 このチュートリアルでは、以下を実行する方法について説明します。
 > [!div class="checklist"]
@@ -50,27 +57,26 @@ ms.locfileid: "86927507"
     
     これらの手順については、「[クイック スタート:Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
-3. お使いの Windows コンピューター (Windows 7 Service Pack 1 以降) に Azure Information Protection クライアント (クラシック) がインストールされている。 
-    
-    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 クラシック クライアントとは別のラベル付けクライアントを使用している場合は、このチュートリアルと同等の手順について [Microsoft 365 のコンプライアンス ドキュメント](/microsoft-365/compliance/sensitivity-labels)を参照してください。
+3. ご利用の Windows コンピューター (Windows 7 Service Pack 1 以降) にインストールされている Azure Information Protection クラシック クライアント。 
 
 4. 次のいずれかのカテゴリから Office アプリにサインインしている。
     
-    - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、[Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
+    - Office アプリ。ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合、Microsoft 365 Apps for Business または Microsoft 365 Business Premium の[更新チャネル別の Microsoft 365 アプリでサポートされているバージョンの表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョン
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)。
+    - Microsoft 365 Apps for enterprise
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019。
+    - Office Professional Plus 2019
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016。
+    - Office Professional Plus 2016
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 Service Pack 1。
+    - Office Professional Plus 2013 Service Pack 1
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 Service Pack 2。
+    - Office Professional Plus 2010 Service Pack 2
 
-Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
-
-では、始めましょう。
+> [!TIP]
+> Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
+> 
+では、始めましょう。 「[Azure Information Protection ポリシーを編集する](#edit-the-azure-information-protection-policy)」に進みます。
 
 ## <a name="edit-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを編集する
 
@@ -106,13 +112,13 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
 
 ### <a name="create-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>保護用の新しいラベル、視覚的なマーカー、および分類を求めるための条件を作成する
 
-ここでは、**社外秘**に新しいサブラベルを作成します。
+ここでは、**社外秘** に新しいサブラベルを作成します。
 
 1. **[分類]**  >  **[ラベル]** メニュー オプションから: **[社外秘]** ラベルを右クリックし、 **[サブラベルの追加]** を選択します。
     
     **[社外秘]** という名前のラベルがない場合は、代わりに別のラベルを選択するか新しいラベルを作成しても、わずかな違いでチュートリアルを続行することができます。
 
-2. **[サブラベル]** ペインで、 **[財務]** のラベル名を指定し、**従業員のみに制限される財務情報が含まれる機密データ**という説明を追加します。
+2. **[サブラベル]** ペインで、 **[財務]** のラベル名を指定し、**従業員のみに制限される財務情報が含まれる機密データ** という説明を追加します。
     
     このテキストは、選択したラベルがどのような使用目的であるかを示しており、ユーザーに対してはツールヒントとして表示され、ユーザーがどのラベルを選択するかを決定するのに役立ちます。
 
@@ -253,9 +259,9 @@ Word で新しいドキュメントを開きます。 Azure Information Protecti
 
     ![Azure Information Protection チュートリアル - 推奨プロンプト](./media/change-nowv2.png)
 
-    構成済みのラベルが文書に適用されていることが表示されるようになった (たとえば、**社外秘\財務**) ことに加えて、ページ全体に組織名の透かしが表示され、**社外秘として分類**というフッターも適用されます。 
+    構成済みのラベルが文書に適用されていることが表示されるようになった (たとえば、**社外秘\財務**) ことに加えて、ページ全体に組織名の透かしが表示され、**社外秘として分類** というフッターも適用されます。 
 
-    また、文書はこのラベルに指定したアクセス許可で保護されます。 文書が保護されていることは、 **[ファイル]** タブをクリックして **[文書の保護]** の情報を見ると確認できます。 文書が**社外秘\財務**およびラベルの説明によって保護されていることがわかります。 
+    また、文書はこのラベルに指定したアクセス許可で保護されます。 文書が保護されていることは、 **[ファイル]** タブをクリックして **[文書の保護]** の情報を見ると確認できます。 文書が **社外秘\財務** およびラベルの説明によって保護されていることがわかります。 
     
     ラベルの保護構成のため、従業員のみが文書を開くことができ、一部のアクションは従業員に対して制限されます。 たとえば、印刷およびコンテンツのコピーと抽出のアクセス許可がないため、文書を印刷したりコピーしたりすることはできません。 このような制限は、データの損失を防ぐのに役立ちます。 ドキュメントの所有者は、ドキュメントを印刷したりコピーしたりできます。 ただし、組織内の他のユーザーに電子メールでドキュメントを送信しても、他のユーザーはこれらの操作を実行できません。
 
@@ -279,5 +285,5 @@ Word を再起動してこれらの変更をダウンロードします。
 
 Azure Information Protection ポリシーの編集について詳しくは、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
 
-ラベル付けアクティビティのログが記録されている場所について詳しくは、「[Azure Information Protection クライアントの使用状況ログ](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)」をご覧ください。
+ラベル付けアクティビティのログが記録されている場所について詳しくは、「[Azure Information Protection クライアントの使用状況ログ](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client)」をご覧ください。
 

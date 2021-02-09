@@ -1,17 +1,17 @@
 ---
 title: ファイル API - 電子メール .msg ファイルの処理 (C++)
-description: この記事では、MIP SDK File API を使用して .msg ファイルを処理する方法のシナリオについて説明します。
-author: Pathak-Aniket
+description: この記事は、MIP SDK ファイル API を使用して .msg ファイルを処理する方法 (C++) のシナリオを理解するうえで役立ちます。
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
-ms.author: v-anikep
-ms.openlocfilehash: ef6f8db6915242a830d252eec4509fa67eecbb8c
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.author: mbaldwin
+ms.openlocfilehash: 111b928538dd6222da55cb2ee5664549e272f785
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403317"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865316"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>ファイル API - 電子メール .msg ファイルの処理 (C++)
 
@@ -42,7 +42,7 @@ File API は、他の種類のファイルと同じ方法で .msg ファイル�
 
 次のファイル エンジンの構築コードを追加して `enable_msg_file_type flag` を設定し、ファイル エンジンを使用して .msg ファイルを保護します。
 
-1. *ソリューション エクスプローラー*を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+1. *ソリューション エクスプローラー* を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 2. 次の #include と using ディレクティブをファイルの上部の対応する既存のディレクティブの下に追加します。
 
@@ -218,36 +218,6 @@ int main()
 ## <a name="build-and-test-the-application"></a>アプリケーションの構築とテスト
 
 ご自分のクライアント アプリケーションをビルドするには、F6 ( **[ソリューションのビルド]** ) を使用します。 ビルド エラーがない場合は、F5 ( **[デバッグ開始]** ) を使用してご自分のアプリケーションを実行します。
-
-```Console
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-    Sign in with user account: User@Contoso.onmicrosoft.com
-    Enter access token: <Paste token here>
-    Press any key to continue . . .
-
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: User@Contoso.onmicrosoft.com
-    Enter access token: <Paste token here>
-    Press any key to continue . . .
-
-    Protection applied to file: C:\Test_protected.msg
-
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/37f4583d-9985-4e7f-a1ab-71afd8b55ba0
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: User@Contoso.onmicrosoft.com
-    Enter access token: <Paste token here>
-    Press any key to continue . . .
-    Original file: C:\Test.msg
-    Protected file: C:\Test_protected.msg
-    TemplateID applied to protected file : 667466bf-a01b-4b0a-8bbf-a79a3d96f720
-    Protection Owner of protected file : User@Contoso.OnMicrosoft.com
-
-```
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 

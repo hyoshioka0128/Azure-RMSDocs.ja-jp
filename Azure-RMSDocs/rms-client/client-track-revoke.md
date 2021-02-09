@@ -1,32 +1,36 @@
 ---
-title: ドキュメントの追跡と取り消し - Azure Information Protection
+title: ドキュメントの & 取り消しを追跡する-Azure Information Protection クラシッククライアント
 description: ドキュメントを保護した後は、保護されたドキュメントのユーザーによる使用状況を追跡できます。 ドキュメントが読まれる必要がなくなった場合は、必要に応じて、これらのドキュメントへのアクセスを取り消すこともできます。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
+ROBOTS: NOINDEX
 ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 956eccb942893d6d8850185449118f4027895a81
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 88b71ee4034868f4abf7c9d1566839acb7e5ddc4
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047509"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808687"
 ---
-# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してドキュメントを追跡および取り消す
+# <a name="user-guide-track-and-revoke-your-documents-when-you-use-the-azure-information-protection-classic-client"></a>ユーザーガイド: Azure Information Protection クラシッククライアントを使用する場合のドキュメントの追跡と取り消し
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [ユニファイドクライアントユーザーガイド](revoke-access-user.md)」を参照してください。
 
-Azure Information Protection を使用してドキュメントを保護した後は、保護されたドキュメントのユーザーによる使用状況を追跡できます。 ドキュメントが読まれる必要がなくなった場合は、必要に応じて、ドキュメントへのアクセスを取り消すこともできます。 このような場合は、**ドキュメント追跡サイト**を使用します。 このサイトには、Windows コンピューター、Mac コンピューターだけでなく、タブレットやスマートフォンからもアクセスできます。
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+
+Azure Information Protection を使用してドキュメントを保護した後は、保護されたドキュメントのユーザーによる使用状況を追跡できます。 ドキュメントが読まれる必要がなくなった場合は、必要に応じて、ドキュメントへのアクセスを取り消すこともできます。 このような場合は、**ドキュメント追跡サイト** を使用します。 このサイトには、Windows コンピューター、Mac コンピューターだけでなく、タブレットやスマートフォンからもアクセスできます。
 
 このサイトにアクセスしたら、サインインしてドキュメントを追跡します。 [ドキュメント追跡および失効をサポートするサブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-features)が組織にあり、このサブスクリプションのライセンスが割り当てられている場合は、保護したファイルを開こうとしたユーザーおよび成功した (正常に認証された) かどうかを確認できます。 また、ユーザーがドキュメントへのアクセスを試みるたびに、その時間と場所がわかります。 ただし、まれに、報告された場所が正確でない場合があります。 たとえば、保護されたドキュメントを開くユーザーが VPN 接続を使用している場合、またはそのコンピューターに IPv6 アドレスが割り当てられている場合です。
 
@@ -65,7 +69,7 @@ Azure Information Protection を使用してドキュメントを保護した後
 
 自分が保護したドキュメントを追跡するには、Windows コンピューターを使用してドキュメント追跡サイトに登録する必要があります。 登録するには、エクスプローラーまたは Office アプリを使用します。
 
-Azure Information Protection クライアントの現在の一般公開バージョンがある場合は、 [set-aipfilelabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)コマンドレットで*enabletracking*パラメーターを使用するときに、保護されたドキュメントを PowerShell に登録することもできます。
+Azure Information Protection クライアントの現在の一般公開バージョンがある場合は、 [set-aipfilelabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)コマンドレットで *enabletracking* パラメーターを使用するときに、保護されたドキュメントを PowerShell に登録することもできます。
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Office を使用したドキュメントの追跡または取り消し
 
@@ -118,7 +122,7 @@ Office アプリまたはエクスプローラーを使用して保護された�
 ## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
-- [実行する操作](client-user-guide.md#what-do-you-want-to-do)
+- [目的に合ったトピックをクリックしてください](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 [管理者ガイド](client-admin-guide.md)の「[Azure Information Protection のドキュメント追跡の構成と使用](client-admin-guide-document-tracking.md)」をご覧ください。

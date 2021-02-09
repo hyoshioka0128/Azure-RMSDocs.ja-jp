@@ -1,18 +1,18 @@
 ---
 title: クイック スタート - MIP SDK C# ラッパーを使用した Microsoft Information Protection (MIP) テナントの機密ラベルの列挙
-description: Microsoft Information Protection SDK C# ラッパーを使用して、テナントの機密ラベルを列挙する方法を説明するクイック スタート。
+description: Microsoft Information Protection SDK C# ラッパーを使用して、テナントの秘密度ラベルを列挙する方法 (C#) を説明するクイック スタート。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: a9e9a2d6534cc674f8bf697543e865a3596d457b
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 607e721ad941901b83e37de7e20949da2a9ab936
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972188"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535945"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>クイック スタート:機密ラベルの一覧表示 (C#)
 
@@ -31,7 +31,7 @@ ms.locfileid: "82972188"
 
 1. 前の「クイック スタート: クライアント アプリケーションの初期化 (C#)」の記事で作成した、Visual Studio ソリューションを開きます。
 
-2. **ソリューション エクスプローラー**を使用して、`Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+2. **ソリューション エクスプローラー** を使用して、`Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 3. `Main()` 本文の末尾の、`Main()` 関数のアプリケーション シャットダウンのセクションの上 (前のクイック スタートが終わった場所) に、次のコードを挿入します。
 
@@ -57,7 +57,7 @@ ms.locfileid: "82972188"
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
-2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインを求められることはなく、ラベルの一覧が表示されます。
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる *場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインを求められることはなく、ラベルの一覧が表示されます。
 
      [![Visual Studio のトークンでのサインインの取得](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 

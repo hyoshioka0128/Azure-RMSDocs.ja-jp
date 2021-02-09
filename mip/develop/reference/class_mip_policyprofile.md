@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 9f70b8bfa1eee6e994b67c668b5144d6cb74ecad
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 89bac003d9a4924d5b854826b53eaa787f770a7c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760904"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213370"
 ---
 # <a name="class-policyprofile"></a>クラス PolicyProfile 
 PolicyProfile クラスは、Microsoft Information Protection 操作を使用するためのルート クラスです。 一般的なアプリケーションでは PolicyProfile は 1 つしか必要ありませんが、必要に応じて複数のプロファイルを作成できます。
@@ -20,15 +20,15 @@ PolicyProfile クラスは、Microsoft Information Protection 操作を使用す
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  プロファイルに設定されている設定値を取得します。
-public std:: shared_ptr\<asynccontrol\> ListEnginesAsync (const std:: shared_ptr\<void\>& context)  |  エンジンの一覧操作を開始します。
-public std:: vector\<std:: string\> listengines ()  |  エンジンの一覧。
-public std:: shared_ptr\<asynccontrol\> UnloadEngineAsync (const std:: string& id、const std:: shared_ptr\<void\>& context)  |  指定した ID を持つポリシー エンジンのアンロードを開始します。
+public std:: shared_ptr \<AsyncControl\> ListEnginesAsync (const std:: shared_ptr \<void\>& context)  |  エンジンの一覧操作を開始します。
+public std:: vector \<std::string\> listengines ()  |  エンジンの一覧。
+public std:: shared_ptr \<AsyncControl\> UnloadEngineAsync (const std:: string& id、const std:: shared_ptr \<void\>& context)  |  指定した ID を持つポリシー エンジンのアンロードを開始します。
 public void UnloadEngine (const std:: string& id)  |  指定した ID を持つポリシー エンジンのアンロードを開始します。
-public std:: shared_ptr\<asynccontrol\> AddEngineAsync (const policyengine:: Settings& settings, const std:: shared_ptr\<void\>& context)  |  プロファイルへの新しいポリシー エンジンの追加を開始します。
-public std:: shared_ptr\<policyengine\> Addengine (const policyengine:: settings& settings, const std:: shared_ptr\<void\>& context)  |  プロファイルに新しいポリシーエンジンを追加します。
-public std:: shared_ptr\<asynccontrol\> DeleteEngineAsync (const std:: string& id、const std:: shared_ptr\<void\>& context)  |  指定した ID を持つポリシー エンジンの削除を開始します。 指定したプロファイルのデータがすべて削除されます。
+public std:: shared_ptr \<AsyncControl\> AddEngineAsync (Const PolicyEngine:: settings& settings, const std:: shared_ptr \<void\>& context)  |  プロファイルへの新しいポリシー エンジンの追加を開始します。
+public std:: shared_ptr \<PolicyEngine\> addengine (Const policyengine:: settings& settings、const std:: shared_ptr \<void\>& context)  |  プロファイルに新しいポリシーエンジンを追加します。
+public std:: shared_ptr \<AsyncControl\> DeleteEngineAsync (const std:: string& id、const std:: shared_ptr \<void\>& context)  |  指定した ID を持つポリシー エンジンの削除を開始します。 指定したプロファイルのデータがすべて削除されます。
 public void DeleteEngine(const std::string& engineId)  |  指定された ID を持つポリシーエンジンを削除します。 指定したエンジンのすべてのデータが削除されます。
-public void AcquireAuthToken (クラウドクラウド、const std:: shared_ptr\<authdelegate\>& authdelegate) const  |  認証コールバックをトリガーします。
+public void AcquireAuthToken (クラウドクラウド、const std:: shared_ptr \<AuthDelegate\>& authdelegate) const  |  認証コールバックをトリガーします。
   
 ## <a name="members"></a>メンバー
   

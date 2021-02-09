@@ -5,18 +5,18 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ae2c1dd96c07febf374c50791c915597deea7c76
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: eac964c6f672c107b30ebdd30c0ccbe7f0be27b0
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762186"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213948"
 ---
 # <a name="class-justifyaction"></a>クラスジャスト Ifyaction 
 正当化アクションは、ラベルをダウングレードする理由の提供と実行状態での応答の設定を要求します。
   
-**関連**項目: mip:: executionstate:: IsDowngradeJustified
+**関連** 項目: mip:: executionstate:: IsDowngradeJustified
   
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                

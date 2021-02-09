@@ -1,17 +1,17 @@
 ---
-title: クイック スタート - Microsoft Information Protection (MIP) SDK C++ クライアントの初期化
-description: Microsoft Information Protection (MIP) SDK クライアント アプリケーションの初期化ロジックを記述する方法を示すクイック スタートです。
-author: Pathak-Aniket
+title: クイックスタート - 保護 API を使用した MIP SDK C++ クライアントの初期化
+description: 保護 API を使用して Microsoft Information Protection (MIP) SDK クライアント アプリケーションの初期化ロジックを記述する方法 (C++) を示すクイック スタート
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
-ms.openlocfilehash: e0f77c27c38b8b2f1baf4385efce1ee7336c8f9d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.openlocfilehash: 4570180781d09bdf8090578b84ac8fc3bb2c93d7
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766390"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865214"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>クイック スタート:保護 API のためのクライアント アプリケーション初期化 (C++)
 
@@ -43,7 +43,7 @@ ms.locfileid: "81766390"
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. MIP SDK 保護 API 用の Nuget パッケージをご自分のプロジェクトに追加します。
-   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
+   - **ソリューション エクスプローラー** で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
    - **[NuGet パッケージ マネージャー]** タブが [エディター グループ] タブ領域で開かれたら、次の操作を行います。
      - **[参照]** を選択します。
      - 検索ボックスに「Microsoft.InformationProtection」と入力します。
@@ -58,7 +58,7 @@ ms.locfileid: "81766390"
 
 1. header/.h ファイルと implementation/.cpp ファイルの両方を作成する、新しいクラスをご自分のプロジェクトに追加します。
 
-   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
+   - **ソリューション エクスプローラー** でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
    - **[クラスの追加]** ダイアログで以下の操作を行います。
      - **[クラス名]** フィールドに「profile_observer」と入力します。 入力した名前に基づき、 **[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
      - 完了したら、 **[OK]** ボタンをクリックします。
@@ -67,7 +67,7 @@ ms.locfileid: "81766390"
 
 2. クラスの .h ファイルおよび .cpp ファイルを作成すると、両ファイルは [エディター グループ] タブに表示されます。 ここで各ファイルを更新して、新しいオブザーバー クラスを実装します。
 
-   - 生成した `profile_observer` クラスを選択または削除することで、"profile_observer.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `profile_observer` クラスを選択または削除することで、"profile_observer.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      #include <memory>
@@ -86,7 +86,7 @@ ms.locfileid: "81766390"
      };
      ```
 
-   - 生成した `profile_observer` クラス実装を選択/削除することで、"profile_observer.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `profile_observer` クラス実装を選択/削除することで、"profile_observer.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      #include <future>
@@ -122,7 +122,7 @@ ms.locfileid: "81766390"
 
 4. クラスの .h ファイルおよび .cpp ファイルを作成すると、両ファイルは [エディター グループ] タブに表示されます。 ここで各ファイルを更新して、新しいオブザーバー クラスを実装します。
 
-   - 生成した `engine_observer` クラスを選択または削除することで、"engine_observer.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `engine_observer` クラスを選択または削除することで、"engine_observer.h" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      #include <memory>
@@ -140,7 +140,7 @@ ms.locfileid: "81766390"
      };
      ```
 
-   - 生成した `engine_observer` クラス実装を選択/削除することで、"engine_observer.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `engine_observer` クラス実装を選択/削除することで、"engine_observer.cpp" を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      #include "mip/protection/protection_profile.h"
@@ -174,9 +174,9 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
 
 前述のように、MIP API を使用する SDK クライアントには、プロファイル オブジェクトとエンジン オブジェクトが必要です。 プロファイル オブジェクトとエンジン オブジェクトをインスタンス化するためにコードを追加することで、このクイック スタートのコード部分を完了します。
 
-1. **ソリューション エクスプローラー**から、`main()` メソッドの実装を含む .cpp ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+1. **ソリューション エクスプローラー** から、`main()` メソッドの実装を含む .cpp ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
-2. 生成された `main()` の実装を削除します。 プロジェクトの作成時に Visual Studio で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma, #include)。 任意のプリプロセッサ ディレクティブの後に次のコードを追加します。
+2. 生成された `main()` の実装を削除します。 プロジェクトの作成時に Visual Studio で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma, #include)。 任意のプリプロセッサ ディレクティブの後に次のコードを追加します。
 
   ```cpp
   #include "mip/mip_init.h"
@@ -291,7 +291,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
     Press any key to close this window . . .
    ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 これで初期化コードが完了し、MIP 保護 API の操作を開始する次のクイック スタートの準備ができました。
 

@@ -1,34 +1,35 @@
 ---
-title: Azure Information Protection クライアントで PowerShell を使用する
-description: 管理者が PowerShell を使って Azure Information Protection クライアントを管理するための手順と情報について説明します。
-author: mlottner
-ms.author: mlottner
+title: Azure Information Protection クラシッククライアントで PowerShell を使用する
+description: PowerShell を使用して Azure Information Protection classic クライアントを管理するための管理者向けの手順と情報です。
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
+ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6099773aa4c9b634cf225b570ac4e1ad8bebf38e
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 7df480389741a900326477e8d6088ac9dc6da596
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868996"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808668"
 ---
-# <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
+# <a name="admin-guide-using-powershell-with-the-azure-information-protection-classic-client"></a>管理者ガイド: Azure Information Protection クラシッククライアントでの PowerShell の使用
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、windows Server 2012 R2、windows server 2012 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [クライアント管理者ガイド](clientv2-admin-guide-powershell.md)」を参照してください。
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-Azure Information Protection クライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
+Azure Information Protection クラシッククライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
 コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection を利用するコマンドレットもあります。 次に例を示します。
 
@@ -40,11 +41,11 @@ Azure Information Protection クライアントをインストールすると、
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|スケジュールに基づいて実行されるスクリプトを利用するなど、非対話式にファイルにラベルを付けます。|
 
 > [!TIP]
-> 260 文字よりも長いパスとともにコマンドレットを使用するには、Windows 10 バージョン 1607 以降で利用できる次の[グループ ポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)を使用します。<br /> **ローカルコンピューターポリシー**  > **コンピューターの構成**  > **管理用テンプレート**  > **すべての設定**  > **Win32 長いパスを有効にする** 
+> 260 文字よりも長いパスとともにコマンドレットを使用するには、Windows 10 バージョン 1607 以降で利用できる次の[グループ ポリシー設定](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10)を使用します。<br /> **ローカルコンピューターポリシー**  > **コンピューターの構成**  > **管理用テンプレート**  > **すべての設定**  > **Win32 長いパスを有効にする** 
 > 
 > Windows Server 2016 の場合、Windows 10 用の最新の管理用テンプレート (.admx) をインストールすれば、同じグループ ポリシー設定を使用できます。
 >
-> 詳しくは、Windows 10 開発者向けドキュメントの「[Maximum Path Length Limitation (パスの最大長の制限)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」をご覧ください。
+> 詳しくは、Windows 10 開発者向けドキュメントの「[Maximum Path Length Limitation (パスの最大長の制限)](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」をご覧ください。
 
 [Azure Information Protection スキャナー](../deploy-aip-scanner.md)では AzureInformationProtection モジュールのコマンドレットを使用して、Windows Server にサービスをインストールし、構成します。 このスキャナーでは、データ ストアのファイルを検出、分類、保護できます。
 
@@ -139,18 +140,18 @@ Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -
 
 ##### <a name="to-get-the-bpostenantid"></a>BposTenantId を取得するには
 
-Azure RMS Windows PowerShell モジュールから AipServiceConfiguration コマンドレットを実行します。
+Azure RMS Windows PowerShell モジュールから Get-AipServiceConfiguration コマンドレットを実行します。
 
 1. このモジュールがコンピューターにまだインストールされていない場合は、「 [AIPService PowerShell モジュールのインストール](../install-powershell.md)」を参照してください。
 
-2. [**管理者として実行**] オプションを使用して Windows PowerShell を起動します。
+2. [ **管理者として実行** ] オプションを使用して Windows PowerShell を起動します。
 
 3. `Connect-AipService` コマンドレットを使って、Azure Rights Management サービスに接続します。
    ```ps 
     Connect-AipService
     ```
 
-    プロンプトが表示されたら、Azure Information Protection テナント管理者資格情報を入力します。 通常、Azure Active Directory または Office 365 のグローバル管理者であるアカウントを使用します。
+    プロンプトが表示されたら、Azure Information Protection テナント管理者資格情報を入力します。 通常は、Azure Active Directory または Microsoft 365 のグローバル管理者であるアカウントを使用します。
     
 4. `Get-AipServiceConfiguration` を実行して、BPOSId の値をコピーします。
     
@@ -185,7 +186,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 1. MSOnline モジュールがまだコンピューターにインストールされていない場合は、`Install-Module MSOnline` を実行します。
 
-2. [**管理者として実行**] オプションを使用して Windows PowerShell を起動します。
+2. [ **管理者として実行** ] オプションを使用して Windows PowerShell を起動します。
 
 3. **Connect-MsolService** コマンドレットを使って、Azure AD に接続します。
 
@@ -193,7 +194,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
     Connect-MsolService
     ```
 
-    プロンプトが表示されたら、Azure AD のテナント管理者の資格情報を入力します (通常は、Azure Active Directory または Office 365 のグローバル管理者であるアカウントを使います)。
+    プロンプトが表示されたら、Azure AD テナント管理者の資格情報を入力します (通常は、Azure Active Directory または Microsoft 365 のグローバル管理者であるアカウントを使用します)。
 
 4. New-MsolServicePrincipal コマンドレットを実行して、新しいサービス プリンシパルを作成します。
 
@@ -246,7 +247,7 @@ Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-Ap
 
 前のコマンドのように、単一のコマンドで値を指定できます。これは、非対話的に実行するスクリプトの場合と同じです。 ただし、テストが目的の場合は、単に Set-RMSServerAuthentication と入力し、プロンプトに 1 つずつ値を入力してもかまいません。 コマンドが完了すると、クライアントは "サーバー モード" で動作するようになります。これは、スクリプトや Windows Server ファイル分類インフラストラクチャなどの非対話型の使用に適しています。
 
-このサービス プリンシパル アカウントをスーパー ユーザーにすることを検討します。このサービス プリンシパル アカウントでいつでも他のユーザーのファイルの保護を解除できるように、スーパー ユーザーとして構成できます。 標準ユーザーアカウントをスーパーユーザーとして構成するのと同様に、 [AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser)コマンドレットを Azure RMS 使用しますが、 **ServicePrincipalId**パラメーターには AppPrincipalId の値を指定します。
+このサービス プリンシパル アカウントをスーパー ユーザーにすることを検討します。このサービス プリンシパル アカウントでいつでも他のユーザーのファイルの保護を解除できるように、スーパー ユーザーとして構成できます。 標準ユーザーアカウントをスーパーユーザーとして構成するのと同様に、 [AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser)コマンドレットを Azure RMS 使用しますが、 **ServicePrincipalId** パラメーターには AppPrincipalId の値を指定します。
 
 スーパーユーザーの詳細については、「 [Azure Information Protection および探索サービスまたはデータ回復用のスーパーユーザーの構成](../configure-super-users.md)」を参照してください。
 
@@ -257,7 +258,7 @@ Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-Ap
 
 サービス プリンシパル アカウントを使用して、Azure 北米リージョン以外でファイルを保護し、テンプレートをダウンロードする場合は、レジストリを次のように編集する必要があります。 
 
-1. AipServiceConfiguration コマンドレットをもう一度実行し、 **CertificationExtranetDistributionPointUrl**と**LicensingExtranetDistributionPointUrl**の値をメモしておきます。
+1. Get-AipServiceConfiguration コマンドレットをもう一度実行し、 **CertificationExtranetDistributionPointUrl** と **LicensingExtranetDistributionPointUrl** の値をメモしておきます。
 
 2. AzureInformationProtection コマンドレットを実行する各コンピューターで、レジストリ エディターを開きます。
 
@@ -281,7 +282,7 @@ Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-Ap
 
 ### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Azure Information Protection および Azure Rights Management サービスのコマンドレットを使うシナリオの例
 
-必要なコマンドレットは2つだけなので、ラベルを使用してファイルを分類および保護する方が効率的です。これは、単独または一緒に実行することができます。 [Get AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)と[set-aipfilelabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)です。 詳細と例については、これら両方のコマンドレットのヘルプを使ってください。
+必要なコマンドレットは2つだけなので、ラベルを使用してファイルを分類および保護する方が効率的です。これは、単独または一緒に実行することができます。 [Get AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) と [set-aipfilelabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)です。 詳細と例については、これら両方のコマンドレットのヘルプを使ってください。
 
 ただし、Azure Rights Management サービスに直接接続してファイルを保護または保護解除するには、通常、次に説明するように一連のコマンドレットを実行する必要があります。
 
@@ -527,13 +528,13 @@ C:\Test.docx                          C:\Test.docx
 
 このコマンドレットを初めて実行する際は、Azure Information Protection へのサインインを求められます。 自動実行ユーザー用に作成したユーザー アカウント名とパスワードを指定します。 これ以降、このアカウントでは、認証トークンの有効期限が切れるまで、ラベル付けのコマンドレットを非対話形式で実行できます。 
 
-この初回でユーザー アカウントが対話式サインインできるようにするには、アカウントに**ローカル ログオン**権限を与える必要があります。 この権限はユーザー アカウントの標準ですが、会社のポリシーによっては、サービス アカウントに対してこの構成を禁止することがあります。 禁止される場合、*Token* パラメーターを指定して Set-AIPAuthentication を実行できます。サインイン プロンプトなしで認証が完了します。 スケジュールされたタスクとしてこのコマンドを実行し、**バッチ ジョブとしてログオン**という低い権限をアカウントに与えることができます。 詳細については、次のセクションを参照してください。 
+この初回でユーザー アカウントが対話式サインインできるようにするには、アカウントに **ローカル ログオン** 権限を与える必要があります。 この権限はユーザー アカウントの標準ですが、会社のポリシーによっては、サービス アカウントに対してこの構成を禁止することがあります。 禁止される場合、*Token* パラメーターを指定して Set-AIPAuthentication を実行できます。サインイン プロンプトなしで認証が完了します。 スケジュールされたタスクとしてこのコマンドを実行し、**バッチ ジョブとしてログオン** という低い権限をアカウントに与えることができます。 詳細については、次のセクションを参照してください。 
 
 トークンが期限切れになったら、コマンドレットを再度実行して新しいトークンを取得します。
 
 パラメーターを指定せずにこのコマンドレットを実行すると、アカウントは 90 日間またはパスワードの有効期限が切れるまで有効なアクセス トークンを取得します。  
 
-アクセス トークンの有効期限を制御するには、パラメーターを指定してこのコマンドレットを実行します。 これにより、1 年間有効、2 年間有効、または期限なしのアクセス トークンを構成できます。 この構成には、2 つのアプリケーション、すなわち **Web アプリ/API** アプリケーションと**ネイティブ アプリケーション**を Azure Active Directory に登録する必要があります。 このコマンドレットのパラメーターには、これらのアプリケーションからの値を使用します。
+アクセス トークンの有効期限を制御するには、パラメーターを指定してこのコマンドレットを実行します。 これにより、1 年間有効、2 年間有効、または期限なしのアクセス トークンを構成できます。 この構成には、2 つのアプリケーション、すなわち **Web アプリ/API** アプリケーションと **ネイティブ アプリケーション** を Azure Active Directory に登録する必要があります。 このコマンドレットのパラメーターには、これらのアプリケーションからの値を使用します。
 
 このコマンドレットを実行した後は、作成したユーザー アカウントのコンテキストでラベル付けコマンドレットを実行できます。
 
@@ -541,38 +542,38 @@ C:\Test.docx                          C:\Test.docx
 
 1. 新しいブラウザー ウィンドウで、[Azure Portal](https://portal.azure.com/) にサインインします。
 
-2. Azure Information Protection で使用する Azure AD テナントについては、 **Azure Active Directory**  >  **Manage**アプリの登録] を参照して  >  **App registrations**ください。 
+2. Azure Information Protection で使用する Azure AD テナントについては、 **Azure Active Directory**  >  **Manage** アプリの登録] を参照して  >  ください。 
 
-3. [ **+ 新規登録**] を選択して、Web アプリ/API アプリケーションを作成します。 [**アプリケーションの登録**] ウィンドウで、次の値を指定し、[**登録**] をクリックします。
+3. [ **+ 新規登録**] を選択して、Web アプリ/API アプリケーションを作成します。 [ **アプリケーションの登録** ] ウィンドウで、次の値を指定し、[ **登録**] をクリックします。
 
    - **名前**: `AIPOnBehalfOf`
         
         必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
     
-    - **サポートされているアカウントの種類**:**この組織ディレクトリ内のアカウントのみ**
+    - **サポートされているアカウントの種類**: **この組織ディレクトリ内のアカウントのみ**
     
-    - **リダイレクト URI (省略可能)**: **Web**および`http://localhost`
+    - **リダイレクト URI (省略可能)**: **Web** および `http://localhost`
 
-4. [ **Aiponbehalfof** ] ウィンドウで、**アプリケーション (クライアント) ID**の値をコピーします。 値は次の例のように `57c3c1c3-abf9-404e-8b2b-4652836c8c66` なります。 この値は、Set AIPAuthentication コマンドレットを実行するときに*Webappid*パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
+4. [ **Aiponbehalfof** ] ウィンドウで、 **アプリケーション (クライアント) ID** の値をコピーします。 値は次の例のように `57c3c1c3-abf9-404e-8b2b-4652836c8c66` なります。 この値は、Set-AIPAuthentication コマンドレットを実行するときに *Webappid* パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
 
-5. [ **Aiponbehalfof** ] ウィンドウで、[**管理**] メニューから [**認証**] を選択します。
+5. [ **Aiponbehalfof** ] ウィンドウで、[ **管理** ] メニューから [ **認証**] を選択します。
 
-6. [ **Aiponbehalfof-Authentication** ] ウィンドウの [**詳細設定**] セクションで、[ **ID トークン**] チェックボックスをオンにして、[**保存**] を選択します。
+6. [ **Aiponbehalfof-Authentication** ] ウィンドウの [ **詳細設定** ] セクションで、[ **ID トークン** ] チェックボックスをオンにして、[ **保存**] を選択します。
 
-7. [ **Aiponbehalfof-Authentication** ] ウィンドウで、[**管理**] メニューから [**証明書 & シークレット**] を選択します。
+7. [ **Aiponbehalfof-Authentication** ] ウィンドウで、[ **管理** ] メニューから [ **証明書 & シークレット**] を選択します。
 
-8. [**証明書 & シークレット**] ウィンドウの [**クライアントシークレット**] セクションで、[ **+ 新しいクライアントシークレット**] を選択します。 
+8. [ **証明書 & シークレット** ] ウィンドウの [ **クライアントシークレット** ] セクションで、[ **+ 新しいクライアントシークレット**] を選択します。 
 
-9. [**クライアントシークレットの追加**] で、次のように指定し、[**追加**] を選択します。
+9. [ **クライアントシークレットの追加**] で、次のように指定し、[ **追加**] を選択します。
     
-    - **説明**:`Azure Information Protection client`
+    - **説明**: `Azure Information Protection client`
     - **有効期限**: 選択した期間 (1 年、2年間、または無期限) を指定します
 
-9. [ **Aiponbehalfof-Certificates & シークレット**] ウィンドウに戻り、[**クライアントシークレット**] セクションで、**値**の文字列をコピーします。 この文字列は次の例のように `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn` なります。 すべての文字がコピーされるようにするには、**クリップボードにコピー**するアイコンを選択します。 
+9. [ **Aiponbehalfof-Certificates & シークレット** ] ウィンドウに戻り、[ **クライアントシークレット** ] セクションで、 **値** の文字列をコピーします。 この文字列は次の例のように `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn` なります。 すべての文字がコピーされるようにするには、 **クリップボードにコピー** するアイコンを選択します。 
     
     この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用する機密情報と同様に、保存した値を安全に保存し、アクセスを制限します。
 
-10. [ **Aiponbehalfof-Certificates & シークレット**] ウィンドウで、[**管理**] メニューから [ **API の公開**] を選択します。
+10. [ **Aiponbehalfof-Certificates & シークレット** ] ウィンドウで、[ **管理** ] メニューから [ **API の公開**] を選択します。
 
 11. [ **Aiponbehalfof-api の公開**] ウィンドウで、[**アプリケーション id uri** ] オプションに [**設定**] を選択し、[**アプリケーション id uri** ] の値で [ **api** ] を [ **http**] に変更します。 この文字列は次の例のように `http://d244e75e-870b-4491-b70d-65534953099e` なります。 
     
@@ -580,14 +581,14 @@ C:\Test.docx                          C:\Test.docx
 
 12. **Aiponbehalfof-[API の公開**] ウィンドウに戻り、[ **+ スコープの追加**] を選択します。
 
-13. [**スコープの追加**] ウィンドウで、推奨される文字列を例として使用して、次のように指定し、[**スコープの追加**] を選択します。
+13. [ **スコープの追加** ] ウィンドウで、推奨される文字列を例として使用して、次のように指定し、[ **スコープの追加**] を選択します。
     - **スコープ名**: `user-impersonation`
-    - **同意できるユーザー**:**管理者とユーザー**
+    - **同意できるのはだれですか?** : **管理者とユーザー**
     - **管理者の同意の表示名**: `Access Azure Information Protection scanner`
     - **管理者の同意の説明**: `Allow the application to access the scanner for the signed-in user`
-    - **ユーザーの同意の表示名**:`Access Azure Information Protection scanner`
-    - **ユーザーの同意の説明**:`Allow the application to access the scanner for the signed-in user`
-    - **状態**:**有効**(既定値)
+    - **ユーザーの同意の表示名**: `Access Azure Information Protection scanner`
+    - **ユーザーの同意の説明**: `Allow the application to access the scanner for the signed-in user`
+    - **状態**: **有効** (既定値)
 
 
 14. **Aiponbehalfof-[API の公開**] ウィンドウに戻り、このペインを閉じます。
@@ -596,36 +597,36 @@ C:\Test.docx                          C:\Test.docx
 
 16. [ **Aiponbehalfof**  |  **API のアクセス許可**] ウィンドウで、[ **+ アクセス許可の追加**] を選択します。
 
-17. [ **Azure Right Management**] を選択し、[委任された**アクセス許可**] を選択し、[**ユーザーの保護されたコンテンツの作成とアクセス**] を選択します
+17. [ **Azure Right Management**] を選択し、[委任された **アクセス許可** ] を選択し、[ **ユーザーの保護されたコンテンツの作成とアクセス**] を選択します
 
 18. **[アクセス許可の追加]** をクリックします。
 
-19. [API の**アクセス許可**] ウィンドウに戻り、[**同意**する] セクションで、[**管理者の同意を許可 <your tenant name> する**] を選択し、確認プロンプトで [**はい]** を選択します。
+19. [API の **アクセス許可**] ウィンドウに戻り、[**同意** する] セクションで、[**管理者の同意を許可 <your tenant name> する**] を選択し、確認プロンプトで [**はい]** を選択します。
 
-20. [**アプリの登録**] ウィンドウで、[ **+ 新しいアプリケーションの登録**] を選択してネイティブアプリケーションを作成します。
+20. [ **アプリの登録** ] ウィンドウで、[ **+ 新しいアプリケーションの登録** ] を選択してネイティブアプリケーションを作成します。
 
-21. [**アプリケーションの登録**] ウィンドウで、次の設定を指定し、[**登録**] を選択します。
+21. [ **アプリケーションの登録** ] ウィンドウで、次の設定を指定し、[ **登録**] を選択します。
     - **名前**: `AIPClient`
-    - **サポートされているアカウントの種類**:**この組織ディレクトリ内のアカウントのみ**
-    - **リダイレクト URI (省略可能)**:**パブリッククライアント (モバイル & デスクトップ)** と`http://localhost`
+    - **サポートされているアカウントの種類**: **この組織ディレクトリ内のアカウントのみ**
+    - **リダイレクト URI (省略可能)**: **パブリッククライアント (モバイル & デスクトップ)** と `http://localhost`
 
-22. [ **Aipclient** ] ウィンドウで、**アプリケーション (クライアント) ID**の値をコピーします。 値は次の例のように `8ef1c873-9869-4bb1-9c11-8313f9d7f76f` なります。 
+22. [ **Aipclient** ] ウィンドウで、 **アプリケーション (クライアント) ID** の値をコピーします。 値は次の例のように `8ef1c873-9869-4bb1-9c11-8313f9d7f76f` なります。 
     
     この値は、Set-AIPAuthentication コマンドレットを実行するときに、パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
 
-23. [ **Aipclient** ] ウィンドウで、[**管理**] メニューから [**認証**] を選択します。
+23. [ **Aipclient** ] ウィンドウで、[ **管理** ] メニューから [ **認証**] を選択します。
 
-24. [ **Aipclient-Authentication** ] ウィンドウで、[**管理**] メニューから [ **API のアクセス許可**] を選択します。
+24. [ **Aipclient-Authentication** ] ウィンドウで、[ **管理** ] メニューから [ **API のアクセス許可**] を選択します。
 
-25. [ **Aipclient-アクセス許可**] ウィンドウで、[ **+ アクセス許可の追加**] を選択します。
+25. [ **Aipclient-アクセス許可** ] ウィンドウで、[ **+ アクセス許可の追加**] を選択します。
 
-26. [ **Api のアクセス許可の要求**] ウィンドウで、[**マイ api**] を選択します。
+26. [ **Api のアクセス許可の要求** ] ウィンドウで、[ **マイ api**] を選択します。
 
-27. [ **API の選択**] セクションで [ **apionbehalfof**] を選択し、アクセス許可として [**ユーザー偽装**] のチェックボックスをオンにします。 **[アクセス許可の追加]** を選択します. 
+27. [ **API の選択** ] セクションで [ **apionbehalfof**] を選択し、アクセス許可として [ **ユーザー偽装**] のチェックボックスをオンにします。 **[アクセス許可の追加]** を選択します。 
 
-28. [API の**アクセス許可**] ウィンドウに戻り、[**同意**する] セクションで、[**管理者の同意を許可 \<*your tenant name*> する**] を選択し、確認プロンプトで [**はい]** を選択します。
+28. [API の **アクセス許可**] ウィンドウに戻り、[**同意** する] セクションで、[**管理者の同意を許可 \<*your tenant name*> する**] を選択し、確認プロンプトで [**はい]** を選択します。
 
-これで、2つのアプリの構成が完了しました。設定を実行するために必要な値が、 *Webappid*、 *WebAppKey* 、およびの各パラメーターを*使用して*[設定](/powershell/module/azureinformationprotection/set-aipauthentication)されています。 例を次に示します。
+これで、2つのアプリの構成が完了しました。設定を実行するために必要な値が、 *Webappid*、 *WebAppKey* 、およびの各パラメーターを *使用して*[設定](/powershell/module/azureinformationprotection/set-aipauthentication)されています。 例を次に示します。
 
 ```ps
 Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"
@@ -637,7 +638,7 @@ Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKe
 
 ### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Set-AIPAuthentication の Token パラメーターを指定し、使用する
 
-次の追加の手順と指示に従うと、ファイルにラベルを付け、保護するアカウントの初回対話式サインインを回避できます。 通常、この追加手順は、アカウントに**ローカルでログオンする**権限を与えられないが、**バッチ ジョブとしてログオン**権限が与えられている場合にのみ必要です。 たとえば、Azure Information Protection スキャナーを実行するサービス アカウントなどがこれに該当します。
+次の追加の手順と指示に従うと、ファイルにラベルを付け、保護するアカウントの初回対話式サインインを回避できます。 通常、この追加手順は、アカウントに **ローカルでログオンする** 権限を与えられないが、**バッチ ジョブとしてログオン** 権限が与えられている場合にのみ必要です。 たとえば、Azure Information Protection スキャナーを実行するサービス アカウントなどがこれに該当します。
 
 手順の概要は次のとおりです。
 
@@ -693,17 +694,17 @@ Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKe
 
     Windows PowerShell スクリプトの署名の詳細については、PowerShell のドキュメント ライブラリの「[about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing)」を参照してください。
 
-3. ファイルにラベルを付けて保護するコンピューターにこの PowerShell スクリプトをコピーし、自分のコンピューターのオリジナルを削除します。 たとえば、PowerShell スクリプトを Windows Server コンピューター上の**C:\Scripts\Aipauthentication.ps1**にコピーします。
+3. ファイルにラベルを付けて保護するコンピューターにこの PowerShell スクリプトをコピーし、自分のコンピューターのオリジナルを削除します。 たとえば、PowerShell スクリプトを Windows Server コンピューター上の **C:\Scripts\Aipauthentication.ps1** にコピーします。
 
 #### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>手順 4: PowerShell スクリプトを実行するタスクを作成します。
 
-1. ファイルにラベルを付けて保護するサービス アカウントに**バッチ ジョブとしてログオン**権限が与えられていることを確認します。
+1. ファイルにラベルを付けて保護するサービス アカウントに **バッチ ジョブとしてログオン** 権限が与えられていることを確認します。
 
 2. ファイルにラベルを付けて保護するコンピューターで、Task Scheduler を起動し、新しいタスクを作成します。 ファイルにラベルを付けて保護するサービス アカウントとして実行するようにこのタスクを構成し、**[アクション]** に次の値を構成します。
 
-   - **アクション**:`Start a program`
-   - **プログラム/スクリプト**:`Powershell.exe`
-   - **引数の追加 (省略可能)**:`-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+   - **アクション**: `Start a program`
+   - **プログラム/スクリプト**: `Powershell.exe`
+   - **引数の追加 (省略可能)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
 
      引数の行については、例と異なるようであれば、独自のパスとファイル名を指定します。
 
@@ -711,9 +712,9 @@ Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKe
 
 #### <a name="step-5-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>手順 5: トークンが保存されていることを確認し、PowerShell スクリプトを削除します。
 
-1. トークンがサービスアカウントプロファイルの **%localappdata%\Microsoft\MSIP**フォルダーに格納されていることを確認します。 この値はサービス アカウントによって保護されます。
+1. トークンがサービスアカウントプロファイルの **%localappdata%\Microsoft\MSIP** フォルダーに格納されていることを確認します。 この値はサービス アカウントによって保護されます。
 
-2. トークン値を含む PowerShell スクリプト (Aipauthentication.ps1 など) を削除**します。**
+2. トークン値を含む PowerShell スクリプト ( **Aipauthentication.ps1 など)** を削除します。
 
     必要に応じて、タスクを削除します。 トークンの有効期限が切れた場合、この過程を繰り返す必要があります。その場合、構成したタスクを残しておくと便利です。新しい PowerShell スクリプトを新しいトークン値で上書きコピーするとき、すぐに再実行できます。
 

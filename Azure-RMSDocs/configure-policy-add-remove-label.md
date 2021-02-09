@@ -1,31 +1,32 @@
 ---
 title: Azure Information Protection ポリシーに対するラベルの追加または削除 - AIP
 description: すべてのユーザー用のグローバル ポリシーまたはユーザーのサブセット用のスコープ ポリシーに Azure Information Protection ラベルを追加または削除します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: bf0567efc0d8ae8c65667f7b65cafbdbd32f83aa
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 650530014053444f3bd3e1d0a8f53cff3316b709
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047730"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806789"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Azure Information Protection ポリシーにラベルを追加または削除する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」を参照してください。 *
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection ラベルを作成したら、ユーザーが使用できるようにラベルをポリシーに追加できます。 ラベルがすべてのユーザーに対するものである場合は、ラベルをグローバル ポリシーに追加します。 ラベルがユーザーのサブセットに対するものである場合は、ラベルをスコープ ポリシーに追加します。 ラベルは 1 つのポリシーにのみ追加できます。 
 
@@ -47,9 +48,9 @@ Azure Information Protection ラベルを作成したら、ユーザーが使用
 
     追加または削除するラベルがユーザーのサブセットに適用される場合は、代わりにスコープ ポリシーを選択します。
 
-3. [**ポリシー** ] ウィンドウで、[**ラベルの追加または削除**] を選択します。
+3. [ **ポリシー** ] ウィンドウで、[ **ラベルの追加または削除**] を選択します。
 
-4. [**ポリシー: ラベルの追加または削除**] ウィンドウで、既にポリシーに含まれている場合はチェックボックスがオンになっているすべてのラベルと、**ポリシー**列の対応するポリシー名が表示されます。
+4. [ **ポリシー: ラベルの追加または削除** ] ウィンドウで、既にポリシーに含まれている場合はチェックボックスがオンになっているすべてのラベルと、 **ポリシー** 列の対応するポリシー名が表示されます。
      
     サブラベルはインデントされて表示されます。 スコープ ポリシーでは、グローバル ポリシーから継承されているラベルは利用不可として表示されます。
     
@@ -59,7 +60,7 @@ Azure Information Protection ラベルを作成したら、ユーザーが使用
     
     - ラベルを削除するには、そのチェック ボックスをオフにします。
   
-5. 変更を保存するには、**[保存]** をクリックします。
+5. 変更を保存するには、 **[保存]** をクリックします。
    
     変更内容はユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 

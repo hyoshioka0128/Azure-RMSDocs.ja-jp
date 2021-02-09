@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 08e770c22f59bf0757039c623cb6ed1ed5b66cd7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: e0a26f4afdb9b3a2758e1ce93860594ad5bfb282
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763328"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215342"
 ---
 # <a name="class-error"></a>クラスエラー 
 MIP SDK からレポートされる (スローまたは返される) すべてのエラーの基底クラス。

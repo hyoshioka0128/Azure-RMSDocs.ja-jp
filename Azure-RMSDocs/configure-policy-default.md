@@ -1,35 +1,31 @@
 ---
 title: Azure Information Protection の既定のポリシー - AIP
 description: Azure Information Protection の既定のポリシーの構成方法について説明します。 既定のポリシーを変更した場合、これらの値を参照して、ポリシーを既定値に戻すことができます。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 9cbfea73a667c0d7b96c0daddb9efbb5cf97b78b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 7a8715e62a0b3690fd923aeb2c4662eb0732cc91
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048291"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806687"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Azure Information Protection の既定のポリシー
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」を参照してください。 *
 
->[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
-
-> [!NOTE]
-> Azure Information Protection ポリシーは Azure Information Protection クライアント (クラシック) に適用され、Azure Information Protection の統合されたラベル付けクライアントには適用されません。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) を参照してください。
-> 
-> 統一されたラベル付けクライアントの秘密度ラベルとポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントの「[秘密度ラベルについ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)て」を参照してください。
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 以下では、Azure Information Protection の既定のポリシーの構成方法を説明します。
 
@@ -40,7 +36,7 @@ ms.locfileid: "86048291"
 > [!IMPORTANT]
 > 2019年4月以降、既定のラベルは新規顧客に対して自動的に作成されません。 これらのテナントには、統一ラベル付けプラットフォームが自動的にプロビジョニングされるため、Azure portal でラベルを構成した後、それらを移行する必要はありません。
 > 
-> これらのテナントでは、Office 365 セキュリティ & コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで既に作成されている秘密度ラベルが存在しない場合は、Azure Information Protection の現在の既定のポリシーから既定のラベルを作成できます。 これを行うには、[**ラベル**] ウィンドウで [**既定のラベルを生成**する] を選択し、グローバルポリシーにラベルを追加します。 既定のラベルを生成するオプションが表示されない場合は、最初に [統合ラベルの**管理**] ウィンドウで統合ラベルを有効にする必要があり  >  **Unified labeling**ます。 詳しい手順については、「[クイック スタート - Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
+> これらのテナントでは、Office 365 セキュリティ & コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで既に作成されている秘密度ラベルが存在しない場合は、Azure Information Protection の現在の既定のポリシーから既定のラベルを作成できます。 これを行うには、[**ラベル**] ウィンドウで [**既定のラベルを生成** する] を選択し、グローバルポリシーにラベルを追加します。 既定のラベルを生成するオプションが表示されない場合は、最初に [統合ラベルの **管理**] ウィンドウで統合ラベルを有効にする必要があり  >  ます。 詳しい手順については、「[クイック スタート - Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
 
 ## <a name="current-default-policy"></a>最新の既定のポリシー
@@ -76,7 +72,7 @@ ms.locfileid: "86048291"
 
 ### <a name="labels"></a>ラベル
 
-|ラベル|ヒント|設定|
+|Label|ヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |個人用|ビジネス以外のデータ、個人用としてのみ使用します。|**有効**: オン <br /><br />**色**: 明るい緑<br /><br />**視覚的なマーキング**: オフ <br /><br />**条件**: なし<br /><br />**保護**: なし|
 |パブリック|パブリックで使用するために、特別に準備され、承認されたビジネス データ。|**有効**: オン <br /><br />**色**: 緑<br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
@@ -87,21 +83,23 @@ ms.locfileid: "86048291"
 
 ### <a name="sublabels"></a>サブラベル
 
-|ラベル|ヒント|設定|
+|Label|ヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |社外秘 \ すべての従業員|保護を必要とする機密データ。すべての従業員に完全なアクセス許可を付与します。 データ所有者は、コンテンツの追跡や取り消しを実行できます。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (ドキュメントや電子メール)<br /><br />社外秘として分類<br /><br />**条件**: なし<br /><br />**保護**: Azure (クラウド キー) [[1]](#footnote-1)|
 |社外秘 \ (保護されていない) すべてのユーザー|保護を必要としないデータ。 このオプションは、適切な業務の理由がある場合に、注意して使用します。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (ドキュメントや電子メール)<br /><br />社外秘として分類 <br /><br />**条件**: なし<br /><br />**保護**: なし|
-|社外秘 \ 受信者のみ|保護を必要とし、受信者だけが閲覧できる機密データ。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (電子メール)<br /><br />社外秘として分類 <br /><br />**条件**: なし<br /><br />**保護**: ユーザー定義のアクセス許可を設定します (プレビュー)。Outlook では転送不可を適用します|
+|社外秘 \ 受信者のみ|保護を必要とし、受信者だけが閲覧できる機密データ。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (電子メール)<br /><br />社外秘として分類 <br /><br />**条件**: なし<br /><br />**保護**: ユーザー定義のアクセス許可を設定します (プレビュー [[3]](#footnote-3))。 Outlook では、[転送不可] が適用されます。|
 |非常に機密性の高い社外秘 \ すべての従業員|すべての従業員に対して、このコンテンツの表示、編集、返信のアクセス許可を付与する非常に機密性の高い社外秘データ。 データ所有者は、コンテンツの追跡や取り消しを実行できます。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (ドキュメントや電子メール)<br /><br />非常に機密性の高い社外秘として分類<br /><br />**条件**: なし<br /><br />**保護**: Azure (クラウド キー) [[2]](#footnote-2)|
 |非常に機密性の高い社外秘 \ (保護されていない) すべてのユーザー|保護を必要としないデータ。 このオプションは、適切な業務の理由がある場合に、注意して使用します。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (ドキュメントや電子メール)<br /><br />非常に機密性の高い社外秘として分類<br /><br />**条件**: なし<br /><br />**保護**: なし|
-|非常に機密性の高い社外秘 \ 受信者のみ|保護を必要とし、受信者だけが閲覧できる非常に機密性の高いデータ。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (電子メール)<br /><br />非常に機密性の高い社外秘として分類 <br /><br />**条件**: なし<br /><br />**保護**: ユーザー定義のアクセス許可を設定します (プレビュー)。Outlook では転送不可を適用します|
+|非常に機密性の高い社外秘 \ 受信者のみ|保護を必要とし、受信者だけが閲覧できる非常に機密性の高いデータ。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (電子メール)<br /><br />非常に機密性の高い社外秘として分類 <br /><br />**条件**: なし<br /><br />**保護**: ユーザー定義のアクセス許可を設定します (プレビュー [[3]](#footnote-3))。 Outlook では、[転送不可] が適用されます。|
 
 ###### <a name="footnote-1"></a>脚注 1
-保護のアクセス許可は、[既定のテンプレート](configure-policy-templates.md#default-templates)である**社外秘 \ すべての従業員**でこれらと一致します。
+保護のアクセス許可は、[既定のテンプレート](configure-policy-templates.md#default-templates)である **社外秘 \ すべての従業員** でこれらと一致します。
 
 ###### <a name="footnote-2"></a>脚注 2 
-保護のアクセス許可は、[既定のテンプレート](configure-policy-templates.md#default-templates)である**非常に機密性の高い社外秘 \ すべての従業員**でこれらと一致します。
+保護のアクセス許可は、[既定のテンプレート](configure-policy-templates.md#default-templates)である **非常に機密性の高い社外秘 \ すべての従業員** でこれらと一致します。
 
+###### <a name="footnote-3"></a>脚注 3
+現在、この機能はプレビュー段階にあります。 [Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)には、ベータ版、プレビュー版、またはまだ一般提供されていない Azure 機能に適用される追加の法律条項が含まれています。
 
 ### <a name="information-protection-bar"></a>Information Protection バー
 
@@ -125,7 +123,7 @@ ms.locfileid: "86048291"
 |Display the Information Protection bar in Office apps\(Office アプリの Information Protection バーを表示する\)|オフ|
 |[Add the Do Not Forward button to the Outlook ribbon]\(Outlook のリボンに [転送不可] ボタンを追加する\)|オフ|
 |[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)|オフ|
-|Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|新規|
+|Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|空白|
 
 ## <a name="default-policy-before-july-31-2017"></a>2017 年 7 月 31 日より前の既定のポリシー
 
@@ -134,7 +132,7 @@ ms.locfileid: "86048291"
 
 ### <a name="labels"></a>ラベル
 
-|ラベル|ヒント|設定|
+|Label|ヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |個人用|ビジネス以外のデータ、個人用としてのみ使用します。|**有効**: オン <br /><br />**色**: 明るい緑<br /><br />**視覚的なマーキング**: オフ <br /><br />**条件**: なし<br /><br />**保護**: なし|
 |パブリック|パブリックで使用するために、特別に準備され、承認されたビジネス データ。|**有効**: オン <br /><br />**色**: 緑<br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
@@ -145,7 +143,7 @@ ms.locfileid: "86048291"
 
 ### <a name="sublabels"></a>サブラベル
 
-|ラベル|ヒント|設定|
+|Label|ヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |社外秘 \ すべての従業員|保護を必要とする機密データ。すべての従業員に完全なアクセス許可を付与します。 データ所有者は、コンテンツの追跡や取り消しを実行できます。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (ドキュメントや電子メール)<br /><br />社外秘として分類<br /><br />**条件**: なし<br /><br />**保護**: なし|
 |社外秘 \ (保護されていない) すべてのユーザー|保護を必要としないデータ。 このオプションは、適切な業務の理由がある場合に、注意して使用します。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (ドキュメントや電子メール)<br /><br />社外秘として分類 <br /><br />**条件**: なし<br /><br />**保護**: なし|
@@ -168,13 +166,13 @@ ms.locfileid: "86048291"
 |Select the default label (既定のラベルを選択する)|なし|
 |Users must provide justification to set a lower classification label, remove a label, or remove protection (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります)|オフ|
 |添付ファイル付きの電子メール メッセージの場合、添付ファイルの最上位の分類に一致するラベルを適用します|オフ|
-|Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|新規|
+|Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|空白|
 
 ## <a name="default-policy-before-march-21-2017"></a>2017 年 3 月 21 日より前の既定のポリシー
 
 ### <a name="labels"></a>ラベル
 
-|ラベル|ヒント|設定|
+|Label|ヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |個人用|個人用としてのみ使用します。 このデータは組織によって監視されることはありません。 個人用の情報にビジネスに関連するデータを含めないでください。|**有効**: オン <br /><br />**色**: 明るい緑<br /><br />**視覚的なマーキング**: オフ <br /><br />**条件**: なし<br /><br />**保護**: なし|
 |パブリック|これは内部情報であり、社内および社外のだれもが使用できます。|**有効**: オン <br /><br />**色**: 緑<br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
@@ -185,7 +183,7 @@ ms.locfileid: "86048291"
 
 ### <a name="sublabels"></a>サブラベル
 
-|ラベル|ヒント|設定|
+|Label|ヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |秘密 \ 会社全体|このデータには、すべての会社の従業員に対して許可される機密性のあるビジネス情報が含まれます。|**有効**: オン <br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
 |秘密 \ マイ グループ|このデータには、従業員グループに対してのみ許可される機密性のあるビジネス情報が含まれます。|**有効**: オン <br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
@@ -205,9 +203,9 @@ ms.locfileid: "86048291"
 |All documents and emails must have a label (applied automatically or by users) (すべてのドキュメントと電子メールにラベルを設定する必要があります (自動設定またはユーザーが設定))|オフ|
 |Select the default label (既定のラベルを選択する)|なし|
 |Users must provide justification to set a lower classification label, remove a label, or remove protection (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります)|オフ|
-|Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|新規|
+|Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|空白|
 
 
 ## <a name="next-steps"></a>次のステップ
 
-Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。 
+Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。

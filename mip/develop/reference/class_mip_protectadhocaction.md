@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 084ab7ac8b961e21291bffc38d14b05acb28db55
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 721ea5fa78841d5a00d502cda45a986c5fe4a79a
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763998"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214968"
 ---
 # <a name="class-protectadhocaction"></a>ProtectAdhocAction クラス 
 アドホック保護をドキュメントに追加することを指定するアクション クラス。

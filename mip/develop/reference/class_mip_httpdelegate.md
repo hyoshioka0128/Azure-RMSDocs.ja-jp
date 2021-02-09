@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: e1ddc8595e3cba2172228532a84ca68883cc0afd
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 9240f0ed4eca43d7a6dcd5045c80f9724dc2a11b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762827"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215257"
 ---
 # <a name="class-httpdelegate"></a>クラス HttpDelegate 
 HTTP の処理をオーバーライドするインターフェイス。
@@ -19,8 +19,8 @@ HTTP の処理をオーバーライドするインターフェイス。
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<HttpOperation\> Send (const std:: shared_ptr\<HttpRequest\>& request、const std:: shared_ptr\<void\>& context)  |  HTTP 要求を送信します。
-public std:: shared_ptr\<HttpOperation\> sendasync (const std:: shared_ptr\<HttpRequest\>& request、const std:: shared_ptr\<void\>& context、const std:: function\<void (std:: shared_ptr\<HttpOperation\> )  |  HTTP 要求を非同期に送信します。
+public std::shared_ptr\<HttpOperation\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  HTTP 要求を送信します。
+public std:: shared_ptr \<HttpOperation\> sendasync (const std:: shared_ptr \<HttpRequest\>& request、const std:: shared_ptr \<void\>& context、const std:: function \<void(std::shared_ptr\<HttpOperation\> )  |  HTTP 要求を非同期に送信します。
 public void CancelOperation (const std:: string& requestId)  |  特定の HTTP 操作をキャンセルします。
 public void CancelAllOperations ()  |  進行中の HTTP 要求を取り消します。
   
@@ -50,7 +50,7 @@ HTTP 要求を非同期に送信します。
 * **コンテキスト**: HTTP 要求となった、API に渡された同じ不透明なクライアント コンテキスト 
 
 
-* の**実行が**完了したときに実行される関数
+* の **実行が** 完了したときに実行される関数
 
 
 

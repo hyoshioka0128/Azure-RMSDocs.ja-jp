@@ -1,55 +1,60 @@
 ---
 title: Azure Information Protection 統合ラベル付けクライアントをダウンロード & インストールする
 description: ドキュメントと電子メールを分類して保護できるように、Windows 用の Azure Information Protection 統合ラベルクライアントをインストールするための手順です。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/06/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 586122e55c8eddc2e14864bcffbe9f6ef99e17e8
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: d6c4ea5c07330efd429577ee569f8f899f63ae0d
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046438"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559746"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>ユーザーガイド: Azure Information Protection 統合されたラベル付けクライアントをダウンロードしてインストールする
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8 *
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***関連**: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 従来のクライアントについては、「 [クラシッククライアントユーザーガイド](install-client-app.md)」を参照してください。 *
 
 管理者が Azure Information Protection 統合されたラベル付けクライアントをインストールしていない場合は、自分で行うことができます。 ドキュメントや電子メールにラベルを付けて保護できるように、このクライアントをインストールするには対象となる PC のローカル管理者である必要があります。
 
-さらに:
-
-- Azure Information Protection 統合ラベル付けクライアントでは、Microsoft .NET Framework 4.6.2 の最小バージョンが必要になります。これがない場合、インストーラーでこの必須コンポーネントのダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。
-
+> [!NOTE]
+> Azure Information Protection 統合ラベルクライアントには、Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。 この条件が満たされていない場合、インストーラーはこの必須コンポーネントをダウンロードしてインストールしようとします。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。
+>
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントをダウンロードしてインストールするには
 
-Azure Information Protection の統一されたラベル付けクライアントをインストールする前に、管理者またはヘルプデスクに問い合わせて、ドキュメントや電子メールの分類と保護に[機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)を使用していることを確認してください。
+Azure Information Protection の統一されたラベル付けクライアントをインストールする前に、管理者またはヘルプデスクに問い合わせて、ドキュメントや電子メールの分類と保護に [機密ラベル](/microsoft-365/compliance/sensitivity-labels) を使用していることを確認してください。
 
-1. [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)から**AzInfoProtection_UL.exe**をダウンロードします。
+1. [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)から **AzInfoProtection_UL.exe** をダウンロードします。
 
-2. ダウンロードした実行可能ファイルを実行し、続行を確認するメッセージが表示されたら、[**はい]** をクリックします。
+2. ダウンロードした実行可能ファイルを実行し、続行を確認するメッセージが表示されたら、[ **はい]** をクリックします。
 
 3. **[Azure Information Protection クライアントのインストール]** ページ上で、ライセンス条項および条件を読み、**[同意する]** をクリックします。
 
 4. 続行を確認するメッセージが表示されたら、**[はい]** をクリックしてインストールが完了するまで待機します。
 
-6. **[閉じる]** をクリックします。 Azure Information Protection 統合ラベル付けクライアントの使用を開始する前に、次の操作を行います。
+6. **[閉じる]** をクリックします。 
 
-    - コンピューターで Office 2010 を実行している場合、コンピューターを再起動し、最後の手順として次のセクションに進みます。    
-        
-    - その他のバージョンの Office では、Office アプリケーションとエクスプローラーのインスタンスをすべて再起動します。 インストールはこれで完了となります。クライアントを使用して、ドキュメントや電子メールにラベルを付けたり、保護したりできます。
+    Azure Information Protection 統合ラベル付けクライアントの使用を開始する前に、すべての Office アプリケーションとエクスプローラーのすべてのインスタンスを再起動します。 インストールはこれで完了となります。クライアントを使用して、ドキュメントや電子メールにラベルを付けたり、保護したりできます。
 
+    > [!NOTE]
+    > コンピューターで Office 2010 を実行している場合は、コンピューターを再起動してから、 [次のセクション](#installing-the-azure-information-protection-unified-labeling-client-with-office-2010) の最後の手順に進みます。   
+    >
+     
 ### <a name="installing-the-azure-information-protection-unified-labeling-client-with-office-2010"></a>Office 2010 で Azure Information Protection 統合ラベル付けクライアントをインストールする
+
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+> 
 
 前の指示に従い、Azure Information Protection 統合ラベル付けクライアントをインストールしたら、次の操作を行います。
 
@@ -62,9 +67,9 @@ Azure Information Protection の統一されたラベル付けクライアント
 インストールはこれで完了となります。Azure Information Protection 統合ラベル付けクライアントを利用し、ドキュメントや電子メールにラベルを付けたり、保護したりすることができます。
 
 ## <a name="other-instructions"></a>その他の手順    
-Azure Information Protection 統合されたラベル付けクライアントユーザーガイドのその他の操作方法については、次を参照してください。
+詳細については Azure Information Protection 「クライアントユーザーガイド」を参照してください。
 
-- [実行する操作](clientv2-user-guide.md#what-do-you-want-to-do)
+- [目的に合ったトピックをクリックしてください](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 [管理者ガイド](clientv2-admin-guide.md)の「[ユーザー用に Azure Information Protection 統合されたラベル付けクライアントをインストール](clientv2-admin-guide-install.md)する」を参照してください。

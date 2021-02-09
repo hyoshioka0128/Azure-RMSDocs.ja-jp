@@ -1,27 +1,29 @@
 ---
 title: Azure Information Protection 用の AIPService PowerShell モジュールをインストールする
 description: Azure Information Protection から保護サービス用の PowerShell をインストールする手順を説明します。 このモジュールの名前は AIPService です。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 23c18236413aaa2056d3eaaa30a64430de1e608b
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 8cc07942c5ccb901518957a304c60adfe5c86a8f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136836"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383722"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>AIPService PowerShell モジュールのインストール
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection から保護サービス用の Windows PowerShell モジュールをインストールするには、次の情報を参照してください。 このモジュールの名前は AIPService で、AADRM という名前の以前のバージョンと置き換えられます。
 
@@ -42,27 +44,27 @@ AIPService モジュールは、古いモジュール AADRM を置き換えま�
 
 新しいモジュールには、既存のスクリプトが引き続き機能するように、古いモジュール内のコマンドレット名のエイリアスがあります。 ただし、古いモジュールがサポート対象外になる前に、これらの参照を更新することを計画してください。 AADRM モジュールのサポートは2020年7月15日に終了します。
 
-PowerShell ギャラリーから AADRM モジュールをインストールした場合、アンインストールするには、[**管理者として実行**] オプションを使用して PowerShell セッションを開始し、次のように入力します。
+PowerShell ギャラリーから AADRM モジュールをインストールした場合、アンインストールするには、[ **管理者として実行** ] オプションを使用して PowerShell セッションを開始し、次のように入力します。
 
-```ps
+```PowerShell
 Uninstall-Module -Name AADRM
 ```
 
-Azure Rights Management 管理ツールを使用して AADRM モジュールをインストールした場合は、[**プログラムと機能**] を使用して、 **Windows Azure AD Rights Management 管理**をアンインストールします。
+Azure Rights Management 管理ツールを使用して AADRM モジュールをインストールした場合は、[ **プログラムと機能** ] を使用して、 **Windows Azure AD Rights Management 管理** をアンインストールします。
 
 ## <a name="how-to-install-the-aipservice-module"></a>AIPService モジュールをインストールする方法
 
-AIPService モジュールは[PowerShell ギャラリー](https://www.powershellgallery.com/)上にあり、Microsoft ダウンロードセンターからは使用できません。
+AIPService モジュールは [PowerShell ギャラリー](https://www.powershellgallery.com/) 上にあり、Microsoft ダウンロードセンターからは使用できません。
 
 ### <a name="to-install-the-aipservice-module-from-the-powershell-gallery"></a>PowerShell ギャラリーから AIPService モジュールをインストールするには
 
-PowerShell ギャラリーを初めてお使いの場合は、「[PowerShell ギャラリーの概要](https://docs.microsoft.com/powershell/scripting/gallery/getting-started?view=powershell-6)」を参照してください。 PowerShellGet モジュールと NuGet プロバイダーのインストールを含む、ギャラリー要件の手順に従います。
+PowerShell ギャラリーを初めてお使いの場合は、「[PowerShell ギャラリーの概要](/powershell/scripting/gallery/getting-started)」を参照してください。 PowerShellGet モジュールと NuGet プロバイダーのインストールを含む、ギャラリー要件の手順に従います。
 
 PowerShell ギャラリーの AIPService モジュールの詳細を確認するには、 [Aipservice のページ](https://www.powershellgallery.com/packages/AIPService)にアクセスしてください。
 
-AIPService モジュールをインストールするには、[**管理者として実行**] オプションを使用して PowerShell セッションを開始し、次のように入力します。
+AIPService モジュールをインストールするには、[ **管理者として実行** ] オプションを使用して PowerShell セッションを開始し、次のように入力します。
 
-```ps
+```PowerShell
 Install-Module -Name AIPService
 ```
 
@@ -70,43 +72,43 @@ Install-Module -Name AIPService
 
 以前のバージョンの AIPService モジュールがギャラリーからインストールされている場合は、次のように入力して最新のバージョンに更新します。
 
-```ps
+```PowerShell
 Update-Module -Name AIPService
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Windows PowerShell セッションで、インストールされているモジュールのバージョンを確認します。 このチェックは、以前のバージョンからアップグレードした場合に特に重要です。
 
-```ps
+```PowerShell
 (Get-Module AIPService –ListAvailable).Version
 ```
 
 > [!NOTE]
-> このコマンドが失敗した場合は、最初に**インポートモジュール AIPService**を実行します。
+> このコマンドが失敗した場合は、最初に **インポートモジュール AIPService** を実行します。
 > 
 
 使用可能なコマンドレットを確認するには、次のコマンドを入力します。
 
-```ps
+```Powershell
 Get-Command -Module AIPService
 ```
 
 `Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、**-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 次に例を示します。
 
-```powershell
+```PowerShell
 Get-Help Connect-AipService -online
 ```
 
 詳細情報:
 
-- 使用可能なコマンドレットの完全な一覧: [Aipservice モジュール](/powershell/module/aipservice/?view=azureipps#aipservice)
+- 使用可能なコマンドレットの完全な一覧: [Aipservice モジュール](/powershell/module/aipservice/)
 
 - PowerShell をサポートする主要な構成シナリオの一覧: [powershell を使用した Azure Information Protection からの保護の管理](administer-powershell.md)
 
-保護サービスを構成するコマンドを実行する前に、 [connect-AipService](/powershell/module/aipservice/connect-aipservice)コマンドレットを使用してサービスに接続する必要があります。
+保護サービスを構成するコマンドを実行する前に、 [connect-AipService](/powershell/module/aipservice/connect-aipservice) コマンドレットを使用してサービスに接続する必要があります。
 
-構成コマンドの実行が完了したら、ベストプラクティスとして、 [disconnect-AipService](/powershell/module/aipservice/disconnect-aipservice)コマンドレットを使用してサービスから切断することをお勧めします。 切断しない場合は、非アクティブ状態の後に自動的に切断されます。 この自動切断の挙動によって、PowerShell セッションで再接続が必要になる場合があります。
+構成コマンドの実行が完了したら、ベストプラクティスとして、 [disconnect-AipService](/powershell/module/aipservice/disconnect-aipservice) コマンドレットを使用してサービスから切断することをお勧めします。 切断しない場合は、非アクティブ状態の後に自動的に切断されます。 この自動切断の挙動によって、PowerShell セッションで再接続が必要になる場合があります。
 
 > [!NOTE]
-> 保護サービスがまだアクティブになっていない場合は、 [Enable-AipService](/powershell/module/aipservice/enable-aipservice)コマンドレットを使用して、サービスに接続した後でこれを行うことができます。
+> 保護サービスがまだアクティブになっていない場合は、 [Enable-AipService](/powershell/module/aipservice/enable-aipservice) コマンドレットを使用して、サービスに接続した後でこれを行うことができます。

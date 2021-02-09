@@ -1,34 +1,34 @@
 ---
 title: Azure Information Protection ポリシーの概要
 description: Azure Information Protection クライアントにダウンロードされる Azure Information Protection ポリシーのラベルと設定について説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/28/2019
+ms.date: 11/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 925b34d7bfb246b01642c898ffd4e9ae9d5f73c5
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 2548ce43df0147f063ce5bb331af2e9d3faeeb38
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136386"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807452"
 ---
-# <a name="overview-of-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの概要
+# <a name="overview-of-the-azure-information-protection-policies"></a>Azure Information Protection ポリシーの概要
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、Microsoft 365 のドキュメントの「 [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」を参照してください。 *
 
-> [!NOTE]
-> Azure Information Protection ポリシーは Azure Information Protection クライアント (クラシック) に適用され、Azure Information Protection の統合されたラベル付けクライアントには適用されません。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) を参照してください。
-> 
-> 機密ラベルに関する情報を探している場合は、Microsoft 365 の準拠に関するドキュメントを参照してください。 たとえば、[機密ラベルについて説明](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)します。
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+>
 
 Azure Information Protection ポリシーには、構成可能な次の要素があります。
     
@@ -60,7 +60,7 @@ Azure Information Protection ラベルは、最下位の分類である個人デ
 
 これらの既定のラベルは、そのまま使用する、カスタマイズする、または削除することができ、新しいラベルを作成することもできます。 詳しい手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーをカスタマイズする方法や、ユーザーに対して結果の動作を表示する方法の例については、次のチュートリアルをご覧ください。
 

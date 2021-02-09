@@ -1,18 +1,18 @@
 ---
 title: クイック スタート - C++ MIP SDK 保護 API を使用してテキストを暗号化し、復号する
-description: C++ Microsoft Information Protection SDK 保護 API を使用し、保護テンプレートでアドホック テキストを暗号化し、復号する方法について説明するクイック スタート。
+description: C++ Microsoft Information Protection SDK 保護 API を使用し、保護テンプレートでアドホック テキストを暗号化し、復号する方法 (C++) について説明するクイック スタート
 services: information-protection
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
-ms.openlocfilehash: 24d52a73620a7f186c425532f5132cac2a46f405
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.openlocfilehash: 2875af45fb33a89398548cff45d1d6481c3a7ed7
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766339"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865146"
 ---
 # <a name="quickstart-encryptdecrypt-text-using-mip-sdk-c"></a>クイック スタート:MIP SDK (C++) を使用して暗号化し、復号する
 
@@ -35,14 +35,14 @@ SDK の `mip::ProtectionHandler::Observer` クラスを拡大し、保護ハン�
 
 2. header/.h ファイルと implementation/.cpp ファイルの両方を作成する、新しいクラスをご自分のプロジェクトに追加します。
 
-   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
+   - **ソリューション エクスプローラー** でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
    - **[クラスの追加]** ダイアログで以下の操作を行います。
      - **[クラス名]** フィールドに「handler_observer」と入力します。 入力した名前に基づき、 **[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
      - 完了したら、 **[OK]** ボタンをクリックします。
 
 3. クラスの .h ファイルおよび .cpp ファイルを作成すると、両ファイルは [エディター グループ] タブに表示されます。 ここで各ファイルを更新して、新しいオブザーバー クラスを実装します。
 
-   - 生成した `handler_observer` クラスを選択および削除して、「handler_observer.h」を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `handler_observer` クラスを選択および削除して、「handler_observer.h」を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      #include <memory>
@@ -59,7 +59,7 @@ SDK の `mip::ProtectionHandler::Observer` クラスを拡大し、保護ハン�
 
      ```
 
-   - 生成した `handler_observer` クラス実装を選択および削除して、「handler_observer.cpp」を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
+   - 生成した `handler_observer` クラス実装を選択および削除して、「handler_observer.cpp」を更新します。 前の手順で生成された、プリプロセッサ ディレクティブは削除 **しないでください** (#pragma、#include)。 次に、ファイルの既存の任意のプリプロセッサ ディレクティブの後に、次のソースをコピーし、貼り付けます。
 
      ```cpp
      #include "handler_observer.h"
@@ -87,7 +87,7 @@ SDK の `mip::ProtectionHandler::Observer` クラスを拡大し、保護ハン�
 
 保護エンジン オブジェクトを使用し、アドホック テキストを暗号化し、復号するロジックを追加する
 
-1. **ソリューション エクスプローラー**を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。
+1. **ソリューション エクスプローラー** を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。
 
 2. 次の #include と using ディレクティブをファイルの上部の対応する既存のディレクティブの下に追加します。
 

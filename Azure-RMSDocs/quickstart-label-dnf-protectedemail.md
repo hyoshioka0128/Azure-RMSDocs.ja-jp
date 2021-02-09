@@ -4,27 +4,27 @@ description: 転送不可の保護を自動的に適用することで、ユー�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
-ms.topic: quickstart
+ms.date: 08/04/2020
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2744289d227127b007cfc022cfab8723dfbdf669
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 6c669ec54448840276e409a41dde8e5149fe742e
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927864"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809346"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 このクイック スタートでは、 **[転送不可]** の保護設定を自動的に適用するように、既存の Azure Information Protection ラベルを構成します。
 
@@ -36,7 +36,7 @@ ms.locfileid: "86927864"
 
 ただし、ポリシーが古い場合や、組織のポリシーの作成時に保護がアクティブ化されなかった場合、これらのラベルは含まれません。
 
-**必要な時間:** この構成は 5 分で完了します。
+**必要な時間**:この構成は 5 分で完了します。
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -44,11 +44,11 @@ ms.locfileid: "86927864"
 
 |要件  |説明  |
 |---------|---------|
-|**サポート サブスクリプション**     |  [**Azure Information Protection プラン 1 またはプラン 2**](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプションが必要です。 </br></br>このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。       |
-|**Azure portal に AIP が追加されている**    |  Azure portal に [Azure Information Protection] ペインを追加し、保護サービスがアクティブになっていることを確認した。 </br></br>詳細については、「[クイック スタート: 作業の開始](quickstart-viewpolicy.md)に関するページをご覧ください。       |
+|**サポート サブスクリプション**     |  [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプションが必要です。 <br><br>このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。       |
+|**Azure portal に AIP が追加されている**    |  Azure portal に [Azure Information Protection] ペインを追加し、保護サービスがアクティブになっていることを確認した。 <br><br>詳細については、「[クイック スタート: 作業の開始](quickstart-viewpolicy.md)に関するページをご覧ください。       |
 |**構成する既存の Azure Information Protection ラベル**     | 既定のいずれかのラベルまたは作成済みのラベルを使用できます。 詳細については、「[クイック スタート: 特定のユーザー向けの新しい Azure Information Protection ラベルを作成する](quickstart-label-specificusers.md)」をご覧ください。 |
-|**クラシック クライアントがインストールされている**    |   新しいラベルをテストするには、使用するコンピューターにクラシック クライアントをインストールする必要があります。 </br></br>Azure Information Protection クラシック クライアントは、2021 年 3 月に非推奨となる予定です。 AIP クラシック クライアントをデプロイするには、サポート チケットを作成してダウンロード アクセスを取得します。  |
-|**Office アプリにサインインしている Windows コンピューター** |新しいラベルをテストするには、Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューターが必要です。 </br></br>このコンピューターで、次のいずれかのバージョンに該当する Office アプリにサインインします。 </br>- Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、[Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。 </br>- [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)。 </br>- Office Professional Plus 2019。 </br>- Office Professional Plus 2016。</br>- Office Professional Plus 2013 Service Pack 1。 </br>- Office Professional Plus 2010 Service Pack 2。|
+|**クラシック クライアントがインストールされている**    |   新しいラベルをテストするには、使用するコンピューターにクラシック クライアントをインストールする必要があります。 <br><br>Azure Information Protection クラシック クライアントは、2021 年 3 月に非推奨となる予定です。 AIP クラシック クライアントをデプロイするには、サポート チケットを作成してダウンロード アクセスを取得します。  |
+|**Office アプリにサインインしている Windows コンピューター** |新しいラベルをテストするには、Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューターが必要です。 <br><br>このコンピューターで、次のいずれかのバージョンに該当する Office アプリにサインインします。 <br><br>- **Office アプリ。** ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合、Microsoft 365 Apps for Business または Microsoft 365 Business Premium の [更新チャネル別の Microsoft 365 アプリでサポートされているバージョンの表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョン。 <br>- **Microsoft 365 Apps for Enterprise** <br>- **Office Professional Plus 2019** <br>- **Office Professional Plus 2016**<br>- **Office Professional Plus 2013 Service Pack 1**<br>- **Office Professional Plus 2010 Service Pack 2**|
 | | |
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。

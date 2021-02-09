@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: c1eae1ea75d43f0192a71c2d55a6f5b7f100b3db
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 90f85f42062b9bd9183907b9e9e9d75f7850cb50
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760789"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214985"
 ---
 # <a name="class-propertydata"></a>クラスの PropertyData 
   

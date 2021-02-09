@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 2787403c387bbe31b559e069104cb2af28dd0e6a
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 04915e74cc09f271a2ca3bb256b906bc442bb3fd
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764577"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214305"
 ---
 # <a name="class-proxyauthenticationerror"></a>クラス ProxyAuthenticationError 
 プロキシ認証エラーです。
@@ -38,6 +38,9 @@ HTTP 応答のステータスコードを取得します。
 **戻り値**: HTTP 応答の状態コード、0の場合は0
   
 ### <a name="category-enum"></a>カテゴリの列挙型
+
+ネットワークエラーのカテゴリ。
+
  値                         | 説明                                
 --------------------------------|---------------------------------------------
 Unknown            | 不明なネットワークエラー
@@ -51,4 +54,3 @@ SSL            | SSL エラー
 オフライン            | 操作にはネットワーク接続が必要です
 Throttled            | サーバートラフィックの調整により HTTP 操作に失敗しました
 キャンセル            | HTTP 操作はアプリケーションによって取り消されました
-ネットワークエラーのカテゴリ。

@@ -1,43 +1,48 @@
 ---
 title: Windows Server FCI での Azure RMS 保護 - AIP
 description: Rights Management (RMS) クライアントと Azure Information Protection クライアントを使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成するための手順です。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
+ROBOTS: NOINDEX
 ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d289db484d647bb909fcb7445138f156322f72be
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 0020cec23dc8261621f524dbb6c8cc76009150a6
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046540"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809880"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012、Windows Server 2012 R2*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012、windows server 2012 R2 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 この記事では、Azure Information Protection クライアントと PowerShell を使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成する方法とスクリプトを示します。
 
 このソリューションを使用すると、Windows Server を搭載するファイル サーバー上のフォルダー内のすべてのファイルを自動的に保護したり、特定の条件に一致するファイルを自動的に保護したりすることができます。 たとえば、機密性の高い情報が含まれるものとして分類されたファイルなどです。 このソリューションは Azure Information Protection から Azure Rights Management サービスに直接接続してファイルを保護するため、このサービスを組織にデプロイしておく必要があります。
 
 > [!NOTE]
-> Azure Information Protection には、ファイル分類インフラストラクチャをサポートする[コネクタ](../deploy-rms-connector.md)が含まれていますが、このソリューションでは、Office ファイルなどのネイティブ保護のみがサポートされます。
+> Azure Information Protection には、ファイル分類インフラストラクチャをサポートする [コネクタ](../deploy-rms-connector.md) が含まれていますが、このソリューションでは、Office ファイルなどのネイティブ保護のみがサポートされます。
 > 
 > Windows Server のファイル分類インフラストラクチャで複数のファイルの種類をサポートするには、この記事で説明するように、PowerShell の **AzureInformationProtection** モジュールを使用する必要があります。 Azure Information Protection クライアントと同様に、Azure Information Protection コマンドレットは汎用的な保護とネイティブ保護をサポートしています。つまり、Office ドキュメント以外のファイルの種類も保護できます。 詳細については、「Azure Information Protection クライアント管理者ガイド」の「[File types supported by the Azure Information Protection client](client-admin-guide-file-types.md)」(Azure Information Protection クライアントでサポートされるファイルの種類) を参照してください。
 
 以下の手順は、Windows Server 2012 R2 または Windows Server 2012 に対するものです。 サポートされている他のバージョンの Windows を使用する場合は、バージョンの違いに合わせてこの記事で説明されている手順の調整が必要な場合があります。
 
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Windows Server FCI での Azure Rights Management 保護の前提条件
+
 次のような前提条件があります。
 
 - ファイル分類インフラストラクチャでファイル リソース マネージャーを実行する各ファイル サーバーでの前提条件:
@@ -50,15 +55,15 @@ ms.locfileid: "86046540"
     
     AzureInformationProtection PowerShell モジュールは、Azure Information Protection クライアントに含まれています。 インストール手順については、Azure Information Protection 管理者ガイドの「[Install the Azure Information Protection client for users](client-admin-guide-install.md)」(ユーザー向けに Azure Information Protection クライアントをインストールする) をご覧ください。 必要であれば、`PowerShellOnly=true` パラメーターを使用して PowerShell モジュールのみをインストールできます。
     
-    [この PowerShell モジュールを使用するための前提条件](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service)には、Azure Rights Management サービスをアクティブ化すること、サービス プリンシパルを作成すること、テナントが北米以外にある場合にレジストリを編集することが含まれます。 この記事の手順を開始する前に、これらの前提条件の説明で使われる **BposTenantId**、**AppPrincipalId**、**対称キー**の値を確認してください。 
+    [この PowerShell モジュールを使用するための前提条件](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service)には、Azure Rights Management サービスをアクティブ化すること、サービス プリンシパルを作成すること、テナントが北米以外にある場合にレジストリを編集することが含まれます。 この記事の手順を開始する前に、これらの前提条件の説明で使われる **BposTenantId**、**AppPrincipalId**、**対称キー** の値を確認してください。 
     
   - 特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
     
   - インターネットに接続していて、プロキシサーバーに必要な場合はコンピューターの設定を構成している。 例: `netsh winhttp import proxy source=ie`
     
-- オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../prepare.md)」をご覧ください。
+- オンプレミスの Active Directory ユーザーアカウントを Azure Active Directory または Microsoft 365 と同期しました (電子メールアドレスなど)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../prepare.md)」をご覧ください。
     
-- このシナリオでは部門別テンプレートがサポートされていないため、スコープ用に構成されていないテンプレートを使用するか、 *EnableInLegacyApps*パラメーターを使用して[設定](/powershell/module/aipservice/set-aipservicetemplateproperty)する必要があります。
+- このシナリオでは部門別テンプレートがサポートされていないため、スコープ用に構成されていないテンプレートを使用するか、 *EnableInLegacyApps* パラメーターを使用して [設定](/powershell/module/aipservice/set-aipservicetemplateproperty)する必要があります。
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Azure Rights Management 保護のためのファイル サーバー リソース マネージャー FCI の構成手順
 PowerShell スクリプトをカスタム タスクとして使用してフォルダー内のすべてのファイルを自動的に保護するには、以下の手順に従います。 以下の手順をこの順序で実行します。
@@ -120,7 +125,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
 3.  スクリプトに署名します。 スクリプトに署名 (セキュリティを強化) しない場合は、スクリプトを実行するサーバーで Windows PowerShell を構成する必要があります。 たとえば、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、「**Set-ExecutionPolicy RemoteSigned**」と入力します。 ただし、この構成を使用すると、署名されていないすべてのスクリプトは、このサーバーに保存されている場合に実行できます (セキュリティは低下)。
 
-    Windows PowerShell スクリプトの署名の詳細については、PowerShell のドキュメント ライブラリの「[about_Signing](https://technet.microsoft.com/library/hh847874.aspx)」を参照してください。
+    Windows PowerShell スクリプトの署名の詳細については、PowerShell のドキュメント ライブラリの「[about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing)」を参照してください。
 
 4.  ファイル リソース マネージャーとファイル分類インフラストラクチャを実行する各ファイル サーバーにローカルにファイルを保存します。 たとえば、ファイルを **C:\RMS-Protection** に保存します。 別のパスまたはフォルダーの名前を使用する場合は、スペースを含まないパスとフォルダーを選択してください。 承認されていないユーザーが変更できないように、NTFS アクセス許可を使用してこのファイルをセキュリティ保護します。
 
@@ -152,7 +157,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
         -   **[説明]**: 「**Rights Management 用に &lt;フォルダー名&gt; フォルダーのすべてのファイルを分類する**」と入力します。
 
-            * &lt; フォルダー名 &gt; *を、選択したフォルダー名に置き換えます。 例: **Rights Management 用に C:\FileShare フォルダーのすべてのファイルを分類する**
+            *&lt; フォルダー名 &gt;* を、選択したフォルダー名に置き換えます。 例: **Rights Management 用に C:\FileShare フォルダーのすべてのファイルを分類する**
 
         -   [**スコープ**]:選択したフォルダーを追加します。 例: **C:\FileShare**。
 
@@ -194,7 +199,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
         -   **説明**: 「**&lt;フォルダー名&gt; のファイルを Windows PowerShell スクリプトを使用して Rights Management とテンプレートで保護する**」と入力します。
 
-            * &lt; フォルダー名 &gt; *を、選択したフォルダー名に置き換えます。 例: **C:\FileShare のファイルを Windows PowerShell スクリプトを使用して Rights Management とテンプレートで保護する**
+            *&lt; フォルダー名 &gt;* を、選択したフォルダー名に置き換えます。 例: **C:\FileShare のファイルを Windows PowerShell スクリプトを使用して Rights Management とテンプレートで保護する**
 
         -   [**スコープ**]:選択したフォルダーを選択します。 例: **C:\FileShare**。
 
@@ -296,6 +301,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 FCI で使用する新しいテンプレートを発行し、カスタム ファイル管理タスクの引数行内のテンプレート ID を変更する場合にも、スクリプトでこの行を実行します。
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>選択的にファイルを保護するための手順の変更
+
 上の手順で問題がなければ、さらに高度な構成に変更することが簡単にできます。 たとえば、同じスクリプトを使用して個人識別情報を含むファイルだけを保護し、さらに制限の厳しい権限のテンプレートを選択できます。
 
 この変更を行うには、組み込まれている分類プロパティのいずれかを使用するか (たとえば **[個人を特定できる情報]**)、新しいプロパティを作成します。 そして、このプロパティを使用する新しい規則を作成します。 たとえば、[**コンテンツ分類子**] を選択し、[**個人の身元を特定する情報**] プロパティと値 [**高**] を選択して、このプロパティ用に構成するファイルを識別する文字列または式パターンを構成します (たとえば、文字列"**Date of Birth**")。
@@ -304,5 +310,4 @@ FCI で使用する新しいテンプレートを発行し、カスタム ファ
 
 ## <a name="next-steps"></a>次のステップ
 
-[Windows Server FCI と Azure Information Protection スキャナーの違い](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)についてご説明します。 
-
+[Windows Server FCI と Azure Information Protection スキャナーの違い](../faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)についてご説明します。

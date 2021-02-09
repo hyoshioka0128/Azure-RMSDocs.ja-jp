@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: fe2cc80e5abb225a5e83c1b10c1c5f9f99401628
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 8b5767999b666e6cd8a2b9f42d9d86e690000681
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763739"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212367"
 ---
 # <a name="class-addwatermarkaction"></a>AddWatermarkAction クラス 
 ウォーターマークの追加を指定するアクション クラス。

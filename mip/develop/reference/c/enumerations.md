@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 4/16/2020
-ms.openlocfilehash: e65dae9c6df3d65a8bccf6bb08d61ff49b21d7ee
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 9/22/2020
+ms.openlocfilehash: 56ce8aac0e4b8e1435c6fc5ceacad5fef24e3afa
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764175"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566733"
 ---
 # <a name="enumerations"></a>列挙型
 
@@ -42,7 +42,7 @@ typedef enum {
 | フィールド | 説明 |
 |---|---|
 |  MIP_CONTENT_FORMAT_DEFAULT = 0  | 標準ファイル形式  |
-|  MIP_CONTENT_FORMAT_EMAIL = 1    | Email  |
+|  MIP_CONTENT_FORMAT_EMAIL = 1    | 電子メール  |
 
 
 ```c
@@ -140,16 +140,17 @@ typedef enum {
 |  MIP_FLIGHTING_FEATURE_SERVICE_DISCOVERY = 0          | 個別の HTTP 呼び出しを使用して RMS サービスのエンドポイントを決定する (既定値は false) |
 |  MIP_FLIGHTING_FEATURE_AUTH_INFO_CACHE = 1            | ドメイン/テナントごとに OAuth2 のチャレンジをキャッシュすることで、不要な401の応答を減らすことができます。 独自の HTTP 認証を管理するアプリ/サービス (既定値は true) に対して無効にする  |
 |  MIP_FLIGHTING_FEATURE_LINUX_ENCRYPTED_CACHE = 2      | Linux プラットフォームの暗号化されたキャッシュを有効にします (既定値は false)  |
-|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3         | Dns 参照に対して単一の会社名を有効にします (例:https://corprights)  |
+|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3         | Dns 参照に対して単一の会社名を有効にします (例: https://corprights)  |
 |  MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4                | ポリシーサービスに送信される要求の自動 HTTP 認証を有効にします。 独自の HTTP 認証を管理するアプリ/サービス (既定値は true) に対して無効にする  |
 |  MIP_FLIGHTING_FEATURE_URL_REDIRECT_CACHE = 5         | HTTP 操作の数を減らすためのキャッシュ URL のリダイレクト  |
 |  MIP_FLIGHTING_FEATURE_PRE_LICENSE = 6                | ライセンス認証前の api チェックを有効にする  |
 |  MIP_FLIGHTING_FEATURE_DOUBLE_KEY_PROTECTION = 7      | 2つのキー保護機能を有効にして、顧客キーを使用してで暗号化する  |
 |  MIP_FLIGHTING_FEATURE_VARIABLE_POLICY_TTL = 8        | ストレージでの変数ポリシー ttl の有効化  |
 |  MIP_FLIGHTING_FEATURE_VARIABLE_TEXT_MARKING = 9      | 変数テキストのマークを有効にする  |
-|  MIP_FLIGHTING_FEATURE_OPTIMIZE_PDF_MEMORY = 10       | PDF ファイルの保護と保護解除のために Pdf メモリ作成者を最適化する  |
+|  MIP_FLIGHTING_FEATURE_OPTIMIZE_PDF_MEMORY = 10       | PDF ファイルの保護と保護解除のために PDF メモリ作成者を最適化する  |
 |  MIP_FLIGHTING_FEATURE_REMOVE_DELETED_LABEL_MD = 11   | 削除ラベルのメタデータの削除を有効にする  |
 |  MIP_FLIGHTING_FEATURE_ENFORCE_TLS12 = 12             | ADRMS 以外の HTTPS 接続に対して TLS 1.2 を強制する  |
+|  MIP_FLIGHTING_FEATURE_KEEP_PDF_LINEARIZTION = 13     | PDF メモリ作成者を最適化して、PDF ファイルの linearization を暗号化/暗号化解除したままにする |
 
 
 ```c
@@ -167,6 +168,7 @@ typedef enum {
   MIP_FLIGHTING_FEATURE_OPTIMIZE_PDF_MEMORY = 10,      
   MIP_FLIGHTING_FEATURE_REMOVE_DELETED_LABEL_MD = 11,  
   MIP_FLIGHTING_FEATURE_ENFORCE_TLS12 = 12,            
+  MIP_FLIGHTING_FEATURE_KEEP_PDF_LINEARIZTION = 13,    
 } mip_cc_flighting_feature;
 
 ```
@@ -275,6 +277,7 @@ API の成功/失敗の結果
 |  MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND = 20         | テンプレート ID が認識されません  |
 |  MIP_RESULT_ERROR_LABEL_NOT_FOUND = 21            | ラベル ID が認識されません  |
 |  MIP_RESULT_ERROR_LABEL_DISABLED = 22             | ラベルが無効または非アクティブです  |
+|  MIP_RESULT_ERROR_DOUBLE_KEY_DISABLED = 23        | 二重キー機能が有効になっていません  |
 
 
 ```c
@@ -306,7 +309,30 @@ typedef enum {
   MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND = 20,        
   MIP_RESULT_ERROR_LABEL_NOT_FOUND = 21,           
   MIP_RESULT_ERROR_LABEL_DISABLED = 22,            
+  MIP_RESULT_ERROR_DOUBLE_KEY_DISABLED = 23,       
 } mip_cc_result;
+
+```
+
+## <a name="mip_cc_cipher_mode"></a>mip_cc_cipher_mode
+
+暗号モード識別子
+
+| フィールド | 説明 |
+|---|---|
+|  MIP_CIPHER_MODE_CBC4K = 0               | 内部パディングを使用する CBC 4K モード  |
+|  MIP_CIPHER_MODE_ECB = 1                 | ECB モード  |
+|  MIP_CIPHER_MODE_CBC512NOPADDING = 2     | 外部 (クライアント) パディングを含む CBC 512 モード  |
+|  MIP_CIPHER_MODE_CBC4KNOPADDING = 3       | 外部 (クライアント) パディングを含む CBC 4K モード  |
+
+
+```c
+typedef enum {
+  MIP_CIPHER_MODE_CBC4K = 0,              
+  MIP_CIPHER_MODE_ECB = 1,                
+  MIP_CIPHER_MODE_CBC512NOPADDING = 2,    
+  MIP_CIPHER_MODE_CBC4KNOPADDING = 3      
+} mip_cc_cipher_mode;
 
 ```
 
@@ -334,40 +360,47 @@ typedef enum {
 
 | フィールド | 説明 |
 |---|---|
-|  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0      | ドキュメントのアクション タイプにコンテンツ フッターを追加します。 |
-|  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1      | ドキュメントのアクション タイプにコンテンツ ヘッダーを追加します。 |
-|  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2           | ドキュメントのアクション タイプ全体にウォーター マークを追加します。 |
-|  MIP_ACTION_TYPE_CUSTOM = 1 << 3                  | カスタム定義のアクション タイプ。 |
-|  MIP_ACTION_TYPE_JUSTIFY = 1 << 4                 | 正当化アクション タイプ。 |
-|  MIP_ACTION_TYPE_METADATA = 1 << 5                | メタ データ変更のアクション タイプ。 |
-|  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6           | アドホック ポリシーによる保護アクション タイプ。 |
-|  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7     | テンプレートによる保護アクション タイプ。 |
-|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8  | 転送不可による保護アクション タイプ。 |
-|  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9   | コンテンツ フッターの削除アクション タイプ。 |
-|  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10  | コンテンツ ヘッダーの削除アクション タイプ。 |
-|  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11      | 保護の削除アクション タイプ。 |
-|  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12       | ウォーターマークの削除アクション タイプ。 |
-|  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13            | ラベルの適用アクション タイプ。 |
-|  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14        | ラベルの推奨アクション タイプ。 |
+|  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0         | ドキュメントのアクション タイプにコンテンツ フッターを追加します。 |
+|  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1         | ドキュメントのアクション タイプにコンテンツ ヘッダーを追加します。 |
+|  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2              | ドキュメントのアクション タイプ全体にウォーター マークを追加します。 |
+|  MIP_ACTION_TYPE_CUSTOM = 1 << 3                     | カスタム定義のアクション タイプ。 |
+|  MIP_ACTION_TYPE_JUSTIFY = 1 << 4                    | 正当化アクション タイプ。 |
+|  MIP_ACTION_TYPE_METADATA = 1 << 5                   | メタ データ変更のアクション タイプ。 |
+|  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6              | アドホック ポリシーによる保護アクション タイプ。 |
+|  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7        | テンプレートによる保護アクション タイプ。 |
+|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8     | 転送不可による保護アクション タイプ。 |
+|  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9      | コンテンツ フッターの削除アクション タイプ。 |
+|  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10     | コンテンツ ヘッダーの削除アクション タイプ。 |
+|  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11         | 保護の削除アクション タイプ。 |
+|  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12          | ウォーターマークの削除アクション タイプ。 |
+|  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13               | ラベルの適用アクション タイプ。 |
+|  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14           | ラベルの推奨アクション タイプ。 |
+|  MIP_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15          | アドホック ポリシーによる保護アクション タイプ。 |
+|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17 | 転送不可による保護アクション タイプ。 |
+|  MIP_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18   | 暗号化アクションの種類による保護。 |
 
 
 ```c
 typedef enum {
-  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0,     
-  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1,     
-  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2,          
-  MIP_ACTION_TYPE_CUSTOM = 1 << 3,                 
-  MIP_ACTION_TYPE_JUSTIFY = 1 << 4,                
-  MIP_ACTION_TYPE_METADATA = 1 << 5,               
-  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6,          
-  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7,    
-  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8, 
-  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9,  
-  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10, 
-  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11,     
-  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12,      
-  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13,           
-  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,       
+  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0,        
+  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1,        
+  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2,             
+  MIP_ACTION_TYPE_CUSTOM = 1 << 3,                    
+  MIP_ACTION_TYPE_JUSTIFY = 1 << 4,                   
+  MIP_ACTION_TYPE_METADATA = 1 << 5,                  
+  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6,             
+  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7,       
+  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8,    
+  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9,     
+  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10,    
+  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11,        
+  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12,         
+  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13,              
+  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,          
+  MIP_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15,         
+  // Reserved
+  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17,
+  MIP_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18,  
 } mip_cc_action_type;
 
 ```
@@ -413,6 +446,9 @@ typedef enum {
 |  MIP_LABEL_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12       | ウォーターマークの削除アクション タイプ。  |
 |  MIP_LABEL_ACTION_TYPE_APPLY_LABEL = 1 << 13            | ラベルの適用アクション タイプ。  |
 |  MIP_LABEL_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14        | ラベルの推奨アクション タイプ。  |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15       | アドホック ポリシーによる保護アクション タイプ。 |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17  | 転送不可による保護アクション タイプ。 |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18    | 暗号化アクションの種類による保護。 |
 
 
 ```c
@@ -432,6 +468,10 @@ typedef enum {
   MIP_LABEL_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12,      
   MIP_LABEL_ACTION_TYPE_APPLY_LABEL = 1 << 13,           
   MIP_LABEL_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,       
+  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15,      
+  // Reserved
+  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17, 
+  MIP_LABEL_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18,   
 } mip_cc_label_action_type;
 
 ```

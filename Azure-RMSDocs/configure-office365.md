@@ -1,8 +1,8 @@
 ---
-title: Azure RMS を使用する Office 365 サービスの構成-AIP
-description: Azure Information Protection から Azure Rights Management サービスと連携するように Office 365 サービスを構成するための管理者向けの情報と手順です。
-author: mlottner
-ms.author: mlottner
+title: Azure RMS AIP を使用するための Microsoft 365 サービスの構成
+description: Azure Information Protection から Azure Rights Management サービスと連携するように Microsoft 365 サービスを構成するための管理者向けの情報と手順。
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
@@ -13,20 +13,22 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee38abad373662034a5c8d5c5b31d3a0b006d4ce
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 2caaf42c764b80f0ccba8b9c74191cbd6bd23c88
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136257"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383501"
 ---
-# <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Azure Rights Management サービスを使用するためのオンラインサービスの構成
+# <a name="microsoft-365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Microsoft 365: Azure Rights Management サービスを使用するためのオンラインサービスの構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>適用対象 **: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 次のセクションでは、Azure Information Protection から Azure Rights Management サービスを使用するように Exchange Online、Microsoft SharePoint、および Microsoft OneDrive を構成する方法について説明します。
 
-## <a name="exchangeonline-irm-configuration"></a>Exchange Online: IRM 構成
+## <a name="exchange-online-irm-configuration"></a>Exchange Online: IRM の構成
 
 Exchange Online が Azure Rights Management サービスと連携する方法の詳細については、「 [Office アプリケーションおよびサービスが azure Rights Management をサポートする方法](office-apps-services-support.md)」の「 [Exchange Online と exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) 」セクションを参照してください。
 
@@ -40,7 +42,7 @@ Exchange Online で既に Azure Rights Management サービスの使用が有効
 
     **Y** を押して確認します。
 
-2. Windows PowerShell セッションで、リモート シェル アクセスが有効になっているアカウントを使用して Exchange Online にサインインします。 既定では、Exchange Online で作成されたすべてのアカウントではリモートシェルアクセスが有効になっていますが、[ユーザー &lt; useridentity &gt; -remotepowershellenabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx)コマンドを使用して無効 (および有効) にすることができます。
+2. Windows PowerShell セッションで、リモート シェル アクセスが有効になっているアカウントを使用して Exchange Online にサインインします。 既定では、Exchange Online で作成されたすべてのアカウントではリモートシェルアクセスが有効になっていますが、 [ユーザー &lt; useridentity &gt; -remotepowershellenabled](/powershell/exchange/disable-access-to-exchange-online-powershell) コマンドを使用して無効 (および有効) にすることができます。
 
     サインインするには、最初に次のように入力します。
 
@@ -48,7 +50,7 @@ Exchange Online で既に Azure Rights Management サービスの使用が有効
     $Cred = Get-Credential
     ```
 
-    次に **[Windows PowerShell 資格情報要求]** ダイアログ ボックスで、Office 365 のユーザー名とパスワードを入力します。
+    次に、[ **Windows PowerShell 資格情報の要求** ] ダイアログボックスで、Microsoft 365 のユーザー名とパスワードを入力します。
 
 3. 最初に次のように変数を設定して、Exchange Online サービスに接続します。
 
@@ -62,7 +64,7 @@ Exchange Online で既に Azure Rights Management サービスの使用が有効
     Import-PSSession $Session
     ```
 
-4. [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) コマンドを実行して、保護サービスでお使いの Exchange Online 構成を表示します。
+4. [Get-IRMConfiguration](/powershell/module/exchange/get-irmconfiguration) コマンドを実行して、保護サービスでお使いの Exchange Online 構成を表示します。
 
     ```md
     Get-IRMConfiguration
@@ -80,11 +82,11 @@ Exchange Online で既に Azure Rights Management サービスの使用が有効
     Test-IRMConfiguration -Sender <user email address>
     ```
 
-    例: **Test-IRMConfiguration -Sender  adams@contoso.com**
+    例: **テスト-IRMConfiguration-Sender adams \@ contoso.com**
 
     このコマンドは、サービスへの接続の確認、構成の取得、URI、ライセンス、および任意のテンプレートの取得を含む一連のチェックを実行します。 Windows PowerShell セッションでは、これらのチェックのそれぞれの結果、およびすべてのチェックをパスした場合は最後にも、その結果が表示されます。 **全体的な結果:パス**
 
-Azure Rights Management サービスを使用するように Exchange Online を有効にすると、情報保護を自動的に適用する機能を構成できます。[メール フロー ルール](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8)、[データ損失防止 (DLP) ポリシー](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx)、[保護されたボイス メール](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (ユニファイド メッセージング) などです。
+Azure Rights Management サービスを使用するように Exchange Online を有効にすると、情報保護を自動的に適用する機能を構成できます。[メール フロー ルール](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8)、[データ損失防止 (DLP) ポリシー](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)、[保護されたボイス メール](/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/protect-voice-mail) (ユニファイド メッセージング) などです。
 
 ## <a name="sharepoint-in-microsoft-365-and-onedrive-irm-configuration"></a>Microsoft 365 の SharePoint と OneDrive: IRM の構成
 
@@ -97,9 +99,9 @@ Azure Rights Management サービスをサポートするように Microsoft 365
 
 SharePoint の information rights management (IRM) サービスを有効にするには、Office ドキュメントの次の手順を参照してください。
 
-- [SharePoint 管理センターで情報 Rights Management (IRM) を設定する](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
+- [SharePoint 管理センターで情報 Rights Management (IRM) を設定する](/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
 
-この構成は、Office 365 管理者が行います。
+この構成は、Microsoft 365 管理者によって行われます。
 
 ### <a name="configuring-irm-for-libraries-and-lists"></a>ライブラリおよびリスト用の IRM の構成
 
@@ -114,19 +116,19 @@ SharePoint で IRM サービスを有効にすると、サイト所有者は、S
 SharePoint 用の IRM サービスを有効にした後、ユーザーの OneDrive ドキュメントライブラリまたは個々のフォルダーを Rights Management 保護用に構成できます。 ユーザーは、OneDrive の Web サイトから自分でこれを構成できます。 管理者は SharePoint 管理センターを使用してユーザーにこの保護を構成することはできませんが、Windows PowerShell を使用してこれを行うことができます。
 
 > [!NOTE]
-> OneDrive の構成の詳細については、Office のドキュメント「 [office 365 での onedrive のセットアップ](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb)」を参照してください。
+> OneDrive の構成の詳細については、 [onedrive](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb) のドキュメントを参照してください。
 
 #### <a name="configuration-for-users"></a>ユーザー用の構成
 
 ユーザーが各自のビジネスファイルを保護するように OneDrive を構成できるように、次の手順に従ってください。
 
-1. 職場または学校のアカウントで Office 365 にサインインし、[OneDrive の Web サイト](https://admin.microsoft.com/onedrive)に移動します。
+1. 職場または学校のアカウントを使用して Microsoft 365 にサインインし、 [OneDrive web サイト](https://admin.microsoft.com/onedrive)にアクセスします。
 
 2. ナビゲーション ウィンドウの下部の、**[従来の OneDrive に戻す]** を選択します。
 
-3. **[設定]** アイコンを選択します。 **[設定]** ウィンドウの**リボン**が **[オフ]** に設定されている場合、この設定を選択し、リボンをオンにします。
+3. [ **設定** ] アイコンを選択します。 **[設定]** ウィンドウの **リボン** が **[オフ]** に設定されている場合、この設定を選択し、リボンをオンにします。
 
-4. 保護するすべての OneDrive ファイルを構成するには、リボンから [**ライブラリ**] タブを選択し、[**ライブラリの設定**] を選択します。
+4. 保護するすべての OneDrive ファイルを構成するには、リボンから [ **ライブラリ** ] タブを選択し、[ **ライブラリの設定**] を選択します。
 
 5. **[ドキュメント > 設定]** ページの **[権限と管理]** セクションの **[Information Rights Management]** を選択します。
 
@@ -421,7 +423,7 @@ SharePoint 管理センターを使用してユーザーの OneDrive 用に IRM 
        if(-not $o365TenantAdminCredential)
        {
            # when credentials are not cached, prompt for the tenant admin credentials
-           $o365TenantAdminCredential = Get-Credential -UserName $tenantAdmin -Message "Enter the password for the Office 365 admin"
+           $o365TenantAdminCredential = Get-Credential -UserName $tenantAdmin -Message "Enter the password for the Microsoft 365 admin"
 
            if(-not $o365TenantAdminCredential -or -not $o365TenantAdminCredential.UserName -or $o365TenantAdminCredential.Password.Length -eq 0 )
            {
@@ -513,46 +515,46 @@ SharePoint 管理センターを使用してユーザーの OneDrive 用に IRM 
 
    1. `$sharepointAdminCenterUrl` を検索し、値の例を自身の SharePoint 管理センター URL に置き換えます。
 
-      この値は、SharePoint 管理センターにアクセスしたときのベース URL として表示され、https://* &lt; tenant_name &gt; *-admin.sharepoint.com という形式になっています。
+      この値は、SharePoint 管理センターにアクセスしたときのベース URL として表示され、https://*&lt; tenant_name &gt;*-admin.sharepoint.com という形式になっています。
 
-      たとえば、テナント名が "contoso" の場合は、次のように指定します。**https://contoso-admin.sharepoint.com**
+      たとえば、テナント名が "contoso" の場合は、次のように指定します。 **https://contoso-admin.sharepoint.com**
 
-   2. `$tenantAdmin` を検索し、値の例を自身の Office 365 の完全修飾グローバル管理者アカウントに置き換えます。
+   2. を検索 `$tenantAdmin` し、例の値を、Microsoft 365 の独自の完全修飾グローバル管理者アカウントに置き換えます。
 
-      この値は、グローバル管理者として Microsoft 365 管理センターにサインインするために使用するものと同じであり、user_name@ の* &lt; テナントドメイン名 &gt; *.com という形式になります。
+      この値は、グローバル管理者として Microsoft 365 管理センターにサインインするために使用するものと同じであり、user_name@ の *&lt; テナントドメイン名 &gt;*.com という形式になります。
 
-      たとえば、"contoso.com" テナントドメインの Office 365 グローバル管理者のユーザー名が "admin" である場合は、次のように指定します。**admin@contoso.com**
+      たとえば、"contoso.com" テナントドメインの Microsoft 365 グローバル管理者のユーザー名が "admin" である場合は、次のように指定します。 **admin@contoso.com**
 
    3. を検索 `$webUrls` し、例の値をユーザーの OneDrive Web url に置き換え、必要な数だけエントリを追加または削除します。
 
-      または、構成する必要のあるすべての URL を含む .CSV ファイルをインポートする、スクリプト内のこの配列を置き換える方法のコメントを確認します。  自動的に検索し、この .CSV ファイルに入力する URL を抽出する、サンプル スクリプトがもう 1 つ用意されています。 これを行う準備ができたら、追加のスクリプトを使用して[OneDrive のすべての url をに出力します。](#additional-script-to-output-all-onedrive-urls-to-a-csv-file)これらの手順の直後にある CSV ファイルセクション。
+      または、構成する必要のあるすべての URL を含む .CSV ファイルをインポートする、スクリプト内のこの配列を置き換える方法のコメントを確認します。  自動的に検索し、この .CSV ファイルに入力する URL を抽出する、サンプル スクリプトがもう 1 つ用意されています。 これを行う準備ができたら、追加のスクリプトを使用して [OneDrive のすべての url をに出力します。](#additional-script-to-output-all-onedrive-urls-to-a-csv-file) これらの手順の直後にある CSV ファイルセクション。
 
-      ユーザーの OneDrive の web URL の形式は次のとおりです: https://* &lt; tenant name &gt; *-my.sharepoint.com/personal/* &lt; user_name &gt; *_* &lt; テナント名 &gt; *_com
+      ユーザーの OneDrive の web URL の形式は次のとおりです: https://*&lt; tenant name &gt;*-my.sharepoint.com/personal/*&lt; user_name &gt;* _ *&lt; テナント名 &gt;* _com
 
-      たとえば、contoso テナントのユーザーのユーザー名が "rシム one" の場合、次のように指定します。**https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
+      たとえば、contoso テナントのユーザーのユーザー名が "rシム one" の場合、次のように指定します。 **https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
 
-   4. このスクリプトを使用して OneDrive を構成しているので、変数の**ドキュメント**の値は変更しないで `$listTitle` ください。
+   4. このスクリプトを使用して OneDrive を構成しているので、変数の **ドキュメント** の値は変更しないで `$listTitle` ください。
 
-   5. `ADMIN INSTRUCTIONS` を検索します。 このセクションに変更を加えないと、ユーザーの OneDrive は、"保護されたファイル" というポリシーのタイトルと、"このポリシーは、承認されたユーザーへのアクセスを制限する" という説明で IRM 用に構成されます。  その他の IRM オプションは設定されません。これは、おそらく多くの環境に適しています。 ただし、提示されたポリシー タイトルと説明を変更したり、環境に適したその他の IRM オプションも追加できます。 Set-IrmConfiguration コマンド用に独自のパラメーターのセットを構築する助けとなる、スクリプト内のコメント例を参照してください。
+   5. `ADMIN INSTRUCTIONS` を探します。 このセクションに変更を加えないと、ユーザーの OneDrive は、"保護されたファイル" というポリシーのタイトルと、"このポリシーは、承認されたユーザーへのアクセスを制限する" という説明で IRM 用に構成されます。  その他の IRM オプションは設定されません。これは、おそらく多くの環境に適しています。 ただし、提示されたポリシー タイトルと説明を変更したり、環境に適したその他の IRM オプションも追加できます。 Set-IrmConfiguration コマンド用に独自のパラメーターのセットを構築する助けとなる、スクリプト内のコメント例を参照してください。
 
 5. スクリプトを保存し、署名します。 スクリプトに署名しない場合 (より安全性は高いです)、Windows PowerShell で署名されていないスクリプトを実行できるよう、コンピューターが構成されている必要があります。 これを行うには、Windows PowerShell セッションを **[管理者として実行]** オプションを使用して実行し、「**Set-executionpolicy Unrestricted**」と入力します。 ただし、この構成では、署名されていないすべてのスクリプトが実行されます (セキュリティは低いです)。
 
-   Windows PowerShell スクリプトの署名の詳細については、PowerShell のドキュメント ライブラリの「[about_Signing](https://technet.microsoft.com/library/hh847874.aspx)」を参照してください。
+   Windows PowerShell スクリプトの署名の詳細については、PowerShell のドキュメント ライブラリの「[about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing)」を参照してください。
 
-6. スクリプトを実行し、求められたら Office 365 管理者アカウントのパスワードを指定します。 スクリプトを変更し、同じ Windows PowerShell セッションでそれを実行した場合は、資格情報は求められません。
+6. スクリプトを実行し、メッセージが表示されたら、Microsoft 365 管理者アカウントのパスワードを入力します。 スクリプトを変更し、同じ Windows PowerShell セッションでそれを実行した場合は、資格情報は求められません。
 
 > [!TIP]
 > また、このスクリプトを使用して、SharePoint ライブラリ用に IRM を構成することもできます。 この構成では、追加オプション [**IRM をサポートしないドキュメントのアップロードをユーザーに許可しない**] を有効にして、保護されたドキュメントだけがライブラリに含まれるようにできます。    これを実行するには、スクリプトの Set-IrmConfiguration コマンドに `-IrmReject` パラメーターを追加します。
 >
-> また、 `$webUrls` 変数 (たとえば、 **https: \/ /contoso.sharepoint.com**) と `$listTitle` 変数 (たとえば、 **$Reports**) も変更する必要があります。
+> また、 `$webUrls` 変数 (たとえば、 **https: \/ /contoso.sharepoint.com**) と  `$listTitle` 変数 (たとえば、 **$Reports**) も変更する必要があります。
 
-ユーザーの OneDrive ライブラリに対して IRM を無効にする必要がある場合は、「 [onedrive 用に irm を無効にするスクリプト](#script-to-disable-irm-for-onedrive)」セクションを参照してください。
+ユーザーの OneDrive ライブラリに対して IRM を無効にする必要がある場合は、「 [onedrive 用に irm を無効にするスクリプト](#script-to-disable-irm-for-onedrive) 」セクションを参照してください。
 
 ##### <a name="additional-script-to-output-all-onedrive-urls-to-a-csv-file"></a>すべての OneDrive Url をに出力する追加のスクリプト。CSV ファイル
 
 上記の手順4c では、次の Windows PowerShell スクリプトを使用して、すべてのユーザーの OneDrive ライブラリの Url を抽出できます。これを確認し、必要に応じて編集して、メインスクリプトにインポートできます。
 
-このスクリプトでは、 [Sharepoint クライアントコンポーネント SDK](https://www.microsoft.com/download/details.aspx?id=42038)と[sharepoint 管理シェル](https://www.microsoft.com/download/details.aspx?id=35588)も必要です。 同じ手順を実行して、コピーと貼り付けを行い、ファイル (例: "Report-onedriveforbusinesssiteinfo.ps1") をローカルに保存し、前と同様に `$sharepointAdminCenterUrl` と `$tenantAdmin` の値を変更して、スクリプトを実行します。
+このスクリプトでは、 [Sharepoint クライアントコンポーネント SDK](https://www.microsoft.com/download/details.aspx?id=42038) と [sharepoint 管理シェル](https://www.microsoft.com/download/details.aspx?id=35588)も必要です。 同じ手順を実行して、コピーと貼り付けを行い、ファイル (例: "Report-onedriveforbusinesssiteinfo.ps1") をローカルに保存し、前と同様に `$sharepointAdminCenterUrl` と `$tenantAdmin` の値を変更して、スクリプトを実行します。
 
 *&#42;&#42;免責事項&#42;&#42;*: このサンプル スクリプトは、Microsoft のいかなる標準サポート プログラムまたはサービスでもサポートされていません。 サンプル スクリプトは現状有姿で提供され、いかなる保証も行いません。
 
@@ -562,7 +564,7 @@ SharePoint 管理センターを使用してユーザーの OneDrive 用に IRM 
 <#
   Description:
 
-    Queries the search service of an Office 365 tenant to retrieve all OneDrive sites.  
+    Queries the search service of a Microsoft 365 tenant to retrieve all OneDrive sites.  
     Details of the discovered sites are written to a .CSV file (by default,"OneDriveForBusinessSiteInfo_<date>.csv").
 
  Script Installation Requirements:
@@ -746,7 +748,7 @@ function Add-CredentialToCredentialCache
     $clientContext = New-Object Microsoft.SharePoint.Client.ClientContext($sharepointAdminCenterUrl)
     $clientContext.Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($o365TenantAdminCredential.UserName, $o365TenantAdminCredential.Password)
 
-# run a query against the Office 365 tenant search service to retrieve all OneDrive URLs
+# run a query against the Microsoft 365 tenant search service to retrieve all OneDrive URLs
 
     do
     {
@@ -778,7 +780,7 @@ $oneDriveForBusinessSiteUrls | Out-File -FilePath $reportName
 
 ユーザーの OneDrive で IRM を無効にする必要がある場合は、次のサンプルスクリプトを使用します。
 
-このスクリプトでは、 [Sharepoint クライアントコンポーネント SDK](https://www.microsoft.com/download/details.aspx?id=42038)と[sharepoint 管理シェル](https://www.microsoft.com/download/details.aspx?id=35588)も必要です。 内容をコピーして貼り付け、ファイル (例: "Disable-IRMOnOneDriveForBusiness.ps1") をローカルに保存し、`$sharepointAdminCenterUrl` と `$tenantAdmin` の値を変更します。 OneDrive の Url を手動で指定するか、前のセクションのスクリプトを使用してインポートし、スクリプトを実行できるようにします。
+このスクリプトでは、 [Sharepoint クライアントコンポーネント SDK](https://www.microsoft.com/download/details.aspx?id=42038) と [sharepoint 管理シェル](https://www.microsoft.com/download/details.aspx?id=35588)も必要です。 内容をコピーして貼り付け、ファイル (例: "Disable-IRMOnOneDriveForBusiness.ps1") をローカルに保存し、`$sharepointAdminCenterUrl` と `$tenantAdmin` の値を変更します。 OneDrive の Url を手動で指定するか、前のセクションのスクリプトを使用してインポートし、スクリプトを実行できるようにします。
 
 *&#42;&#42;免責事項&#42;&#42;*: このサンプル スクリプトは、Microsoft のいかなる標準サポート プログラムまたはサービスでもサポートされていません。 サンプル スクリプトは現状有姿で提供され、いかなる保証も行いません。
 

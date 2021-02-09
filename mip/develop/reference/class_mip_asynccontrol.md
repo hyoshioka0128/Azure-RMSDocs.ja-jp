@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: d032abf9fe7192cfe6ccfd5890d6585aaa2ba645
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 7d21002c9bf90014a57eeb9b666f706e2b41f68d
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763659"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212214"
 ---
 # <a name="class-asynccontrol"></a>クラス AsyncControl 
 非同期操作を取り消すために使用されるクラスです。
@@ -26,8 +26,8 @@ public bool Cancel ()  |  Cancel を呼び出すと、タスクの取り消し�
 ### <a name="cancel-function"></a>Cancel 関数
 Cancel を呼び出すと、タスクの取り消しが試行されます。成功した場合は、適切な onFailure コールバックが mip:: Operationcancel Error で呼び出されます。 この機能は、タスクディスパッチャーデリゲート (に依存します。
   
-**関連**項目: mip:: TaskDispatcherDelegate)、
+**関連** 項目: mip:: TaskDispatcherDelegate)、
 
   
-は、キャンセルシグナルをディスパッチできない場合は False を返します。それ以外の場合は true を**返し**ます。
+は、キャンセルシグナルをディスパッチできない場合は False を返します。それ以外の場合は true を **返し** ます。
 タスク完了ブロックには、AsyncControl オブジェクトへの強い参照を保持しないでください。

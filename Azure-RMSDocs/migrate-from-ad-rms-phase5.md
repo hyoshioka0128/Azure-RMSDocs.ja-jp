@@ -1,11 +1,11 @@
 ---
 title: AD RMS から Azure Information Protection への移行 - フェーズ 5
 description: AD RMS から Azure Information Protection への移行のフェーズ 5 には、手順 10 から 12 が含まれます。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/02/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: b3da193b20e5c65d66fcba380ee55690165ce3b4
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: fd030502c6d6583e72be63fa424ff8186ebaadc7
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049124"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560307"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 AD RMS から Azure Information Protection への移行フェーズ 5 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 10 から手順 12 を説明します。
 
@@ -41,34 +42,40 @@ SCP を削除するには、ドメイン エンタープライズ管理者とし
 
 4. **[現在の SCP を削除する]** を選択して **[OK]** をクリックします。
 
-次に AD RMS サーバーのアクティビティを監視します。 たとえば、[システム正常性レポートの要求の確認](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx)、[ServiceRequest テーブルの確認](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx)、[保護コンテンツに対するユーザー アクセスの監査](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)などです。
+次に AD RMS サーバーのアクティビティを監視します。 たとえば、[システム正常性レポートの要求の確認](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221012(v=ws.10))、[ServiceRequest テーブルの確認](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772686(v=ws.10))、[保護コンテンツに対するユーザー アクセスの監査](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)などです。
 
 RMS クライアントがこれらのサーバーと通信していないこと、およびクライアントが Azure Information Protection を正常に使用していることを確認できたら、これらのサーバーから AD RMS サーバーの役割を削除できます。 専用サーバーを使用している場合は、最初にサーバーをシャットダウンするときの警告手順を使用することをお勧めします。 この方法では、サービス継続性のためにこれらのサーバーを再起動する必要がある問題の報告が発生していないことを確認でき、クライアントが Azure Information Protection を使用していない理由を調査する時間を確保できます。
 
-また、AD RMS サーバーのプロビジョニングを解除した後に、Azure Portal でテンプレートを見直す機会が必要な場合があります。 たとえば、ユーザーが選択または再構成する対象が少なくなるように、ラベルに変換して統合する場合です。 これは、既定のテンプレートを発行する絶好のタイミングでもあります。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
+AD RMS サーバーのプロビジョニングを解除した後は、テンプレートとラベルを確認する機会を得ることができます。 たとえば、テンプレートをラベルに変換し、それらを統合して、ユーザーが選択したり、再構成したりすることができないようにします。 これは、既定のテンプレートを発行するのにも適しています。
+
+機密ラベルと統一されたラベル付けクライアントについては、Microsoft 365 security center、Microsoft 365 コンプライアンスセンター、Microsoft 365 Security & コンプライアンスセンターなどのラベル付け管理センターを使用してください。 詳細については、Microsoft 365 のドキュメントを参照してください。
+
+クラシッククライアントを使用している場合は、Azure portal を使用します。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
 
 >[!IMPORTANT]
-> この移行が終わると、Azure Information Protection および Hold Your Own Key (HYOK) オプションで AD RMS クラスターを使うことができなくなります。 Azure Information Protection のラベルに HYOK を使う場合は、現在行われているリダイレクションのため、使用する AD RMS クラスターに、移行したクラスターとは異なるライセンス URL が必要です。
+> この移行の終了時には、AD RMS クラスターを Azure Information Protection と hold your key ([HYOK](configure-adrms-restrictions.md)) オプションと共に使用することはできません。 
+>
+> HYOK でクラシッククライアントを使用している場合は、リダイレクトが配置されているため、使用する AD RMS クラスターには、移行したクラスターのライセンス Url が異なる必要があります。
+>
+### <a name="additional-configuration-for-computers-that-run-office-2010"></a>Office 2010 を実行するコンピューターの追加構成
 
-### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Office 2010 を実行するコンピューターの追加構成
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
+> 
 
-移行されたクライアントが Office 2010 を実行している場合、AD RMS サーバーがプロビジョニング解除された後、保護されたコンテンツを開くのに遅延が発生する可能性があります。 または、保護されたコンテンツを開くための資格情報がないというメッセージが表示されることがあります。 これらの問題を解決するには、これらのコンピューターに対してネットワークリダイレクトを作成し、AD RMS URL FQDN をコンピューターのローカル IP アドレス (127.0.0.1) にリダイレクトします。 これを行うには、各コンピューターでローカルホストファイルを構成するか、DNS を使用します。
+移行されたクライアントが Office 2010 を実行している場合、AD RMS サーバーがプロビジョニング解除された後で、保護されたコンテンツを開くときにユーザーが遅延することがあります。 または、保護されたコンテンツを開くための資格情報がないというメッセージが表示されることがあります。 これらの問題を解決するには、これらのコンピューターに対してネットワークリダイレクトを作成し、AD RMS URL FQDN をコンピューターのローカル IP アドレス (127.0.0.1) にリダイレクトします。 これを行うには、各コンピューターでローカルホストファイルを構成するか、DNS を使用します。
 
-ローカルホストファイルを使用したリダイレクト:
-
-- ローカルホストファイルに次の行を追加し `<AD RMS URL FQDN>` ます。を AD RMS クラスターの値に置き換えます。プレフィックスや web ページは使用しません。
+- **ローカルホストファイルを使用** したリダイレクト: ローカルホストファイルに次の行を追加します。を `<AD RMS URL FQDN>` AD RMS クラスターの値に置き換えます。プレフィックスや web ページは含まれません。
 
     ```sh
     127.0.0.1 <AD RMS URL FQDN>
     ```
 
-DNS を使用したリダイレクト:
-
-- AD RMS URL FQDN の新しいホスト (A) レコードを作成します。 IP アドレスは127.0.0.1 です。
+- **DNS を使用** したリダイレクト: AD RMS URL FQDN の新しいホスト (a) レコードを作成します。このレコードには、IP アドレス127.0.0.1 が使用されています。
 
 ## <a name="step-11-complete-client-migration-tasks"></a>手順 11. クライアントの移行タスクを完了する
 
-モバイル デバイス クライアントおよび Mac コンピューターの場合: [AD RMS モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx)をデプロイするときに作成した DNS SRV レコードを削除します。
+モバイル デバイス クライアントおよび Mac コンピューターの場合: [AD RMS モバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11))をデプロイするときに作成した DNS SRV レコードを削除します。
 
 これらの DNS の変更が反映されると、これらのクライアントは Azure Rights Management サービスを自動的に検出して使用を開始します。 ただし、Office Mac を実行する Mac コンピューターは、AD RMS からの情報をキャッシュに入れます。 これらのコンピューターの場合、このプロセスには最大で 30 日かかることがあります。
 
@@ -100,12 +107,12 @@ killall cfprefsd
 
 1. PowerShell セッションで Azure Rights Management サービスに接続し、メッセージが表示されたら、グローバル管理者の資格情報を指定します。
 
-    ```ps
+    ```PowerShell
     Connect-AipService
 
 2. Run the following command, and enter **Y** to confirm:
 
-    ```ps
+    ```PowerShell
     Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
     ```
 
@@ -113,13 +120,18 @@ killall cfprefsd
 
 3. オンボーディング制御が設定されていないことを確認します。
 
-    ```ps    
+    ```PowerShell    
     Get-AipServiceOnboardingControlPolicy
     ```
 
     出力で、**License** が **False** と表示され、**SecurityGroupOjbectId** に対して GUID が表示されないことを確認します。
 
-最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所にあります。 **Microsoft**  >  **Windows**  >  **Active Directory Rights Management サービス Client**
+最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 
+
+通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは、 **Microsoft**  >  **Windows**  >  **Active Directory Rights Management サービス Client** の場所にあります。 
+
+> [!IMPORTANT]
+> Office 2010 の拡張サポートは、2020年10月13日に終了しました。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを再入力する
 
@@ -135,18 +147,18 @@ Azure Information Protection テナント キーの再入力を行うと ("キ�
 
 Azure Information Protection テナント キーを更新するには:
 
-- **テナントキーが Microsoft によって管理されている場合**: PowerShell コマンドレットの[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)を実行し、テナント用に自動的に作成されたキーのキー識別子を指定します。 指定する値を特定するには、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
+- **テナントキーが Microsoft によって管理されている場合**: PowerShell コマンドレットの [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) を実行し、テナント用に自動的に作成されたキーのキー識別子を指定します。 指定する値を特定するには、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
 
         
-    ```ps
+    ```PowerShell
     (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
     ```
 
-- **テナントキーがユーザーによって管理されている場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントのキー作成プロセスを繰り返してから、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレットをもう一度実行して、この新しいキーの URI を指定します。
+- **テナントキーがユーザーによって管理されている場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントのキー作成プロセスを繰り返してから、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) コマンドレットをもう一度実行して、この新しいキーの URI を指定します。
 
 Azure Information Protection テナント キーの管理について詳しくは、「[Azure Information Protection テナント キーに対する操作](./operations-tenant-key.md)」を参照してください。
 
 
 ## <a name="next-steps"></a>次のステップ
 
-移行が完了した後は、[デプロイ ロードマップ](deployment-roadmap.md)を参照して、必要になる可能性があるその他のデプロイ タスクを確認します。
+移行が完了したら、 [分類、ラベル付け、保護に関する AIP の展開ロードマップ](deployment-roadmap-classify-label-protect.md) を確認し、必要に応じてその他の展開タスクを特定します。

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 20a4bc96585afaebe3f85ffee6050ab130512791
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: c70fcddfc83594f381eaa0351c6cf00ff49d0d6f
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764380"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213183"
 ---
 # <a name="class-removeprotectionaction"></a>クラス RemoveProtectionAction 
 ドキュメントからの保護の削除を指定するアクション クラス。

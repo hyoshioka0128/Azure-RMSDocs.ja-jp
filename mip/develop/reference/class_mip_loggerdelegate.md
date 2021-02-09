@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: e213f243a0e46bb804b224c7a0752a0b9b270103
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: d7869035af314c2328b49380567f4259d69c961a
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761817"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215206"
 ---
 # <a name="class-loggerdelegate"></a>LoggerDelegate クラス 
 MIP SDK のロガーに対してインターフェイスを定義するクラス。

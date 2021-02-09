@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ca29755d4533d6b7dd51280c2fb71b631bbb9b5c
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 991daab4e2b0d72a747f747dabd5860373fabfc1
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763148"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215308"
 ---
 # <a name="class-fileexecutionstate"></a>クラス FileExecutionState 
   
@@ -19,8 +19,8 @@ ms.locfileid: "81763148"
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 パブリック仮想 DataState GetDataState () const  |  アプリケーションで操作中のコンテンツの状態を取得します。
-public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: shared_ptr\<filehandler\> &、const std:: vector\<std:: shared_ptr\<ClassificationRequest\> \> &) const  |  分類結果のマップを返します。
-public virtual std:: map\<std:: string、std:: string\> getauditmetadata () const  |  アプリケーション固有のキーと値のペアのマップを返します。
+public virtual std:: shared_ptr \<ClassificationResults\> GetClassificationResults (const std:: shared_ptr \<FileHandler\> &、const std:: vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  分類結果のマップを返します。
+public virtual std:: map \<std::string, std::string\> getauditmetadata () const  |  アプリケーション固有のキーと値のペアのマップを返します。
   
 ## <a name="members"></a>メンバー
   
@@ -48,4 +48,4 @@ public virtual std:: map\<std:: string、std:: string\> getauditmetadata () cons
 アプリケーション固有のキーと値のペアのマップを返します。
 
   
-**戻り**値: アプリケーション固有の監査メタデータの登録済みキー: 値のペア送信者: 送信者受信者の電子メール id: 電子メールの受信者の JSON 配列: コンテンツを最後に変更したユーザーの電子メール id LastModifiedDate: コンテンツが最後に変更された日付
+**戻り** 値: アプリケーション固有の監査メタデータの登録済みキー: 値のペア送信者: 送信者受信者の電子メール id: 電子メールの受信者の JSON 配列: コンテンツを最後に変更したユーザーの電子メール id LastModifiedDate: コンテンツが最後に変更された日付

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 4dd3ff426e92fdd28cac211eb6953b8d30eb5ae5
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 56bad4dfc1fde5f6cfe2d390fef1555ba0afe6d7
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762752"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215274"
 ---
 # <a name="class-fileprofileobserver"></a>クラス FileProfile:: オブザーバー 
 クライアントがプロファイル関連のイベントに関する通知を取得するための Observer インターフェイス。
@@ -21,16 +21,16 @@ ms.locfileid: "81762752"
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public virtual ~Observer()  | _まだ文書化されていません。_
-パブリック仮想 void OnLoadSuccess (const std:: shared_ptr\<mip:: fileprofile\>& profile、const std:: shared_ptr\<void\>& context)  |  プロファイルが正常に読み込まれたときに呼び出されます。
-パブリック仮想 void OnLoadFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  プロファイルの読み込みでエラーが発生したときに呼び出されます。
-public virtual void OnListEnginesSuccess (const std:: vector\<std:: String\>& engineIds、const std:: shared_ptr\<void\>& context)  |  エンジンの一覧が正常に生成されたときに呼び出されます。
-public virtual void OnListEnginesFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  エラーの原因となったエンジンを一覧表示するときに呼び出されます。
-public virtual void OnUnloadEngineSuccess (const std:: shared_ptr\<void\>& context)  |  エンジンが正常にアンロードされたときに呼び出されます。
-public virtual void OnUnloadEngineFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  エンジンのアンロードがエラーの原因となったときに呼び出されます。
-public virtual void OnAddEngineSuccess (const std:: shared_ptr\<mip:: fileengine\>& engine、const std:: shared_ptr\<void\>& context)  |  新しいエンジンが正常に追加されたときに呼び出されます。
-public virtual void OnAddEngineFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  新しいエンジンの追加がエラーの原因となったときに呼び出されます。
-public virtual void OnDeleteEngineSuccess (const std:: shared_ptr\<void\>& context)  |  エンジンが正常に削除されたときに呼び出されます。
-public virtual void OnDeleteEngineFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  エンジンの削除がエラーの原因となったときに呼び出されます。
+public virtual void OnLoadSuccess(const std::shared_ptr\<mip::FileProfile\>& profile, const std::shared_ptr\<void\>& context)  |  プロファイルが正常に読み込まれたときに呼び出されます。
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  プロファイルの読み込みでエラーが発生したときに呼び出されます。
+public virtual void OnListEnginesSuccess (const std:: vector \<std::string\>& engineIds、const std:: shared_ptr \<void\>& context)  |  エンジンの一覧が正常に生成されたときに呼び出されます。
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エラーの原因となったエンジンを一覧表示するときに呼び出されます。
+public virtual void OnUnloadEngineSuccess(const std::shared_ptr\<void\>& context)  |  エンジンが正常にアンロードされたときに呼び出されます。
+public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エンジンのアンロードがエラーの原因となったときに呼び出されます。
+public virtual void OnAddEngineSuccess(const std::shared_ptr\<mip::FileEngine\>& engine, const std::shared_ptr\<void\>& context)  |  新しいエンジンが正常に追加されたときに呼び出されます。
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  新しいエンジンの追加がエラーの原因となったときに呼び出されます。
+public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  エンジンが正常に削除されたときに呼び出されます。
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エンジンの削除がエラーの原因となったときに呼び出されます。
 public virtual void OnPolicyChanged(const std::string& engineId)  |  指定された ID のエンジンに対してポリシーが変更されたときに呼び出されます。
 public virtual void OnAddPolicyEngineStarting (bool requiresPolicyFetch)  |  ポリシーエンジンのポリシーデータをサーバーからフェッチする必要があるかどうか、またはローカルにキャッシュされたデータから作成できるかどうかを示すために、エンジンを作成する前に呼び出されます。
 protected Observer()  | _まだ文書化されていません。_

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 341c8d22902d937068de3e9afb80aac9cb8305c4
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: e5a2993af705855dde94f5be37e22f1e9ab87c99
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763767"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212453"
 ---
 # <a name="class-addcontentheaderaction"></a>AddContentHeaderAction クラス 
 コンテンツ ヘッダーの追加を指定するアクション クラス。
@@ -33,7 +33,7 @@ public int GetMargin() const  |  一番下からのヘッダーの余白を取�
 コンテンツ ヘッダー要素をマークするために使用する API。
 
   
-**戻り値**: コンテンツ ヘッダーを保持する UI 要素に使用する必要のある名前。 コンテンツ ヘッダーを削除する必要がある場合は、[RemoveContentHeaderAction](class_mip_removecontentfooteraction.md) に同じ名前が返されます。
+**戻り値**: コンテンツ ヘッダーを保持する UI 要素に使用する必要のある名前。 コンテンツ ヘッダーを削除する必要がある場合は、RemoveContentHeaderAction に同じ名前が返されます。
   
 ### <a name="gettext-function"></a>GetText 関数
 コンテンツ ヘッダーに移動されるテキストを取得します。
@@ -57,7 +57,7 @@ public int GetMargin() const  |  一番下からのヘッダーの余白を取�
 コンテンツ ヘッダーの表示に使用されるフォントの色を取得します。
 
   
-は、文字列としてのフォントの色 (たとえば、#000000 ") を**返し**ます。
+は、文字列としてのフォントの色 (たとえば、#000000 ") を **返し** ます。
   
 ### <a name="getalignment-function"></a>GetAlignment 関数
 ヘッダーの配置を取得します。

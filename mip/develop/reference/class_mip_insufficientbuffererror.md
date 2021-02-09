@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b02b77ab144a5117c06d3c3b4619b789f566cdb8
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 3ac58601b4030c8dd10e2fb327cfe2da59d0c45a
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762218"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215410"
 ---
 # <a name="class-insufficientbuffererror"></a>InsufficientBufferError クラス 
 バッファーエラーが不足しています。

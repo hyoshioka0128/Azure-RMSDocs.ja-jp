@@ -1,11 +1,11 @@
 ---
 title: AD RMS から Azure Information Protection への移行 - フェーズ 2
 description: AD RMS から Azure Information Protection への移行のフェーズ 2 には、手順 4 から 6 が含まれます。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/02/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
@@ -13,16 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9b13f31a13d447dcd620f986cac17c74f0a7de17
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ad4fe6bd495bfe6a19ce897bf3ee5290c778a8ac
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048665"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386068"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 AD RMS から Azure Information Protection への移行フェーズ 2 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 4 から手順 6 を説明します。
 
@@ -75,7 +77,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 - 外部暗号プロバイダーを使用して保護されたパスワード。
 
 > [!NOTE]
->  AD RMS でのハードウェア セキュリティ モジュールの使用に関する詳細については、「[AD RMS でのハードウェア セキュリティ モジュールの使用](https://technet.microsoft.com/library/jj651024.aspx)」を参照してください。
+>  AD RMS でのハードウェア セキュリティ モジュールの使用に関する詳細については、「[AD RMS でのハードウェア セキュリティ モジュールの使用](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj651024(v=ws.11))」を参照してください。
 
 Azure Information Protection テナント キー トポロジには、テナント キーを Microsoft が管理するか (**マイクロソフト管理**) または Azure Key Vault でユーザーが自分で管理するか (**顧客管理**) の 2 つのオプションがあります。 独自の Azure Information Protection テナントキーを管理する場合、"独自のキーを持ち込む" (BYOK) と呼ばれることもあります。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
@@ -83,11 +85,12 @@ Azure Information Protection テナント キー トポロジには、テナン�
 
 |現在の AD RMS のデプロイ|選択した Azure Information Protection テナント キーのトポロジ|移行手順|
 |-----------------------------|----------------------------------------|--------------------------|
-|AD RMS データベースでのパスワード保護|マイクロソフト管理|この表の後**に、ソフトウェアで保護されているキーからソフトウェアで保護さ**れているキーへの移行の手順を参照してください。<br /><br />これは最も簡単な移行パスであり、Azure Information Protection に構成データを転送するだけで済みます。|
+|AD RMS データベースでのパスワード保護|マイクロソフト管理|この表の後 **に、ソフトウェアで保護されているキーからソフトウェアで保護さ** れているキーへの移行の手順を参照してください。<br /><br />これは最も簡単な移行パスであり、Azure Information Protection に構成データを転送するだけで済みます。|
 |NCipher nShield ハードウェアセキュリティモジュール (HSM) を使用した HSM 保護 |お客様が管理 (BYOK)|後で説明される「**HSM で保護されたキーから HSM で保護されたキーへの移行**」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、3 つの一連の手順を実行する必要があります。最初にオンプレミスの HSM から Azure Key Vault の HSM にキーを転送し、次に Azure Information Protection からの Azure Rights Management サービスがテナント キーを使用するのを承認し、最後に構成データを Azure Information Protection に転送します。|
-|AD RMS データベースでのパスワード保護|お客様が管理 (BYOK)|この表の後**に、ソフトウェアで保護されているキーから HSM で保護されているキーへ**の移行に関する手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、一連の 4 つの手順を実行する必要があります。最初にソフトウェア キーを抽出してオンプレミスの HSM にインポートし、次にオンプレミスの HSM から Azure Information Protection HSM にキーを転送し、さらに Key Vault データを Azure Information Protection に転送して、最後に構成データを Azure Information Protection に転送します。|
-|NCipher 以外のサプライヤーのハードウェアセキュリティモジュール (HSM) を使用した HSM 保護 |お客様が管理 (BYOK)|この HSM から nCipher nShield ハードウェアセキュリティモジュール (HSM) にキーを転送する方法については、HSM のサプライヤーに問い合わせてください。 次に、この表の後**に、hsm で保護されているキーから hsm で保護されているキーへ**の移行手順を実行します。|
-|外部暗号プロバイダーを使用して保護されたパスワード|お客様が管理 (BYOK)|NCipher nShield ハードウェアセキュリティモジュール (HSM) にキーを転送する方法については、暗号化サービスプロバイダーの供給元にお問い合わせください。 次に、この表の後**に、hsm で保護されているキーから hsm で保護されているキーへ**の移行手順を実行します。|
+|AD RMS データベースでのパスワード保護|お客様が管理 (BYOK)|この表の後 **に、ソフトウェアで保護されているキーから HSM で保護されているキーへ** の移行に関する手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、一連の 4 つの手順を実行する必要があります。最初にソフトウェア キーを抽出してオンプレミスの HSM にインポートし、次にオンプレミスの HSM から Azure Information Protection HSM にキーを転送し、さらに Key Vault データを Azure Information Protection に転送して、最後に構成データを Azure Information Protection に転送します。|
+|NCipher 以外のサプライヤーのハードウェアセキュリティモジュール (HSM) を使用した HSM 保護 |お客様が管理 (BYOK)|この HSM から nCipher nShield ハードウェアセキュリティモジュール (HSM) にキーを転送する方法については、HSM のサプライヤーに問い合わせてください。 次に、この表の後 **に、hsm で保護されているキーから hsm で保護されているキーへ** の移行手順を実行します。|
+|外部暗号プロバイダーを使用して保護されたパスワード|お客様が管理 (BYOK)|NCipher nShield ハードウェアセキュリティモジュール (HSM) にキーを転送する方法については、暗号化サービスプロバイダーの供給元にお問い合わせください。 次に、この表の後 **に、hsm で保護されているキーから hsm で保護されているキーへ** の移行手順を実行します。|
+| | |
 
 エクスポートできない HSM で保護されたキーがある場合でも、読み取り専用モード用に AD RMS クラスターを構成することで、Azure Information Protection に移行できます。 このモードでは、以前に保護されたコンテンツを引き続き開くことはできますが、新たに保護されたコンテンツでは、ユーザー (BYOK) または Microsoft によって管理されている新しいテナント キーが使用されます。 詳細については、「[AD RMS から Azure RMS への移行がサポートされている Office の更新プログラムが利用可能になりました](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to)」を参照してください。
 
@@ -108,13 +111,13 @@ PowerShell セッションを開き、次のコマンドを実行します。
 
 1. Azure Rights Management サービスに接続し、メッセージが表示されたら、グローバル管理者の資格情報を指定します。
 
-    ```ps
+    ```PowerShell
     Connect-AipService
     ```
 
 2. Azure Rights Management サービスをアクティブにします。
 
-    ```ps
+    ```PowerShell
     Enable-AipService
     ```
 
@@ -122,7 +125,7 @@ PowerShell セッションを開き、次のコマンドを実行します。
 
 ## <a name="step-6-configure-imported-templates"></a>手順 6.  インポートされたテンプレートを構成する
 
-インポートしたテンプレートは **アーカイブ済み**という既定の状態なので、ユーザーが Azure Rights Management サービスでこれらのテンプレートを使用できるようにする場合は、この状態を **公開済み** に変更する必要があります。
+インポートしたテンプレートは **アーカイブ済み** という既定の状態なので、ユーザーが Azure Rights Management サービスでこれらのテンプレートを使用できるようにする場合は、この状態を **公開済み** に変更する必要があります。
 
 AD RMS からインポートしたテンプレートの外観と動作は、Azure Portal で作成するカスタム テンプレートと同じです。 インポートしたテンプレートを公開に変更し、ユーザーがアプリケーションからそれらを表示して選択できるようにする方法は、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
 
@@ -138,11 +141,11 @@ AD RMS からインポートしたテンプレートの外観と動作は、Azur
 
 ### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>移行前にカスタム テンプレートを作成した場合の手順
 
-Azure Rights Management サービスをアクティブ化する前でも後でも、移行前にカスタム テンプレートを作成した場合は、**公開済み**に設定してあっても、移行後にユーザーはテンプレートを使用できません。 ユーザーが使用できるようにするには、最初に次のようにする必要があります。
+Azure Rights Management サービスをアクティブ化する前でも後でも、移行前にカスタム テンプレートを作成した場合は、**公開済み** に設定してあっても、移行後にユーザーはテンプレートを使用できません。 ユーザーが使用できるようにするには、最初に次のようにする必要があります。
 
 1. [Get AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)を実行して、これらのテンプレートを特定し、テンプレート ID をメモしておきます。
 
-2. Azure RMS PowerShell コマンドレットの[export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)を使用して、テンプレートをエクスポートします。
+2. Azure RMS PowerShell コマンドレットの [export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)を使用して、テンプレートをエクスポートします。
 
 3. Azure RMS PowerShell コマンドレットを使用して、テンプレートをインポート[します。](/powershell/module/aipservice/import-aipservicetpd)
 
@@ -150,13 +153,13 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>AD RMS のテンプレートが **ANYONE** グループを使用していた場合の手順
 
-AD RMS のテンプレートで**任意**のグループが使用されている場合、Azure Information Protection 内の最も近いグループには**allstaff-7184AB3F-CCD1-46F3 3E09E9CF0E66@- \<tenant_name> onmicrosoft.com**という名前が付けられます。 たとえば、Contoso: の場合、このグループは次のようになり <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong> ます。 このグループは、Azure AD テナントからのすべてのユーザーを含んでいます。
+AD RMS のテンプレートで **任意** のグループが使用されている場合、Azure Information Protection 内の最も近いグループには **allstaff-7184AB3F-CCD1-46F3 3E09E9CF0E66@- \<tenant_name> onmicrosoft.com** という名前が付けられます。 たとえば、Contoso: の場合、このグループは次のようになり <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong> ます。 このグループは、Azure AD テナントからのすべてのユーザーを含んでいます。
 
-Azure Portal でテンプレートとラベルを管理する場合、このグループは、Azure AD でのテナントのドメイン名として表示されます。 たとえば、Contoso の場合、このグループは **contoso.onmicrosoft.com** のようになります。 このグループを追加するには、 **[ \<organization name> すべてのメンバー**を表示] オプションを選択します。
+Azure Portal でテンプレートとラベルを管理する場合、このグループは、Azure AD でのテナントのドメイン名として表示されます。 たとえば、Contoso の場合、このグループは **contoso.onmicrosoft.com** のようになります。 このグループを追加するには、 **[ \<organization name> すべてのメンバー** を表示] オプションを選択します。
 
-AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS ](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」 (Windows PowerShell を使用した AD RMS の管理) を参照してください。
+AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221079(v=ws.10))」 (Windows PowerShell を使用した AD RMS の管理) を参照してください。
 
-Azure Portal でテンプレートをラベルに変換すると、外部ユーザーをそれらのテンプレートに容易に追加できます。 次に、[**アクセス許可の追加**] ウィンドウで、[**詳細の入力**] を選択して、これらのユーザーの電子メールアドレスを手動で指定します。
+Azure Portal でテンプレートをラベルに変換すると、外部ユーザーをそれらのテンプレートに容易に追加できます。 次に、[ **アクセス許可の追加** ] ウィンドウで、[ **詳細の入力** ] を選択して、これらのユーザーの電子メールアドレスを手動で指定します。
 
 この構成の詳細については、「[Rights Management による保護を適用するようにラベルを構成する方法](./configure-policy-protection.md)」を参照してください。
 
@@ -164,9 +167,9 @@ Azure Portal でテンプレートをラベルに変換すると、外部ユー�
 
 このセクションに含まれるサンプル スクリプトを使用すると、前のセクションで説明したように、ANYONE グループが定義されている AD RMS テンプレートを識別できます。
 
-**免責事項:** このサンプル スクリプトは、Microsoft の標準サポート プログラムまたはサービスではサポートされません。 サンプル スクリプトは現状有姿で提供され、いかなる保証も行いません。
+**免責事項**: このサンプルスクリプトは、Microsoft の標準サポートプログラムまたはサービスではサポートされていません。 サンプル スクリプトは現状有姿で提供され、いかなる保証も行いません。
 
-```ps
+```PowerShell
 import-module adrmsadmin
 
 New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force

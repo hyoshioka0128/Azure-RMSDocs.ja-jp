@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 66453d343505cc57427e177eac258b83a2663eb0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: bd7a2b24b5eb80b3b17c025c43b0e0b31589a00a
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764437"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214543"
 ---
 # <a name="class-protectionhandlerobserver"></a>クラス ProtectionHandler:: オブザーバー 
 ProtectionHandler に関連する通知を受け取るインターフェイス。
@@ -20,8 +20,8 @@ ProtectionHandler に関連する通知を受け取るインターフェイス�
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public virtual void Oncreateprotectionハンドラ Success (const std:: shared_ptr\<protectionhandler\>& protectionhandler、const std:: shared_ptr\<void\>& context)  |  ProtectionHandler が正しく作成されると呼び出されます。
-パブリック仮想 void Oncreateprotectionハンドラ Failure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  ProtectionHandler の作成に失敗すると呼び出されます。
+public virtual void OnCreateProtectionHandlerSuccess(const std::shared_ptr\<ProtectionHandler\>& protectionHandler, const std::shared_ptr\<void\>& context)  |  ProtectionHandler が正しく作成されると呼び出されます。
+public virtual void OnCreateProtectionHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  ProtectionHandler の作成に失敗すると呼び出されます。
   
 ## <a name="members"></a>メンバー
   

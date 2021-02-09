@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 1b1dbbe146832773613124917c1ea6d43f5cf13a
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: d1ec599e486466a1e5016025d1c5e04ae09e64ee
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762367"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215240"
 ---
 # <a name="class-identity"></a>クラス Id 
 Id の抽象化。
@@ -62,7 +62,7 @@ Id コピーコンストラクター。
 電子メールを取得します。
 
   
-は、電子メールを**返し**ます。
+は、電子メールを **返し** ます。
   
 ### <a name="getname-function"></a>GetName 関数
 ユーザーのフレンドリ名を取得します。 テキストマークに使用されます。

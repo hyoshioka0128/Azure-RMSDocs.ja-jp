@@ -1,17 +1,17 @@
 ---
 title: File API - 電子メール .msg ファイルの処理 (C#)
-description: この記事では、MIP SDK File API を使用して .msg ファイルを処理する方法のシナリオについて説明します。
-author: Pathak-Aniket
+description: この記事は、MIP SDK ファイル API を使用して .msg ファイルを処理する方法 (C#) のシナリオを理解するうえで役立ちます。
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
-ms.author: v-anikep
-ms.openlocfilehash: 9dca0317e80f1b09331132988aad69bb5f259697
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.author: mbaldwin
+ms.openlocfilehash: da7679c1d736cb6d732c417c3c38b2fbfd46eff0
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135693"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865299"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>File API - 電子メール .msg ファイルの処理 (C#)
 

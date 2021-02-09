@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cf5950b37953dc32100e8ae2700b6111783cb612
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 10c5656328377a3ced0e24de22d957d016adf396
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762922"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211602"
 ---
 # <a name="class-fileprofile"></a>クラス FileProfile 
 FileProfile クラスは、Microsoft Information Protection 操作を使用するためのルート クラスです。
@@ -21,11 +21,11 @@ FileProfile クラスは、Microsoft Information Protection 操作を使用す�
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  プロファイル設定を返します。
-public std:: shared_ptr\<asynccontrol\> ListEnginesAsync (const std:: shared_ptr\<void\>& context)  |  エンジンの一覧操作を開始します。
-public std:: shared_ptr\<asynccontrol\> UnloadEngineAsync (const std:: string& id、const std:: shared_ptr\<void\>& context)  |  指定した ID を持つファイル エンジンのアンロードを開始します。
-public std:: shared_ptr\<asynccontrol\> AddEngineAsync (const Fileengine:: Settings& settings, const std:: shared_ptr\<void\>& context)  |  プロファイルへの新しいファイル エンジンの追加を開始します。
-public std:: shared_ptr\<asynccontrol\> DeleteEngineAsync (const std:: string& id、const std:: shared_ptr\<void\>& context)  |  指定した ID を持つファイル エンジンの削除を開始します。 指定したプロファイルのデータがすべて削除されます。
-public void AcquirePolicyAuthToken (クラウドクラウド、const std:: shared_ptr\<authdelegate\>& authdelegate) const  |  ポリシーの認証コールバックをトリガーします。
+public std:: shared_ptr \<AsyncControl\> ListEnginesAsync (const std:: shared_ptr \<void\>& context)  |  エンジンの一覧操作を開始します。
+public std:: shared_ptr \<AsyncControl\> UnloadEngineAsync (const std:: string& id、const std:: shared_ptr \<void\>& context)  |  指定した ID を持つファイル エンジンのアンロードを開始します。
+public std:: shared_ptr \<AsyncControl\> AddEngineAsync (Const FileEngine:: settings& settings, const std:: shared_ptr \<void\>& context)  |  プロファイルへの新しいファイル エンジンの追加を開始します。
+public std:: shared_ptr \<AsyncControl\> DeleteEngineAsync (const std:: string& id、const std:: shared_ptr \<void\>& context)  |  指定した ID を持つファイル エンジンの削除を開始します。 指定したプロファイルのデータがすべて削除されます。
+public void AcquirePolicyAuthToken (クラウドクラウド、const std:: shared_ptr \<AuthDelegate\>& authdelegate) const  |  ポリシーの認証コールバックをトリガーします。
   
 ## <a name="members"></a>メンバー
   

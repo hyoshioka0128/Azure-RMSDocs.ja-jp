@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection の別名
 description: Azure Information Protection は何度も名前が変更されており、以前の名前で知られている可能性があります。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,20 @@ ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 067e96c31c7bca2a098cbdf0f7b215c05bc4fa61
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
-ms.translationtype: MT
+ms.openlocfilehash: f503fff97fae5f9bce0551f67fddf11f7590ecac
+ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224616"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764052"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection の別名
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連する内容**: [AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)。*
 
-Azure Information Protection (AIP という略称で呼ばれることもある) は、権利管理保護を実装する、Microsoft の長い歴史を持つ確立されたテクノロジから進化したものです。 このような進化により、このソリューションは以前のいずれかの名前で知られている可能性があります。 また、ドキュメント、UI およびログ ファイルでは以前の名前が使用されている可能性もあります。 
+Azure Information Protection (AIP) は、権利管理保護を実装する、Microsoft の長い歴史を持つ確立されたテクノロジから進化したものです。 このような進化により、このソリューションは以前のいずれかの名前で知られている可能性があります。 また、ドキュメント、UI およびログ ファイルでは以前の名前が使用されている可能性もあります。 
 
 これらの名前のいくつかを次のセクションで示します。
 
@@ -58,7 +60,7 @@ Azure Information Protection (AIP という略称で呼ばれることもある)
     
     現在のオンプレミス バージョン (AD RMS) とクラウドベース バージョン (Azure RMS) をサポートするテクノロジを Office に実装したもの。 
 
-- **Rights Management オンライン**または **RMS オンライン**
+- **Rights Management オンライン** または **RMS オンライン**
     
     これは、クラウドベース バージョンの AD RMS に対して提案された初期の名前ですが、ログ ファイルやエラー メッセージでこの名前が表示される可能性があるためここに示しました。
 
@@ -68,10 +70,18 @@ Azure Information Protection (AIP という略称で呼ばれることもある)
 
 クラウドベースのソリューションを購入された場合は、置き換えられています。 Azure Information Protection では、組織のドキュメントや電子メールの分類およびラベル付けに関する新しい機能が提供されます。したがって、Rights Management による保護を適用できます。 
 
-ただし、Azure Rights Management は Azure Information Protection の保護テクノロジとして、このクラウドベースの Rights Management 保護を使用する Office 365 サービスで引き続き使用されます。 したがって、Azure Information Protection で使用される保護テクノロジのコンテキストの場合、"Azure Rights Management" (Azure RMS) は現在の名前のままです。
+ただし、Azure Rights Management は、Azure Information Protection、およびこのクラウドベースの Rights Management 保護を使用する Office 365 サービス用の保護テクノロジとして、引き続き使用されます。 したがって、Azure Information Protection で使用される保護テクノロジのコンテキストの場合、"Azure Rights Management" (Azure RMS) は現在の名前のままです。
 
 同様に、"Active Directory Rights Management Services" (AD RMS) は、オンプレミスの Rights Management 保護を提供する Windows Server サーバー役割については現在の名前のままです。 この保護テクノロジは Azure Information Protection で使用でき、オンプレミス キーで保護する必要がある、ごく一部のドキュメントや電子メールに適している場合があります。 このシナリオでは、AD RMS は多くの場合、"Hold Your Own Key" (HYOK) ソリューションと呼ばれます。
 
 ## <a name="how-to-evaluate-or-purchase-the-latest-version"></a>最新バージョンの評価または購入方法
 
 Azure Information Protection の購入および評価方法、またはサブスクリプション プラン別の異なる機能の詳細については、[Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) のサイトを参照してください。
+
+## <a name="next-steps"></a>次のステップ
+
+詳細については、次を参照してください。
+
+- [Azure Information Protection とは](what-is-information-protection.md)
+- [Azure Rights Management とは](what-is-azure-rms.md)
+- [Azure Information Protection の用語](terminology.md)

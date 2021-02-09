@@ -1,52 +1,52 @@
 ---
 title: Azure Information Protection クライアント - インストールと構成
 description: Windows コンピューターとモバイルデバイスに Azure Information Protection クライアントを展開する方法に関する管理者向けの情報。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3cdbbeb2b2cd81036c9d736d63fd467ea7770c2
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: d04867ede5c4d747517529b1845460697b4ed7eb
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046218"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559542"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-Office 2010 を実行しているコンピューターでは、Azure Information Protection サービスに対して認証を行うために、Azure Information Protection クライアント (クラシック) または Azure Information Protection 統合ラベルクライアントが必要です。
+AIP 統合ラベルクライアントは、ユーザーが Office リボンから直接ドキュメントに簡単にラベルを付けて保護できる Office アドインをインストールするため、すべての Windows コンピューターで推奨されます。 
 
-これらの2つのクライアントの違いがわからない場合は、  [Azure Information Protection クライアントと Azure Information Protection の統一されたラベル付けクライアントの違いを](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)ご覧ください。
+クライアントは次の機能も提供します。
 
-これらのクライアントは Office アドインをインストールするため、すべての Windows コンピューターにも推奨されます。これにより、ユーザーは Office リボンから直接ドキュメントや電子メールに簡単にラベルを付けて保護することができます。 また、これらのクライアントは、保護サービス (Azure Rights Management) によってネイティブでサポートされていないファイルの種類のラベル付けと保護、および Office アプリで開くことができない保護されたファイルのビューアーを提供します。 IOS と Android にも同様のビューアーがあります。
+- 組み込みの保護サービス (Azure Rights Management) でサポートされていないファイルの種類のラベル付けと保護。
+- Office アプリで開くことができない保護されたファイルのビューアー。 IOS と Android にも同様のビューアーがあります。
+- 保護されたファイルへのアクセスを追跡および取り消すための機能。
 
-また、クラシッククライアントでは、ユーザーが保護したファイルを追跡および取り消すためのドキュメント追跡サイトもサポートしています。
-
+Office 2010 を実行しているコンピューターでは、Azure Information Protection クライアントが Azure Information Protection サービスに対して認証を行う必要があります。 Office 2010 の拡張サポートは、2020年10月13日に終了したことに注意してください。 詳細については、「 [AIP and Legacy Windows And Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions)」を参照してください。
 ## <a name="the-azure-information-protection-client-for-windows-installation-and-configuration"></a>Windows 用 Azure Information Protection クライアント: インストールと構成
 
-Windows 用のクライアントのエンタープライズインストールおよび構成については、次の管理者ガイドを参照してください。
+Windows 用のクライアントのエンタープライズインストールおよび構成については、 [Azure Information Protection 統合されたラベル付けクライアント管理者ガイド](./rms-client/clientv2-admin-guide.md)を参照してください。
 
-- 統一されたラベル付けクライアント: Azure Information Protection 統合された[クライアント管理者ガイド](./rms-client/clientv2-admin-guide.md)] (./rms-client/client-admin-guide.md)
+これらのクライアントを1台のコンピューターに簡単にインストールしてテストする場合は、「 [Azure Information Protection の統合ラベル付けクライアントをダウンロードしてインストール](./rms-client/install-unifiedlabelingclient-app.md)する」を参照してください。
 
-- 従来のクライアント: [Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)
+**従来のクライアントのみ**: クラシッククライアントがインストールされている場合は、代わりに次のリンクを使用します。
 
-ただし、これらのクライアントを1台のコンピューターに簡単にインストールしてテストする場合は、ユーザーガイドの次の手順を参照してください。
-
-- 統一されたラベル付けクライアント: [Azure Information Protection 統合されたラベル付けクライアントをダウンロードしてインストール](./rms-client/install-unifiedlabelingclient-app.md)します。
-
-- 従来のクライアント: [Azure Information Protection クライアントユーザーガイド](./rms-client/client-user-guide.md)から[Azure Information Protection クライアントをダウンロードしてインストール](./rms-client/install-client-app.md)します。
+- [Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)
+- [Azure Information Protection クライアントをダウンロードしてインストール](./rms-client/install-client-app.md)します。
 
 ## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>IOS および Android 用の Azure Information Protection アプリ: インストールと管理
 
@@ -59,25 +59,25 @@ IOS および Android 用の Azure Information Protection アプリビューア�
 
 Azure Information Protection viewer アプリは Microsoft Intune アプリソフトウェア開発キットを使用するため、iOS デバイスと Android デバイスが Intune に登録されている場合は、次のデバイス用の Azure Information Protection ビューアーアプリを展開して管理できます。
 
-1. [Intune に Azure Information Protection アプリを追加する](/intune/apps-add)
+1. [Intune に Azure Information Protection アプリを追加する](/intune/apps/apps-add)
 
 2. 次のオプションの一方または両方を実行します。
 
-    - アプリを[ユーザーに割り当てて](/intune/apps-deploy)デプロイする
+    - アプリを[ユーザーに割り当てて](/intune/apps/apps-deploy)デプロイする
 
-    - [アプリ保護ポリシー](/intune/app-protection-policies)を使用してアプリを管理する
+    - [アプリ保護ポリシー](/intune/apps/app-protection-policies)を使用してアプリを管理する
 
 Azure Information Protection アプリを Intune に追加するときの追加情報:
 
 - IOS の場合: Intune からアプリを検索して追加します。
 
-- Android の場合: アプリを追加するときに、次の**Appstore URL**を使用します。
+- Android の場合: アプリを追加するときに、次の **Appstore URL** を使用します。
 
     ```md
     https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
     ```
 
-Android デバイス用のアプリ保護ポリシーに対して Azure Information Protection アプリを構成すると、保護されたテキスト、イメージ、および PDF ドキュメントを開くだけでなく、このアプリではオーディオ ファイルとビデオ ファイルを開くこともできます。 詳細については、「[Azure Information Protection アプリでメディア ファイルを表示する](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app)」を参照してください。
+Android デバイス用のアプリ保護ポリシーに対して Azure Information Protection アプリを構成すると、保護されたテキスト、イメージ、および PDF ドキュメントを開くだけでなく、このアプリではオーディオ ファイルとビデオ ファイルを開くこともできます。 詳細については、「[Azure Information Protection アプリでメディア ファイルを表示する](/intune/fundamentals/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

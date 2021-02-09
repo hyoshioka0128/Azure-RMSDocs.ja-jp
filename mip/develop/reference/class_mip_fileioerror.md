@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 97b805ad36833e1eff9c845d1dd662b1e5b80c96
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: a1d1d31901eab5bdb31cc5690f4fa207b06e2834
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762879"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215444"
 ---
 # <a name="class-fileioerror"></a>FileIOError クラス 
 ファイル IO エラー。

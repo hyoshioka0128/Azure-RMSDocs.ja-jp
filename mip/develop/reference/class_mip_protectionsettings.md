@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 640963295ec3809aa6478a1c04c5f43f04a5d3b5
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 965cd5f152eff01cbd975e8ac60edd820a8d68ed
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763879"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214339"
 ---
 # <a name="class-protectionsettings"></a>クラス ProtectionSettings 
 SetLabel メソッドの保護オプションを構成するためのインターフェイスです。

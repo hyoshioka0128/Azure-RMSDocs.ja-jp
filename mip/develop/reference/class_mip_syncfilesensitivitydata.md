@@ -5,20 +5,20 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 2a9b5c66b4e40ee8fb412323aa57db8713d9361e
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 4b973bc418c5a412d58af1cb0cdd940e54b8eedc
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764304"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214237"
 ---
 # <a name="class-syncfilesensitivitydata"></a>SyncFileSensitivityData クラス 
   
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: vector\<std:: shared_ptr\<SensitivityTypesRulePackage\> \>& GetSensitivityTypesRulePackages () const  | _まだ文書化されていません。_
+public const std:: vector \<std::shared_ptr\<SensitivityTypesRulePackage\> \>& GetSensitivityTypesRulePackages () const  | _まだ文書化されていません。_
 パブリック仮想 ~ SyncFileSensitivityData ()  | _まだ文書化されていません。_
 public const std:: string& GetFileId () const  | _まだ文書化されていません。_
 public const std:: string& GetTenantId () const  | _まだ文書化されていません。_

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 18c3c66fe10ce9291a936a3e754923d36f3d1df0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 0e9c13e1609b6ea5fa2033d5d27c47d76a1acb43
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761417"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213574"
 ---
 # <a name="class-nopermissionserror"></a>NoPermissionsError クラス 
 ユーザーがコンテンツにアクセスできませんでした。 例: アクセス許可がない、コンテンツが取り消された。
@@ -28,10 +28,10 @@ public std::string GetOwner() const  |  ドキュメントの所有者を取得�
 ドキュメントに対する権限がない場合に、連絡先を取得します。
 
   
-は、ドキュメントに対する権限がない場合の連絡先を**返し**ます。
+は、ドキュメントに対する権限がない場合の連絡先を **返し** ます。
   
 ### <a name="getowner-function"></a>GetOwner 関数
 ドキュメントの所有者を取得します。
 
   
-**返さ**れる: ドキュメント所有者
+**返さ** れる: ドキュメント所有者

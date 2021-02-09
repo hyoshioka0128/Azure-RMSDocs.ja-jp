@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: fe04fd0303d5f5717690206760125932826f4708
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 77b94fdd79334b842cc2ad1f19cf9a17ddc04439
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763172"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211500"
 ---
 # <a name="class-filehandler"></a>クラス FileHandler 
 すべてのファイル処理関数のインターフェイス。
@@ -19,20 +19,23 @@ ms.locfileid: "81763172"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<contentlabel\> getlabel ()  |  ファイルからの機密ラベルの取得を開始します。
-public std:: shared_ptr\<protectionhandler\> getprotection ()  |  ファイルからの保護ポリシーの取得を開始します。
-public void Classid (const std:: shared_ptr\<void\>& context)  |  ハンドラーで規則を実行し、実行するアクションの一覧を返します。
-public void InspectAsync (const std:: shared_ptr\<void\>& context)  |  互換性のあるファイル形式からファイルの内容を取得するために使用するファイルインスペクタオブジェクトを作成します。
-public void SetLabel (const std:: shared_ptr\<label\>& Label、const labelingOptions& Labelingoptions、Const protectionsettings& protectionsettings)  |  機密ラベルをファイルに設定します。
+public std:: shared_ptr \<ContentLabel\> getlabel ()  |  ファイルからの機密ラベルの取得を開始します。
+public std:: vector \<std::pair\<std::string, std::string\> \> GetProperties (uint32_t version)  |  Retrievs は、バージョンに応じてファイルを適切に試行します。
+public std:: shared_ptr \<ProtectionHandler\> getprotection ()  |  ファイルからの保護ポリシーの取得を開始します。
+public void RegisterContentForTrackingAndRevocationAsync (bool isOwnerNotificationEnabled, const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー, const std:: shared_ptr \<void\>& context)  |  # # # # パラメーター
+public void RevokeContentAsync (const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー、const std:: shared_ptr \<void\>& context)  |  コンテンツの失効を実行します。
+public void Classid (const std:: shared_ptr \<void\>& context)  |  ハンドラーで規則を実行し、実行するアクションの一覧を返します。
+public void InspectAsync (const std:: shared_ptr \<void\>& context)  |  互換性のあるファイル形式からファイルの内容を取得するために使用するファイルインスペクタオブジェクトを作成します。
+public void SetLabel (const std:: shared_ptr \<Label\>& label、Const labelingoptions& labelingoptions、Const protectionsettings& protectionsettings)  |  機密ラベルをファイルに設定します。
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  ファイルから機密ラベルを削除します。
-public void SetProtection (const std:: shared_ptr\<protectiondescriptor\>& Protectiondescriptor、Const protectiondescriptor& protectiondescriptor)  |  カスタムまたはテンプレート ベースのアクセス許可 (protectionDescriptor->GetProtectionType に従う) のいずれかをファイルに設定します。
-public void SetProtection (const std:: shared_ptr\<protectionhandler\>& protectionhandler)  |  既存の保護ハンドラーを使用して、ドキュメントの保護を設定します。
+public void SetProtection (const std:: shared_ptr \<ProtectionDescriptor\>& protectiondescriptor、Const protectiondescriptor& protectiondescriptor)  |  カスタムまたはテンプレート ベースのアクセス許可 (protectionDescriptor->GetProtectionType に従う) のいずれかをファイルに設定します。
+public void SetProtection (const std:: shared_ptr \<ProtectionHandler\>& protectionhandler)  |  既存の保護ハンドラーを使用して、ドキュメントの保護を設定します。
 public void RemoveProtection()  |  ファイルから保護を削除します。 元のファイル形式でラベル付けがサポートされていない場合、保護が解除されるとラベルは失われます。 ネイティブ形式でラベル付けがサポートされている場合は、ラベルのメタデータが保持されます。
-public void CommitAsync (const std:: string& outputFilePath、const std:: shared_ptr\<void\>& context) | \|outputFilePath\ で指定されたファイルに変更を書き込みます。 |  %2!d! です。
-public void CommitAsync (const std:: shared_ptr\<Stream\>& outputstream、const std:: shared_ptr\<void\>& context) | \|outputStream\ で指定されたストリームに変更を書き込みます。 |  %2!d! です。
+public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | \|outputFilePath\ で指定されたファイルに変更を書き込みます。 |  %2!d! です。
+public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | \|outputStream\ で指定されたストリームに変更を書き込みます。 |  %2!d! です。
 public bool IsModified ()  |  ファイルにコミットする変更があるかどうかを確認します。
-public void GetDecryptedTemporaryFileAsync (const std:: shared_ptr\<void\>& context)  |  復号化されたコンテンツを表す一時ファイル (可能であれば削除される) へのパスを返します。
-public void GetDecryptedTemporaryStreamAsync (const std:: shared_ptr\<void\>& context)  |  復号化されたコンテンツを表すストリームを返します。
+public void GetDecryptedTemporaryFileAsync (const std:: shared_ptr \<void\>& context)  |  復号化されたコンテンツを表す一時ファイル (可能であれば削除される) へのパスを返します。
+public void GetDecryptedTemporaryStreamAsync (const std:: shared_ptr \<void\>& context)  |  復号化されたコンテンツを表すストリームを返します。
 public void NotifyCommitSuccessful (const std:: string& actualFilePath)  |  変更がディスクにコミットされたときに、呼び出されます。
 public std::string GetOutputFileName()  |  元のファイル名および累積された変更に基づいて出力ファイル名と拡張子を計算します。
   
@@ -41,8 +44,41 @@ public std::string GetOutputFileName()  |  元のファイル名および累積�
 ### <a name="getlabel-function"></a>GetLabel 関数
 ファイルからの機密ラベルの取得を開始します。
   
+### <a name="getproperties-function"></a>GetProperties 関数
+Retrievs は、バージョンに応じてファイルを適切に試行します。
+  
 ### <a name="getprotection-function"></a>GetProtection 関数
 ファイルからの保護ポリシーの取得を開始します。
+  
+### <a name="registercontentfortrackingandrevocationasync-function"></a>RegisterContentForTrackingAndRevocationAsync 関数
+
+パラメーター:  
+* **isOwnerNotificationEnabled**: ドキュメントの暗号化が解除されるたびに電子メールで所有者に通知する場合は true に設定し、通知を送信しない場合は false に設定します。 
+
+
+* **observer**: ProtectionHandler::Observer インターフェイスを実装するクラス 
+
+
+* **コンテキスト**: オブザーバーおよびオプションの httpdelegate に不透明に転送されるクライアントコンテキスト
+
+
+
+  
+**戻り値**: Async control オブジェクト。
+  
+### <a name="revokecontentasync-function"></a>RevokeContentAsync 関数
+コンテンツの失効を実行します。
+
+パラメーター:  
+* **observer**: ProtectionHandler::Observer インターフェイスを実装するクラス 
+
+
+* **コンテキスト**: オブザーバーおよびオプションの httpdelegate に不透明に転送されるクライアントコンテキスト
+
+
+
+  
+**戻り値**: Async control オブジェクト。
   
 ### <a name="classifyasync-function"></a>Classid 関数の非同期関数
 ハンドラーで規則を実行し、実行するアクションの一覧を返します。
@@ -54,11 +90,11 @@ public std::string GetOutputFileName()  |  元のファイル名および累積�
 互換性のあるファイル形式からファイルの内容を取得するために使用するファイルインスペクタオブジェクトを作成します。
 
   
-は、ファイルインスペクターを**返し**ます。
+は、ファイルインスペクターを **返し** ます。
   
 ### <a name="setlabel-function"></a>SetLabel 関数
 機密ラベルをファイルに設定します。
-CommitAsync が呼び出されるまで、変更はファイルに書き込まれません。 Privileged および Auto メソッドでは、既存のラベルを API でオーバーライドできます。ラベルの設定に labelingOptions パラメーターを介して正当性を示す操作が必要な場合は、[JustificationRequiredError](class_mip_justificationrequirederror.md) をスローします。
+CommitAsync が呼び出されるまで、変更はファイルに書き込まれません。 Privileged および Auto メソッドでは、既存のラベルを API でオーバーライドできます。ラベルの設定に labelingOptions パラメーターを介して正当性を示す操作が必要な場合は、JustificationRequiredError をスローします。
   
 ### <a name="deletelabel-function"></a>DeleteLabel 関数
 ファイルから機密ラベルを削除します。

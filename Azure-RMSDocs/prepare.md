@@ -1,9 +1,9 @@
 ---
 title: Azure Information Protection 向けのユーザーとグループの準備
 description: 組織の文書やメールを分類、ラベル付け、保護する前に、必要なユーザー アカウントとグループ アカウントが揃っていることを確認します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,16 +12,18 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 880e3b8acd3d17bcb3aec424e3aef96c2aeadbaf
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 5f63b23bd6f4e6fdf1198d12e235991f4a692495
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048308"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809369"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 組織に Azure Information Protection を展開する前に、組織のテナントに対し、Azure AD にユーザーとグループのアカウントが用意されていることを確認してください。
 
@@ -73,15 +75,15 @@ Azure Information Protection でユーザーとグループを使用するため
 
 - ユーザーに権限を与えるために、Azure AD では、**proxyAddresses** と **userPrincipalName** という 2 つの属性が利用されます。
 
-- **Azure AD proxyAddresses** 属性は、あるアカウントのすべてのメール アドレスを保存します。さまざまな方法で反映できます。 たとえば、Office 365 のユーザーに Exchange Online メールボックスが与えられている場合、この属性に保存されているメール アドレスが自動的に与えられます。 Office 365 ユーザーの代替メール アドレスを割り当てると、それもこの属性に保存されます。 オンプレミス アカウントから同期しているメール アドレスでも反映できます。 
+- **Azure AD proxyAddresses** 属性は、あるアカウントのすべてのメール アドレスを保存します。さまざまな方法で反映できます。 たとえば、Exchange Online メールボックスを持つ Microsoft 365 のユーザーには、この属性に格納されている電子メールアドレスが自動的に設定されます。 Microsoft 365 ユーザーの代替電子メールアドレスを割り当てると、その電子メールアドレスもこの属性に保存されます。 オンプレミス アカウントから同期しているメール アドレスでも反映できます。 
 
     Azure Information Protection は、ドメインがテナントに追加されていれば ("検証済みドメイン")、この Azure AD proxyAddresses 属性のあらゆる値を利用できます。 ドメイン検証の詳細については、次をご覧ください。
 
     - Azure AD の場合: [カスタム ドメイン名を Azure Active Directory に追加する](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Office 365 の場合: [office 365 にドメインを追加する](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Office 365 の場合: [office 365 にドメインを追加する](/office365/admin/setup/add-domain)
 
-- **Azure AD userPrincipalName** 属性は、テナントのアカウントの Azure AD proxyAddresses 属性に値がないときにのみ利用されます。 たとえば、Azure Portal でユーザーを作成するか、メールボックスを持たない Office 365 ユーザーを作成します。
+- **Azure AD userPrincipalName** 属性は、テナントのアカウントの Azure AD proxyAddresses 属性に値がないときにのみ利用されます。 たとえば、Azure portal でユーザーを作成したり、メールボックスを持たない Microsoft 365 のユーザーを作成したりすることができます。
 
 ### <a name="assigning-usage-rights-and-access-controls-to-external-users"></a>使用権限とアクセス制御を外部ユーザーに割り当てる
 
@@ -99,7 +101,7 @@ Azure Information Protection でユーザーとグループを使用するため
 
 - 追加ラベルをグループ メンバーに割り当てるスコープ付きポリシーを構成するには、ユーザーのテナントに対してドメインが検証されているメール アドレスが与えられたあらゆる種類の Azure AD グループを利用できます。 メール アドレスが与えられているグループはしばしば、メールが有効なグループと呼ばれています。
 
-    たとえば、メールが有効なセキュリティ グループ、静的な配布グループ、Office 365 グループを使用できます。 セキュリティ グループ (動的または静的) は利用できません。この種類のグループにはメール アドレスが与えられていないためです。 Exchange Online からの動的配布リストも使用できません。このグループは Azure AD にレプリケートされないためです。
+    たとえば、メールが有効なセキュリティグループ、静的な配布グループ、および Microsoft 365 グループを使用できます。 セキュリティ グループ (動的または静的) は利用できません。この種類のグループにはメール アドレスが与えられていないためです。 Exchange Online からの動的配布リストも使用できません。このグループは Azure AD にレプリケートされないためです。
 
 使用権限とアクセス制御を割り当てる:
 
@@ -127,7 +129,7 @@ Azure Rights Management の属性一覧から、ユーザーの場合、**mail**
 
 Azure AD PowerShell を利用し、ユーザーとグループを Azure Information Protection で利用できることを確認できます。 また、PowerShell を利用し、承認に利用できる値を確認できます。 
 
-たとえば、PowerShell セッションで Azure Active Directory 向け V1 PowerShell モジュール、[MSOnline](/powershell/module/msonline/?view=azureadps-1.0) を利用し、最初にサービスに接続し、グローバル管理者の資格情報を入力します。
+たとえば、PowerShell セッションで Azure Active Directory 向け V1 PowerShell モジュール、[MSOnline](/powershell/module/msonline/) を利用し、最初にサービスに接続し、グローバル管理者の資格情報を入力します。
 
 ```ps
 Connect-MsolService
@@ -155,7 +157,7 @@ Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
 
 **ProxyAddresses** 列にデータが入力されていない場合、**UserPrincipalName** is の値を利用してユーザーに Azure Rights Management サービスの権限が与えられます。
 
-次に例を示します。
+以下に例を示します。
 
 
 |  表示名   |     UserPrincipalName      |                            ProxyAddresses                             |
@@ -177,7 +179,7 @@ Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
 
 2. UPN がルーティング可能でない場合 (など <strong>ankurroy@contoso.local</strong> ) は、ユーザーの代替ログイン ID を構成し、この代替ログインを使用して Office にサインインする方法を指示します。 Office のレジストリ キーを設定する必要もあります。
 
-    詳細については、「[代替ログイン ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)と Office アプリケーションの構成」を参照して、 [SharePoint、OneDrive、および Lync Online への資格情報を定期的に確認](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online)してください。
+    詳細については、「 [代替ログイン ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) と Office アプリケーションの構成」を参照して、 [SharePoint、OneDrive、および Lync Online への資格情報を定期的に確認](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online)してください。
 
 > [!TIP]
 > Export-Csv コマンドレットを利用し、結果をスプレッドシートにエクスポートできます。検索やインポートのための一括編集などで管理が簡単になります。
@@ -194,7 +196,7 @@ Get-MsolGroup | select DisplayName, ProxyAddresses
 
 Azure Information Protection で使用するグループが表示されていることを確認します。 表示されているグループについては、**ProxyAddresses** 列のメール アドレスを利用し、Azure Rights Management サービスのためにグループ メンバーに承認できます。
 
-次に、Azure Information Protection で使用するユーザー (または、その他のグループ) がグループに含まれていることを確認します。 PowerShell を利用してこれを実行できます ([Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0) など)。あるいは、管理ポータルを利用できます。
+次に、Azure Information Protection で使用するユーザー (または、その他のグループ) がグループに含まれていることを確認します。 PowerShell を利用してこれを実行できます ([Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember) など)。あるいは、管理ポータルを利用できます。
 
 セキュリティ グループを利用する 2 つの Azure Rights Management サービス構成シナリオについては、次の PowerShell コマンドを利用し、それらのグループの識別に利用できるオブジェクト ID と表示名を見つけることができます。 Azure Portal を利用してこれらのグループを見つけ、オブジェクト ID と表示名の値をコピーすることもできます。
 

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 1ebc548d04f82e78a1ba7d5cef0c54d10b6ba91d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 6527ebcade57088db51f46d25321f0783b56b878
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761925"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213795"
 ---
 # <a name="class-labelingoptions"></a>クラス LabelingOptions 
 SetLabel/DeleteLabel メソッドのラベル付けオプションを構成するためのインターフェイス。
@@ -23,9 +23,9 @@ public LabelingOptions (メソッドの設定)  | _まだ文書化されてい�
 public AssignmentMethod GetAssignmentMethod() const  | _まだ文書化されていません。_
 public bool IsDowngradeJustified() const  | _まだ文書化されていません。_
 public const std::string& GetJustificationMessage() const  | _まだ文書化されていません。_
-public const std:: vector\<std::p air\<std:: string、std:: string\> \>& getextendedproperties () const  | _まだ文書化されていません。_
+public const std:: vector \<std::pair\<std::string, std::string\> \>& getextendedproperties () const  | _まだ文書化されていません。_
 public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _まだ文書化されていません。_
-public void SetExtendedProperties (const std:: vector\<std::p air\<std:: string, std:: string\> \>& extendedproperties)  | _まだ文書化されていません。_
+public void SetExtendedProperties (const std:: vector \<std::pair\<std::string, std::string\> \>& extendedproperties)  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   

@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: c9ab006606e8895b80231a793b9d1714829195d1
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 94adb1fc22abd38376352f5a1a135e6f28f82a9c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763471"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211823"
 ---
 # <a name="class-computeenginecontext"></a>ComputeEngineContext クラス 
   

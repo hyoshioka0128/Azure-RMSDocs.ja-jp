@@ -5,29 +5,29 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5a992c81b4d32a876f5f047a98b229aace7cb075
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 56b4bf62af04b3b84c5ed291ce9ccb0fa0d3ee28
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763270"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215427"
 ---
 # <a name="class-fileenginesettings"></a>クラス FileEngine:: Settings 
   
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: string& engineId、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための FileEngine::Settings コンストラクター。
-パブリック設定 (const Id& id、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための FileProfile::Settings コンストラクター。
+パブリック設定 (const std:: string& engineId、const std:: shared_ptr \<AuthDelegate\>& authDelegate、const std:: string& clientData、const std:: string& locale、Bool loadSensitivityTypes)  |  既存のエンジンを読み込むための FileEngine::Settings コンストラクター。
+パブリック設定 (const Id& id、const std:: shared_ptr \<AuthDelegate\>& authDelegate、const std:: string& clientData、const std:: string& locale、Bool loadSensitivityTypes)  |  新しいエンジンを作成するための FileProfile::Settings コンストラクター。
 public const std::string& GetEngineId() const  |  エンジン ID を返します。
 public void SetEngineId(const std::string& id)  |  エンジン ID を設定します。
 public const Identity& GetIdentity() const  |  エンジン ID を返します。
 public void SetIdentity(const Identity& identity)  |  エンジン ID を設定します。
 public const std::string& GetClientData() const  |  エンジンのクライアント データを返します。
 public const std::string& GetLocale() const  |  エンジンのロケールを返します。
-public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\> \>& 値)  |  テストや実験に使用する名前と値のペアの一覧を設定します。
-public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  テストや実験に使用する名前と値のペアの一覧を取得します。
+public void SetCustomSettings (const std:: vector \<std::pair\<std::string, std::string\> \>& value)  |  テストや実験に使用する名前と値のペアの一覧を設定します。
+public const std:: vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  テストや実験に使用する名前と値のペアの一覧を取得します。
 public void SetSessionId(const std::string& sessionId)  |  エンジンのセッション ID を設定します。
 public const std::string& GetSessionId() const  |  エンジンのセッション ID を返します。
 パブリック void SetCloud (クラウドクラウド)  |  必要に応じて、ターゲットクラウドを設定します。
@@ -43,10 +43,12 @@ public void EnablePFile (bool 値)  |  が PFiles を生成するかどうかを
 public const bool IsPFileEnabled ()  |  が PFiles を生成するかどうかを示すフラグを取得します。
 public void SetDelegatedUserEmail (const std:: string& delegatedUserEmail)  |  委任されたユーザーを設定します。
 public const std:: string& GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
-public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelfilter)  |  ラベルフィルターを設定します。
-public const std:: vector\<LabelFilterType\>& getlabelfilter () const  |  ラベルフィルターを取得します。
-public void SetAuthDelegate (const std:: shared_ptr\<authdelegate\>& authdelegate)  |  エンジン認証デリゲートを設定します。
-public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジン認証デリゲートを取得します。
+public void SetLabelFilter (const std:: vector \<LabelFilterType\>& deprecatedLabelFilters)  |  ラベルフィルターを設定します。
+public const std:: vector \<LabelFilterType\>& getlabelfilter () const  |  非推奨の関数 SetLabelFilter によって設定されたラベルフィルターを取得します。
+public void ConfigureFunctionality (FunctionalityFilterType functionalityFilterType, bool enabled)  |  機能を有効または無効にします。
+public const std:: map \<FunctionalityFilterType, bool\>& GetConfiguredFunctionality () const  |  構成済みの機能を取得します。
+public void SetAuthDelegate (const std:: shared_ptr \<AuthDelegate\>& authdelegate)  |  エンジン認証デリゲートを設定します。
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  エンジン認証デリゲートを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -153,7 +155,7 @@ public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジ�
 保護クラウドエンドポイントのベース url を取得します。
 
   
-**戻り**値: 保護エンドポイントに関連付けられているベース url この値は読み取り専用で、Cloud = Custom に設定する必要があります
+**戻り** 値: 保護エンドポイントに関連付けられているベース url この値は読み取り専用で、Cloud = Custom に設定する必要があります
   
 ### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl 関数
 カスタムクラウドのポリシークラウドエンドポイントベース URL を設定します。
@@ -179,7 +181,7 @@ public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジ�
 読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 
   
-が**返さ**れます。有効な場合は True、それ以外の場合は false です。
+が **返さ** れます。有効な場合は True、それ以外の場合は false です。
   
 ### <a name="enablepfile-function"></a>EnablePFile 関数
 が PFiles を生成するかどうかを示すフラグを設定します。
@@ -188,7 +190,7 @@ public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジ�
 が PFiles を生成するかどうかを示すフラグを取得します。
 
   
-が**返さ**れます。有効な場合は True、それ以外の場合は false です。
+が **返さ** れます。有効な場合は True、それ以外の場合は false です。
   
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
 委任されたユーザーを設定します。
@@ -215,11 +217,29 @@ public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジ�
 ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。 HyokProtection と DoubleKeyProtection が設定されていない場合は、フィルター処理されます。
   
 ### <a name="getlabelfilter-function"></a>GetLabelFilter 関数
-ラベルフィルターを取得します。
+非推奨の関数 SetLabelFilter によって設定されたラベルフィルターを取得します。
 
   
 **戻り値**: ラベルフィルター。
 ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。
+  
+### <a name="configurefunctionality-function"></a>ConfigureFunctionality 関数
+機能を有効または無効にします。
+
+パラメーター:  
+* **functionalityFilterType**: 機能の種類。 
+
+
+* **enabled**: 有効にする場合は True、無効にする場合は false
+
+
+HyokProtection、DoubleKeyProtection、DoubleKeyUserDefinedProtection は既定で無効になっているため、有効にする必要があります。
+  
+### <a name="getconfiguredfunctionality-function"></a>GetConfiguredFunctionality 関数
+構成済みの機能を取得します。
+
+  
+**戻り** 値: 型が有効になっているかどうかを示すブール値へのマップ。
   
 ### <a name="setauthdelegate-function"></a>SetAuthDelegate 関数
 エンジン認証デリゲートを設定します。

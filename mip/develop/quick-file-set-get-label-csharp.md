@@ -1,6 +1,6 @@
 ---
 title: クイック スタート - C# MIP SDK を使用したファイルの機密ラベルの設定と取得
-description: Microsoft Information Protection SDK .NET ラッパーを使用して、ファイルの機密ラベルを設定および取得する方法を説明するクイック スタート。
+description: Microsoft Information Protection SDK .NET ラッパーを使用して、ファイルの秘密度ラベルを設定および取得する方法について説明するクイック スタート (C#)
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
@@ -8,12 +8,12 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: dc26f9c1f75157d81b160790e53bc27fd2c2b059
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: aaa7857146bc2dbc806e20097657831445e48949
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972171"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659036"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート:機密ラベルの設定と取得 (C#)
 
@@ -30,7 +30,7 @@ ms.locfileid: "82972171"
 
 ファイル エンジン オブジェクトを使用し、ファイルに機密ラベルを設定および取得するためのロジックを追加します。
 
-1. **ソリューション エクスプローラー**を使用して、Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+1. **ソリューション エクスプローラー** を使用して、Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 2. `Main()` 本文の末尾の `Console.ReadKey()` の下の `}` の上 (前のクイック スタートが終わった場所) に次のコードを挿入します。
 
@@ -93,7 +93,7 @@ ms.locfileid: "82972171"
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
-2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインが求められることはなく、ラベルの一覧と、適用されたラベルおよび修正されたファイルに関する情報が表示されます。
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる *場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインが求められることはなく、ラベルの一覧と、適用されたラベルおよび修正されたファイルに関する情報が表示されます。
 
   ```console
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6

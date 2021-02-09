@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 95eb7c523e7e627aff767169b9d35479839ac72d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 726c61d1b73389bfdc10afb961177659e5a137d4
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762199"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213897"
 ---
 # <a name="class-label"></a>クラスラベル 
 単一の Microsoft Information Protection ラベルの抽象化。
@@ -27,10 +27,11 @@ public int GetSensitivity() const  |  ラベルの秘密度を取得します。
 public const std::string& GetTooltip() const  |  ラベルのヒントの説明を取得します。
 public const std:: string& GetAutoTooltip () const  |  このラベルが適用される分類のツールヒントの説明を取得します。
 public bool IsActive() const  |  ラベルがアクティブかどうかを示すブール値を取得します。
-public std:: weak_ptr\<Label\> GetParent () const  |  親ラベルを取得します。
-public const std:: vector\<std:: shared_ptr\<Label\> \>& getchildren () const  |  現在のラベルの子ラベルを取得します。
-public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  ラベルのカスタム設定を取得します。
+public std::weak_ptr\<Label\> GetParent() const  |  親ラベルを取得します。
+public const std:: vector \<std::shared_ptr\<Label\> \>& getchildren () const  |  現在のラベルの子ラベルを取得します。
+public const std:: vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  ラベルのカスタム設定を取得します。
 public ActionSource GetActionSource() const  |  ラベルのアクションソースを取得します。
+public const std:: vector \<std::string\>& getcontentformats () const  |  コンテンツタイプを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -99,10 +100,16 @@ public ActionSource GetActionSource() const  |  ラベルのアクションソ�
 ラベルのカスタム設定を取得します。
 
   
-**戻り**値: カスタム設定を表すキーと値のペアのベクター。
+**戻り** 値: カスタム設定を表すキーと値のペアのベクター。
   
 ### <a name="getactionsource-function"></a>GetActionSource 関数
 ラベルのアクションソースを取得します。
 
   
 **戻り値**: アクションソース
+  
+### <a name="getcontentformats-function"></a>GetContentFormats 関数
+コンテンツタイプを取得します。
+
+  
+<Returns>

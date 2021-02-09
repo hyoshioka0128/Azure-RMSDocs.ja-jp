@@ -1,23 +1,23 @@
 ---
 title: MIP SDK での再パブリッシュ
-description: この記事は、再パブリッシュのシナリオで保護ハンドラーを再利用する方法のシナリオを理解するのに役立ちます。
-author: Pathak-Aniket
+description: この記事は、シナリオの再発行に保護ハンドラーを再利用する方法のシナリオを理解するうえで役立ちます。
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.author: v-anikep
-ms.openlocfilehash: 499e4881175920fdf3127856fa9056b10ae22b79
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.author: mbaldwin
+ms.openlocfilehash: 79fd94614fd19a3cc93c59736931495c9019e2d8
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405208"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864976"
 ---
 # <a name="republishing-c"></a>再パブリッシュ (C++)
 
 ## <a name="overview"></a>概要
 
-この概要では、mipmap SDK での再パブリッシュに焦点を当てています。アプリケーションでユーザーにファイルの編集を許可する必要があり、所有者、権限、コンテンツキーなどに関する元の[発行ライセンス](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/licenses-and-certificates-and-how-ad-rms-protects-and-consumes/ba-p/247309)情報を保持する必要がある場合に発生する特定のシナリオです。
+この概要では、mipmap SDK での再パブリッシュに焦点を当てています。アプリケーションでユーザーにファイルの編集を許可する必要があり、所有者、権限、コンテンツキーなどに関する元の [発行ライセンス](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/licenses-and-certificates-and-how-ad-rms-protects-and-consumes/ba-p/247309) 情報を保持する必要がある場合に発生する特定のシナリオです。
 
 パターンは次のようになります。
 
@@ -29,7 +29,7 @@ ms.locfileid: "86405208"
 
 - `mip::FileHandler`ターゲットファイルを指すを作成します。
 - `mip::ProtectionHandler`のメソッドによって公開されるを格納し `mip::FileHandler` `GetProtection()` ます。
-- メソッドを呼び出して、ユーザーが**編集**権限を持っていることを確認 `AccessCheck()` します。
+- メソッドを呼び出して、ユーザーが **編集** 権限を持っていることを確認 `AccessCheck()` します。
 - のまたはを使用して `mip::FileHandler` `GetDecryptedTemporaryFileAsync()` `GetDecryptedTemporaryStreamAsync()` 、暗号化解除された一時的な出力を取得します。
 - 一時ファイルまたはストリームの内容を編集して保存します。
 - `mip::FileHandler`一時ファイルを指す新しいインスタンスを作成し、メソッドを使用し `SetProtection()` `mip::ProtectionHandler` て、パラメーターとして格納されているを指定します。
@@ -54,11 +54,11 @@ ms.locfileid: "86405208"
 
 ## <a name="create-a-protection-handler-from-the-file-and-decrypt-the-file"></a>ファイルから保護ハンドラーを作成し、ファイルの暗号化を解除します。
 
-`mip::ProtectionHandler`保護されたストリームとバッファーの暗号化と復号化、アクセスチェックの実行、発行ライセンスの取得、および保護された情報からの属性の取得を行うための関数を公開します。 `mip::ProtectionHandler`オブジェクトは、ProtectionDescriptor またはシリアル化された公開ライセンスを提供することによって構築されます。 このユースケースでは、既に保護されているコンテンツを復号化する場合、またはライセンスが既に構築されているコンテンツを保護する場合に、発行ライセンスを暗黙的に使用します。
+`mip::ProtectionHandler` 保護されたストリームとバッファーの暗号化と復号化、アクセスチェックの実行、発行ライセンスの取得、および保護された情報からの属性の取得を行うための関数を公開します。 `mip::ProtectionHandler` オブジェクトは、ProtectionDescriptor またはシリアル化された公開ライセンスを提供することによって構築されます。 このユースケースでは、既に保護されているコンテンツを復号化する場合、またはライセンスが既に構築されているコンテンツを保護する場合に、発行ライセンスを暗黙的に使用します。
 
 `mip::FileHandler``GetProtection()`に関連付けられているファイルからを取得するという名前のメソッドを公開 `mip::ProtectionHandler` `mip::FileHandler` します。 オブジェクトを取得したら、同じを使用して、 `mip::ProtectionHandler` ファイルのユーザーのアクセスレベルを検証し、ファイルを復号化した後、ファイルを編集した後で暗号化します。
 
-`mip::ProtectionHandler``AccessCheck()`は、ユーザーがファイルに対して特定の権限を持っていることを検証し、結果に応じてブール型の応答を返すために使用されます。 たとえば、ユーザーが編集権限を持っていることを確認するには、メソッドを呼び出して、値 "EDIT" を渡します。 結果が*true*の場合は、ユーザーにファイルの編集を許可します。 **編集**権限が検証されたら、を使用し `mip::FileHandler` て、暗号化解除され `GetDecryptedTemporaryFileAsync()` た一時ファイルを取得します。
+`mip::ProtectionHandler``AccessCheck()`は、ユーザーがファイルに対して特定の権限を持っていることを検証し、結果に応じてブール型の応答を返すために使用されます。 たとえば、ユーザーが編集権限を持っていることを確認するには、メソッドを呼び出して、値 "EDIT" を渡します。 結果が *true* の場合は、ユーザーにファイルの編集を許可します。 **編集** 権限が検証されたら、を使用し `mip::FileHandler` て、暗号化解除され `GetDecryptedTemporaryFileAsync()` た一時ファイルを取得します。
 
 さまざまなユーザー権利の詳細については、「 [Azure Information Protection のユーザー権利](/azure/information-protection/configure-usage-rights)」を参照してください。
 

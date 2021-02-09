@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b2c8be3d6997985b62933d40bf855e48a20ca928
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 0027c2dd3e66734f80dcce75ef8026202eb96e69
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764343"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212928"
 ---
 # <a name="class-stream"></a>クラスストリーム 
 MIP SDK とストリーム ベースのコンテンツの間のインターフェイスを定義するクラス。

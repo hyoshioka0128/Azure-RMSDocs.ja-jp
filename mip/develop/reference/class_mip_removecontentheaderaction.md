@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cea5d5c857e9ca6ef3a7028cdf8329e58c7f0ec7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 1f8e6ee1898aa4f575d255d33ba23208acc47c3b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764503"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213217"
 ---
 # <a name="class-removecontentheaderaction"></a>RemoveContentHeaderAction クラス 
 ドキュメントからのコンテンツ ヘッダーの削除を指定するアクション クラス。
@@ -19,7 +19,7 @@ ms.locfileid: "81764503"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: vector\<std:: String\>& GetUIElementNames ()  |  削除する必要のある UI 要素の検索に使用する必要がある名前の一覧を取得します。
+public const std:: vector \<std::string\>& GetUIElementNames ()  |  削除する必要のある UI 要素の検索に使用する必要がある名前の一覧を取得します。
   
 ## <a name="members"></a>メンバー
   

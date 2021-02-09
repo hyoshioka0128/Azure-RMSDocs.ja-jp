@@ -1,18 +1,18 @@
 ---
 title: クイック スタート - MIP SDK C# ラッパーを利用し、Microsoft Information Protection (MIP) テナントの認証ユーザーが利用できる保護テンプレートを一覧表示する
-description: Microsoft Information Protection SDK 保護 API C# ラッパーを使用し、ユーザーが利用できる保護テンプレートを一覧表示する方法について説明するクイック スタート。
-author: Pathak-Aniket
+description: Microsoft Information Protection SDK 保護 API C# ラッパーを使用し、ユーザーが利用できる保護テンプレートを一覧表示する方法 (C#) について説明するクイック スタート
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: ec6439747b7a826a09851739a96ccdec3f5705f4
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 28de8cb2b14aef158707dc0b4dd7cb2e3f8a6947
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972120"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865066"
 ---
 # <a name="quickstart-list-templates-c"></a>クイック スタート:テンプレートを一覧表示する (C#)
 
@@ -23,7 +23,7 @@ ms.locfileid: "82972120"
 まだ行っていない場合、続行する前に、必ず以下の前提条件を完了してください。
 
 - 「[クイック スタート: クライアント アプリケーションの初期化 - Protection API (C#)](quick-protection-app-initialization-csharp.md)」をまず完了し、スターター Visual Studio ソリューションを構築します。 この「保護テンプレートを一覧表示する」クイック スタートでは、前のクイック スタートでスターター ソリューションが正しく構築されている必要があります。
-- 省略可能: 「[RMS テンプレート](https://docs.microsoft.com/azure/information-protection/configure-policy-templates)」概念を確認します。
+- 省略可能: 「[RMS テンプレート](/azure/information-protection/configure-policy-templates)」概念を確認します。
 
 ## <a name="add-logic-to-list-the-protection-templates"></a>保護テンプレートを一覧表示するロジックを追加する
 
@@ -31,7 +31,7 @@ ms.locfileid: "82972120"
 
 1. 前の「クイック スタート - クライアント アプリケーション初期化 - 保護 API (C#)」の記事で作成した Visual Studio ソリューションを開きます。
 
-2. **ソリューション エクスプローラー**を使用して、`Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+2. **ソリューション エクスプローラー** を使用して、`Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 3. `Main()` 本文の末尾の、`Main()` 関数のアプリケーション シャットダウンのセクションの上 (前のクイック スタートが終わった場所) に、次のコードを挿入します。
 
@@ -54,7 +54,7 @@ ms.locfileid: "82972120"
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
-2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインを求められることはなく、ラベルの一覧が表示されます。
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる *場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインを求められることはなく、ラベルの一覧が表示されます。
 
      [![Visual Studio のトークンでのサインインの取得](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 

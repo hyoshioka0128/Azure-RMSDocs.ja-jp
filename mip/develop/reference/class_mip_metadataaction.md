@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: d36a97130fd8a04f8053b6c272cea9af050cb89c
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 873901994f452f8a1b521653e9fc078ce1933883
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761623"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213676"
 ---
 # <a name="class-metadataaction"></a>クラス MetadataAction 
 コンテンツにメタデータ情報を追加するアクション。
@@ -19,8 +19,8 @@ ms.locfileid: "81761623"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: vector\<std:: String\>& getmetadatatoremove) const  |  コンテンツから削除する必要のあるメタデータの名前の一覧を取得します。
-public const std:: vector\<metadataentry\>& GetMetadataToAdd () const  |  コンテンツに追加するメタデータ名と値のペアを取得します。
+public const std:: vector \<std::string\>& getmetadatatoremove) const  |  コンテンツから削除する必要のあるメタデータの名前の一覧を取得します。
+public const std:: vector \<MetadataEntry\>& GetMetadataToAdd () const  |  コンテンツに追加するメタデータ名と値のペアを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -34,4 +34,4 @@ public const std:: vector\<metadataentry\>& GetMetadataToAdd () const  |  コン
 コンテンツに追加するメタデータ名と値のペアを取得します。
 
   
-**戻り値**: Const std::<MetadataEntry> vector& メタデータの削除は、メタデータを追加する前に行う必要があります。
+**戻り値**: Const std:: vector& メタデータ <MetadataEntry> の削除は、メタデータを追加する前に行う必要があります。

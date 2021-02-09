@@ -1,10 +1,10 @@
 ---
-title: IOS & Android 用 Azure Information Protection アプリ
-description: IOS および Android デバイス用の Azure Information Protection (AIP) アプリの基本について説明します。
+title: IOS & Android 用モバイルアプリの Azure Information Protection
+description: IOS および Android デバイス用の Azure Information Protection (AIP) モバイルアプリの基本について説明します。
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/07/2020
+ms.date: 11/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,81 +12,114 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 0f849dfefa6af9ffd95dcca0c731ed216f465b11
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 94fc34bc7e1ec5c1802c78f3bf4347bfac75371f
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046404"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809895"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>IOS または Android 用の Azure Information Protection アプリとは
 
-*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-IOS および Android 用の Azure Information Protection (AIP) アプリを使用すると、電子メールアプリが rights management データ保護をネイティブでサポートしていない場合に、権利で保護された電子メール**メッセージ (** ) を表示できます。  
+IOS および Android 用の Azure Information Protection (AIP) モバイルアプリは、保護された電子メールメッセージ、Pdf、画像、テキストファイルを表示できるビューアーアプリです。これらのファイルの種類の通常のアプリで保護がサポートされていない場合に便利です。 
 
-AIP アプリを使用すると、権利で保護された PDF ドキュメント (保護された PDF および**ppdf**ファイル)、イメージ、テキストファイルを表示することもできます。
+たとえば、保護された電子メールが通常の電子メールモバイルアプリに添付ファイルとして表示される場合は、AIP モバイルアプリを使用してその電子メールを表示できます。
+
+アプリでサポートされている保護機能の詳細については、 [Azure Rights Management データ保護をサポートするアプリケーション](../requirements-applications.md)」を参照してください。 
 
 > [!NOTE]
-> AIP アプリは閲覧者のみであり、保護された電子メールメッセージに対して新規または返信を作成したり、保護されたファイルを作成または編集したりすることはできません。 アプリでは、保護された PDF ドキュメントや電子メールメッセージの添付ファイルなど、表示するファイルの添付ファイルを開くこともできません。
->
+> AIP mobile apps は *閲覧者のみで* あり、新しい電子メールを作成したり、電子メールに返信したり、保護されたファイルを作成または編集したりすることはできません。 AIP mobile apps では、保護された Pdf または電子メールの添付ファイルを開くこともできません。
+> 
+
+## <a name="download-and-install-the-aip-app-for-your-device"></a>デバイス用の AIP アプリをダウンロードしてインストールする
+
+次のいずれかの場所から AIP mobile apps をダウンロードしてインストールします。
+
+**iTunes**:
+
+:::image type="content" source="../media/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::  
+
+**Google Play**:
+
+:::image type="content" source="../media/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false"::: 
+
+**会社のポータル**:
+
+モバイルデバイスが Microsoft Intune によって管理されている場合は、ポータルサイトから AIP mobile アプリをダウンロードできます。 
+
+詳細については、システム管理者にお問い合わせください。 
+## <a name="ios-view-protected-files-on-your-device"></a>iOS: デバイス上の保護されたファイルを表示する
+
+[AIP モバイルアプリをインストール](#download-and-install-the-aip-app-for-your-device)したら、保護された電子メールまたはファイルを開きます。 
+
+1. ファイルを開くアプリを選択するように求めるメッセージが表示されたら、[共有] ボタンをタップしてファイルを共有します。
+
+    [**ファイルを共有**] を選択し、[ **AIP ビューアーにコピー** ] を選択します。
+
+    次に例を示します。
+
+    :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="IOS の AIP ビューアーに共有する" border="false":::
+
+1. メッセージが表示されたら、サインインするか、証明書を選択します。
+
+    認証が完了すると、電子メールまたはファイルが AIP ビューアーで開かれます。
+ 
+## <a name="android-view-protected-files-on-your-device"></a>Android: 保護されたファイルをデバイスで表示する
+
+[AIP モバイルアプリをインストール](#download-and-install-the-aip-app-for-your-device)したら、保護された電子メールまたはファイルを開きます。 
+
+1. アプリの選択を求めるメッセージが表示されたら、AIP ビューアーを選択します。
+
+    :::image type="content" source="../media/select-aip-viewer.png" alt-text="AIP Viewer モバイルアプリを選択する":::
+
+1. メッセージが表示されたら、サインインするか、証明書を選択します。
+
+    認証が完了すると、電子メールまたはファイルが AIP ビューアーで開かれます。
 
 ## <a name="aip-mobile-app-requirements"></a>AIP モバイルアプリの要件
 
-IOS および Android 用の AIP mobile apps は、次のシステムで使用できます。
+IOS および Android 用の AIP mobile apps では、次のファイルの種類と環境がサポートされています。
 
-- [サポートされているモバイル OS のバージョン](#supported-mobile-os-versions)
-- [サポートされているサインイン資格情報](#supported-sign-in-credentials)
-- [サポートされるファイル拡張子](#supported-file-extensions)
+|要件  |説明  |
+|---------|---------|
+|**サポートされている OS のバージョン**     | 最小モバイル OSs には次のものが含まれます。 </br>-iOS 11  </br>-Android 6.0 </br></br>**注**: AIP モバイルアプリは Intel cpu ではサポートされていません。  |
+|**サポートされているサインイン資格情報**     | 次のいずれかを使用して、AIP mobile apps にサインインします。 </br></br>**職場または学校の資格情報。** 職場または学校の資格情報でログインしてみてください。 ご不明な点がある場合は、管理者に連絡して、組織がモバイルデバイス拡張機能を使用してオンプレミスで AD RMS ているか、Azure Information Protection を使用しているかを確認してください。 </br></br>**Microsoft アカウント。** 個人用の電子メールアドレスを使用してファイルを保護していた場合は、 [Microsoft アカウント](https://signup.live.com)でサインインします。 Microsoft アカウントに適用する必要がある場合は、独自の Hotmail、Gmail、またはその他の電子メールアドレスを使用できます。 </br></br>**注**: Microsoft アカウントで保護されたコンテンツを開くことができないアプリケーションもあります。 詳細については、「保護され [たドキュメントを開くためのサポートされるシナリオ](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)」を参照してください。|
+|**サポートされるファイルの種類**     | サポートされているファイルの種類には、保護された電子メールメッセージ、PDF ファイル、画像、テキストファイルなどがあります。 </br></br>たとえば、次のような拡張子が含まれています: **rpq msg**、 **.pdf**、 **ppdf**、 **pjpg**、 **pjpg**、 **pjpg**、. **ppdf**、 **pjpg**、 **pjpg** </br></br>サポートされているファイルの種類の完全な一覧については、 [AIP クライアント管理者ガイド](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)を参照してください。|
+| | |
 
-### <a name="supported-mobile-os-versions"></a>サポートされているモバイル OS のバージョン
+## <a name="admins-testing-the-aip-mobile-apps"></a>管理者: AIP mobile アプリのテスト
 
-AIP mobile apps には、次の最低限のモバイルオペレーティングシステムのいずれかが必要です。 
+通常、ほとんどのユーザーは AIP モバイルアプリを使用して、通常のモバイルアプリを使用して開くことができない保護された電子メールまたはファイルを開きます。
 
-- iOS 11 
-- Android 6.0 
+組織の AIP mobile アプリをテストするシステム管理者である場合、または自分で試してみたい場合は、以下の手順に従ってプロセス全体を説明してください。
+
+1. デバイスから AIP モバイルアプリでサポートされているファイルの種類にアクセスできることを確認します。 
+
+    たとえば、次の権利で保護されたファイルのいずれかを自分で送信します。
+
+    |ファイルの種類  |Instructions  |
+    |---------|---------|
+    |**電子メール (rpq msg)**     | Windows コンピューターの Outlook などの別のデバイスを使用して、権限で保護された電子メールメッセージを自分宛てに送信し、モバイルデバイスからアクセスできるようにします。  |
+    |**PDF**     | 1. Windows コンピューターから、AIP クライアントを使用して [PDF ファイルを保護](clientv2-classify-protect.md) します。 </br>2. 保護された PDF を自分で送信するか、SharePoint で保護されたライブラリにアップロードして、自分の電子メールアドレスに共有します。        |
+    |**イメージ (. ptxt、ptxt、または ppng)**     | 1. Windows コンピューターから、AIP クライアントを使用して [テキストまたはイメージファイルを保護](clientv2-classify-protect.md) します。 </br></br>2. 保護されたファイルを自分で送信するか、SharePoint で保護されたライブラリにアップロードして、自分の電子メールアドレスに共有します。   |
+| | |
+
+1. 自分宛てに送信した電子メールの添付ファイルまたはリンクを使用して、モバイルデバイス上の保護されたファイルを開きます。
+
+    たとえば、保護された電子メールは、通常の電子メールモバイルアプリに添付ファイルとして表示されます。 
+
+1. 保護された電子メールまたはファイルを開くためのアプリを選択するように求めるメッセージが表示されたら、 **AIP Viewer** アプリを選択します。
+
+1. メッセージが表示されたら、サインインするか、証明書を選択します。 
+
+    認証が完了すると、AIP Viewer アプリに電子メールまたはファイルが表示されます。
 
 > [!NOTE]
-> AIP mobile apps は Intel Cpu ではサポートされていません。
-> 
-
-### <a name="supported-sign-in-credentials"></a>サポートされているサインイン資格情報
-
-次のいずれかを使用して、AIP にサインインします。 
-
-- **職場または学校の資格情報。** 組織が既にモバイルデバイス拡張機能を使用してオンプレミス AD RMS を持っている場合、または Azure Information Protection を使用する場合は、を使用します。
- 
-- **Microsoft アカウント**。 個人用の電子メールアドレスを使用してファイルを保護していた場合は、 [Microsoft アカウント](https://signup.live.com)でサインインします。 
-
-    - Microsoft アカウントに適用する場合は、独自の Hotmail、Gmail、またはその他の電子メールアドレスを使用できます。
-    
-> [!NOTE]
-> Microsoft アカウントが使用されている場合、保護されたコンテンツを開くことができないアプリケーションもあります。 詳細については、「保護され[たドキュメントを開くためのサポートされるシナリオ](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)」を参照してください。
-> 
-
-### <a name="supported-file-extensions"></a>サポートされるファイル拡張子
-
-.rpmsg、.pdf、.ppdf、.pjpg、.pjpeg、.ptiff、.ppng、.ptxt、.pxml などのテキストと画像ファイル形式を開くことができます。
-
-テキストと画像ファイルの拡張子一覧については、管理者ガイドの「[分類と保護がサポートされているファイルの種類](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)」に記載されている最初の表を参照してください。
-
-## <a name="installing-your-aip-mobile-apps-and-viewing-files"></a>AIP mobile アプリのインストールとファイルの表示
-
-モバイルデバイスが Microsoft Intune によって管理されている場合は、ポータルサイトからアプリをダウンロードできます。
-
-それ以外の場合は、次の方法でアプリにアクセスします。
-
-- [ITunes](https://apps.apple.com/app/microsoft-rights-management/id689516635)または[Google Play](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)ストア
-- [Azure Information Protection のダウンロードページ](https://portal.azurerms.com/#/download)。 [**モバイルデバイス**] セクションで、 [IOS](https://apps.apple.com/app/microsoft-rights-management/id689516635)または[Android](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)のアイコンを選択します。
-
-インストールが完了したら、保護された電子メールまたはファイルが受信されるまで待ってから、開いたときに**AIP ビューアー**を選択します。
-
-職場または学校のアカウントでサインインするか、証明書を選択するように求められます。 認証が完了すると、電子メールまたはファイルが開き、内容を読むことができるようになります。
-
-> [!TIP]
-> この操作をすぐに実行するには、保護された電子メールまたはファイルを表示するように送信します。 
->
-> 詳細については、「 [iOS 用および Android 用の Microsoft Azure Information Protection アプリの概要](mobile-app-get-started.md)」を参照してください。
+> 常に、保護されたコンテンツを開いて AIP アプリを開きます。 メッセージが表示されるまで、または AIP Viewer アプリ内から保護されたファイルを開くために、アプリへのサインインを試行しないでください。
 > 
 
 ## <a name="next-steps"></a>次のステップ

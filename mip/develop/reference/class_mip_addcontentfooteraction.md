@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 58c0767f2c880a52ef4a831e5d57670820187fc7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 1ecebda7a6df2fcba2bca531b7cc6e28eefdde99
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763779"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212486"
 ---
 # <a name="class-addcontentfooteraction"></a>クラス Addcontentフッターアクション 
 コンテンツ フッターをドキュメントに追加することを指定するアクション クラス。
@@ -33,7 +33,7 @@ public int GetMargin() const  |  一番下からのフッターの余白を取�
 コンテンツ フッター要素をマークするために使用する API。
 
   
-**戻り値**: コンテンツ フッターを保持する UI 要素に使用する必要のある名前。 コンテンツ フッターを削除する必要がある場合は、[RemoveContentFooterAction](class_mip_removecontentfooteraction.md) でも同じ名前が返されます。
+**戻り値**: コンテンツ フッターを保持する UI 要素に使用する必要のある名前。 コンテンツ フッターを削除する必要がある場合は、RemoveContentFooterAction でも同じ名前が返されます。
   
 ### <a name="gettext-function"></a>GetText 関数
 コンテンツ フッターに移動されるテキストを取得します。

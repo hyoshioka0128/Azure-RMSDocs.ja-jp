@@ -1,11 +1,11 @@
 ---
 title: HSM で保護されているキーから HSM で保護されているキーへの移行 - AIP
 description: AD RMS から Azure Information Protection への移行パスの一部であり、AD RMS キーが HSM で保護されていて、Azure Key Vault 内の HSM で保護されているテナントキーを使用して Azure Information Protection に移行する場合にのみ適用される手順。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/11/2019
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
@@ -13,21 +13,22 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 43df572d29d98127de8cbdf594d85cd58f4db483
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 1ce00be84ddde6493c5b8851fa8473024e08dc00
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049090"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382056"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2. HSM で保護されているキーから HSM で保護されているキーへの移行
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***関連**: [AIP のラベル付けクライアントと従来のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 この手順は、[AD RMS から Azure Information Protection への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Information Protection に移行する場合にのみ適用されます。 
 
-これが選択した構成シナリオでない場合は、[手順4に戻ります。構成データを AD RMS からエクスポートし、Azure RMS にインポート](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection)して、別の構成を選択します。
+これが選択した構成シナリオでない場合は、 [手順4に戻ります。構成データを AD RMS からエクスポートし、Azure RMS にインポート](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) して、別の構成を選択します。
 
 > [!NOTE]
 > これらの手順は、AD RMS キーがモジュールで保護されていることを前提としています。 これは、最も一般的なケースです。 
@@ -51,11 +52,11 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
    - 「**テナント キーを生成する**」の手順を実行しないでください。それと同等のものが、既に AD RMS のデプロイメントから取得されています。 代わりに、nCipher インストールから AD RMS サーバーが使用するキーを特定し、それらのキーを転送用に準備してから、Azure Key Vault に転送します。 
         
-        NCipher の暗号化されたキーファイルには**key_<<em>keyappname</em>>_<<em>keyappname</em> > **がサーバー上でローカルに指定されます。 例: `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` KeyTransferRemote コマンドを実行して、アクセス許可が制限されたキーのコピーを作成する場合は、keyAppName として**mscapi**値を指定し、キー識別子に独自の値を指定する必要があります。
+        NCipher の暗号化されたキーファイルには **key_<<em>keyappname</em>>_<<em>keyappname</em> >** がサーバー上でローカルに指定されます。 たとえば、`C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` のようにします。 KeyTransferRemote コマンドを実行して、アクセス許可が制限されたキーのコピーを作成する場合は、keyAppName として **mscapi** 値を指定し、キー識別子に独自の値を指定する必要があります。
         
         Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 これは、https//contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになり \: ます。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
-2. インターネットに接続されたワークステーションの PowerShell セッションで、 [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレットを使用して、Azure Information Protection テナントキーを格納する key vault にアクセスするように Azure Rights Management サービスプリンシパルを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
+2. インターネットに接続されたワークステーションの PowerShell セッションで、 [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) コマンドレットを使用して、Azure Information Protection テナントキーを格納する key vault にアクセスするように Azure Rights Management サービスプリンシパルを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
     
     たとえば、Azure Information Protection 用に作成したキー コンテナーの名前が contoso-byok-ky、リソース グループの名前が contoso-byok-rg である場合は、次のコマンドを実行します。
 
@@ -69,9 +70,9 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 これらの手順は、Azure Information Protection の管理者によって実行されます。
 
-1. インターネット接続ワークステーションと PowerShell セッションで、 [connect-AipService](/powershell/module/aipservice/connect-aipservice)コマンドレットを使用して Azure Rights Management サービスに接続します。
+1. インターネット接続ワークステーションと PowerShell セッションで、 [connect-AipService](/powershell/module/aipservice/connect-aipservice) コマンドレットを使用して Azure Rights Management サービスに接続します。
     
-    次に、 [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)コマンドレットを使用して、信頼された発行ドメイン (.xml) ファイルをアップロードします。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。
+    次に、 [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) コマンドレットを使用して、信頼された発行ドメイン (.xml) ファイルをアップロードします。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。
     
     このコマンドレットを実行するには、各構成データ ファイルに対して以前指定したパスワードと前の手順で指定したキーの URL が必要です。
     
@@ -89,7 +90,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
     
     このインポート処理の一部として、SLC キーがインポートされ、自動でアーカイブ済みに設定されます。
 
-2.  各ファイルをアップロードしたら、 [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)を実行して、AD RMS クラスター内の現在アクティブな SLC キーと一致するインポートされたキーを指定します。 このキーは、Azure Rights Management サービスのアクティブなテナント キーとなります。
+2.  各ファイルをアップロードしたら、 [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) を実行して、AD RMS クラスター内の現在アクティブな SLC キーと一致するインポートされたキーを指定します。 このキーは、Azure Rights Management サービスのアクティブなテナント キーとなります。
 
 3.  [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice)コマンドレットを使用して、Azure Rights Management サービスとの接続を切断します。
 
@@ -99,6 +100,6 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 Azure Information Protection テナントキーが Azure Key Vault で使用しているキーを後で確認する必要がある場合は、 [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS コマンドレットを使用します。
 
-これで、手順 5. に進むことができ[ます。Azure Rights Management サービスをアクティブ化](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service)します。
+これで、手順 5. に進むことができ [ます。Azure Rights Management サービスをアクティブ化](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service)します。
 
 

@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 4/16/2020
-ms.openlocfilehash: c10c13212bf19ea27442626aa4bd900aa57a340d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 9/22/2020
+ms.openlocfilehash: 8cb8d6550ecdc0d7ea342c3e6484a7a23b7f590d
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764150"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569414"
 ---
 # <a name="functions"></a>関数
 
@@ -19,7 +19,7 @@ ms.locfileid: "81764150"
 
 OAuth2 トークンを取得するためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -47,7 +47,7 @@ MIP_CC_CALLBACK(mip_cc_auth_callback,
 
 ユーザーから外部サービスエンドポイントへのアクセスに同意するためのコールバック関数定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -65,7 +65,7 @@ MIP_CC_CALLBACK(mip_cc_consent_callback,
 
 文字列のキー/値の辞書を作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -90,7 +90,7 @@ mip_cc_result MIP_CC_CreateDictionary(
 
 ディクショナリを構成するキーと値のペアを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -115,7 +115,7 @@ mip_cc_result MIP_CC_Dictionary_GetEntries(
 
 ディクショナリに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -129,7 +129,7 @@ void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
 
 HTTP 要求を発行するためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -147,7 +147,7 @@ MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
 
 HTTP 要求をキャンセルするためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -163,7 +163,7 @@ MIP_CC_CALLBACK(mip_cc_http_cancel_callback_fn,
 
 MIP の既定の HTTP スタックをオーバーライドするために使用できる HTTP デリゲートを作成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -186,7 +186,7 @@ mip_cc_result MIP_CC_CreateHttpDelegate(
 
 Http 応答の準備ができていることを HTTP デリゲートに通知します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -209,7 +209,7 @@ void MIP_CC_NotifyHttpDelegateResponse(
 
 HTTP デリゲートハンドルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -223,7 +223,7 @@ void MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
 
 Logger を初期化するためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -239,11 +239,11 @@ MIP_CC_CALLBACK(mip_cc_logger_init_callback_fn,
 
 Log ステートメントを記述するためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| level | log ステートメントのログレベルです。 |
+| レベル | log ステートメントのログレベルです。 |
 | message | log ステートメントのメッセージ。 |
 | 関数 (function) | log ステートメントの関数名。 |
 | file | log ステートメントが生成されたファイルの名前。 |
@@ -263,7 +263,7 @@ MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
 
 Mipmap の既定のロガーをオーバーライドするために使用できる logger デリゲートを作成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -288,7 +288,7 @@ mip_cc_result MIP_CC_CreateLoggerDelegate(
 
 Logger デリゲートハンドルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -302,7 +302,7 @@ void MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
 
 すべてのプロファイルインスタンス間で共有される状態を管理する MIP コンテキストを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -333,7 +333,7 @@ mip_cc_result MIP_CC_CreateMipContext(
 
 すべてのプロファイルインスタンス間で共有される状態を管理する MIP コンテキストを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -368,7 +368,7 @@ mip_cc_result MIP_CC_CreateMipContextWithCustomFeatureSettings(
 
 Mipmap コンテキストに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -382,7 +382,7 @@ void MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
 
 RMS テンプレートによって定義されているかどうかにかかわらず、保護の種類を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -403,7 +403,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetProtectionType(
 
 所有者を格納するために必要なバッファーのサイズを取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -424,7 +424,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwnerSize(
 
 保護所有者を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -451,7 +451,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwner(
 
 名前を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -472,7 +472,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetNameSize(
 
 保護名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -499,7 +499,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
 
 説明を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -520,7 +520,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescriptionSize(
 
 保護の説明を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -547,7 +547,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
 
 テンプレート ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -568,7 +568,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetTemplateId(
 
 ラベル ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -589,7 +589,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetLabelId(
 
 コンテンツ ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -610,7 +610,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentId(
 
 コンテンツの有効期限が切れているかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -631,7 +631,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesContentExpire(
 
 保護の有効期限 (エポックからの秒数) を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -652,7 +652,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentValidUntil(
 
 オフラインアクセスが許可されているかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -673,7 +673,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
 
 参照元を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -694,7 +694,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrerSize(
 
 保護参照元を取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -721,7 +721,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrer(
 
 2つのキーの URL を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -742,7 +742,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize(
 
 2つのキーの URL を取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -769,7 +769,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl(
 
 保護記述子に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -783,7 +783,7 @@ void MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionD
 
 文字列リストの作成
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -808,7 +808,7 @@ mip_cc_result MIP_CC_CreateStringList(
 
 文字列リストを構成する文字列を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -833,7 +833,7 @@ mip_cc_result MIP_CC_StringList_GetStrings(
 
 文字列リストに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -847,7 +847,7 @@ void MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
 
 非同期タスクをディスパッチするためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -863,7 +863,7 @@ MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn,
 
 バックグラウンドタスクをキャンセルするためのコールバック関数
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -881,7 +881,7 @@ MIP_CC_CALLBACK(mip_cc_cancel_task_callback_fn,
 
 MIP の既定の非同期タスク処理をオーバーライドするために使用できるタスクディスパッチャーデリゲートを作成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -906,7 +906,7 @@ mip_cc_result MIP_CC_CreateTaskDispatcherDelegate(
 
 タスクが現在のスレッドで実行するようにスケジュールされていることを TaskDispatcher デリゲートに通知します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -923,7 +923,7 @@ void MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDisp
 
 タスクディスパッチャーデリゲートハンドルに関連付けられているリソースの解放
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -937,7 +937,7 @@ void MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDi
 
 保護プロファイルの作成に使用する設定オブジェクトを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -956,7 +956,7 @@ mip_cc_result MIP_CC_CreateTelemetryConfiguration(
 
 内部テレメトリ設定を上書きするテレメトリホスト名を設定する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -979,7 +979,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
 
 テレメトリ共有ライブラリオーバーライドの設定
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -989,7 +989,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
 
 **Return**: 成功または失敗を示す結果コード
 
-**注**: このプロパティは、mip_ClientTelemetry の代わりに使用する必要がある ARIA/1DS SDK の C API を実装する既存のテレメトリ DLL がクライアントにある場合に設定されます。 
+**注**: このプロパティは、の代わりに使用する必要がある ARIA/1DS SDK の C API を実装する既存のテレメトリ DLL がクライアントにある場合に設定され mip_ClientTelemetry.dll 
 
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
@@ -1002,7 +1002,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
 
 既定のテレメトリ HTTP スタックをクライアント独自にオーバーライドする
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1025,7 +1025,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHttpDelegate(
 
 既定の非同期タスクディスパッチャーをクライアント独自にオーバーライドする
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1046,7 +1046,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate(
 
 バックグラウンドスレッドでテレメトリコンポーネントがネットワークステータスに ping を実行できるかどうかを設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1069,7 +1069,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
 
 テレメトリコンポーネントでディスクへのキャッシュの書き込みが許可されているかどうかを設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1092,7 +1092,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
 
 テレメトリコンポーネントでディスクへのログの書き込みが許可されているかどうかを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1115,7 +1115,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
 
 アプリケーション/ユーザーがオプションのテレメトリをオプトアウトしたかどうかを設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1138,7 +1138,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
 
 カスタムテレメトリ設定を設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1159,7 +1159,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetCustomSettings(
 
 テレメトリプロパティを mask に設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1182,7 +1182,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_AddMaskedProperty(
 
 保護プロファイル設定に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1192,1215 +1192,11 @@ mip_cc_result MIP_CC_TelemetryConfiguration_AddMaskedProperty(
 void MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemetryConfig);
 ```
 
-## <a name="mip_cc_releaseprotectionengine"></a>MIP_CC_ReleaseProtectionEngine
-
-保護エンジンに関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | 保護エンジンを解放する |
-
-```c
-void MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
-```
-
-## <a name="mip_cc_protectionengine_createprotectionhandlerforpublishing"></a>MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing
-
-新しいコンテンツを公開するための保護ハンドラーを作成します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ハンドラーが作成されるエンジン |
-| settings | 保護ハンドラーの設定 |
-| context | HttpDelegate と AuthDelegate に渡されるクライアントコンテキスト不透明 |
-| handler | Output新しく作成された保護ハンドラーのインスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
-    const mip_cc_protection_engine engine,
-    const mip_cc_protection_handler_publishing_settings settings,
-    const void* context,
-    mip_cc_protection_handler* handler,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionengine_createprotectionhandlerforconsumption"></a>MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption
-
-既存のコンテンツを使用するための保護ハンドラーを作成します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ハンドラーが作成されるエンジン |
-| settings | 保護ハンドラーの設定 |
-| context | HttpDelegate と AuthDelegate に渡されるクライアントコンテキスト不透明 |
-| handler | Output新しく作成された保護ハンドラーのインスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
-  const mip_cc_protection_engine engine,
-  const mip_cc_protection_handler_consumption_settings settings,
-  const void* context,
-  mip_cc_protection_handler* handler,
-  mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionengine_getengineidsize"></a>MIP_CC_ProtectionEngine_GetEngineIdSize
-
-エンジン ID に必要なバッファーのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | 保護エンジン |
-| idSize | Outputエンジン ID を保持するバッファーのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionEngine_GetEngineIdSize(
-    const mip_cc_protection_engine engine,
-    int64_t* idSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionengine_getengineid"></a>MIP_CC_ProtectionEngine_GetEngineId
-
-エンジン ID を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | 保護エンジン |
-| idBuffer | OutputId がコピーされるバッファー。 |
-| idBufferSize | IdBuffer のサイズ (文字数)。 |
-| actualIdSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: idbuffer が null または不十分な場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualIdSize が必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_ProtectionEngine_GetEngineId(
-    const mip_cc_protection_engine engine,
-    char* idBuffer,
-    const int64_t idBufferSize,
-    int64_t* actualIdSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionengine_gettemplatessize"></a>MIP_CC_ProtectionEngine_GetTemplatesSize
-
-保護エンジンに関連付けられている RMS テンプレートの数を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | 保護エンジン |
-| context | HttpDelegate と AuthDelegate に渡されるクライアントコンテキスト不透明 |
-| テンプレートのサイズ | Outputテンプレートの数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**メモ**: この API は、独立した HTTP 操作になる可能性があります。 不要な余分な HTTP 操作を回避するには、事前に定義されたバッファーで ' MIP_CC_ProtectionEngine_GetTemplates ' を直接使用することを検討してください。 
-
-```c
-mip_cc_result MIP_CC_ProtectionEngine_GetTemplatesSize(
-    const mip_cc_protection_engine engine,
-    const void* context,
-    int64_t* templatesSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionengine_gettemplates"></a>MIP_CC_ProtectionEngine_GetTemplates
-
-ユーザーが使用できるテンプレートのコレクションを取得する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | 保護エンジン |
-| context | HttpDelegate と AuthDelegate に渡されるクライアントコンテキスト不透明 |
-| mip_cc_template_descriptor | [出力] テンプレートハンドラーを作成するためのバッファー。 |
-| templateBufferSize | TemplateBuffer のサイズ (項目数)。 |
-| Actualtemplates のサイズ | Outputバッファーに書き込まれたテンプレート Id の数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: templatebuffer が null または不十分な場合は MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualTemplateSize は必要最小限のバッファーサイズに設定されます。 各 mip_cc_template_descriptor は MIP_CC_ReleaseTemplateDescriptor () を呼び出すことによって、呼び出し元によって解放される必要があります。 
-
-```c
-mip_cc_result MIP_CC_ProtectionEngine_GetTemplates(
-    const mip_cc_protection_engine engine,
-    const void* context,
-    mip_cc_template_descriptor* templateDescriptors,
-    const int64_t templateBufferSize,
-    int64_t* actualTemplatesSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionengine_getrightsforlabelid"></a>MIP_CC_ProtectionEngine_GetRightsForLabelId
-
-ラベル ID に対してユーザーに付与された権限の一覧を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | 保護エンジン |
-| context | HttpDelegate と AuthDelegate に渡されるクライアントコンテキスト不透明 |
-| documentId | ドキュメントに割り当てられているドキュメント ID |
-| labelId | ドキュメントに適用されたラベル ID |
-| ownerEmail | ドキュメントの所有者 |
-| delagedUserEmail | 認証を行っているユーザーまたはアプリケーションが別のユーザーの代理で動作している場合は、ユーザーの電子メール、何も指定しない場合は空 |
-| 権限 | Outputユーザーに付与された権限の一覧、呼び出し元によって所有されているメモリ |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: ' rights ' 変数は、呼び出し元がを呼び出すことによって解放する必要があり MIP_CC_ReleaseStringList 
-
-```c
-mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
-    const mip_cc_protection_engine engine,
-    const void* context,
-    const char* documentId,
-    const char* labelId,
-    const char* ownerEmail,
-    const char* delegatedUserEmail,
-    mip_cc_string_list* rights,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionengine_getclientdatasize"></a>MIP_CC_ProtectionEngine_GetClientDataSize
-
-保護エンジンに関連付けられているクライアントデータのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | 保護エンジン |
-| clientDataSize | Outputクライアントデータのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionEngine_GetClientDataSize(
-    const mip_cc_protection_engine engine,
-    int64_t* clientDataSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionengine_getclientdata"></a>MIP_CC_ProtectionEngine_GetClientData
-
-保護エンジンに関連付けられているクライアントデータを取得する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | 保護エンジン |
-| clientDataBuffer | Outputクライアントデータがコピーされるバッファー |
-| clientDataBufferSize | ClientDataBuffer のサイズ (文字数)。 |
-| actualClientDataSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: clientDataBuffer が null または不足している場合は MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualClientDataSize は必要最小限のバッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_ProtectionEngine_GetClientData(
-    const mip_cc_protection_engine engine,
-    char* clientDataBuffer,
-    const int64_t clientDataBufferSize,
-    int64_t* actualClientDataSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_createprotectionenginesettingswithidentity"></a>MIP_CC_CreateProtectionEngineSettingsWithIdentity
-
-新しい保護エンジンを作成するために使用される設定オブジェクトを作成する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| identity | ProtectionEngine に関連付けられる id |
-| clientData | エンジンと共に保存されるカスタマイズ可能なクライアントデータ |
-| locale | テキスト結果が出力されるロケール |
-| engineSettings | Output新しく作成された設定インスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_CreateProtectionEngineSettingsWithIdentity(
-    const mip_cc_identity* identity,
-    const char* clientData,
-    const char* locale,
-    mip_cc_protection_engine_settings* engineSettings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionenginesettings_setclientdata"></a>MIP_CC_ProtectionEngineSettings_SetClientData
-
-このエンジンと共に不透明に格納され、セッション間で保持されるクライアントデータを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| clientData | クライアントデータ |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionEngineSettings_SetClientData(
-    const mip_cc_protection_engine_settings engineSettings,
-    const char* clientData,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionenginesettings_setcustomsettings"></a>MIP_CC_ProtectionEngineSettings_SetCustomSettings
-
-機能のゲートとテストに使用されるカスタム設定を構成します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| engineSettings | エンジンの設定 |
-| Customsettings.ini | カスタム設定のキーと値のペア |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionEngineSettings_SetCustomSettings(
-    const mip_cc_protection_engine_settings engineSettings,
-    const mip_cc_dictionary customSettings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionenginesettings_setsessionid"></a>MIP_CC_ProtectionEngineSettings_SetSessionId
-
-ログとテレメトリを関連付けるために使用できるセッション ID を設定します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| sessionID | 保護エンジンの有効期間を表すセッション ID |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionEngineSettings_SetSessionId(
-    const mip_cc_protection_engine_settings engineSettings,
-    const char* sessionId,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionenginesettings_setcloud"></a>MIP_CC_ProtectionEngineSettings_SetCloud
-
-すべてのサービス要求のエンドポイント Url に影響するクラウドを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| クラウド | クラウド識別子 (既定 = 不明) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: cloud が指定されていない場合は、可能であれば、エンジンの id ドメインの DNS 参照によって決定されます。それ以外の場合は、グローバルクラウドにフォールバックします。 
-
-```c
-mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloud(
-    const mip_cc_protection_engine_settings engineSettings,
-    const mip_cc_cloud cloud,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionenginesettings_setcloudendpointbaseurl"></a>MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl
-
-すべてのサービス要求のベース URL を設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| cloudEndpointBaseUrl | ベース URL (例: 'https://api.aadrm.com') |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: この値は読み取り専用であり、Cloud = MIP_CLOUD_CUSTOM に設定する必要があります 
-
-```c
-mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
-    const mip_cc_protection_engine_settings engineSettings,
-    const char* cloudEndpointBaseUrl,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_releaseprotectionenginesettings"></a>MIP_CC_ReleaseProtectionEngineSettings
-
-保護エンジンの設定に関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| engineSettings | リリースされる保護エンジンの設定 |
-
-```c
-void MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings engineSettings);
-```
-
-## <a name="mip_cc_createprotectionhandlerpublishingsettings"></a>MIP_CC_CreateProtectionHandlerPublishingSettings
-
-新しいコンテンツを公開するための保護ハンドラーの作成に使用される設定オブジェクトを作成する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| ディスクリプタ | 保護の詳細 |
-| settings | Output新しく作成された設定インスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_CreateProtectionHandlerPublishingSettings(
-    const mip_cc_protection_descriptor descriptor,
-    mip_cc_protection_handler_publishing_settings* settings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandlerpublishingsettings_setisdeprecatedalgorithmpreferred"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred
-
-非推奨の暗号アルゴリズム (ECB) が下位互換性のために推奨されるかどうかを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | 保護ハンドラーの設定 |
-| isDeprecatedAlgorithmPreferred | 非推奨のアルゴリズムが推奨されるかどうか |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred(
-    const mip_cc_protection_handler_publishing_settings settings,
-    const bool isDeprecatedAlgorithmPreferred,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandlerpublishingsettings_setisauditedextractionallowed"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed
-
-非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されるかどうかを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | 保護ハンドラーの設定 |
-| isAuditedExtractionAllowed | 非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されているかどうか |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed(
-    const mip_cc_protection_handler_publishing_settings settings,
-    const bool isAuditedExtractionAllowed,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandlerpublishingsettings_setispublishingformatjson"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson
-
-PL が JSON 形式であるかどうかを設定します (既定は XML)
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | 保護ハンドラーの設定 |
-| isPublishingFormatJson | 結果として得られる PL が JSON 形式であるかどうか |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson(
-    const mip_cc_protection_handler_publishing_settings settings,
-    const bool isPublishingFormatJson,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandlerpublishingsettings_setdelegateduseremail"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail
-
-委任されたユーザーを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | 保護ハンドラーの設定 |
-| delegatedUserEmail | 委任されたユーザーの電子メールアドレス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: 委任されたユーザーは、他のユーザーの代理として認証を行うユーザーまたはアプリケーションが動作しているときに指定します。 
-
-```c
-mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
-    const mip_cc_protection_handler_publishing_settings settings,
-    const char* delegatedUserEmail,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandlerpublishingsettings_setprelicenseuseremail"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail
-
-ライセンス前のユーザーを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | 保護ハンドラーの設定 |
-| preLicenseUserEmail | ライセンス前のユーザーの電子メールアドレス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: ライセンスを発行するときに事前ライセンスを取得する必要がある場合は、ライセンスを使用するユーザーを指定します。 
-
-```c
-mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail(
-    const mip_cc_protection_handler_publishing_settings settings,
-    const char* preLicenseUserEmail,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_createprotectionhandlerconsumptionsettings"></a>MIP_CC_CreateProtectionHandlerConsumptionSettings
-
-既存のコンテンツを使用するための保護ハンドラーの作成に使用される設定オブジェクトを作成する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| Licensebuffer の発行 | 未加工の公開ライセンスを含むバッファー |
-| Licensebuffersize の発行 | 発行ライセンスバッファーのサイズ |
-| settings | Output新しく作成された設定インスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettings(
-    const uint8_t* publishingLicenseBuffer,
-    const int64_t publishingLicenseBufferSize,
-    mip_cc_protection_handler_consumption_settings* settings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_createprotectionhandlerconsumptionsettingswithprelicense"></a>MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense
-
-既存のコンテンツを使用するための保護ハンドラーの作成に使用される設定オブジェクトを作成する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| preLicenseBuffer | 未処理のライセンスバッファーを含むバッファー |
-| preLicenseBufferSize | ライセンスの前のバッファーのサイズ |
-| Licensebuffer の発行 | 未加工の公開ライセンスを含むバッファー |
-| Licensebuffersize の発行 | 発行ライセンスバッファーのサイズ |
-| settings | Output新しく作成された設定インスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense(
-    const uint8_t* preLicenseBuffer,
-    const int64_t preLicenseBufferSize,
-    const uint8_t* publishingLicenseBuffer,
-    const int64_t publishingLicenseBufferSize,
-    mip_cc_protection_handler_consumption_settings* settings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandlerconsumptionsettings_setisofflineonly"></a>MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly
-
-保護ハンドラーの作成でオンライン HTTP 操作が許可されるかどうかを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | 保護ハンドラーの設定 |
-| isOfflineOnly | HTTP 操作が禁止されている場合は True、それ以外の場合は false。 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: これが true に設定されている場合、コンテンツが既に暗号化解除されていて、その unexpired ライセンスがキャッシュされている場合にのみ、保護ハンドラーの作成が成功します。 キャッシュされたコンテンツが見つからない場合、MIP_RESULT_ERROR_NETWORK 結果が返されます。 
-
-```c
-mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
-    const mip_cc_protection_handler_consumption_settings settings,
-    const bool isOfflineOnly,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandlerconsumptionsettings_setdelegateduseremail"></a>MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail
-
-委任されたユーザーを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | 保護ハンドラーの設定 |
-| delegatedUserEmail | 委任されたユーザーの電子メールアドレス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: 委任されたユーザーは、他のユーザーの代理として認証を行うユーザーまたはアプリケーションが動作しているときに指定します。 
-
-```c
-mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
-    const mip_cc_protection_handler_consumption_settings settings,
-    const char* delegatedUserEmail,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getserializedpublishinglicensesize"></a>MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize
-
-発行ライセンスのサイズを取得します (バイト単位)
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| Licensebuffersize の発行 | Output発行ライセンスのサイズ (バイト単位) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
-    const mip_cc_protection_handler handler,
-    int64_t* publishingLicenseBufferSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getserializedpublishinglicense"></a>MIP_CC_ProtectionHandler_GetSerializedPublishingLicense
-
-発行ライセンスを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| Licensebuffer の発行 | Output発行ライセンスが書き込まれるバッファー |
-| Licensebuffersize の発行 | 発行ライセンスバッファーのサイズ |
-| Actual発行 Licensesize | Output発行ライセンスの実際のサイズ (バイト単位) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: 発行 licensebuffer が null または不十分な場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、Actual発行 licensesize が必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
-    const mip_cc_protection_handler handler,
-    uint8_t* publishingLicenseBuffer,
-    const int64_t publishingLicenseBufferSize,
-    int64_t* actualPublishingLicenseSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getserializedprelicensesize"></a>MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize
-
-プレライセンスのサイズを取得します (バイト単位)
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| format | ライセンス前の形式 |
-| preLicenseBufferSize | Outputプレライセンスのサイズ (バイト単位) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize(
-    const mip_cc_protection_handler handler,
-    mip_cc_pre_license_format format,
-    int64_t* preLicenseBufferSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getserializedprelicense"></a>MIP_CC_ProtectionHandler_GetSerializedPreLicense
-
-ライセンスの取得
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| format | ライセンス前の形式 |
-| preLicenseBuffer | Output事前ライセンスが書き込まれるバッファー |
-| preLicenseBufferSize | ライセンス前のバッファーのサイズ |
-| actualPreLicenseSize | Output事前ライセンスの実際のサイズ (バイト単位) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: preLicenseBuffer が null または不十分な場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualPreLicenseSize が必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicense(
-    const mip_cc_protection_handler handler,
-    mip_cc_pre_license_format format,
-    uint8_t* preLicenseBuffer,
-    const int64_t preLicenseBufferSize,
-    int64_t* actualPreLicenseSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getprotectiondescriptor"></a>MIP_CC_ProtectionHandler_GetProtectionDescriptor
-
-保護記述子を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| ディスクリプタ | Output保護記述子 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetProtectionDescriptor(
-    const mip_cc_protection_handler handler,
-    mip_cc_protection_descriptor* descriptor,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getrights"></a>MIP_CC_ProtectionHandler_GetRights
-
-ユーザーに付与されている権限の一覧を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| 権限 | Outputユーザーに付与された権限の一覧、呼び出し元によって所有されているメモリ |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: ' rights ' 変数は、呼び出し元がを呼び出すことによって解放する必要があり MIP_CC_ReleaseStringList 
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetRights(
-    const mip_cc_protection_handler handler,
-    mip_cc_string_list* rights,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getprotectedcontentsize"></a>MIP_CC_ProtectionHandler_GetProtectedContentSize
-
-保護されたコンテンツのサイズ、埋め込みのファクタリングなどを計算します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| unprotectedSize | 保護されていない/クリアテキストコンテンツのサイズ (バイト単位) |
-| ある Finalfinalblock | 対象の保護されていないコンテンツに最後のブロックが含まれているかどうかを示します。 |
-| protectedSize | Output保護されたコンテンツのサイズ |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetProtectedContentSize(
-    const mip_cc_protection_handler handler,
-    const int64_t unprotectedSize,
-    const bool includesFinalBlock,
-    int64_t* protectedSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getblocksize"></a>MIP_CC_ProtectionHandler_GetBlockSize
-
-保護ハンドラーによって使用される暗号モードのブロックサイズ (バイト単位) を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| blockSize | Outputブロックサイズ (バイト単位) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetBlockSize(
-    const mip_cc_protection_handler handler,
-    int64_t* blockSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getissuedusersize"></a>MIP_CC_ProtectionHandler_GetIssuedUserSize
-
-保護されたコンテンツへのアクセスが許可されているユーザーを格納するために必要なバッファーのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| issuedUserSize | Output発行されたユーザーを保持するバッファーのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUserSize(
-    const mip_cc_protection_handler handler,
-    int64_t* issuedUserSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getissueduser"></a>MIP_CC_ProtectionHandler_GetIssuedUser
-
-保護されたコンテンツへのアクセスが許可されているユーザーを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| issuedUserBuffer | Output発行されたユーザーがコピーされるバッファー。 |
-| issuedUserBufferSize | IssuedUserBuffer のサイズ (文字数)。 |
-| actualIssuedUserSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: issuedUserBuffer が null または不足している場合は MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualIssuedUserSize は必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUser(
-    const mip_cc_protection_handler handler,
-    char* issuedUserBuffer,
-    const int64_t issuedUserBufferSize,
-    int64_t* actualIssuedUserSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getownersize"></a>MIP_CC_ProtectionHandler_GetOwnerSize
-
-保護されたコンテンツの所有者を格納するために必要なバッファーのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| ownerSize | Output発行されたユーザーを保持するバッファーのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetOwnerSize(
-    const mip_cc_protection_handler handler,
-    int64_t* ownerSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getowner"></a>MIP_CC_ProtectionHandler_GetOwner
-
-保護されたコンテンツの所有者を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| ownerBuffer | Output発行されたユーザーがコピーされるバッファー。 |
-| ownerBufferSize | OwnerBuffer のサイズ (文字数)。 |
-| actualOwnerSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: ownerbuffer が null または不十分な場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualOwnerSize が必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetOwner(
-    const mip_cc_protection_handler handler,
-    char* ownerBuffer,
-    const int64_t ownerBufferSize,
-    int64_t* actualOwnerSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_getcontentid"></a>MIP_CC_ProtectionHandler_GetContentId
-
-保護されたコンテンツのコンテンツ IE を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| contentId | Outputコンテンツ ID |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_GetContentId(
-    const mip_cc_protection_handler handler,
-    mip_cc_guid* contentId,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_doesusedeprecatedalgorithm"></a>MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm
-
-保護ハンドラーが旧バージョンとの互換性のために非推奨の暗号アルゴリズム (ECB) を使用するかどうかを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 保護されたコンテンツを表すハンドラー |
-| doesUseDeprecatedAlgorithm | Output保護ハンドラーが非推奨の暗号アルゴリズムを使用するかどうか |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
-    const mip_cc_protection_handler handler,
-    bool* doesUseDeprecatedAlgorithm,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionhandler_decryptbuffer"></a>MIP_CC_ProtectionHandler_DecryptBuffer
-
-バッファーの復号化
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| offsetFromStart | 暗号化されたコンテンツの先頭からの inputBuffer の相対位置 |
-| inputBuffer | 復号化される暗号化されたコンテンツのバッファー |
-| inputBufferSize | 入力バッファーのサイズ (バイト単位) |
-| outputBuffer | Output復号化されたコンテンツのコピー先のバッファー |
-| outputBufferSize | 出力バッファーのサイズ (バイト単位) |
-| isFinal | 入力バッファーに最後の暗号化されたバイトが含まれているかどうか |
-| actualDecryptedSize | Output暗号化されたコンテンツの実際のサイズ (バイト単位) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionHandler_DecryptBuffer(
-    const mip_cc_protection_handler handler,
-    const int64_t offsetFromStart,
-    const uint8_t* inputBuffer,
-    const int64_t inputBufferSize,
-    uint8_t* outputBuffer,
-    const int64_t outputBufferSize,
-    const bool isFinal,
-    int64_t *actualDecryptedSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_releaseprotectionhandlerpublishingsettings"></a>MIP_CC_ReleaseProtectionHandlerPublishingSettings
-
-保護ハンドラーの設定に関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | 解放する保護ハンドラーの設定 |
-
-```c
-void MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler_publishing_settings settings);
-```
-
-## <a name="mip_cc_releaseprotectionhandlerconsumptionsettings"></a>MIP_CC_ReleaseProtectionHandlerConsumptionSettings
-
-保護ハンドラーの設定に関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | 解放する保護ハンドラーの設定 |
-
-```c
-void MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handler_consumption_settings settings);
-```
-
-## <a name="mip_cc_releaseprotectionhandler"></a>MIP_CC_ReleaseProtectionHandler
-
-保護ハンドラーに関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| handler | 解放される保護ハンドラー |
-
-```c
-void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
-```
-
-## <a name="mip_cc_loadprotectionprofile"></a>MIP_CC_LoadProtectionProfile
-
-プロファイルの読み込み
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | プロファイルの設定 |
-| profile | Output新しく作成された保護プロファイルインスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_LoadProtectionProfile(
-    const mip_cc_protection_profile_settings settings,
-    mip_cc_protection_profile* profile,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_releaseprotectionprofile"></a>MIP_CC_ReleaseProtectionProfile
-
-保護プロファイルに関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| profile | リリースされる保護プロファイル |
-
-```c
-void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
-```
-
-## <a name="mip_cc_createprotectionprofilesettings"></a>MIP_CC_CreateProtectionProfileSettings
-
-保護プロファイルの作成に使用する設定オブジェクトを作成する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| mipContext | すべてのプロファイルで共有するグローバルコンテキスト |
-| cacheStorageType | ストレージキャッシュの構成 |
-| authCallback | クライアントアプリケーションによって実装される認証に使用されるコールバックオブジェクト |
-| consentCallback | 同意に使用されるコールバックオブジェクト。クライアントアプリケーションによって実装されます。 |
-| settings | Output新しく作成された設定インスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_CreateProtectionProfileSettings(
-    const mip_cc_mip_context mipContext,
-    const mip_cc_cache_storage_type cacheStorageType,
-    const mip_cc_auth_callback authCallback,
-    const mip_cc_consent_callback consentCallback,
-    mip_cc_protection_profile_settings* settings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionprofilesettings_setsessionid"></a>MIP_CC_ProtectionProfileSettings_SetSessionId
-
-ログとテレメトリを関連付けるために使用できるセッション ID を設定します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | プロファイルの設定 |
-| sessionID | 保護プロファイルの有効期間を表すセッション ID |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionProfileSettings_SetSessionId(
-    const mip_cc_protection_profile_settings settings,
-    const char* sessionId,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionprofilesettings_setcancachelicenses"></a>MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses
-
-エンドユーザーライセンス (Eul) をローカルにキャッシュするかどうかを構成します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | プロファイルの設定 |
-| canCacheLicenses | 保護されたコンテンツを開くときにエンジンがライセンスをキャッシュする必要があるかどうか |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
-    const mip_cc_protection_profile_settings settings,
-    const bool canCacheLicenses,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionprofilesettings_sethttpdelegate"></a>MIP_CC_ProtectionProfileSettings_SetHttpDelegate
-
-既定の HTTP スタックをクライアント独自にオーバーライドする
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | HTTP デリゲートが割り当てられるプロファイル設定 |
-| httpDelegate | クライアントアプリケーションによって実装される HTTP コールバックインスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
-    const mip_cc_protection_profile_settings settings,
-    const mip_cc_http_delegate httpDelegate,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionprofilesettings_settaskdispatcherdelegate"></a>MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate
-
-既定の非同期タスクディスパッチャーをクライアント独自にオーバーライドする
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | タスクディスパッチャーデリゲートが割り当てられるプロファイル設定 |
-| taskDispatcherDelegate | クライアントアプリケーションによって実装されたタスクディスパッチャーコールバックインスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
-    const mip_cc_protection_profile_settings settings,
-    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectionprofilesettings_setcustomsettings"></a>MIP_CC_ProtectionProfileSettings_SetCustomSettings
-
-機能のゲートとテストに使用されるカスタム設定を構成します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | プロファイルの設定 |
-| Customsettings.ini | カスタム設定のキーと値のペア |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectionProfileSettings_SetCustomSettings(
-    const mip_cc_protection_profile_settings settings,
-    const mip_cc_dictionary customSettings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_releaseprotectionprofilesettings"></a>MIP_CC_ReleaseProtectionProfileSettings
-
-保護プロファイル設定に関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | リリースされる保護プロファイルの設定 |
-
-```c
-void MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings profilsettingseSettings);
-```
-
 ## <a name="mip_cc_templatedescriptor_getid"></a>MIP_CC_TemplateDescriptor_GetId
 
 テンプレート ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2421,7 +1217,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetId(
 
 名前を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2442,7 +1238,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetNameSize(
 
 テンプレート名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2469,7 +1265,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetName(
 
 説明を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2490,7 +1286,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetDescriptionSize(
 
 テンプレートの説明を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2517,7 +1313,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetDescription(
 
 テンプレート記述子に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2527,53 +1323,11 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetDescription(
 void MIP_CC_ReleaseTemplateDescriptor(mip_cc_template_descriptor templateDescriptor);
 ```
 
-## <a name="mip_cc_action_gettype"></a>MIP_CC_Action_GetType
-
-アクションの型を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| action | アクション |
-| actionType | Outputアクションの種類 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_Action_GetType(
-    const mip_cc_action action,
-    mip_cc_action_type* actionType,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_action_getid"></a>MIP_CC_Action_GetId
-
-アクションの ID を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| action | アクション |
-| id | Output一意のアクション ID |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_Action_GetId(
-    const mip_cc_action action,
-    mip_cc_guid* id,
-    mip_cc_error* errorInfo);
-```
-
 ## <a name="mip_cc_actionresult_getactions"></a>MIP_CC_ActionResult_GetActions
 
 アクションの結果を構成するアクションを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2598,7 +1352,7 @@ mip_cc_result MIP_CC_ActionResult_GetActions(
 
 アクションの結果に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2612,7 +1366,7 @@ void MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
 
 "コンテンツフッターの追加" アクションの UI 要素名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2633,7 +1387,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementNameSize(
 
 "コンテンツフッターの追加" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2660,7 +1414,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
 
 "コンテンツフッターの追加" アクションのテキストを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2681,7 +1435,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetTextSize(
 
 "コンテンツフッターの追加" アクションのテキストを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2708,7 +1462,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetText(
 
 "コンテンツフッターの追加" アクションのフォント名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2729,7 +1483,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontNameSize(
 
 "コンテンツフッターの追加" アクションのフォント名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2756,7 +1510,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
 
 整数のフォントサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2777,7 +1531,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontSize(
 
 "コンテンツフッターの追加" アクションのフォントの色を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2798,7 +1552,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColorSize(
 
 "コンテンツフッターの追加" アクションのフォントの色 (例、"#000000") を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2825,7 +1579,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColor(
 
 配置を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2846,7 +1600,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetAlignment(
 
 余白のサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2867,7 +1621,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetMargin(
 
 "コンテンツヘッダーの追加" アクションの UI 要素名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2888,7 +1642,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
 
 "コンテンツヘッダーの追加" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2915,7 +1669,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
 
 "コンテンツヘッダーの追加" アクションのテキストを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2936,7 +1690,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetTextSize(
 
 "コンテンツヘッダーの追加" アクションのテキストを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2963,7 +1717,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
 
 "コンテンツヘッダーの追加" アクションのフォント名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2984,7 +1738,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontNameSize(
 
 "コンテンツヘッダーの追加" アクションのフォント名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3011,7 +1765,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
 
 整数のフォントサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3032,7 +1786,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontSize(
 
 "コンテンツヘッダーの追加" アクションのフォントの色を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3053,7 +1807,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColorSize(
 
 "コンテンツヘッダーの追加" アクションのフォントの色 (例、"#000000") を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3080,7 +1834,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColor(
 
 配置を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3101,7 +1855,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetAlignment(
 
 余白のサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3122,7 +1876,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetMargin(
 
 "透かしの追加" アクションの UI 要素名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3143,7 +1897,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementNameSize(
 
 "透かしの追加" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3170,7 +1924,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
 
 透かしのレイアウトを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3191,7 +1945,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetLayout(
 
 "透かしの追加" アクションのテキストを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3212,7 +1966,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetTextSize(
 
 "透かしの追加" アクションのテキストを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3239,7 +1993,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetText(
 
 "透かしの追加" アクションのフォント名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3260,7 +2014,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontNameSize(
 
 "透かしの追加" アクションのフォント名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3287,7 +2041,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
 
 整数のフォントサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3308,7 +2062,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontSize(
 
 "透かしの追加" アクションのフォントの色を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3329,7 +2083,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColorSize(
 
 "透かしの追加" アクションのフォントの色 (例、"#000000") を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3356,7 +2110,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColor(
 
 コンテンツラベルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3370,11 +2124,11 @@ void MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
 
 ラベルが適用された時刻を取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| contentLabel | ラベル |
+| contentLabel | Label |
 | creationTime | Outputラベルがドキュメントに適用された時刻 (エポックからの秒単位) |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3391,11 +2145,11 @@ mip_cc_result MIP_CC_ContentLabel_GetCreationTime(
 
 ラベルの割り当て方法を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| contentLabel | ラベル |
+| contentLabel | Label |
 | assignmentMethod | Output割り当て方法 (例: ' standard ' または ' privileged ') |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3412,11 +2166,11 @@ mip_cc_result MIP_CC_ContentLabel_GetAssignmentMethod(
 
 拡張プロパティを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| contentLabel | ラベル |
+| contentLabel | Label |
 | properties | Output拡張プロパティのディクショナリ、呼び出し元によって所有されているメモリ |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3435,11 +2189,11 @@ mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
 
 ラベルによって保護が適用されたかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| contentLabel | ラベル |
+| contentLabel | Label |
 | Isprotectionの Edbylabel | Outputドキュメントが保護されていて、このラベルによって保護が明示的に適用されている場合。 |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3456,7 +2210,7 @@ mip_cc_result MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
 
 コンテンツラベルのインスタンスから汎用ラベルのプロパティを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3479,7 +2233,7 @@ mip_cc_result MIP_CC_ContentLabel_GetLabel(
 
 "カスタム" アクションの名前を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3500,7 +2254,7 @@ mip_cc_result MIP_CC_CustomAction_GetNameSize(
 
 "カスタム" アクションの名前を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3527,7 +2281,7 @@ mip_cc_result MIP_CC_CustomAction_GetName(
 
 "カスタム" アクションのプロパティを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3546,37 +2300,11 @@ mip_cc_result MIP_CC_CustomAction_GetProperties(
     mip_cc_error* errorInfo);
 ```
 
-## <a name="mip_cc_metadata_callback"></a>mip_cc_metadata_callback
-
-名前/プレフィックスでフィルター処理されたドキュメント metatdata を取得するためのコールバック関数定義
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| names | 結果に含めるメタデータキー名の配列 |
-| namesSize | ' Names ' 配列内の値の数 |
-| namePrefixes | 結果に含めるメタデータキー名プレフィックスの配列 |
-| namePrefixesSize | ' NamesPrefixes ' 配列内の値の数 |
-| context | API 呼び出しからコールバックに渡されたアプリケーションコンテキスト不透明 |
-| metadata | Outputクライアントアプリケーションによって作成されたメタデータキー/値のディクショナリ。 このディクショナリは MIP によって解放されます。 |
-
-```c
-MIP_CC_CALLBACK(mip_cc_metadata_callback,
-    void,
-    const char**,
-    const int64_t,
-    const char**,
-    const int64_t,
-    const void*,
-    mip_cc_metadata_dictionary*);
-```
-
 ## <a name="mip_cc_releaselabel"></a>MIP_CC_ReleaseLabel
 
 ラベルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3590,11 +2318,11 @@ void MIP_CC_ReleaseLabel(mip_cc_label label);
 
 ラベル ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | labelId | Outputラベル ID |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3611,11 +2339,11 @@ mip_cc_result MIP_CC_Label_GetId(
 
 名前を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | nameSize | Output名前を保持するバッファーのサイズ (文字数) |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3632,11 +2360,11 @@ mip_cc_result MIP_CC_Label_GetNameSize(
 
 ラベル名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | nameBuffer | Output名前がコピーされるバッファー。 |
 | nameBufferSize | NameBuffer のサイズ (文字数)。 |
 | actualNameSize | Outputバッファーに書き込まれた文字数 |
@@ -3659,11 +2387,11 @@ mip_cc_result MIP_CC_Label_GetName(
 
 説明を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | 説明のサイズ | Output説明を保持するバッファーのサイズ (文字数) |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3680,11 +2408,11 @@ mip_cc_result MIP_CC_Label_GetDescriptionSize(
 
 ラベルの説明を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | descriptionBuffer | Output説明のコピー先となるバッファー。 |
 | descriptionBufferSize | DescriptionBuffer のサイズ (文字数)。 |
 | actualDescriptionSize | Outputバッファーに書き込まれた文字数 |
@@ -3707,11 +2435,11 @@ mip_cc_result MIP_CC_Label_GetDescription(
 
 色を格納するために必要なバッファーのサイズを取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | colorSize | Output色を保持するバッファーのサイズ (文字数) |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3728,11 +2456,11 @@ mip_cc_result MIP_CC_Label_GetColorSize(
 
 ラベルの色を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | colorBuffer | Output色のコピー先となるバッファー (#RRGGBB 形式)。 |
 | colorBufferSize | ColorBuffer のサイズ (文字数)。 |
 | actualColorSize | Outputバッファーに書き込まれた文字数 |
@@ -3755,11 +2483,11 @@ mip_cc_result MIP_CC_Label_GetColor(
 
 ラベルの感度レベルを取得します。 値が大きいほど、より機密性が高いことを意味します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | 区別 | Output感度レベル |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3776,11 +2504,11 @@ mip_cc_result MIP_CC_Label_GetSensitivity(
 
 ツールヒントを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | tooltipSize | Outputツールヒントを保持するバッファーのサイズ (文字数) |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3797,11 +2525,11 @@ mip_cc_result MIP_CC_Label_GetTooltipSize(
 
 ラベルのツールヒントを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | tooltipBuffer | Outputツールヒントがにコピーされるバッファー。 |
 | tooltipBufferSize | TooltipBuffer のサイズ (文字数)。 |
 | actualTooltipSize | Outputバッファーに書き込まれた文字数 |
@@ -3824,11 +2552,11 @@ mip_cc_result MIP_CC_Label_GetTooltip(
 
 自動分類ツールヒントを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | tooltipSize | Outputツールヒントを保持するバッファーのサイズ (文字数) |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3845,11 +2573,11 @@ mip_cc_result MIP_CC_Label_GetAutoTooltipSize(
 
 ラベルの自動分類ツールヒントを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | tooltipBuffer | Outputツールヒントがにコピーされるバッファー。 |
 | tooltipBufferSize | TooltipBuffer のサイズ (文字数)。 |
 | actualTooltipSize | Outputバッファーに書き込まれた文字数 |
@@ -3872,11 +2600,11 @@ mip_cc_result MIP_CC_Label_GetAutoTooltip(
 
 ラベルがアクティブかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | isActive | Outputラベルがアクティブであると見なされるかどうか。 |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3895,11 +2623,11 @@ mip_cc_result MIP_CC_Label_IsActive(
 
 親ラベル (存在する場合) を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | parent | Output親ラベル (存在する場合)、それ以外の場合は null |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3916,11 +2644,11 @@ mip_cc_result MIP_CC_Label_GetParent(
 
 子ラベルの数を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | childrenSize | Output子の数 |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3937,11 +2665,11 @@ mip_cc_result MIP_CC_Label_GetChildrenSize(
 
 子ラベルを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | childrenBuffer | Output子ラベルをコピーするバッファー。 子ラベル |
 | childrenBufferSize | ChildrenBuffer のサイズ (ラベルの数)。 |
 | actualChildrenSize | Outputバッファーに書き込まれた子ラベルの数 |
@@ -3964,11 +2692,11 @@ mip_cc_result MIP_CC_Label_GetChildren(
 
 ラベルのポリシーで定義されたカスタム設定を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| label | ラベル |
+| label | Label |
 | settings | Output呼び出し元が所有する設定のディクショナリ |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -3987,7 +2715,7 @@ mip_cc_result MIP_CC_Label_GetCustomSettings(
 
 削除する "メタデータ" アクションのメタデータを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3997,7 +2725,7 @@ mip_cc_result MIP_CC_Label_GetCustomSettings(
 
 **Return**: 成功または失敗を示す結果コード
 
-**注**: メタデータを追加する前にメタデータを削除する必要がある MIP_CC_ReleaseStringList @noteを呼び出すことによって、呼び出し元によって ' metadatanames 変数 ' 変数を解放する必要があります 
+**注**: メタデータを @note 追加する前にメタデータを削除する必要がある MIP_CC_ReleaseStringList を呼び出すことによって、呼び出し元によって ' metadatanames 変数 ' 変数を解放する必要があります 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
@@ -4010,7 +2738,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
 
 追加する "メタデータ" アクションのメタデータを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4020,7 +2748,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
 
 **Return**: 成功または失敗を示す結果コード
 
-**注**: メタデータを追加する前にメタデータを削除する必要が@noteある MIP_CC_ReleaseDictionary を呼び出すことによって、' metadata ' 変数を呼び出し元が解放する必要があります 
+**注**: メタデータを @note 追加する前にメタデータを削除する必要がある MIP_CC_ReleaseDictionary を呼び出すことによって、' metadata ' 変数を呼び出し元が解放する必要があります 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
@@ -4033,7 +2761,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
 
 文字列のキー/値の辞書を作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4058,7 +2786,7 @@ mip_cc_result MIP_CC_CreateMetadataDictionary(
 
 ディクショナリを構成するメタデータエントリを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4083,7 +2811,7 @@ mip_cc_result MIP_CC_MetadataDictionary_GetEntries(
 
 ディクショナリに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4093,834 +2821,11 @@ mip_cc_result MIP_CC_MetadataDictionary_GetEntries(
 void MIP_CC_ReleaseMetadataDictionary(mip_cc_metadata_dictionary dictionary);
 ```
 
-## <a name="mip_cc_releasepolicyengine"></a>MIP_CC_ReleasePolicyEngine
-
-ポリシーエンジンに関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジンを解放する |
-
-```c
-void MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
-```
-
-## <a name="mip_cc_policyengine_getengineidsize"></a>MIP_CC_PolicyEngine_GetEngineIdSize
-
-エンジン ID に必要なバッファーのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| idSize | Outputエンジン ID を保持するバッファーのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetEngineIdSize(
-    const mip_cc_policy_engine engine,
-    int64_t* idSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getengineid"></a>MIP_CC_PolicyEngine_GetEngineId
-
-エンジン ID を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| idBuffer | OutputId がコピーされるバッファー。 |
-| idBufferSize | IdBuffer のサイズ (文字数)。 |
-| actualIdSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: idbuffer が null または不十分な場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualIdSize が必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetEngineId(
-    const mip_cc_policy_engine engine,
-    char* idBuffer,
-    const int64_t idBufferSize,
-    int64_t* actualIdSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getmoreinfourlsize"></a>MIP_CC_PolicyEngine_GetMoreInfoUrlSize
-
-ポリシーエンジンに関連付けられているクライアントデータのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| よりよい Infourlsize | Outputクライアントデータのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
-    const mip_cc_policy_engine engine,
-    int64_t* moreInfoUrlSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getmoreinfourl"></a>MIP_CC_PolicyEngine_GetMoreInfoUrl
-
-ポリシーエンジンに関連付けられているクライアントデータを取得する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| その他の Infourlbuffer | Outputクライアントデータがコピーされるバッファー |
-| その他の Infourlbuffersize | より多くの Infourlbuffer のサイズ (文字数)。 |
-| Actualのよりよい Infourlsize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: それよりも後の Infourlbuffer が null または不十分な場合は、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualのより適切なバッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrl(
-    const mip_cc_policy_engine engine,
-    char* moreInfoUrlBuffer,
-    const int64_t moreInfoUrlBufferSize,
-    int64_t* actualMoreInfoUrlSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_islabelingrequired"></a>MIP_CC_PolicyEngine_IsLabelingRequired
-
-ドキュメントにラベルを付ける必要があるかどうかをポリシーが指示するかどうかを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| isLabelingRequired | Outputポリシーによってドキュメントにラベルを付ける必要があるかどうか |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_IsLabelingRequired(
-    const mip_cc_policy_engine engine,
-    bool* isLabelingRequired,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getpolicyfileidsize"></a>MIP_CC_PolicyEngine_GetPolicyFileIdSize
-
-ポリシーエンジンに関連付けられているクライアントデータのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| policyFileIdSize | Outputクライアントデータのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileIdSize(
-    const mip_cc_policy_engine engine,
-    int64_t* policyFileIdSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getpolicyfileid"></a>MIP_CC_PolicyEngine_GetPolicyFileId
-
-ポリシーエンジンに関連付けられているクライアントデータを取得する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| policyFileIdBuffer | Outputクライアントデータがコピーされるバッファー |
-| policyFileIdBufferSize | PolicyFileIdBuffer のサイズ (文字数)。 |
-| actualPolicyFileIdSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: policyFileIdBuffer が null または不足している場合は MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualPolicyFileIdSize は必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileId(
-    const mip_cc_policy_engine engine,
-    char* policyFileIdBuffer,
-    const int64_t policyFileIdBufferSize,
-    int64_t* actualPolicyFileIdSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getsensitivityfileidsize"></a>MIP_CC_PolicyEngine_GetSensitivityFileIdSize
-
-ポリシーエンジンに関連付けられているクライアントデータのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| sensitivityFileIdSize | Outputクライアントデータのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
-    const mip_cc_policy_engine engine,
-    int64_t* sensitivityFileIdSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getsensitivityfileid"></a>MIP_CC_PolicyEngine_GetSensitivityFileId
-
-ポリシーエンジンに関連付けられているクライアントデータを取得する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| sensitivityFileIdBuffer | Outputクライアントデータがコピーされるバッファー |
-| sensitivityFileIdBufferSize | SensitivityFileIdBuffer のサイズ (文字数)。 |
-| actualSensitivityFileIdSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: sensitivityFileIdBuffer が null または不足している場合は MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualSensitivityFileIdSize は必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileId(
-    const mip_cc_policy_engine engine,
-    char* sensitivityFileIdBuffer,
-    const int64_t sensitivityFileIdBufferSize,
-    int64_t* actualSensitivityFileIdSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_hasclassificationrules"></a>MIP_CC_PolicyEngine_HasClassificationRules
-
-ポリシーに自動または推奨規則があるかどうかを取得します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| hasClassificationRules | Outputポリシーに自動または推奨規則があるかどうか |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_HasClassificationRules(
-    const mip_cc_policy_engine engine,
-    bool* hasClassificationRules,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getlastpolicyfetchtime"></a>MIP_CC_PolicyEngine_GetLastPolicyFetchTime
-
-ポリシーが最後にフェッチされた時刻を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| lastPolicyFetchTime | Outputポリシーが最後にフェッチされた時刻 (エポックからの秒) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
-    const mip_cc_policy_engine engine,
-    int64_t* lastPolicyFetchTime,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getsensitivitylabelssize"></a>MIP_CC_PolicyEngine_GetSensitivityLabelsSize
-
-ポリシーエンジンに関連付けられている秘密度ラベルの数を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| ラベルのサイズ | Outputラベル数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
-    const mip_cc_policy_engine engine,
-    int64_t* labelsSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getsensitivitylabels"></a>MIP_CC_PolicyEngine_GetSensitivityLabels
-
-ポリシーエンジンに関連付けられている機密ラベルを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| labelBuffer | Outputラベルをコピーするバッファー。 ラベルはクライアントによって所有されています |
-| labelBufferSize | LabelBuffer のサイズ (ラベルの数)。 |
-| actualLabelsSize | Outputバッファーに書き込まれたラベルの数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: labelbuffer が null または不十分な場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualLabelsSize が必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabels(
-    const mip_cc_policy_engine engine,
-    mip_cc_label* labelBuffer,
-    const int64_t labelBufferSize,
-    int64_t* actualLabelsSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getlabelbyid"></a>MIP_CC_PolicyEngine_GetLabelById
-
-ID で感度ラベルを取得します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| labelId | ラベル ID |
-| label | Output感度ラベル。 この値は呼び出し元によって所有されており、MIP_CC_ReleaseLabel と共に解放する必要があります。 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetLabelById(
-    const mip_cc_policy_engine engine,
-    const char* labelId,
-    mip_cc_label* label,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getsensitivitytypessize"></a>MIP_CC_PolicyEngine_GetSensitivityTypesSize
-
-ポリシーエンジンに関連付けられている感度の種類の数を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| sensitivityTypesSize | Output感度の種類の数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesSize(
-    const mip_cc_policy_engine engine,
-    int64_t* sensitivityTypesSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getsensitivitytypes"></a>MIP_CC_PolicyEngine_GetSensitivityTypes
-
-ポリシーエンジンに関連付けられている感度の種類を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| sensitivityTypeBuffer | Output感度の種類がにコピーされるバッファー。 感度 |
-| sensitivityTypeBufferSize | SensitivityTypeBuffer のサイズ (感度の種類の数)。 |
-| actualSensitivityTypesSize | Outputバッファーに書き込まれた感度の種類の数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: sensitivityTypeBuffer が null または不足している場合は MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualSensitivityTypesSize は必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypes(
-    const mip_cc_policy_engine engine,
-    mip_cc_sensitivity_type* sensitivityTypeBuffer,
-    const int64_t sensitivityTypeBufferSize,
-    int64_t* actualSensitivityTypesSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_createpolicyhandler"></a>MIP_CC_PolicyEngine_CreatePolicyHandler
-
-ポリシー関連の関数を実行するポリシーハンドラーを作成する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| isAuditDiscoveryEnabled | 監査検出が有効かどうか |
-| handler | Output新しく作成されたポリシーハンドラーインスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_CreatePolicyHandler(
-    const mip_cc_policy_engine engine,
-    const bool isAuditDiscoveryEnabled,
-    mip_cc_policy_handler* handler,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_sendapplicationauditevent"></a>MIP_CC_PolicyEngine_SendApplicationAuditEvent
-
-アプリケーション固有のイベントを監査パイプラインに記録します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| level | イベントのレベル: 情報/エラー/警告 |
-| eventType | イベントの種類の説明 |
-| eventData | イベントに関連付けられているデータ |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_SendApplicationAuditEvent(
-    const mip_cc_policy_engine engine,
-    const char* level,
-    const char* eventType,
-    const char* eventData,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_gettenantidsize"></a>MIP_CC_PolicyEngine_GetTenantIdSize
-
-テナント ID のサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| アンチサイズ | Outputテナント ID のサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetTenantIdSize(
-    const mip_cc_policy_engine engine,
-    int64_t* tenantIdSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_gettenantid"></a>MIP_CC_PolicyEngine_GetTenantId
-
-テナント ID を取得します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| このようにして、 | Outputテナント ID がコピーされるバッファー。 |
-| このようにして、 | 表示されていない Dbuffer のサイズ (文字数)。 |
-| Actualdsize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: "格納されていない dbuffer" が null または "不十分" の場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、Actualのアンチサイズは必要最小限のバッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetTenantId(
-    const mip_cc_policy_engine engine,
-    char* tenantIdBuffer,
-    const int64_t tenantIdBufferSize,
-    int64_t* actualTenantIdSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getpolicydataxmlsize"></a>MIP_CC_PolicyEngine_GetPolicyDataXmlSize
-
-ポリシーデータ xml のサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| xmlSize | Outputポリシーデータ xml のサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
-    const mip_cc_policy_engine engine,
-    int64_t* xmlSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getpolicydataxml"></a>MIP_CC_PolicyEngine_GetPolicyDataXml
-
-ポリシーデータ xml を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| xmlBuffer | OutputXml がコピーされるバッファー。 |
-| xmlBufferSize | XmlBuffer のサイズ (文字数)。 |
-| actualXmlSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: xmlbuffer が null または不十分な場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualxmlsize が必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
-    const mip_cc_policy_engine engine,
-    char* xmlBuffer,
-    const int64_t xmlBufferSize,
-    int64_t* actualXmlSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getsensitivitytypesdataxmlsize"></a>MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize
-
-感度の種類のデータ xml のサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| xmlSize | Outputポリシーデータ xml のサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
-    const mip_cc_policy_engine engine,
-    int64_t* xmlSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getsensitivitytypesdataxml"></a>MIP_CC_PolicyEngine_GetSensitivityTypesDataXml
-
-感度の種類のデータ xml を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| xmlBuffer | OutputXml がコピーされるバッファー。 |
-| xmlBufferSize | XmlBuffer のサイズ (文字数)。 |
-| actualXmlSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: xmlbuffer が null または不十分な場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualxmlsize が必要な最小バッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
-    const mip_cc_policy_engine engine,
-    char* xmlBuffer,
-    const int64_t xmlBufferSize,
-    int64_t* actualXmlSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getclientdatasize"></a>MIP_CC_PolicyEngine_GetClientDataSize
-
-ポリシーエンジンに関連付けられているクライアントデータのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| clientDataSize | Outputクライアントデータのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetClientDataSize(
-    const mip_cc_policy_engine engine,
-    int64_t* clientDataSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyengine_getclientdata"></a>MIP_CC_PolicyEngine_GetClientData
-
-ポリシーエンジンに関連付けられているクライアントデータを取得する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| エンジン | ポリシーエンジン |
-| clientDataBuffer | Outputクライアントデータがコピーされるバッファー |
-| clientDataBufferSize | ClientDataBuffer のサイズ (文字数)。 |
-| actualClientDataSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: clientDataBuffer が null または不足している場合は MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualClientDataSize は必要最小限のバッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngine_GetClientData(
-    const mip_cc_policy_engine engine,
-    char* clientDataBuffer,
-    const int64_t clientDataBufferSize,
-    int64_t* actualClientDataSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_createpolicyenginesettingswithidentity"></a>MIP_CC_CreatePolicyEngineSettingsWithIdentity
-
-新しいポリシーエンジンを作成するために使用される設定オブジェクトを作成する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| identity | PolicyEngine に関連付けられる id |
-| clientData | エンジンと共に保存されるカスタマイズ可能なクライアントデータ |
-| locale | テキスト結果が出力されるロケール |
-| loadSensitivityTypes | 感度の種類のデータ (分類の場合) も読み込むかどうか |
-| settings | Output新しく作成された設定インスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: アプリケーションが後で MIP_CC_PolicyEngine_GetSensitivityTypes を呼び出す必要がある場合にのみ、' loadSensitivityTypes ' を ' true ' にする必要があります。 それ以外の場合、不要な HTTP 操作を回避するには、false にする必要があります。 
-
-```c
-mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
-    const mip_cc_identity* identity,
-    const char* clientData,
-    const char* locale,
-    bool loadSensitivityTypes,
-    mip_cc_policy_engine_settings* settings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyenginesettings_setclientdata"></a>MIP_CC_PolicyEngineSettings_SetClientData
-
-このエンジンと共に不透明に格納され、セッション間で保持されるクライアントデータを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| clientData | クライアントデータ |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngineSettings_SetClientData(
-    const mip_cc_policy_engine_settings settings,
-    const char* clientData,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyenginesettings_setcustomsettings"></a>MIP_CC_PolicyEngineSettings_SetCustomSettings
-
-機能のゲートとテストに使用されるカスタム設定を構成します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| Customsettings.ini | カスタム設定のキーと値のペア |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngineSettings_SetCustomSettings(
-    const mip_cc_policy_engine_settings settings,
-    const mip_cc_dictionary customSettings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyenginesettings_setsessionid"></a>MIP_CC_PolicyEngineSettings_SetSessionId
-
-ログとテレメトリを関連付けるために使用できるセッション ID を設定します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| sessionID | ポリシーエンジンの有効期間を表すセッション ID |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngineSettings_SetSessionId(
-    const mip_cc_policy_engine_settings settings,
-    const char* sessionId,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyenginesettings_setcloud"></a>MIP_CC_PolicyEngineSettings_SetCloud
-
-すべてのサービス要求のエンドポイント Url に影響するクラウドを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| クラウド | クラウド識別子 (既定 = 不明) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: cloud が指定されていない場合、既定ではグローバルクラウドになります。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngineSettings_SetCloud(
-    const mip_cc_policy_engine_settings settings,
-    const mip_cc_cloud cloud,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyenginesettings_setcloudendpointbaseurl"></a>MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl
-
-すべてのサービス要求のベース URL を設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| cloudEndpointBaseUrl | ベース URL (例: 'https://dataservice.protection.outlook.com') |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: この値は読み取り専用であり、Cloud = MIP_CLOUD_CUSTOM に設定する必要があります 
-
-```c
-mip_cc_result MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
-    const mip_cc_policy_engine_settings settings,
-    const char* cloudEndpointBaseUrl,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyenginesettings_setdelegateduseremail"></a>MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail
-
-委任されたユーザーを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| delegatedUserEmail | 委任されたユーザーの電子メールアドレス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: 委任されたユーザーは、他のユーザーの代理として認証を行うユーザーまたはアプリケーションが動作しているときに指定します。 
-
-```c
-mip_cc_result MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
-    const mip_cc_policy_engine_settings settings,
-    const char* delegatedUserEmail,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyenginesettings_setlabelfilter"></a>MIP_CC_PolicyEngineSettings_SetLabelFilter
-
-ラベルフィルターを設定します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | エンジンの設定 |
-| labelFilter | ラベルフィルターを表す列挙型の既定値が設定されていない場合、hyok、doublekeyencryption |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyEngineSettings_SetLabelFilter(
-    const mip_cc_policy_engine_settings settings,
-    const mip_cc_label_filter labelFilter,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_releasepolicyenginesettings"></a>MIP_CC_ReleasePolicyEngineSettings
-
-ポリシーエンジン設定に関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | リリースされるポリシーエンジンの設定 |
-
-```c
-void MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
-```
-
 ## <a name="mip_cc_releasepolicyhandler"></a>MIP_CC_ReleasePolicyHandler
 
 ポリシーハンドラーに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4934,7 +2839,7 @@ void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
 
 ドキュメントの現在のラベルを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4959,7 +2864,7 @@ mip_cc_result MIP_CC_PolicyHandler_GetSensitivityLabel(
 
 指定された状態に基づいてポリシー規則を実行し、対応するアクションを決定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4988,7 +2893,7 @@ mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
 
 計算されたアクションが適用され、データがディスクにコミットされた後に、アプリケーションによって呼び出されます
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5011,194 +2916,11 @@ mip_cc_result MIP_CC_PolicyHandler_NotifyCommittedActions(
     mip_cc_error* errorInfo);
 ```
 
-## <a name="mip_cc_policyprofile_acquireauthtoken"></a>MIP_CC_PolicyProfile_AcquireAuthToken
-
-認証コールバックをトリガーする
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| profile | プロファイル |
-| クラウド | Azure クラウド |
-| authCallback | 呼び出される認証コールバック |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: MIP は、auth デリゲートによって返された値を使用してキャッシュしたり他の操作を実行したりすることはありません。 この関数は、MIP が認証トークンを要求するまで "ログイン" されていないアプリケーションに推奨されます。 これにより、アプリケーションは、MIP が実際に必要とする前にトークンをフェッチできます。 
-
-```c
-mip_cc_result MIP_CC_PolicyProfile_AcquireAuthToken(
-    const mip_cc_policy_profile profile,
-    const mip_cc_cloud cloud,
-    const mip_cc_auth_callback authCallback,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_loadpolicyprofile"></a>MIP_CC_LoadPolicyProfile
-
-プロファイルの読み込み
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | プロファイルの設定 |
-| profile | Output新しく作成されたポリシープロファイルインスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_LoadPolicyProfile(
-    const mip_cc_policy_profile_settings settings,
-    mip_cc_policy_profile* profile,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_releasepolicyprofile"></a>MIP_CC_ReleasePolicyProfile
-
-ポリシープロファイルに関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| profile | リリースされるポリシープロファイル |
-
-```c
-void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
-```
-
-## <a name="mip_cc_createpolicyprofilesettings"></a>MIP_CC_CreatePolicyProfileSettings
-
-ポリシープロファイルの作成に使用される設定オブジェクトを作成する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| mipContext | すべてのプロファイルで共有するグローバルコンテキスト |
-| cacheStorageType | ストレージキャッシュの構成 |
-| authCallback | クライアントアプリケーションによって実装される認証に使用されるコールバックオブジェクト |
-| settings | Output新しく作成された設定インスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_CreatePolicyProfileSettings(
-    const mip_cc_mip_context mipContext,
-    const mip_cc_cache_storage_type cacheStorageType,
-    const mip_cc_auth_callback authCallback,
-    mip_cc_policy_profile_settings* settings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyprofilesettings_setsessionid"></a>MIP_CC_PolicyProfileSettings_SetSessionId
-
-ログとテレメトリを関連付けるために使用できるセッション ID を設定します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | プロファイルの設定 |
-| sessionID | ポリシープロファイルの有効期間を表すセッション ID |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyProfileSettings_SetSessionId(
-    const mip_cc_policy_profile_settings settings,
-    const char* sessionId,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyprofilesettings_sethttpdelegate"></a>MIP_CC_PolicyProfileSettings_SetHttpDelegate
-
-既定の HTTP スタックをクライアント独自にオーバーライドする
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | HTTP デリゲートが割り当てられるプロファイル設定 |
-| httpDelegate | クライアントアプリケーションによって実装される HTTP コールバックインスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyProfileSettings_SetHttpDelegate(
-    const mip_cc_policy_profile_settings settings,
-    const mip_cc_http_delegate httpDelegate,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyprofilesettings_settaskdispatcherdelegate"></a>MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate
-
-既定の非同期タスクディスパッチャーをクライアント独自にオーバーライドする
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | タスクディスパッチャーデリゲートが割り当てられるプロファイル設定 |
-| taskDispatcherDelegate | クライアントアプリケーションによって実装されたタスクディスパッチャーコールバックインスタンス |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
-    const mip_cc_policy_profile_settings settings,
-    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_policyprofilesettings_setcustomsettings"></a>MIP_CC_PolicyProfileSettings_SetCustomSettings
-
-機能のゲートとテストに使用されるカスタム設定を構成します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | プロファイルの設定 |
-| Customsettings.ini | カスタム設定のキーと値のペア |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_PolicyProfileSettings_SetCustomSettings(
-    const mip_cc_policy_profile_settings settings,
-    const mip_cc_dictionary customSettings,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_releasepolicyprofilesettings"></a>MIP_CC_ReleasePolicyProfileSettings
-
-ポリシープロファイル設定に関連付けられているリソースを解放する
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| settings | リリースされるポリシープロファイルの設定 |
-
-```c
-void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profileSettings);
-```
-
 ## <a name="mip_cc_protectadhocdkaction_getdoublekeyencryptionurlsize"></a>MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize
 
 2つのキー暗号化 url を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5219,7 +2941,7 @@ mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize(
 
 二重キー暗号化 url を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5242,101 +2964,11 @@ mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl(
     mip_cc_error* errorInfo);
 ```
 
-## <a name="mip_cc_protectbytemplateaction_gettemplateid"></a>MIP_CC_ProtectByTemplateAction_GetTemplateId
-
-"テンプレートによる保護" アクションのテンプレート ID を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| action | "テンプレートによる保護" アクション |
-| templateId | Output保護を定義するテンプレートの ID |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectByTemplateAction_GetTemplateId(
-    const mip_cc_action action,
-    mip_cc_guid* templateId,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectbytemplatedkaction_gettemplateid"></a>MIP_CC_ProtectByTemplateDkAction_GetTemplateId
-
-"2 つのキーで保護されるテンプレートによる保護" アクションのテンプレート ID を取得します
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| action | "テンプレートによる保護" アクション |
-| templateId | Output保護を定義するテンプレートの ID |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetTemplateId(
-    const mip_cc_action action,
-    mip_cc_guid* templateId,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurlsize"></a>MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize
-
-2つのキー暗号化 url を格納するために必要なバッファーのサイズを取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| action | "二重キーによるテンプレートによる保護" アクション |
-| urlSize | OutputUrl を保持するバッファーのサイズ (文字数) |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-```c
-mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize(
-    const mip_cc_action action,
-    int64_t* urlSize,
-    mip_cc_error* errorInfo);
-```
-
-## <a name="mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurl"></a>MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl
-
-二重キー暗号化 url を取得します。
-
-**Parameters**
-
-パラメーター | 説明
-|---|---|
-| action | "二重キーによるテンプレートによる保護" アクション |
-| urlBuffer | OutputUrl がコピーされるバッファー。 |
-| urlBufferSize | UrlBuffer のサイズ (文字数)。 |
-| actualUrlSize | Outputバッファーに書き込まれた文字数 |
-| errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
-
-**Return**: 成功または失敗を示す結果コード
-
-**注**: urlbuffer が null または不十分な場合、MIP_RESULT_ERROR_INSUFFICIENT_BUFFER が返され、actualurlsize は必要最小限のバッファーサイズに設定されます。 
-
-```c
-mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl(
-    const mip_cc_action action,
-    char* urlBuffer,
-    const int64_t urlBufferSize,
-    int64_t* actualUrlSize,
-    mip_cc_error* errorInfo);
-```
-
 ## <a name="mip_cc_protectdonotforwarddkaction_getdoublekeyencryptionurlsize"></a>MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize
 
 2つのキー暗号化 url を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5357,7 +2989,7 @@ mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize(
 
 二重キー暗号化 url を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5384,7 +3016,7 @@ mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl(
 
 削除する "コンテンツフッターの削除" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5407,7 +3039,7 @@ mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
 
 削除する "コンテンツヘッダーの削除" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5430,7 +3062,7 @@ mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
 
 削除する "透かしの削除" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5453,7 +3085,7 @@ mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
 
 秘密度の種類に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5467,7 +3099,7 @@ void MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
 
 秘密度の種類の規則パッケージ ID を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5488,7 +3120,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageIdSize(
 
 感度の種類の規則パッケージ ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5515,7 +3147,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageId(
 
 感度の種類の規則パッケージを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5536,7 +3168,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageSize(
 
 感度の種類の規則パッケージを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|

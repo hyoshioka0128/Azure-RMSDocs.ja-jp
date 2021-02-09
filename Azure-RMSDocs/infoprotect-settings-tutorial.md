@@ -4,27 +4,33 @@ description: Azure Information Protection のポリシー設定を構成して�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 78132da7a22264af3412197f1bf8c42da61e8740
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: cb31d20f3f6e03aea58228078851566d971e78a8
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927524"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806211"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル:連携させる Azure Information Protection のポリシー設定を構成する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***適用対象**:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連する内容**:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+>
+> **AIP クラシック クライアントをデプロイする** には、サポート チケットを作成してダウンロードへのアクセスを取得します。
+
+> [!TIP]
+> クラシック クライアントとは別のラベル付けクライアントを使用している場合は、Microsoft 365 のコンプライアンス ドキュメントで機密ラベルのポリシー設定の詳細を確認してください。 たとえば、「[機密ラベルについて](/microsoft-365/compliance/sensitivity-labels)」です。
 
 このチュートリアルでは、以下を実行する方法について説明します。
 > [!div class="checklist"]
@@ -44,7 +50,7 @@ ms.locfileid: "86927524"
 
 このチュートリアルを完了するための必要条件を次に示します。
 
-1. Azure Information Protection プラン 1 またはプラン 2 を含むサブスクリプション。
+1. [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプション。
     
     このプランを含むサブスクリプションを持っていない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
@@ -52,29 +58,25 @@ ms.locfileid: "86927524"
     
     これらの手順については、「[クイック スタート:Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
-3. お使いの Windows コンピューター (Windows 7 Service Pack 1 以降) に Azure Information Protection クライアント (クラシック) がインストールされている。 
-    
-    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 
-    
-    クラシック クライアントとは別のラベル付けクライアントを使用している場合は、Microsoft 365 のコンプライアンス ドキュメントで機密ラベルのポリシー設定の詳細を確認してください。 たとえば、「[機密ラベルについて](/microsoft-365/compliance/sensitivity-labels)」です。
+3. ご利用の Windows コンピューター (Windows 7 Service Pack 1 以降) にインストールされている Azure Information Protection クラシック クライアント。 
 
 4. 次のいずれかのカテゴリから Office アプリにサインインしている。
     
-    - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、[Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
+    - Office アプリ。[更新チャネルによる Microsoft 365 アプリにサポートされている表](/officeupdates/update-history-microsoft365-apps-by-date)に記載されているバージョンについては、ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合は、Microsoft 365 Apps for Business または Microsoft 365 Business Premium の Office アプリの最小バージョン 1805、ビルド 9330.2078
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)。
+    - Microsoft 365 Apps for enterprise。
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019。
+    - Office Professional Plus 2019
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016。
+    - Office Professional Plus 2016
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 Service Pack 1。
+    - Office Professional Plus 2013 Service Pack 1
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 Service Pack 2。
+    - Office Professional Plus 2010 Service Pack 2
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
-では、始めましょう。
+では、始めましょう。 「[Azure Information Protection ポリシーを編集する](#edit-the-azure-information-protection-policy)」に進みます。
 
 ## <a name="edit-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを編集する
 

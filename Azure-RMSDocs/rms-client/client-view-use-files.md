@@ -1,34 +1,38 @@
 ---
-title: Azure Information Protection ビューアーで保護されたファイルを表示する
-description: Azure Information Protection ビューアーをインストールする必要がある保護されたファイルを表示して使用する方法について説明します。
-author: mlottner
-ms.author: mlottner
+title: Azure Information Protection クラシッククライアントビューアーで保護されたファイルを表示する
+description: Azure Information Protection クラシッククライアントビューアーがインストールされている必要がある、保護されたファイルを表示して使用する方法について説明します。
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 1/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
+ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: fe3309ac4ca51668b0c351f90baa79c97607e96a
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 5a0bbc3160784259f3bf6799135b6cb82fb64693
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298038"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807044"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>ユーザーガイド: Azure Information Protection ビューアーで保護されたファイルを表示する
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-classic-client-viewer"></a>ユーザーガイド: Azure Information Protection 従来のクライアントビューアーで保護されたファイルを表示する
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
+>***適用対象**: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8 *
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***関連**: [Windows 用のクラシッククライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)ます。 統一されたラベル付けクライアントについては、「 [ユニファイドクライアントユーザーガイド](clientv2-view-use-files.md)」を参照してください。
+
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure Portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 多くの場合、保護されたファイルは開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 
-ファイルがすぐに開かない場合は、**Azure Information Protection ビューアー**で開くことができる場合があります。 このビューアーでは、保護されたテキスト ファイル、保護された画像ファイル、保護された PDF ファイル、およびファイル名拡張子が **.pfile** のすべてのファイルを開くことができます。
+ファイルがすぐに開かない場合は、**Azure Information Protection ビューアー** で開くことができる場合があります。 このビューアーでは、保護されたテキスト ファイル、保護された画像ファイル、保護された PDF ファイル、およびファイル名拡張子が **.pfile** のすべてのファイルを開くことができます。
 
 このビューアーは、Azure Information Protection クライアントの一部として自動的にインストールされますが、個別にインストールすることもできます。 クライアントとビューアーの両方のクライアントは、Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) ページからインストールできます。 クライアントのインストールの詳細については、「[Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)」を参照してください。
 
@@ -37,7 +41,7 @@ ms.locfileid: "87298038"
 > 
 > 別組織の誰かから保護されたドキュメントを送信された場合、またはお使いの PC でローカル管理者のアクセス許可を持っていない場合は、ビューアーをインストールします。
 
-保護されたドキュメントを開くには、アプリケーションが "RMS 対応" である必要があります。 RMS 対応アプリケーションは、たとえば Office アプリや Azure Information Protection ビューアーなどです。 種類とサポートされているデバイスごとにアプリケーションの一覧を表示するには、「 [RMS 対応 applications (RMS アプリケーション](../requirements-applications.md)テーブル)」を参照してください。
+保護されたドキュメントを開くには、アプリケーションが "RMS 対応" である必要があります。 RMS 対応アプリケーションは、たとえば Office アプリや Azure Information Protection ビューアーなどです。 種類とサポートされているデバイスごとにアプリケーションの一覧を表示するには、「 [RMS 対応 applications (RMS アプリケーション](../requirements-applications.md) テーブル)」を参照してください。
   
 ## <a name="messagerpmsg-as-an-email-attachment"></a>電子メールの添付ファイルとしての Message.rpmsg
 
@@ -49,7 +53,7 @@ ms.locfileid: "87298038"
 
 保護されたファイルを表示するには、そのファイルの保護に使用された Rights Management サービスで、ユーザーがファイルを表示する権限を持つことを先に確認する必要があります。 サービスはこの確認にユーザー名とパスワードを使用します。 場合によっては、これらの資格情報がキャッシュに格納されていて、サインインを求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
 
-組織がユーザーのためにクラウドベースのアカウントを用意しておらず (Office 365 または Azure)、また、そのオンプレミス版 (AD RMS) も利用していない場合、次の 2 つの選択肢があります。
+使用するクラウドベースのアカウント (Microsoft 365 または Azure の場合) が組織になく、同等のオンプレミスバージョン (AD RMS) を使用していない場合は、次の2つの方法があります。
 
 - 保護されているメールが届いた場合、指示に従い、ご利用のソーシャル ID プロバイダー (Gmail アカウントの Google など) でサインインするか、ワンタイム パスコードを申請します。
 

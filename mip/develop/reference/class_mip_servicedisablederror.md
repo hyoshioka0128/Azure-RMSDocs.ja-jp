@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ef521d9330df410bc14ad6ae856b837fc615cfbb
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: e7f3ec6e3e02047607f696acd0a14cd632b5b0e9
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760684"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214288"
 ---
 # <a name="class-servicedisablederror"></a>ServiceDisabledError クラス 
 サービスが無効になっているため、ユーザーはコンテンツにアクセスできませんでした。
@@ -31,10 +31,12 @@ ms.locfileid: "81760684"
 **戻り値**: サービスが無効になっているエクステント
   
 ### <a name="extent-enum"></a>エクステント列挙型
+
+サービスを無効にする範囲について説明します。
+
  値                         | 説明                                
 --------------------------------|---------------------------------------------
 User            | ユーザーのサービスが無効になっています。
 Device            | デバイスのサービスが無効になっています。
 プラットフォーム            | プラットフォームでサービスが無効になっています。
 Tenant            | テナントのサービスが無効になっています。
-サービスを無効にする範囲について説明します。

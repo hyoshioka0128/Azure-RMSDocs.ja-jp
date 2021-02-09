@@ -13,22 +13,29 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7dd617a61071542196828a4701ab0c1db8336ee
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: 1a52e867d72b2dabc910bfb4e0378c04ed03a5ab
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802285"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809506"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection のクラシック クライアント** と **ラベル管理** は、**2021 年 3 月 31 日** をもって **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection を組織に合わせてデプロイして構成したら、ユーザー、管理者、およびヘルプ デスクにヘルプおよびガイダンスを提供します。
 
 -   **エンドユーザー情報**
     
-    機密情報が含まれるドキュメントおよび電子メールを保護する方法とタイミングについて知らせます。 ユーザーが新しいプロセスを導入するのではなく、既に理解しているプロセスに対して追加の手順を組み込むことができるように、可能な限り、既存のワークフローに対してこの情報を提供します。 組織のビジネスに固有のメリット (およびリスク) を知らせ、どのようなときにファイルおよび電子メールを保護する必要があるかについてのガイダンスを提供します。 [テンプレート](configure-policy-templates.md)を構成した場合、ユーザーがテンプレートの名前と説明だけでは適切なテンプレートを選択できないときにどのテンプレートを選択すればよいのかについてのガイダンスを提供します。
+    機密情報が含まれるドキュメントおよび電子メールを保護する方法とタイミングについて知らせます。 ユーザーが新しいプロセスを導入するのではなく、既に理解しているプロセスに対して追加の手順を組み込むことができるように、可能な限り、既存のワークフローに対してこの情報を提供します。 組織のビジネスに固有のメリット (およびリスク) を知らせ、どのようなときにファイルおよび電子メールを保護する必要があるかについてのガイダンスを提供します。 
+
+    AIP クラシッククライアントを使用していて、 [テンプレート](configure-policy-templates.md)が構成されている場合は、テンプレート名と説明が適切なテンプレートを選択するのに十分でない場合は、どれを選択すればよいかについての説明を提供します。
     
     > [!TIP]
     > エンドユーザー向けの例示ビデオ:
@@ -43,15 +50,15 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
 -   **ヘルプデスクの情報**
     
-    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)に関するページを参照してください。
+    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの[インストールのチェックとトラブルシューティング](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting)に関するページを参照してください。
     
-    保護されたドキュメントに対する完全な権限を持つ正当な要求がある場合は、Azure Information Protection[スーパーユーザー機能](configure-super-users.md)を使用して、ヘルプデスクにこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
+    保護されたドキュメントに対する完全な権限を持つ正当な要求がある場合は、Azure Information Protection [スーパーユーザー機能](configure-super-users.md)を使用して、ヘルプデスクにこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
     
     また、ユーザーから報告される可能性がある典型的な問題には、以下のようなものがあります。
     
     - **サインインのヘルプ**
         
-        Azure Rights Management サービスがユーザーを認証するときにキャッシュされた資格情報を使用できない場合、資格情報の入力を要求される場合があります。 通常、必要な資格情報は、Office 365 テナントまたは Azure Active Directory テナントに関連付けられている、ユーザーの企業または学校のアカウントとパスワードです。 Azure Rights Management サービスでは Azure AD アカウントを認証できますが、Microsoft アカウントが認証に使用されている場合は、一部のアプリケーションでも、保護されたコンテンツを開くことができます。 [詳細情報](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+        Azure Rights Management サービスがユーザーを認証するときにキャッシュされた資格情報を使用できない場合、資格情報の入力を要求される場合があります。 通常、必要な資格情報は、Office 365 テナントまたは Azure Active Directory テナントに関連付けられている、ユーザーの所属する企業または学校のアカウントとパスワードです。 Azure Rights Management サービスでは Azure AD アカウントを認証できますが、Microsoft アカウントが認証に使用されている場合は、一部のアプリケーションでも、保護されたコンテンツを開くことができます。 [詳細情報](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Azure Rights Management サービスを使用するアプリケーションを実行しているときに資格情報を要求された場合、どのアカウントを使用すればいいのかについてユーザーとヘルプ デスクにガイダンスを提供します。
         
@@ -61,10 +68,11 @@ Azure Information Protection を組織に合わせてデプロイして構成し
         
         特定のユーザーまたはグループによる、保護されたコンテンツの保護や使用を Azure Active Directory によって承認できることを確認するには、[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)の検証チェックを使用します。
         
-        保護されたコンテンツを開くことはできるが必要な権限を持っていないという報告がユーザーからあった場合、そのユーザーが Rights Management テンプレート用に構成された正しいグループに含まれていないことが問題である可能性があります。 または、そのユーザーまたはグループに[テンプレートの再構成が必要である](configure-policy-templates.md)という問題の場合があります。 
-        
         ユーザーの持つ権限が想定通りでない場合は、[使用権限テーブル](configure-usage-rights.md#usage-rights-and-descriptions)で権限に関する説明とアプリケーション固有の実装について確認してください。
 
+        **従来のクライアントのみ**: 保護されたコンテンツを開くことができても、必要な権限がないことをユーザーが報告した場合、ユーザーが Rights Management テンプレート用に構成されている正しいグループに含まれていない可能性があります。 または、そのユーザーまたはグループに[テンプレートの再構成が必要である](configure-policy-templates.md)という問題の場合があります。 
+        
+        
 次のセクションでは、ドキュメントと電子メールを保護する際に役立つアプリケーション固有の情報を示します。
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの情報保護の使用
@@ -73,20 +81,21 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 
 Azure Information Protection クライアントを使用すると、ユーザーがドキュメントと電子メールを簡単に保護できるだけでなく、保護したドキュメントをユーザー自身で追跡できます。 また、過去に承認済みのユーザーが追跡対象のドキュメントにアクセスする必要がない場合は、そのドキュメントを無効にすることもできます。
 
-この Windows コンピューター用クライアントを使用する手順については、「[Azure Information Protection クライアント ユーザー ガイド](./rms-client/client-user-guide.md)」を参照してください。
+この Windows コンピューター用クライアントを使用する手順については、「[Azure Information Protection クライアント ユーザー ガイド](./rms-client/clientv2-user-guide.md)」を参照してください。
 
 
-## <a name="using-information-protection-with-office365-office-2019-office-2016-or-office2013"></a>Office 365、Office 2019、Office 2016、または Office 2013 での情報保護の使用
-Azure Rights Management サービスを使用していて、Azure Information Protection クライアントをインストールしていない場合、Office デスクトップ アプリに Azure Information Protection バーが表示されません。 リボンには **[保護]** ボタンが表示されず、エクスプローラーに **[分類して保護する]** も表示されません。 これらの追加によって、ユーザーはドキュメントと電子メールを簡単に保護できます。 これらのユーザーについては、次のような手順に従う必要があります。
+## <a name="using-information-protection-with-office-365-office-2019-office-2016-or-office-2013"></a>Office 365、Office 2019、Office 2016、または Office 2013 での情報保護の使用
+
+Azure Rights Management サービスを使用していて、Azure Information Protection クライアントをインストールしていない場合、Office デスクトップ アプリに Azure Information Protection バーが表示されません。 また、リボンに [ **感度** ] ボタンが表示されず、ファイルエクスプローラーから **分類および保護** されます。 これらの追加によって、ユーザーはドキュメントと電子メールを簡単に保護できます。 これらのユーザーについては、次のような手順に従う必要があります。
 
 > [!TIP]
 > これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
 
-#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Office 365 ProPlus の Word でドキュメントを保護するには
+#### <a name="to-protect-a-document-in-word-from-office-365-proplus"></a>Office 365 ProPlus の Word でドキュメントを保護するには
 
 1.  Microsoft Word で、ドキュメントを作成します。
 
-2.  [**ファイル**] メニューの [**情報**] [ドキュメントの保護] [アクセスの制限] を使用  >  **Protect Document**  >   **Restrict Access**します。
+2.  [**ファイル**] メニューの [**情報**] [ドキュメントの保護] [アクセスの制限] を使用  >    >   します。
 
 3. テンプレートを選択して適切な使用権限をすぐに適用するか、**[アクセスの制限]** を選択して使用権限を自分で選択します。
 
@@ -95,21 +104,21 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 3.  ドキュメントを保存します。
 
-他のユーザーがドキュメントを開いている場合、それらのユーザーが最初に認証されます。 ドキュメントを開く権限がない場合、ドキュメントは開きません。 ドキュメントを開く権限がある場合は、そのユーザーに対して指定された制限付き[使用権限](configure-usage-rights.md)で開きます。 
+他のユーザーがドキュメントを開いている場合、それらのユーザーが最初に認証されます。 ドキュメントを開く権限がない場合、ドキュメントは開きません。 ドキュメントを開く権限がある場合は、そのユーザーに対して指定された制限付き [使用権限](configure-usage-rights.md) で開きます。 
 
 たとえば、使用権限が "表示のみ" の場合、ユーザーは別の場所にコピーした場合でもドキュメントを編集または保存できません。 
 
 使用権限は、制限バナーを使用してドキュメントの上部に表示されます。 このバナーには、ドキュメントに適用されるアクセス許可やそれらを表示するためのリンクが表示される場合があります。
 
-#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Exchange Online に接続し、Office 365 ProPlus の Outlook を使ってメール メッセージを保護するには、
+#### <a name="to-protect-an-email-message-using-outlook-from-office-365-proplus-connecting-to-exchange-online"></a>Exchange Online に接続し、Office 365 ProPlus の Outlook を使ってメール メッセージを保護するには、
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  [**オプション**] タブの [**アクセス許可**> オプションを選択します。 たとえば、[**転送不可**]、[ ** \<Company Name> -社外秘**]、または [ ** \<Company Name> -社外秘**] が表示されます。
+2.  [ **オプション** ] タブの [ **アクセス許可** > オプションを選択します。 たとえば、[**転送不可**]、[ **\<Company Name> -社外秘**]、または [ **\<Company Name> -社外秘**] が表示されます。
 
 3.  メッセージを送信します。
 
-保護された文書を表示するのと同様に、受信者が保護された電子メール メッセージを開くと、最初に認証されます。 電子メールメッセージの表示が許可されている場合は、そのユーザーに対して指定された制限付き[使用権限](configure-usage-rights.md)で開かれます。 
+保護された文書を表示するのと同様に、受信者が保護された電子メール メッセージを開くと、最初に認証されます。 電子メールメッセージの表示が許可されている場合は、そのユーザーに対して指定された制限付き [使用権限](configure-usage-rights.md) で開かれます。 
 
 たとえば、電子メール メッセージが **[転送不可]** オプションを使用して保護されている場合、リボンの転送ボタンは使用できません。
 
@@ -117,10 +126,10 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更する場合は、[**アクセス許可の変更**] を選択し、ドロップダウンからオプションを選択します。 例: **Encrypt**または** \<Company Name> -Confidential**。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更する場合は、[ **アクセス許可の変更** ] を選択し、ドロップダウンからオプションを選択します。 例: **Encrypt** または **\<Company Name> -Confidential**。
 
 3. メッセージを送信します。
 
-保護された文書を表示するのと同様に、受信者が電子メール メッセージを開くと、最初に認証されます。 電子メールメッセージの表示が許可されている場合は、そのユーザーに対して指定された制限付き[使用権限](configure-usage-rights.md)で開かれます。 
+保護された文書を表示するのと同様に、受信者が電子メール メッセージを開くと、最初に認証されます。 電子メールメッセージの表示が許可されている場合は、そのユーザーに対して指定された制限付き [使用権限](configure-usage-rights.md) で開かれます。 
 
 たとえば、既定の **[転送不可]** オプションを使う場合、メッセージ ウィンドウの **[転送]** オプションは使用できません。

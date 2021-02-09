@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 9c8a1f1d89c581950bc1760a7bcb339e10114c2a
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 48182ae5d821aeed65e8c28b086dce0349b9af03
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764229"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212860"
 ---
 # <a name="class-templatenotfounderror"></a>クラス Templatenotfound エラー 
 テンプレート ID は RMS サービスによって認識されません。
@@ -20,15 +20,18 @@ ms.locfileid: "81764229"
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std:: string mMessage  | _まだ文書化されていません。_
-public std:: map\<std:: string、std:: string\> mDebugInfo  | _まだ文書化されていません。_
+public std:: map \<std::string, std::string\> mDebugInfo  | _まだ文書化されていません。_
+public std:: string mName  | _まだ文書化されていません。_
+パブリック ErrorCode GetErrorCode () const  |  無効な入力の errorCode を取得します。
 public char const* what() const  |  エラー メッセージを取得します。
-public std:: shared_ptr\<Error\> Clone () const  |  エラーを複製します。
+public std::shared_ptr\<Error\> Clone() const  |  エラーを複製します。
 public virtual ErrorType GetErrorType() const  |  エラーの種類を取得します。
 public const std:: string& GetErrorName () const  |  エラー名を取得します。
 public const std:: string& GetMessage () const  |  エラー メッセージを取得します。
 public void SetMessage (const std:: string& msg)  |  エラー メッセージを設定します。
 public void AddDebugInfo (const std:: string& key, const std:: string& value)  |  デバッグ情報エントリを追加します。
-public const std:: map\<std:: string、std:: String\>& GetDebugInfo () const  |  デバッグ情報を取得します。
+public const std:: map \<std::string, std::string\>& GetDebugInfo () const  |  デバッグ情報を取得します。
+列挙型 ErrorCode  |  無効な入力エラーの ErrorCode。
   
 ## <a name="members"></a>メンバー
   
@@ -39,6 +42,16 @@ _まだ文書化されていません。_
 ### <a name="mdebuginfo"></a>mDebugInfo
 _まだ文書化されていません。_
 
+  
+### <a name="mname"></a>mName
+_まだ文書化されていません。_
+
+  
+### <a name="geterrorcode-function"></a>GetErrorCode 関数
+無効な入力の errorCode を取得します。
+
+  
+**戻り値**: 無効な入力エラーの ErrorCode
   
 ### <a name="what-function"></a>機能
 エラー メッセージを取得します。
@@ -68,7 +81,7 @@ _まだ文書化されていません。_
 エラー メッセージを取得します。
 
   
-は、エラーメッセージを**返し**ます。
+は、エラーメッセージを **返し** ます。
   
 ### <a name="setmessage-function"></a>SetMessage 関数
 エラー メッセージを設定します。
@@ -93,4 +106,13 @@ _まだ文書化されていません。_
 デバッグ情報を取得します。
 
   
-**戻り**値: デバッグ情報 (キー/値)
+**戻り** 値: デバッグ情報 (キー/値)
+  
+### <a name="errorcode-enum"></a>ErrorCode 列挙型
+
+無効な入力エラーの ErrorCode。
+
+ 値                         | 説明                                
+--------------------------------|---------------------------------------------
+全般            | 一般的な無効な入力エラー
+FileIsTooLargeForProtection            | ファイルが大きすぎて保護されません

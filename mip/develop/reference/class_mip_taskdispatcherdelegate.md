@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b7cd2267b795540a8bb4035a695f5b34f0580b87
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: f8f84b51200ff630b6158f7b02ca88e2a3d21e25
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764279"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212877"
 ---
 # <a name="class-taskdispatcherdelegate"></a>TaskDispatcherDelegate クラス 
 MIP SDK タスクディスパッチャーへのインターフェイスを定義するクラス。
@@ -19,9 +19,9 @@ MIP SDK タスクディスパッチャーへのインターフェイスを定義
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public void DispatchTask (const std:: string& taskId, std:: function\<void ()\>タスク)  |  バックグラウンドスレッドでタスクを実行します。
-public void DispatchTask (const std:: string& taskId、std:: function\<void ()\>タスク、int64_t delayseconds)  |  指定された遅延を使用して、バックグラウンドスレッドでタスクを実行します。
-public void ExecuteTaskOnIndependentThread (const std:: string& taskId, std:: function\<void ()\>タスク)  |  独立したスレッドでタスクを直ちに実行します。
+public void DispatchTask (const std:: string& taskId, std:: function \<void()\> タスク)  |  バックグラウンドスレッドでタスクを実行します。
+public void DispatchTask (const std:: string& taskId、std:: function \<void()\> タスク、Int64_t delaySeconds)  |  指定された遅延を使用して、バックグラウンドスレッドでタスクを実行します。
+public void ExecuteTaskOnIndependentThread (const std:: string& taskId, std:: function \<void()\> タスク)  |  独立したスレッドでタスクを直ちに実行します。
 public bool CancelTask (const std:: string& taskId)  |  バックグラウンドタスクをキャンセルします。
 public void CancelAllTasks ()  |  すべてのバックグラウンドタスクを取り消します。
   
@@ -72,7 +72,7 @@ public void CancelAllTasks ()  |  すべてのバックグラウンドタスク�
 
 
   
-は、タスクが正常にキャンセルされた場合は True、それ以外の場合は false**を返し**ます。
+は、タスクが正常にキャンセルされた場合は True、それ以外の場合は false **を返し** ます。
   
 ### <a name="cancelalltasks-function"></a>CancelAllTasks 関数
 すべてのバックグラウンドタスクを取り消します。

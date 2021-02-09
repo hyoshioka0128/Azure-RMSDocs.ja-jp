@@ -1,10 +1,10 @@
 ---
 title: Azure Rights Management のスーパー ユーザーを構成する - AIP
 description: Azure Information Protection から Azure Rights Management サービスのスーパーユーザー機能を理解して実装することで、承認されたユーザーとサービスが組織の保護されたデータをいつでも読み取り、検査 ("理由") できるようになります。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2019
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,18 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4397be5c6206c74bcf8753e5452cd19b02b31316
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 10d804c903f9e9ada962674b7c49b9c4e3a413d5
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136737"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809663"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Azure Information Protection と、検出サービスまたはデータ復旧用のスーパー ユーザーの構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***適用対象**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***関連する内容**:[AIP の統合ラベル付けクライアントとクラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection の Azure Rights Management サービスのスーパー ユーザー機能を使用すると、承認されたユーザーやサービスにのみ、Azure Rights Management が保護する組織のデータの読み取りと検査を許可することができます。 必要であれば、保護は削除したり、変更したりできます。
 
@@ -42,7 +44,7 @@ Azure Information Protection の Azure Rights Management サービスのスー�
 
 既定でスーパー ユーザー機能は有効ではないので、このロールが割り当てられているユーザーはいません。 Exchange 用の Rights Management コネクタを構成すると、自動的に有効になります。また、Exchange Online、Microsoft Sharepoint Server、または SharePoint を実行する標準サービスでは、Microsoft 365 には必要ありません。
 
-スーパーユーザー機能を手動で有効にする必要がある場合は、 [PowerShell コマンドレットを使用](/powershell/module/aipservice/enable-aipservicesuperuserfeature)して、 [AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser)コマンドレットまたは[AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup)コマンドレットを使用し、必要に応じてユーザー (またはサービスアカウント) を割り当てます。また、必要に応じて、ユーザー (またはその他のグループ) をこのグループに追加します。 
+スーパーユーザー機能を手動で有効にする必要がある場合は、 [PowerShell コマンドレットを使用](/powershell/module/aipservice/enable-aipservicesuperuserfeature)して、 [AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) コマンドレットまたは [AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) コマンドレットを使用し、必要に応じてユーザー (またはサービスアカウント) を割り当てます。また、必要に応じて、ユーザー (またはその他のグループ) をこのグループに追加します。 
 
 スーパー ユーザーのグループを使用する方が管理は簡単ですが、パフォーマンス上の理由から、Azure Rights Management では[グループのメンバーシップをキャッシュ](prepare.md#group-membership-caching-by-azure-information-protection)している点に注意してください。 そのため、新しいユーザーを、すぐにコンテンツの暗号化を解除するスーパーユーザーに割り当てる必要がある場合は、AipServiceSuperUserGroup を使用して構成した既存のグループにユーザーを追加するのではなく、AipServiceSuperUser を使用してそのユーザーを追加します。
 
@@ -53,15 +55,25 @@ Azure Information Protection の Azure Rights Management サービスのスー�
 
 ## <a name="security-best-practices-for-the-super-user-feature"></a>スーパー ユーザー機能のセキュリティ ベスト プラクティス
 
-- Office 365 または Azure Information Protection テナントのグローバル管理者が割り当てられている管理者、または、 [Add Aipserviceroleベースの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator)コマンドレットを使用して globaladministrator ロールが割り当てられている管理者を制限および監視します。 これらのユーザーは、スーパー ユーザー機能を有効にして、ユーザー (および自分自身) をスーパー ユーザーとして割り当てることができます。また、組織が保護するすべてのファイルの暗号化を解除することもできます。
+- Microsoft 365 または Azure Information Protection テナントのグローバル管理者が割り当てられている管理者、または [追加-Aipserviceroleベースの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator) コマンドレットを使用して globaladministrator ロールが割り当てられている管理者を制限および監視します。 これらのユーザーは、スーパー ユーザー機能を有効にして、ユーザー (および自分自身) をスーパー ユーザーとして割り当てることができます。また、組織が保護するすべてのファイルの暗号化を解除することもできます。
 
-- スーパーユーザーとして個別に割り当てられているユーザーとサービスアカウントを確認するには、 [AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)コマンドレットを使用します。 スーパーユーザーグループが構成されているかどうかを確認するには、 [AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup)コマンドレットと標準のユーザー管理ツールを使用して、どのユーザーがこのグループのメンバーであるかを確認します。 すべての管理操作と同様に、スーパー機能の有効化または無効化、スーパーユーザーの追加または削除はログに記録され、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドを使用して監査することができます。 例については、次のセクションを参照してください。 スーパー ユーザーがファイルの暗号化を解除すると、その操作はログに記録され、[使用状況ログ](log-analyze-usage.md)で監査できます。
+- スーパーユーザーとして個別に割り当てられているユーザーとサービスアカウントを確認するには、 [AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) コマンドレットを使用します。 
 
-- 日常的なサービスでスーパーユーザー機能を必要としない場合は、必要なときにのみ機能を有効にし、 [disable-Aipservices Uperuserfeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature)コマンドレットを使用して再度無効にします。
+- スーパーユーザーグループが構成されているかどうかを確認するには、 [AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) コマンドレットと標準のユーザー管理ツールを使用して、どのユーザーがこのグループのメンバーであるかを確認します。 
+
+- すべての管理操作と同様に、スーパー機能の有効化または無効化、スーパーユーザーの追加または削除はログに記録され、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) コマンドを使用して監査することができます。 例については、 [スーパーユーザー機能の監査例](#example-auditing-for-the-super-user-feature)を参照してください。
+
+- スーパー ユーザーがファイルの暗号化を解除すると、その操作はログに記録され、[使用状況ログ](log-analyze-usage.md)で監査できます。
+
+    > [!NOTE]
+    > ログには、ファイルの暗号化を解除したユーザーを含む、復号化に関する詳細が含まれていますが、ユーザーがスーパーユーザーである場合には記録されません。 ログを上記のコマンドレットと共に使用して、ログで特定できるスーパーユーザーの一覧を最初に収集します。
+    >
+
+- 日常的なサービスでスーパーユーザー機能を必要としない場合は、必要なときにのみ機能を有効にし、 [disable-Aipservices Uperuserfeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) コマンドレットを使用して再度無効にします。
 
 ### <a name="example-auditing-for-the-super-user-feature"></a>スーパー ユーザー機能の監査の例
 
-次のログの抜粋では、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドレットの使用に関するいくつかのエントリの例を示しています。 
+次のログの抜粋では、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) コマンドレットの使用に関するいくつかのエントリの例を示しています。 
 
 この例では、Contoso Ltd の管理者はスーパー ユーザー機能が無効であることを確認し、Richard Simone をスーパー ユーザーとして追加し、Richard が Azure Rights Management サービスに構成されている唯一のスーパー ユーザーであることを確認してから、スーパー ユーザー機能を有効にします。これで、Richard は、退職した従業員が保護していたファイルの暗号化を解除できるようになりました。
 
@@ -81,15 +93,15 @@ Azure Rights Management のスーパー ユーザーが割り当てられてい�
 これらのコマンドレットの詳細については、Azure Information Protection クライアントの管理者ガイドの「[Azure Information Protection クライアントでの PowerShell の使用](./rms-client/client-admin-guide-powershell.md)」を参照してください。
 
 > [!NOTE]
-> AzureInformationProtection モジュールは、Azure Information Protection 用に Azure Rights Management サービスを管理する[Aipservice PowerShell モジュール](administer-powershell.md)とは異なり、補足しています。
+> AzureInformationProtection モジュールは、Azure Information Protection 用に Azure Rights Management サービスを管理する [Aipservice PowerShell モジュール](administer-powershell.md) とは異なり、補足しています。
 
 ### <a name="guidance-for-using-unprotect-rmsfile-for-ediscovery"></a>電子情報開示での Unprotect-RMSFile の使用に関するガイダンス
 
 Unprotect-RMSFile コマンドレットを使用し、PST ファイルの保護コンテンツを復号できますが、このコマンドレットは電子情報開示プロセスの一環としてよく考えて使用してください。 1 台のコンピューター上で大きなファイルに対して Unprotect-RMSFile を実行すると、リソースが大量に消費されます (メモリとディスク領域)。このコマンドレットでサポートされている最大ファイル サイズは 5GB です。
 
-理想としては、[Office 365 の電子情報開示](https://docs.microsoft.com/microsoft-365/compliance/ediscovery)は、保護されているメールとメールに添付されている保護ファイルを検索し、抽出する目的で使用します。 スーパー ユーザー機能は Exchange Online と自動的に統合されるので、Office 365 セキュリティ/コンプライアンス センターまたは Microsoft 365 コンプライアンス センターの電子情報開示では、暗号化されているアイテムをエクスポート前に検索したり、暗号化されているメールをエクスポート時に復号したりできます。
+[Microsoft 365 の電子情報開示](/microsoft-365/compliance/ediscovery)を使用して、電子メールで保護された電子メールと添付ファイルを検索して抽出するのが理想的です。 スーパー ユーザー機能は Exchange Online と自動的に統合されるので、Office 365 セキュリティ/コンプライアンス センターまたは Microsoft 365 コンプライアンス センターの電子情報開示では、暗号化されているアイテムをエクスポート前に検索したり、暗号化されているメールをエクスポート時に復号したりできます。
 
-Office 365 の電子情報開示を利用できない場合、Azure Rights Management サービスと統合されており、同じようにデータを解決する別の電子情報開示ソリューションを用意できることがあります。 あるいは、ご利用の電子情報開示ソリューションで保護コンテンツが自動的に読み取られず、復号できない場合、複数の手順からなる以下の解決策を利用できます。この解決策では Unprotect-RMSFile をより効率的に実行できます。
+Microsoft 365 eDiscovery を使用できない場合は、Azure Rights Management サービスと同様の理由でデータに対しても統合される、別の電子情報開示ソリューションがある可能性があります。 あるいは、ご利用の電子情報開示ソリューションで保護コンテンツが自動的に読み取られず、復号できない場合、複数の手順からなる以下の解決策を利用できます。この解決策では Unprotect-RMSFile をより効率的に実行できます。
 
 1. Exchange Online、Exchange Server、またはユーザーがメールを保存したワークステーションから PST ファイルにメールをエクスポートします。
 
@@ -100,4 +112,3 @@ Office 365 の電子情報開示を利用できない場合、Azure Rights Manag
 4. 小さくなったこの 2 つ目の PST ファイルで Unprotect-RMSFile を実行し、そのコンテンツを復号します。 出力から、新しく復号された PST ファイルを情報開示ツールにインポートします。
 
 メールボックスと PST ファイル全体で電子情報開示を実行する方法について詳しくは、ブログ投稿「[Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216)」 (Azure Information Protection と電子情報開示プロセス) をご覧ください。
-

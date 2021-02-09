@@ -6,19 +6,19 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
-ms.openlocfilehash: 834677cadc540d6729666caf232c56827237b5ae
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: afb0a11008e221470af966be887a0803d6991392
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560859"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566674"
 ---
 # <a name="class-mippolicysyncerror"></a>class mip::PolicySyncError 
 ポリシー データを同期しようとして失敗しました。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>メンバー
-_まだ文書化されていません。_
+まだ文書化されていません。

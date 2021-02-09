@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5e745dd011f9626e031cfcb9c9ae0466e91e2bfe
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 4e40bccefa523e18dfdb99a8ef0adacad9f9d4cf
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761077"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215104"
 ---
 # <a name="class-policyenginesettings"></a>クラス PolicyEngine:: Settings 
 PolicyEngine に関連付けられている設定を定義します。
@@ -19,8 +19,8 @@ PolicyEngine に関連付けられている設定を定義します。
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: string& engineId、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための PolicyEngine::Settings コンストラクター。
-パブリック設定 (const Id& id、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための PolicyEngine::Settings コンストラクター。
+パブリック設定 (const std:: string& engineId、const std:: shared_ptr \<AuthDelegate\>& authDelegate、const std:: string& clientData、const std:: string& locale、Bool loadSensitivityTypes)  |  既存のエンジンを読み込むための PolicyEngine::Settings コンストラクター。
+パブリック設定 (const Id& id、const std:: shared_ptr \<AuthDelegate\>& authDelegate、const std:: string& clientData、const std:: string& locale、Bool loadSensitivityTypes)  |  新しいエンジンを作成するための PolicyEngine::Settings コンストラクター。
 public const std::string& GetEngineId() const  |  エンジン ID を取得します。
 public void SetEngineId(const std::string& id)  |  エンジン ID を設定します。
 public const Identity& GetIdentity() const  |  ID オブジェクトを取得します。
@@ -28,8 +28,8 @@ public void SetIdentity(const Identity& identity)  |  ID オブジェクトを�
 public const std::string& GetClientData() const  |  設定で設定されたクライアント データを取得します。
 public void SetClientData(const std::string& clientData)  |  クライアント データ文字列を設定します。
 public const std::string& GetLocale() const  |  設定で設定されたロケールを取得します。
-public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\> \>& customsettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
-public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
+public void SetCustomSettings (const std:: vector \<std::pair\<std::string, std::string\> \>& customsettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
+public const std:: vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
 public void SetSessionId(const std::string& sessionId)  |  クライアントによって定義されたテレメトリに使用するセッション ID を設定します。
 public const std::string& GetSessionId() const  |  セッション ID、一意識別子を取得します。
 public bool IsLoadSensitivityTypesEnabled () const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
@@ -39,12 +39,14 @@ public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  | 
 public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
 public void SetDelegatedUserEmail (const std:: string& delegatedUserEmail)  |  委任されたユーザーを設定します。
 public const std:: string& GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
-public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelfilter)  |  ラベルフィルターを設定します。
-public const std:: vector\<LabelFilterType\>& getlabelfilter () const  |  ラベルフィルターを取得します。
+public void SetLabelFilter (const std:: vector \<LabelFilterType\>& deprecatedLabelFilters)  |  ラベルフィルターを設定します。
+public const std:: vector \<LabelFilterType\>& getlabelfilter () const  |  非推奨の関数 SetLabelFilter によって設定されたラベルフィルターを取得します。
+public void ConfigureFunctionality (FunctionalityFilterType functionalityFilterType, bool enabled)  |  機能を有効または無効にします。
+public const std:: map \<FunctionalityFilterType, bool\>& GetConfiguredFunctionality () const  |  構成済みの機能を取得します。
 public void Setバリエーション Abmarkextmarkingtype (可変 abている extmarkmarkingtype)  |  変数テキストのマークの種類を設定します。
 パブリック型のバリエーション Abmarkextmarkingtype () const。  |  変数のテキストのマーク付けの種類を取得します。
-public void SetAuthDelegate (const std:: shared_ptr\<authdelegate\>& authdelegate)  |  エンジン認証デリゲートを設定します。
-public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジン認証デリゲートを取得します。
+public void SetAuthDelegate (const std:: shared_ptr \<AuthDelegate\>& authdelegate)  |  エンジン認証デリゲートを設定します。
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  エンジン認証デリゲートを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -172,7 +174,7 @@ ID オブジェクトを設定します。
 読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 
   
-が**返さ**れます。有効な場合は True、それ以外の場合は false です。
+が **返さ** れます。有効な場合は True、それ以外の場合は false です。
   
 ### <a name="setcloud-function"></a>SetCloud 関数
 必要に応じて、ターゲットクラウドを設定します。
@@ -229,17 +231,35 @@ ID オブジェクトを設定します。
 ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。 HyokProtection と DoubleKeyProtection が設定されていない場合は、フィルター処理されます。
   
 ### <a name="getlabelfilter-function"></a>GetLabelFilter 関数
-ラベルフィルターを取得します。
+非推奨の関数 SetLabelFilter によって設定されたラベルフィルターを取得します。
 
   
 **戻り値**: ラベルフィルター。
 ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。
   
+### <a name="configurefunctionality-function"></a>ConfigureFunctionality 関数
+機能を有効または無効にします。
+
+パラメーター:  
+* **functionalityFilterType**: 機能の種類。 
+
+
+* **enabled**: 有効にする場合は True、無効にする場合は false
+
+
+HyokProtection、DoubleKeyProtection、DoubleKeyUserDefinedProtection は既定で無効になっているため、有効にする必要があります。
+  
+### <a name="getconfiguredfunctionality-function"></a>GetConfiguredFunctionality 関数
+構成済みの機能を取得します。
+
+  
+**戻り** 値: 型が有効になっているかどうかを示すブール値へのマップ。
+  
 ### <a name="setvariabletextmarkingtype-function"></a>Setバリエーション Abmarkextmarkingtype 関数
 変数テキストのマークの種類を設定します。
 
 パラメーター:  
-* 可変**Abmarkextmarkingtype**: 変数テキストのマーク付けの種類。
+* 可変 **Abmarkextmarkingtype**: 変数テキストのマーク付けの種類。
 
 
   
@@ -247,7 +267,7 @@ ID オブジェクトを設定します。
 変数のテキストのマーク付けの種類を取得します。
 
   
-は、変数テキストのマーク付けの種類を**返し**ます。
+は、変数テキストのマーク付けの種類を **返し** ます。
   
 ### <a name="setauthdelegate-function"></a>SetAuthDelegate 関数
 エンジン認証デリゲートを設定します。

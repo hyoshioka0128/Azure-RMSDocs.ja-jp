@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: a7cbc6789fc6baa8fbb01ffb8c6d6ea7e9294d4f
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: afe0dd79217942a767211f7959c898e098bd8f38
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763630"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212163"
 ---
 # <a name="class-authdelegate"></a>クラス AuthDelegate 
 認証関連の操作のデリゲート。
@@ -20,7 +20,7 @@ ms.locfileid: "81763630"
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public virtual bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Challenge& チャレンジ, OAuth2Token& token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
-パブリック仮想 bool AcquireOAuth2Token (const Identity& Identity、const OAuth2Challenge& チャレンジ、const std:: shared_ptr\<void\>& context、OAuth2Token& token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
+パブリック仮想 bool AcquireOAuth2Token (const Identity& Identity、const OAuth2Challenge& チャレンジ、const std:: shared_ptr \<void\>& context、OAuth2Token& token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
   
 ## <a name="members"></a>メンバー
   
@@ -39,7 +39,7 @@ public virtual bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Ch
 
 
   
-が**返さ**れます: トークンが正常に取得された場合は True、失敗した場合は false。トークンの出力パラメーターにエラーメッセージが含まれている場合は、後でアプリケーションに発生する NoAuthTokenError 例外に含まれます。
+が **返さ** れます: トークンが正常に取得された場合は True、失敗した場合は false。トークンの出力パラメーターにエラーメッセージが含まれている場合は、後でアプリケーションに発生する NoAuthTokenError 例外に含まれます。
 > 非推奨: コンテキストパラメーターを受け入れるものを優先するため、このメソッドはまもなく非推奨とされます。 新しいバージョンが実装されている場合は、このバージョンを実装する必要はありません。
   
 ### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token 関数
@@ -60,4 +60,4 @@ public virtual bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Ch
 
 
   
-が**返さ**れます: トークンが正常に取得された場合は True、失敗した場合は false。トークンの出力パラメーターにエラーメッセージが含まれている場合は、後でアプリケーションに発生する NoAuthTokenError 例外に含まれます。
+が **返さ** れます: トークンが正常に取得された場合は True、失敗した場合は false。トークンの出力パラメーターにエラーメッセージが含まれている場合は、後でアプリケーションに発生する NoAuthTokenError 例外に含まれます。

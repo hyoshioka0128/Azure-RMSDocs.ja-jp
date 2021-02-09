@@ -5,13 +5,13 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 0cbd82862816c5996ce84a5861e6ea19c3c91ff1
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 01/13/2021
+ms.openlocfilehash: 35d9083515f20904f55b6d343e0bdfa031a83aac
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763695"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212265"
 ---
 # <a name="class-adhocprotectionrequirederror"></a>AdhocProtectionRequiredError クラス 
 ファイルに対する操作を完了するには、アドホック保護を設定する必要があります。
